@@ -6,7 +6,7 @@ package LevermannTest;
  * and open the template in the editor.
  */
 
-import com.mycompany.demo.*;
+
 import java.io.Serializable;
 import java.util.Objects;
 import javax.persistence.Column;

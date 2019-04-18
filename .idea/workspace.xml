@@ -5,47 +5,36 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="71376cf0-4a45-4351-8dca-943cab88ca4d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_ibm_icu_icu4j_2_6_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__jaxen_jaxen_1_1_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__jdom_jdom_1_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__xalan_xalan_2_6_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__xerces_xercesImpl_2_6_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__xerces_xmlParserAPIs_2_6_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__xml_apis_xml_apis_1_3_02.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__xom_xom_1_0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_validation_validation_api_1_1_0_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_persistence_javax_persistence_2_1_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_persistence_org_eclipse_persistence_antlr_2_6_1_RC1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_persistence_org_eclipse_persistence_asm_2_6_1_RC1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_persistence_org_eclipse_persistence_core_2_6_1_RC1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_persistence_org_eclipse_persistence_dbws_2_6_1_RC1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_persistence_org_eclipse_persistence_jpa_2_6_1_RC1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_persistence_org_eclipse_persistence_jpa_jpql_2_6_1_RC1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_persistence_org_eclipse_persistence_jpa_modelgen_processor_2_6_1_RC1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_persistence_org_eclipse_persistence_moxy_2_6_1_RC1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_persistence_org_eclipse_persistence_oracle_2_6_1_RC1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_javax_json_1_0_4.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__xml_apis_xml_apis_1_0_b2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/LevermannAnalyse_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_mycompany_LevermannAnalYse_1_0_SNAPSHOT.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_validation_validation_api_1_1_0_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_persistence_javax_persistence_2_1_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_persistence_org_eclipse_persistence_antlr_2_6_1_RC1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_persistence_org_eclipse_persistence_asm_2_6_1_RC1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_persistence_org_eclipse_persistence_core_2_6_1_RC1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_persistence_org_eclipse_persistence_dbws_2_6_1_RC1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_persistence_org_eclipse_persistence_jpa_2_6_1_RC1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_persistence_org_eclipse_persistence_jpa_jpql_2_6_1_RC1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_persistence_org_eclipse_persistence_jpa_modelgen_processor_2_6_1_RC1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_persistence_org_eclipse_persistence_moxy_2_6_1_RC1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_persistence_org_eclipse_persistence_oracle_2_6_1_RC1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_javax_json_1_0_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/META-INF/MANIFEST.MF" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/levermann/project/ConnectionMainFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/LevermannAnalyse.iml" beforeDir="false" afterPath="$PROJECT_DIR$/LevermannAnalyse.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/levermann/dao/Create.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/levermann/dao/Create.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/levermann/dao/Delete.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/levermann/dao/Delete.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/levermann/dao/Select.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/levermann/dao/Select.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/levermann/dao/UnternehmenDao.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/levermann/dao/Update.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/levermann/dao/Update.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/levermann/entityclass/Levermannschritte.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/levermann/entityclass/Levermannschritte.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/levermann/entityclass/Punkteliste.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/levermann/entityclass/Punkteliste.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/levermann/entityclass/Unternehmen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/levermann/entityclass/Unternehmen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/levermann/kennzahlen/Gewinnrevision.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/levermann/kennzahlen/Gewinnrevision.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/levermann/kennzahlen/Kursverlauf6Monate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/levermann/kennzahlen/Kursverlauf6Monate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/levermann/kennzahlen/Kursverlauf6MonateDao.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/levermann/project/ConnectionMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/levermann/project/ConnectionMain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/levermann/project/Datum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/levermann/project/Datum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/levermann/project/HibernateUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/levermann/project/HibernateUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/LevermannTest/AktuellesDatumTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/LevermannTest/ConnectionMainTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/LevermannTest/ConnectionMainTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/LevermannTest/CreateTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/LevermannTest/CreateTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/LevermannTest/PunktelisteTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/LevermannTest/PunktelisteTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/LevermannTest/agTest.java" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/classes/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -82,20 +71,6 @@
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="levermann: schema" type="ebfa3cd1:MariaImplModel$Schema" />
       </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="levermann@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="levermann: schema" type="ebfa3cd1:MariaImplModel$Schema" />
-        <item name="levermannschritte: table" type="dbc44a63:MariaImplModel$Table" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="levermann@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="levermann: schema" type="ebfa3cd1:MariaImplModel$Schema" />
-        <item name="unternehmen: table" type="dbc44a63:MariaImplModel$Table" />
-      </path>
     </expand>
     <select />
   </component>
@@ -105,23 +80,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/levermann/project/ConnectionMain.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="29" column="40" lean-forward="true" selection-start-line="29" selection-start-column="40" selection-end-line="29" selection-end-column="40" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#0#39#1" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/levermann/entityclass/Levermannschritte.java">
+        <entry file="file://$PROJECT_DIR$/src/test/java/LevermannTest/UnternehmenTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="272">
-              <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+              <caret line="36" column="8" selection-start-line="36" selection-start-column="8" selection-end-line="36" selection-end-column="8" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -130,82 +92,207 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/levermann/entityclass/Punkteliste.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/levermann/project/ConnectionMainFactory.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="10" column="3" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="27" />
+            <state relative-caret-position="187">
+              <caret line="15" column="4" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/levermann/project/HibernateUtil.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="2" selection-start-line="2" selection-start-column="2" selection-end-line="2" selection-end-column="2" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="14" column="98" selection-start-line="14" selection-start-column="98" selection-end-line="14" selection-end-column="98" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="9" column="50" selection-start-line="9" selection-start-column="50" selection-end-line="9" selection-end-column="50" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/levermann/dao/Create.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="28" column="63" selection-start-line="28" selection-start-column="63" selection-end-line="28" selection-end-column="63" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/levermann/entityclass/Unternehmen.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="12" column="102" lean-forward="true" selection-start-line="12" selection-start-column="102" selection-end-line="12" selection-end-column="102" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#0#27#1" expanded="true" />
+                <element signature="e#10325#10326#0" expanded="true" />
+                <element signature="e#10351#10352#0" expanded="true" />
+                <element signature="e#10386#10387#0" expanded="true" />
+                <element signature="e#10416#10417#0" expanded="true" />
+                <element signature="e#10447#10448#0" expanded="true" />
+                <element signature="e#10474#10475#0" expanded="true" />
+                <element signature="e#10514#10515#0" expanded="true" />
+                <element signature="e#10546#10547#0" expanded="true" />
+                <element signature="e#10578#10579#0" expanded="true" />
+                <element signature="e#10606#10607#0" expanded="true" />
+                <element signature="e#10648#10649#0" expanded="true" />
+                <element signature="e#10682#10683#0" expanded="true" />
+                <element signature="e#10720#10721#0" expanded="true" />
+                <element signature="e#10755#10756#0" expanded="true" />
+                <element signature="e#10810#10811#0" expanded="true" />
+                <element signature="e#10858#10859#0" expanded="true" />
+                <element signature="e#10901#10902#0" expanded="true" />
+                <element signature="e#10941#10942#0" expanded="true" />
+                <element signature="e#11006#11007#0" expanded="true" />
+                <element signature="e#11064#11065#0" expanded="true" />
+                <element signature="e#11100#11101#0" expanded="true" />
+                <element signature="e#11133#11134#0" expanded="true" />
+                <element signature="e#11184#11185#0" expanded="true" />
+                <element signature="e#11228#11229#0" expanded="true" />
+                <element signature="e#11266#11267#0" expanded="true" />
+                <element signature="e#11301#11302#0" expanded="true" />
+                <element signature="e#11356#11357#0" expanded="true" />
+                <element signature="e#11404#11405#0" expanded="true" />
+                <element signature="e#11442#11443#0" expanded="true" />
+                <element signature="e#11477#11478#0" expanded="true" />
+                <element signature="e#11532#11533#0" expanded="true" />
+                <element signature="e#11580#11581#0" expanded="true" />
+                <element signature="e#11625#11626#0" expanded="true" />
+                <element signature="e#11667#11668#0" expanded="true" />
+                <element signature="e#11736#11737#0" expanded="true" />
+                <element signature="e#11798#11799#0" expanded="true" />
+                <element signature="e#11839#11840#0" expanded="true" />
+                <element signature="e#11877#11878#0" expanded="true" />
+                <element signature="e#11938#11939#0" expanded="true" />
+                <element signature="e#11992#11993#0" expanded="true" />
+                <element signature="e#12027#12028#0" expanded="true" />
+                <element signature="e#12059#12060#0" expanded="true" />
+                <element signature="e#12108#12109#0" expanded="true" />
+                <element signature="e#12150#12151#0" expanded="true" />
+                <element signature="e#12182#12183#0" expanded="true" />
+                <element signature="e#12211#12212#0" expanded="true" />
+                <element signature="e#12254#12255#0" expanded="true" />
+                <element signature="e#12290#12291#0" expanded="true" />
+                <element signature="e#12325#12326#0" expanded="true" />
+                <element signature="e#12357#12358#0" expanded="true" />
+                <element signature="e#12406#12407#0" expanded="true" />
+                <element signature="e#12448#12449#0" expanded="true" />
+                <element signature="e#12480#12481#0" expanded="true" />
+                <element signature="e#12509#12510#0" expanded="true" />
+                <element signature="e#12552#12553#0" expanded="true" />
+                <element signature="e#12588#12589#0" expanded="true" />
+                <element signature="e#12636#12637#0" expanded="true" />
+                <element signature="e#12681#12682#0" expanded="true" />
+                <element signature="e#12866#12867#0" expanded="true" />
+                <element signature="e#12905#12906#0" expanded="true" />
+                <element signature="e#12968#12969#0" expanded="true" />
+                <element signature="e#13024#13025#0" expanded="true" />
+                <element signature="e#13075#13076#0" expanded="true" />
+                <element signature="e#13123#13124#0" expanded="true" />
+                <element signature="e#13313#13314#0" expanded="true" />
+                <element signature="e#13345#13346#0" expanded="true" />
+                <element signature="e#13394#13395#0" expanded="true" />
+                <element signature="e#13436#13437#0" expanded="true" />
+                <element signature="e#13477#13478#0" expanded="true" />
+                <element signature="e#13515#13516#0" expanded="true" />
+                <element signature="e#13576#13577#0" expanded="true" />
+                <element signature="e#13630#13631#0" expanded="true" />
+                <element signature="e#13672#13673#0" expanded="true" />
+                <element signature="e#13711#13712#0" expanded="true" />
+                <element signature="e#13774#13775#0" expanded="true" />
+                <element signature="e#13830#13831#0" expanded="true" />
+                <element signature="e#13871#13872#0" expanded="true" />
+                <element signature="e#13909#13910#0" expanded="true" />
+                <element signature="e#13970#13971#0" expanded="true" />
+                <element signature="e#14024#14025#0" expanded="true" />
+                <element signature="e#14065#14066#0" expanded="true" />
+                <element signature="e#14103#14104#0" expanded="true" />
+                <element signature="e#14164#14165#0" expanded="true" />
+                <element signature="e#14218#14219#0" expanded="true" />
+                <element signature="e#14257#14258#0" expanded="true" />
+                <element signature="e#14293#14294#0" expanded="true" />
+                <element signature="e#14350#14351#0" expanded="true" />
+                <element signature="e#14400#14401#0" expanded="true" />
+                <element signature="e#14438#14439#0" expanded="true" />
+                <element signature="e#14473#14474#0" expanded="true" />
+                <element signature="e#14528#14529#0" expanded="true" />
+                <element signature="e#14576#14577#0" expanded="true" />
+                <element signature="e#14616#14617#0" expanded="true" />
+                <element signature="e#14653#14654#0" expanded="true" />
+                <element signature="e#14712#14713#0" expanded="true" />
+                <element signature="e#14764#14765#0" expanded="true" />
+                <element signature="e#14804#14805#0" expanded="true" />
+                <element signature="e#14841#14842#0" expanded="true" />
+                <element signature="e#14900#14901#0" expanded="true" />
+                <element signature="e#14952#14953#0" expanded="true" />
+                <element signature="e#15006#15007#0" expanded="true" />
+                <element signature="e#15057#15058#0" expanded="true" />
+                <element signature="e#15275#15276#0" expanded="true" />
+                <element signature="e#15323#15324#0" expanded="true" />
+                <element signature="e#15516#15517#0" expanded="true" />
+                <element signature="e#15551#15552#0" expanded="true" />
+                <element signature="e#15606#15607#0" expanded="true" />
+                <element signature="e#15654#15655#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="das://4b934a55-7a5f-409f-afee-ea50b22ae250/schema/levermann/table/levermannschritte">
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true">
+                <filter text="" />
+              </filtering>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/src.zip!/java/net/URLClassLoader.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="27" column="23" selection-start-line="27" selection-start-column="23" selection-end-line="27" selection-end-column="23" />
-              <folding>
-                <element signature="e#0#31274#0" expanded="true" />
-              </folding>
+        <entry file="das://4b934a55-7a5f-409f-afee-ea50b22ae250/schema/levermann/table/unternehmen">
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true">
+                <filter text="" />
+              </filtering>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/src.zip!/java/lang/ClassLoader.java">
+        <entry file="file://$PROJECT_DIR$/src/test/java/LevermannTest/PunktelisteTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="423" selection-start-line="423" selection-end-line="423" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/jre/lib/rt.jar!/sun/misc/Launcher.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" column="28" selection-start-line="1" selection-start-column="28" selection-end-line="1" selection-end-column="28" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/jre/lib/rt.jar!/sun/instrument/InstrumentationImpl.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-374">
-              <caret line="5" column="13" lean-forward="true" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/jre/lib/rt.jar!/sun/misc/URLClassPath.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="664" selection-start-line="664" selection-end-line="664" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/levermann/dao/Select.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3230">
-              <caret line="194" column="6" selection-start-line="194" selection-start-column="6" selection-end-line="194" selection-end-column="6" />
+            <state relative-caret-position="136">
+              <caret line="8" selection-start-line="8" selection-end-line="8" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/src.zip!/java/security/AccessController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="331">
-              <caret line="651" column="8" selection-start-line="651" selection-start-column="8" selection-end-line="651" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -218,6 +305,11 @@
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>SELECT c FROM Unternehmen c WHERE c.Cid =: Cid</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="ROOT_SYNC" value="DONT_SYNC" />
@@ -254,21 +346,25 @@
         <option value="$PROJECT_DIR$/src/main/java/com/levermann/kennzahlen/Eigenkapitalquote.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/levermann/dao/UnternehmenDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/levermann/entityclass/EntityManager.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/levermann/entityclass/Levermannschritte.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/levermann/entityclass/Punkteliste.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/levermann/entityclass/Unternehmen.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/levermann/dao/Create.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/levermann/dao/Delete.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/levermann/dao/Select.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/levermann/dao/Update.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/levermann/kennzahlen/Kursverlauf6Monate.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/levermann/project/Datum.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/levermann/kennzahlen/Gewinnrevision.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/levermann/project/HibernateUtil.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/levermann/project/ConnectionMain.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/levermann/dao/Create.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/levermann/project/ConnectionMainFactory.java" />
+        <option value="$PROJECT_DIR$/src/test/java/LevermannTest/ConnectionMainTest.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/test/java/LevermannTest/PunktelisteTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/LevermannTest/CreateTest.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/levermann/entityclass/Punkteliste.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/levermann/entityclass/Unternehmen.java" />
       </list>
     </option>
   </component>
@@ -280,10 +376,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1912" />
-    <option name="y" value="-4" />
-    <option name="width" value="1936" />
-    <option name="height" value="1056" />
+    <option name="x" value="240" />
+    <option name="y" value="126" />
+    <option name="width" value="1440" />
+    <option name="height" value="775" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -291,52 +387,43 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="LevermannAnalyse" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Levermann" type="462c0819:PsiDirectoryNode" />
+              <item name="Hauptprojekt" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="LevermannAnalyse" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Levermann" type="462c0819:PsiDirectoryNode" />
+              <item name="Hauptprojekt" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="LevermannAnalyse" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Levermann" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="LevermannAnalyse" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Levermann" type="462c0819:PsiDirectoryNode" />
+              <item name="Hauptprojekt" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="LevermannAnalyse" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Levermann" type="462c0819:PsiDirectoryNode" />
+              <item name="Hauptprojekt" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="levermann" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="LevermannAnalyse" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Levermann" type="462c0819:PsiDirectoryNode" />
+              <item name="Hauptprojekt" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="levermann" type="462c0819:PsiDirectoryNode" />
-              <item name="dao" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="LevermannAnalyse" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Levermann" type="462c0819:PsiDirectoryNode" />
+              <item name="Hauptprojekt" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
@@ -345,7 +432,7 @@
             </path>
             <path>
               <item name="LevermannAnalyse" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Levermann" type="462c0819:PsiDirectoryNode" />
+              <item name="Hauptprojekt" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
@@ -354,7 +441,7 @@
             </path>
             <path>
               <item name="LevermannAnalyse" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Levermann" type="462c0819:PsiDirectoryNode" />
+              <item name="Hauptprojekt" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
@@ -363,14 +450,14 @@
             </path>
             <path>
               <item name="LevermannAnalyse" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Levermann" type="462c0819:PsiDirectoryNode" />
+              <item name="Hauptprojekt" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="LevermannAnalyse" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Levermann" type="462c0819:PsiDirectoryNode" />
+              <item name="Hauptprojekt" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
@@ -378,13 +465,30 @@
             </path>
             <path>
               <item name="LevermannAnalyse" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Hauptprojekt" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="LevermannAnalyse" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Hauptprojekt" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="LevermannAnalyse" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Hauptprojekt" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="LevermannTest" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -410,6 +514,9 @@
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.levermann.kennzahlen" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.levermann.project" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -424,8 +531,8 @@
     </option>
   </component>
   <component name="RunManager">
-    <configuration name="ConnectionMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.levermann.project.ConnectionMain" />
+    <configuration name="ConnectionMainFactory" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.levermann.project.ConnectionMainFactory" />
       <module name="LevermannAnalyse" />
       <extension name="coverage">
         <pattern>
@@ -439,7 +546,7 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.ConnectionMain" />
+        <item itemvalue="Application.ConnectionMainFactory" />
       </list>
     </recent_temporary>
   </component>
@@ -456,6 +563,9 @@
       <workItem from="1554563109314" duration="426000" />
       <workItem from="1554837325506" duration="16007000" />
       <workItem from="1555052787544" duration="17615000" />
+      <workItem from="1555491944563" duration="3167000" />
+      <workItem from="1555578044435" duration="40000" />
+      <workItem from="1555578382357" duration="1311000" />
     </task>
     <task id="LOCAL-00001" summary="l">
       <created>1554567642271</created>
@@ -517,7 +627,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="66718000" />
+    <option name="totallyTimeSpent" value="71236000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -529,40 +639,42 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1912" y="-4" width="1936" height="1056" extended-state="6" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.7825312" visible="true" weight="0.18283582" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.5141612" visible="true" weight="0.1818792" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
       <window_info id="Favorites" order="4" side_tool="true" />
       <window_info id="Capture Tool" order="5" />
       <window_info id="Image Layers" order="6" />
-      <window_info id="Persistence" order="7" sideWeight="0.21746881" side_tool="true" visible="true" weight="0.18283582" />
+      <window_info id="Persistence" order="7" sideWeight="0.48583877" side_tool="true" visible="true" weight="0.1818792" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.34985834" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32936078" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" sideWeight="0.49946696" visible="true" weight="0.39219934" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.34846267" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4986577" visible="true" weight="0.32796487" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49946696" weight="0.39219934" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32936078" />
       <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49946696" weight="0.32936078" />
-      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.50479746" side_tool="true" weight="0.25135428" />
+      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.5013423" side_tool="true" visible="true" weight="0.32796487" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Version Control" order="10" sideWeight="0.4989339" weight="0.0595883" />
       <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Messages" order="12" sideWeight="0.49573562" weight="0.25135428" />
+      <window_info anchor="bottom" id="Messages" order="12" sideWeight="0.49530202" weight="0.25036603" />
       <window_info anchor="bottom" id="Database Console" order="13" sideWeight="0.49946696" weight="0.32936078" />
       <window_info anchor="bottom" id="Inspection Results" order="14" sideWeight="0.49946696" weight="0.20151679" />
       <window_info anchor="bottom" id="Java Enterprise" order="15" sideWeight="0.49946696" weight="0.32936078" />
+      <window_info anchor="bottom" id="Regex Tester" order="16" />
+      <window_info anchor="bottom" id="Dependency Viewer" order="17" weight="0.329429" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Maven" order="3" />
       <window_info anchor="right" id="Palette" order="4" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
-      <window_info anchor="right" id="Database" order="6" visible="true" weight="0.1369936" />
+      <window_info active="true" anchor="right" id="Database" order="6" visible="true" weight="0.35637584" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Theme Preview" order="8" />
       <window_info anchor="right" id="Bean Validation" order="9" />
@@ -631,44 +743,12 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/levermann/kennzahlen/GewinnEBIT.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="680">
-          <caret line="40" column="9" lean-forward="true" selection-start-line="40" selection-start-column="9" selection-end-line="40" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/levermann/kennzahlen/KursGewinnVerhältnis.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
-          <caret line="35" column="5" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/levermann/kennzahlen/KursgewinnVerhältnis5Jahre.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="41" column="5" selection-start-line="41" selection-start-column="5" selection-end-line="41" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/levermann/projekt/newClassBeanInfo.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/NewClass.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/test.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/levermann/projekt/newClass.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/levermann/projekt/ag.java" />
-    <entry file="file://$PROJECT_DIR$/target/generated-sources/annotations/com/levermann/projekt/Punkteliste_.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="22" selection-start-column="22" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/target/generated-sources/annotations/com/levermann/projekt/Punkteliste_.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/levermann/projekt/Unternehmen.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/levermann/projekt/Punkteliste.java" />
-    <entry file="file://$PROJECT_DIR$/../../../Studium/Semester 2/Programmieren II/Flo 200618/Praktikum 4/Version 2/Student.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$USER_HOME$/Studium/Semester 2/Programmieren II/Flo 200618/Praktikum 4/Version 2/Student.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/levermann/kennzahlen/Eigenkapitalrendite.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="765">
@@ -687,13 +767,7 @@
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/levermann/entityclass/EntityManager.java" />
-    <entry file="file://$PROJECT_DIR$/src/test/java/LevermannTest/agTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/LevermannTest/agTest.java" />
     <entry file="file://$PROJECT_DIR$/Persistance.xml" />
     <entry file="file://$PROJECT_DIR$/hibernate.reveng.xml" />
     <entry file="file://$PROJECT_DIR$/hibernate.reveng1.xml" />
@@ -704,43 +778,11 @@
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/src.zip!/java/lang/Object.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1155">
-          <caret line="234" column="18" selection-start-line="234" selection-start-column="18" selection-end-line="234" selection-end-column="18" />
-          <folding>
-            <element signature="e#10065#10066#0" expanded="true" />
-            <element signature="e#10148#10149#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://4b934a55-7a5f-409f-afee-ea50b22ae250/schema/levermann/table/unternehmen" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/levermann/kennzahlen/Eigenkapitalquote.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="32" column="10" selection-start-line="32" selection-start-column="10" selection-end-line="32" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/src.zip!/java/lang/Object.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/levermann/dao/Update.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="541">
           <caret line="61" column="1" lean-forward="true" selection-start-line="61" selection-start-column="1" selection-end-line="61" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-548">
-          <caret line="70" column="96" selection-start-line="70" selection-start-column="96" selection-end-line="70" selection-end-column="96" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="12" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="12" />
         </state>
       </provider>
     </entry>
@@ -751,13 +793,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/levermann/kennzahlen/Kursverlauf6MonateDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="34" selection-start-line="2" selection-start-column="34" selection-end-line="2" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/levermann/kennzahlen/Kursverlauf6MonateDao.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/levermann/kennzahlen/Kursverlauf6Monate.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="476">
@@ -772,12 +808,180 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/levermann/entityclass/Unternehmen.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/levermann/dao/Delete.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1020">
-          <caret line="27" column="4" lean-forward="true" selection-start-line="27" selection-start-column="4" selection-end-line="30" />
+        <state relative-caret-position="748">
+          <caret line="51" column="2" selection-start-line="51" selection-start-column="2" selection-end-line="51" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/jre/lib/rt.jar!/sun/misc/URLClassPath.class" />
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/src.zip!/java/security/AccessController.java" />
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/jre/lib/rt.jar!/sun/misc/Launcher.class" />
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/jre/lib/rt.jar!/sun/instrument/InstrumentationImpl.class" />
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/src.zip!/java/lang/ClassLoader.java" />
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/src.zip!/java/net/URLClassLoader.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/levermann/entityclass/Levermannschritte.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/levermann/dao/Select.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3213">
+          <caret line="194" column="6" selection-start-line="194" selection-start-column="6" selection-end-line="194" selection-end-column="6" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/LevermannTest/ConnectionMainTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="7" column="22" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/jre/lib/rt.jar!/java/rmi/activation/ActivationGroupID.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="254">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
+          <folding>
+            <element signature="e#0#988#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/src.zip!/java/rmi/activation/ActivationGroupID.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-61" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/levermann/kennzahlen/Eigenkapitalquote.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/LevermannTest/DeleteTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="36" selection-start-line="3" selection-start-column="36" selection-end-line="3" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/levermann/project/ConnectionMain.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/LevermannTest/CreateTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="15" column="2" selection-start-line="15" selection-start-column="2" selection-end-line="15" selection-end-column="2" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/levermann/entityclass/Punkteliste.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/LevermannTest/UnternehmenTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="36" column="8" selection-start-line="36" selection-start-column="8" selection-end-line="36" selection-end-column="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/levermann/project/HibernateUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="2" selection-start-line="2" selection-start-column="2" selection-end-line="2" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="50" selection-start-line="9" selection-start-column="50" selection-end-line="9" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/LevermannTest/PunktelisteTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="98" selection-start-line="14" selection-start-column="98" selection-end-line="14" selection-end-column="98" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/levermann/project/ConnectionMainFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="15" column="4" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/levermann/dao/Create.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="28" column="63" selection-start-line="28" selection-start-column="63" selection-end-line="28" selection-end-column="63" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/levermann/entityclass/Unternehmen.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="102" lean-forward="true" selection-start-line="12" selection-start-column="102" selection-end-line="12" selection-end-column="102" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#0#27#1" expanded="true" />
             <element signature="e#10325#10326#0" expanded="true" />
             <element signature="e#10351#10352#0" expanded="true" />
             <element signature="e#10386#10387#0" expanded="true" />
@@ -890,117 +1094,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="56" selection-start-line="13" selection-start-column="56" selection-end-line="13" selection-end-column="56" />
+    <entry file="das://4b934a55-7a5f-409f-afee-ea50b22ae250/schema/levermann/table/levermannschritte">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true">
+            <filter text="" />
+          </filtering>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/levermann/project/HibernateUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="2" lean-forward="true" selection-start-line="2" selection-start-column="2" selection-end-line="2" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/levermann/dao/Create.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="969">
-          <caret line="61" column="3" lean-forward="true" selection-start-line="61" selection-start-column="3" selection-end-line="61" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/levermann/dao/Delete.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="748">
-          <caret line="51" column="2" selection-start-line="51" selection-start-column="2" selection-end-line="51" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/levermann/dao/Select.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3230">
-          <caret line="194" column="6" selection-start-line="194" selection-start-column="6" selection-end-line="194" selection-end-column="6" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/levermann/entityclass/Levermannschritte.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/levermann/entityclass/Punkteliste.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="10" column="3" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/levermann/project/ConnectionMain.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="29" column="40" lean-forward="true" selection-start-line="29" selection-start-column="40" selection-end-line="29" selection-end-column="40" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#0#39#1" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/jre/lib/rt.jar!/sun/misc/URLClassPath.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="664" selection-start-line="664" selection-end-line="664" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/src.zip!/java/security/AccessController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="331">
-          <caret line="651" column="8" selection-start-line="651" selection-start-column="8" selection-end-line="651" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/jre/lib/rt.jar!/sun/misc/Launcher.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="28" selection-start-line="1" selection-start-column="28" selection-end-line="1" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/jre/lib/rt.jar!/sun/instrument/InstrumentationImpl.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-374">
-          <caret line="5" column="13" lean-forward="true" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/src.zip!/java/lang/ClassLoader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="423" selection-start-line="423" selection-end-line="423" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/src.zip!/java/net/URLClassLoader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="27" column="23" selection-start-line="27" selection-start-column="23" selection-end-line="27" selection-end-column="23" />
-          <folding>
-            <element signature="e#0#31274#0" expanded="true" />
-          </folding>
+    <entry file="das://4b934a55-7a5f-409f-afee-ea50b22ae250/schema/levermann/table/unternehmen">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true">
+            <filter text="" />
+          </filtering>
         </state>
       </provider>
     </entry>
@@ -1010,10 +1118,12 @@
       <state key="ArtifactsStructureConfigurable.UI">
         <settings>
           <artifact-editor />
+          <last-edited>LevermannAnalyse:jar</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
                 <option value="0.2" />
+                <option value="0.5" />
               </list>
             </option>
           </splitter-proportions>
@@ -1021,7 +1131,7 @@
       </state>
       <state key="FacetStructureConfigurable.UI">
         <settings>
-          <last-edited>Detection</last-edited>
+          <last-edited>Hibernate (LevermannAnalyse)|Hibernate</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

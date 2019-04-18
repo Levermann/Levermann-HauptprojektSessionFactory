@@ -5,7 +5,7 @@
  */
 package com.levermann.dao;
 
-/*
+
 import com.levermann.entityclass.Unternehmen;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -34,7 +34,7 @@ public class Create {
             //create a unternehmen object
             System.out.println("Creating new Unternehmen Object");
       
-            Unternehmen un = new Unternehmen (name, datum , eigenkapital , jahresueberschuss);
+            Unternehmen un = new Unternehmen ();
 
             un.setName(name); 
             un.setDatum(datum);
@@ -59,4 +59,3 @@ public class Create {
     }
      
 }
- */

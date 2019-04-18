@@ -10,7 +10,7 @@ import java.util.Objects;
 
 @NamedQueries({
         @NamedQuery(name = "Unternehmen.findAll", query = "SELECT A FROM Unternehmen A"),
-        @NamedQuery(name = "Unternehmen.findById", query = "SELECT c FROM Unternehmen c WHERE c.Cid =: Cid")
+        @NamedQuery(name = "Unternehmen.findById", query = "SELECT c FROM Unternehmen c WHERE c.Cid =:Cid")
 
 })
 public class Unternehmen implements Serializable {
