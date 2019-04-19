@@ -9,44 +9,59 @@ on Track
 package com.levermann.dao;
 
 
-/*import com.levermann.entityclass.Unternehmen;
+import com.levermann.entityclass.Unternehmen;
+import org.apache.log4j.Logger;
+import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
-import org.hibernate.cfg.Configuration;
 import java.util.Scanner;
 
-public class Delete {
+  public class Delete implements DaoUnternehmen {
 
-    
-void DeleteUnternehmen() {
- 
+    final static Logger logger = Logger.getLogger(Delete.class);
+
+    public void Dao() {
+
+    //Logger wird für die Methode Delete ausgeführt
+    logger.info("Logger is Entering the Execute method Delete");
+    String returnValue = "";
+
     // Eingabeauforderung Unternehmen
-    Scanner scanner = new Scanner(System.in);    
+    Scanner scanner = new Scanner(System.in);
 
-   
-    SessionFactory factory;
-    factory = (SessionFactory) new Configuration().configure().buildSessionFactory();
-    Session session = factory.openSession(); 
-    try{  
-    Unternehmen Unternehmen=new Unternehmen();
-  
-       System.out.println("Sie befinden sich in der IDauswahl, bitte name Eingeben:");  
-     // Eingabeauforderung ID
+    //Aufrufen der aktuellen Session aus HibernateUtil
+    SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
+    Session session = sessionFactory.getCurrentSession();
+
+    try{
+        // Hinzufügen des Loggers war erfolgreich
+        logger.info("Logger for Delete was saved successfull");
+
+       System.out.println("Sie befinden sich in der IDauswahl, bitte name Eingeben:");
+
+       //Erzeugen eines Objektes vom Typen Unternehmen
+        Unternehmen Unternehmen=new Unternehmen();
+
+        // Eingabeauforderung ID
           //  int id = scanner.nextInt();
-            String name = scanner.next(); 
-            
+            int Cid = scanner.nextInt();
+
+
           //  Unternehmen.setCid(id); 
-          Unternehmen.setName(name);
+          Unternehmen.setCid(Cid);
             
      // Verbingungsaufbau
         session.beginTransaction();
         session.delete(Unternehmen);
         session.getTransaction().commit();
-        System.out.println(" ID = " + Unternehmen.getName() + " wurde gelöscht");
+        System.out.println(" ID = " + Unternehmen.getCid() +" Name = " + Unternehmen.getName()+ " wurde gelöscht");
      
-    } finally{factory.close();}}  
-
-
+    } catch (HibernateException e) {
+        System.out.println("Hibernate Exception" + e.getMessage());
+        session.getTransaction().rollback();
+        throw new RuntimeException(e);
+    } finally {
+    }
+}
 }                   
                   
-*/

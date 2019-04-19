@@ -6,20 +6,22 @@
 package com.levermann.dao;
 
 
-import com.levermann.entityclass.Levermannschritte;
-import com.levermann.entityclass.Punkteliste;
-import com.levermann.entityclass.Unternehmen;
-import org.hibernate.Session;
-import org.hibernate.SessionFactory;
-import org.hibernate.HibernateException;
-import org.apache.log4j.Logger;
-
-
+import java.util.List;
 import java.util.Scanner;
 
-public class Create implements DaoUnternehmen{
 
-    final static Logger logger = Logger.getLogger(Create.class);
+import com.levermann.entityclass.Levermannschritte;
+import com.levermann.entityclass.Unternehmen;
+import org.apache.log4j.Logger;
+import org.hibernate.HibernateException;
+import org.hibernate.Query;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+
+public class CreatePunktelisten implements DaoUnternehmen {
+
+    final static Logger logger = Logger.getLogger(Select.class);
 
     public void Dao() {
 
@@ -27,48 +29,50 @@ public class Create implements DaoUnternehmen{
         logger.info("Logger is Entering the Execute method from Create");
         String returnValue = "";
 
+        System.out.println(" Bitte \n 1. Unternehmen \n 2. Datum \n 3. Eigenkapital \n 4. JahresÃ¼berschuss");
+
         //Aufrufen der aktuellen Session aus HibernateUtil
         SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
         Session session = sessionFactory.getCurrentSession();
+        Scanner scanner = new Scanner(System.in);
 
         try {
-            Scanner scanner = new Scanner(System.in);
-            String name = scanner.next();
-            //    String datum = scanner.next();
-            float eigenkapital = scanner.nextInt();
 
             //create a unternehmen object
             System.out.println("Creating new Unternehmen Object");
-            Unternehmen un = new Unternehmen();
-            Punkteliste pkt = new Punkteliste();
-            Levermannschritte lvschrt = new Levermannschritte();
+
+            // Unternehmen un = new Unternehmen();
 
             // Hinzufügen
             logger.info("Logger for Create was saved successfull");
 
-            //Erstellung Unternehmen
-            un.setName(name);
-            un.setEigenkapital(eigenkapital);
-
             // start a transaction
             session.beginTransaction();
 
+
+            Query query = session.createQuery("Select * from Levermannschritte");
+            List<Levermannschritte> lsList = query.list();
+            for (Levermannschritte lsr : lsList) {
+                System.out.println("Unternehmen Cid=" + lsr.getCid3() + " Name=" + lsr.getLid());
+
+
+                lsr.setCid3(6);
+            }
+
+
             // safe Unternhemen Object
             System.out.println("Speichere Unternehmen...");
-            session.save(un);
 
-            //commit transaction
+
             session.getTransaction().commit();
+            session.close();
+            //  } while (i != 3);
 
-            System.out.println("Done!");
+            System.err.println("Abfrage Beendet");
+
         } catch (HibernateException e) {
-            System.out.println("Hibernate Exception" + e.getMessage());
-            session.getTransaction().rollback();
-            throw new RuntimeException(e);
-        } finally {}
-
-
+            e.printStackTrace();
+        }
 
     }
-
 }

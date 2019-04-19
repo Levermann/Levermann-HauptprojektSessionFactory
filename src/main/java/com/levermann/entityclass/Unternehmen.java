@@ -1,19 +1,35 @@
 package com.levermann.entityclass;
 
+import com.levermann.dao.DaoUnternehmen;
+import org.springframework.context.annotation.Bean;
+
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.List;
 import java.util.Objects;
+import java.util.Set;
+import javax.inject.Named;
+import javax.annotation.ManagedBean;
+import javax.inject.Scope;
+import javax.persistence.OneToMany;
+import javax.persistence.JoinColumn;
 
+
+@Named
+@ManagedBean
 @Entity
 @Access(AccessType.FIELD)
 //@Table(name="unternehmen")
-
 @NamedQueries({
         @NamedQuery(name = "Unternehmen.findAll", query = "SELECT A FROM Unternehmen A"),
-        @NamedQuery(name = "Unternehmen.findById", query = "SELECT c FROM Unternehmen c WHERE c.Cid =:Cid")
+        @NamedQuery(name = "Unternehmen.findById", query = "SELECT c FROM Unternehmen c WHERE c.Cid =:Cid"),
+        @NamedQuery(name = "Unternehmen.findByName", query = "SELECT c FROM Unternehmen c WHERE c.name =:name"),
+        @NamedQuery(name = "Unternehmen.findByEigenkapital", query = "SELECT c FROM Unternehmen c WHERE c.eigenkapital =:eigenkapital"),
+        @NamedQuery(name = "Unternehmen.findByJahresüberschuss", query = "SELECT c FROM Unternehmen c WHERE c.jahresueberschuss =:jahresueberschuss")
 
 })
-public class Unternehmen implements Serializable {
+public class Unternehmen implements Serializable  {
+
 
     /*public Unternehmen(String name, String datum, float eigenkapital, float jahresueberschuss) {
         this.name = name;
@@ -29,11 +45,14 @@ public class Unternehmen implements Serializable {
         return "Unternehmen{" + "Cid=" + Cid + ", name=" + name + ", datum=" + datum + ", eigenkapital=" + eigenkapital + ", jahresueberschuss=" + jahresueberschuss + ", GewinnEBIT=" + GewinnEBIT + ", Jahresumsatz=" + Jahresumsatz + ", Fremdkapital=" + Fremdkapital + ", AktuellerAktienkurs=" + AktuellerAktienkurs + ", Gewinnschaezung=" + Gewinnschaezung + ", GewinnAVG=" + GewinnAVG + ", Halten=" + Halten + ", Verkaufen=" + Verkaufen + ", Kaufen=" + Kaufen + ", KursanstiegUnternehmen=" + KursanstiegUnternehmen + ", KursanstiegIndex=" + KursanstiegIndex + ", GewinnschaezungVor4Wochen=" + GewinnschaezungVor4Wochen + ", KursHeute=" + KursHeute + ", KursVor6Monaten=" + KursVor6Monaten + ", KursVor12Monaten=" + KursVor12Monaten + ", KursVor3Monaten=" + KursVor3Monaten + ", KursVor2Monaten=" + KursVor2Monaten + ", KursVor1Monat=" + KursVor1Monat + ", DaxVor1Monat=" + DaxVor1Monat + ", DaxVor2Monaten=" + DaxVor2Monaten + ", DaxVor3Monaten=" + DaxVor3Monaten + ", GewinnschaezungNaechstesJahr=" + GewinnschaezungNaechstesJahr + ", GewinnschaezungDiesesJahr=" + GewinnschaezungDiesesJahr + ", Finanzsektor=" + Finanzsektor + '}';
     }
 
-    @GeneratedValue(strategy=GenerationType.IDENTITY)
-    @Column(name="Cid")
 
-    private  int  Cid;
+
+
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
     @Id
+    @Column(name="Cid")
+    private  int  Cid;
+
     @Column(name="name")
     private String name;
 
@@ -118,144 +137,7 @@ public class Unternehmen implements Serializable {
     @Column(name="Finanzsektor")
     private float Finanzsektor;
 
-    @Override
-    public int hashCode() {
-        int hash = 3;
-        hash = 89 * hash + this.Cid;
-        hash = 89 * hash + Objects.hashCode(this.name);
-        hash = 89 * hash + Objects.hashCode(this.datum);
-        hash = 89 * hash + Float.floatToIntBits(this.eigenkapital);
-        hash = 89 * hash + Float.floatToIntBits(this.jahresueberschuss);
-        hash = 89 * hash + Float.floatToIntBits(this.GewinnEBIT);
-        hash = 89 * hash + Float.floatToIntBits(this.Jahresumsatz);
-        hash = 89 * hash + Float.floatToIntBits(this.Fremdkapital);
-        hash = 89 * hash + Float.floatToIntBits(this.AktuellerAktienkurs);
-        hash = 89 * hash + Float.floatToIntBits(this.Gewinnschaezung);
-        hash = 89 * hash + Float.floatToIntBits(this.GewinnAVG);
-        hash = 89 * hash + Float.floatToIntBits(this.Halten);
-        hash = 89 * hash + Float.floatToIntBits(this.Verkaufen);
-        hash = 89 * hash + Float.floatToIntBits(this.Kaufen);
-        hash = 89 * hash + Float.floatToIntBits(this.KursanstiegUnternehmen);
-        hash = 89 * hash + Float.floatToIntBits(this.KursanstiegIndex);
-        hash = 89 * hash + Float.floatToIntBits(this.GewinnschaezungVor4Wochen);
-        hash = 89 * hash + Float.floatToIntBits(this.KursHeute);
-        hash = 89 * hash + Float.floatToIntBits(this.KursVor6Monaten);
-        hash = 89 * hash + Float.floatToIntBits(this.KursVor12Monaten);
-        hash = 89 * hash + Float.floatToIntBits(this.KursVor3Monaten);
-        hash = 89 * hash + Float.floatToIntBits(this.KursVor2Monaten);
-        hash = 89 * hash + Float.floatToIntBits(this.KursVor1Monat);
-        hash = 89 * hash + Float.floatToIntBits(this.DaxVor1Monat);
-        hash = 89 * hash + Float.floatToIntBits(this.DaxVor2Monaten);
-        hash = 89 * hash + Float.floatToIntBits(this.DaxVor3Monaten);
-        hash = 89 * hash + Float.floatToIntBits(this.GewinnschaezungNaechstesJahr);
-        hash = 89 * hash + Float.floatToIntBits(this.GewinnschaezungDiesesJahr);
-        hash = 89 * hash + Float.floatToIntBits(this.Finanzsektor);
-        return hash;
-    }
-
-    @Override
-    public boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
-        }
-        if (obj == null) {
-            return false;
-        }
-        if (getClass() != obj.getClass()) {
-            return false;
-        }
-        final Unternehmen other = (Unternehmen) obj;
-        if (this.Cid != other.Cid) {
-            return false;
-        }
-        if (Float.floatToIntBits(this.eigenkapital) != Float.floatToIntBits(other.eigenkapital)) {
-            return false;
-        }
-        if (Float.floatToIntBits(this.jahresueberschuss) != Float.floatToIntBits(other.jahresueberschuss)) {
-            return false;
-        }
-        if (Float.floatToIntBits(this.GewinnEBIT) != Float.floatToIntBits(other.GewinnEBIT)) {
-            return false;
-        }
-        if (Float.floatToIntBits(this.Jahresumsatz) != Float.floatToIntBits(other.Jahresumsatz)) {
-            return false;
-        }
-        if (Float.floatToIntBits(this.Fremdkapital) != Float.floatToIntBits(other.Fremdkapital)) {
-            return false;
-        }
-        if (Float.floatToIntBits(this.AktuellerAktienkurs) != Float.floatToIntBits(other.AktuellerAktienkurs)) {
-            return false;
-        }
-        if (Float.floatToIntBits(this.Gewinnschaezung) != Float.floatToIntBits(other.Gewinnschaezung)) {
-            return false;
-        }
-        if (Float.floatToIntBits(this.GewinnAVG) != Float.floatToIntBits(other.GewinnAVG)) {
-            return false;
-        }
-        if (Float.floatToIntBits(this.Halten) != Float.floatToIntBits(other.Halten)) {
-            return false;
-        }
-        if (Float.floatToIntBits(this.Verkaufen) != Float.floatToIntBits(other.Verkaufen)) {
-            return false;
-        }
-        if (Float.floatToIntBits(this.Kaufen) != Float.floatToIntBits(other.Kaufen)) {
-            return false;
-        }
-        if (Float.floatToIntBits(this.KursanstiegUnternehmen) != Float.floatToIntBits(other.KursanstiegUnternehmen)) {
-            return false;
-        }
-        if (Float.floatToIntBits(this.KursanstiegIndex) != Float.floatToIntBits(other.KursanstiegIndex)) {
-            return false;
-        }
-        if (Float.floatToIntBits(this.GewinnschaezungVor4Wochen) != Float.floatToIntBits(other.GewinnschaezungVor4Wochen)) {
-            return false;
-        }
-        if (Float.floatToIntBits(this.KursHeute) != Float.floatToIntBits(other.KursHeute)) {
-            return false;
-        }
-        if (Float.floatToIntBits(this.KursVor6Monaten) != Float.floatToIntBits(other.KursVor6Monaten)) {
-            return false;
-        }
-        if (Float.floatToIntBits(this.KursVor12Monaten) != Float.floatToIntBits(other.KursVor12Monaten)) {
-            return false;
-        }
-        if (Float.floatToIntBits(this.KursVor3Monaten) != Float.floatToIntBits(other.KursVor3Monaten)) {
-            return false;
-        }
-        if (Float.floatToIntBits(this.KursVor2Monaten) != Float.floatToIntBits(other.KursVor2Monaten)) {
-            return false;
-        }
-        if (Float.floatToIntBits(this.KursVor1Monat) != Float.floatToIntBits(other.KursVor1Monat)) {
-            return false;
-        }
-        if (Float.floatToIntBits(this.DaxVor1Monat) != Float.floatToIntBits(other.DaxVor1Monat)) {
-            return false;
-        }
-        if (Float.floatToIntBits(this.DaxVor2Monaten) != Float.floatToIntBits(other.DaxVor2Monaten)) {
-            return false;
-        }
-        if (Float.floatToIntBits(this.DaxVor3Monaten) != Float.floatToIntBits(other.DaxVor3Monaten)) {
-            return false;
-        }
-        if (Float.floatToIntBits(this.GewinnschaezungNaechstesJahr) != Float.floatToIntBits(other.GewinnschaezungNaechstesJahr)) {
-            return false;
-        }
-        if (Float.floatToIntBits(this.GewinnschaezungDiesesJahr) != Float.floatToIntBits(other.GewinnschaezungDiesesJahr)) {
-            return false;
-        }
-        if (Float.floatToIntBits(this.Finanzsektor) != Float.floatToIntBits(other.Finanzsektor)) {
-            return false;
-        }
-        if (!Objects.equals(this.name, other.name)) {
-            return false;
-        }
-        if (!Objects.equals(this.datum, other.datum)) {
-            return false;
-        }
-        return true;
-    }
-
-    public int getCid() {
+     public int getCid() {
         return Cid;
     }
 
@@ -370,6 +252,8 @@ public class Unternehmen implements Serializable {
     public float getKursanstiegUnternehmen() {
         return KursanstiegUnternehmen;
     }
+
+
 
     public void setKursanstiegUnternehmen(float KursanstiegUnternehmen) {
         this.KursanstiegUnternehmen = KursanstiegUnternehmen;
@@ -489,22 +373,4 @@ public class Unternehmen implements Serializable {
 
 
 
-    public void persist(Object object) {
-        EntityManagerFactory emf = Persistence.createEntityManagerFactory("HibernatePersistenzEM");
-        EntityManager em = emf.createEntityManager();
-        em.getTransaction().begin();
-        try {
-            em.persist(object);
-            em.getTransaction().commit();
-        } catch (Exception e) {
-            e.printStackTrace();
-            em.getTransaction().rollback();
-        } finally {
-            em.close();
-        }
-    }
-
-
-
-
-    }
+}

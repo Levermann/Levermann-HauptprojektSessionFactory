@@ -2,11 +2,71 @@ package com.levermann.entityclass;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import javax.persistence.OneToOne;
+
 
 
 @Entity
+@Access(AccessType.FIELD)
+//@Table(name="unternehmen")
+@NamedQueries({
+        @NamedQuery(name = "Punkteliste.findall", query = "SELECT A FROM Punkteliste A"),
+        @NamedQuery(name = "Punkteliste.findById", query = "SELECT c FROM Punkteliste c WHERE c.Pid =:Pid")
+
+})
 @Table(name="punkteliste")
-public class Punkteliste implements Serializable {
+ public class Punkteliste implements Serializable {
+
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
+    @Id
+    @Column(name="Pid")
+    private int Pid;
+
+    @Column(name="Cid2")
+    private int Cid2;
+
+    @Column(name="Eigenkapitalrendite")
+    private int Eigenkapitalrendite;
+
+    @Column(name="EBITMarge")
+    private int EBITMarge;
+
+    @Column(name="Eigenkapitalquote")
+    private int Eigenkapitalquote;
+
+    @Column(name="KursGewinnVerhaeltnis")
+    private int KursGewinnVerhaeltnis;
+
+    @Column(name="KursGewinnVerhaeltnisAktuell")
+    private int KursGewinnVerhaeltnisAktuell;
+
+    @Column(name="Analystenmeinungen")
+    private int Analystenmeinungen;
+
+    @Column(name="ReaktionaufQuartalszahlen")
+    private int ReaktionaufQuartalszahlen;
+
+    @Column(name="Gewinnrevision")
+    private int Gewinnrevision;
+
+    @Column(name="Kursverlauf6Monate")
+    private int Kursverlauf6Monate;
+
+    @Column(name="Kursverlauf12Monate")
+    private int Kursverlauf12Monate;
+
+    @Column(name="Kursmomentum")
+    private int Kursmomentum;
+
+    @Column(name="Dreimonatsreversal")
+    private int Dreimonatsreversal;
+
+    @Column(name="Gewinnwachstum")
+    private int Gewinnwachstum;
+
+
+    public Punkteliste() {
+    }
 
     public int getCid2() {
         return Cid2;
@@ -40,20 +100,20 @@ public class Punkteliste implements Serializable {
         Eigenkapitalquote = eigenkapitalquote;
     }
 
-    public int getKursGewinnVerhältnis() {
-        return KursGewinnVerhältnis;
+    public int getKursGewinnVerhaeltnis() {
+        return KursGewinnVerhaeltnis;
     }
 
-    public void setKursGewinnVerhältnis(int kursGewinnVerhältnis) {
-        KursGewinnVerhältnis = kursGewinnVerhältnis;
+    public void setKursGewinnVerhaeltnis(int kursGewinnVerhaeltnis) {
+        KursGewinnVerhaeltnis = kursGewinnVerhaeltnis;
     }
 
-    public int getKursGewinnVerhältnisAktuell() {
-        return KursGewinnVerhältnisAktuell;
+    public int getKursGewinnVerhaeltnisAktuell() {
+        return KursGewinnVerhaeltnisAktuell;
     }
 
-    public void setKursGewinnVerhältnisAktuell(int kursGewinnVerhältnisAktuell) {
-        KursGewinnVerhältnisAktuell = kursGewinnVerhältnisAktuell;
+    public void setKursGewinnVerhaeltnisAktuell(int kursGewinnVerhaeltnisAktuell) {
+        KursGewinnVerhaeltnisAktuell = kursGewinnVerhaeltnisAktuell;
     }
 
     public int getAnalystenmeinungen() {
@@ -121,55 +181,25 @@ public class Punkteliste implements Serializable {
     }
 
 
-    @GeneratedValue(strategy=GenerationType.IDENTITY)
+    @ManyToOne(optional = false)
+    private Unternehmen Punkteliste;
 
-    @Id
-    @Column(name="Pid")
-    private int Pid;
+    public Unternehmen getPunkteliste() {
+        return Punkteliste;
+    }
 
-    @Column(name="Cid2")
-    private int Cid2;
+    public void setPunkteliste(Unternehmen punkteliste) {
+        Punkteliste = punkteliste;
+    }
 
-    @Column(name="Eigenkapitalrendite")
-    private int Eigenkapitalrendite;
+    @ManyToOne(optional = false)
+    private Unternehmen Punkteliste1;
 
-    @Column(name="EBITMarge")
-    private int EBITMarge;
+    public Unternehmen getPunkteliste1() {
+        return Punkteliste1;
+    }
 
-    @Column(name="Eigenkapitalquote")
-    private int Eigenkapitalquote;
-
-    @Column(name="KursGewinnVerhältnis")
-    private int KursGewinnVerhältnis;
-
-    @Column(name="KursGewinnVerhältnisAktuell")
-    private int KursGewinnVerhältnisAktuell;
-
-    @Column(name="Analystenmeinungen")
-    private int Analystenmeinungen;
-
-    @Column(name="ReaktionaufQuartalszahlen")
-    private int ReaktionaufQuartalszahlen;
-
-    @Column(name="Gewinnrevision")
-    private int Gewinnrevision;
-
-    @Column(name="Kursverlauf6Monate")
-    private int Kursverlauf6Monate;
-
-    @Column(name="Kursverlauf12Monate")
-    private int Kursverlauf12Monate;
-
-    @Column(name="Kursmomentum")
-    private int Kursmomentum;
-
-    @Column(name="Dreimonatsreversal")
-    private int Dreimonatsreversal;
-
-    @Column(name="Gewinnwachstum")
-    private int Gewinnwachstum;
-
-
-
-
+    public void setPunkteliste1(Unternehmen punkteliste1) {
+        Punkteliste1 = punkteliste1;
+    }
 }
