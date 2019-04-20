@@ -20,49 +20,49 @@ import javax.persistence.OneToOne;
     @GeneratedValue(strategy=GenerationType.IDENTITY)
     @Id
     @Column(name="Pid")
-    private int Pid;
+    private Integer Pid;
 
     @Column(name="Cid2")
-    private int Cid2;
+    private Integer Cid2;
 
     @Column(name="Eigenkapitalrendite")
-    private int Eigenkapitalrendite;
+    private Integer Eigenkapitalrendite;
 
     @Column(name="EBITMarge")
-    private int EBITMarge;
+    private Integer EBITMarge;
 
     @Column(name="Eigenkapitalquote")
-    private int Eigenkapitalquote;
+    private Integer Eigenkapitalquote;
 
     @Column(name="KursGewinnVerhaeltnis")
-    private int KursGewinnVerhaeltnis;
+    private Integer KursGewinnVerhaeltnis;
 
     @Column(name="KursGewinnVerhaeltnisAktuell")
-    private int KursGewinnVerhaeltnisAktuell;
+    private Integer KursGewinnVerhaeltnisAktuell;
 
     @Column(name="Analystenmeinungen")
-    private int Analystenmeinungen;
+    private Integer Analystenmeinungen;
 
     @Column(name="ReaktionaufQuartalszahlen")
-    private int ReaktionaufQuartalszahlen;
+    private Integer ReaktionaufQuartalszahlen;
 
     @Column(name="Gewinnrevision")
-    private int Gewinnrevision;
+    private Integer Gewinnrevision;
 
     @Column(name="Kursverlauf6Monate")
-    private int Kursverlauf6Monate;
+    private Integer Kursverlauf6Monate;
 
     @Column(name="Kursverlauf12Monate")
-    private int Kursverlauf12Monate;
+    private Integer Kursverlauf12Monate;
 
     @Column(name="Kursmomentum")
-    private int Kursmomentum;
+    private Integer Kursmomentum;
 
     @Column(name="Dreimonatsreversal")
-    private int Dreimonatsreversal;
+    private Integer Dreimonatsreversal;
 
     @Column(name="Gewinnwachstum")
-    private int Gewinnwachstum;
+    private Integer Gewinnwachstum;
 
 
     public Punkteliste() {

@@ -178,12 +178,12 @@ public class SelectOld {
         Query query2 = session.createQuery(Select);
           
          query2.setFirstResult(0);
-     
-  
-     // Erstellung der Liste
-     List<Unternehmen> users2 = (List<Unternehmen>) query2.list();
-     
-     for (Unternehmen u : users2)
+
+
+        // Erstellung der Liste
+        List<Unternehmen> users2 = (List<Unternehmen>) query2.list();
+
+        for (Unternehmen u : users2)
        
     // Ausgabe
         System.out.println(u.toString());

@@ -9,7 +9,7 @@ abstract public class ConnectionMainFactory  {
  public static void main(String[] args) {
 
  //Zeigt Systeminfos auf
- BasicConfigurator.configure();
+ // BasicConfigurator.configure();
 
   // Gibt die Methoden aus dem Interface aus
 
@@ -24,7 +24,7 @@ abstract public class ConnectionMainFactory  {
      // DaoUnternehmen dao2= new Update();
      // dao2.Dao();
 
-     DaoUnternehmen dao3= new SelectLevermannschritte();
+     DaoUnternehmen dao3= new Select();
      dao3.Dao();
 
 
