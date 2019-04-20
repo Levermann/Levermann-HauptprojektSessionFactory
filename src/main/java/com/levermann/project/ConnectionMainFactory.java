@@ -8,24 +8,26 @@ abstract public class ConnectionMainFactory  {
  @SuppressWarnings("empty-statement")
  public static void main(String[] args) {
 
-  BasicConfigurator.configure();
+ //Zeigt Systeminfos auf
+ BasicConfigurator.configure();
 
-  CreatePunktelisten cr= new CreatePunktelisten();
-  cr.Dao();
+  // Gibt die Methoden aus dem Interface aus
 
-  /*   DaoUnternehmen dao0= new CreatePunktelisten();
-    dao0.Dao();
 
-     DaoUnternehmen dao1= new Delete();
-     dao1.Dao();
+    // DaoUnternehmen dao0= new Create();
+    // dao0.Dao();
 
-     DaoUnternehmen dao2= new Update();
-     dao2.Dao();
 
-     DaoUnternehmen dao3= new Select();
-     dao2.Dao();
+     // DaoUnternehmen dao1= new Delete();
+     //dao1.Dao();
 
-     */
+     // DaoUnternehmen dao2= new Update();
+     // dao2.Dao();
+
+     DaoUnternehmen dao3= new SelectLevermannschritte();
+     dao3.Dao();
+
+
 
 
  }

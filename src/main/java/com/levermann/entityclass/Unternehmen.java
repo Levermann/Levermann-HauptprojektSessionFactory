@@ -1,19 +1,9 @@
 package com.levermann.entityclass;
 
-import com.levermann.dao.DaoUnternehmen;
-import org.springframework.context.annotation.Bean;
-
 import javax.persistence.*;
 import java.io.Serializable;
-import java.util.List;
-import java.util.Objects;
-import java.util.Set;
 import javax.inject.Named;
 import javax.annotation.ManagedBean;
-import javax.inject.Scope;
-import javax.persistence.OneToMany;
-import javax.persistence.JoinColumn;
-
 
 @Named
 @ManagedBean
