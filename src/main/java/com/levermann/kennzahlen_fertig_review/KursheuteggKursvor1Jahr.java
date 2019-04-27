@@ -1,9 +1,8 @@
-package com.levermann.kennzahlen_fertig;
+package com.levermann.kennzahlen_fertig_review;
 
 import com.levermann.dao.HibernateUtil;
 import com.levermann.entityclass.Levermannschritte;
 import com.levermann.entityclass.Unternehmen;
-import com.levermann.kennzahlen_fertig.Gewinnrevision;
 import org.apache.log4j.Logger;
 import org.hibernate.HibernateException;
 import org.hibernate.Query;
@@ -14,10 +13,10 @@ import java.text.DecimalFormat;
 import java.util.List;
 import java.util.Scanner;
 
-public class KursheuteggKursvor6Monaten {
-    final static Logger logger = Logger.getLogger(Gewinnrevision.class);
+public class KursheuteggKursvor1Jahr {
+    final static Logger logger = Logger.getLogger(KursheuteggKursvor1Jahr.class);
 
-    public void KursheuteggKursvor6Monaten() {
+    public void KursheuteggKursvor12Monaten() {
         //Logger wird für die Methode ausgeführt
         logger.info("Logger is Entering the Execute method from Create");
         String returnValue = "";
@@ -47,7 +46,7 @@ public class KursheuteggKursvor6Monaten {
 
                 // Berechnung der WerteVeränderung für Punkteverteilung
                 float i;
-                i = ((float) un.getKursHeute() / (float) un.getKursVor6Monaten()) * 100 - 100;
+                i = ((float) un.getKursHeute() / (float) un.getKursVor12Monaten()) * 100 - 100;
                 DecimalFormat f = new DecimalFormat("#0.00");
                 double toFormat = ((double) Math.round(i * 100)) / 100;
                 f.format(toFormat);
@@ -56,7 +55,7 @@ public class KursheuteggKursvor6Monaten {
                 i = Math.round(i);
                 i = i / 100;
 
-                // FAll 1, Kursschätzung Wert: +1
+                // FAll 1, Gewinnschätzung aktuell ist um mind höher als vor 4 Wochen
                 if (i > 0.05 == true) {
 
                     //HQL Named Query FindAll Levermannschritte
@@ -66,7 +65,7 @@ public class KursheuteggKursvor6Monaten {
 
                         if (lvsch.getCid3() == un.getCid() == true && i >= 0.05 == true) {
                             System.out.println("Richtig :D" + lvsch.getCid3() + " = " + un.getCid() + "i = " + i);
-                            lvsch.setKursverlauf6Monate(1);
+                            lvsch.setKursverlauf12Monate(1);
                         }
 
                         lvsch.setLid(lvsch.getLid());
@@ -75,7 +74,7 @@ public class KursheuteggKursvor6Monaten {
                     }
                 }
 
-                // FAll 2, Kursschätzung Wert: -1
+                // FAll 1, Gewinnschätzung aktuell ist um mind. -0.05 niedriger als vor 4 Wochen
                 if (i < -0.05 == true) {
 
                     //HQL Named Query FindAll Levermannschritte
@@ -85,7 +84,7 @@ public class KursheuteggKursvor6Monaten {
 
                         if (lvsch1.getCid3() == un.getCid() == true && i <= -0.05 == true) {
                             System.out.println("Richtig :D" + lvsch1.getCid3() + " = " + un.getCid() + "i = " + i);
-                            lvsch1.setKursverlauf6Monate(-1);
+                            lvsch1.setKursverlauf12Monate(-1);
                         }
 
                         lvsch1.setLid(lvsch1.getLid());
@@ -95,7 +94,6 @@ public class KursheuteggKursvor6Monaten {
                     }
                 }
 
-                //Fall 3, Kursschätzung Wert: 0
                 if (i >= 0.05 == false && i <= -0.05 == false) {
 
                     //HQL Named Query FindAll Levermannschritte
@@ -105,7 +103,7 @@ public class KursheuteggKursvor6Monaten {
 
                         if (lvsch1.getCid3() == un.getCid() == true && i > 0.005 == false && i < -0.05 == false) {
                             System.out.println("Richtig :D" + lvsch1.getCid3() + " = " + un.getCid() + "i = " + i);
-                            lvsch1.setKursverlauf6Monate(0);
+                            lvsch1.setKursverlauf12Monate(0);
                         }
 
                         lvsch1.setLid(lvsch1.getLid());

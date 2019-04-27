@@ -1,7 +1,7 @@
 package com.levermann.project;
 
-import com.levermann.kennzahlen_fertig.KursheuteggKursvor1Jahr;
-import com.levermann.kennzahlen_fertig.KursheuteggKursvor6Monaten;
+import com.levermann.kennzahlen_fertig_review.KursheuteggKursvor1Jahr;
+import com.levermann.kennzahlen_fertig_review.Kursmomentum;
 
 
 abstract public class ConnectionMainFactory  {
@@ -29,9 +29,11 @@ abstract public class ConnectionMainFactory  {
    //  Gewinnrevision gwr = new Gewinnrevision();
   //   gwr.Gewinnrevision();
 
-     KursheuteggKursvor1Jahr kw6 = new KursheuteggKursvor1Jahr();
-     kw6.KursheuteggKursvor12Monaten();
+   //  KursheuteggKursvor1Jahr kw6 = new KursheuteggKursvor1Jahr();
+     //kw6.KursheuteggKursvor12Monaten();
 
+     Kursmomentum km = new Kursmomentum();
+     km.Kursmomentum();
 
 
  }

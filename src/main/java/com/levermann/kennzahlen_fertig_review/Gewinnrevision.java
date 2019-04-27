@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.levermann.kennzahlen_fertig;
+package com.levermann.kennzahlen_fertig_review;
 
 
 import com.levermann.dao.HibernateUtil;
