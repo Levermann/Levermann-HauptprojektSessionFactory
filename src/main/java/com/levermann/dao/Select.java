@@ -36,7 +36,6 @@ import org.hibernate.cfg.Configuration;
         Scanner scanner = new Scanner(System.in);
 
         try {
-
              //create a unternehmen object
             System.out.println("Creating new Unternehmen Object");
 
@@ -47,8 +46,6 @@ import org.hibernate.cfg.Configuration;
 
             // start a transaction
             session.beginTransaction();
-
-
 
         //HQL Named Query FindAll Unternehmen
             Query query = session.getNamedQuery("Unternehmen.findAll");
