@@ -190,46 +190,46 @@ import java.util.Objects;
     @Column(name = "Lid")
     private Integer Lid;
 
-    @Column(name = "Cid3", unique = true, nullable = false)
+    @Column(name = "Cid3", unique = true, nullable = true)
     private Integer Cid3;
 
-    @Column(name = "Eigenkapitalrendite", unique = true, nullable = false)
+    @Column(name = "Eigenkapitalrendite", unique = true, nullable = true)
     private Integer Eigenkapitalrendite;
 
-    @Column(name = "EBITMarge", unique = true, nullable = false)
+    @Column(name = "EBITMarge", unique = true, nullable = true)
     private Integer EBITMarge;
 
-    @Column(name = "Eigenkapitalquote", unique = true, nullable = false)
+    @Column(name = "Eigenkapitalquote", unique = true, nullable = true)
     private Integer Eigenkapitalquote;
 
-    @Column(name = "KursGewinnVerhältnis", unique = true, nullable = false)
+    @Column(name = "KursGewinnVerhältnis", unique = true, nullable = true)
     private Integer KursGewinnVerhältnis;
 
-    @Column(name = "KursGewinnVerhältnisAktuell", unique = true, nullable = false)
+    @Column(name = "KursGewinnVerhältnisAktuell", unique = true, nullable = true)
     private Integer KursGewinnVerhältnisAktuell;
 
-    @Column(name = "Analystenmeinungen")
+    @Column(name = "Analystenmeinungen", unique = true, nullable = true)
     private Integer Analystenmeinungen;
 
-    @Column(name = "ReaktionaufQuartalszahlen")
+    @Column(name = "ReaktionaufQuartalszahlen", unique = true, nullable = true)
     private Integer ReaktionaufQuartalszahlen;
 
-    @Column(name = "Gewinnrevision")
+    @Column(name = "Gewinnrevision", unique = true, nullable = true)
     private Integer Gewinnrevision;
 
-    @Column(name = "Kursverlauf6Monate")
+    @Column(name = "Kursverlauf6Monate", unique = true, nullable = true)
     private Integer Kursverlauf6Monate;
 
-    @Column(name = "Kursverlauf12Monate")
+    @Column(name = "Kursverlauf12Monate", unique = true, nullable = true)
     private Integer Kursverlauf12Monate;
 
-    @Column(name = "Kursmomentum")
+    @Column(name = "Kursmomentum", unique = true, nullable = true)
     private Integer Kursmomentum;
 
-    @Column(name = "Dreimonatsreversal", unique = true, nullable = false)
+    @Column(name = "Dreimonatsreversal", unique = true, nullable = true)
     private Integer Dreimonatsreversal;
 
-    @Column(name = "Gewinnwachstum")
+    @Column(name = "Gewinnwachstum", unique = true, nullable = true)
     private Integer Gewinnwachstum;
 
 

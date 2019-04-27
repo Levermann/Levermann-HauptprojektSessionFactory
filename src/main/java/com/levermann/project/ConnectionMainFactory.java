@@ -1,7 +1,9 @@
 package com.levermann.project;
 
-import com.levermann.dao.*;
-import org.apache.log4j.BasicConfigurator;
+import com.levermann.kennzahlen_fertig.KursheuteggKursvor1Jahr;
+import com.levermann.kennzahlen_fertig.KursheuteggKursvor6Monaten;
+
+
 abstract public class ConnectionMainFactory  {
 
 
@@ -24,9 +26,11 @@ abstract public class ConnectionMainFactory  {
      // DaoUnternehmen dao2= new Update();
      // dao2.Dao();
 
-     DaoUnternehmen dao3= new SelectLevermannschritte();
-     dao3.Dao();
+   //  Gewinnrevision gwr = new Gewinnrevision();
+  //   gwr.Gewinnrevision();
 
+     KursheuteggKursvor1Jahr kw6 = new KursheuteggKursvor1Jahr();
+     kw6.KursheuteggKursvor12Monaten();
 
 
 
