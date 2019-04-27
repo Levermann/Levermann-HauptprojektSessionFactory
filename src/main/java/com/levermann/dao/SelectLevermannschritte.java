@@ -32,6 +32,7 @@ public class SelectLevermannschritte implements DaoUnternehmen{
        //Aufrufen der aktuellen Session aus HibernateUtil
        SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
        Session session = sessionFactory.getCurrentSession();
+       Session session1 = sessionFactory.getCurrentSession();
        Scanner scanner = new Scanner(System.in);
 
        try {
@@ -51,15 +52,48 @@ public class SelectLevermannschritte implements DaoUnternehmen{
            Query query = session.getNamedQuery("Levermannschritte.findAll");
            List<Levermannschritte> unList = (List<Levermannschritte>) query.list();
            for (Levermannschritte un : unList) {
+
+
+              float i;
+
+              i =  ((float)un.getKursGewinnVerhältnisAktuell()/(float)un.getKursGewinnVerhältnis())*100-100;
+
+               i = Math.round(i);
+               i = i / 100;
+
+                 if (i >= 0.05 == true){
+
+                    // un.setLid(un.getLid());
+                     un.setAnalystenmeinungen(111);
+
+                  //   un.setAnalystenmeinungen(111);
+                     System.out.println("yea LID:  "+un.getLid() +" AM: "+ un.getAnalystenmeinungen());
+                 }
+
+                 if (i <= - 0.05 == true )
+
+                 {  // un.setAnalystenmeinungen(222);
+                     System.out.println("f**   "+ un.getAnalystenmeinungen());
+                 }
+
+                 else{
+                   //  un.setAnalystenmeinungen(333);
+                     System.out.println("fall 3   "+ un.getAnalystenmeinungen());
+                 }
+
                System.out.println("Liste der Levermannschritte = " + un.getLid() + ","
-                       + un.getCid3());}
+                       + un.getCid3()+ " Kursgewinn aktuell: "+ un.getKursGewinnVerhältnisAktuell() + " Kursgewinn Verhältniss: "+ un.getKursGewinnVerhältnis()+" summe:" + i);}
+
+
+           //commit transaction
+           session.getTransaction().commit();
+
 
 
                  // safe Unternhemen Object
            System.out.println("Speichere Unternehmen...");
 
-           //commit transaction
-           session.getTransaction().commit();
+
 
            System.out.println("Done!");
        } catch (HibernateException e) {

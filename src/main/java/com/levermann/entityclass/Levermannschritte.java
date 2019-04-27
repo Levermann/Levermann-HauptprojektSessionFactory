@@ -18,6 +18,126 @@ import java.util.Objects;
 })
 @Table(name="levermannschritte")
  public class Levermannschritte  implements Serializable {
+    public Integer getLid() {
+        return Lid;
+    }
+
+    public void setLid(Integer lid) {
+        Lid = lid;
+    }
+
+    public Integer getCid3() {
+        return Cid3;
+    }
+
+    public void setCid3(Integer cid3) {
+        Cid3 = cid3;
+    }
+
+    public Integer getEigenkapitalrendite() {
+        return Eigenkapitalrendite;
+    }
+
+    public void setEigenkapitalrendite(Integer eigenkapitalrendite) {
+        Eigenkapitalrendite = eigenkapitalrendite;
+    }
+
+    public Integer getEBITMarge() {
+        return EBITMarge;
+    }
+
+    public void setEBITMarge(Integer EBITMarge) {
+        this.EBITMarge = EBITMarge;
+    }
+
+    public Integer getEigenkapitalquote() {
+        return Eigenkapitalquote;
+    }
+
+    public void setEigenkapitalquote(Integer eigenkapitalquote) {
+        Eigenkapitalquote = eigenkapitalquote;
+    }
+
+    public Integer getKursGewinnVerhältnis() {
+        return KursGewinnVerhältnis;
+    }
+
+    public void setKursGewinnVerhältnis(Integer kursGewinnVerhältnis) {
+        KursGewinnVerhältnis = kursGewinnVerhältnis;
+    }
+
+    public Integer getKursGewinnVerhältnisAktuell() {
+        return KursGewinnVerhältnisAktuell;
+    }
+
+    public void setKursGewinnVerhältnisAktuell(Integer kursGewinnVerhältnisAktuell) {
+        KursGewinnVerhältnisAktuell = kursGewinnVerhältnisAktuell;
+    }
+
+    public Integer getAnalystenmeinungen() {
+        return Analystenmeinungen;
+    }
+
+    public void setAnalystenmeinungen(Integer analystenmeinungen) {
+        Analystenmeinungen = analystenmeinungen;
+    }
+
+    public Integer getReaktionaufQuartalszahlen() {
+        return ReaktionaufQuartalszahlen;
+    }
+
+    public void setReaktionaufQuartalszahlen(Integer reaktionaufQuartalszahlen) {
+        ReaktionaufQuartalszahlen = reaktionaufQuartalszahlen;
+    }
+
+    public Integer getGewinnrevision() {
+        return Gewinnrevision;
+    }
+
+    public void setGewinnrevision(Integer gewinnrevision) {
+        Gewinnrevision = gewinnrevision;
+    }
+
+    public Integer getKursverlauf6Monate() {
+        return Kursverlauf6Monate;
+    }
+
+    public void setKursverlauf6Monate(Integer kursverlauf6Monate) {
+        Kursverlauf6Monate = kursverlauf6Monate;
+    }
+
+    public Integer getKursverlauf12Monate() {
+        return Kursverlauf12Monate;
+    }
+
+    public void setKursverlauf12Monate(Integer kursverlauf12Monate) {
+        Kursverlauf12Monate = kursverlauf12Monate;
+    }
+
+    public Integer getKursmomentum() {
+        return Kursmomentum;
+    }
+
+    public void setKursmomentum(Integer kursmomentum) {
+        Kursmomentum = kursmomentum;
+    }
+
+    public Integer getDreimonatsreversal() {
+        return Dreimonatsreversal;
+    }
+
+    public void setDreimonatsreversal(Integer dreimonatsreversal) {
+        Dreimonatsreversal = dreimonatsreversal;
+    }
+
+    public Integer getGewinnwachstum() {
+        return Gewinnwachstum;
+    }
+
+    public void setGewinnwachstum(Integer gewinnwachstum) {
+        Gewinnwachstum = gewinnwachstum;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -40,10 +160,6 @@ import java.util.Objects;
                 getGewinnwachstum() == that.getGewinnwachstum();
     }
 
-    @Override
-    public int hashCode() {
-        return Objects.hash(getLid(), getCid3(), getEigenkapitalrendite(), getEBITMarge(), getEigenkapitalquote(), getKursGewinnVerhältnis(), getKursGewinnVerhältnisAktuell(), getAnalystenmeinungen(), getReaktionaufQuartalszahlen(), getGewinnrevision(), getKursverlauf6Monate(), getKursverlauf12Monate(), getKursmomentum(), getDreimonatsreversal(), getGewinnwachstum());
-    }
 
     @Override
     public String toString() {
@@ -65,129 +181,6 @@ import java.util.Objects;
                 ", Gewinnwachstum=" + Gewinnwachstum +
                 '}';
     }
-
-    public int getLid() {
-        return Lid;
-    }
-
-    public void setLid(int lid) {
-        Lid = lid;
-    }
-
-    public int getCid3() {
-        return Cid3;
-    }
-
-    public void setCid3(int cid3) {
-        Cid3 = cid3;
-    }
-
-    public int getEigenkapitalrendite() {
-        return Eigenkapitalrendite;
-    }
-
-    public void setEigenkapitalrendite(int eigenkapitalrendite) {
-        Eigenkapitalrendite = eigenkapitalrendite;
-    }
-
-    public int getEBITMarge() {
-        return EBITMarge;
-    }
-
-    public void setEBITMarge(int EBITMarge) {
-        this.EBITMarge = EBITMarge;
-    }
-
-    public int getEigenkapitalquote() {
-        return Eigenkapitalquote;
-    }
-
-    public void setEigenkapitalquote(int eigenkapitalquote) {
-        Eigenkapitalquote = eigenkapitalquote;
-    }
-
-    public int getKursGewinnVerhältnis() {
-        return KursGewinnVerhältnis;
-    }
-
-    public void setKursGewinnVerhältnis(int kursGewinnVerhältnis) {
-        KursGewinnVerhältnis = kursGewinnVerhältnis;
-    }
-
-    public int getKursGewinnVerhältnisAktuell() {
-        return KursGewinnVerhältnisAktuell;
-    }
-
-    public void setKursGewinnVerhältnisAktuell(int kursGewinnVerhältnisAktuell) {
-        KursGewinnVerhältnisAktuell = kursGewinnVerhältnisAktuell;
-    }
-
-    public int getAnalystenmeinungen() {
-        return Analystenmeinungen;
-    }
-
-    public void setAnalystenmeinungen(int analystenmeinungen) {
-        Analystenmeinungen = analystenmeinungen;
-    }
-
-    public int getReaktionaufQuartalszahlen() {
-        return ReaktionaufQuartalszahlen;
-    }
-
-    public void setReaktionaufQuartalszahlen(int reaktionaufQuartalszahlen) {
-        ReaktionaufQuartalszahlen = reaktionaufQuartalszahlen;
-    }
-
-    public int getGewinnrevision() {
-        return Gewinnrevision;
-    }
-
-    public void setGewinnrevision(int gewinnrevision) {
-        Gewinnrevision = gewinnrevision;
-    }
-
-    public int getKursverlauf6Monate() {
-        return Kursverlauf6Monate;
-    }
-
-    public void setKursverlauf6Monate(int kursverlauf6Monate) {
-        Kursverlauf6Monate = kursverlauf6Monate;
-    }
-
-    public int getKursverlauf12Monate() {
-        return Kursverlauf12Monate;
-    }
-
-    public void setKursverlauf12Monate(int kursverlauf12Monate) {
-        Kursverlauf12Monate = kursverlauf12Monate;
-    }
-
-    public int getKursmomentum() {
-        return Kursmomentum;
-    }
-
-    public void setKursmomentum(int kursmomentum) {
-        Kursmomentum = kursmomentum;
-    }
-
-    public int getDreimonatsreversal() {
-        return Dreimonatsreversal;
-    }
-
-    public void setDreimonatsreversal(int dreimonatsreversal) {
-        Dreimonatsreversal = dreimonatsreversal;
-    }
-
-    public int getGewinnwachstum() {
-        return Gewinnwachstum;
-    }
-
-    public void setGewinnwachstum(int gewinnwachstum) {
-        Gewinnwachstum = gewinnwachstum;
-    }
-// @ManyToOne
-   // @JoinColumn(name="unternehmen_Cid", nullable=false)
-   // private Unternehmen unternehmen;
 
     public Levermannschritte() {
     }
@@ -216,7 +209,7 @@ import java.util.Objects;
     private Integer KursGewinnVerhältnisAktuell;
 
     @Column(name = "Analystenmeinungen")
-    private int Analystenmeinungen;
+    private Integer Analystenmeinungen;
 
     @Column(name = "ReaktionaufQuartalszahlen")
     private Integer ReaktionaufQuartalszahlen;
