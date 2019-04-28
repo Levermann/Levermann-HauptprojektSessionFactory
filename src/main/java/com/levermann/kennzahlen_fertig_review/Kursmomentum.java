@@ -1,3 +1,7 @@
+/*
+# Datebankzugriff und Veränderung mit einer Datenbank
+*/
+
 package com.levermann.kennzahlen_fertig_review;
 
 import com.levermann.dao.HibernateUtil;

@@ -1,5 +1,6 @@
 package com.levermann.project;
 
+import com.levermann.kennzahlen.Gewinnwachstum;
 import com.levermann.kennzahlen_fertig_review.KursheuteggKursvor1Jahr;
 import com.levermann.kennzahlen_fertig_review.Kursmomentum;
 
@@ -32,8 +33,11 @@ abstract public class ConnectionMainFactory  {
    //  KursheuteggKursvor1Jahr kw6 = new KursheuteggKursvor1Jahr();
      //kw6.KursheuteggKursvor12Monaten();
 
-     Kursmomentum km = new Kursmomentum();
-     km.Kursmomentum();
+   //  Kursmomentum km = new Kursmomentum();
+    // km.Kursmomentum();
+
+     Gewinnwachstum gww = new Gewinnwachstum();
+     gww.Gewinnwachstum();
 
 
  }

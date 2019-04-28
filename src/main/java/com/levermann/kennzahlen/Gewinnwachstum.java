@@ -1,14 +1,15 @@
 /*
- * Datenbankzugriff und Veränderung mit uwei Datenbanken
- * Levermann + Unternhemen
- * Variablen:
+ * Datenbankzugriff und Veränderung mit zwei Datenbanken
+ * Levermann & Unternehmen
+ *
  */
 
-package com.levermann.kennzahlen_fertig_review;
+package com.levermann.kennzahlen;
 
 import com.levermann.dao.HibernateUtil;
 import com.levermann.entityclass.Levermannschritte;
 import com.levermann.entityclass.Unternehmen;
+import com.levermann.kennzahlen_fertig_review.KursheuteggKursvor1Jahr;
 import org.apache.log4j.Logger;
 import org.hibernate.HibernateException;
 import org.hibernate.Query;
@@ -19,10 +20,10 @@ import java.text.DecimalFormat;
 import java.util.List;
 import java.util.Scanner;
 
-public class KursheuteggKursvor1Jahr {
-    final static Logger logger = Logger.getLogger(KursheuteggKursvor1Jahr.class);
+public class Gewinnwachstum {
+    final static Logger logger = Logger.getLogger(Gewinnwachstum.class);
 
-    public void KursheuteggKursvor12Monaten() {
+    public void Gewinnwachstum() {
         //Logger wird für die Methode ausgeführt
         logger.info("Logger is Entering the Execute method from Create");
         String returnValue = "";
@@ -52,7 +53,7 @@ public class KursheuteggKursvor1Jahr {
 
                 // Berechnung der WerteVeränderung für Punkteverteilung
                 float i;
-                i = ((float) un.getKursHeute() / (float) un.getKursVor12Monaten()) * 100 - 100;
+                i = ((float) un.getGewinnschaezungNaechstesJahr()/ (float) un.getGewinnschaezungDiesesJahr()) * 100 - 100;
                 DecimalFormat f = new DecimalFormat("#0.00");
                 double toFormat = ((double) Math.round(i * 100)) / 100;
                 f.format(toFormat);
@@ -71,11 +72,11 @@ public class KursheuteggKursvor1Jahr {
 
                         if (lvsch.getCid3() == un.getCid() == true && i >= 0.05 == true) {
                             System.out.println("Richtig :D" + lvsch.getCid3() + " = " + un.getCid() + "i = " + i);
-                            lvsch.setKursverlauf12Monate(1);
+                            lvsch.setGewinnwachstum(1);
                         }
 
                         lvsch.setLid(lvsch.getLid());
-                        // System.out.println("Unternehmen: " + un.getCid()+ " Levermannschritt: " + lvsch.getCid3() );
+                         System.out.println("Unternehmen: " + un.getCid()+ " Levermannschritt: " + lvsch.getCid3()  + "   " + i);
                         // System.out.println("Fall 1 : yea LID:  "+lvsch.getLid() +" AM: "+ lvsch.getGewinnrevision());
                     }
                 }
@@ -93,7 +94,7 @@ public class KursheuteggKursvor1Jahr {
                             lvsch1.setKursverlauf12Monate(-1);
                         }
 
-                        lvsch1.setLid(lvsch1.getLid());
+                        lvsch1.setGewinnwachstum(lvsch1.getLid());
 
                         //  System.out.println("Unternehmen: " + un.getCid() + " Levermannschritt: " + lvsch1.getCid3());
                         //  System.out.println("Fall 2 : yea LID:  " + lvsch1.getLid() + " AM: " + lvsch1.getGewinnrevision());
@@ -112,7 +113,7 @@ public class KursheuteggKursvor1Jahr {
                             lvsch1.setKursverlauf12Monate(0);
                         }
 
-                        lvsch1.setLid(lvsch1.getLid());
+                        lvsch1.setGewinnwachstum(lvsch1.getLid());
                         //  System.out.println("Fall 3 : yea LID:  " + lvsch1.getLid() + " AM: " + lvsch1.getGewinnrevision());
                     }
                     //    System.out.println("Liste der Levermannschritte = " + un.getCid() + ","
