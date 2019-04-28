@@ -8,12 +8,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="71376cf0-4a45-4351-8dca-943cab88ca4d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/levermann/kennzahlen/Dreimonatsreversal.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/levermann/kennzahlen_fertig_review/Kursmomentum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/levermann/kennzahlen/Gewinnwachstum.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/levermann/kennzahlen_fertig/Gewinnrevision.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/levermann/kennzahlen_fertig_review/Gewinnrevision.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/levermann/kennzahlen_fertig/KursheuteggKursvor1Jahr.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/levermann/kennzahlen_fertig_review/KursheuteggKursvor1Jahr.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/levermann/kennzahlen_fertig/KursheuteggKursvor6Monaten.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/levermann/kennzahlen_fertig_review/KursheuteggKursvor6Monaten.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/levermann/kennzahlen_fertig_review/Gewinnrevision.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/levermann/kennzahlen_fertig_review/Gewinnrevision.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/levermann/kennzahlen_fertig_review/KursheuteggKursvor1Jahr.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/levermann/kennzahlen_fertig_review/KursheuteggKursvor1Jahr.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/levermann/kennzahlen_fertig_review/Kursmomentum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/levermann/kennzahlen_fertig_review/Kursmomentum.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/levermann/project/ConnectionMainFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/levermann/project/ConnectionMainFactory.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/classes/" />
@@ -66,13 +65,6 @@
         <item name="hibernate.cfg.xml/Hibernate" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="levermann: schema" type="ebfa3cd1:MariaImplModel$Schema" />
-        <item name="punkteliste: table" type="dbc44a63:MariaImplModel$Table" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="hibernate.cfg.xml/Hibernate" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="levermann: schema" type="ebfa3cd1:MariaImplModel$Schema" />
         <item name="unternehmen: table" type="dbc44a63:MariaImplModel$Table" />
       </path>
       <path>
@@ -91,22 +83,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/levermann/kennzahlen_fertig_review/Kursmomentum.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="579">
-              <caret line="91" column="13" lean-forward="true" selection-start-line="91" selection-start-column="13" selection-end-line="91" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/levermann/project/ConnectionMainFactory.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="46" lean-forward="true" selection-start-line="6" selection-start-column="46" selection-end-line="6" selection-end-column="46" />
+            <state relative-caret-position="394">
+              <caret line="39" column="26" selection-start-line="39" selection-start-column="26" selection-end-line="39" selection-end-column="26" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -122,85 +102,76 @@
                 <filter text="" />
               </filtering>
               <column-attributes>
-                <column name="Lid" position="5" />
-                <column name="Cid3" position="6" />
-                <column name="Eigenkapitalrendite" position="7" />
-                <column name="EBITMarge" position="8" />
-                <column name="Eigenkapitalquote" position="9" />
-                <column name="KursGewinnVerhältnis" position="10" />
-                <column name="KursGewinnVerhältnisAktuell" position="11" />
-                <column name="Analystenmeinungen" position="12" />
-                <column name="ReaktionaufQuartalszahlen" position="13" />
-                <column name="Gewinnrevision" position="14" />
-                <column name="Kursverlauf6Monate" position="3" />
-                <column name="Kursverlauf12Monate" position="2" />
-                <column name="Kursmomentum" position="1" />
+                <column name="Lid" position="2" />
+                <column name="Cid3" position="3" />
+                <column name="Eigenkapitalrendite" position="4" />
+                <column name="EBITMarge" position="5" />
+                <column name="Eigenkapitalquote" position="6" />
+                <column name="KursGewinnVerhältnis" position="7" />
+                <column name="KursGewinnVerhältnisAktuell" position="8" />
+                <column name="Analystenmeinungen" position="9" />
+                <column name="ReaktionaufQuartalszahlen" position="10" />
+                <column name="Gewinnrevision" position="11" />
+                <column name="Kursverlauf6Monate" position="12" />
+                <column name="Kursverlauf12Monate" position="13" />
+                <column name="Kursmomentum" position="14" />
                 <column name="Dreimonatsreversal" position="15" />
-                <column name="Gewinnwachstum" position="4" />
+                <column name="Gewinnwachstum" position="1" />
               </column-attributes>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/levermann/kennzahlen/Eigenkapitalquote.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/levermann/kennzahlen/Eigenkapitalrendite.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        <entry file="das://b34121eb-3aed-44a8-9368-49552a11cff0/schema/levermann/table/unternehmen">
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true">
+                <filter text="" />
+              </filtering>
+              <column-attributes>
+                <column name="name" position="8" />
+                <column name="datum" position="9" />
+                <column name="eigenkapital" position="10" />
+                <column name="jahresueberschuss" position="11" />
+                <column name="GewinnEBIT" position="12" />
+                <column name="Jahresumsatz" position="13" />
+                <column name="Fremdkapital" position="14" />
+                <column name="AktuellerAktienkurs" position="15" />
+                <column name="Gewinnschaezung" position="4" />
+                <column name="GewinnAVG" position="16" />
+                <column name="Halten" enabled="false" position="-1" />
+                <column name="Verkaufen" position="17" />
+                <column name="Kaufen" position="18" />
+                <column name="KursanstiegUnternehmen" position="19" />
+                <column name="KursanstiegIndex" position="20" />
+                <column name="GewinnschaezungVor4Wochen" position="21" />
+                <column name="KursHeute" position="7" />
+                <column name="KursVor6Monaten" position="6" />
+                <column name="KursVor12Monaten" position="5" />
+                <column name="KursVor3Monaten" position="22" />
+                <column name="KursVor2Monaten" position="23" />
+                <column name="KursVor1Monat" position="24" />
+                <column name="DaxVor1Monat" position="25" />
+                <column name="DaxVor2Monaten" position="26" />
+                <column name="DaxVor3Monaten" position="27" />
+                <column name="GewinnschaezungNaechstesJahr" position="3" />
+                <column name="GewinnschaezungDiesesJahr" position="2" />
+                <column name="Finanzsektor" position="28" />
+              </column-attributes>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/levermann/kennzahlen/Dreimonatsreversal.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/levermann/kennzahlen/Gewinnwachstum.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" selection-start-line="4" selection-end-line="4" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/levermann/kennzahlen/Kursverlauf6Monate.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/levermann/kennzahlen/KursgewinnVerhältnis5Jahre.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/levermann/kennzahlen/KursGewinnVerhältnis.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/levermann/kennzahlen/GewinnEBIT.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+            <state relative-caret-position="229">
+              <caret line="78" column="127" selection-start-line="78" selection-start-column="127" selection-end-line="78" selection-end-column="127" />
+              <folding>
+                <element signature="e#0#5933#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -214,6 +185,7 @@
         <option value="AnnotationType" />
         <option value="Interface" />
         <option value="TestNG Test Class" />
+        <option value="XSLT Stylesheet" />
         <option value="Class" />
       </list>
     </option>
@@ -266,10 +238,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/levermann/dao/UnternehmenDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/levermann/entityclass/Unternehmen.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/levermann/dao/IUnternehmenDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/log4j.properties" />
         <option value="$PROJECT_DIR$/src/main/java/com/levermann/TestFiles/IUnternehmenDAO.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/levermann/TestFiles/HibernateUtil_Test.java" />
@@ -313,10 +281,14 @@
         <option value="$PROJECT_DIR$/src/main/java/com/levermann/kennzahlen_fertig/Gewinnrevision.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/levermann/kennzahlen/Kursmomentum.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/levermann/kennzahlen_fertig/Kursmomentum.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/levermann/project/ConnectionMainFactory.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/levermann/kennzahlen_fertig_review/Kursmomentum.java" />
-        <option value="$APPLICATION_CONFIG_DIR$/consoles/.datagrid/cell" />
         <option value="$PROJECT_DIR$/src/main/java/com/levermann/kennzahlen/Dreimonatsreversal.java" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/.datagrid/cell" />
+        <option value="$PROJECT_DIR$/src/main/java/com/levermann/kennzahlen_fertig_review/Kursmomentum.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/levermann/kennzahlen_fertig_review/Gewinnrevision.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/levermann/kennzahlen_fertig_review/KursheuteggKursvor1Jahr.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/levermann/kennzahlen_fertig_review/Gewinnwachstum.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/levermann/project/ConnectionMainFactory.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/levermann/kennzahlen/Gewinnwachstum.java" />
       </list>
     </option>
   </component>
@@ -354,10 +326,10 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="2369" />
-    <option name="y" value="161" />
-    <option name="width" value="1044" />
-    <option name="height" value="720" />
+    <option name="x" value="622" />
+    <option name="y" value="137" />
+    <option name="width" value="1305" />
+    <option name="height" value="900" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -365,6 +337,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="Scope">
         <subPane subId="Scope 'Tests'; set:Tests; class com.intellij.psi.search.scope.TestsScope">
           <expand>
@@ -456,7 +429,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -604,6 +576,7 @@
       <recent name="C:\Users\Landb\Documents\Projekt\Hauptprojekt\src\main\java\com\levermann\entityclass" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.levermann.kennzahlen_fertig_review" />
       <recent name="com.levermann.kennzahlen_fertig" />
       <recent name="com.levermann.kennzahlen" />
       <recent name="com.levermann.dao" />
@@ -676,7 +649,8 @@
       <workItem from="1555751525494" duration="240000" />
       <workItem from="1556341743316" duration="5241000" />
       <workItem from="1556347044900" duration="5853000" />
-      <workItem from="1556379248219" duration="19860000" />
+      <workItem from="1556379248219" duration="20049000" />
+      <workItem from="1556434201466" duration="2481000" />
     </task>
     <task id="LOCAL-00001" summary="l">
       <created>1554567642271</created>
@@ -783,11 +757,18 @@
       <option name="project" value="LOCAL" />
       <updated>1556403973054</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Kriterienpunkt 11 fertig + Updatemethoden für die Datenbank">
+      <created>1556408075382</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1556408075382</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="174664000" />
+    <option name="totallyTimeSpent" value="177334000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -799,9 +780,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6029106" visible="true" weight="0.304371" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6029106" visible="true" weight="0.23020135" />
       <window_info id="Structure" order="1" sideWeight="0.26436782" side_tool="true" weight="0.033898305" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
@@ -812,7 +793,7 @@
       <window_info anchor="bottom" id="Spring" order="0" sideWeight="0.49932885" weight="0.329429" />
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Find" order="2" sideWeight="0.4989339" weight="0.26222223" />
-      <window_info anchor="bottom" id="Run" order="3" sideWeight="0.7717514" visible="true" weight="0.28111112" />
+      <window_info anchor="bottom" id="Run" order="3" sideWeight="0.7717514" visible="true" weight="0.3191801" />
       <window_info anchor="bottom" id="Debug" order="4" sideWeight="0.5525424" weight="0.4677778" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
@@ -822,7 +803,7 @@
       <window_info anchor="bottom" id="Database Changes" order="10" sideWeight="0.49932885" weight="0.329429" />
       <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="12" sideWeight="0.49798658" weight="0.5183016" />
-      <window_info anchor="bottom" id="Messages" order="13" sideWeight="0.4463277" weight="0.24555555" />
+      <window_info anchor="bottom" id="Messages" order="13" sideWeight="0.4463277" weight="0.24450952" />
       <window_info anchor="bottom" id="Database Console" order="14" sideWeight="0.49717513" weight="0.32789856" />
       <window_info anchor="bottom" id="Inspection Results" order="15" sideWeight="0.49946696" weight="0.20151679" />
       <window_info anchor="bottom" id="Java Enterprise" order="16" sideWeight="0.4986577" weight="0.32796487" />
@@ -835,7 +816,7 @@
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info anchor="right" id="Maven" order="5" weight="0.56644297" />
-      <window_info anchor="right" id="Database" order="6" sideWeight="0.5796767" visible="true" weight="0.16364606" />
+      <window_info anchor="right" id="Database" order="6" sideWeight="0.5796767" weight="0.10134228" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Theme Preview" order="8" />
       <window_info anchor="right" id="Bean Validation" order="9" />
@@ -935,7 +916,8 @@
     <MESSAGE value="Hibernate util + dao pattern + persistance xml + Entitymanager" />
     <MESSAGE value="Umstellung auf SessionFactory" />
     <MESSAGE value="Kriterienpunkte 8, 9 und 10 Fertig" />
-    <option name="LAST_COMMIT_MESSAGE" value="Kriterienpunkte 8, 9 und 10 Fertig" />
+    <MESSAGE value="Kriterienpunkt 11 fertig + Updatemethoden für die Datenbank" />
+    <option name="LAST_COMMIT_MESSAGE" value="Kriterienpunkt 11 fertig + Updatemethoden für die Datenbank" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -960,14 +942,6 @@
     </SUITE>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../../NetBeansProjects/com.mycompany_Levermanntest/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="29" selection-start-line="29" selection-end-line="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Gui.java" />
     <entry file="file://$PROJECT_DIR$/src/test/java/com/levermann/entityclass/PunktelisteTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -1134,9 +1108,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/levermann/kennzahlen/Gewinnrevision.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/levermann/kennzahlen/Gewinnrevision.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/levermann/dao/CreatePunktelisten.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
@@ -1185,16 +1157,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/levermann/kennzahlen/KursheuteggKursvor6MonatenPunkt_9.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="52" column="31" selection-start-line="52" selection-start-column="31" selection-end-line="52" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/levermann/kennzahlen/KursheuteggKursvor6MonatenPunkt_9.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/levermann/dao/UpdateUnternehmen.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-14125">
@@ -1232,29 +1195,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://b34121eb-3aed-44a8-9368-49552a11cff0/schema/levermann/table/punkteliste">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true">
-            <filter text="" />
-          </filtering>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/levermann/dao/Delete.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
           <caret line="29" column="32" selection-start-line="29" selection-start-column="32" selection-end-line="29" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/levermann/kennzahlen_fertig_review/KursheuteggKursvor6Monaten.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="580">
-          <caret line="44" column="43" lean-forward="true" selection-start-line="44" selection-start-column="43" selection-end-line="44" selection-end-column="43" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1276,57 +1220,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/levermann/kennzahlen_fertig_review/Gewinnrevision.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="30" lean-forward="true" selection-start-line="21" selection-start-column="30" selection-end-line="135" selection-end-column="1" />
-          <folding>
-            <element signature="e#0#6041#0" expanded="true" />
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://b34121eb-3aed-44a8-9368-49552a11cff0/schema/levermann/table/unternehmen">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true">
-            <filter text="" />
-          </filtering>
-          <column-attributes>
-            <column name="Cid" position="4" />
-            <column name="name" position="5" />
-            <column name="datum" position="6" />
-            <column name="eigenkapital" position="7" />
-            <column name="jahresueberschuss" position="8" />
-            <column name="GewinnEBIT" position="9" />
-            <column name="Jahresumsatz" position="10" />
-            <column name="Fremdkapital" position="11" />
-            <column name="AktuellerAktienkurs" position="12" />
-            <column name="Gewinnschaezung" position="28" />
-            <column name="GewinnAVG" position="13" />
-            <column name="Halten" enabled="false" position="-1" />
-            <column name="Verkaufen" position="14" />
-            <column name="Kaufen" position="15" />
-            <column name="KursanstiegUnternehmen" position="16" />
-            <column name="KursanstiegIndex" position="17" />
-            <column name="GewinnschaezungVor4Wochen" position="18" />
-            <column name="KursHeute" position="3" />
-            <column name="KursVor6Monaten" position="2" />
-            <column name="KursVor12Monaten" position="1" />
-            <column name="KursVor3Monaten" position="19" />
-            <column name="KursVor2Monaten" position="20" />
-            <column name="KursVor1Monat" position="21" />
-            <column name="DaxVor1Monat" position="22" />
-            <column name="DaxVor2Monaten" position="23" />
-            <column name="DaxVor3Monaten" position="24" />
-            <column name="GewinnschaezungNaechstesJahr" position="25" />
-            <column name="GewinnschaezungDiesesJahr" position="26" />
-            <column name="Finanzsektor" position="27" />
-          </column-attributes>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/levermann/dao/Create.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
@@ -1334,13 +1227,6 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/levermann/kennzahlen_fertig_review/KursheuteggKursvor1Jahr.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="307">
-          <caret line="105" column="57" selection-start-line="105" selection-start-column="35" selection-end-line="105" selection-end-column="57" />
         </state>
       </provider>
     </entry>
@@ -1388,80 +1274,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/levermann/project/ConnectionMainFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="46" lean-forward="true" selection-start-line="6" selection-start-column="46" selection-end-line="6" selection-end-column="46" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/levermann/kennzahlen_fertig_review/Kursmomentum.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="579">
-          <caret line="91" column="13" lean-forward="true" selection-start-line="91" selection-start-column="13" selection-end-line="91" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://b34121eb-3aed-44a8-9368-49552a11cff0/schema/levermann/table/levermannschritte">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true">
-            <filter text="" />
-          </filtering>
-          <column-attributes>
-            <column name="Lid" position="5" />
-            <column name="Cid3" position="6" />
-            <column name="Eigenkapitalrendite" position="7" />
-            <column name="EBITMarge" position="8" />
-            <column name="Eigenkapitalquote" position="9" />
-            <column name="KursGewinnVerhältnis" position="10" />
-            <column name="KursGewinnVerhältnisAktuell" position="11" />
-            <column name="Analystenmeinungen" position="12" />
-            <column name="ReaktionaufQuartalszahlen" position="13" />
-            <column name="Gewinnrevision" position="14" />
-            <column name="Kursverlauf6Monate" position="3" />
-            <column name="Kursverlauf12Monate" position="2" />
-            <column name="Kursmomentum" position="1" />
-            <column name="Dreimonatsreversal" position="15" />
-            <column name="Gewinnwachstum" position="4" />
-          </column-attributes>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/levermann/kennzahlen/Kursverlauf6Monate.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/levermann/kennzahlen/KursgewinnVerhältnis5Jahre.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/levermann/kennzahlen/KursGewinnVerhältnis.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/levermann/kennzahlen/GewinnEBIT.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/levermann/kennzahlen/Eigenkapitalquote.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -1476,10 +1288,182 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/levermann/kennzahlen/Dreimonatsreversal.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/levermann/kennzahlen/Kursverlauf6Monate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="27" selection-start-line="27" selection-end-line="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/levermann/kennzahlen/KursgewinnVerhältnis5Jahre.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/levermann/kennzahlen/KursGewinnVerhältnis.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/levermann/kennzahlen/GewinnEBIT.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/levermann/kennzahlen_fertig_review/Gewinnrevision.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="598">
+          <caret line="133" selection-start-line="19" selection-start-column="30" selection-end-line="133" />
+          <folding>
+            <element signature="e#0#6048#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/levermann/TestFiles/ConnectionMain.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/levermann/kennzahlen_fertig_review/KursheuteggKursvor1Jahr.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2142">
+          <caret line="137" column="5" lean-forward="true" selection-start-line="137" selection-start-column="5" selection-end-line="137" selection-end-column="5" />
+          <folding>
+            <element signature="e#0#6079#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://b34121eb-3aed-44a8-9368-49552a11cff0/schema/levermann/table/punkteliste">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true">
+            <filter text="" />
+          </filtering>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/levermann/kennzahlen/Dreimonatsreversal.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/levermann/kennzahlen_fertig_review/KursheuteggKursvor6Monaten.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="169">
+          <caret line="38" column="34" lean-forward="true" selection-start-line="38" selection-start-column="34" selection-end-line="38" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/levermann/kennzahlen_fertig_review/Kursmomentum.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="2" selection-end-column="2" />
+          <folding>
+            <element signature="e#0#3815#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/levermann/project/ConnectionMainFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="394">
+          <caret line="39" column="26" selection-start-line="39" selection-start-column="26" selection-end-line="39" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://b34121eb-3aed-44a8-9368-49552a11cff0/schema/levermann/table/unternehmen">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true">
+            <filter text="" />
+          </filtering>
+          <column-attributes>
+            <column name="name" position="8" />
+            <column name="datum" position="9" />
+            <column name="eigenkapital" position="10" />
+            <column name="jahresueberschuss" position="11" />
+            <column name="GewinnEBIT" position="12" />
+            <column name="Jahresumsatz" position="13" />
+            <column name="Fremdkapital" position="14" />
+            <column name="AktuellerAktienkurs" position="15" />
+            <column name="Gewinnschaezung" position="4" />
+            <column name="GewinnAVG" position="16" />
+            <column name="Halten" enabled="false" position="-1" />
+            <column name="Verkaufen" position="17" />
+            <column name="Kaufen" position="18" />
+            <column name="KursanstiegUnternehmen" position="19" />
+            <column name="KursanstiegIndex" position="20" />
+            <column name="GewinnschaezungVor4Wochen" position="21" />
+            <column name="KursHeute" position="7" />
+            <column name="KursVor6Monaten" position="6" />
+            <column name="KursVor12Monaten" position="5" />
+            <column name="KursVor3Monaten" position="22" />
+            <column name="KursVor2Monaten" position="23" />
+            <column name="KursVor1Monat" position="24" />
+            <column name="DaxVor1Monat" position="25" />
+            <column name="DaxVor2Monaten" position="26" />
+            <column name="DaxVor3Monaten" position="27" />
+            <column name="GewinnschaezungNaechstesJahr" position="3" />
+            <column name="GewinnschaezungDiesesJahr" position="2" />
+            <column name="Finanzsektor" position="28" />
+          </column-attributes>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://b34121eb-3aed-44a8-9368-49552a11cff0/schema/levermann/table/levermannschritte">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true">
+            <filter text="" />
+          </filtering>
+          <column-attributes>
+            <column name="Lid" position="2" />
+            <column name="Cid3" position="3" />
+            <column name="Eigenkapitalrendite" position="4" />
+            <column name="EBITMarge" position="5" />
+            <column name="Eigenkapitalquote" position="6" />
+            <column name="KursGewinnVerhältnis" position="7" />
+            <column name="KursGewinnVerhältnisAktuell" position="8" />
+            <column name="Analystenmeinungen" position="9" />
+            <column name="ReaktionaufQuartalszahlen" position="10" />
+            <column name="Gewinnrevision" position="11" />
+            <column name="Kursverlauf6Monate" position="12" />
+            <column name="Kursverlauf12Monate" position="13" />
+            <column name="Kursmomentum" position="14" />
+            <column name="Dreimonatsreversal" position="15" />
+            <column name="Gewinnwachstum" position="1" />
+          </column-attributes>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/levermann/kennzahlen/Gewinnwachstum.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="229">
+          <caret line="78" column="127" selection-start-line="78" selection-start-column="127" selection-end-line="78" selection-end-column="127" />
+          <folding>
+            <element signature="e#0#5933#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
