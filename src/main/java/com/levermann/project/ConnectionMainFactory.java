@@ -1,5 +1,6 @@
 package com.levermann.project;
 
+import com.levermann.dao.Select;
 import com.levermann.kennzahlen.Gewinnwachstum;
 import com.levermann.kennzahlen_fertig_review.KursheuteggKursvor1Jahr;
 import com.levermann.kennzahlen_fertig_review.Kursmomentum;
@@ -36,9 +37,12 @@ abstract public class ConnectionMainFactory  {
    //  Kursmomentum km = new Kursmomentum();
     // km.Kursmomentum();
 
-     Gewinnwachstum gww = new Gewinnwachstum();
-     gww.Gewinnwachstum();
+     // Gewinnwachstum gww = new Gewinnwachstum();
+     // gww.Gewinnwachstum();
 
+     Select select = new Select();
+
+     select.Dao();
 
  }
 
