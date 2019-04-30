@@ -32,7 +32,7 @@ public class Unternehmen implements Serializable  {
 
     @Override
     public String toString() {
-        return "Unternehmen{" + "Cid=" + Cid + ", name=" + name + ", datum=" + datum + ", eigenkapital=" + eigenkapital + ", jahresueberschuss=" + jahresueberschuss + ", GewinnEBIT=" + GewinnEBIT + ", Jahresumsatz=" + Jahresumsatz + ", Fremdkapital=" + Fremdkapital + ", AktuellerAktienkurs=" + AktuellerAktienkurs + ", Gewinnschaezung=" + Gewinnschaezung + ", GewinnAVG=" + GewinnAVG + ", Halten=" + Halten + ", Verkaufen=" + Verkaufen + ", Kaufen=" + Kaufen + ", KursanstiegUnternehmen=" + KursanstiegUnternehmen + ", KursanstiegIndex=" + KursanstiegIndex + ", GewinnschaezungVor4Wochen=" + GewinnschaezungVor4Wochen + ", KursHeute=" + KursHeute + ", KursVor6Monaten=" + KursVor6Monaten + ", KursVor12Monaten=" + KursVor12Monaten + ", KursVor3Monaten=" + KursVor3Monaten + ", KursVor2Monaten=" + KursVor2Monaten + ", KursVor1Monat=" + KursVor1Monat + ", DaxVor1Monat=" + DaxVor1Monat + ", DaxVor2Monaten=" + DaxVor2Monaten + ", DaxVor3Monaten=" + DaxVor3Monaten + ", GewinnschaezungNaechstesJahr=" + GewinnschaezungNaechstesJahr + ", GewinnschaezungDiesesJahr=" + GewinnschaezungDiesesJahr + ", Finanzsektor=" + Finanzsektor + '}';
+        return "Unternehmen{" + "Cid=" + Cid + ", name=" + name + ", datum=" + datum + ", eigenkapital=" + eigenkapital + ", jahresueberschuss=" + jahresueberschuss + ", GewinnEBIT=" + GewinnEBIT + ", Jahresumsatz=" + Jahresumsatz + ", Fremdkapital=" + Fremdkapital + ", AktuellerAktienkurs=" + AktuellerAktienkurs + ", Gewinnschaezung=" + Gewinnschaezung + ", GewinnAVG=" + GewinnAVG + ", Halten=" + Halten + ", Verkaufen=" + Verkaufen + ", Kaufen=" + Kaufen + ", KursanstiegUnternehmen=" + KursanstiegUnternehmen + ", KursanstiegIndex=" + KursanstiegIndex + ", GewinnschaezungVor4Wochen=" + GewinnschaezungVor4Wochen + ", AktienkursTagVeroeffentlichungQartalszahlen=" + AktienkursTagVeroeffentlichungQartalszahlen + ", KursVor6Monaten=" + KursVor6Monaten + ", KursVor12Monaten=" + KursVor12Monaten + ", KursVor3Monaten=" + KursVor3Monaten + ", KursVor2Monaten=" + KursVor2Monaten + ", KursVor1Monat=" + KursVor1Monat + ", DaxVor1Monat=" + DaxVor1Monat + ", DaxVor2Monaten=" + DaxVor2Monaten + ", DaxVor3Monaten=" + DaxVor3Monaten + ", GewinnschaezungNaechstesJahr=" + GewinnschaezungNaechstesJahr + ", GewinnschaezungDiesesJahr=" + GewinnschaezungDiesesJahr + ", Finanzsektor=" + Finanzsektor + '}';
     }
 
 
@@ -91,8 +91,8 @@ public class Unternehmen implements Serializable  {
     @Column(name="GewinnschaezungVor4Wochen")
     private float GewinnschaezungVor4Wochen;
 
-    @Column(name="KursHeute")
-    private float KursHeute;
+   @Column(name="AktienkursTagVeroeffentlichungQartalszahlen")
+   private float AktienkursTagVeroeffentlichungQartalszahlen;
 
     @Column(name="KursVor6Monaten")
     private float KursVor6Monaten;
@@ -126,6 +126,17 @@ public class Unternehmen implements Serializable  {
 
     @Column(name="Finanzsektor")
     private float Finanzsektor;
+
+    @Column(name="PerfInJedemMonat", unique = true, nullable = true)
+    private Integer PerfInJedemMonat;
+
+    public Integer getPerfInJedemMonat() {
+        return PerfInJedemMonat;
+    }
+
+    public void setPerfInJedemMonat(Integer PerfInJedemMonat) {
+        this.PerfInJedemMonat = PerfInJedemMonat;
+    }
 
      public int getCid() {
         return Cid;
@@ -265,13 +276,13 @@ public class Unternehmen implements Serializable  {
         this.GewinnschaezungVor4Wochen = GewinnschaezungVor4Wochen;
     }
 
-    public float getKursHeute() {
-        return KursHeute;
+    public float getAktienkursTagVeroeffentlichungQartalszahlen() {return AktienkursTagVeroeffentlichungQartalszahlen;}
+
+   public void setAktienkursTagVeroeffentlichungQartalszahlen(float AktienkursTagVeroeffentlichungQartalszahlen) {
+        this.AktienkursTagVeroeffentlichungQartalszahlen = AktienkursTagVeroeffentlichungQartalszahlen;
     }
 
-    public void setKursHeute(float KursHeute) {
-        this.KursHeute = KursHeute;
-    }
+
 
     public float getKursVor6Monaten() {
         return KursVor6Monaten;

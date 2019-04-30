@@ -1236,7 +1236,7 @@
       <DataType>float|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="298" parent="245" name="KursHeute">
+    <column id="298" parent="245" name="AktienkursTagVeroeffentlichungQartalszahlen">
       <Position>18</Position>
       <DataType>float|0s</DataType>
       <ColumnKind>normal</ColumnKind>
@@ -1296,7 +1296,12 @@
       <DataType>float|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="310" parent="245" name="PRIMARY">
+    <column id="310" parent="245" name="PerfInJedemMonat">
+      <Position>30</Position>
+      <DataType>float|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <key id="311" parent="245" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>Cid</ColNames>
       <Primary>1</Primary>

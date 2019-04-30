@@ -1,5 +1,10 @@
 /*
  * Datenbankzugriff und Veränderung mit zwei Datenbanken
+ * Levermann Spalten:  Gewinnrevision: 1, -1 oder 0
+ * Unternehmen Spalten: Gewinnschaezung, GewinnschaezungVor4Wochen
+ *
+ *
+ *
  */
 package com.levermann.kennzahlen_fertig_review;
 
