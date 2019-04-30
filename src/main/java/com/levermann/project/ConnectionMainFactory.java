@@ -1,9 +1,7 @@
 package com.levermann.project;
 
-import com.levermann.dao.Select;
-import com.levermann.kennzahlen.Gewinnwachstum;
-import com.levermann.kennzahlen_fertig_review.KursheuteggKursvor1Jahr;
-import com.levermann.kennzahlen_fertig_review.Kursmomentum;
+import com.levermann.kennzahlen_fertig_review.Dreimonatsreversal;
+import com.levermann.kennzahlen_fertig_review.Gewinnwachstum;
 
 
 abstract public class ConnectionMainFactory  {
@@ -40,9 +38,12 @@ abstract public class ConnectionMainFactory  {
      // Gewinnwachstum gww = new Gewinnwachstum();
      // gww.Gewinnwachstum();
 
-     Select select = new Select();
+    // Select select = new Select();
+     // select.Dao();
 
-     select.Dao();
+     Dreimonatsreversal drm = new Dreimonatsreversal();
+
+     drm.Dreimonatsreversal();
 
  }
 

@@ -56,7 +56,7 @@ public class UnternehmenTest implements Serializable {
  
     @Override
     public String toString() {
-        return "Unternehmen{" + "Cid=" + Cid + ", name=" + name + ", datum=" + datum + ", eigenkapital=" + eigenkapital + ", jahresueberschuss=" + jahresueberschuss + ", GewinnEBIT=" + GewinnEBIT + ", Jahresumsatz=" + Jahresumsatz + ", Fremdkapital=" + Fremdkapital + ", AktuellerAktienkurs=" + AktuellerAktienkurs + ", Gewinnschaezung=" + Gewinnschaezung + ", GewinnAVG=" + GewinnAVG + ", Halten=" + Halten + ", Verkaufen=" + Verkaufen + ", Kaufen=" + Kaufen + ", KursanstiegUnternehmen=" + KursanstiegUnternehmen + ", KursanstiegIndex=" + KursanstiegIndex + ", GewinnschaezungVor4Wochen=" + GewinnschaezungVor4Wochen + ", KursHeute=" + KursHeute + ", KursVor6Monaten=" + KursVor6Monaten + ", KursVor12Monaten=" + KursVor12Monaten + ", KursVor3Monaten=" + KursVor3Monaten + ", KursVor2Monaten=" + KursVor2Monaten + ", KursVor1Monat=" + KursVor1Monat + ", DaxVor1Monat=" + DaxVor1Monat + ", DaxVor2Monaten=" + DaxVor2Monaten + ", DaxVor3Monaten=" + DaxVor3Monaten + ", GewinnschaezungNaechstesJahr=" + GewinnschaezungNaechstesJahr + ", GewinnschaezungDiesesJahr=" + GewinnschaezungDiesesJahr + ", Finanzsektor=" + Finanzsektor + '}';
+        return "Unternehmen{" + "Cid=" + Cid + ", name=" + name + ", datum=" + datum + ", eigenkapital=" + eigenkapital + ", jahresueberschuss=" + jahresueberschuss + ", GewinnEBIT=" + GewinnEBIT + ", Jahresumsatz=" + Jahresumsatz + ", Fremdkapital=" + Fremdkapital + ", AktuellerAktienkurs=" + AktuellerAktienkurs + ", Gewinnschaezung=" + Gewinnschaezung + ", GewinnAVG=" + GewinnAVG + ", Halten=" + Halten + ", Verkaufen=" + Verkaufen + ", Kaufen=" + Kaufen + ", KursanstiegUnternehmen=" + KursanstiegUnternehmen + ", KursanstiegIndex=" + KursanstiegIndex + ", GewinnschaezungVor4Wochen=" + GewinnschaezungVor4Wochen + ", AktienkursTagVeroeffentlichungQartalszahlen=" + AktienkursTagVeroeffentlichungQartalszahlen + ", KursVor6Monaten=" + KursVor6Monaten + ", KursVor12Monaten=" + KursVor12Monaten + ", KursVor3Monaten=" + KursVor3Monaten + ", KursVor2Monaten=" + KursVor2Monaten + ", KursVor1Monat=" + KursVor1Monat + ", DaxVor1Monat=" + DaxVor1Monat + ", DaxVor2Monaten=" + DaxVor2Monaten + ", DaxVor3Monaten=" + DaxVor3Monaten + ", GewinnschaezungNaechstesJahr=" + GewinnschaezungNaechstesJahr + ", GewinnschaezungDiesesJahr=" + GewinnschaezungDiesesJahr + ", Finanzsektor=" + Finanzsektor + '}';
     }
        
     @GeneratedValue(strategy=GenerationType.IDENTITY)
@@ -112,8 +112,8 @@ public class UnternehmenTest implements Serializable {
     @Column(name="GewinnschaezungVor4Wochen")    
     private float GewinnschaezungVor4Wochen;
     
-    @Column(name="KursHeute")    
-    private float KursHeute;
+    @Column(name="AktienkursTagVeroeffentlichungQartalszahlen")
+    private float AktienkursTagVeroeffentlichungQartalszahlen;
     
     @Column(name="KursVor6Monaten")    
     private float KursVor6Monaten;
@@ -173,7 +173,7 @@ public class UnternehmenTest implements Serializable {
         hash = 89 * hash + Float.floatToIntBits(this.KursanstiegUnternehmen);
         hash = 89 * hash + Float.floatToIntBits(this.KursanstiegIndex);
         hash = 89 * hash + Float.floatToIntBits(this.GewinnschaezungVor4Wochen);
-        hash = 89 * hash + Float.floatToIntBits(this.KursHeute);
+        hash = 89 * hash + Float.floatToIntBits(this.AktienkursTagVeroeffentlichungQartalszahlen);
         hash = 89 * hash + Float.floatToIntBits(this.KursVor6Monaten);
         hash = 89 * hash + Float.floatToIntBits(this.KursVor12Monaten);
         hash = 89 * hash + Float.floatToIntBits(this.KursVor3Monaten);
@@ -245,7 +245,7 @@ public class UnternehmenTest implements Serializable {
         if (Float.floatToIntBits(this.GewinnschaezungVor4Wochen) != Float.floatToIntBits(other.GewinnschaezungVor4Wochen)) {
             return false;
         }
-        if (Float.floatToIntBits(this.KursHeute) != Float.floatToIntBits(other.KursHeute)) {
+        if (Float.floatToIntBits(this.AktienkursTagVeroeffentlichungQartalszahlen) != Float.floatToIntBits(other.AktienkursTagVeroeffentlichungQartalszahlen)) {
             return false;
         }
         if (Float.floatToIntBits(this.KursVor6Monaten) != Float.floatToIntBits(other.KursVor6Monaten)) {
@@ -424,14 +424,6 @@ public class UnternehmenTest implements Serializable {
 
     public void setGewinnschaezungVor4Wochen(float GewinnschaezungVor4Wochen) {
         this.GewinnschaezungVor4Wochen = GewinnschaezungVor4Wochen;
-    }
-
-    public float getKursHeute() {
-        return KursHeute;
-    }
-
-    public void setKursHeute(float KursHeute) {
-        this.KursHeute = KursHeute;
     }
 
     public float getKursVor6Monaten() {

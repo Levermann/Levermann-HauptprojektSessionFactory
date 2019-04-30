@@ -1,15 +1,17 @@
 /*
  * Datenbankzugriff und Veränderung mit zwei Datenbanken
- * Levermann & Unternehmen
+ * Levermann Spalten:  Gewinnwachstum: 1, -1 oder 0
+ * Unternehmen Spalten: GewinnschaezungNaechstesJahr, GewinnschaezungDiesesJahr
+ *
+ *
  *
  */
 
-package com.levermann.kennzahlen;
+package com.levermann.kennzahlen_fertig_review;
 
 import com.levermann.dao.HibernateUtil;
 import com.levermann.entityclass.Levermannschritte;
 import com.levermann.entityclass.Unternehmen;
-import com.levermann.kennzahlen_fertig_review.KursheuteggKursvor1Jahr;
 import org.apache.log4j.Logger;
 import org.hibernate.HibernateException;
 import org.hibernate.Query;
@@ -91,10 +93,10 @@ public class Gewinnwachstum {
 
                         if (lvsch1.getCid3() == un.getCid() == true && i <= -0.05 == true) {
                             System.out.println("Richtig :D" + lvsch1.getCid3() + " = " + un.getCid() + "i = " + i);
-                            lvsch1.setKursverlauf12Monate(-1);
+                            lvsch1.setGewinnwachstum(-1);
                         }
 
-                        lvsch1.setGewinnwachstum(lvsch1.getLid());
+                        lvsch1.setLid(lvsch1.getLid());
 
                         //  System.out.println("Unternehmen: " + un.getCid() + " Levermannschritt: " + lvsch1.getCid3());
                         //  System.out.println("Fall 2 : yea LID:  " + lvsch1.getLid() + " AM: " + lvsch1.getGewinnrevision());
@@ -110,10 +112,10 @@ public class Gewinnwachstum {
 
                         if (lvsch1.getCid3() == un.getCid() == true && i > 0.005 == false && i < -0.05 == false) {
                             System.out.println("Richtig :D" + lvsch1.getCid3() + " = " + un.getCid() + "i = " + i);
-                            lvsch1.setKursverlauf12Monate(0);
+                            lvsch1.setGewinnwachstum(0);
                         }
 
-                        lvsch1.setGewinnwachstum(lvsch1.getLid());
+                        lvsch1.setLid(lvsch1.getLid());
                         //  System.out.println("Fall 3 : yea LID:  " + lvsch1.getLid() + " AM: " + lvsch1.getGewinnrevision());
                     }
                     //    System.out.println("Liste der Levermannschritte = " + un.getCid() + ","

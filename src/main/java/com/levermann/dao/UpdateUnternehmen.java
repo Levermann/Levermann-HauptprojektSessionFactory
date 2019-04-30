@@ -553,8 +553,8 @@ abstract public class UpdateUnternehmen implements DaoUnternehmen {
             int cid = scanner.nextInt();
             Unternehmen.setCid(cid);
             //Select Name der Firma
-            int kursheute = scanner.nextInt();
-            Unternehmen.setKursHeute(kursheute);
+            int AktienkursTagVeroeffentlichungQartalszahlen = scanner.nextInt();
+            Unternehmen.setAktienkursTagVeroeffentlichungQartalszahlen(AktienkursTagVeroeffentlichungQartalszahlen);
 
             //Beginn der Datenübertragung
             session.beginTransaction();

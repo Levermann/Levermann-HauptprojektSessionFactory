@@ -1,9 +1,11 @@
 /*
- * Datenbankzugriff und Veränderung mit uwei Datenbanken
- * Levermann + Unternhemen
- * Variablen:
+ * Datenbankzugriff und Veränderung mit zwei Datenbanken
+ * Levermann Spalten:  Kursverlauf12Monate: 1, -1 oder 0
+ * Unternehmen Spalten: AktuellerAktienkurs, KursVor12Monaten
+ * Autor: Lisa Stolz
+ *
+ *
  */
-
 package com.levermann.kennzahlen_fertig_review;
 
 import com.levermann.dao.HibernateUtil;
@@ -52,7 +54,7 @@ public class KursheuteggKursvor1Jahr {
 
                 // Berechnung der WerteVeränderung für Punkteverteilung
                 float i;
-                i = ((float) un.getKursHeute() / (float) un.getKursVor12Monaten()) * 100 - 100;
+                i = ((float) un.getAktuellerAktienkurs() / (float) un.getKursVor12Monaten()) * 100 - 100;
                 DecimalFormat f = new DecimalFormat("#0.00");
                 double toFormat = ((double) Math.round(i * 100)) / 100;
                 f.format(toFormat);

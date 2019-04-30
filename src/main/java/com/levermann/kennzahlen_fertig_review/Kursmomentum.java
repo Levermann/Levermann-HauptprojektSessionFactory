@@ -1,6 +1,11 @@
 /*
-# Datebankzugriff und Veränderung mit einer Datenbank
-*/
+ * Datenbankzugriff und Veränderung mit zwei Datenbanken
+ * Levermann Spalten:  Kursmomentum: 1, -1 oder 0
+ * Unternehmen Spalten: Kursverlauf6Monate, Kursverlauf12Monate
+ * Autor: Florian Land
+ *
+ *
+ */
 
 package com.levermann.kennzahlen_fertig_review;
 
