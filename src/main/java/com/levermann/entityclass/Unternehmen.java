@@ -2,6 +2,7 @@ package com.levermann.entityclass;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.Objects;
 import javax.inject.Named;
 import javax.annotation.ManagedBean;
 
@@ -19,9 +20,48 @@ import javax.annotation.ManagedBean;
 
 })
 public class Unternehmen implements Serializable  {
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Unternehmen)) return false;
+        Unternehmen that = (Unternehmen) o;
+        return getCid() == that.getCid() &&
+                Float.compare(that.getEigenkapital(), getEigenkapital()) == 0 &&
+                Float.compare(that.getJahresueberschuss(), getJahresueberschuss()) == 0 &&
+                Float.compare(that.getGewinnEBIT(), getGewinnEBIT()) == 0 &&
+                Float.compare(that.getJahresumsatz(), getJahresumsatz()) == 0 &&
+                Float.compare(that.getFremdkapital(), getFremdkapital()) == 0 &&
+                Float.compare(that.getAktuellerAktienkurs(), getAktuellerAktienkurs()) == 0 &&
+                Float.compare(that.getGewinnschaezung(), getGewinnschaezung()) == 0 &&
+                Float.compare(that.getGewinnAVG(), getGewinnAVG()) == 0 &&
+                Float.compare(that.getHalten(), getHalten()) == 0 &&
+                Float.compare(that.getVerkaufen(), getVerkaufen()) == 0 &&
+                Float.compare(that.getKaufen(), getKaufen()) == 0 &&
+                Float.compare(that.getKursanstiegUnternehmen(), getKursanstiegUnternehmen()) == 0 &&
+                Float.compare(that.getKursanstiegIndex(), getKursanstiegIndex()) == 0 &&
+                Float.compare(that.getGewinnschaezungVor4Wochen(), getGewinnschaezungVor4Wochen()) == 0 &&
+                Float.compare(that.getAktienkursTagVeroeffentlichungQartalszahlen(), getAktienkursTagVeroeffentlichungQartalszahlen()) == 0 &&
+                Float.compare(that.getKursVor6Monaten(), getKursVor6Monaten()) == 0 &&
+                Float.compare(that.getKursVor12Monaten(), getKursVor12Monaten()) == 0 &&
+                Float.compare(that.getKursVor3Monaten(), getKursVor3Monaten()) == 0 &&
+                Float.compare(that.getKursVor2Monaten(), getKursVor2Monaten()) == 0 &&
+                Float.compare(that.getKursVor1Monat(), getKursVor1Monat()) == 0 &&
+                Float.compare(that.getDaxVor1Monat(), getDaxVor1Monat()) == 0 &&
+                Float.compare(that.getDaxVor2Monaten(), getDaxVor2Monaten()) == 0 &&
+                Float.compare(that.getDaxVor3Monaten(), getDaxVor3Monaten()) == 0 &&
+                Float.compare(that.getGewinnschaezungNaechstesJahr(), getGewinnschaezungNaechstesJahr()) == 0 &&
+                Float.compare(that.getGewinnschaezungDiesesJahr(), getGewinnschaezungDiesesJahr()) == 0 &&
+                Float.compare(that.getFinanzsektor(), getFinanzsektor()) == 0 &&
+                getName().equals(that.getName()) &&
+                getDatum().equals(that.getDatum()) &&
+                getPerfInJedemMonat().equals(that.getPerfInJedemMonat());
+    }
 
-
-    /*public Unternehmen(String name, String datum, float eigenkapital, float jahresueberschuss) {
+    @Override
+    public int hashCode() {
+        return Objects.hash(getCid(), getName(), getDatum(), getEigenkapital(), getJahresueberschuss(), getGewinnEBIT(), getJahresumsatz(), getFremdkapital(), getAktuellerAktienkurs(), getGewinnschaezung(), getGewinnAVG(), getHalten(), getVerkaufen(), getKaufen(), getKursanstiegUnternehmen(), getKursanstiegIndex(), getGewinnschaezungVor4Wochen(), getAktienkursTagVeroeffentlichungQartalszahlen(), getKursVor6Monaten(), getKursVor12Monaten(), getKursVor3Monaten(), getKursVor2Monaten(), getKursVor1Monat(), getDaxVor1Monat(), getDaxVor2Monaten(), getDaxVor3Monaten(), getGewinnschaezungNaechstesJahr(), getGewinnschaezungDiesesJahr(), getFinanzsektor(), getPerfInJedemMonat());
+    }
+/*public Unternehmen(String name, String datum, float eigenkapital, float jahresueberschuss) {
         this.name = name;
         this.datum = datum;
         this.eigenkapital = eigenkapital;
