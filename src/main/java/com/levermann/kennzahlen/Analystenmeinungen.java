@@ -1,30 +1,75 @@
 package com.levermann.kennzahlen;
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+import com.levermann.dao.HibernateUtil;
+import com.levermann.entityclass.Levermannschritte;
+import com.levermann.entityclass.Unternehmen;
+import org.apache.log4j.Logger;
+import org.hibernate.HibernateException;
+import org.hibernate.Query;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
 
-/**
- *
- * @author chlad
- */
+import java.text.DecimalFormat;
+import java.util.List;
+import java.util.Scanner;
+
+
+
+
 public class Analystenmeinungen {
-    public static void main(String[] args) {
-        // TODO code application logic here
+    
+    final static Logger logger = Logger.getLogger(Analystenmeinungen.class);
+    
+    
+public void Analystenmeinungen() {    
+     System.out.println(" Bitte \n 1. Unternehmen \n 2. Datum \n 3. Eigenkapital \n 4. JahresÃ¼berschuss");
+    String returnValue = "";
+       //Aufrufen der aktuellen Session aus HibernateUtil
+       SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
+       Session session = sessionFactory.getCurrentSession();
+       Session session1 = sessionFactory.getCurrentSession();
+       Scanner scanner = new Scanner(System.in);
+       
+       
+    try {
+          //create a unternehmen object
+           System.out.println("Creating new Unternehmen Object");
+           // Hinzufügen
+           logger.info("Logger for Create was saved successfull");
 
-        float kauf=5;
-        float halt=6;
-        float verkau=7;
-        float sum=kauf+halt+verkau;
-        int levermann;
-        float anmei = analystenmeinungen (sum,kauf,halt,verkau);
-        System.out.println("6. Analystenmeinungen: " + anmei);
-        levermann = analystenmeinungLevermann(anmei,sum);
-        System.out.println("Levermannwertung: " + levermann);
-    }
+           // start a transaction
+           session.beginTransaction();
 
+           //HQL Named Query FindAll Unternehmen
+           Query query = session.getNamedQuery("Unternehmen.findAll");
+           List<Unternehmen> unList = (List<Unternehmen>) query.list();
+           for (Unternehmen un : unList) {
+
+               // Berechnung der WerteVeränderung für Punkteverteilung
+              float i;
+              i =  (((float)un.getAnalystenmeinungKaufen()*1)+((float)un.getAnalystenmeinungHalten()*2)+((float)un.getAnalystenmeinungVerkaufen()*3))/un.getSummeAnalystenmeinungen();
+               DecimalFormat f = new DecimalFormat("#0.00");
+               double toFormat = ((double)Math.round(i*100))/100;
+               f.format(toFormat);
+               
+                // Aufrunden
+               i = Math.round(i);
+               i = i / 100;
+               
+               // FAll 1, Mehr als 5 Analystenmeinungen und Durchschnitt der Bewertung gröößer als 2,5
+               
+               if (i > 2.5 == true){
+                     //HQL Named Query FindAll Levermannschritte
+                     Query query1 = session.getNamedQuery("Levermannschritte.findAll");
+                     List<Levermannschritte> unList1 = (List<Levermannschritte>) query1.list();
+                     for (Levermannschritte lvsch : unList1) {
+                         if (lvsch.getCid3() == un.getCid() == true && i >= 2.5 == true && SummeAnalystenmeinungen){
+                             System.out.println("Richtig :D" + lvsch.getCid3() +" = " + un.getCid()+ "i = " + i);
+                             lvsch.setAnalystenmeinung(1); }                         
+                     }                   
+               }
+               
+    }   
     //berechnet die Analystenmeinung
     public static float analystenmeinungen(float sumam, float kaufen, float halten, float verkaufen){
         float amd;//Analystenmeinungendurchschnitt
@@ -70,4 +115,5 @@ public class Analystenmeinungen {
             }
         }
     }
+}
 }
