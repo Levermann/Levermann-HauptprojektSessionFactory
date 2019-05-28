@@ -3,21 +3,20 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.lervermann.Gui2;
+package com.levermann.GuiNew;
 
 /**
  *
  * @author Max
  */
 
-import java.util.HashMap;
-import javafx.animation.*;
 import javafx.beans.property.DoubleProperty;
-import javafx.event.*;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.*;
+import javafx.scene.Node;
+import javafx.scene.Parent;
 import javafx.scene.layout.StackPane;
-import javafx.util.Duration;
+
+import java.util.HashMap;
 
 public class ScreensController extends StackPane{
     

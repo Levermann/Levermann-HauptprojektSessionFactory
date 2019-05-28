@@ -6,7 +6,7 @@
 <?import javafx.scene.text.Text?>
 
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="com.lervermann.Gui2.AnalyseSpeichernController">
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="com.levermann.GuiNew.AnalyseSpeichernController">
    <children>
       <Text layoutX="255.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Unternehmen1" />
       <Text layoutX="16.0" layoutY="103.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bitte überprüfen Sie ob alle Felder ausgefüllt sind. Wenn Ja dann klicken Sie auf &quot;Speichern&quot;" />

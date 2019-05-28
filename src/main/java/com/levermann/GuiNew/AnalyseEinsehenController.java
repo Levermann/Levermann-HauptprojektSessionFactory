@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.lervermann.Gui2;
+package com.levermann.GuiNew;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -14,7 +14,7 @@ import javafx.fxml.Initializable;
  *
  * @author blendajazi
  */
-public class AnalyseErstellenController implements Initializable {
+public class AnalyseEinsehenController implements Initializable {
 
     /**
      * Initializes the controller class.

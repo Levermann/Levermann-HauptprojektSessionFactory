@@ -1,4 +1,4 @@
-package com.lervermann.Gui2;
+package com.levermann.GuiNew;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -72,7 +72,7 @@ public class JavaFXMain extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
         
-        ScreensController mainContainer = new ScreensController();
+        com.levermann.GuiNew.ScreensController mainContainer = new com.levermann.GuiNew.ScreensController();
         
         mainContainer.loadScreen(JavaFXMain.screen0ID, JavaFXMain.screen0File);
         mainContainer.loadScreen(JavaFXMain.screen0ID, JavaFXMain.screen0File);

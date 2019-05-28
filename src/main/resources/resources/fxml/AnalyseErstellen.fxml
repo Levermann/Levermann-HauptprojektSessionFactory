@@ -7,7 +7,7 @@
 <?import javafx.scene.text.Text?>
 
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="com.lervermann.Gui2.AnalyseErstellenController">
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="com.levermann.GuiNew.AnalyseErstellenController">
    <children>
       <Text layoutX="180.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Levermannanalyse erstellen">
          <font>

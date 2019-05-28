@@ -3,22 +3,18 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.lervermann.Gui2;
+package com.levermann.GuiNew;
 
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Button;
-
-
-
 
 /**
  * FXML Controller class
  *
  * @author blendajazi
  */
-public class StartseiteController implements Initializable {
+public class AnalyseSpeichernController implements Initializable {
 
     /**
      * Initializes the controller class.
@@ -27,15 +23,5 @@ public class StartseiteController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
     }    
-  
-    public Button LAerstellen;
-    
-    
-    public void handleButtonClick(){
-        
-        
-    }
     
 }
-
-

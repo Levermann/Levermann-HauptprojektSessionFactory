@@ -3,14 +3,14 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.lervermann.Gui2;
+package com.levermann.GuiNew;
 
 /**
  *
  * @author Max
  */
 public interface ControlledScreenInterface {
-    
+
     public void setScreenParent(ScreensController screenPage);
-    
+
 }
