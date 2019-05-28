@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
-
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
    <children>
@@ -16,19 +16,19 @@
       <Text layoutX="170.0" layoutY="100.0" strokeType="OUTSIDE" strokeWidth="0.0" text="U1" />
       <Text layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Gesamtpunkzahl:" wrappingWidth="140.14404296875" AnchorPane.leftAnchor="25.0" />
       <Text layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Datum:" wrappingWidth="48.244140625" AnchorPane.leftAnchor="25.0" />
-      <Text layoutY="190.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Schritt 1:   Die Eigenkapitalrendite im letzten Geschäftsjahr" AnchorPane.leftAnchor="25.0" />
-      <Text layoutY="220.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Schritt 2.   Die EBIT-Marge im letzten Geschäftsjahr" wrappingWidth="328.7451133131981" AnchorPane.leftAnchor="25.0" />
-      <Text layoutY="250.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Schritt 3.   Die Eigenkapitalquote im letzten Geschäftsjahr" AnchorPane.leftAnchor="25.0" />
-      <Text layoutY="280.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Schritt 4.   Kurs-Gewinn-Verhältnis (KGV) über 5 Jahre" AnchorPane.leftAnchor="25.0" />
-      <Text layoutY="310.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Schritt 5.   KGV für das aktuelle Geschäftsjahr" wrappingWidth="286.03369468450546" AnchorPane.leftAnchor="25.0" />
-      <Text layoutY="340.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Schritt 6.   Analystenmeinungen" AnchorPane.leftAnchor="25.0" />
-      <Text layoutY="370.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Schritt 7.   Reaktion auf Quartalszahlen" AnchorPane.leftAnchor="25.0" />
-      <Text layoutY="400.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Schritt 8.   Gewinnrevisionen" AnchorPane.leftAnchor="25.0" />
-      <Text layoutY="430.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Schritt 9.   Kurs heute gegenüber Kurs vor 6 Monaten" AnchorPane.leftAnchor="25.0" />
-      <Text layoutX="25.0" layoutY="460.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Schritt 10.  Kurs heute gegenüber Kurs vor einem Jahr" AnchorPane.leftAnchor="25.0" />
-      <Text layoutY="490.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Schritt 11.  Kursmomentum " AnchorPane.leftAnchor="25.0" />
-      <Text layoutY="550.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Schritt 13.  Gewinnwachstum" AnchorPane.leftAnchor="25.0" />
-      <Text layoutY="520.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Schritt 12.  Dreimonatsreversal" AnchorPane.leftAnchor="25.0" />
+      <Text layoutX="95.0" layoutY="190.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Die Eigenkapitalrendite im letzten Geschäftsjahr" />
+      <Text layoutX="95.0" layoutY="220.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Die EBIT-Marge im letzten Geschäftsjahr" wrappingWidth="328.7451133131981" />
+      <Text layoutX="95.0" layoutY="250.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Die Eigenkapitalquote im letzten Geschäftsjahr" />
+      <Text layoutX="95.0" layoutY="280.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kurs-Gewinn-Verhältnis (KGV) über 5 Jahre" />
+      <Text layoutX="95.0" layoutY="310.0" strokeType="OUTSIDE" strokeWidth="0.0" text="KGV für das aktuelle Geschäftsjahr" wrappingWidth="286.03369468450546" />
+      <Text layoutX="95.0" layoutY="340.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Analystenmeinungen" />
+      <Text layoutX="95.0" layoutY="370.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Reaktion auf Quartalszahlen" />
+      <Text layoutX="95.0" layoutY="400.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Gewinnrevisionen" />
+      <Text layoutX="95.0" layoutY="430.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kurs heute gegenüber Kurs vor 6 Monaten" />
+      <Text layoutX="95.0" layoutY="460.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kurs heute gegenüber Kurs vor einem Jahr" />
+      <Text layoutX="95.0" layoutY="490.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kursmomentum " />
+      <Text layoutX="95.0" layoutY="550.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Gewinnwachstum" />
+      <Text layoutX="95.0" layoutY="520.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dreimonatsreversal" />
       <Text layoutX="170.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DatumX" wrappingWidth="121.64697027206421" />
       <Text layoutX="170.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" text="GesamtzahlX" wrappingWidth="121.64697027206421" />
       <Text layoutX="430.0" layoutY="190.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Punkte:" />
@@ -44,5 +44,18 @@
       <Text layoutX="430.0" layoutY="490.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Punkte:" />
       <Text layoutX="430.0" layoutY="520.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Punkte:" />
       <Text layoutX="430.0" layoutY="550.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Punkte:" />
+      <Button id="Schritt1" layoutX="13.0" layoutY="172.0" mnemonicParsing="false" text="Schritt 1" />
+      <Button layoutX="13.0" layoutY="202.0" mnemonicParsing="false" text="Schritt 2" />
+      <Button layoutX="13.0" layoutY="232.0" mnemonicParsing="false" text="Schritt 3" />
+      <Button layoutX="13.0" layoutY="262.0" mnemonicParsing="false" text="Schritt 4" />
+      <Button layoutX="13.0" layoutY="292.0" mnemonicParsing="false" text="Schritt 5" />
+      <Button layoutX="13.0" layoutY="322.0" mnemonicParsing="false" text="Schritt 6" />
+      <Button layoutX="13.0" layoutY="352.0" mnemonicParsing="false" text="Schritt 7" />
+      <Button layoutX="13.0" layoutY="382.0" mnemonicParsing="false" text="Schritt 8" />
+      <Button layoutX="13.0" layoutY="412.0" mnemonicParsing="false" text="Schritt 9" />
+      <Button layoutX="13.0" layoutY="442.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="77.0" text="Schritt 10" />
+      <Button layoutX="13.0" layoutY="472.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="77.0" text="Schritt 11" />
+      <Button layoutX="13.0" layoutY="502.0" mnemonicParsing="false" text="Schritt 12" />
+      <Button layoutX="13.0" layoutY="532.0" mnemonicParsing="false" text="Schritt 13" />
    </children>
 </AnchorPane>

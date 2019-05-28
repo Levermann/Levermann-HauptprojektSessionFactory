@@ -15,7 +15,7 @@ import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 import java.util.Scanner;
 
- abstract public class Update implements DaoUnternehmen {
+ public class Update {
 
     final static Logger logger = Logger.getLogger(Update.class);
 
@@ -83,7 +83,7 @@ import java.util.Scanner;
              // Übertragung bestätigen
              session.getTransaction().commit(); } finally{}}
 
-     public void DaoEigenkapital() {
+     public void DaoEigenkapital(int Eigenkapital) {
          //Logger wird für die Methode Delete ausgeführt
          logger.info("Logger is Entering the Execute method Update");
          String returnValue = "";
@@ -115,7 +115,7 @@ import java.util.Scanner;
              // Übertragung bestätigen
              session.getTransaction().commit(); } finally{}}
 
-     public void DaoJahresueberschuss() {
+     public void DaoJahresueberschuss(int Jahresueberschuss) {
          //Logger wird für die Methode Delete ausgeführt
          logger.info("Logger is Entering the Execute method Update");
          String returnValue = "";
