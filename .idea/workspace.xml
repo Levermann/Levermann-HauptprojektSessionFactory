@@ -8,10 +8,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="71376cf0-4a45-4351-8dca-943cab88ca4d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/levermann/dao/SelectSchritt1jahresueberschuss.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/levermann/entityclass/Unternehmen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/levermann/entityclass/Unternehmen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/levermann/project/ConnectionMainFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/levermann/project/ConnectionMainFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/levermann/Gui/LevermannGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/levermann/Gui/LevermannGUI.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/classes/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -82,11 +80,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/levermann/Gui/LevermannGUI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="106">
-              <caret line="61" selection-start-line="61" selection-end-line="61" />
+            <state relative-caret-position="73">
+              <caret line="94" column="4" lean-forward="true" selection-start-line="94" selection-start-column="4" selection-end-line="94" selection-end-column="4" />
             </state>
           </provider>
         </entry>
@@ -103,7 +101,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/levermann/dao/SelectSchritt1jahresueberschuss.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="215">
@@ -355,7 +353,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/levermann/entityclass/EntityManager.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/levermann/kennzahlen/Kursverlauf6Monate.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/levermann/project/Datum.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/levermann/project/ConnectionMain.java" />
@@ -406,6 +403,7 @@
         <option value="$APPLICATION_CONFIG_DIR$/consoles/.datagrid/cell" />
         <option value="$PROJECT_DIR$/src/main/java/com/levermann/project/ConnectionMainFactory.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/levermann/dao/SelectSchritt1jahresueberschuss.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/levermann/Gui/LevermannGUI.java" />
       </list>
     </option>
   </component>
@@ -504,6 +502,15 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="levermann" type="462c0819:PsiDirectoryNode" />
               <item name="entityclass" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="LevermannAnalyse" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Hauptprojekt" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="levermann" type="462c0819:PsiDirectoryNode" />
+              <item name="Gui" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="LevermannAnalyse" type="b2602c69:ProjectViewProjectNode" />
@@ -905,11 +912,18 @@
       <option name="project" value="LOCAL" />
       <updated>1559037054010</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Select für Jahresüberschuss erstellt">
+      <created>1559041299318</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1559041299318</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="143567000" />
+    <option name="totallyTimeSpent" value="143638000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -924,7 +938,7 @@
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.7356322" visible="true" weight="0.23758389" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.7356322" visible="true" weight="0.23758389" />
       <window_info id="Structure" order="1" sideWeight="0.26436782" side_tool="true" weight="0.033898305" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
@@ -935,7 +949,7 @@
       <window_info anchor="bottom" id="Spring" order="0" sideWeight="0.49932885" weight="0.329429" />
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Find" order="2" sideWeight="0.4989339" weight="0.34699854" />
-      <window_info active="true" anchor="bottom" id="Run" order="3" sideWeight="0.63154364" visible="true" weight="0.37920937" />
+      <window_info anchor="bottom" id="Run" order="3" sideWeight="0.63154364" visible="true" weight="0.37920937" />
       <window_info anchor="bottom" id="Debug" order="4" sideWeight="0.5525424" weight="0.4875549" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
@@ -1055,7 +1069,8 @@
     <MESSAGE value="Hibernate util + dao pattern" />
     <MESSAGE value="Hibernate util + dao pattern + persistance xml + Entitymanager" />
     <MESSAGE value="Umstellung auf SessionFactory" />
-    <option name="LAST_COMMIT_MESSAGE" value="Umstellung auf SessionFactory" />
+    <MESSAGE value="Select für Jahresüberschuss erstellt" />
+    <option name="LAST_COMMIT_MESSAGE" value="Select für Jahresüberschuss erstellt" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1349,13 +1364,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/levermann/Gui/LevermannGUI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="106">
-          <caret line="61" selection-start-line="61" selection-end-line="61" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/levermann/Gui/LevermannGUI.form">
       <provider selected="true" editor-type-id="ui-designer" />
     </entry>
@@ -1530,6 +1538,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="215">
           <caret line="62" column="72" selection-start-line="62" selection-start-column="72" selection-end-line="62" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/levermann/Gui/LevermannGUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="73">
+          <caret line="94" column="4" lean-forward="true" selection-start-line="94" selection-start-column="4" selection-end-line="94" selection-end-column="4" />
         </state>
       </provider>
     </entry>
