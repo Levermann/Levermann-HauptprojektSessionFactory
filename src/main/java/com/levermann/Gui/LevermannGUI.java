@@ -10,7 +10,7 @@ import java.util.ResourceBundle;
 
 public class LevermannGUI extends JFrame {
 
-
+/*
     JMenuBar menubar;
     JMenu help;
     JMenuItem about;
@@ -43,7 +43,7 @@ public class LevermannGUI extends JFrame {
         event e = new event();
         about.addActionListener(e);
 
-/*
+
 
     createDatabaseButton.addActionListener(new ActionListener() {
             @Override
@@ -57,7 +57,7 @@ public class LevermannGUI extends JFrame {
                 result2.add(dbfenster);
 
             }
-        });*/
+        });
 
         Unternehmen.addInputMethodListener(new InputMethodListener() {
 
@@ -92,7 +92,7 @@ public class LevermannGUI extends JFrame {
      * DO NOT edit this method OR call it in your code!
      *
      * @noinspection ALL
-     */
+
     private void $$$setupUI$$$() {
         Strategie = new JPanel();
         Strategie.setLayout(new com.intellij.uiDesigner.core.GridLayoutManager(1, 1, new Insets(0, 0, 0, 0), -1, -1));
@@ -111,7 +111,7 @@ public class LevermannGUI extends JFrame {
 
     /**
      * @noinspection ALL
-     */
+
     public JComponent $$$getRootComponent$$$() {
         return Strategie;
     }
@@ -142,7 +142,7 @@ public class LevermannGUI extends JFrame {
         gui.setVisible(true);
         gui.setSize(300, 100);
 
-    }
+    }*/
 
 }
 

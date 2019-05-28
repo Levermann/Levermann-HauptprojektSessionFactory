@@ -16,7 +16,7 @@ import javax.annotation.ManagedBean;
         @NamedQuery(name = "Unternehmen.findById", query = "SELECT c FROM Unternehmen c WHERE c.Cid =:Cid"),
         @NamedQuery(name = "Unternehmen.findByName", query = "SELECT c FROM Unternehmen c WHERE c.name =:name"),
         @NamedQuery(name = "Unternehmen.findByEigenkapital", query = "SELECT c FROM Unternehmen c WHERE c.eigenkapital =:eigenkapital"),
-        @NamedQuery(name = "Unternehmen.findByJahresüberschuss", query = "SELECT c FROM Unternehmen c WHERE c.jahresueberschuss =:jahresueberschuss")
+        @NamedQuery(name = "Unternehmen.findByJahresüberschuss", query = "SELECT jahresueberschuss FROM Unternehmen")
 
 })
 public class Unternehmen implements Serializable  {
@@ -169,19 +169,19 @@ public class Unternehmen implements Serializable  {
     private Integer PerfInJedemMonat;
 
     @Column(name="KursgewinnVor3Jahren", unique = true, nullable = true)
-    private float KursgewinnVor3Jahren;
+    private Integer KursgewinnVor3Jahren;
 
     @Column(name="KursgewinnVor2Jahren", unique = true, nullable = true)
-    private float KursgewinnVor2Jahren;
+    private Integer KursgewinnVor2Jahren;
 
     @Column(name="KursgewinnVor1Jahr", unique = true, nullable = true)
-    private float KursgewinnVor1Jahr;
+    private Integer KursgewinnVor1Jahr;
 
     @Column(name="AktuellenErwartetenKursgewinn", unique = true, nullable = true)
-    private float AktuellenErwartetenKursgewinn;
+    private Integer AktuellenErwartetenKursgewinn;
 
     @Column(name="KursgewinnschaezungNaechstesJahr", unique = true, nullable = true)
-    private float KursgewinnschaezungNaechstesJahr;
+    private Integer KursgewinnschaezungNaechstesJahr;
 
     public Integer getPerfInJedemMonat() {
         return PerfInJedemMonat;
@@ -429,7 +429,7 @@ public class Unternehmen implements Serializable  {
         return KursgewinnVor3Jahren;
     }
 
-    public void setKursgewinnVor3Jahren(float kursgewinnVor3Jahren) {
+    public void setKursgewinnVor3Jahren(Integer kursgewinnVor3Jahren) {
         KursgewinnVor3Jahren = kursgewinnVor3Jahren;
     }
 
@@ -437,7 +437,7 @@ public class Unternehmen implements Serializable  {
         return KursgewinnVor2Jahren;
     }
 
-    public void setKursgewinnVor2Jahren(float kursgewinnVor2Jahren) {
+    public void setKursgewinnVor2Jahren(Integer kursgewinnVor2Jahren) {
         KursgewinnVor2Jahren = kursgewinnVor2Jahren;
     }
 
@@ -445,7 +445,7 @@ public class Unternehmen implements Serializable  {
         return KursgewinnVor1Jahr;
     }
 
-    public void setKursgewinnVor1Jahr(float kursgewinnVor1Jahr) {
+    public void setKursgewinnVor1Jahr(Integer kursgewinnVor1Jahr) {
         KursgewinnVor1Jahr = kursgewinnVor1Jahr;
     }
 
@@ -453,7 +453,7 @@ public class Unternehmen implements Serializable  {
         return AktuellenErwartetenKursgewinn;
     }
 
-    public void setAktuellenErwartetenKursgewinn(float aktuellenErwartetenKursgewinn) {
+    public void setAktuellenErwartetenKursgewinn(Integer aktuellenErwartetenKursgewinn) {
         AktuellenErwartetenKursgewinn = aktuellenErwartetenKursgewinn;
     }
 
@@ -461,7 +461,7 @@ public class Unternehmen implements Serializable  {
         return KursgewinnschaezungNaechstesJahr;
     }
 
-    public void setKursgewinnschaezungNaechstesJahr(float kursgewinnschaezungNaechstesJahr) {
+    public void setKursgewinnschaezungNaechstesJahr(Integer kursgewinnschaezungNaechstesJahr) {
         KursgewinnschaezungNaechstesJahr = kursgewinnschaezungNaechstesJahr;
     }
 
