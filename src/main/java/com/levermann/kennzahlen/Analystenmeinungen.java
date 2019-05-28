@@ -21,7 +21,9 @@ public class Analystenmeinungen {
     final static Logger logger = Logger.getLogger(Analystenmeinungen.class);
     
     
-public void Analystenmeinungen() {    
+public void Analystenmeinungen() {
+
+    /*
      System.out.println(" Bitte \n 1. Unternehmen \n 2. Datum \n 3. Eigenkapital \n 4. JahresÃ¼berschuss");
     String returnValue = "";
        //Aufrufen der aktuellen Session aus HibernateUtil
@@ -87,7 +89,7 @@ public void Analystenmeinungen() {
         retval > 0 falls amd > Grenze
         retval = 0 falls amd = Grenze
         retval < 0 falls amd < Grenze
-        */
+
         if(sumam > 5){
             retval = Float.compare(amd, upperLimit);
             if (retval > 0){
@@ -114,6 +116,6 @@ public void Analystenmeinungen() {
                 }
             }
         }
-    }
+    }*/
 }
 }

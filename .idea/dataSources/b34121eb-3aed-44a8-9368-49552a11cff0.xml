@@ -1301,7 +1301,32 @@
       <DataType>float|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="311" parent="245" name="PRIMARY">
+    <column id="311" parent="245" name="KursgewinnVor3Jahren">
+      <Position>31</Position>
+      <DataType>float|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="312" parent="245" name="KursgewinnVor2Jahren">
+      <Position>32</Position>
+      <DataType>float|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="313" parent="245" name="KursgewinnVor1Jahr">
+      <Position>33</Position>
+      <DataType>float|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="314" parent="245" name="AktuellenErwartetenKursgewinn">
+      <Position>34</Position>
+      <DataType>float|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="315" parent="245" name="KursgewinnschaezungNaechstesJahr">
+      <Position>35</Position>
+      <DataType>float|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <key id="316" parent="245" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>Cid</ColNames>
       <Primary>1</Primary>

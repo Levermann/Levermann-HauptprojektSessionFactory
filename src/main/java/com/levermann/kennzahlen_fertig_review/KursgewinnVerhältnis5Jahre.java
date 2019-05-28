@@ -48,7 +48,7 @@ public class KursgewinnVerhältnis5Jahre {
 
                // Berechnung der Eigenkapitalrendite für Punkteverteilung
               float i;
-              i =  ((float)un.getAktuellerAktienkurs()/(((float)un.getKursgewinnVor3Jahren() + (float)un.getKursgewinnVor2Jahren() + (float)un.getKursgewinnVor1Jahr() + (float)un.getAktuellenErwartetenKursgewinn + (float)un.getKursgewinnschaezungNaechstesJahr())/(float)5));
+              i =  ((float)un.getAktuellerAktienkurs()/(((float)un.getKursgewinnVor3Jahren() + (float)un.getKursgewinnVor2Jahren() + (float)un.getKursgewinnVor1Jahr() + (float)un.getAktuellenErwartetenKursgewinn() + (float)un.getKursgewinnschaezungNaechstesJahr())/(float)5));
                DecimalFormat f = new DecimalFormat("#0.00");
                double toFormat = ((double)Math.round(i*100))/100;
                f.format(toFormat);

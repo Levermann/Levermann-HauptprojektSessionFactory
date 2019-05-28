@@ -20,6 +20,7 @@ import javax.annotation.ManagedBean;
 
 })
 public class Unternehmen implements Serializable  {
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -74,9 +75,6 @@ public class Unternehmen implements Serializable  {
     public String toString() {
         return "Unternehmen{" + "Cid=" + Cid + ", name=" + name + ", datum=" + datum + ", eigenkapital=" + eigenkapital + ", jahresueberschuss=" + jahresueberschuss + ", GewinnEBIT=" + GewinnEBIT + ", Jahresumsatz=" + Jahresumsatz + ", Fremdkapital=" + Fremdkapital + ", AktuellerAktienkurs=" + AktuellerAktienkurs + ", Gewinnschaezung=" + Gewinnschaezung + ", GewinnAVG=" + GewinnAVG + ", Halten=" + Halten + ", Verkaufen=" + Verkaufen + ", Kaufen=" + Kaufen + ", KursanstiegUnternehmen=" + KursanstiegUnternehmen + ", KursanstiegIndex=" + KursanstiegIndex + ", GewinnschaezungVor4Wochen=" + GewinnschaezungVor4Wochen + ", AktienkursTagVeroeffentlichungQartalszahlen=" + AktienkursTagVeroeffentlichungQartalszahlen + ", KursVor6Monaten=" + KursVor6Monaten + ", KursVor12Monaten=" + KursVor12Monaten + ", KursVor3Monaten=" + KursVor3Monaten + ", KursVor2Monaten=" + KursVor2Monaten + ", KursVor1Monat=" + KursVor1Monat + ", DaxVor1Monat=" + DaxVor1Monat + ", DaxVor2Monaten=" + DaxVor2Monaten + ", DaxVor3Monaten=" + DaxVor3Monaten + ", GewinnschaezungNaechstesJahr=" + GewinnschaezungNaechstesJahr + ", GewinnschaezungDiesesJahr=" + GewinnschaezungDiesesJahr + ", Finanzsektor=" + Finanzsektor + '}';
     }
-
-
-
 
     @GeneratedValue(strategy=GenerationType.IDENTITY)
     @Id
@@ -169,6 +167,21 @@ public class Unternehmen implements Serializable  {
 
     @Column(name="PerfInJedemMonat", unique = true, nullable = true)
     private Integer PerfInJedemMonat;
+
+    @Column(name="KursgewinnVor3Jahren", unique = true, nullable = true)
+    private float KursgewinnVor3Jahren;
+
+    @Column(name="KursgewinnVor2Jahren", unique = true, nullable = true)
+    private float KursgewinnVor2Jahren;
+
+    @Column(name="KursgewinnVor1Jahr", unique = true, nullable = true)
+    private float KursgewinnVor1Jahr;
+
+    @Column(name="AktuellenErwartetenKursgewinn", unique = true, nullable = true)
+    private float AktuellenErwartetenKursgewinn;
+
+    @Column(name="KursgewinnschaezungNaechstesJahr", unique = true, nullable = true)
+    private float KursgewinnschaezungNaechstesJahr;
 
     public Integer getPerfInJedemMonat() {
         return PerfInJedemMonat;
@@ -412,6 +425,44 @@ public class Unternehmen implements Serializable  {
         this.Finanzsektor = Finanzsektor;
     }
 
+    public float getKursgewinnVor3Jahren() {
+        return KursgewinnVor3Jahren;
+    }
 
+    public void setKursgewinnVor3Jahren(float kursgewinnVor3Jahren) {
+        KursgewinnVor3Jahren = kursgewinnVor3Jahren;
+    }
+
+    public float getKursgewinnVor2Jahren() {
+        return KursgewinnVor2Jahren;
+    }
+
+    public void setKursgewinnVor2Jahren(float kursgewinnVor2Jahren) {
+        KursgewinnVor2Jahren = kursgewinnVor2Jahren;
+    }
+
+    public float getKursgewinnVor1Jahr() {
+        return KursgewinnVor1Jahr;
+    }
+
+    public void setKursgewinnVor1Jahr(float kursgewinnVor1Jahr) {
+        KursgewinnVor1Jahr = kursgewinnVor1Jahr;
+    }
+
+    public float getAktuellenErwartetenKursgewinn() {
+        return AktuellenErwartetenKursgewinn;
+    }
+
+    public void setAktuellenErwartetenKursgewinn(float aktuellenErwartetenKursgewinn) {
+        AktuellenErwartetenKursgewinn = aktuellenErwartetenKursgewinn;
+    }
+
+    public float getKursgewinnschaezungNaechstesJahr() {
+        return KursgewinnschaezungNaechstesJahr;
+    }
+
+    public void setKursgewinnschaezungNaechstesJahr(float kursgewinnschaezungNaechstesJahr) {
+        KursgewinnschaezungNaechstesJahr = kursgewinnschaezungNaechstesJahr;
+    }
 
 }
