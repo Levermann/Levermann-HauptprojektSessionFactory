@@ -115,7 +115,7 @@ import java.util.Scanner;
              // Übertragung bestätigen
              session.getTransaction().commit(); } finally{}}
 
-     public void DaoJahresueberschuss() {
+     public void DaoJahresueberschuss(int Jahresueberschuss) {
          //Logger wird für die Methode Delete ausgeführt
          logger.info("Logger is Entering the Execute method Update");
          String returnValue = "";
@@ -134,8 +134,8 @@ import java.util.Scanner;
              //Erzeugen eines Objektes vom Typen Unternehmen
              Unternehmen Unternehmen=new Unternehmen();
              //Select Primärschlüssel
-             int cid = scanner.nextInt();
-             Unternehmen.setCid(cid);
+
+             Unternehmen.setCid(Jahresueberschuss);
              //Select Name der Firma
              int jahresueberschuss = scanner.nextInt();
              Unternehmen.setJahresueberschuss(jahresueberschuss);
