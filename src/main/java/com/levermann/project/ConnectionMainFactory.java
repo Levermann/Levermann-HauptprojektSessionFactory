@@ -1,5 +1,6 @@
 package com.levermann.project;
 
+import com.levermann.dao.SelectSchritt1jahresueberschuss;
 import com.levermann.kennzahlen_fertig_review.Dreimonatsreversal;
 import com.levermann.kennzahlen_fertig_review.Gewinnwachstum;
 import com.levermann.kennzahlen_fertig_review.Kursmomentum;
@@ -42,9 +43,9 @@ abstract public class ConnectionMainFactory  {
     // Select select = new Select();
      // select.Dao();
 
-     Kursmomentum drm = new Kursmomentum();
+     SelectSchritt1jahresueberschuss drm = new SelectSchritt1jahresueberschuss();
 
-     drm.Kursmomentum();
+     drm.Dao("bmw1");
 
  }
 
