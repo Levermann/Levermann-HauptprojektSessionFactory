@@ -2,6 +2,7 @@ package com.levermann.project;
 
 import com.levermann.kennzahlen_fertig_review.Dreimonatsreversal;
 import com.levermann.kennzahlen_fertig_review.Gewinnwachstum;
+import com.levermann.kennzahlen_fertig_review.Kursmomentum;
 
 
 abstract public class ConnectionMainFactory  {
@@ -41,9 +42,9 @@ abstract public class ConnectionMainFactory  {
     // Select select = new Select();
      // select.Dao();
 
-     Dreimonatsreversal drm = new Dreimonatsreversal();
+     Kursmomentum drm = new Kursmomentum();
 
-     drm.Dreimonatsreversal();
+     drm.Kursmomentum();
 
  }
 

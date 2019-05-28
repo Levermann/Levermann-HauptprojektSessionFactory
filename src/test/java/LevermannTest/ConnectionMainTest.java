@@ -5,7 +5,7 @@
  */
 package LevermannTest;
 
-import com.mycompany.*;
+
 import java.util.List;
 import java.util.Scanner;
 import javax.persistence.EntityManager;

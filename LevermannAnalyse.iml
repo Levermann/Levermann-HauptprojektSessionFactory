@@ -146,6 +146,7 @@
     <orderEntry type="library" name="Maven: org.springframework:spring-expression:3.1.2.RELEASE" level="project" />
     <orderEntry type="library" name="MigLayout" level="project" />
     <orderEntry type="library" name="Beans Binding" level="project" />
+    <orderEntry type="library" name="JGoodies Forms" level="project" />
   </component>
   <component name="POM File Configuration" pomFile="" />
 </module>
