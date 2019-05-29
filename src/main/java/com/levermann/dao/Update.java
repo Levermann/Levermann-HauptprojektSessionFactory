@@ -10,12 +10,15 @@ package com.levermann.dao;
 
 import com.levermann.entityclass.Unternehmen;
 import org.apache.log4j.Logger;
+import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
+
+import java.util.List;
 import java.util.Scanner;
 
- abstract public class Update implements DaoUnternehmen {
+  public class Update {
 
     final static Logger logger = Logger.getLogger(Update.class);
 
@@ -115,35 +118,40 @@ import java.util.Scanner;
              // Übertragung bestätigen
              session.getTransaction().commit(); } finally{}}
 
-     public void DaoJahresueberschuss(int Jahresueberschuss) {
+     public void DaoJahresueberschuss(String Name, int Jahresueberschuss) {
          //Logger wird für die Methode Delete ausgeführt
          logger.info("Logger is Entering the Execute method Update");
          String returnValue = "";
          Scanner scanner = new Scanner(System.in);
          // Eingabeauforderung Unternehmen
 
+
+
          //Aufrufen der aktuellen Session aus HibernateUtil
          SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
          Session session = sessionFactory.getCurrentSession();
 
+         // start a transaction
+
+
          try {
+
+             session.beginTransaction();
+        //HQL Named Query FindAll Unternehmen
+         Query query = session.getNamedQuery("Unternehmen.findAll");
+             List<Unternehmen> unList = (List<Unternehmen>) query.list();
+         for (Unternehmen un : unList) {
+
+             un.setName(Name);
+             un.setJahresueberschuss(Jahresueberschuss);
+             un.getCid();
+         }
+
              // Hinzufügen des Loggers war erfolgreich
              logger.info("Logger for Update was saved successfull");
              System.out.println("Eingabe:\n 1. ID \n 2. Jahresüberschuss");
-
-             //Erzeugen eines Objektes vom Typen Unternehmen
-             Unternehmen Unternehmen=new Unternehmen();
-             //Select Primärschlüssel
-
-             Unternehmen.setCid(Jahresueberschuss);
-             //Select Name der Firma
-             int jahresueberschuss = scanner.nextInt();
-             Unternehmen.setJahresueberschuss(jahresueberschuss);
-
              //Beginn der Datenübertragung
-             session.beginTransaction();
-             //Umesetzung der Update Methode auf das ausgewählte Unternehmen
-             session.update(Unternehmen);
+
              // Übertragung bestätigen
              session.getTransaction().commit(); } finally{}}
 
