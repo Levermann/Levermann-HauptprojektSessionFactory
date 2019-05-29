@@ -4,7 +4,6 @@ import javax.annotation.ManagedBean;
 import javax.inject.Named;
 import javax.persistence.*;
 import java.io.Serializable;
-import java.util.Objects;
 
 
 @Named
@@ -13,25 +12,21 @@ import java.util.Objects;
 @Access(AccessType.FIELD)
 @NamedQueries({
         @NamedQuery(name = "Levermannschritte.findAll", query = "SELECT B FROM Levermannschritte B"),
-        @NamedQuery(name = "Levermannschritte.findByCId", query = "SELECT D  FROM Levermannschritte D WHERE D.Cid3 =:Cid3")
+        @NamedQuery(name = "Levermannschritte.findByName", query = "SELECT D  FROM Levermannschritte D WHERE D.Name2 =:Name2")
 
 })
-@Table(name="levermannschritte")
+@Table(name= "levermannschritteold")
  public class Levermannschritte  implements Serializable {
-    public Integer getLid() {
-        return Lid;
+    public String getLevermannschrittName() {
+        return LevermannschrittName;
     }
 
-    public void setLid(Integer lid) {
-        Lid = lid;
+    public void setLevermannschrittName(String LevermannschrittName) {
+        LevermannschrittName = LevermannschrittName;
     }
 
-    public Integer getCid3() {
-        return Cid3;
-    }
-
-    public void setCid3(Integer cid3) {
-        Cid3 = cid3;
+    public String getName2() {
+        return Name2;
     }
 
     public Integer getEigenkapitalrendite() {
@@ -138,60 +133,16 @@ import java.util.Objects;
         Gewinnwachstum = gewinnwachstum;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof Levermannschritte)) return false;
-        Levermannschritte that = (Levermannschritte) o;
-        return getLid() == that.getLid() &&
-                getCid3() == that.getCid3() &&
-                getEigenkapitalrendite() == that.getEigenkapitalrendite() &&
-                getEBITMarge() == that.getEBITMarge() &&
-                getEigenkapitalquote() == that.getEigenkapitalquote() &&
-                getKursGewinnVerhältnis() == that.getKursGewinnVerhältnis() &&
-                getKursGewinnVerhältnisAktuell() == that.getKursGewinnVerhältnisAktuell() &&
-                getAnalystenmeinungen() == that.getAnalystenmeinungen() &&
-                getReaktionaufQuartalszahlen() == that.getReaktionaufQuartalszahlen() &&
-                getGewinnrevision() == that.getGewinnrevision() &&
-                getKursverlauf6Monate() == that.getKursverlauf6Monate() &&
-                getKursverlauf12Monate() == that.getKursverlauf12Monate() &&
-                getKursmomentum() == that.getKursmomentum() &&
-                getDreimonatsreversal() == that.getDreimonatsreversal() &&
-                getGewinnwachstum() == that.getGewinnwachstum();
-    }
-
-
-    @Override
-    public String toString() {
-        return "Levermannschritte{" +
-                "Lid=" + Lid +
-                ", Cid3=" + Cid3 +
-                ", Eigenkapitalrendite=" + Eigenkapitalrendite +
-                ", EBITMarge=" + EBITMarge +
-                ", Eigenkapitalquote=" + Eigenkapitalquote +
-                ", KursGewinnVerhältnis=" + KursGewinnVerhältnis +
-                ", KursGewinnVerhältnisAktuell=" + KursGewinnVerhältnisAktuell +
-                ", Analystenmeinungen=" + Analystenmeinungen +
-                ", ReaktionaufQuartalszahlen=" + ReaktionaufQuartalszahlen +
-                ", Gewinnrevision=" + Gewinnrevision +
-                ", Kursverlauf6Monate=" + Kursverlauf6Monate +
-                ", Kursverlauf12Monate=" + Kursverlauf12Monate +
-                ", Kursmomentum=" + Kursmomentum +
-                ", Dreimonatsreversal=" + Dreimonatsreversal +
-                ", Gewinnwachstum=" + Gewinnwachstum +
-                '}';
-    }
-
     public Levermannschritte() {
     }
 
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
-    @Column(name = "Lid")
-    private Integer Lid;
+    @Column(name = "LevermannschrittName")
+    private String LevermannschrittName;
 
-    @Column(name = "Cid3", unique = true, nullable = true)
-    private Integer Cid3;
+    @Column(name = "Name2", unique = true, nullable = true)
+    private String Name2;
 
     @Column(name = "Eigenkapitalrendite", unique = true, nullable = true)
     private Integer Eigenkapitalrendite;
@@ -233,5 +184,7 @@ import java.util.Objects;
     private Integer Gewinnwachstum;
 
 
-
+    public void setName2(String name2) {
+        Name2 = name2;
+    }
 }

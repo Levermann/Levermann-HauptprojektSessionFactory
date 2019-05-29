@@ -38,8 +38,8 @@ import java.util.Scanner;
             int pid = scanner.nextInt();
             Punkteliste.setPid(pid);
             //Select Name der Firma
-            int cid2 = scanner.nextInt();
-            Punkteliste.setCid2(cid2);
+            String name = scanner.next();
+            Punkteliste.setName2(name);
 
             //Beginn der Datenübertragung
             session.beginTransaction();

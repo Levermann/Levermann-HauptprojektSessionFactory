@@ -1,7 +1,7 @@
 
-create table Punkteliste1(
+create table Punkteliste(
 
-                             Pid	float not null unique,
+                             PunktelisteName	varchar(20) not null unique,
                              Name2 varchar (20) not null ,
                              Eigenkapitalrendite float(11),
                              EBITMarge float(11),

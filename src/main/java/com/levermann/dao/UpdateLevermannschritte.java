@@ -38,8 +38,8 @@ abstract public class UpdateLevermannschritte implements DaoLevermannschritte {
             int lid = scanner.nextInt();
             Levermannschritte.setLid(lid);
             //Select Name der Firma
-            int cid3 = scanner.nextInt();
-            Levermannschritte.setCid3(cid3);
+            String name = scanner.next();
+            Levermannschritte.setName2(name);
 
             //Beginn der Datenübertragung
             session.beginTransaction();

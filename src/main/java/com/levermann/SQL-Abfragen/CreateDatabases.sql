@@ -1,5 +1,5 @@
 create schema levermann;
-create table unternehmen1(
+create table unternehmen(
                              name varchar (11) primary key not null  unique,
                              datum float(11),
                              eigenkapital float(11),
@@ -37,9 +37,9 @@ create table unternehmen1(
 
 );
 
-create table Punkteliste1(
+create table Punkteliste(
 
-                             Pid	float not null unique,
+                             PunktelisteName	varchar(20) not null unique,
                              Name2 varchar (20) not null ,
                              Eigenkapitalrendite float(11),
                              EBITMarge float(11),
@@ -54,14 +54,14 @@ create table Punkteliste1(
                              Kursmomentum float(11),
                              Dreimonatsreversal float(11),
                              Gewinnwachstum float(11),
-                             PRIMARY KEY (Pid)
+                             PRIMARY KEY (PunktelisteName)
 
 );
 
-create table Levermanschritte1(
+create table levermanschritte(
 
-                                  LID	float not null unique,
-                                  Name3 varchar (20) not null ,
+                                  LevermannschrittName	varchar(20) not null unique,
+                                  Name2 varchar (20) not null ,
                                   Eigenkapitalrendite float(11),
                                   EBITMarge float(11),
                                   Eigenkapitalquote float(11),
@@ -75,14 +75,7 @@ create table Levermanschritte1(
                                   Kursmomentum float(11),
                                   Dreimonatsreversal float(11),
                                   Gewinnwachstum float(11),
-                                  PRIMARY KEY (LID)
+                                  PRIMARY KEY (LevermannschrittName)
 
 );
 
-alter table levermannschritte1
-    add constraint levermannschritte1_unternehmen1_name_fk
-        foreign key (Name2) references unternehmen1 (name);
-
-alter table punkteliste1
-    add constraint punkteliste1_unternehmen1_name_fk
-        foreign key (Name2) references unternehmen1 (name);

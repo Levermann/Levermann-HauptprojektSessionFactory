@@ -51,21 +51,21 @@ import org.hibernate.cfg.Configuration;
             Query query = session.getNamedQuery("Unternehmen.findAll");
             List<Unternehmen> unList = query.list();
             for (Unternehmen un : unList) {
-                System.out.println("Liste der Unternehmen = " + un.getCid() + ","
+                System.out.println("Liste der Unternehmen = " + un.getName() + ","
                         + un.getName());}
 
             // Ausgabe eines Datensatzes mit Cid
             query = session.getNamedQuery("Unternehmen.findById");
             query.setInteger("Cid", 6);
             Unternehmen un = (Unternehmen) query.uniqueResult();
-            System.out.println("Unternehmen Cid=" + un.getCid() + " Name=" + un.getName() + ", City=");
+            System.out.println("Unternehmen Cid=" + un.getName() + " Name=" + un.getName() + ", City=");
 
             // Ausgabe einer Liste mit Namen
             query = session.getNamedQuery("Unternehmen.findByName");
             query.setString("name", "bmw");
             unList = query.list();
             for (Unternehmen un1 : unList) {
-                System.out.println("List of Employees::" + un1.getCid() + ","
+                System.out.println("List of Employees::" + un1.getName() + ","
                         + un1.getName());
             }
 
@@ -74,24 +74,24 @@ import org.hibernate.cfg.Configuration;
             List<Levermannschritte> unList1 = (List<Levermannschritte>) query1.list();
             for (Levermannschritte un1 : unList1) {
                 System.out.println("Liste der Levermannschritte = " + un1.getLid() + ","
-                        + un1.getCid3());}
+                        + un1.getName2());}
 
             // Ausgabe eines Datensatzes mit Cid
-            query1 = session.getNamedQuery("Levermannschritte.findByCId");
-            query1.setInteger("Cid3", 6);
+            query1 = session.getNamedQuery("Levermannschritte.findByName");
+            query1.setInteger("bmw");
             Levermannschritte un1 = (Levermannschritte) query1.uniqueResult();
-            System.out.println("Levermannschritte Lid=" + un1.getLid() + " Cid= =" + + un1.getCid3());
+            System.out.println("Levermannschritte Lid=" + un1.getLid() + " Cid= =" + + un1.getName2());
 
  /*    //HQL Named Query FindAll Unternehmen
             Query query = session.getNamedQuery("Unternehmen.findAll");
             List<Unternehmen> unList = query.list();
             for (Unternehmen un : unList) {
-              /*  System.out.println("Liste der Unternehmen = " + un.getCid() + ","
+              /*  System.out.println("Liste der Unternehmen = " + un.getName() + ","
                         + un.getName()+ un.getEigenkapital()+ + un.getJahresueberschuss());}
 
          if ( un.getEigenkapital() == un.getJahresueberschuss() == true)
             {
-                System.out.println("yes" + un.getName()+un.getCid());
+                System.out.println("yes" + un.getName()+un.getName());
 
                 //HQL Named Query FindAll Levermannschritte
                 Query query1 = session.getNamedQuery("Levermannschritte.findAll");
@@ -102,7 +102,7 @@ import org.hibernate.cfg.Configuration;
                 query1 = session.getNamedQuery("Levermannschritte.findByCId");
                 query1.setInteger("Cid3", 6);
                 Levermannschritte un1 = (Levermannschritte) query1.uniqueResult();
-                System.out.println("Levermannschritte Lid=" + un1.getLid() + " Cid=" +  un1.getCid3());
+                System.out.println("Levermannschritte Lid=" + un1.getLid() + " Cid=" +  un1.getName2());
 
                 try {
                     Levermannschritte lv = new Levermannschritte();
@@ -112,10 +112,10 @@ import org.hibernate.cfg.Configuration;
 
             }
 
-            else { System.out.println("nope"+ " "+ un.getName()+" "+un.getCid());
+            else { System.out.println("nope"+ " "+ un.getName()+" "+un.getName());
 
                 Levermannschritte lv = new Levermannschritte();
-                lv.setCid3(un.getCid());
+                lv.setCid3(un.getName());
                 lv.setEigenkapitalrendite(66666);
             }}
 

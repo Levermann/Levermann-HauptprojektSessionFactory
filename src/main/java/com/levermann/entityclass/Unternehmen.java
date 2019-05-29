@@ -13,7 +13,7 @@ import javax.annotation.ManagedBean;
 //@Table(name="unternehmen")
 @NamedQueries({
         @NamedQuery(name = "Unternehmen.findAll", query = "SELECT A FROM Unternehmen A"),
-        @NamedQuery(name = "Unternehmen.findById", query = "SELECT c FROM Unternehmen c WHERE c.Cid =:Cid"),
+        @NamedQuery(name = "Unternehmen.findById", query = "SELECT c FROM Unternehmen c WHERE c.name =:name"),
         @NamedQuery(name = "Unternehmen.findByName", query = "SELECT c FROM Unternehmen c WHERE c.name =:name"),
         @NamedQuery(name = "Unternehmen.findByEigenkapital", query = "SELECT c FROM Unternehmen c WHERE c.eigenkapital =:eigenkapital"),
         @NamedQuery(name = "Unternehmen.findByJahresüberschuss", query = "SELECT jahresueberschuss FROM Unternehmen")
@@ -21,47 +21,7 @@ import javax.annotation.ManagedBean;
 })
 public class Unternehmen implements Serializable  {
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof Unternehmen)) return false;
-        Unternehmen that = (Unternehmen) o;
-        return getCid() == that.getCid() &&
-                Float.compare(that.getEigenkapital(), getEigenkapital()) == 0 &&
-                Float.compare(that.getJahresueberschuss(), getJahresueberschuss()) == 0 &&
-                Float.compare(that.getGewinnEBIT(), getGewinnEBIT()) == 0 &&
-                Float.compare(that.getJahresumsatz(), getJahresumsatz()) == 0 &&
-                Float.compare(that.getFremdkapital(), getFremdkapital()) == 0 &&
-                Float.compare(that.getAktuellerAktienkurs(), getAktuellerAktienkurs()) == 0 &&
-                Float.compare(that.getGewinnschaezung(), getGewinnschaezung()) == 0 &&
-                Float.compare(that.getGewinnAVG(), getGewinnAVG()) == 0 &&
-                Float.compare(that.getHalten(), getHalten()) == 0 &&
-                Float.compare(that.getVerkaufen(), getVerkaufen()) == 0 &&
-                Float.compare(that.getKaufen(), getKaufen()) == 0 &&
-                Float.compare(that.getKursanstiegUnternehmen(), getKursanstiegUnternehmen()) == 0 &&
-                Float.compare(that.getKursanstiegIndex(), getKursanstiegIndex()) == 0 &&
-                Float.compare(that.getGewinnschaezungVor4Wochen(), getGewinnschaezungVor4Wochen()) == 0 &&
-                Float.compare(that.getAktienkursTagVeroeffentlichungQartalszahlen(), getAktienkursTagVeroeffentlichungQartalszahlen()) == 0 &&
-                Float.compare(that.getKursVor6Monaten(), getKursVor6Monaten()) == 0 &&
-                Float.compare(that.getKursVor12Monaten(), getKursVor12Monaten()) == 0 &&
-                Float.compare(that.getKursVor3Monaten(), getKursVor3Monaten()) == 0 &&
-                Float.compare(that.getKursVor2Monaten(), getKursVor2Monaten()) == 0 &&
-                Float.compare(that.getKursVor1Monat(), getKursVor1Monat()) == 0 &&
-                Float.compare(that.getDaxVor1Monat(), getDaxVor1Monat()) == 0 &&
-                Float.compare(that.getDaxVor2Monaten(), getDaxVor2Monaten()) == 0 &&
-                Float.compare(that.getDaxVor3Monaten(), getDaxVor3Monaten()) == 0 &&
-                Float.compare(that.getGewinnschaezungNaechstesJahr(), getGewinnschaezungNaechstesJahr()) == 0 &&
-                Float.compare(that.getGewinnschaezungDiesesJahr(), getGewinnschaezungDiesesJahr()) == 0 &&
-                Float.compare(that.getFinanzsektor(), getFinanzsektor()) == 0 &&
-                getName().equals(that.getName()) &&
-                getDatum().equals(that.getDatum()) &&
-                getPerfInJedemMonat().equals(that.getPerfInJedemMonat());
-    }
 
-    @Override
-    public int hashCode() {
-        return Objects.hash(getCid(), getName(), getDatum(), getEigenkapital(), getJahresueberschuss(), getGewinnEBIT(), getJahresumsatz(), getFremdkapital(), getAktuellerAktienkurs(), getGewinnschaezung(), getGewinnAVG(), getHalten(), getVerkaufen(), getKaufen(), getKursanstiegUnternehmen(), getKursanstiegIndex(), getGewinnschaezungVor4Wochen(), getAktienkursTagVeroeffentlichungQartalszahlen(), getKursVor6Monaten(), getKursVor12Monaten(), getKursVor3Monaten(), getKursVor2Monaten(), getKursVor1Monat(), getDaxVor1Monat(), getDaxVor2Monaten(), getDaxVor3Monaten(), getGewinnschaezungNaechstesJahr(), getGewinnschaezungDiesesJahr(), getFinanzsektor(), getPerfInJedemMonat());
-    }
 /*public Unternehmen(String name, String datum, float eigenkapital, float jahresueberschuss) {
         this.name = name;
         this.datum = datum;
@@ -73,13 +33,10 @@ public class Unternehmen implements Serializable  {
 
     @Override
     public String toString() {
-        return "Unternehmen{" + "Cid=" + Cid + ", name=" + name + ", datum=" + datum + ", eigenkapital=" + eigenkapital + ", jahresueberschuss=" + jahresueberschuss + ", GewinnEBIT=" + GewinnEBIT + ", Jahresumsatz=" + Jahresumsatz + ", Fremdkapital=" + Fremdkapital + ", AktuellerAktienkurs=" + AktuellerAktienkurs + ", Gewinnschaezung=" + Gewinnschaezung + ", GewinnAVG=" + GewinnAVG + ", Halten=" + Halten + ", Verkaufen=" + Verkaufen + ", Kaufen=" + Kaufen + ", KursanstiegUnternehmen=" + KursanstiegUnternehmen + ", KursanstiegIndex=" + KursanstiegIndex + ", GewinnschaezungVor4Wochen=" + GewinnschaezungVor4Wochen + ", AktienkursTagVeroeffentlichungQartalszahlen=" + AktienkursTagVeroeffentlichungQartalszahlen + ", KursVor6Monaten=" + KursVor6Monaten + ", KursVor12Monaten=" + KursVor12Monaten + ", KursVor3Monaten=" + KursVor3Monaten + ", KursVor2Monaten=" + KursVor2Monaten + ", KursVor1Monat=" + KursVor1Monat + ", DaxVor1Monat=" + DaxVor1Monat + ", DaxVor2Monaten=" + DaxVor2Monaten + ", DaxVor3Monaten=" + DaxVor3Monaten + ", GewinnschaezungNaechstesJahr=" + GewinnschaezungNaechstesJahr + ", GewinnschaezungDiesesJahr=" + GewinnschaezungDiesesJahr + ", Finanzsektor=" + Finanzsektor + '}';
+        return "Unternehmen{" + ", name=" + name + ", datum=" + datum + ", eigenkapital=" + eigenkapital + ", jahresueberschuss=" + jahresueberschuss + ", GewinnEBIT=" + GewinnEBIT + ", Jahresumsatz=" + Jahresumsatz + ", Fremdkapital=" + Fremdkapital + ", AktuellerAktienkurs=" + AktuellerAktienkurs + ", Gewinnschaezung=" + Gewinnschaezung + ", GewinnAVG=" + GewinnAVG + ", Halten=" + Halten + ", Verkaufen=" + Verkaufen + ", Kaufen=" + Kaufen + ", KursanstiegUnternehmen=" + KursanstiegUnternehmen + ", KursanstiegIndex=" + KursanstiegIndex + ", GewinnschaezungVor4Wochen=" + GewinnschaezungVor4Wochen + ", AktienkursTagVeroeffentlichungQartalszahlen=" + AktienkursTagVeroeffentlichungQartalszahlen + ", KursVor6Monaten=" + KursVor6Monaten + ", KursVor12Monaten=" + KursVor12Monaten + ", KursVor3Monaten=" + KursVor3Monaten + ", KursVor2Monaten=" + KursVor2Monaten + ", KursVor1Monat=" + KursVor1Monat + ", DaxVor1Monat=" + DaxVor1Monat + ", DaxVor2Monaten=" + DaxVor2Monaten + ", DaxVor3Monaten=" + DaxVor3Monaten + ", GewinnschaezungNaechstesJahr=" + GewinnschaezungNaechstesJahr + ", GewinnschaezungDiesesJahr=" + GewinnschaezungDiesesJahr + ", Finanzsektor=" + Finanzsektor + '}';
     }
     @GeneratedValue(strategy=GenerationType.IDENTITY)
     @Id
-    @Column(name="Cid")
-    private  int  Cid;
-
     @Column(name="name")
     private String name;
 
@@ -188,14 +145,6 @@ public class Unternehmen implements Serializable  {
 
     public void setPerfInJedemMonat(Integer PerfInJedemMonat) {
         this.PerfInJedemMonat = PerfInJedemMonat;
-    }
-
-     public int getCid() {
-        return Cid;
-    }
-
-    public void setCid(int Cid) {
-        this.Cid = Cid;
     }
 
     public String getName() {

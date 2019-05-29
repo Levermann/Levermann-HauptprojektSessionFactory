@@ -1,7 +1,7 @@
 
-create table Levermanschritte1(
+create table Levermanschritte(
 
-                             LID	float not null unique,
+                             LevermannschrittName	varchar(20) not null unique,
                              Name3 varchar (20) not null ,
                              Eigenkapitalrendite float(11),
                              EBITMarge float(11),

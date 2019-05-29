@@ -1,10 +1,6 @@
 package com.levermann.project;
 
-import com.levermann.dao.SelectSchritt1jahresueberschuss;
 import com.levermann.dao.Update;
-import com.levermann.kennzahlen_fertig_review.Dreimonatsreversal;
-import com.levermann.kennzahlen_fertig_review.Gewinnwachstum;
-import com.levermann.kennzahlen_fertig_review.Kursmomentum;
 
 
 abstract public class ConnectionMainFactory  {

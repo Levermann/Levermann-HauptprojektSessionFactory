@@ -1,7 +1,7 @@
-alter table levermannschritte1
-    add constraint levermannschritte1_unternehmen1_name_fk
-        foreign key (Name2) references unternehmen1 (name);
+alter table levermanschritte
+    add constraint levermanschritte_unternehmen_name_fk
+        foreign key (Name2) references unternehmen (name);
 
-alter table punkteliste1
-    add constraint punkteliste1_unternehmen1_name_fk
-        foreign key (Name2) references unternehmen1 (name);
+alter table punkteliste
+    add constraint punkteliste_unternehmen_name_fk
+        foreign key (Name2) references unternehmen (name);

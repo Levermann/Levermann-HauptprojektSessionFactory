@@ -22,8 +22,8 @@ import javax.persistence.OneToOne;
     @Column(name="Pid")
     private Integer Pid;
 
-    @Column(name="Cid2")
-    private Integer Cid2;
+    @Column(name="Name2")
+    private String Name2;
 
     @Column(name="Eigenkapitalrendite")
     private Integer Eigenkapitalrendite;
@@ -99,12 +99,12 @@ import javax.persistence.OneToOne;
         Pid = pid;
     }
 
-    public Integer getCid2() {
-        return Cid2;
+    public String getName2() {
+        return Name2;
     }
 
-    public void setCid2(Integer cid2) {
-        Cid2 = cid2;
+    public void setName2(String Name2) {
+        Name2 = Name2;
     }
 
     public Integer getEigenkapitalrendite() {
