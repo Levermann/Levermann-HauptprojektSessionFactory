@@ -21,16 +21,9 @@ import javafx.event.ActionEvent;
  *
  * @author blendajazi
  */
-public class StartseiteController implements Initializable {
+public class StartseiteController implements Initializable, ControlledScreenInterface {
 
-    /**
-     * Initializes the controller class.
-     */
-    @Override
-    public void initialize(URL url, ResourceBundle rb) {
-        // TODO
-    }    
-  
+    ScreensController myController;
     
     @FXML
     public Button LAerstellen;
@@ -41,6 +34,20 @@ public class StartseiteController implements Initializable {
     @FXML
     public TableColumn Unternehmen;
     
+    /**
+     * Initializes the controller class.
+     */
+    @Override
+    public void initialize(URL url, ResourceBundle rb) {
+        // TODO
+    }    
+  
+    @Override
+    public void setScreenParent(ScreensController screenParent){
+        myController = screenParent;
+    }
+    
+   
     
     public void handleButtonClick(){
         

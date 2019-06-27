@@ -36,9 +36,9 @@ public class S1EigenkapitalrenditeController implements Initializable, Controlle
 //        System.exit(0);
 //      }
     
-      @Override
-      public void setScreenParent(ScreensController screenParent){
-        myController = screenParent; }
+    @Override
+    public void setScreenParent(ScreensController screenParent){
+    myController = screenParent; }
     
     @FXML
     private void Update(ActionEvent event){
@@ -48,20 +48,25 @@ public class S1EigenkapitalrenditeController implements Initializable, Controlle
        update.DaoJahresueberschuss(Integer.parseInt(Jahresueberschuss.getText()));
        update.DaoEigenkapital(Integer.parseInt(Eigenkapital.getText()));
        
-       
-      
-       
     }
+    
+
+//    @FXMl
+//    private void gotoNext(ActionEvent event){
 //        kaufen ch = kaufen.getInstance();
 //        Company c = new Company();
-    
+//        c.setJahresuberschuss(Integer.parseInt(JUE.getText()));
+//        c.setEigenkapital(Integer.parseInt(EK.getText()));
 //        c.setName(name.getText());
 //        ch.addItem(c);
 //        c.refreshCompany();
-//        
-  
-    
-    
-    
-    
+//        myController.setScreen(LevermannPOC.screen1ID);
+//    }
+//    
+
+
+
 }
+      
+       
+    

@@ -7,17 +7,17 @@ package com.levermann.GuiNew;
  */
 
 import javafx.application.Application;
-import static javafx.application.Application.launch;
 import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-
+import java.util.*;
+import static javafx.application.Application.launch;
 
 
 public class JavaFXMain extends Application {
    
-    public static String screen0ID = "StartseiteController";
-    public static String screen0File = "Startseite.fxml";
+    public static String screen0ID = "com.levermann.GuiNew.StartseiteController.java";
+    public static String screen0File = "com.levermann.GuiNew.Startseite.fxml";
     
     public static String screen1ID = "AnalyseErstellenController";
     public static String screen1File = "AnalyseErstellen.fxml";
@@ -72,61 +72,62 @@ public class JavaFXMain extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
         
-        com.levermann.GuiNew.ScreensController mainContainer = new com.levermann.GuiNew.ScreensController();
+        ScreensController mainContainer = new ScreensController();
+
         
         mainContainer.loadScreen(JavaFXMain.screen0ID, JavaFXMain.screen0File);
-        mainContainer.loadScreen(JavaFXMain.screen0ID, JavaFXMain.screen0File);
+        //mainContainer.loadScreen(JavaFXMain.screen0ID, JavaFXMain.screen0File);
         
         mainContainer.loadScreen(JavaFXMain.screen1ID, JavaFXMain.screen1File);
-        mainContainer.loadScreen(JavaFXMain.screen1ID, JavaFXMain.screen1File);
+        //mainContainer.loadScreen(JavaFXMain.screen1ID, JavaFXMain.screen1File);
         
         mainContainer.loadScreen(JavaFXMain.screen2ID, JavaFXMain.screen2File);
-        mainContainer.loadScreen(JavaFXMain.screen2ID, JavaFXMain.screen2File);
+        //mainContainer.loadScreen(JavaFXMain.screen2ID, JavaFXMain.screen2File);
         
         mainContainer.loadScreen(JavaFXMain.screen3ID, JavaFXMain.screen3File);
-        mainContainer.loadScreen(JavaFXMain.screen3ID, JavaFXMain.screen3File);
+        //mainContainer.loadScreen(JavaFXMain.screen3ID, JavaFXMain.screen3File);
         
         mainContainer.loadScreen(JavaFXMain.screenS1ID, JavaFXMain.screenS1File);
-        mainContainer.loadScreen(JavaFXMain.screenS1ID, JavaFXMain.screenS1File);
+        //mainContainer.loadScreen(JavaFXMain.screenS1ID, JavaFXMain.screenS1File);
         
         mainContainer.loadScreen(JavaFXMain.screenS2ID, JavaFXMain.screenS2File);
-        mainContainer.loadScreen(JavaFXMain.screenS2ID, JavaFXMain.screenS2File);
+        //mainContainer.loadScreen(JavaFXMain.screenS2ID, JavaFXMain.screenS2File);
         
         mainContainer.loadScreen(JavaFXMain.screenS3ID, JavaFXMain.screenS3File);
-        mainContainer.loadScreen(JavaFXMain.screenS3ID, JavaFXMain.screenS3File);
+        //mainContainer.loadScreen(JavaFXMain.screenS3ID, JavaFXMain.screenS3File);
         
         mainContainer.loadScreen(JavaFXMain.screenS4ID, JavaFXMain.screenS4File);
-        mainContainer.loadScreen(JavaFXMain.screenS4ID, JavaFXMain.screenS4File);
+        //mainContainer.loadScreen(JavaFXMain.screenS4ID, JavaFXMain.screenS4File);
         
         mainContainer.loadScreen(JavaFXMain.screenS4ID, JavaFXMain.screenS4File);
-        mainContainer.loadScreen(JavaFXMain.screenS4ID, JavaFXMain.screenS4File);
+        //mainContainer.loadScreen(JavaFXMain.screenS4ID, JavaFXMain.screenS4File);
         
         mainContainer.loadScreen(JavaFXMain.screenS5ID, JavaFXMain.screenS5File);
-        mainContainer.loadScreen(JavaFXMain.screenS5ID, JavaFXMain.screenS5File);
+        //mainContainer.loadScreen(JavaFXMain.screenS5ID, JavaFXMain.screenS5File);
         
         mainContainer.loadScreen(JavaFXMain.screenS6ID, JavaFXMain.screenS6File);
-        mainContainer.loadScreen(JavaFXMain.screenS6ID, JavaFXMain.screenS6File);
+        //mainContainer.loadScreen(JavaFXMain.screenS6ID, JavaFXMain.screenS6File);
         
         mainContainer.loadScreen(JavaFXMain.screenS7ID, JavaFXMain.screenS7File);
-        mainContainer.loadScreen(JavaFXMain.screenS7ID, JavaFXMain.screenS7File);
+        //mainContainer.loadScreen(JavaFXMain.screenS7ID, JavaFXMain.screenS7File);
         
         mainContainer.loadScreen(JavaFXMain.screenS8ID, JavaFXMain.screenS8File);
-        mainContainer.loadScreen(JavaFXMain.screenS8ID, JavaFXMain.screenS8File);
+        //mainContainer.loadScreen(JavaFXMain.screenS8ID, JavaFXMain.screenS8File);
         
         mainContainer.loadScreen(JavaFXMain.screenS9ID, JavaFXMain.screenS9File);
-        mainContainer.loadScreen(JavaFXMain.screenS9ID, JavaFXMain.screenS9File);
+        //mainContainer.loadScreen(JavaFXMain.screenS9ID, JavaFXMain.screenS9File);
         
         mainContainer.loadScreen(JavaFXMain.screenS10ID, JavaFXMain.screenS10File);
-        mainContainer.loadScreen(JavaFXMain.screenS10ID, JavaFXMain.screenS10File);
+        //mainContainer.loadScreen(JavaFXMain.screenS10ID, JavaFXMain.screenS10File);
    
         mainContainer.loadScreen(JavaFXMain.screenS11ID, JavaFXMain.screenS11File);
-        mainContainer.loadScreen(JavaFXMain.screenS11ID, JavaFXMain.screenS11File);
+        //mainContainer.loadScreen(JavaFXMain.screenS11ID, JavaFXMain.screenS11File);
         
         mainContainer.loadScreen(JavaFXMain.screenS12ID, JavaFXMain.screenS12File);
-        mainContainer.loadScreen(JavaFXMain.screenS12ID, JavaFXMain.screenS12File);
+        //mainContainer.loadScreen(JavaFXMain.screenS12ID, JavaFXMain.screenS12File);
         
         mainContainer.loadScreen(JavaFXMain.screenS13ID, JavaFXMain.screenS13File);
-        mainContainer.loadScreen(JavaFXMain.screenS13ID, JavaFXMain.screenS13File);
+        //mainContainer.loadScreen(JavaFXMain.screenS13ID, JavaFXMain.screenS13File);
         
         
         
