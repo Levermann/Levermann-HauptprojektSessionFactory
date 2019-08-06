@@ -41,12 +41,12 @@ public class S0Controller implements Initializable, ControlledScreenInterface {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-        MainTable.setItems(CompanyHandler.obsAllCompanies);
-        TableColumn<Company, String> namecolumn = new TableColumn<>("NAME");
-        namecolumn.setCellValueFactory(new PropertyValueFactory<>("name"));
-        TableColumn<Company, String> ergebniscolumn = new TableColumn<>("ERGEBNIS");
-        Gesamtpunkte.setCellValueFactory(new PropertyValueFactory<>("ergebnis"));
-        MainTable.getColumns().setAll(namecolumn, ergebniscolumn);
+//        MainTable.setItems(CompanyHandler.obsAllCompanies);
+//        TableColumn<Company, String> namecolumn = new TableColumn<>("NAME");
+//        namecolumn.setCellValueFactory(new PropertyValueFactory<>("name"));
+//        TableColumn<Company, String> ergebniscolumn = new TableColumn<>("ERGEBNIS");
+//        Gesamtpunkte.setCellValueFactory(new PropertyValueFactory<>("ergebnis"));
+//        MainTable.getColumns().setAll(namecolumn, ergebniscolumn);
     }    
     
     @FXML
