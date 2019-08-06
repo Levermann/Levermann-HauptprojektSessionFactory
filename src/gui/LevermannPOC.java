@@ -17,9 +17,12 @@ import java.util.*;
  */
 public class LevermannPOC extends Application {
     
+    //initialisiere den company handler, in dem die aktive Liste der Unternehmen gespeichert ist
+    public static CompanyHandler ch = CompanyHandler.getInstance();
+    
     public static String screen0ID = "S0Controller";
     //public static String screen0File = "fxmlfiles.S0MainInput.fxml";
-    public static String screen0File = "S0MainInput.fxml";
+    public static String screen0File = "S0Startseite.fxml";
     public static String screen1ID = "S1Controller";
     //public static String screen1File = "fxmlfiles.S1ShowAllResults.fxml";    
     public static String screen1File = "S1ShowAllResults.fxml"; 
@@ -57,4 +60,25 @@ public class LevermannPOC extends Application {
     public static void main(String[] args) {
         launch(args);
     }    
+    
+    private void dummy(){
+        CompanyHandler ch = CompanyHandler.getInstance();
+        Company c = new Company();
+        c.setJahresuberschuss(500);
+        c.setEigenkapital(500);
+        c.setName("BMW");
+        c.refreshCompany();
+        ch.addItem(c);
+        
+        
+        Company b = new Company();
+        b.setJahresuberschuss(200);
+        b.setEigenkapital(100);
+        b.setName("VW");        
+        b.refreshCompany();
+        ch.addItem(b);
+        
+        
+    }
+    
 }

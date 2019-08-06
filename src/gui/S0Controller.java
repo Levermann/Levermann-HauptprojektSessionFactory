@@ -13,6 +13,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
 
 /**
  *
@@ -30,10 +31,22 @@ public class S0Controller implements Initializable, ControlledScreenInterface {
     private TextField EK;
     @FXML
     private TextField name;    
+    @FXML
+    private TableView MainTable;
+    @FXML
+    private TableColumn Unternehmen;
+    @FXML
+    private TableColumn Gesamtpunkte;
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
+        MainTable.setItems(CompanyHandler.obsAllCompanies);
+        TableColumn<Company, String> namecolumn = new TableColumn<>("NAME");
+        namecolumn.setCellValueFactory(new PropertyValueFactory<>("name"));
+        TableColumn<Company, String> ergebniscolumn = new TableColumn<>("ERGEBNIS");
+        Gesamtpunkte.setCellValueFactory(new PropertyValueFactory<>("ergebnis"));
+        MainTable.getColumns().setAll(namecolumn, ergebniscolumn);
     }    
     
     @FXML
@@ -48,13 +61,13 @@ public class S0Controller implements Initializable, ControlledScreenInterface {
     
     @FXML
     private void gotoNext(ActionEvent event){
-        CompanyHandler ch = CompanyHandler.getInstance();
-        Company c = new Company();
-        c.setJahresuberschuss(Integer.parseInt(JUE.getText()));
-        c.setEigenkapital(Integer.parseInt(EK.getText()));
-        c.setName(name.getText());
-        ch.addItem(c);
-        c.refreshCompany();
+        //CompanyHandler ch = CompanyHandler.getInstance();
+        //Company c = new Company();
+        //c.setJahresuberschuss(Integer.parseInt(JUE.getText()));
+        //c.setEigenkapital(Integer.parseInt(EK.getText()));
+        //c.setName(name.getText());
+        //ch.addItem(c);
+        //c.refreshCompany();
         myController.setScreen(LevermannPOC.screen1ID);
     }
 }

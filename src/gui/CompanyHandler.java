@@ -8,6 +8,9 @@ package gui;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
+import javafx.collections.FXCollections;
+import javafx.collections.ListChangeListener;
+import javafx.collections.ObservableList;
 
 /**
  *
@@ -17,11 +20,19 @@ import java.util.List;
  */
 public class CompanyHandler {
     
-    private List<Company> allCompanies;
+    private static List<Company> allCompanies = new ArrayList();
+    //Erstelle observable List, damit der Tableview später bei änderungen aktualisiert wird.
+    public static ObservableList<Company> obsAllCompanies = FXCollections.observableList(allCompanies);
     private static CompanyHandler instance = null;
 
     private CompanyHandler() {
-        allCompanies = new ArrayList();
+        //Bei änderungen wird in der Konsole die Änderung vermerkt
+        obsAllCompanies.addListener(new ListChangeListener(){
+           @Override
+           public void onChanged(ListChangeListener.Change change) {
+                System.out.println("Ein Element wurde veraendert!"); 
+           }
+        });
     }
 
     public static CompanyHandler getInstance() {
@@ -32,23 +43,23 @@ public class CompanyHandler {
     }    
     
     public void addItem(Company c){
-        allCompanies.add(c);
+        obsAllCompanies.add(c);
     }
     
     public List<Company> getAllCompanies(){
-        return this.allCompanies;
+        return this.obsAllCompanies;
     }
     
     public int getListSize(){
-        return allCompanies.size();
+        return obsAllCompanies.size();
     }    
     
     @Override
     public String toString(){
         String s = "";
         try{
-            for(int i = 0; i < allCompanies.size(); i++){
-                s = s + allCompanies.get(i).toString() + "\n";
+            for(int i = 0; i < obsAllCompanies.size(); i++){
+                s = s + obsAllCompanies.get(i).toString() + "\n";
             }
             return s;
         }catch(Exception e){
@@ -58,7 +69,7 @@ public class CompanyHandler {
     
     //gibt ein spezielles Element der Liste zurück
     public String toString(int x){
-        return allCompanies.get(x).toString();
+        return obsAllCompanies.get(x).toString();
     }
     
 }
