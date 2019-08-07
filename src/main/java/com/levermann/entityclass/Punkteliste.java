@@ -81,10 +81,6 @@ import javax.persistence.OneToOne;
         return PunktelisteNameId;
     }
 
-    public void setPunktelisteNameId(String PunktelisteNameId) {
-        PunktelisteNameId = PunktelisteNameId;
-    }
-
     public String getUnternehmenname_Punkteliste() {
         return Unternehmenname_Punkteliste;
     }

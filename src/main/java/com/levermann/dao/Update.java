@@ -42,7 +42,7 @@ import java.util.Scanner;
       Unternehmen Unternehmen=new Unternehmen();
       //Select Primärschlüssel
       String name = scanner.next();
-      Unternehmen.setName(name);
+      Unternehmen.setUnternehmenname( name);
 
     //Beginn der Datenübertragung
     session.beginTransaction();
@@ -71,7 +71,7 @@ import java.util.Scanner;
              Unternehmen Unternehmen=new Unternehmen();
              //Select Primärschlüssel
              String name = scanner.next();
-             Unternehmen.setName(name);
+             Unternehmen.setUnternehmenname( name);
              //Select Name der Firma
              String datum = scanner.next();
              Unternehmen.setDatum(datum);
@@ -103,7 +103,7 @@ import java.util.Scanner;
              Unternehmen Unternehmen=new Unternehmen();
              //Select Primärschlüssel
              String name = scanner.next();
-             Unternehmen.setName(name);
+             Unternehmen.setUnternehmenname( name);
              //Select Name der Firma
              int eigenkapital = scanner.nextInt();
              Unternehmen.setEigenkapital(eigenkapital);
@@ -139,9 +139,9 @@ import java.util.Scanner;
              List<Unternehmen> unList = (List<Unternehmen>) query.list();
          for (Unternehmen un : unList) {
 
-             un.setName(Name);
+             un.setUnternehmenname( Name);
              un.setJahresueberschuss(Jahresueberschuss);
-             un.getName();
+             un.getUnternehmenname() ;
          }
 
              // Hinzufügen des Loggers war erfolgreich
@@ -172,7 +172,7 @@ import java.util.Scanner;
              Unternehmen Unternehmen=new Unternehmen();
              //Select Primärschlüssel
              String name = scanner.next();
-             Unternehmen.setName(name);
+             Unternehmen.setUnternehmenname( name);
              //Select Name der Firma
              int gewinnebit = scanner.nextInt();
              Unternehmen.setGewinnEBIT(gewinnebit);
@@ -204,7 +204,7 @@ import java.util.Scanner;
              Unternehmen Unternehmen=new Unternehmen();
              //Select Primärschlüssel
              String name = scanner.next();
-             Unternehmen.setName(name);
+             Unternehmen.setUnternehmenname( name);
              //Select Name der Firma
              int jahresumsatz = scanner.nextInt();
              Unternehmen.setJahresumsatz(jahresumsatz);
@@ -236,7 +236,7 @@ import java.util.Scanner;
              Unternehmen Unternehmen=new Unternehmen();
              //Select Primärschlüssel
              String name = scanner.next();
-             Unternehmen.setName(name);
+             Unternehmen.setUnternehmenname( name);
              //Select Name der Firma
              int fremdkapital = scanner.nextInt();
              Unternehmen.setFremdkapital(fremdkapital);
@@ -268,7 +268,7 @@ import java.util.Scanner;
              Unternehmen Unternehmen=new Unternehmen();
              //Select Primärschlüssel
              String name = scanner.next();
-             Unternehmen.setName(name);
+             Unternehmen.setUnternehmenname( name);
              //Select Name der Firma
              int aktuelleraktienkurs = scanner.nextInt();
              Unternehmen.setAktuellerAktienkurs(aktuelleraktienkurs);
@@ -300,7 +300,7 @@ import java.util.Scanner;
              Unternehmen Unternehmen=new Unternehmen();
              //Select Primärschlüssel
              String name = scanner.next();
-             Unternehmen.setName(name);
+             Unternehmen.setUnternehmenname( name);
              //Select Name der Firma
              int gewinnschaezung = scanner.nextInt();
              Unternehmen.setGewinnschaezung(gewinnschaezung);
@@ -332,7 +332,7 @@ import java.util.Scanner;
              Unternehmen Unternehmen=new Unternehmen();
              //Select Primärschlüssel
              String name = scanner.next();
-             Unternehmen.setName(name);
+             Unternehmen.setUnternehmenname( name);
              //Select Name der Firma
              int gewinnavg = scanner.nextInt();
              Unternehmen.setGewinnAVG(gewinnavg);
@@ -364,7 +364,7 @@ import java.util.Scanner;
              Unternehmen Unternehmen=new Unternehmen();
              //Select Primärschlüssel
              String name = scanner.next();
-             Unternehmen.setName(name);
+             Unternehmen.setUnternehmenname( name);
              //Select Name der Firma
              int halten = scanner.nextInt();
              Unternehmen.setHalten(halten);
@@ -396,7 +396,7 @@ import java.util.Scanner;
              Unternehmen Unternehmen=new Unternehmen();
              //Select Primärschlüssel
              String name = scanner.next();
-             Unternehmen.setName(name);
+             Unternehmen.setUnternehmenname( name);
              //Select Name der Firma
              int verkaufen = scanner.nextInt();
              Unternehmen.setVerkaufen(verkaufen);
@@ -428,7 +428,7 @@ import java.util.Scanner;
              Unternehmen Unternehmen=new Unternehmen();
              //Select Primärschlüssel
              String name = scanner.next();
-             Unternehmen.setName(name);
+             Unternehmen.setUnternehmenname( name);
              //Select Name der Firma
              int kaufen = scanner.nextInt();
              Unternehmen.setKaufen(kaufen);
@@ -460,7 +460,7 @@ import java.util.Scanner;
              Unternehmen Unternehmen=new Unternehmen();
              //Select Primärschlüssel
              String name = scanner.next();
-             Unternehmen.setName(name);
+             Unternehmen.setUnternehmenname( name);
              //Select Name der Firma
              int kursanstiegunernehmen = scanner.nextInt();
              Unternehmen.setKursanstiegUnternehmen(kursanstiegunernehmen);
@@ -492,7 +492,7 @@ import java.util.Scanner;
              Unternehmen Unternehmen=new Unternehmen();
              //Select Primärschlüssel
              String name = scanner.next();
-             Unternehmen.setName(name);
+             Unternehmen.setUnternehmenname( name);
              //Select Name der Firma
              int kursanstiegindex = scanner.nextInt();
              Unternehmen.setKursanstiegIndex(kursanstiegindex);
@@ -524,7 +524,7 @@ import java.util.Scanner;
              Unternehmen Unternehmen=new Unternehmen();
              //Select Primärschlüssel
              String name = scanner.next();
-             Unternehmen.setName(name);
+             Unternehmen.setUnternehmenname( name);
              //Select Name der Firma
              int gewinnschaezungvor4wochen = scanner.nextInt();
              Unternehmen.setGewinnschaezungVor4Wochen(gewinnschaezungvor4wochen);
@@ -556,7 +556,7 @@ import java.util.Scanner;
              Unternehmen Unternehmen=new Unternehmen();
              //Select Primärschlüssel
              String name = scanner.next();
-             Unternehmen.setName(name);
+             Unternehmen.setUnternehmenname( name);
              //Select Name der Firma
              int AktienkursTagVeroeffentlichungQartalszahlen = scanner.nextInt();
              Unternehmen.setAktienkursTagVeroeffentlichungQartalszahlen(AktienkursTagVeroeffentlichungQartalszahlen);
@@ -588,7 +588,7 @@ import java.util.Scanner;
              Unternehmen Unternehmen=new Unternehmen();
              //Select Primärschlüssel
              String name = scanner.next();
-             Unternehmen.setName(name);
+             Unternehmen.setUnternehmenname( name);
              //Select Name der Firma
              int kursvor6monaten = scanner.nextInt();
              Unternehmen.setKursVor6Monaten(kursvor6monaten);
@@ -620,7 +620,7 @@ import java.util.Scanner;
              Unternehmen Unternehmen=new Unternehmen();
              //Select Primärschlüssel
              String name = scanner.next();
-             Unternehmen.setName(name);
+             Unternehmen.setUnternehmenname( name);
              //Select Name der Firma
              int kursvor12monaten = scanner.nextInt();
              Unternehmen.setKursVor6Monaten(kursvor12monaten);
@@ -652,7 +652,7 @@ import java.util.Scanner;
              Unternehmen Unternehmen=new Unternehmen();
              //Select Primärschlüssel
              String name = scanner.next();
-             Unternehmen.setName(name);
+             Unternehmen.setUnternehmenname( name);
              //Select Name der Firma
              int kursvor3monaten = scanner.nextInt();
              Unternehmen.setKursVor3Monaten(kursvor3monaten);
@@ -684,7 +684,7 @@ import java.util.Scanner;
              Unternehmen Unternehmen=new Unternehmen();
              //Select Primärschlüssel
              String name = scanner.next();
-             Unternehmen.setName(name);
+             Unternehmen.setUnternehmenname( name);
              //Select Name der Firma
              int kursvor2monaten = scanner.nextInt();
              Unternehmen.setKursVor2Monaten(kursvor2monaten);
@@ -716,7 +716,7 @@ import java.util.Scanner;
              Unternehmen Unternehmen=new Unternehmen();
              //Select Primärschlüssel
              String name = scanner.next();
-             Unternehmen.setName(name);
+             Unternehmen.setUnternehmenname( name);
              //Select Name der Firma
              int kursvor1monaten = scanner.nextInt();
              Unternehmen.setKursVor6Monaten(kursvor1monaten);
@@ -748,7 +748,7 @@ import java.util.Scanner;
              Unternehmen Unternehmen=new Unternehmen();
              //Select Primärschlüssel
              String name = scanner.next();
-             Unternehmen.setName(name);
+             Unternehmen.setUnternehmenname( name);
              //Select Name der Firma
              int daxvor1monat = scanner.nextInt();
              Unternehmen.setDaxVor1Monat(daxvor1monat);
@@ -780,7 +780,7 @@ import java.util.Scanner;
              Unternehmen Unternehmen=new Unternehmen();
              //Select Primärschlüssel
              String name = scanner.next();
-             Unternehmen.setName(name);
+             Unternehmen.setUnternehmenname( name);
              //Select Name der Firma
              int daxvor2monaten = scanner.nextInt();
              Unternehmen.setDaxVor2Monaten(daxvor2monaten);
@@ -812,7 +812,7 @@ import java.util.Scanner;
              Unternehmen Unternehmen=new Unternehmen();
              //Select Primärschlüssel
              String name = scanner.next();
-             Unternehmen.setName(name);
+             Unternehmen.setUnternehmenname( name);
              //Select Name der Firma
              int daxvor3monaten = scanner.nextInt();
              Unternehmen.setDaxVor2Monaten(daxvor3monaten);
@@ -844,7 +844,7 @@ import java.util.Scanner;
              Unternehmen Unternehmen=new Unternehmen();
              //Select Primärschlüssel
              String name = scanner.next();
-             Unternehmen.setName(name);
+             Unternehmen.setUnternehmenname( name);
              //Select Name der Firma
              int gewinnschaetzungnaechstesjahr = scanner.nextInt();
              Unternehmen.setGewinnschaezungNaechstesJahr(gewinnschaetzungnaechstesjahr);
@@ -876,7 +876,7 @@ import java.util.Scanner;
              Unternehmen Unternehmen=new Unternehmen();
              //Select Primärschlüssel
              String name = scanner.next();
-             Unternehmen.setName(name);
+             Unternehmen.setUnternehmenname( name);
              //Select Name der Firma
              int gewinnschaezungdiesesjahr = scanner.nextInt();
              Unternehmen.setGewinnschaezungDiesesJahr(gewinnschaezungdiesesjahr);
@@ -908,7 +908,7 @@ import java.util.Scanner;
              Unternehmen Unternehmen=new Unternehmen();
              //Select Primärschlüssel
              String name = scanner.next();
-             Unternehmen.setName(name);
+             Unternehmen.setUnternehmenname( name);
              //Select Name der Firma
              int finanzsektor = scanner.nextInt();
              Unternehmen.setFinanzsektor(finanzsektor);

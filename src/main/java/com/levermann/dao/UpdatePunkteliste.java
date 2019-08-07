@@ -35,11 +35,11 @@ import java.util.Scanner;
             //Erzeugen eines Objektes vom Typen Punkteliste
             Punkteliste Punkteliste=new Punkteliste();
             //Select Primärschlüssel
-            int pid = scanner.nextInt();
-            Punkteliste.setPid(pid);
+            String PunktelisteNameId = scanner.next();
+            Punkteliste.setPunktelisteNameId(PunktelisteNameId);
             //Select Name der Firma
             String name = scanner.next();
-            Punkteliste.setName2(name);
+            Punkteliste.setPunktelisteNameId (name);
 
             //Beginn der Datenübertragung
             session.beginTransaction();
@@ -67,8 +67,8 @@ import java.util.Scanner;
             //Erzeugen eines Objektes vom Typen Punkteliste
             Punkteliste Punkteliste=new Punkteliste();
             //Select Primärschlüssel
-            int Pid = scanner.nextInt();
-            Punkteliste.setPid(Pid);
+            String PunktelisteNameId = scanner.next();
+            Punkteliste.setPunktelisteNameId(PunktelisteNameId);
             //Select Name der Firma
             int eigenkapitalquote = scanner.nextInt();
             Punkteliste.setEigenkapitalquote(eigenkapitalquote);
@@ -99,8 +99,8 @@ import java.util.Scanner;
             //Erzeugen eines Objektes vom Typen Punkteliste
             Punkteliste Punkteliste=new Punkteliste();
             //Select Primärschlüssel
-            int pid = scanner.nextInt();
-            Punkteliste.setPid(pid);
+            String PunktelisteNameId = scanner.next();
+            Punkteliste.setPunktelisteNameId(PunktelisteNameId);
             //Select Name der Firma
             int ebitmarge = scanner.nextInt();
             Punkteliste.setEBITMarge(ebitmarge);
@@ -131,8 +131,8 @@ import java.util.Scanner;
             //Erzeugen eines Objektes vom Typen Punkteliste
             Punkteliste Punkteliste=new Punkteliste();
             //Select Primärschlüssel
-            int Pid = scanner.nextInt();
-            Punkteliste.setPid(Pid);
+            String PunktelisteNameId = scanner.next();
+            Punkteliste.setPunktelisteNameId(PunktelisteNameId);
             //Select Name der Firma
             int eigenkaitalquote = scanner.nextInt();
             Punkteliste.setEigenkapitalquote(eigenkaitalquote);
@@ -163,8 +163,8 @@ import java.util.Scanner;
             //Erzeugen eines Objektes vom Typen Punkteliste
             Punkteliste Punkteliste=new Punkteliste();
             //Select Primärschlüssel
-            int Pid = scanner.nextInt();
-            Punkteliste.setPid(Pid);
+            String PunktelisteNameId = scanner.next();
+            Punkteliste.setPunktelisteNameId(PunktelisteNameId);
             //Select Name der Firma
             int kursgewinnverhaeltnis = scanner.nextInt();
             Punkteliste.setKursGewinnVerhaeltnis(kursgewinnverhaeltnis);
@@ -195,8 +195,8 @@ import java.util.Scanner;
             //Erzeugen eines Objektes vom Typen Punkteliste
             Punkteliste Punkteliste=new Punkteliste();
             //Select Primärschlüssel
-            int Pid = scanner.nextInt();
-            Punkteliste.setPid(Pid);
+            String PunktelisteNameId = scanner.next();
+            Punkteliste.setPunktelisteNameId(PunktelisteNameId);
             //Select Name der Firma
             int kursgewinnverhaeltnisaktuell = scanner.nextInt();
             Punkteliste.setKursGewinnVerhaeltnisAktuell(kursgewinnverhaeltnisaktuell);
@@ -227,8 +227,8 @@ import java.util.Scanner;
             //Erzeugen eines Objektes vom Typen Punkteliste
             Punkteliste Punkteliste=new Punkteliste();
             //Select Primärschlüssel
-            int Pid = scanner.nextInt();
-            Punkteliste.setPid(Pid);
+            String PunktelisteNameId = scanner.next();
+            Punkteliste.setPunktelisteNameId(PunktelisteNameId);
             //Select Name der Firma
             int analysemeinungen = scanner.nextInt();
             Punkteliste.setAnalystenmeinungen(analysemeinungen);
@@ -259,8 +259,8 @@ import java.util.Scanner;
             //Erzeugen eines Objektes vom Typen Punkteliste
             Punkteliste Punkteliste=new Punkteliste();
             //Select Primärschlüssel
-            int Pid = scanner.nextInt();
-            Punkteliste.setPid(Pid);
+            String PunktelisteNameId = scanner.next();
+            Punkteliste.setPunktelisteNameId(PunktelisteNameId);
             //Select Name der Firma
             int reaktionaufquartalszahlen = scanner.nextInt();
             Punkteliste.setReaktionaufQuartalszahlen(reaktionaufquartalszahlen);
@@ -291,8 +291,8 @@ import java.util.Scanner;
             //Erzeugen eines Objektes vom Typen Punkteliste
             Punkteliste Punkteliste=new Punkteliste();
             //Select Primärschlüssel
-            int Pid = scanner.nextInt();
-            Punkteliste.setPid(Pid);
+            String PunktelisteNameId = scanner.next();
+            Punkteliste.setPunktelisteNameId(PunktelisteNameId);
             //Select Name der Firma
             int gewinnrevision = scanner.nextInt();
             Punkteliste.setGewinnrevision(gewinnrevision);
@@ -323,8 +323,8 @@ import java.util.Scanner;
             //Erzeugen eines Objektes vom Typen Punkteliste
             Punkteliste Punkteliste=new Punkteliste();
             //Select Primärschlüssel
-            int Pid = scanner.nextInt();
-            Punkteliste.setPid(Pid);
+            String PunktelisteNameId = scanner.next();
+            Punkteliste.setPunktelisteNameId(PunktelisteNameId);
             //Select Name der Firma
             int kursverlauf6monate = scanner.nextInt();
             Punkteliste.setKursverlauf6Monate(kursverlauf6monate);
@@ -355,8 +355,8 @@ import java.util.Scanner;
             //Erzeugen eines Objektes vom Typen Punkteliste
             Punkteliste Punkteliste=new Punkteliste();
             //Select Primärschlüssel
-            int Pid = scanner.nextInt();
-            Punkteliste.setPid(Pid);
+            String PunktelisteNameId = scanner.next();
+            Punkteliste.setPunktelisteNameId(PunktelisteNameId);
             //Select Name der Firma
             int kursverlauf12monate = scanner.nextInt();
             Punkteliste.setKursverlauf12Monate(kursverlauf12monate);
@@ -387,8 +387,8 @@ import java.util.Scanner;
             //Erzeugen eines Objektes vom Typen Punkteliste
             Punkteliste Punkteliste=new Punkteliste();
             //Select Primärschlüssel
-            int Pid = scanner.nextInt();
-            Punkteliste.setPid(Pid);
+            String PunktelisteNameId = scanner.next();
+            Punkteliste.setPunktelisteNameId(PunktelisteNameId);
             //Select Name der Firma
             int kursmomentum = scanner.nextInt();
             Punkteliste.setKursmomentum(kursmomentum);
@@ -419,8 +419,8 @@ import java.util.Scanner;
             //Erzeugen eines Objektes vom Typen Punkteliste
             Punkteliste Punkteliste=new Punkteliste();
             //Select Primärschlüssel
-            int Pid = scanner.nextInt();
-            Punkteliste.setPid(Pid);
+            String PunktelisteNameId = scanner.next();
+            Punkteliste.setPunktelisteNameId(PunktelisteNameId);
             //Select Name der Firma
             int dreimonatsreversal = scanner.nextInt();
             Punkteliste.setDreimonatsreversal(dreimonatsreversal);
@@ -451,8 +451,8 @@ import java.util.Scanner;
             //Erzeugen eines Objektes vom Typen Punkteliste
             Punkteliste Punkteliste=new Punkteliste();
             //Select Primärschlüssel
-            int Pid = scanner.nextInt();
-            Punkteliste.setPid(Pid);
+            String PunktelisteNameId = scanner.next();
+            Punkteliste.setPunktelisteNameId(PunktelisteNameId);
             //Select Name der Firma
             int gewinnwachstum = scanner.nextInt();
             Punkteliste.setGewinnwachstum(gewinnwachstum);

@@ -44,17 +44,17 @@ import java.util.Scanner;
 
         // Eingabeauforderung ID
           //  int id = scanner.nextInt();
-            int Cid = scanner.nextInt();
+            String UnternehmennameId = scanner.next();
 
 
-          //  Unternehmen.setCid(id); 
-          Unternehmen.setCid(Cid);
+          //  Unternehmen.setUnternehmennameId(id); 
+          Unternehmen.setUnternehmennameId(UnternehmennameId);
             
      // Verbingungsaufbau
         session.beginTransaction();
         session.delete(Unternehmen);
         session.getTransaction().commit();
-        System.out.println(" ID = " + Unternehmen.getCid() +" Name = " + Unternehmen.getName()+ " wurde gelöscht");
+        System.out.println(" ID = " + Unternehmen.getUnternehmennameId() +" Name = " + Unternehmen.getUnternehmenname() + " wurde gelöscht");
      
     } catch (HibernateException e) {
         System.out.println("Hibernate Exception" + e.getMessage());

@@ -77,9 +77,9 @@ public class Analystenmeinungen {
                             System.out.println("Richtig :D" + lvsch.getUnternehmenname_Levermannschritte() +" = " + un.getUnternehmenname()+ "i = " + i);
                             lvsch.setGewinnrevision(1); }
 
-                    lvsch.setu(lvsch.getLid());
+                    lvsch.setLevermannschrittAnalyseNameId(lvsch.getLevermannschrittAnalyseNameId());
                      // System.out.println("Unternehmen: " + un.getUnternehmenname()+ " Levermannschritt: " + lvsch.getUnternehmenname_Levermannschritte()() );
-                     // System.out.println("Fall 1 : yea LID:  "+lvsch.getLid() +" AM: "+ lvsch.getGewinnrevision());
+                     // System.out.println("Fall 1 : yea LevermannschrittAnalyseNameId:  "+lvsch.getLevermannschrittAnalyseNameId() +" AM: "+ lvsch.getGewinnrevision());
                         }}
 
               // FAll 1, Gewinnschätzung aktuell ist um mind. -0.05 niedriger als vor 4 Wochen
@@ -93,10 +93,10 @@ public class Analystenmeinungen {
                         if (lvsch1.getUnternehmenname_Levermannschritte() == un.getUnternehmenname() == true && i <= - 0.05 == true ){ System.out.println("Richtig :D" + lvsch1.getUnternehmenname_Levermannschritte() +" = " + un.getUnternehmenname() + "i = " + i);
                             lvsch1.setGewinnrevision(-1); }
 
-                    lvsch1.setLid(lvsch1.getLid());
+                    lvsch1.setLevermannschrittAnalyseNameId(lvsch1.getLevermannschrittAnalyseNameId());
 
                   //  System.out.println("Unternehmen: " + un.getUnternehmenname() + " Levermannschritt: " + lvsch1.getUnternehmenname_Levermannschritte()());
-                  //  System.out.println("Fall 2 : yea LID:  " + lvsch1.getLid() + " AM: " + lvsch1.getGewinnrevision());
+                  //  System.out.println("Fall 2 : yea LevermannschrittAnalyseNameId:  " + lvsch1.getLevermannschrittAnalyseNameId() + " AM: " + lvsch1.getGewinnrevision());
                       }}
 
                 if (i >= 0.05 == false && i <= - 0.05 == false ) {
@@ -110,8 +110,8 @@ public class Analystenmeinungen {
                             System.out.println("Richtig :D" + lvsch1.getUnternehmenname_Levermannschritte() + " = " + un.getUnternehmenname() + "i = " + i);
                             lvsch1.setGewinnrevision(0);}
 
-                        lvsch1.setLid(lvsch1.getLid());
-                        //  System.out.println("Fall 3 : yea LID:  " + lvsch1.getLid() + " AM: " + lvsch1.getGewinnrevision());
+                        lvsch1.setLevermannschrittAnalyseNameId(lvsch1.getLevermannschrittAnalyseNameId());
+                        //  System.out.println("Fall 3 : yea LevermannschrittAnalyseNameId:  " + lvsch1.getLevermannschrittAnalyseNameId() + " AM: " + lvsch1.getGewinnrevision());
                     }
                          //    System.out.println("Liste der Levermannschritte = " + un.getUnternehmenname() + ","
                         //       + un.getUnternehmenname() + " Kursgewinn aktuell: " + un.getGewinnschaezung() + " Kursgewinn Verhältniss: " + un.getGewinnschaezungVor4Wochen() + " summe:" + i);

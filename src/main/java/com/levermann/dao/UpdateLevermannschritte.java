@@ -35,11 +35,11 @@ abstract public class UpdateLevermannschritte implements DaoLevermannschritte {
             //Erzeugen eines Objektes vom Typen Levermannschritte
             Levermannschritte Levermannschritte=new Levermannschritte();
             //Select Primärschlüssel
-            int lid = scanner.nextInt();
-            Levermannschritte.setLid(lid);
+            String LevermannschrittAnalyseNameId = scanner.next();
+            Levermannschritte.setLevermannschrittAnalyseNameId(LevermannschrittAnalyseNameId);
             //Select Name der Firma
             String name = scanner.next();
-            Levermannschritte.setName2(name);
+            Levermannschritte.setUnternehmenname_Levermannschritte(name);
 
             //Beginn der Datenübertragung
             session.beginTransaction();
@@ -67,8 +67,8 @@ abstract public class UpdateLevermannschritte implements DaoLevermannschritte {
             //Erzeugen eines Objektes vom Typen Levermannschritte
             Levermannschritte Levermannschritte=new Levermannschritte();
             //Select Primärschlüssel
-            int Lid = scanner.nextInt();
-            Levermannschritte.setLid(Lid);
+            String LevermannschrittAnalyseNameId = scanner.next();
+            Levermannschritte.setLevermannschrittAnalyseNameId(LevermannschrittAnalyseNameId);
             //Select Name der Firma
             int eigenkapitalquote = scanner.nextInt();
             Levermannschritte.setEigenkapitalquote(eigenkapitalquote);
@@ -99,8 +99,8 @@ abstract public class UpdateLevermannschritte implements DaoLevermannschritte {
             //Erzeugen eines Objektes vom Typen Levermannschritte
             Levermannschritte Levermannschritte=new Levermannschritte();
             //Select Primärschlüssel
-            int Lid = scanner.nextInt();
-            Levermannschritte.setLid(Lid);
+            String LevermannschrittAnalyseNameId = scanner.next();
+            Levermannschritte.setLevermannschrittAnalyseNameId(LevermannschrittAnalyseNameId);
             //Select Name der Firma
             int ebitmarge = scanner.nextInt();
             Levermannschritte.setEBITMarge(ebitmarge);
@@ -131,8 +131,8 @@ abstract public class UpdateLevermannschritte implements DaoLevermannschritte {
             //Erzeugen eines Objektes vom Typen Levermannschritte
             Levermannschritte Levermannschritte=new Levermannschritte();
             //Select Primärschlüssel
-            int Lid = scanner.nextInt();
-            Levermannschritte.setLid(Lid);
+            String LevermannschrittAnalyseNameId = scanner.next();
+            Levermannschritte.setLevermannschrittAnalyseNameId(LevermannschrittAnalyseNameId);
             //Select Name der Firma
             int eigenkaitalquote = scanner.nextInt();
             Levermannschritte.setEigenkapitalquote(eigenkaitalquote);
@@ -163,11 +163,11 @@ abstract public class UpdateLevermannschritte implements DaoLevermannschritte {
             //Erzeugen eines Objektes vom Typen Levermannschritte
             Levermannschritte Levermannschritte=new Levermannschritte();
             //Select Primärschlüssel
-            int Lid = scanner.nextInt();
-            Levermannschritte.setLid(Lid);
+            String LevermannschrittAnalyseNameId = scanner.next();
+            Levermannschritte.setLevermannschrittAnalyseNameId(LevermannschrittAnalyseNameId);
             //Select Name der Firma
             int kursgewinnverhaeltnis = scanner.nextInt();
-            Levermannschritte.setKursGewinnVerhältnis(kursgewinnverhaeltnis);
+            Levermannschritte.setKursGewinnVerhaeltnis(kursgewinnverhaeltnis);
 
             //Beginn der Datenübertragung
             session.beginTransaction();
@@ -195,11 +195,11 @@ abstract public class UpdateLevermannschritte implements DaoLevermannschritte {
             //Erzeugen eines Objektes vom Typen Levermannschritte
             Levermannschritte Levermannschritte=new Levermannschritte();
             //Select Primärschlüssel
-            int Lid = scanner.nextInt();
-            Levermannschritte.setLid(Lid);
+            String LevermannschrittAnalyseNameId = scanner.next();
+            Levermannschritte.setLevermannschrittAnalyseNameId(LevermannschrittAnalyseNameId);
             //Select Name der Firma
             int kursgewinnverhaeltnisaktuell = scanner.nextInt();
-            Levermannschritte.setKursGewinnVerhältnisAktuell(kursgewinnverhaeltnisaktuell);
+            Levermannschritte.setKursGewinnVerhaeltnisAktuell(kursgewinnverhaeltnisaktuell);
 
             //Beginn der Datenübertragung
             session.beginTransaction();
@@ -227,8 +227,8 @@ abstract public class UpdateLevermannschritte implements DaoLevermannschritte {
             //Erzeugen eines Objektes vom Typen Levermannschritte
             Levermannschritte Levermannschritte=new Levermannschritte();
             //Select Primärschlüssel
-            int Lid = scanner.nextInt();
-            Levermannschritte.setLid(Lid);
+            String LevermannschrittAnalyseNameId = scanner.next();
+            Levermannschritte.setLevermannschrittAnalyseNameId(LevermannschrittAnalyseNameId);
             //Select Name der Firma
             int analysemeinungen = scanner.nextInt();
             Levermannschritte.setAnalystenmeinungen(analysemeinungen);
@@ -259,8 +259,8 @@ abstract public class UpdateLevermannschritte implements DaoLevermannschritte {
             //Erzeugen eines Objektes vom Typen Levermannschritte
             Levermannschritte Levermannschritte=new Levermannschritte();
             //Select Primärschlüssel
-            int Lid = scanner.nextInt();
-            Levermannschritte.setLid(Lid);
+            String LevermannschrittAnalyseNameId = scanner.next();
+            Levermannschritte.setLevermannschrittAnalyseNameId(LevermannschrittAnalyseNameId);
             //Select Name der Firma
             int reaktionaufquartalszahlen = scanner.nextInt();
             Levermannschritte.setReaktionaufQuartalszahlen(reaktionaufquartalszahlen);
@@ -291,8 +291,8 @@ abstract public class UpdateLevermannschritte implements DaoLevermannschritte {
             //Erzeugen eines Objektes vom Typen Levermannschritte
             Levermannschritte Levermannschritte=new Levermannschritte();
             //Select Primärschlüssel
-            int Lid = scanner.nextInt();
-            Levermannschritte.setLid(Lid);
+            String LevermannschrittAnalyseNameId = scanner.next();
+            Levermannschritte.setLevermannschrittAnalyseNameId(LevermannschrittAnalyseNameId);
             //Select Name der Firma
             int gewinnrevision = scanner.nextInt();
             Levermannschritte.setGewinnrevision(gewinnrevision);
@@ -323,8 +323,8 @@ abstract public class UpdateLevermannschritte implements DaoLevermannschritte {
             //Erzeugen eines Objektes vom Typen Levermannschritte
             Levermannschritte Levermannschritte=new Levermannschritte();
             //Select Primärschlüssel
-            int Lid = scanner.nextInt();
-            Levermannschritte.setLid(Lid);
+            String LevermannschrittAnalyseNameId = scanner.next();
+            Levermannschritte.setLevermannschrittAnalyseNameId(LevermannschrittAnalyseNameId);
             //Select Name der Firma
             int kursverlauf6monate = scanner.nextInt();
             Levermannschritte.setKursverlauf6Monate(kursverlauf6monate);
@@ -355,8 +355,8 @@ abstract public class UpdateLevermannschritte implements DaoLevermannschritte {
             //Erzeugen eines Objektes vom Typen Levermannschritte
             Levermannschritte Levermannschritte=new Levermannschritte();
             //Select Primärschlüssel
-            int Lid = scanner.nextInt();
-            Levermannschritte.setLid(Lid);
+            String LevermannschrittAnalyseNameId = scanner.next();
+            Levermannschritte.setLevermannschrittAnalyseNameId(LevermannschrittAnalyseNameId);
             //Select Name der Firma
             int kursverlauf12monate = scanner.nextInt();
             Levermannschritte.setKursverlauf12Monate(kursverlauf12monate);
@@ -387,8 +387,8 @@ abstract public class UpdateLevermannschritte implements DaoLevermannschritte {
             //Erzeugen eines Objektes vom Typen Levermannschritte
             Levermannschritte Levermannschritte=new Levermannschritte();
             //Select Primärschlüssel
-            int Lid = scanner.nextInt();
-            Levermannschritte.setLid(Lid);
+            String LevermannschrittAnalyseNameId = scanner.next();
+            Levermannschritte.setLevermannschrittAnalyseNameId(LevermannschrittAnalyseNameId);
             //Select Name der Firma
             int kursmomentum = scanner.nextInt();
             Levermannschritte.setKursmomentum(kursmomentum);
@@ -419,8 +419,8 @@ abstract public class UpdateLevermannschritte implements DaoLevermannschritte {
             //Erzeugen eines Objektes vom Typen Levermannschritte
             Levermannschritte Levermannschritte=new Levermannschritte();
             //Select Primärschlüssel
-            int Lid = scanner.nextInt();
-            Levermannschritte.setLid(Lid);
+            String LevermannschrittAnalyseNameId = scanner.next();
+            Levermannschritte.setLevermannschrittAnalyseNameId(LevermannschrittAnalyseNameId);
             //Select Name der Firma
             int dreimonatsreversal = scanner.nextInt();
             Levermannschritte.setDreimonatsreversal(dreimonatsreversal);
@@ -451,8 +451,8 @@ abstract public class UpdateLevermannschritte implements DaoLevermannschritte {
             //Erzeugen eines Objektes vom Typen Levermannschritte
             Levermannschritte Levermannschritte=new Levermannschritte();
             //Select Primärschlüssel
-            int Lid = scanner.nextInt();
-            Levermannschritte.setLid(Lid);
+            String LevermannschrittAnalyseNameId = scanner.next();
+            Levermannschritte.setLevermannschrittAnalyseNameId(LevermannschrittAnalyseNameId);
             //Select Name der Firma
             int gewinnwachstum = scanner.nextInt();
             Levermannschritte.setGewinnwachstum(gewinnwachstum);

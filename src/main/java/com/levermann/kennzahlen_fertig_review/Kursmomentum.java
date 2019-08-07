@@ -61,27 +61,27 @@ public class Kursmomentum {
 
                     un.setKursmomentum(1);
 
-                    System.out.println("Fall 1 : yea LID:  "+un.getLid() +" AM: "+ un.getKursmomentum());
+                    System.out.println("Fall 1 : yea LevermannschrittAnalyseNameId :  "+un.getLevermannschrittAnalyseNameId () +" AM: "+ un.getKursmomentum());
                 }
 
 
                 if (un.getKursverlauf6Monate() == -1 == true && un.getKursverlauf12Monate() ==-1 == false ) {
 
-                    {    // un.setLid(un.getLid());
+                    {    // un.setLevermannschrittAnalyseNameId (un.getLevermannschrittAnalyseNameId ());
                         un.setKursmomentum(-1);
 
                         //   un.setAnalystenmeinungen(111);
-                        System.out.println("Fall 2 : yea LID:  " + un.getLid() + " AM: " + un.getKursmomentum());
+                        System.out.println("Fall 2 : yea LevermannschrittAnalyseNameId :  " + un.getLevermannschrittAnalyseNameId () + " AM: " + un.getKursmomentum());
                     }
                 }
 
                     if (un.getKursverlauf6Monate() == 0 == true ){
 
-                    // un.setLid(un.getLid());
+                    // un.setLevermannschrittAnalyseNameId (un.getLevermannschrittAnalyseNameId ());
                     un.setKursmomentum(0);
 
                     //   un.setAnalystenmeinungen(111);
-                    System.out.println("Fall 3 : yea LID:  "+un.getLid() +" AM: "+ un.getKursmomentum());
+                    System.out.println("Fall 3 : yea LevermannschrittAnalyseNameId :  "+un.getLevermannschrittAnalyseNameId () +" AM: "+ un.getKursmomentum());
 
                 }
 
@@ -89,14 +89,14 @@ public class Kursmomentum {
 
                 un.setKursmomentum(0);
 
-                System.out.println("Fall 1 : yea LID:  "+un.getLid() +" AM: "+ un.getKursmomentum());
+                System.out.println("Fall 1 : yea LevermannschrittAnalyseNameId :  "+un.getLevermannschrittAnalyseNameId () +" AM: "+ un.getKursmomentum());
             }
 
                 if (un.getKursverlauf6Monate() == -1 == true && un.getKursverlauf12Monate() ==-1 == true ){
 
                     un.setKursmomentum(0);
 
-                    System.out.println("Fall 1 : yea LID:  "+un.getLid() +" AM: "+ un.getKursmomentum());
+                    System.out.println("Fall 1 : yea LevermannschrittAnalyseNameId :  "+un.getLevermannschrittAnalyseNameId () +" AM: "+ un.getKursmomentum());
                 }
             }
 

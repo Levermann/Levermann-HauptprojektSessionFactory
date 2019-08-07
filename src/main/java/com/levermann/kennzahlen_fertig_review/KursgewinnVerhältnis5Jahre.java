@@ -55,7 +55,7 @@ public class KursgewinnVerhältnis5Jahre {
 
                 // Aufrunden
                i = Math.round(i);
-               
+
                //definiere beide bewertungskriterien
                 int retval1, retval2, retval3;
                 float upperLimit = (float)16.0;
@@ -66,7 +66,7 @@ public class KursgewinnVerhältnis5Jahre {
                 retval3 = Float.compare(i, lowerLimit);
 
                 float retval = Float.compare(i, upperLimit);
-               
+
                // FAll 1, Kursgewinnverhältnis liegt zwischen 0 und 12
                  if (retval3 < 0 && retval2 > 0){
 
@@ -75,13 +75,13 @@ public class KursgewinnVerhältnis5Jahre {
                      List<Levermannschritte> unList1 = (List<Levermannschritte>) query1.list();
                      for (Levermannschritte lvsch : unList1) {
 
-                         if (lvsch.getName2() == un.getName() == true){
-                             System.out.println("Richtig :D" + lvsch.getName2() +" = " + un.getName()+ "i = " + i);
+                         if (lvsch.getUnternehmenname_Levermannschritte() == un.getUnternehmenname()  == true){
+                             System.out.println("Richtig :D" + lvsch.getUnternehmenname_Levermannschritte() +" = " + un.getUnternehmenname() + "i = " + i);
                              lvsch.setEigenkapitalrendite(1); }
 
-                     lvsch.setLid(lvsch.getLid());
-                      // System.out.println("Unternehmen: " + un.getName()+ " Levermannschritt: " + lvsch.getName2()() );
-                      // System.out.println("Fall 1 : yea LID:  "+lvsch.getLid() +" AM: "+ lvsch.getGewinnrevision());
+                     lvsch.setLevermannschrittAnalyseNameId(lvsch.getLevermannschrittAnalyseNameId());
+                      // System.out.println("Unternehmen: " + un.getUnternehmenname() + " Levermannschritt: " + lvsch.getUnternehmenname_Levermannschritte()() );
+                      // System.out.println("Fall 1 : yea LevermannschrittAnalyseNameId:  "+lvsch.getLevermannschrittAnalyseNameId() +" AM: "+ lvsch.getGewinnrevision());
                          }
                  //Eigenkapitalquote ist kleiner als 25/10%
                  }
@@ -94,14 +94,14 @@ public class KursgewinnVerhältnis5Jahre {
                      List<Levermannschritte> unList1 = (List<Levermannschritte>) query1.list();
                      for (Levermannschritte lvsch1 : unList1) {
 
-                         if (lvsch1.getName2() == un.getName() == true && retval >= 0 ){
-                             System.out.println("Richtig :D" + lvsch1.getName2() +" = " + un.getName() + "i = " + i);
+                         if (lvsch1.getUnternehmenname_Levermannschritte() == un.getUnternehmenname()  == true && retval >= 0 ){
+                             System.out.println("Richtig :D" + lvsch1.getUnternehmenname_Levermannschritte() +" = " + un.getUnternehmenname()  + "i = " + i);
                              lvsch1.setEigenkapitalrendite(-1); }
 
-                     lvsch1.setLid(lvsch1.getLid());
+                     lvsch1.setLevermannschrittAnalyseNameId(lvsch1.getLevermannschrittAnalyseNameId());
 
-                   //  System.out.println("Unternehmen: " + un.getName() + " Levermannschritt: " + lvsch1.getName2()());
-                   //  System.out.println("Fall 2 : yea LID:  " + lvsch1.getLid() + " AM: " + lvsch1.getGewinnrevision());
+                   //  System.out.println("Unternehmen: " + un.getUnternehmenname()  + " Levermannschritt: " + lvsch1.getUnternehmenname_Levermannschritte()());
+                   //  System.out.println("Fall 2 : yea LevermannschrittAnalyseNameId:  " + lvsch1.getLevermannschrittAnalyseNameId() + " AM: " + lvsch1.getGewinnrevision());
                        }
                      //Fall 3, Kursgewinnverhältnis liegt zwischen 12 und 16
                  }else{
@@ -111,15 +111,15 @@ public class KursgewinnVerhältnis5Jahre {
                      List<Levermannschritte> unList1 = (List<Levermannschritte>) query1.list();
                      for (Levermannschritte lvsch1 : unList1) {
 
-                         if (lvsch1.getName2() == un.getName() == true) {
-                             System.out.println("Richtig :D" + lvsch1.getName2() + " = " + un.getName() + "i = " + i);
+                         if (lvsch1.getUnternehmenname_Levermannschritte() == un.getUnternehmenname()  == true) {
+                             System.out.println("Richtig :D" + lvsch1.getUnternehmenname_Levermannschritte() + " = " + un.getUnternehmenname()  + "i = " + i);
                              lvsch1.setEigenkapitalrendite(0);}
 
-                         lvsch1.setLid(lvsch1.getLid());
-                         //  System.out.println("Fall 3 : yea LID:  " + lvsch1.getLid() + " AM: " + lvsch1.getGewinnrevision());
+                         lvsch1.setLevermannschrittAnalyseNameId(lvsch1.getLevermannschrittAnalyseNameId());
+                         //  System.out.println("Fall 3 : yea LevermannschrittAnalyseNameId:  " + lvsch1.getLevermannschrittAnalyseNameId() + " AM: " + lvsch1.getGewinnrevision());
                      }
-                          //    System.out.println("Liste der Levermannschritte = " + un.getName() + ","
-                         //       + un.getName() + " Kursgewinn aktuell: " + un.getGewinnschaezung() + " Kursgewinn Verhältniss: " + un.getGewinnschaezungVor4Wochen() + " summe:" + i);
+                          //    System.out.println("Liste der Levermannschritte = " + un.getUnternehmenname()  + ","
+                         //       + un.getUnternehmenname()  + " Kursgewinn aktuell: " + un.getGewinnschaezung() + " Kursgewinn Verhältniss: " + un.getGewinnschaezungVor4Wochen() + " summe:" + i);
                  }
                  
            }

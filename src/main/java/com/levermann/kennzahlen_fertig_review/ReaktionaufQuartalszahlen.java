@@ -72,14 +72,14 @@ public class ReaktionaufQuartalszahlen {
                     List<Levermannschritte> unList1 = (List<Levermannschritte>) query1.list();
                     for (Levermannschritte lvsch : unList1) {
 
-                        if (lvsch.getName2() == un.getName() == true && i >= 0.05 == true) {
-                            System.out.println("Richtig :D" + lvsch.getName2() + " = " + un.getName() + "i = " + i);
+                        if (lvsch.getUnternehmenname_Levermannschritte() == un.getUnternehmenname()  == true && i >= 0.05 == true) {
+                            System.out.println("Richtig :D" + lvsch.getUnternehmenname_Levermannschritte() + " = " + un.getUnternehmenname()  + "i = " + i);
                             lvsch.setReaktionaufQuartalszahlen(1);
                         }
 
-                        lvsch.setLid(lvsch.getLid());
-                         System.out.println("Unternehmen: " + un.getName()+ " Levermannschritt: " + lvsch.getName2()  + "   " + i);
-                        // System.out.println("Fall 1 : yea LID:  "+lvsch.getLid() +" AM: "+ lvsch.getGewinnrevision());
+                        lvsch.setLevermannschrittAnalyseNameId (lvsch.getLevermannschrittAnalyseNameId ());
+                         System.out.println("Unternehmen: " + un.getUnternehmenname() + " Levermannschritt: " + lvsch.getUnternehmenname_Levermannschritte()  + "   " + i);
+                        // System.out.println("Fall 1 : yea LevermannschrittAnalyseNameId :  "+lvsch.getLevermannschrittAnalyseNameId () +" AM: "+ lvsch.getGewinnrevision());
                     }
                 }
 
@@ -91,15 +91,15 @@ public class ReaktionaufQuartalszahlen {
                     List<Levermannschritte> unList1 = (List<Levermannschritte>) query1.list();
                     for (Levermannschritte lvsch1 : unList1) {
 
-                        if (lvsch1.getName2() == un.getName() == true && i <= -0.05 == true) {
-                            System.out.println("Richtig :D" + lvsch1.getName2() + " = " + un.getName() + "i = " + i);
+                        if (lvsch1.getUnternehmenname_Levermannschritte() == un.getUnternehmenname()  == true && i <= -0.05 == true) {
+                            System.out.println("Richtig :D" + lvsch1.getUnternehmenname_Levermannschritte() + " = " + un.getUnternehmenname()  + "i = " + i);
                             lvsch1.setReaktionaufQuartalszahlen(-1);
                         }
 
-                        lvsch1.setLid(lvsch1.getLid());
+                        lvsch1.setLevermannschrittAnalyseNameId (lvsch1.getLevermannschrittAnalyseNameId ());
 
-                        //  System.out.println("Unternehmen: " + un.getName() + " Levermannschritt: " + lvsch1.getName2()());
-                        //  System.out.println("Fall 2 : yea LID:  " + lvsch1.getLid() + " AM: " + lvsch1.getGewinnrevision());
+                        //  System.out.println("Unternehmen: " + un.getUnternehmenname()  + " Levermannschritt: " + lvsch1.getUnternehmenname_Levermannschritte()());
+                        //  System.out.println("Fall 2 : yea LevermannschrittAnalyseNameId :  " + lvsch1.getLevermannschrittAnalyseNameId () + " AM: " + lvsch1.getGewinnrevision());
                     }
                 }
 
@@ -110,16 +110,16 @@ public class ReaktionaufQuartalszahlen {
                     List<Levermannschritte> unList1 = (List<Levermannschritte>) query1.list();
                     for (Levermannschritte lvsch1 : unList1) {
 
-                        if (lvsch1.getName2() == un.getName() == true && i > 0.005 == false && i < -0.05 == false) {
-                            System.out.println("Richtig :D" + lvsch1.getName2() + " = " + un.getName() + "i = " + i);
+                        if (lvsch1.getUnternehmenname_Levermannschritte() == un.getUnternehmenname()  == true && i > 0.005 == false && i < -0.05 == false) {
+                            System.out.println("Richtig :D" + lvsch1.getUnternehmenname_Levermannschritte() + " = " + un.getUnternehmenname()  + "i = " + i);
                             lvsch1.setReaktionaufQuartalszahlen(0);
                         }
 
-                        lvsch1.setLid(lvsch1.getLid());
-                        //  System.out.println("Fall 3 : yea LID:  " + lvsch1.getLid() + " AM: " + lvsch1.getGewinnrevision());
+                        lvsch1.setLevermannschrittAnalyseNameId (lvsch1.getLevermannschrittAnalyseNameId ());
+                        //  System.out.println("Fall 3 : yea LevermannschrittAnalyseNameId :  " + lvsch1.getLevermannschrittAnalyseNameId () + " AM: " + lvsch1.getGewinnrevision());
                     }
-                    //    System.out.println("Liste der Levermannschritte = " + un.getName() + ","
-                    //       + un.getName() + " Kursgewinn aktuell: " + un.getGewinnschaezung() + " Kursgewinn Verhältniss: " + un.getKursverlauf6Monate() + " summe:" + i);
+                    //    System.out.println("Liste der Levermannschritte = " + un.getUnternehmenname()  + ","
+                    //       + un.getUnternehmenname()  + " Kursgewinn aktuell: " + un.getGewinnschaezung() + " Kursgewinn Verhältniss: " + un.getKursverlauf6Monate() + " summe:" + i);
                 }
             }
 
