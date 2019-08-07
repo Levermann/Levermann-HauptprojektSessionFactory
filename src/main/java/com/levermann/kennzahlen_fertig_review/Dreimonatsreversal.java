@@ -110,8 +110,8 @@ public class Dreimonatsreversal {
                     List<Levermannschritte> unList1 = (List<Levermannschritte>) query1.list();
                     for (Levermannschritte lvsch1 : unList1) {
 
-                        if (lvsch1.getName2() == un.getName() == true && i > 0.005 == false && i < -0.05 == false) {
-                            System.out.println("Richtig :D" + lvsch1.getName2() + " = " + un.getName() + "i = " + i);
+                        if (lvsch1.getUnternehmenname_Levermannschritte() == un.getName() == true && i > 0.005 == false && i < -0.05 == false) {
+                            System.out.println("Richtig :D" + lvsch1.getUnternehmenname_Levermannschritte() + " = " + un.getName() + "i = " + i);
                             lvsch1.setDreimonatsreversal(0);
                         }
 

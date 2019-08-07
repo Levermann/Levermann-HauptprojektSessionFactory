@@ -2,7 +2,7 @@
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
- */
+
 package com.levermann.TestFiles;
 
 
@@ -16,9 +16,9 @@ import org.hibernate.cfg.Configuration;
 import java.util.List;
 import java.util.Scanner;
 
-public class SelectOld {
+public class Select {
 
-    final static Logger logger = Logger.getLogger(SelectOld.class);
+    final static Logger logger = Logger.getLogger(Select.class);
 
     public void SelectUnternehmen () {
 
@@ -201,3 +201,4 @@ public class SelectOld {
     }                
                   
 
+*/

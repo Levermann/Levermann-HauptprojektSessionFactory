@@ -11,57 +11,62 @@ import javax.persistence.OneToOne;
 //@Table(name="unternehmen")
 @NamedQueries({
         @NamedQuery(name = "Punkteliste.findall", query = "SELECT A FROM Punkteliste A"),
-        @NamedQuery(name = "Punkteliste.findById", query = "SELECT c FROM Punkteliste c WHERE c.Pid =:Pid")
+        @NamedQuery(name = "Punkteliste.findById", query = "SELECT c FROM Punkteliste c WHERE c.id =:id")
 
 })
 @Table(name="punkteliste")
  public class Punkteliste implements Serializable {
 
-    @GeneratedValue(strategy=GenerationType.IDENTITY)
+
+
     @Id
-    @Column(name="Pid")
-    private Integer Pid;
+    @Column(name = "PunktelisteNameId")
+    private Integer PunktelisteNameId;
 
-    @Column(name="Name2")
-    private String Name2;
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "id")
+    private Integer id;
 
-    @Column(name="Eigenkapitalrendite")
+    @Column(name = "Unternehmenname_Punkteliste")
+    private String Unternehmenname_Punkteliste;
+
+    @Column(name = "Eigenkapitalrendite")
     private Integer Eigenkapitalrendite;
 
-    @Column(name="EBITMarge")
+    @Column(name = "EBITMarge")
     private Integer EBITMarge;
 
-    @Column(name="Eigenkapitalquote")
+    @Column(name = "Eigenkapitalquote")
     private Integer Eigenkapitalquote;
 
-    @Column(name="KursGewinnVerhaeltnis")
+    @Column(name = "KursGewinnVerhaeltnis")
     private Integer KursGewinnVerhaeltnis;
 
-    @Column(name="KursGewinnVerhaeltnisAktuell")
+    @Column(name = "KursGewinnVerhaeltnisAktuell")
     private Integer KursGewinnVerhaeltnisAktuell;
 
-    @Column(name="Analystenmeinungen")
+    @Column(name = "Analystenmeinungen")
     private Integer Analystenmeinungen;
 
-    @Column(name="ReaktionaufQuartalszahlen")
+    @Column(name = "ReaktionaufQuartalszahlen")
     private Integer ReaktionaufQuartalszahlen;
 
-    @Column(name="Gewinnrevision")
+    @Column(name = "Gewinnrevision")
     private Integer Gewinnrevision;
 
-    @Column(name="Kursverlauf6Monate")
+    @Column(name = "Kursverlauf6Monate")
     private Integer Kursverlauf6Monate;
 
-    @Column(name="Kursverlauf12Monate")
+    @Column(name = "Kursverlauf12Monate")
     private Integer Kursverlauf12Monate;
 
-    @Column(name="Kursmomentum")
+    @Column(name = "Kursmomentum")
     private Integer Kursmomentum;
 
-    @Column(name="Dreimonatsreversal")
+    @Column(name = "Dreimonatsreversal")
     private Integer Dreimonatsreversal;
 
-    @Column(name="Gewinnwachstum")
+    @Column(name = "Gewinnwachstum")
     private Integer Gewinnwachstum;
 
 
@@ -72,39 +77,20 @@ import javax.persistence.OneToOne;
     @ManyToOne(optional = false)
     private Unternehmen Punkteliste;
 
-    public Unternehmen getPunkteliste() {
-        return Punkteliste;
+    public Integer getPunktelisteNameId() {
+        return PunktelisteNameId;
     }
 
-    public void setPunkteliste(Unternehmen punkteliste) {
-        Punkteliste = punkteliste;
+    public void setPunktelisteName(Integer punktelisteName) {
+        PunktelisteNameId = PunktelisteNameId;
     }
 
-    @ManyToOne(optional = false)
-    private Unternehmen Punkteliste1;
-
-    public Unternehmen getPunkteliste1() {
-        return Punkteliste1;
+    public String getUnternehmenname_Punkteliste() {
+        return Unternehmenname_Punkteliste;
     }
 
-    public void setPunkteliste1(Unternehmen punkteliste1) {
-        Punkteliste1 = punkteliste1;
-    }
-
-    public Integer getPid() {
-        return Pid;
-    }
-
-    public void setPid(Integer pid) {
-        Pid = pid;
-    }
-
-    public String getName2() {
-        return Name2;
-    }
-
-    public void setName2(String Name2) {
-        Name2 = Name2;
+    public void setUnternehmenname_Punkteliste(String unternehmenname_Punkteliste) {
+        Unternehmenname_Punkteliste = unternehmenname_Punkteliste;
     }
 
     public Integer getEigenkapitalrendite() {
@@ -210,4 +196,25 @@ import javax.persistence.OneToOne;
     public void setGewinnwachstum(Integer gewinnwachstum) {
         Gewinnwachstum = gewinnwachstum;
     }
+
+    public Unternehmen getPunkteliste() {
+        return Punkteliste;
+    }
+
+    public void setPunkteliste(Unternehmen punkteliste) {
+        Punkteliste = punkteliste;
+    }
+
+    public void setPunktelisteNameId(Integer punktelisteNameId) {
+        PunktelisteNameId = punktelisteNameId;
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
 }

@@ -1,6 +1,7 @@
 create schema levermann;
 create table unternehmen(
-                             name varchar (11) primary key not null  unique,
+                            UnternehmennameId varchar (11) not null ,
+                             id float (100)  not null,
                              datum float(11),
                              eigenkapital float(11),
                              jahresueberschuss float(11),
@@ -33,14 +34,16 @@ create table unternehmen(
                              KursgewinnVor2Jahren float (11),
                              KursgewinnVor1Jahr float (11),
                              AktuellenErwartetenKursgewinn float (11),
-                             KursgewinnschaezungNaechstesJahr float (11)
+                             KursgewinnschaezungNaechstesJahr float (11),
+                              PRIMARY KEY (UnternehmennameId)
 
 );
 
-create table Punkteliste(
+create table punkteliste(
 
-                             PunktelisteName	varchar(20) not null unique,
-                             Name2 varchar (20) not null ,
+                            PunktelisteNameId	varchar(20) not null unique,
+                            id float (100)  not null,
+                            Unternehmenname_Punkteliste varchar (20) not null ,
                              Eigenkapitalrendite float(11),
                              EBITMarge float(11),
                              Eigenkapitalquote float(11),
@@ -54,14 +57,15 @@ create table Punkteliste(
                              Kursmomentum float(11),
                              Dreimonatsreversal float(11),
                              Gewinnwachstum float(11),
-                             PRIMARY KEY (PunktelisteName)
+                             PRIMARY KEY (PunktelisteNameId)
 
 );
 
-create table levermanschritte(
+create table levermannschritte(
 
-                                  LevermannschrittName	varchar(20) not null unique,
-                                  Name2 varchar (20) not null ,
+                                 LevermannschrittAnalyseNameId	varchar(20) not null unique,
+                                 id float (100)  not null,
+                                 Unternehmenname_Levermannschritte varchar (20) not null ,
                                   Eigenkapitalrendite float(11),
                                   EBITMarge float(11),
                                   Eigenkapitalquote float(11),
@@ -75,7 +79,7 @@ create table levermanschritte(
                                   Kursmomentum float(11),
                                   Dreimonatsreversal float(11),
                                   Gewinnwachstum float(11),
-                                  PRIMARY KEY (LevermannschrittName)
+                                  PRIMARY KEY (LevermannschrittAnalyseNameId)
 
 );
 

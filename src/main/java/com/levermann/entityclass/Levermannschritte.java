@@ -12,21 +12,78 @@ import java.io.Serializable;
 @Access(AccessType.FIELD)
 @NamedQueries({
         @NamedQuery(name = "Levermannschritte.findAll", query = "SELECT B FROM Levermannschritte B"),
-        @NamedQuery(name = "Levermannschritte.findByName", query = "SELECT D  FROM Levermannschritte D WHERE D.Name2 =:Name2")
+        @NamedQuery(name = "Levermannschritte.findByName", query = "SELECT D  FROM Levermannschritte D WHERE D.id =:id")
 
 })
-@Table(name= "levermannschritteold")
+@Table(name= "levermannschritte")
  public class Levermannschritte  implements Serializable {
-    public String getLevermannschrittName() {
-        return LevermannschrittName;
+
+
+    @Id
+    @Column(name = "LevermannschrittAnalyseNameId")
+    private String LevermannschrittAnalyseNameId;
+
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "id")
+    private Integer id;
+
+    @Column(name = "Unternehmenname_Levermannschritte", unique = true, nullable = true)
+    private String Unternehmenname_Levermannschritte;
+
+    @Column(name = "Eigenkapitalrendite", unique = true, nullable = true)
+    private Integer Eigenkapitalrendite;
+
+    @Column(name = "EBITMarge", unique = true, nullable = true)
+    private Integer EBITMarge;
+
+    @Column(name = "Eigenkapitalquote", unique = true, nullable = true)
+    private Integer Eigenkapitalquote;
+
+    @Column(name = "KursGewinnVerhaeltnis", unique = true, nullable = true)
+    private Integer KursGewinnVerhaeltnis;
+
+    @Column(name = "KursGewinnVerhaeltnisAktuell", unique = true, nullable = true)
+    private Integer KursGewinnVerhaeltnisAktuell;
+
+    @Column(name = "Analystenmeinungen", unique = true, nullable = true)
+    private Integer Analystenmeinungen;
+
+    @Column(name = "ReaktionaufQuartalszahlen", unique = true, nullable = true)
+    private Integer ReaktionaufQuartalszahlen;
+
+    @Column(name = "Gewinnrevision", unique = true, nullable = true)
+    private Integer Gewinnrevision;
+
+    @Column(name = "Kursverlauf6Monate", unique = true, nullable = true)
+    private Integer Kursverlauf6Monate;
+
+    @Column(name = "Kursverlauf12Monate", unique = true, nullable = true)
+    private Integer Kursverlauf12Monate;
+
+    @Column(name = "Kursmomentum", unique = true, nullable = true)
+    private Integer Kursmomentum;
+
+    @Column(name = "Dreimonatsreversal", unique = true, nullable = true)
+    private Integer Dreimonatsreversal;
+
+    @Column(name = "Gewinnwachstum", unique = true, nullable = true)
+    private Integer Gewinnwachstum;
+
+
+    public String getLevermannschrittAnalyseNameId() {
+        return LevermannschrittAnalyseNameId;
     }
 
-    public void setLevermannschrittName(String LevermannschrittName) {
-        LevermannschrittName = LevermannschrittName;
+    public void setLevermannschrittAnalyseNameId(String LevermannschrittAnalyseNameId) {
+        LevermannschrittAnalyseNameId = LevermannschrittAnalyseNameId;
     }
 
-    public String getName2() {
-        return Name2;
+    public String getUnternehmenname_Levermannschritte() {
+        return Unternehmenname_Levermannschritte;
+    }
+
+    public void setUnternehmenname_Levermannschritte(String unternehmenname_Levermannschritte) {
+        Unternehmenname_Levermannschritte = unternehmenname_Levermannschritte;
     }
 
     public Integer getEigenkapitalrendite() {
@@ -53,20 +110,20 @@ import java.io.Serializable;
         Eigenkapitalquote = eigenkapitalquote;
     }
 
-    public Integer getKursGewinnVerhältnis() {
-        return KursGewinnVerhältnis;
+    public Integer getKursGewinnVerhaeltnis() {
+        return KursGewinnVerhaeltnis;
     }
 
-    public void setKursGewinnVerhältnis(Integer kursGewinnVerhältnis) {
-        KursGewinnVerhältnis = kursGewinnVerhältnis;
+    public void setKursGewinnVerhaeltnis(Integer kursGewinnVerhaeltnis) {
+        KursGewinnVerhaeltnis = kursGewinnVerhaeltnis;
     }
 
-    public Integer getKursGewinnVerhältnisAktuell() {
-        return KursGewinnVerhältnisAktuell;
+    public Integer getKursGewinnVerhaeltnisAktuell() {
+        return KursGewinnVerhaeltnisAktuell;
     }
 
-    public void setKursGewinnVerhältnisAktuell(Integer kursGewinnVerhältnisAktuell) {
-        KursGewinnVerhältnisAktuell = kursGewinnVerhältnisAktuell;
+    public void setKursGewinnVerhaeltnisAktuell(Integer kursGewinnVerhaeltnisAktuell) {
+        KursGewinnVerhaeltnisAktuell = kursGewinnVerhaeltnisAktuell;
     }
 
     public Integer getAnalystenmeinungen() {
@@ -136,55 +193,11 @@ import java.io.Serializable;
     public Levermannschritte() {
     }
 
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Id
-    @Column(name = "LevermannschrittName")
-    private String LevermannschrittName;
+    public Integer getId() {
+        return id;
+    }
 
-    @Column(name = "Name2", unique = true, nullable = true)
-    private String Name2;
-
-    @Column(name = "Eigenkapitalrendite", unique = true, nullable = true)
-    private Integer Eigenkapitalrendite;
-
-    @Column(name = "EBITMarge", unique = true, nullable = true)
-    private Integer EBITMarge;
-
-    @Column(name = "Eigenkapitalquote", unique = true, nullable = true)
-    private Integer Eigenkapitalquote;
-
-    @Column(name = "KursGewinnVerhältnis", unique = true, nullable = true)
-    private Integer KursGewinnVerhältnis;
-
-    @Column(name = "KursGewinnVerhältnisAktuell", unique = true, nullable = true)
-    private Integer KursGewinnVerhältnisAktuell;
-
-    @Column(name = "Analystenmeinungen", unique = true, nullable = true)
-    private Integer Analystenmeinungen;
-
-    @Column(name = "ReaktionaufQuartalszahlen", unique = true, nullable = true)
-    private Integer ReaktionaufQuartalszahlen;
-
-    @Column(name = "Gewinnrevision", unique = true, nullable = true)
-    private Integer Gewinnrevision;
-
-    @Column(name = "Kursverlauf6Monate", unique = true, nullable = true)
-    private Integer Kursverlauf6Monate;
-
-    @Column(name = "Kursverlauf12Monate", unique = true, nullable = true)
-    private Integer Kursverlauf12Monate;
-
-    @Column(name = "Kursmomentum", unique = true, nullable = true)
-    private Integer Kursmomentum;
-
-    @Column(name = "Dreimonatsreversal", unique = true, nullable = true)
-    private Integer Dreimonatsreversal;
-
-    @Column(name = "Gewinnwachstum", unique = true, nullable = true)
-    private Integer Gewinnwachstum;
-
-
-    public void setName2(String name2) {
-        Name2 = name2;
+    public void setId(Integer id) {
+        this.id = id;
     }
 }

@@ -31,7 +31,7 @@ public class ConnectionMain {
             em.persist(unternehmen);
             em.getTransaction().commit();
 
-            String query = "SELECT A FROM Unternehmen A";
+            String query = "SELECT A FROM unternehmen_old A";
             for (Unternehmen A: em.createQuery(query, Unternehmen.class).getResultList())
                 System.out.println(A.getName());
         }
