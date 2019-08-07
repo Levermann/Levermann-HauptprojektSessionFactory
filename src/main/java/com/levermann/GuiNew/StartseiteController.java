@@ -5,10 +5,13 @@
  */
 package com.levermann.GuiNew;
 
+import com.levermann.dao.*;
+import com.levermann.GuiNew.*;
+import javafx.fxml.*;
+import javafx.scene.control.*;
 import java.net.URL;
 import java.util.ResourceBundle;
-import javafx.fxml.Initializable;
-import javafx.scene.control.Button;
+import javafx.event.ActionEvent;
 
 
 
@@ -18,8 +21,19 @@ import javafx.scene.control.Button;
  *
  * @author blendajazi
  */
-public class StartseiteController implements Initializable {
+public class StartseiteController implements Initializable, ControlledScreenInterface {
 
+    ScreensController myController;
+    
+    @FXML
+    public Button LAerstellen;
+    @FXML
+    public Button LAeinsehen;
+    @FXML
+    public Button LevermannDetails;
+    @FXML
+    public TableColumn Unternehmen;
+    
     /**
      * Initializes the controller class.
      */
@@ -28,14 +42,33 @@ public class StartseiteController implements Initializable {
         // TODO
     }    
   
-    public Button LAerstellen;
+    @Override
+    public void setScreenParent(ScreensController screenParent){
+        myController = screenParent;
+    }
     
+   
     
     public void handleButtonClick(){
         
-        
+     
     }
     
+//      @FXML
+//    private void (ActionEvent event){
+//        
+//       Update update = new Update();
+//        
+//       update.Unternehmen(Integer.parseInt(Unternehmen.getText()));
+//       
+//       
+//       
+//       myController.setScreen(com.levermann.GuiNew.screen0ID);
+//       
+//    }  
+    
+
+
 }
 
 

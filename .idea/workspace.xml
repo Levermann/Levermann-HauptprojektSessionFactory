@@ -7,29 +7,50 @@
     <bookmark url="file://$PROJECT_DIR$/src/main/java/com/levermann/dao/Create.java" line="68" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="71376cf0-4a45-4351-8dca-943cab88ca4d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/b34121eb-3aed-44a8-9368-49552a11cff0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/b34121eb-3aed-44a8-9368-49552a11cff0.xml" afterDir="false" />
+    <list default="true" id="71376cf0-4a45-4351-8dca-943cab88ca4d" name="Default Changelist" comment="Merge remote-tracking branch 'HauptprojektSessionFactory/Gui-blend' into TestBranchFlorian&#10;&#10;# Conflicts:&#10;#&#9;src/main/java/com/levermann/TestFiles/ConnectionMain.java&#10;#&#9;src/main/java/com/levermann/TestFiles/SelectOld.java&#10;#&#9;src/main/java/com/levermann/dao/Update.java&#10;#&#9;src/main/java/com/levermann/project/ConnectionMainFactory.java">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Beans_Binding.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/levermann/GuiNew/Startseite.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/fxml/AnalyseEinsehen.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/fxml/AnalyseErstellen.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/fxml/AnalyseSpeichern.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/fxml/S10KursheuteggKursvor1Jahr.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/fxml/S11Kursmomentum.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/fxml/S12Dreimonatsreversal.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/fxml/S13Gewinnwachstum.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/fxml/S1Eigenkapitalrendite.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/fxml/S2EBITmarge.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/fxml/S3Eigenkapitalquote.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/fxml/S4KGVueber5Jahre.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/fxml/S5KGVaktJahr.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/fxml/S6Analystenmeinungen.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/fxml/S7ReaktionQuartalszahlen.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/fxml/S8Gewinnrevisionen.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/fxml/S9KursheuteggKursvor6Monaten.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/resources/META-INF/log4j.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/resources/META-INF/persistence.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/levermann/dao/Delete.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/levermann/dao/Delete.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/levermann/dao/Select.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/levermann/dao/Select.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/levermann/dao/Update.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/levermann/dao/Update.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/levermann/dao/UpdateLevermannschritte.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/levermann/dao/UpdateLevermannschritte.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/levermann/dao/UpdatePunkteliste.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/levermann/dao/UpdatePunkteliste.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/levermann/dao/UpdateUnternehmen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/levermann/dao/UpdateUnternehmen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/levermann/entityclass/Punkteliste.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/levermann/entityclass/Punkteliste.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/levermann/kennzahlen_fertig_review/Analystenmeinungen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/levermann/kennzahlen_fertig_review/Analystenmeinungen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/levermann/kennzahlen_fertig_review/Dreimonatsreversal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/levermann/kennzahlen_fertig_review/Dreimonatsreversal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/levermann/kennzahlen_fertig_review/Eigenkapitalquote.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/levermann/kennzahlen_fertig_review/Eigenkapitalquote.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/levermann/kennzahlen_fertig_review/Eigenkapitalrendite.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/levermann/kennzahlen_fertig_review/Eigenkapitalrendite.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/levermann/kennzahlen_fertig_review/GewinnEBIT.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/levermann/kennzahlen_fertig_review/GewinnEBIT.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/levermann/kennzahlen_fertig_review/Gewinnrevision.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/levermann/kennzahlen_fertig_review/Gewinnrevision.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/levermann/kennzahlen_fertig_review/Gewinnwachstum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/levermann/kennzahlen_fertig_review/Gewinnwachstum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/levermann/kennzahlen_fertig_review/KursGewinnVerhältnis.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/levermann/kennzahlen_fertig_review/KursGewinnVerhältnis.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/levermann/kennzahlen_fertig_review/KursgewinnVerhältnis5Jahre.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/levermann/kennzahlen_fertig_review/KursgewinnVerhältnis5Jahre.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/levermann/kennzahlen_fertig_review/KursheuteggKursvor1Jahr.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/levermann/kennzahlen_fertig_review/KursheuteggKursvor1Jahr.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/levermann/kennzahlen_fertig_review/KursheuteggKursvor6Monaten.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/levermann/kennzahlen_fertig_review/KursheuteggKursvor6Monaten.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/levermann/kennzahlen_fertig_review/Kursmomentum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/levermann/kennzahlen_fertig_review/Kursmomentum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/levermann/kennzahlen_fertig_review/ReaktionaufQuartalszahlen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/levermann/kennzahlen_fertig_review/ReaktionaufQuartalszahlen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/levermann/Gui/Form1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/levermann/Gui/Form2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/levermann/Gui/Form3.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/levermann/Gui/Gui.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/levermann/Gui/Gui.jfd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/levermann/Gui/Knopffenster.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/levermann/Gui/MyActionListener_4.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/levermann/Gui/NeuesFensterOeffnen.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/levermann/Gui/Show.form" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/levermann/Gui/Show.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/levermann/GuiNew/AnalyseErstellenController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/levermann/GuiNew/AnalyseErstellenController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/levermann/GuiNew/JavaFXMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/levermann/GuiNew/JavaFXMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/levermann/GuiNew/S1EigenkapitalrenditeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/levermann/GuiNew/S1EigenkapitalrenditeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/levermann/GuiNew/ScreensController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/levermann/GuiNew/ScreensController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/levermann/GuiNew/StartseiteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/levermann/GuiNew/StartseiteController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/levermann/TestFiles/ConnectionMainFactory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/levermann/TestFiles/Create.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/levermann/TestFiles/Datum.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/levermann/TestFiles/FileDAO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/levermann/TestFiles/GewinnrevisionOld.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/levermann/TestFiles/IFileDAO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/levermann/TestFiles/IUnternehmenDAO.java" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/classes/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -90,104 +111,7 @@
     <favorites_list name="LevermannAnalyse" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/levermann/kennzahlen_fertig_review/KursheuteggKursvor1Jahr.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="281">
-              <caret line="120" column="55" selection-start-line="120" selection-start-column="55" selection-end-line="120" selection-end-column="55" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/levermann/kennzahlen_fertig_review/KursheuteggKursvor6Monaten.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="825">
-              <caret line="114" column="105" selection-start-line="114" selection-start-column="105" selection-end-line="114" selection-end-column="105" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/levermann/kennzahlen_fertig_review/Kursmomentum.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="740">
-              <caret line="98" column="124" selection-start-line="98" selection-start-column="124" selection-end-line="98" selection-end-column="124" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/levermann/kennzahlen_fertig_review/ReaktionaufQuartalszahlen.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="230">
-              <caret line="79" column="66" lean-forward="true" selection-start-line="79" selection-start-column="66" selection-end-line="79" selection-end-column="66" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/levermann/dao/Delete.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="622">
-              <caret line="60" column="31" selection-start-line="60" selection-start-column="31" selection-end-line="60" selection-end-column="31" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/levermann/dao/Select.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="349">
-              <caret line="58" column="45" lean-forward="true" selection-start-line="58" selection-start-column="45" selection-end-line="58" selection-end-column="45" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/levermann/dao/UpdateLevermannschritte.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="196" column="36" lean-forward="true" selection-start-line="196" selection-start-column="36" selection-end-line="196" selection-end-column="36" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/levermann/dao/UpdatePunkteliste.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="179">
-              <caret line="39" column="35" lean-forward="true" selection-start-line="39" selection-start-column="35" selection-end-line="39" selection-end-column="35" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/levermann/dao/UpdateUnternehmen.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="145" lean-forward="true" selection-start-line="145" selection-end-line="145" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/levermann/dao/Update.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-110">
-              <caret line="198" column="49" lean-forward="true" selection-start-line="198" selection-start-column="49" selection-end-line="198" selection-end-column="49" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -226,12 +150,12 @@
       <find>lvsch1.getName2()</find>
       <find>Cid</find>
       <find>setName</find>
-      <find>int PunktelisteNameId = scanner.nextInt();</find>
       <find>Name2</find>
-      <find>getName()</find>
-      <find>int LevermannschrittAnalyseNameId = scanner.nextInt();</find>
-      <find>setName(</find>
       <find>Lid</find>
+      <find>getName()</find>
+      <find>setName(</find>
+      <find>int LevermannschrittAnalyseNameId = scanner.nextInt();</find>
+      <find>int PunktelisteNameId = scanner.nextInt();</find>
     </findStrings>
     <replaceStrings>
       <replace>Upda</replace>
@@ -240,12 +164,12 @@
       <replace>Unternehmenname_Levermannschritte</replace>
       <replace>UnternehmennameId</replace>
       <replace>setUnternehmenname</replace>
-      <replace>String PunktelisteNameId = scanner.next();</replace>
       <replace>int LevermannschrittAnalyseNameId = scanner.nextInt();</replace>
-      <replace>getUnternehmenname()</replace>
-      <replace>String LevermannschrittAnalyseNameId = scanner.next();</replace>
-      <replace>setUnternehmenname(</replace>
       <replace>LevermannschrittAnalyseNameId</replace>
+      <replace>getUnternehmenname()</replace>
+      <replace>setUnternehmenname(</replace>
+      <replace>String LevermannschrittAnalyseNameId = scanner.next();</replace>
+      <replace>String PunktelisteNameId = scanner.next();</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -512,15 +436,6 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="levermann" type="462c0819:PsiDirectoryNode" />
-              <item name="Gui" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="LevermannAnalyse" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Hauptprojekt" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="levermann" type="462c0819:PsiDirectoryNode" />
               <item name="kennzahlen_fertig_review" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -764,7 +679,7 @@
       <workItem from="1559116910619" duration="1683000" />
       <workItem from="1559120475289" duration="2404000" />
       <workItem from="1559122992319" duration="955000" />
-      <workItem from="1565169022596" duration="6051000" />
+      <workItem from="1565169022596" duration="6361000" />
     </task>
     <task id="LOCAL-00001" summary="l">
       <created>1554567642271</created>
@@ -899,11 +814,18 @@
       <option name="project" value="LOCAL" />
       <updated>1565176719645</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Update 07.08.2019">
+      <created>1565178380853</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1565178380853</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="168837000" />
+    <option name="totallyTimeSpent" value="169147000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -916,26 +838,25 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.9124767" visible="true" weight="0.3395973" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.8081633" visible="true" weight="0.3395973" />
       <window_info id="Structure" order="1" sideWeight="0.26436782" side_tool="true" weight="0.033898305" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
       <window_info id="Favorites" order="4" sideWeight="0.47575057" side_tool="true" weight="0.18993288" />
       <window_info id="Capture Tool" order="5" />
       <window_info id="Image Layers" order="6" />
-      <window_info id="Persistence" order="7" sideWeight="0.087523274" side_tool="true" visible="true" weight="0.3395973" />
+      <window_info id="Persistence" order="7" sideWeight="0.19183673" side_tool="true" visible="true" weight="0.3395973" />
       <window_info anchor="bottom" id="Spring" order="0" sideWeight="0.49932885" weight="0.329429" />
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Find" order="2" sideWeight="0.49798658" weight="0.043923866" />
-      <window_info anchor="bottom" id="Run" order="3" sideWeight="0.6295302" visible="true" weight="0.2137628" />
+      <window_info anchor="bottom" id="Run" order="3" sideWeight="0.6295302" visible="true" weight="0.64128846" />
       <window_info anchor="bottom" id="Debug" order="4" sideWeight="0.5525424" weight="0.4875549" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="7" sideWeight="0.49932885" weight="0.32796487" />
       <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.4986577" weight="0.32796487" />
-      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.3704698" side_tool="true" visible="true" weight="0.2137628" />
+      <window_info active="true" anchor="bottom" id="Event Log" order="9" sideWeight="0.3704698" side_tool="true" visible="true" weight="0.64128846" />
       <window_info anchor="bottom" id="Database Changes" order="10" sideWeight="0.49932885" weight="0.329429" />
       <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="12" sideWeight="0.49798658" weight="0.5183016" />
@@ -953,7 +874,7 @@
       <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info anchor="right" id="Maven" order="5" weight="0.56644297" />
       <window_info anchor="right" id="Bean Validation" order="6" weight="0.3295302" />
-      <window_info anchor="right" id="Database" order="7" sideWeight="0.5796767" visible="true" weight="0.05771812" />
+      <window_info anchor="right" id="Database" order="7" sideWeight="0.5796767" visible="true" weight="0.39530203" />
       <window_info anchor="right" id="Palette&#9;" order="8" />
       <window_info anchor="right" id="Theme Preview" order="9" />
       <window_info anchor="right" id="Coverage" order="10" sideWeight="0.4203233" side_tool="true" visible="true" weight="0.14630872" />
@@ -1055,7 +976,8 @@
     <MESSAGE value="Update" />
     <MESSAGE value="Update 29.05.2019 SQL-Abfragen" />
     <MESSAGE value="Update 07.08.2019" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update 07.08.2019" />
+    <MESSAGE value="Merge remote-tracking branch 'HauptprojektSessionFactory/Gui-blend' into TestBranchFlorian&#10;&#10;# Conflicts:&#10;#&#9;src/main/java/com/levermann/TestFiles/ConnectionMain.java&#10;#&#9;src/main/java/com/levermann/TestFiles/SelectOld.java&#10;#&#9;src/main/java/com/levermann/dao/Update.java&#10;#&#9;src/main/java/com/levermann/project/ConnectionMainFactory.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="Merge remote-tracking branch 'HauptprojektSessionFactory/Gui-blend' into TestBranchFlorian&#10;&#10;# Conflicts:&#10;#&#9;src/main/java/com/levermann/TestFiles/ConnectionMain.java&#10;#&#9;src/main/java/com/levermann/TestFiles/SelectOld.java&#10;#&#9;src/main/java/com/levermann/dao/Update.java&#10;#&#9;src/main/java/com/levermann/project/ConnectionMainFactory.java" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1084,18 +1006,6 @@
     </SUITE>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/levermann/project/ConnectionMainFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="109">
-          <caret line="48" column="37" selection-start-line="48" selection-start-column="37" selection-end-line="48" selection-end-column="37" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://b34121eb-3aed-44a8-9368-49552a11cff0/schema/levermann/table/unternehmen1" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/levermann/SQL-Abfragen/Add_KursgewinnVerhältnis5Jahre_Elemente.sql" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/levermann/SQL-Abfragen/UpdateTableUnternehmen.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -1230,22 +1140,6 @@
           <filtering enabled="true">
             <filter text="" />
           </filtering>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/levermann/dao/CreatePunktelisten.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#2289#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/levermann/dao/DaoLevermannschritte.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
         </state>
       </provider>
     </entry>
@@ -1510,6 +1404,36 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/levermann/dao/DaoLevermannschritte.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/levermann/dao/DaoPunkteliste.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/levermann/dao/CreatePunktelisten.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-415">
+          <folding>
+            <element signature="e#0#2289#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/levermann/dao/Create.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/levermann/dao/Select.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="349">
@@ -1522,8 +1446,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/levermann/dao/Delete.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="622">
-          <caret line="60" column="31" selection-start-line="60" selection-start-column="31" selection-end-line="60" selection-end-column="31" />
+        <state relative-caret-position="282">
+          <caret line="40" lean-forward="true" selection-start-line="40" selection-end-line="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/levermann/dao/DaoUnternehmen.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
         </state>
       </provider>
     </entry>
