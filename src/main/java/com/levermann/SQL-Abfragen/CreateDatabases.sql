@@ -1,7 +1,7 @@
 create schema levermann;
 create table unternehmen(
                             UnternehmennameId varchar (11) not null ,
-                             id float (100)  not null,
+                             id float (20)  unique ,
                              datum float(11),
                              eigenkapital float(11),
                              jahresueberschuss float(11),
@@ -42,7 +42,7 @@ create table unternehmen(
 create table punkteliste(
 
                             PunktelisteNameId	varchar(20) not null unique,
-                            id float (100)  not null,
+                            id float (20)  unique ,
                             Unternehmenname_Punkteliste varchar (20) not null ,
                              Eigenkapitalrendite float(11),
                              EBITMarge float(11),
@@ -64,7 +64,7 @@ create table punkteliste(
 create table levermannschritte(
 
                                  LevermannschrittAnalyseNameId	varchar(20) not null unique,
-                                 id float (100)  not null,
+                                 id float (20)  unique ,
                                  Unternehmenname_Levermannschritte varchar (20) not null ,
                                   Eigenkapitalrendite float(11),
                                   EBITMarge float(11),

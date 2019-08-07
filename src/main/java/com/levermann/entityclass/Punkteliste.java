@@ -21,7 +21,7 @@ import javax.persistence.OneToOne;
 
     @Id
     @Column(name = "PunktelisteNameId")
-    private Integer PunktelisteNameId;
+    private String PunktelisteNameId;
 
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id")
@@ -77,11 +77,11 @@ import javax.persistence.OneToOne;
     @ManyToOne(optional = false)
     private Unternehmen Punkteliste;
 
-    public Integer getPunktelisteNameId() {
+    public String getPunktelisteNameId() {
         return PunktelisteNameId;
     }
 
-    public void setPunktelisteName(Integer punktelisteName) {
+    public void setPunktelisteNameId(String PunktelisteNameId) {
         PunktelisteNameId = PunktelisteNameId;
     }
 
@@ -205,8 +205,8 @@ import javax.persistence.OneToOne;
         Punkteliste = punkteliste;
     }
 
-    public void setPunktelisteNameId(Integer punktelisteNameId) {
-        PunktelisteNameId = punktelisteNameId;
+    public void setPunktelisteNameId(String PunktelisteNameId) {
+        PunktelisteNameId = PunktelisteNameId;
     }
 
     public Integer getId() {

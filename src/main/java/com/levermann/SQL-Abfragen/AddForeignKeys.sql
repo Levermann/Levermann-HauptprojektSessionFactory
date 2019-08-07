@@ -5,3 +5,9 @@ alter table levermannschritte
 alter table punkteliste
     add constraint punkteliste_unternehmen_name_fk
         foreign key (Unternehmenname_Punkteliste) references unternehmen (UnternehmennameId);
+
+ALTER TABLE `levermannschritte` CHANGE `id` `id` FLOAT NULL DEFAULT NULL AUTO_INCREMENT;
+
+ALTER TABLE `punkteliste` CHANGE `id` `id` FLOAT NULL DEFAULT NULL AUTO_INCREMENT;
+
+ALTER TABLE `unternehmen` CHANGE `id` `id` FLOAT NULL DEFAULT NULL AUTO_INCREMENT;
