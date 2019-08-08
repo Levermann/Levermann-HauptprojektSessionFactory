@@ -6,27 +6,25 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.levermann.dao;
+package com.levermann.DatabaseStatements;
 
 import com.levermann.entityclass.Unternehmen;
 import org.apache.log4j.Logger;
 import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
-import org.hibernate.cfg.Configuration;
 
 import java.util.List;
 import java.util.Scanner;
 
-  public class Update {
+  public class UpdateUnternehmenDB {
 
-    final static Logger logger = Logger.getLogger(Update.class);
+    final static Logger logger = Logger.getLogger(UpdateUnternehmenDB.class);
 
-     public void DaoName () {
+     public void UpdateUnName (String Unternehmenname) {
          //Logger wird für die Methode Delete ausgeführt
          logger.info("Logger is Entering the Execute method Update");
          String returnValue = "";
-         Scanner scanner = new Scanner(System.in);
          // Eingabeauforderung Unternehmen
 
          //Aufrufen der aktuellen Session aus HibernateUtil
@@ -41,8 +39,7 @@ import java.util.Scanner;
       //Erzeugen eines Objektes vom Typen Unternehmen
       Unternehmen Unternehmen=new Unternehmen();
       //Select Primärschlüssel
-      String name = scanner.next();
-      Unternehmen.setUnternehmenname( name);
+      Unternehmen.setUnternehmenname( Unternehmenname);
 
     //Beginn der Datenübertragung
     session.beginTransaction();
@@ -51,7 +48,7 @@ import java.util.Scanner;
     // Übertragung bestätigen
     session.getTransaction().commit(); } finally{}}
 
-     public void DaoDatum() {
+     public void UpdateDatum( String name, String datum) {
          //Logger wird für die Methode Delete ausgeführt
          logger.info("Logger is Entering the Execute method Update");
          String returnValue = "";
@@ -70,10 +67,8 @@ import java.util.Scanner;
              //Erzeugen eines Objektes vom Typen Unternehmen
              Unternehmen Unternehmen=new Unternehmen();
              //Select Primärschlüssel
-             String name = scanner.next();
              Unternehmen.setUnternehmenname( name);
              //Select Name der Firma
-             String datum = scanner.next();
              Unternehmen.setDatum(datum);
 
              //Beginn der Datenübertragung
@@ -83,7 +78,7 @@ import java.util.Scanner;
              // Übertragung bestätigen
              session.getTransaction().commit(); } finally{}}
 
-     public void DaoEigenkapital() {
+     public void UpdateEigenkapital(String name, Float eigenkapital) {
          //Logger wird für die Methode Delete ausgeführt
          logger.info("Logger is Entering the Execute method Update");
          String returnValue = "";
@@ -102,10 +97,8 @@ import java.util.Scanner;
              //Erzeugen eines Objektes vom Typen Unternehmen
              Unternehmen Unternehmen=new Unternehmen();
              //Select Primärschlüssel
-             String name = scanner.next();
              Unternehmen.setUnternehmenname( name);
              //Select Name der Firma
-             int eigenkapital = scanner.nextInt();
              Unternehmen.setEigenkapital(eigenkapital);
 
              //Beginn der Datenübertragung
@@ -115,7 +108,7 @@ import java.util.Scanner;
              // Übertragung bestätigen
              session.getTransaction().commit(); } finally{}}
 
-     public void DaoJahresueberschuss(String Name, int Jahresueberschuss) {
+     public void UpdateJahresueberschuss(String Name, float Jahresueberschuss) {
          //Logger wird für die Methode Delete ausgeführt
          logger.info("Logger is Entering the Execute method Update");
          String returnValue = "";
@@ -152,11 +145,9 @@ import java.util.Scanner;
              // Übertragung bestätigen
              session.getTransaction().commit(); } finally{}}
 
-     public void DaoGewinnEBIT() {
+     public void UpdateGewinnEBIT(String name, float gewinnebit) {
          //Logger wird für die Methode Delete ausgeführt
          logger.info("Logger is Entering the Execute method Update");
-         String returnValue = "";
-         Scanner scanner = new Scanner(System.in);
          // Eingabeauforderung Unternehmen
 
          //Aufrufen der aktuellen Session aus HibernateUtil
@@ -171,10 +162,8 @@ import java.util.Scanner;
              //Erzeugen eines Objektes vom Typen Unternehmen
              Unternehmen Unternehmen=new Unternehmen();
              //Select Primärschlüssel
-             String name = scanner.next();
              Unternehmen.setUnternehmenname( name);
              //Select Name der Firma
-             int gewinnebit = scanner.nextInt();
              Unternehmen.setGewinnEBIT(gewinnebit);
 
              //Beginn der Datenübertragung
@@ -184,7 +173,7 @@ import java.util.Scanner;
              // Übertragung bestätigen
              session.getTransaction().commit(); } finally{}}
 
-     public void DaoJahresumsatz() {
+     public void UpdateJahresumsatz(String name, float jahresumsatz) {
          //Logger wird für die Methode Delete ausgeführt
          logger.info("Logger is Entering the Execute method Update");
          String returnValue = "";
@@ -203,10 +192,8 @@ import java.util.Scanner;
              //Erzeugen eines Objektes vom Typen Unternehmen
              Unternehmen Unternehmen=new Unternehmen();
              //Select Primärschlüssel
-             String name = scanner.next();
              Unternehmen.setUnternehmenname( name);
              //Select Name der Firma
-             int jahresumsatz = scanner.nextInt();
              Unternehmen.setJahresumsatz(jahresumsatz);
 
              //Beginn der Datenübertragung
@@ -216,7 +203,7 @@ import java.util.Scanner;
              // Übertragung bestätigen
              session.getTransaction().commit(); } finally{}}
 
-     public void DaoFremdkapital() {
+     public void UpdateFremdkapital(String name, float fremdkapital) {
          //Logger wird für die Methode Delete ausgeführt
          logger.info("Logger is Entering the Execute method Update");
          String returnValue = "";
@@ -235,10 +222,8 @@ import java.util.Scanner;
              //Erzeugen eines Objektes vom Typen Unternehmen
              Unternehmen Unternehmen=new Unternehmen();
              //Select Primärschlüssel
-             String name = scanner.next();
              Unternehmen.setUnternehmenname( name);
              //Select Name der Firma
-             int fremdkapital = scanner.nextInt();
              Unternehmen.setFremdkapital(fremdkapital);
 
              //Beginn der Datenübertragung
@@ -248,7 +233,7 @@ import java.util.Scanner;
              // Übertragung bestätigen
              session.getTransaction().commit(); } finally{}}
 
-     public void DaoAktuellerAktienkurs() {
+     public void UpdateAktuellerAktienkurs(String name, float aktuelleraktienkurs) {
          //Logger wird für die Methode Delete ausgeführt
          logger.info("Logger is Entering the Execute method Update");
          String returnValue = "";
@@ -267,10 +252,9 @@ import java.util.Scanner;
              //Erzeugen eines Objektes vom Typen Unternehmen
              Unternehmen Unternehmen=new Unternehmen();
              //Select Primärschlüssel
-             String name = scanner.next();
+             
              Unternehmen.setUnternehmenname( name);
              //Select Name der Firma
-             int aktuelleraktienkurs = scanner.nextInt();
              Unternehmen.setAktuellerAktienkurs(aktuelleraktienkurs);
 
              //Beginn der Datenübertragung
@@ -280,7 +264,7 @@ import java.util.Scanner;
              // Übertragung bestätigen
              session.getTransaction().commit(); } finally{}}
 
-     public void DaoGewinnschaezung() {
+     public void UpdateGewinnschaezung(String name, float gewinnschaezung) {
          //Logger wird für die Methode Delete ausgeführt
          logger.info("Logger is Entering the Execute method Update");
          String returnValue = "";
@@ -299,10 +283,9 @@ import java.util.Scanner;
              //Erzeugen eines Objektes vom Typen Unternehmen
              Unternehmen Unternehmen=new Unternehmen();
              //Select Primärschlüssel
-             String name = scanner.next();
+             
              Unternehmen.setUnternehmenname( name);
              //Select Name der Firma
-             int gewinnschaezung = scanner.nextInt();
              Unternehmen.setGewinnschaezung(gewinnschaezung);
 
              //Beginn der Datenübertragung
@@ -312,7 +295,7 @@ import java.util.Scanner;
              // Übertragung bestätigen
              session.getTransaction().commit(); } finally{}}
 
-     public void DaoGewinnAVG() {
+     public void UpdateGewinnAVG(String name, float gewinnavg) {
          //Logger wird für die Methode Delete ausgeführt
          logger.info("Logger is Entering the Execute method Update");
          String returnValue = "";
@@ -331,10 +314,9 @@ import java.util.Scanner;
              //Erzeugen eines Objektes vom Typen Unternehmen
              Unternehmen Unternehmen=new Unternehmen();
              //Select Primärschlüssel
-             String name = scanner.next();
+             
              Unternehmen.setUnternehmenname( name);
              //Select Name der Firma
-             int gewinnavg = scanner.nextInt();
              Unternehmen.setGewinnAVG(gewinnavg);
 
              //Beginn der Datenübertragung
@@ -344,12 +326,10 @@ import java.util.Scanner;
              // Übertragung bestätigen
              session.getTransaction().commit(); } finally{}}
 
-     public void DaoHalten() {
+     public void UpdateHalten(String name, float halten) {
          //Logger wird für die Methode Delete ausgeführt
          logger.info("Logger is Entering the Execute method Update");
          String returnValue = "";
-         Scanner scanner = new Scanner(System.in);
-         // Eingabeauforderung Unternehmen
 
          //Aufrufen der aktuellen Session aus HibernateUtil
          SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
@@ -363,10 +343,9 @@ import java.util.Scanner;
              //Erzeugen eines Objektes vom Typen Unternehmen
              Unternehmen Unternehmen=new Unternehmen();
              //Select Primärschlüssel
-             String name = scanner.next();
+             
              Unternehmen.setUnternehmenname( name);
              //Select Name der Firma
-             int halten = scanner.nextInt();
              Unternehmen.setHalten(halten);
 
              //Beginn der Datenübertragung
@@ -376,7 +355,7 @@ import java.util.Scanner;
              // Übertragung bestätigen
              session.getTransaction().commit(); } finally{}}
 
-     public void DaoVerkaufen() {
+     public void UpdateVerkaufen(String name, float verkaufen) {
          //Logger wird für die Methode Delete ausgeführt
          logger.info("Logger is Entering the Execute method Update");
          String returnValue = "";
@@ -395,10 +374,9 @@ import java.util.Scanner;
              //Erzeugen eines Objektes vom Typen Unternehmen
              Unternehmen Unternehmen=new Unternehmen();
              //Select Primärschlüssel
-             String name = scanner.next();
+             
              Unternehmen.setUnternehmenname( name);
              //Select Name der Firma
-             int verkaufen = scanner.nextInt();
              Unternehmen.setVerkaufen(verkaufen);
 
              //Beginn der Datenübertragung
@@ -408,7 +386,7 @@ import java.util.Scanner;
              // Übertragung bestätigen
              session.getTransaction().commit(); } finally{}}
 
-     public void DaoKaufen() {
+     public void UpdateKaufen(String name, float kaufen) {
          //Logger wird für die Methode Delete ausgeführt
          logger.info("Logger is Entering the Execute method Update");
          String returnValue = "";
@@ -427,10 +405,9 @@ import java.util.Scanner;
              //Erzeugen eines Objektes vom Typen Unternehmen
              Unternehmen Unternehmen=new Unternehmen();
              //Select Primärschlüssel
-             String name = scanner.next();
+             
              Unternehmen.setUnternehmenname( name);
              //Select Name der Firma
-             int kaufen = scanner.nextInt();
              Unternehmen.setKaufen(kaufen);
 
              //Beginn der Datenübertragung
@@ -440,7 +417,7 @@ import java.util.Scanner;
              // Übertragung bestätigen
              session.getTransaction().commit(); } finally{}}
 
-     public void DaoKursanstiegUnternehmen() {
+     public void UpdateKursanstiegUnternehmen(String name, float kursanstiegunernehmen) {
          //Logger wird für die Methode Delete ausgeführt
          logger.info("Logger is Entering the Execute method Update");
          String returnValue = "";
@@ -459,10 +436,9 @@ import java.util.Scanner;
              //Erzeugen eines Objektes vom Typen Unternehmen
              Unternehmen Unternehmen=new Unternehmen();
              //Select Primärschlüssel
-             String name = scanner.next();
+             
              Unternehmen.setUnternehmenname( name);
              //Select Name der Firma
-             int kursanstiegunernehmen = scanner.nextInt();
              Unternehmen.setKursanstiegUnternehmen(kursanstiegunernehmen);
 
              //Beginn der Datenübertragung
@@ -472,12 +448,10 @@ import java.util.Scanner;
              // Übertragung bestätigen
              session.getTransaction().commit(); } finally{}}
 
-     public void DaoKursanstiegIndex() {
+     public void UpdateKursanstiegIndex(String name, float kursanstiegindex) {
          //Logger wird für die Methode Delete ausgeführt
          logger.info("Logger is Entering the Execute method Update");
          String returnValue = "";
-         Scanner scanner = new Scanner(System.in);
-         // Eingabeauforderung Unternehmen
 
          //Aufrufen der aktuellen Session aus HibernateUtil
          SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
@@ -491,10 +465,9 @@ import java.util.Scanner;
              //Erzeugen eines Objektes vom Typen Unternehmen
              Unternehmen Unternehmen=new Unternehmen();
              //Select Primärschlüssel
-             String name = scanner.next();
+             
              Unternehmen.setUnternehmenname( name);
              //Select Name der Firma
-             int kursanstiegindex = scanner.nextInt();
              Unternehmen.setKursanstiegIndex(kursanstiegindex);
 
              //Beginn der Datenübertragung
@@ -504,11 +477,11 @@ import java.util.Scanner;
              // Übertragung bestätigen
              session.getTransaction().commit(); } finally{}}
 
-     public void DaoGewinnschaezungVor4Wochen() {
+     public void UpdateGewinnschaezungVor4Wochen(String name, float gewinnschaezungvor4wochen) {
          //Logger wird für die Methode Delete ausgeführt
          logger.info("Logger is Entering the Execute method Update");
          String returnValue = "";
-         Scanner scanner = new Scanner(System.in);
+
          // Eingabeauforderung Unternehmen
 
          //Aufrufen der aktuellen Session aus HibernateUtil
@@ -523,10 +496,10 @@ import java.util.Scanner;
              //Erzeugen eines Objektes vom Typen Unternehmen
              Unternehmen Unternehmen=new Unternehmen();
              //Select Primärschlüssel
-             String name = scanner.next();
+             
              Unternehmen.setUnternehmenname( name);
              //Select Name der Firma
-             int gewinnschaezungvor4wochen = scanner.nextInt();
+
              Unternehmen.setGewinnschaezungVor4Wochen(gewinnschaezungvor4wochen);
 
              //Beginn der Datenübertragung
@@ -536,7 +509,7 @@ import java.util.Scanner;
              // Übertragung bestätigen
              session.getTransaction().commit(); } finally{}}
 
-     public void DaoKursHeute() {
+     public void UpdateKursHeute(String name, float aktienkursTagVeroeffentlichungQartalszahlen) {
          //Logger wird für die Methode Delete ausgeführt
          logger.info("Logger is Entering the Execute method Update");
          String returnValue = "";
@@ -555,11 +528,10 @@ import java.util.Scanner;
              //Erzeugen eines Objektes vom Typen Unternehmen
              Unternehmen Unternehmen=new Unternehmen();
              //Select Primärschlüssel
-             String name = scanner.next();
+             
              Unternehmen.setUnternehmenname( name);
              //Select Name der Firma
-             int AktienkursTagVeroeffentlichungQartalszahlen = scanner.nextInt();
-             Unternehmen.setAktienkursTagVeroeffentlichungQartalszahlen(AktienkursTagVeroeffentlichungQartalszahlen);
+             Unternehmen.setAktienkursTagVeroeffentlichungQartalszahlen(aktienkursTagVeroeffentlichungQartalszahlen);
 
              //Beginn der Datenübertragung
              session.beginTransaction();
@@ -568,7 +540,7 @@ import java.util.Scanner;
              // Übertragung bestätigen
              session.getTransaction().commit(); } finally{}}
 
-     public void DaoKursVor6Monaten() {
+     public void UpdateKursVor6Monaten(String name, float kursvor6monaten) {
          //Logger wird für die Methode Delete ausgeführt
          logger.info("Logger is Entering the Execute method Update");
          String returnValue = "";
@@ -587,10 +559,9 @@ import java.util.Scanner;
              //Erzeugen eines Objektes vom Typen Unternehmen
              Unternehmen Unternehmen=new Unternehmen();
              //Select Primärschlüssel
-             String name = scanner.next();
+             
              Unternehmen.setUnternehmenname( name);
              //Select Name der Firma
-             int kursvor6monaten = scanner.nextInt();
              Unternehmen.setKursVor6Monaten(kursvor6monaten);
 
              //Beginn der Datenübertragung
@@ -600,7 +571,7 @@ import java.util.Scanner;
              // Übertragung bestätigen
              session.getTransaction().commit(); } finally{}}
 
-     public void DaoKursVor12Monaten() {
+     public void UpdateKursVor12Monaten(String name, float kursvor12monaten) {
          //Logger wird für die Methode Delete ausgeführt
          logger.info("Logger is Entering the Execute method Update");
          String returnValue = "";
@@ -619,10 +590,9 @@ import java.util.Scanner;
              //Erzeugen eines Objektes vom Typen Unternehmen
              Unternehmen Unternehmen=new Unternehmen();
              //Select Primärschlüssel
-             String name = scanner.next();
+             
              Unternehmen.setUnternehmenname( name);
              //Select Name der Firma
-             int kursvor12monaten = scanner.nextInt();
              Unternehmen.setKursVor6Monaten(kursvor12monaten);
 
              //Beginn der Datenübertragung
@@ -632,7 +602,7 @@ import java.util.Scanner;
              // Übertragung bestätigen
              session.getTransaction().commit(); } finally{}}
 
-     public void DaoKursVor3Monaten() {
+     public void UpdateKursVor3Monaten(String name, float kursvor3monaten) {
          //Logger wird für die Methode Delete ausgeführt
          logger.info("Logger is Entering the Execute method Update");
          String returnValue = "";
@@ -651,10 +621,9 @@ import java.util.Scanner;
              //Erzeugen eines Objektes vom Typen Unternehmen
              Unternehmen Unternehmen=new Unternehmen();
              //Select Primärschlüssel
-             String name = scanner.next();
+             
              Unternehmen.setUnternehmenname( name);
              //Select Name der Firma
-             int kursvor3monaten = scanner.nextInt();
              Unternehmen.setKursVor3Monaten(kursvor3monaten);
 
              //Beginn der Datenübertragung
@@ -664,7 +633,7 @@ import java.util.Scanner;
              // Übertragung bestätigen
              session.getTransaction().commit(); } finally{}}
 
-     public void DaoKursVor2Monaten() {
+     public void UpdateKursVor2Monaten(String name, float kursvor2monaten) {
          //Logger wird für die Methode Delete ausgeführt
          logger.info("Logger is Entering the Execute method Update");
          String returnValue = "";
@@ -683,10 +652,9 @@ import java.util.Scanner;
              //Erzeugen eines Objektes vom Typen Unternehmen
              Unternehmen Unternehmen=new Unternehmen();
              //Select Primärschlüssel
-             String name = scanner.next();
+             
              Unternehmen.setUnternehmenname( name);
              //Select Name der Firma
-             int kursvor2monaten = scanner.nextInt();
              Unternehmen.setKursVor2Monaten(kursvor2monaten);
 
              //Beginn der Datenübertragung
@@ -696,7 +664,7 @@ import java.util.Scanner;
              // Übertragung bestätigen
              session.getTransaction().commit(); } finally{}}
 
-     public void DaoKursVor1Monaten() {
+     public void UpdateKursVor1Monaten(String name, float kursvor1monaten ) {
          //Logger wird für die Methode Delete ausgeführt
          logger.info("Logger is Entering the Execute method Update");
          String returnValue = "";
@@ -715,10 +683,9 @@ import java.util.Scanner;
              //Erzeugen eines Objektes vom Typen Unternehmen
              Unternehmen Unternehmen=new Unternehmen();
              //Select Primärschlüssel
-             String name = scanner.next();
+             
              Unternehmen.setUnternehmenname( name);
              //Select Name der Firma
-             int kursvor1monaten = scanner.nextInt();
              Unternehmen.setKursVor6Monaten(kursvor1monaten);
 
              //Beginn der Datenübertragung
@@ -728,7 +695,7 @@ import java.util.Scanner;
              // Übertragung bestätigen
              session.getTransaction().commit(); } finally{}}
 
-     public void DaoDaxVor1Monat() {
+     public void UpdateDaxVor1Monat(String name, float daxvor1monat) {
          //Logger wird für die Methode Delete ausgeführt
          logger.info("Logger is Entering the Execute method Update");
          String returnValue = "";
@@ -747,10 +714,9 @@ import java.util.Scanner;
              //Erzeugen eines Objektes vom Typen Unternehmen
              Unternehmen Unternehmen=new Unternehmen();
              //Select Primärschlüssel
-             String name = scanner.next();
+             
              Unternehmen.setUnternehmenname( name);
              //Select Name der Firma
-             int daxvor1monat = scanner.nextInt();
              Unternehmen.setDaxVor1Monat(daxvor1monat);
 
              //Beginn der Datenübertragung
@@ -760,7 +726,7 @@ import java.util.Scanner;
              // Übertragung bestätigen
              session.getTransaction().commit(); } finally{}}
 
-     public void DaoDaxVor2Monaten() {
+     public void UpdateDaxVor2Monaten( String name, float daxvor2monaten) {
          //Logger wird für die Methode Delete ausgeführt
          logger.info("Logger is Entering the Execute method Update");
          String returnValue = "";
@@ -779,10 +745,9 @@ import java.util.Scanner;
              //Erzeugen eines Objektes vom Typen Unternehmen
              Unternehmen Unternehmen=new Unternehmen();
              //Select Primärschlüssel
-             String name = scanner.next();
+             
              Unternehmen.setUnternehmenname( name);
              //Select Name der Firma
-             int daxvor2monaten = scanner.nextInt();
              Unternehmen.setDaxVor2Monaten(daxvor2monaten);
 
              //Beginn der Datenübertragung
@@ -792,7 +757,7 @@ import java.util.Scanner;
              // Übertragung bestätigen
              session.getTransaction().commit(); } finally{}}
 
-     public void DaoDaxVor3Monaten() {
+     public void UpdateDaxVor3Monaten(String name, float daxvor3monaten) {
          //Logger wird für die Methode Delete ausgeführt
          logger.info("Logger is Entering the Execute method Update");
          String returnValue = "";
@@ -811,10 +776,9 @@ import java.util.Scanner;
              //Erzeugen eines Objektes vom Typen Unternehmen
              Unternehmen Unternehmen=new Unternehmen();
              //Select Primärschlüssel
-             String name = scanner.next();
+             
              Unternehmen.setUnternehmenname( name);
              //Select Name der Firma
-             int daxvor3monaten = scanner.nextInt();
              Unternehmen.setDaxVor2Monaten(daxvor3monaten);
 
              //Beginn der Datenübertragung
@@ -824,7 +788,7 @@ import java.util.Scanner;
              // Übertragung bestätigen
              session.getTransaction().commit(); } finally{}}
 
-     public void GewinnschaezungNaechstesJahr() {
+     public void GewinnschaezungNaechstesJahr(String name, float gewinnschaetzungnaechstesjahr) {
          //Logger wird für die Methode Delete ausgeführt
          logger.info("Logger is Entering the Execute method Update");
          String returnValue = "";
@@ -843,10 +807,9 @@ import java.util.Scanner;
              //Erzeugen eines Objektes vom Typen Unternehmen
              Unternehmen Unternehmen=new Unternehmen();
              //Select Primärschlüssel
-             String name = scanner.next();
+             
              Unternehmen.setUnternehmenname( name);
              //Select Name der Firma
-             int gewinnschaetzungnaechstesjahr = scanner.nextInt();
              Unternehmen.setGewinnschaezungNaechstesJahr(gewinnschaetzungnaechstesjahr);
 
              //Beginn der Datenübertragung
@@ -856,7 +819,7 @@ import java.util.Scanner;
              // Übertragung bestätigen
              session.getTransaction().commit(); } finally{}}
 
-     public void GewinnschaezungDiesesJahr() {
+     public void GewinnschaezungDiesesJahr(String name, float gewinnschaezungdiesesjahr) {
          //Logger wird für die Methode Delete ausgeführt
          logger.info("Logger is Entering the Execute method Update");
          String returnValue = "";
@@ -875,10 +838,9 @@ import java.util.Scanner;
              //Erzeugen eines Objektes vom Typen Unternehmen
              Unternehmen Unternehmen=new Unternehmen();
              //Select Primärschlüssel
-             String name = scanner.next();
+             
              Unternehmen.setUnternehmenname( name);
              //Select Name der Firma
-             int gewinnschaezungdiesesjahr = scanner.nextInt();
              Unternehmen.setGewinnschaezungDiesesJahr(gewinnschaezungdiesesjahr);
 
              //Beginn der Datenübertragung
@@ -888,7 +850,7 @@ import java.util.Scanner;
              // Übertragung bestätigen
              session.getTransaction().commit(); } finally{}}
 
-     public void Finanzsektor() {
+     public void Finanzsektor(String name, float finanzsektor) {
          //Logger wird für die Methode Delete ausgeführt
          logger.info("Logger is Entering the Execute method Update");
          String returnValue = "";
@@ -907,10 +869,9 @@ import java.util.Scanner;
              //Erzeugen eines Objektes vom Typen Unternehmen
              Unternehmen Unternehmen=new Unternehmen();
              //Select Primärschlüssel
-             String name = scanner.next();
+             
              Unternehmen.setUnternehmenname( name);
              //Select Name der Firma
-             int finanzsektor = scanner.nextInt();
              Unternehmen.setFinanzsektor(finanzsektor);
 
              //Beginn der Datenübertragung

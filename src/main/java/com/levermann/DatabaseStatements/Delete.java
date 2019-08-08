@@ -6,7 +6,7 @@ on Track
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.levermann.dao;
+package com.levermann.DatabaseStatements;
 
 
 import com.levermann.entityclass.Unternehmen;

@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.levermann.dao;
+package com.levermann.DatabaseStatements;
 
 
 import java.util.List;
@@ -17,9 +17,8 @@ import org.hibernate.HibernateException;
 import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
-import org.hibernate.cfg.Configuration;
 
- public class Select{
+public class Select{
 
     final static Logger logger = Logger.getLogger(Select.class);
 
@@ -153,7 +152,7 @@ import org.hibernate.cfg.Configuration;
 
 
 
-         final static Logger logger2 = Logger.getLogger(com.levermann.dao.Select.class);
+         final static Logger logger2 = Logger.getLogger(com.levermann.DatabaseStatements.Select.class);
 
          public void SelectLevermannschritteAlle () {
              //Logger wird für die Methode ausgeführt

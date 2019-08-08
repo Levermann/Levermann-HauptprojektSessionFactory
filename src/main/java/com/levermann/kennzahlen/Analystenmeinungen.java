@@ -1,19 +1,6 @@
 package com.levermann.kennzahlen;
 
-import com.levermann.dao.HibernateUtil;
-import com.levermann.entityclass.Levermannschritte;
-import com.levermann.entityclass.Unternehmen;
 import org.apache.log4j.Logger;
-import org.hibernate.HibernateException;
-import org.hibernate.Query;
-import org.hibernate.Session;
-import org.hibernate.SessionFactory;
-
-import java.text.DecimalFormat;
-import java.util.List;
-import java.util.Scanner;
-
-
 
 
 public class Analystenmeinungen {

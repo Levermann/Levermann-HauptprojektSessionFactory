@@ -1,8 +1,6 @@
-package com.levermann.dao;
+package com.levermann.DatabaseStatements;
 
-import org.hibernate.Session;
 import org.hibernate.SessionFactory;
-import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
 
 public class HibernateUtil {

@@ -1,6 +1,6 @@
 package com.levermann.kennzahlen_fertig_review;
 
-import com.levermann.dao.HibernateUtil;
+import com.levermann.DatabaseStatements.HibernateUtil;
 import com.levermann.entityclass.Levermannschritte;
 import com.levermann.entityclass.Unternehmen;
 import org.apache.log4j.Logger;

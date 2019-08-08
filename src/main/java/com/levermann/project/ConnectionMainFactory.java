@@ -1,8 +1,6 @@
 package com.levermann.project;
 
-import com.levermann.dao.Create;
-import com.levermann.dao.Select;
-import com.levermann.dao.Update;
+import com.levermann.DatabaseStatements.Select;
 
 
 abstract public class ConnectionMainFactory  {
