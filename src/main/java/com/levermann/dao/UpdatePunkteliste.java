@@ -12,7 +12,7 @@ import org.hibernate.SessionFactory;
 
 import java.util.Scanner;
 
- public abstract class UpdatePunkteliste implements DaoPunkteliste {
+ public abstract class UpdatePunkteliste {
 
     final static Logger logger = Logger.getLogger(UpdatePunkteliste.class);
 

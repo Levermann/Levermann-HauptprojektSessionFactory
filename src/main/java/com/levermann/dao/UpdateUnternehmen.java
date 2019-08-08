@@ -15,7 +15,7 @@ import org.hibernate.SessionFactory;
 
 import java.util.Scanner;
 
-abstract public class UpdateUnternehmen implements DaoUnternehmen {
+abstract public class UpdateUnternehmen  {
 
    final static Logger logger = Logger.getLogger(UpdateUnternehmen.class);
 

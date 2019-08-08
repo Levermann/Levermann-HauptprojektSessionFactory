@@ -16,7 +16,7 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import java.util.Scanner;
 
-  public class Delete implements DaoUnternehmen {
+  public class Delete {
 
     final static Logger logger = Logger.getLogger(Delete.class);
 

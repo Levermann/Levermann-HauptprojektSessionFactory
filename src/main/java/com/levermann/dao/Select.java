@@ -19,11 +19,11 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
- public class Select implements DaoUnternehmen{
+ public class Select{
 
     final static Logger logger = Logger.getLogger(Select.class);
 
-    public void Dao () {
+    public void SelectUnternehmenAlle () {
         //Logger wird für die Methode ausgeführt
         logger.info("Logger is Entering the Execute method from Create");
         String returnValue = "";
@@ -54,20 +54,139 @@ import org.hibernate.cfg.Configuration;
                 System.out.println("Liste der Unternehmen = " + un.getUnternehmenname()  + ","
                         + un.getUnternehmenname() );}
 
-            // Ausgabe eines Datensatzes mit UnternehmennameId
+            /* Ausgabe eines Datensatzes mit UnternehmennameId
             query = session.getNamedQuery("Unternehmen.findByName");
-            query.setInteger("UnternehmennameName", 6);
             Unternehmen un = (Unternehmen) query.uniqueResult();
             System.out.println("Unternehmen UnternehmennameId=" + un.getUnternehmenname()  + " Name=" + un.getUnternehmenname()  + ", City=");
 
             // Ausgabe einer Liste mit Namen
             query = session.getNamedQuery("Unternehmen.findByName");
-            query.setString("name", "bmw");
             unList = query.list();
             for (Unternehmen un1 : unList) {
                 System.out.println("List of Employees::" + un1.getUnternehmenname()  + ","
                         + un1.getUnternehmenname() );
-            }
+            }*/
+
+            // safe Unternhemen Object
+            System.out.println("Speichere Unternehmen...");
+
+            //commit transaction
+            session.getTransaction().commit();
+
+            System.out.println("Done!");
+        } catch (HibernateException e) {
+            System.out.println("Hibernate Exception" + e.getMessage());
+            session.getTransaction().rollback();
+            throw new RuntimeException(e);
+        } finally {
+        }
+
+    }
+
+     final static Logger logger3 = Logger.getLogger(Select.class);
+
+     public void SelectUnternehmenByName (String Unternehmenname) {
+         //Logger wird für die Methode ausgeführt
+         logger3.info("Logger is Entering the Execute method from Create");
+         String returnValue = "";
+
+         System.out.println(" Bitte \n 1. Unternehmen \n 2. Datum \n 3. Eigenkapital \n 4. JahresÃ¼berschuss");
+
+         //Aufrufen der aktuellen Session aus HibernateUtil
+         SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
+         Session session = sessionFactory.getCurrentSession();
+         Scanner scanner = new Scanner(System.in);
+
+         try {
+             //create a unternehmen object
+             System.out.println("Creating new Unternehmen Object");
+
+             // Unternehmen un = new Unternehmen();
+
+             // Hinzufügen
+             logger3.info("Logger for Create was saved successfull");
+
+             // start a transaction
+             session.beginTransaction();
+
+             //HQL Named Query FindAll Unternehmen
+             Query query = session.getNamedQuery("Unternehmen.findAll");
+
+             List<Unternehmen> unList = query.list();
+             for (Unternehmen un : unList) {
+                 un.setUnternehmennameId(Unternehmenname);
+
+                 System.out.println("Liste der Unternehmen = " + un.getUnternehmenname()  + ","
+                         + un.getUnternehmenname() );}
+
+            /* Ausgabe eines Datensatzes mit UnternehmennameId
+            query = session.getNamedQuery("Unternehmen.findByName");
+            Unternehmen un = (Unternehmen) query.uniqueResult();
+            System.out.println("Unternehmen UnternehmennameId=" + un.getUnternehmenname()  + " Name=" + un.getUnternehmenname()  + ", City=");
+
+            // Ausgabe einer Liste mit Namen
+            query = session.getNamedQuery("Unternehmen.findByName");
+            unList = query.list();
+            for (Unternehmen un1 : unList) {
+                System.out.println("List of Employees::" + un1.getUnternehmenname()  + ","
+                        + un1.getUnternehmenname() );
+            }*/
+
+             // safe Unternhemen Object
+             System.out.println("Speichere Unternehmen...");
+
+             //commit transaction
+             session.getTransaction().commit();
+
+             System.out.println("Done!");
+         } catch (HibernateException e) {
+             System.out.println("Hibernate Exception" + e.getMessage());
+             session.getTransaction().rollback();
+             throw new RuntimeException(e);
+         } finally {
+         }
+
+     }
+
+
+
+
+
+
+         final static Logger logger2 = Logger.getLogger(com.levermann.dao.Select.class);
+
+         public void SelectLevermannschritteAlle () {
+             //Logger wird für die Methode ausgeführt
+             logger2.info("Logger is Entering the Execute method from Create");
+             String returnValue = "";
+
+             System.out.println(" Bitte \n 1. Unternehmen \n 2. Datum \n 3. Eigenkapital \n 4. JahresÃ¼berschuss");
+
+             //Aufrufen der aktuellen Session aus HibernateUtil
+             SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
+             Session session = sessionFactory.getCurrentSession();
+             Scanner scanner = new Scanner(System.in);
+
+             try {
+                 //create a unternehmen object
+                 System.out.println("Creating new Unternehmen Object");
+
+                 // Unternehmen un = new Unternehmen();
+
+                 // Hinzufügen
+                 logger.info("Logger for Create was saved successfull");
+
+                 // start a transaction
+                 session.beginTransaction();
+
+                 //HQL Named Query FindAll Unternehmen
+                 Query query = session.getNamedQuery("Unternehmen.findAll");
+                 List<Unternehmen> unList = query.list();
+                 for (Unternehmen un : unList) {
+                     System.out.println("Liste der Unternehmen = " + un.getUnternehmenname()  + ","
+                             + un.getUnternehmenname() );}
+
+
 
             //HQL Named Query FindAll Levermannschritte
             Query query1 = session.getNamedQuery("Levermannschritte.findAll");
@@ -78,9 +197,42 @@ import org.hibernate.cfg.Configuration;
 
             // Ausgabe eines Datensatzes mit UnternehmennameId
             query1 = session.getNamedQuery("Levermannschritte.findByName");
-            query1.setString("bmw", bmw);
             Levermannschritte un1 = (Levermannschritte) query1.uniqueResult();
-            System.out.println("Levermannschritte LevermannschrittAnalyseNameId=" + un1.getLevermannschrittAnalyseNameId() + " UnternehmennameId= =" + + un1.getUnternehmenname_Levermannschritte());
+            System.out.println("Levermannschritte LevermannschrittAnalyseNameId=" + un1.getLevermannschrittAnalyseNameId() + " UnternehmennameId= =" + un1.getUnternehmenname_Levermannschritte());
+
+
+                 // safe Unternhemen Object
+                 System.out.println("Speichere Unternehmen...");
+
+                 //commit transaction
+                 session.getTransaction().commit();
+
+                 System.out.println("Done!");
+             } catch (HibernateException e) {
+                 System.out.println("Hibernate Exception" + e.getMessage());
+                 session.getTransaction().rollback();
+                 throw new RuntimeException(e);
+             } finally {
+             }
+
+         }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
  /*    //HQL Named Query FindAll Unternehmen
             Query query = session.getNamedQuery("Unternehmen.findAll");
@@ -124,20 +276,6 @@ import org.hibernate.cfg.Configuration;
 
 
 
-            // safe Unternhemen Object
-            System.out.println("Speichere Unternehmen...");
 
-            //commit transaction
-            session.getTransaction().commit();
-
-            System.out.println("Done!");
-        } catch (HibernateException e) {
-            System.out.println("Hibernate Exception" + e.getMessage());
-            session.getTransaction().rollback();
-            throw new RuntimeException(e);
-        } finally {
-        }
-
-    }
 
 }

@@ -1,5 +1,7 @@
 package com.levermann.project;
 
+import com.levermann.dao.Create;
+import com.levermann.dao.Select;
 import com.levermann.dao.Update;
 
 
@@ -40,9 +42,17 @@ abstract public class ConnectionMainFactory  {
     // Select select = new Select();
      // select.Dao();
 
-     Update drm = new Update();
+  //   Update drm = new Update();
 
-     drm.DaoJahresueberschuss("bmw11", 2000);
+    // drm.DaoJahresueberschuss("bmw11", 2000);
+
+//     Create d = new Create();
+
+    // d.CreateUnternehmen( "bmw", (float) 2000.00);
+
+     Select de = new Select();
+     de.SelectUnternehmenByName("bmw");
+
 
 
  }

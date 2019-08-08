@@ -20,7 +20,7 @@ public class ConnectionMain {
         try
         {
             Unternehmen unternehmen = new Unternehmen();
-            unternehmen.setName("Adidas");
+            unternehmen.setUnternehmenname("Adidas");
             unternehmen.setJahresueberschuss(666666);
             unternehmen.setEigenkapital(77778);
 
@@ -33,7 +33,7 @@ public class ConnectionMain {
 
             String query = "SELECT A FROM unternehmen_old A";
             for (Unternehmen A: em.createQuery(query, Unternehmen.class).getResultList())
-                System.out.println(A.getName());
+                System.out.println(A.getUnternehmenname());
         }
         catch (Exception e) {
             e.printStackTrace();

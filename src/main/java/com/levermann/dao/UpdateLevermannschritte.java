@@ -12,7 +12,7 @@ import org.hibernate.SessionFactory;
 
 import java.util.Scanner;
 
-abstract public class UpdateLevermannschritte implements DaoLevermannschritte {
+abstract public class UpdateLevermannschritte  {
 
     final static Logger logger = Logger.getLogger(UpdateLevermannschritte.class);
 
