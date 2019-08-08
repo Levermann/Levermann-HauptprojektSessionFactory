@@ -3,13 +3,35 @@
   <component name="AnalysisUIOptions">
     <option name="SCOPE_TYPE" value="3" />
   </component>
-  <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/src/main/java/com/levermann/dao/Create.java" line="68" />
-  </component>
   <component name="ChangeListManager">
     <list default="true" id="71376cf0-4a45-4351-8dca-943cab88ca4d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_validation_validation_api_1_1_0_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_persistence_javax_persistence_2_1_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_persistence_org_eclipse_persistence_antlr_2_6_1_RC1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_persistence_org_eclipse_persistence_asm_2_6_1_RC1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_persistence_org_eclipse_persistence_core_2_6_1_RC1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_persistence_org_eclipse_persistence_dbws_2_6_1_RC1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_persistence_org_eclipse_persistence_jpa_2_6_1_RC1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_persistence_org_eclipse_persistence_jpa_jpql_2_6_1_RC1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_persistence_org_eclipse_persistence_jpa_modelgen_processor_2_6_1_RC1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_persistence_org_eclipse_persistence_moxy_2_6_1_RC1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_persistence_org_eclipse_persistence_oracle_2_6_1_RC1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_javax_json_1_0_4.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/levermann/Gui/LevermannGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/levermann/Gui/LevermannGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LevermannAnalyse.iml" beforeDir="false" afterPath="$PROJECT_DIR$/LevermannAnalyse.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/levermann/GuiNew/S10KursheuteggKursvor1JahrController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/levermann/GuiNew/S10KursheuteggKursvor1JahrController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/levermann/GuiNew/S11KursmomentumController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/levermann/GuiNew/S11KursmomentumController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/levermann/GuiNew/S12DreimonatsreversalController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/levermann/GuiNew/S12DreimonatsreversalController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/levermann/GuiNew/S13GewinnwachstumController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/levermann/GuiNew/S13GewinnwachstumController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/levermann/GuiNew/S2EBITmargeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/levermann/GuiNew/S2EBITmargeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/levermann/GuiNew/S3EigenkapitalquoteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/levermann/GuiNew/S3EigenkapitalquoteController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/levermann/GuiNew/S4KGVueber5JahreController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/levermann/GuiNew/S4KGVueber5JahreController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/levermann/GuiNew/S5KGVaktJahrController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/levermann/GuiNew/S5KGVaktJahrController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/levermann/GuiNew/S6AnalystenmeinungenController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/levermann/GuiNew/S6AnalystenmeinungenController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/levermann/GuiNew/S7ReaktionQuartalszahlenController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/levermann/GuiNew/S7ReaktionQuartalszahlenController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/levermann/GuiNew/S8GewinnrevisionenController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/levermann/GuiNew/S8GewinnrevisionenController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/levermann/GuiNew/S9KursheuteggKursvor6MonatenController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/levermann/GuiNew/S9KursheuteggKursvor6MonatenController.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/classes/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -54,6 +76,20 @@
         <item name="hibernate.cfg.xml/Hibernate" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="levermann: schema" type="ebfa3cd1:MariaImplModel$Schema" />
+        <item name="levermannschritte: table" type="dbc44a63:MariaImplModel$Table" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="hibernate.cfg.xml/Hibernate" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="levermann: schema" type="ebfa3cd1:MariaImplModel$Schema" />
+        <item name="punkteliste: table" type="dbc44a63:MariaImplModel$Table" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="hibernate.cfg.xml/Hibernate" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="levermann: schema" type="ebfa3cd1:MariaImplModel$Schema" />
         <item name="unternehmen: table" type="dbc44a63:MariaImplModel$Table" />
       </path>
       <path>
@@ -72,229 +108,91 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/levermann/SQL-Abfragen/Add_KursgewinnVerhältnis5Jahre_Elemente.sql">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/levermann/GuiNew/S13GewinnwachstumController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="24" selection-start-line="3" selection-start-column="24" selection-end-line="3" selection-end-column="24" />
+            <state relative-caret-position="17">
+              <caret line="5" column="26" selection-start-line="5" selection-start-column="26" selection-end-line="5" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/levermann/GuiNew/ScreensController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/levermann/GuiNew/S1EigenkapitalrenditeController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/levermann/GuiNew/NewFXPreloader.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/levermann/GuiNew/JavaFXMain.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1173">
+              <caret line="74" column="66" lean-forward="true" selection-start-line="74" selection-start-column="66" selection-end-line="74" selection-end-column="66" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/levermann/GuiNew/ControlledScreenInterface.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/levermann/GuiNew/AnalyseSpeichernController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/levermann/GuiNew/AnalyseErstellenController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/levermann/Gui/LevermannGUI.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/levermann/GuiNew/AnalyseEinsehenController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="73">
-              <caret line="94" column="4" lean-forward="true" selection-start-line="94" selection-start-column="4" selection-end-line="94" selection-end-column="4" />
+            <state relative-caret-position="170">
+              <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/levermann/dao/Select.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/levermann/GuiNew/S12DreimonatsreversalController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="886">
-              <caret line="67" column="70" lean-forward="true" selection-start-line="67" selection-start-column="63" selection-end-line="67" selection-end-column="70" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/levermann/dao/SelectSchritt1jahresueberschuss.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="215">
-              <caret line="62" column="72" selection-start-line="62" selection-start-column="72" selection-end-line="62" selection-end-column="72" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/levermann/entityclass/Unternehmen.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1394">
-              <caret line="100" lean-forward="true" selection-start-line="100" selection-end-line="100" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#0#27#1" expanded="true" />
-                <element signature="e#0#45#1" expanded="true" />
-                <element signature="e#0#47#1" expanded="true" />
-                <element signature="e#0#63#1" expanded="true" />
-                <element signature="e#0#89#1" expanded="true" />
-                <element signature="e#8836#8837#0" expanded="true" />
-                <element signature="e#8875#8876#0" expanded="true" />
-                <element signature="e#8940#8941#0" expanded="true" />
-                <element signature="e#8996#8997#0" expanded="true" />
-                <element signature="e#9024#9025#0" expanded="true" />
-                <element signature="e#9050#9051#0" expanded="true" />
-                <element signature="e#9085#9086#0" expanded="true" />
-                <element signature="e#9115#9116#0" expanded="true" />
-                <element signature="e#9146#9147#0" expanded="true" />
-                <element signature="e#9173#9174#0" expanded="true" />
-                <element signature="e#9213#9214#0" expanded="true" />
-                <element signature="e#9245#9246#0" expanded="true" />
-                <element signature="e#9277#9278#0" expanded="true" />
-                <element signature="e#9305#9306#0" expanded="true" />
-                <element signature="e#9347#9348#0" expanded="true" />
-                <element signature="e#9381#9382#0" expanded="true" />
-                <element signature="e#9419#9420#0" expanded="true" />
-                <element signature="e#9454#9455#0" expanded="true" />
-                <element signature="e#9509#9510#0" expanded="true" />
-                <element signature="e#9557#9558#0" expanded="true" />
-                <element signature="e#9600#9601#0" expanded="true" />
-                <element signature="e#9640#9641#0" expanded="true" />
-                <element signature="e#9705#9706#0" expanded="true" />
-                <element signature="e#9763#9764#0" expanded="true" />
-                <element signature="e#9799#9800#0" expanded="true" />
-                <element signature="e#9832#9833#0" expanded="true" />
-                <element signature="e#9883#9884#0" expanded="true" />
-                <element signature="e#9927#9928#0" expanded="true" />
-                <element signature="e#9965#9966#0" expanded="true" />
-                <element signature="e#10000#10001#0" expanded="true" />
-                <element signature="e#10055#10056#0" expanded="true" />
-                <element signature="e#10103#10104#0" expanded="true" />
-                <element signature="e#10141#10142#0" expanded="true" />
-                <element signature="e#10176#10177#0" expanded="true" />
-                <element signature="e#10231#10232#0" expanded="true" />
-                <element signature="e#10279#10280#0" expanded="true" />
-                <element signature="e#10324#10325#0" expanded="true" />
-                <element signature="e#10366#10367#0" expanded="true" />
-                <element signature="e#10435#10436#0" expanded="true" />
-                <element signature="e#10497#10498#0" expanded="true" />
-                <element signature="e#10538#10539#0" expanded="true" />
-                <element signature="e#10576#10577#0" expanded="true" />
-                <element signature="e#10637#10638#0" expanded="true" />
-                <element signature="e#10691#10692#0" expanded="true" />
-                <element signature="e#10726#10727#0" expanded="true" />
-                <element signature="e#10758#10759#0" expanded="true" />
-                <element signature="e#10807#10808#0" expanded="true" />
-                <element signature="e#10849#10850#0" expanded="true" />
-                <element signature="e#10881#10882#0" expanded="true" />
-                <element signature="e#10910#10911#0" expanded="true" />
-                <element signature="e#10953#10954#0" expanded="true" />
-                <element signature="e#10989#10990#0" expanded="true" />
-                <element signature="e#11024#11025#0" expanded="true" />
-                <element signature="e#11056#11057#0" expanded="true" />
-                <element signature="e#11105#11106#0" expanded="true" />
-                <element signature="e#11147#11148#0" expanded="true" />
-                <element signature="e#11179#11180#0" expanded="true" />
-                <element signature="e#11208#11209#0" expanded="true" />
-                <element signature="e#11251#11252#0" expanded="true" />
-                <element signature="e#11287#11288#0" expanded="true" />
-                <element signature="e#11335#11336#0" expanded="true" />
-                <element signature="e#11380#11381#0" expanded="true" />
-                <element signature="e#11567#11568#0" expanded="true" />
-                <element signature="e#11606#11607#0" expanded="true" />
-                <element signature="e#11669#11670#0" expanded="true" />
-                <element signature="e#11725#11726#0" expanded="true" />
-                <element signature="e#11776#11777#0" expanded="true" />
-                <element signature="e#11824#11825#0" expanded="true" />
-                <element signature="e#12369#12370#0" expanded="true" />
-                <element signature="e#12407#12408#0" expanded="true" />
-                <element signature="e#12468#12469#0" expanded="true" />
-                <element signature="e#12522#12523#0" expanded="true" />
-                <element signature="e#12564#12565#0" expanded="true" />
-                <element signature="e#12603#12604#0" expanded="true" />
-                <element signature="e#12666#12667#0" expanded="true" />
-                <element signature="e#12722#12723#0" expanded="true" />
-                <element signature="e#12763#12764#0" expanded="true" />
-                <element signature="e#12801#12802#0" expanded="true" />
-                <element signature="e#12862#12863#0" expanded="true" />
-                <element signature="e#12916#12917#0" expanded="true" />
-                <element signature="e#12957#12958#0" expanded="true" />
-                <element signature="e#12995#12996#0" expanded="true" />
-                <element signature="e#13056#13057#0" expanded="true" />
-                <element signature="e#13110#13111#0" expanded="true" />
-                <element signature="e#13149#13150#0" expanded="true" />
-                <element signature="e#13185#13186#0" expanded="true" />
-                <element signature="e#13242#13243#0" expanded="true" />
-                <element signature="e#13292#13293#0" expanded="true" />
-                <element signature="e#13330#13331#0" expanded="true" />
-                <element signature="e#13365#13366#0" expanded="true" />
-                <element signature="e#13420#13421#0" expanded="true" />
-                <element signature="e#13468#13469#0" expanded="true" />
-                <element signature="e#13508#13509#0" expanded="true" />
-                <element signature="e#13545#13546#0" expanded="true" />
-                <element signature="e#13604#13605#0" expanded="true" />
-                <element signature="e#13656#13657#0" expanded="true" />
-                <element signature="e#13696#13697#0" expanded="true" />
-                <element signature="e#13733#13734#0" expanded="true" />
-                <element signature="e#13792#13793#0" expanded="true" />
-                <element signature="e#13844#13845#0" expanded="true" />
-                <element signature="e#13898#13899#0" expanded="true" />
-                <element signature="e#13949#13950#0" expanded="true" />
-                <element signature="e#14167#14168#0" expanded="true" />
-                <element signature="e#14215#14216#0" expanded="true" />
-                <element signature="e#14408#14409#0" expanded="true" />
-                <element signature="e#14443#14444#0" expanded="true" />
-                <element signature="e#14498#14499#0" expanded="true" />
-                <element signature="e#14546#14547#0" expanded="true" />
-                <element signature="e#14592#14593#0" expanded="true" />
-                <element signature="e#14635#14636#0" expanded="true" />
-                <element signature="e#14708#14709#0" expanded="true" />
-                <element signature="e#14767#14768#0" expanded="true" />
-                <element signature="e#14813#14814#0" expanded="true" />
-                <element signature="e#14856#14857#0" expanded="true" />
-                <element signature="e#14929#14930#0" expanded="true" />
-                <element signature="e#14988#14989#0" expanded="true" />
-                <element signature="e#15032#15033#0" expanded="true" />
-                <element signature="e#15073#15074#0" expanded="true" />
-                <element signature="e#15142#15143#0" expanded="true" />
-                <element signature="e#15197#15198#0" expanded="true" />
-                <element signature="e#15252#15253#0" expanded="true" />
-                <element signature="e#15304#15305#0" expanded="true" />
-                <element signature="e#15530#15531#0" expanded="true" />
-                <element signature="e#15585#15586#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="das://b34121eb-3aed-44a8-9368-49552a11cff0/schema/levermann/table/levermannschritte">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true">
-                <filter text="" />
-              </filtering>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/levermann/Gui/LevermannGUI.form">
-          <provider selected="true" editor-type-id="ui-designer" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/levermann/project/ConnectionMainFactory.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="303">
-              <caret line="47" column="18" selection-start-line="47" selection-start-column="18" selection-end-line="47" selection-end-column="18" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="das://b34121eb-3aed-44a8-9368-49552a11cff0/schema/levermann/table/unternehmen">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true">
-                <filter text="" />
-              </filtering>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/levermann/kennzahlen_fertig_review/Kursmomentum.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="23" column="25" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="25" />
+            <state relative-caret-position="17">
+              <caret line="5" column="22" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -343,7 +241,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="Flo" />
+        <entry key="$PROJECT_DIR$" value="MaxiGui" />
       </map>
     </option>
     <option name="PUSH_TAGS">
@@ -353,18 +251,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/levermann/kennzahlen/Kursverlauf6Monate.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/levermann/project/Datum.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/levermann/project/ConnectionMain.java" />
-        <option value="$PROJECT_DIR$/src/test/java/LevermannTest/ConnectionMainTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/LevermannTest/PunktelisteTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/LevermannTest/CreateTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/levermann/project/init.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/META-INF/log4j.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/levermann/project/Log4jInitListener.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/levermann/project/Log4jInitListner.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/levermann/project/Log4jPropertiesConfigurationExample.java" />
-        <option value="$PROJECT_DIR$/src/log4j.properties" />
         <option value="$PROJECT_DIR$/src/main/java/com/levermann/dao/ManagedBean.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/levermann/project/HibernateUtil.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/levermann/dao/IFileDAO.java" />
@@ -374,7 +260,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/levermann/dao/IUnternehmenDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/log4j.properties" />
         <option value="$PROJECT_DIR$/src/main/java/com/levermann/TestFiles/IUnternehmenDAO.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/levermann/TestFiles/HibernateUtil_Test.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/levermann/dao/HibernateUtil.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/levermann/dao/CreateTest.java" />
@@ -404,6 +289,19 @@
         <option value="$PROJECT_DIR$/src/main/java/com/levermann/project/ConnectionMainFactory.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/levermann/dao/SelectSchritt1jahresueberschuss.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/levermann/Gui/LevermannGUI.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/levermann/GuiNew/S2EBITmargeController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/levermann/GuiNew/S3EigenkapitalquoteController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/levermann/GuiNew/S4KGVueber5JahreController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/levermann/GuiNew/S5KGVaktJahrController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/levermann/GuiNew/S6AnalystenmeinungenController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/levermann/GuiNew/S7ReaktionQuartalszahlenController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/levermann/GuiNew/S8GewinnrevisionenController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/levermann/GuiNew/S9KursheuteggKursvor6MonatenController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/levermann/GuiNew/S10KursheuteggKursvor1JahrController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/levermann/GuiNew/S11KursmomentumController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/levermann/GuiNew/S12DreimonatsreversalController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/levermann/GuiNew/S13GewinnwachstumController.java" />
       </list>
     </option>
   </component>
@@ -416,38 +314,20 @@
   </component>
   <component name="MavenProjectNavigator">
     <treeState>
-      <expand>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="Levermann" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-        </path>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="Levermann" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-          <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
-        </path>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="Levermann" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-          <item name="Plugins" type="7aea1407:MavenProjectsStructure$PluginsNode" />
-        </path>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="Levermann" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-          <item name="Dependencies" type="f4be9f2a:MavenProjectsStructure$DependenciesNode" />
-        </path>
-      </expand>
+      <expand />
       <select />
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-9" />
-    <option name="width" value="1305" />
-    <option name="height" value="845" />
+    <option name="x" value="-1056" />
+    <option name="y" value="22" />
+    <option name="width" value="1550" />
+    <option name="height" value="838" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
+      <autoscrollFromSource ProjectPane="true" />
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
@@ -457,87 +337,42 @@
           <expand>
             <path>
               <item name="LevermannAnalyse" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Hauptprojekt" type="462c0819:PsiDirectoryNode" />
+              <item name="Levermann-HauptprojektSessionFactory" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="LevermannAnalyse" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Hauptprojekt" type="462c0819:PsiDirectoryNode" />
+              <item name="Levermann-HauptprojektSessionFactory" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="LevermannAnalyse" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Hauptprojekt" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="LevermannAnalyse" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Hauptprojekt" type="462c0819:PsiDirectoryNode" />
+              <item name="Levermann-HauptprojektSessionFactory" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="LevermannAnalyse" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Hauptprojekt" type="462c0819:PsiDirectoryNode" />
+              <item name="Levermann-HauptprojektSessionFactory" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="levermann" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="LevermannAnalyse" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Hauptprojekt" type="462c0819:PsiDirectoryNode" />
+              <item name="Levermann-HauptprojektSessionFactory" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="levermann" type="462c0819:PsiDirectoryNode" />
-              <item name="dao" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="LevermannAnalyse" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Hauptprojekt" type="462c0819:PsiDirectoryNode" />
+              <item name="Levermann-HauptprojektSessionFactory" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="levermann" type="462c0819:PsiDirectoryNode" />
-              <item name="entityclass" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="LevermannAnalyse" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Hauptprojekt" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="levermann" type="462c0819:PsiDirectoryNode" />
-              <item name="Gui" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="LevermannAnalyse" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Hauptprojekt" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="levermann" type="462c0819:PsiDirectoryNode" />
-              <item name="kennzahlen" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="LevermannAnalyse" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Hauptprojekt" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="levermann" type="462c0819:PsiDirectoryNode" />
-              <item name="project" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="LevermannAnalyse" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Hauptprojekt" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="levermann" type="462c0819:PsiDirectoryNode" />
-              <item name="SQL-Abfragen" type="462c0819:PsiDirectoryNode" />
+              <item name="GuiNew" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -649,6 +484,7 @@
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="TestNG" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.TestNG" value="" />
     <property name="database.console.LAST_STATE" value="false" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java/com" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -657,7 +493,7 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="project.propGUI" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
@@ -699,24 +535,9 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.ConnectionMainFactory">
+  <component name="RunManager" selected="Application.JavaFXMain">
     <configuration name="ConnectionMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.levermann.project.ConnectionMain" />
-      <module name="LevermannAnalyse" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.mycompany.demo.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ConnectionMainFactory" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="ALTERNATIVE_JRE_PATH" value="1.8" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
-      <option name="MAIN_CLASS_NAME" value="com.levermann.project.ConnectionMainFactory" />
       <module name="LevermannAnalyse" />
       <extension name="coverage">
         <pattern>
@@ -756,6 +577,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="JavaFXMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.levermann.GuiNew.JavaFXMain" />
+      <module name="LevermannAnalyse" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.levermann.GuiNew.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="LevermannGUI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.levermann.Gui.LevermannGUI" />
       <module name="LevermannAnalyse" />
@@ -783,19 +617,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.ConnectionMainFactory" />
       <item itemvalue="Application.Log4jPropertiesConfigurationExample" />
       <item itemvalue="Application.DaoUnternehmen" />
       <item itemvalue="Application.ConnectionMain" />
       <item itemvalue="Application.LevermannGUI" />
+      <item itemvalue="Application.JavaFXMain" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.ConnectionMainFactory" />
+        <item itemvalue="Application.JavaFXMain" />
+        <item itemvalue="Application.ConnectionMain" />
         <item itemvalue="Application.LevermannGUI" />
         <item itemvalue="Application.DaoUnternehmen" />
         <item itemvalue="Application.Log4jPropertiesConfigurationExample" />
-        <item itemvalue="Application.ConnectionMain" />
       </list>
     </recent_temporary>
   </component>
@@ -820,6 +654,8 @@
       <workItem from="1555717313682" duration="3444000" />
       <workItem from="1555746622394" duration="4615000" />
       <workItem from="1555751525494" duration="240000" />
+      <workItem from="1565175878109" duration="594000" />
+      <workItem from="1565256397833" duration="3264000" />
     </task>
     <task id="LOCAL-00001" summary="l">
       <created>1554567642271</created>
@@ -923,7 +759,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="143638000" />
+    <option name="totallyTimeSpent" value="150601000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -935,10 +771,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <frame x="-1928" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.7356322" visible="true" weight="0.23758389" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.7356322" visible="true" weight="0.26012793" />
       <window_info id="Structure" order="1" sideWeight="0.26436782" side_tool="true" weight="0.033898305" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
@@ -949,8 +785,8 @@
       <window_info anchor="bottom" id="Spring" order="0" sideWeight="0.49932885" weight="0.329429" />
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Find" order="2" sideWeight="0.4989339" weight="0.34699854" />
-      <window_info anchor="bottom" id="Run" order="3" sideWeight="0.63154364" visible="true" weight="0.37920937" />
-      <window_info anchor="bottom" id="Debug" order="4" sideWeight="0.5525424" weight="0.4875549" />
+      <window_info anchor="bottom" id="Run" order="3" sideWeight="0.63154364" weight="0.37920937" />
+      <window_info anchor="bottom" id="Debug" order="4" sideWeight="0.5525424" visible="true" weight="0.30877572" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="7" weight="0.32936078" />
@@ -958,7 +794,7 @@
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.36845636" side_tool="true" weight="0.45827234" />
       <window_info anchor="bottom" id="Database Changes" order="10" sideWeight="0.49932885" weight="0.329429" />
       <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="12" sideWeight="0.49798658" weight="0.5183016" />
+      <window_info anchor="bottom" id="Version Control" order="12" sideWeight="0.49798658" weight="0.042432815" />
       <window_info anchor="bottom" id="Messages" order="13" sideWeight="0.44563758" weight="0.42606148" />
       <window_info anchor="bottom" id="Database Console" order="14" sideWeight="0.49717513" weight="0.32789856" />
       <window_info anchor="bottom" id="Inspection Results" order="15" sideWeight="0.49946696" weight="0.20151679" />
@@ -971,8 +807,8 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="right" id="Maven" order="5" weight="0.56644297" />
-      <window_info anchor="right" id="Database" order="6" sideWeight="0.5796767" visible="true" weight="0.21342282" />
+      <window_info anchor="right" id="Maven" order="5" weight="0.4155496" />
+      <window_info anchor="right" id="Database" order="6" sideWeight="0.5796767" visible="true" weight="0.124200426" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Theme Preview" order="8" />
       <window_info anchor="right" id="Bean Validation" order="9" />
@@ -1083,11 +919,6 @@
         </breakpoint>
       </breakpoints>
     </breakpoint-manager>
-    <watches-manager>
-      <configuration name="Application">
-        <watch expression="((FileURLMapper)var4 (slot_2)).file" custom="sun.misc.FileURLMapper" />
-      </configuration>
-    </watches-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/LevermannAnalyse$ConnectionMainFactory.ic" NAME="ConnectionMainFactory Coverage Results" MODIFIED="1555703147535" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
@@ -1095,188 +926,6 @@
     </SUITE>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="79">
-          <caret line="19" column="16" selection-start-line="19" selection-start-column="16" selection-end-line="19" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/hibernate/hibernate-core/5.0.8.Final/hibernate-core-5.0.8.Final.jar!/org/hibernate/Query.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="67" column="16" selection-start-line="67" selection-start-column="16" selection-end-line="67" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/hibernate/hibernate-core/5.0.8.Final/hibernate-core-5.0.8.Final-sources.jar!/org/hibernate/Query.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="62" column="17" selection-start-line="62" selection-start-column="17" selection-end-line="62" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/log4j.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="39" selection-start-line="19" selection-start-column="39" selection-end-line="19" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../NetBeansProjects/com.mycompany_Levermanntest/src/main/resources/hibernate.cfg.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="20" lean-forward="true" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Gui.java" />
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/levermann/entityclass/PunktelisteTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="10" column="5" lean-forward="true" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/LevermannTest/UpdateTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/LevermannTest/newClassTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/b34121eb-3aed-44a8-9368-49552a11cff0/console.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="14" selection-start-column="14" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/levermann/dao/Delete.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-303">
-          <caret line="18" column="15" selection-start-line="18" selection-start-column="15" selection-end-line="18" selection-end-column="15" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/levermann/dao/DaoUnternehmen.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="20" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/jre/lib/rt.jar!/sun/misc/Launcher.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="129">
-          <caret line="194" selection-start-line="194" selection-end-line="194" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/jre/lib/rt.jar!/sun/instrument/InstrumentationImpl.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="113">
-          <caret line="257" selection-start-line="257" selection-end-line="257" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/src.zip!/java/lang/ClassLoader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6324">
-          <caret line="435" selection-start-line="435" selection-end-line="435" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/jre/lib/rt.jar!/sun/misc/URLClassPath.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="10506">
-          <caret line="690" selection-start-line="690" selection-end-line="690" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/src.zip!/java/security/AccessController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="10608">
-          <caret line="651" column="8" selection-start-line="651" selection-start-column="8" selection-end-line="651" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/levermann/kennzahlen/Gewinnrevision.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-15">
-          <caret line="18" column="4" lean-forward="true" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="4" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/src.zip!/java/lang/reflect/Field.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="763" column="30" selection-start-line="763" selection-start-column="30" selection-end-line="763" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/levermann/entityclass/Punkteliste.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="239">
-          <caret line="62" lean-forward="true" selection-start-line="62" selection-end-line="62" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#0#27#1" expanded="true" />
-            <element signature="e#0#45#1" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/levermann/dao/CreatePunktelisten.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="269">
-          <caret line="23" selection-start-line="23" selection-end-line="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/levermann/dao/SelectLevermannschritte.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="515">
-          <caret line="48" lean-forward="true" selection-start-line="48" selection-end-line="48" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/levermann/TestFiles/SelectOld.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-180">
-          <caret line="177" column="49" lean-forward="true" selection-start-line="177" selection-start-column="49" selection-end-line="177" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/levermann/dao/Update.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="44" column="1" selection-start-line="44" selection-start-column="1" selection-end-line="45" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/levermann/entityclass/Levermannschritte.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1241">
@@ -1288,20 +937,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../NetBeansProjects/com.mycompany_Levermanntest/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="311">
-          <caret line="29" selection-start-line="29" selection-end-line="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/src.zip!/java/net/URLClassLoader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="311">
-          <caret line="381" selection-start-line="381" selection-end-line="381" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/../com.mycompany_Levermanntest/pom.xml" />
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/src.zip!/java/net/URLClassLoader.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/levermann/dao/Create.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-76">
@@ -1309,13 +946,6 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/levermann/kennzahlen_fertig_review/Analystenmeinungen.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -1354,19 +984,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/levermann/dao/Select.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="886">
-          <caret line="67" column="70" lean-forward="true" selection-start-line="67" selection-start-column="63" selection-end-line="67" selection-end-column="70" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/levermann/Gui/LevermannGUI.form">
-      <provider selected="true" editor-type-id="ui-designer" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/levermann/Gui/LevermannGUI.form" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/levermann/entityclass/Unternehmen.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1394">
@@ -1506,16 +1124,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/levermann/project/ConnectionMainFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="303">
-          <caret line="47" column="18" selection-start-line="47" selection-start-column="18" selection-end-line="47" selection-end-column="18" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="das://b34121eb-3aed-44a8-9368-49552a11cff0/schema/levermann/table/unternehmen">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
@@ -1541,10 +1149,254 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/levermann/Gui/LevermannGUI.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/levermann/Gui/LevermannGUI.java" />
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LevermannGuiMuster.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="73">
-          <caret line="94" column="4" lean-forward="true" selection-start-line="94" selection-start-column="4" selection-end-line="94" selection-end-column="4" />
+        <state>
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/manifest.mf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LevermannGuiMuster.jfd">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="35" selection-start-line="21" selection-start-column="35" selection-end-line="21" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/levermann/project/ConnectionMainFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="36" selection-start-line="36" selection-end-line="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/levermann/GuiNew/StartseiteController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/levermann/dao/Delete.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="13" column="40" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/levermann/dao/UpdateLevermannschritte.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="14" column="22" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/levermann/entityclass/Punkteliste.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="78" column="33" selection-start-line="78" selection-start-column="33" selection-end-line="78" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#0#27#1" expanded="true" />
+            <element signature="e#0#45#1" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/levermann/dao/Select.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="500">
+          <caret line="67" column="70" selection-start-line="67" selection-start-column="63" selection-end-line="67" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LevermannAnalyse.iml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/levermann/kennzahlen_fertig_review/KursheuteggKursvor6Monaten.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/levermann/kennzahlen_fertig_review/GewinnEBIT.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/levermann/kennzahlen_fertig_review/Analystenmeinungen.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="37">
+          <caret line="35" column="21" selection-start-line="35" selection-start-column="21" selection-end-line="35" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/levermann/GuiNew/S2EBITmargeController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="5" column="26" selection-start-line="5" selection-start-column="26" selection-end-line="5" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/levermann/GuiNew/S3EigenkapitalquoteController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="5" column="24" lean-forward="true" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/levermann/GuiNew/S4KGVueber5JahreController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="5" column="24" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/levermann/GuiNew/S5KGVaktJahrController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="5" column="26" selection-start-line="5" selection-start-column="26" selection-end-line="5" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/levermann/GuiNew/S6AnalystenmeinungenController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="5" column="25" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/levermann/GuiNew/S8GewinnrevisionenController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="5" column="19" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/levermann/GuiNew/S7ReaktionQuartalszahlenController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/levermann/GuiNew/S9KursheuteggKursvor6MonatenController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="5" column="26" lean-forward="true" selection-start-line="5" selection-start-column="26" selection-end-line="5" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/levermann/GuiNew/S10KursheuteggKursvor1JahrController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="5" column="26" selection-start-line="5" selection-start-column="26" selection-end-line="5" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/levermann/GuiNew/S11KursmomentumController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="5" column="25" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/levermann/GuiNew/S12DreimonatsreversalController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="5" column="22" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/levermann/GuiNew/S13GewinnwachstumController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="5" column="26" selection-start-line="5" selection-start-column="26" selection-end-line="5" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/levermann/GuiNew/ScreensController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/levermann/GuiNew/S1EigenkapitalrenditeController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/levermann/GuiNew/NewFXPreloader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/levermann/GuiNew/JavaFXMain.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1173">
+          <caret line="74" column="66" lean-forward="true" selection-start-line="74" selection-start-column="66" selection-end-line="74" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/levermann/GuiNew/ControlledScreenInterface.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/levermann/GuiNew/AnalyseSpeichernController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/levermann/GuiNew/AnalyseErstellenController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/levermann/GuiNew/AnalyseEinsehenController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
         </state>
       </provider>
     </entry>

@@ -43,6 +43,9 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="java" level="project" />
+    <orderEntry type="library" name="MigLayout" level="project" />
+    <orderEntry type="library" name="Beans Binding" level="project" />
+    <orderEntry type="library" name="JGoodies Forms" level="project" />
     <orderEntry type="library" name="Maven: org.hibernate:hibernate-core:5.0.8.Final" level="project" />
     <orderEntry type="library" name="Maven: org.jboss.logging:jboss-logging:3.3.0.Final" level="project" />
     <orderEntry type="library" name="Maven: org.javassist:javassist:3.18.1-GA" level="project" />
@@ -67,18 +70,6 @@
     <orderEntry type="library" scope="TEST" name="Maven: com.beust:jcommander:1.27" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.yaml:snakeyaml:1.6" level="project" />
     <orderEntry type="library" name="Maven: com.mycompany:LevermannAnalYse:1.0-SNAPSHOT" level="project" />
-    <orderEntry type="library" name="Maven: org.eclipse.persistence:org.eclipse.persistence.antlr:2.6.1-RC1" level="project" />
-    <orderEntry type="library" name="Maven: org.eclipse.persistence:org.eclipse.persistence.asm:2.6.1-RC1" level="project" />
-    <orderEntry type="library" name="Maven: org.eclipse.persistence:org.eclipse.persistence.core:2.6.1-RC1" level="project" />
-    <orderEntry type="library" name="Maven: org.glassfish:javax.json:1.0.4" level="project" />
-    <orderEntry type="library" name="Maven: org.eclipse.persistence:org.eclipse.persistence.dbws:2.6.1-RC1" level="project" />
-    <orderEntry type="library" name="Maven: org.eclipse.persistence:org.eclipse.persistence.jpa:2.6.1-RC1" level="project" />
-    <orderEntry type="library" name="Maven: org.eclipse.persistence:javax.persistence:2.1.0" level="project" />
-    <orderEntry type="library" name="Maven: org.eclipse.persistence:org.eclipse.persistence.jpa.jpql:2.6.1-RC1" level="project" />
-    <orderEntry type="library" name="Maven: org.eclipse.persistence:org.eclipse.persistence.jpa.modelgen.processor:2.6.1-RC1" level="project" />
-    <orderEntry type="library" name="Maven: org.eclipse.persistence:org.eclipse.persistence.moxy:2.6.1-RC1" level="project" />
-    <orderEntry type="library" name="Maven: javax.validation:validation-api:1.1.0.Final" level="project" />
-    <orderEntry type="library" name="Maven: org.eclipse.persistence:org.eclipse.persistence.oracle:2.6.1-RC1" level="project" />
     <orderEntry type="library" name="Maven: org.codehaus.mojo:exec-maven-plugin:1.2.1" level="project" />
     <orderEntry type="library" name="Maven: org.apache.maven:maven-toolchain:1.0" level="project" />
     <orderEntry type="library" name="Maven: org.apache.maven:maven-project:2.0.6" level="project" />
@@ -144,9 +135,6 @@
     <orderEntry type="library" name="Maven: org.springframework:spring-asm:3.1.2.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-context:3.1.2.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-expression:3.1.2.RELEASE" level="project" />
-    <orderEntry type="library" name="MigLayout" level="project" />
-    <orderEntry type="library" name="Beans Binding" level="project" />
-    <orderEntry type="library" name="JGoodies Forms" level="project" />
   </component>
   <component name="POM File Configuration" pomFile="" />
 </module>
