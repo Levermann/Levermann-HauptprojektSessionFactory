@@ -21,7 +21,7 @@ import java.util.Scanner;
 
     final static Logger logger = Logger.getLogger(UpdateUnternehmenDB.class);
 
-     public void UpdateUnName (String Unternehmenname) {
+     public void UnName (String Unternehmenname) {
          //Logger wird für die Methode Delete ausgeführt
          logger.info("Logger is Entering the Execute method Update");
          String returnValue = "";
@@ -48,7 +48,7 @@ import java.util.Scanner;
     // Übertragung bestätigen
     session.getTransaction().commit(); } finally{}}
 
-     public void UpdateDatum( String name, String datum) {
+     public void Datum( String name, String datum) {
          //Logger wird für die Methode Delete ausgeführt
          logger.info("Logger is Entering the Execute method Update");
          String returnValue = "";
@@ -78,7 +78,7 @@ import java.util.Scanner;
              // Übertragung bestätigen
              session.getTransaction().commit(); } finally{}}
 
-     public void UpdateEigenkapital(String name, Float eigenkapital) {
+     public void Eigenkapital(String name, Float eigenkapital) {
          //Logger wird für die Methode Delete ausgeführt
          logger.info("Logger is Entering the Execute method Update");
          String returnValue = "";
@@ -108,7 +108,7 @@ import java.util.Scanner;
              // Übertragung bestätigen
              session.getTransaction().commit(); } finally{}}
 
-     public void UpdateJahresueberschuss(String Name, float Jahresueberschuss) {
+     public void Jahresueberschuss(String Name, float Jahresueberschuss) {
          //Logger wird für die Methode Delete ausgeführt
          logger.info("Logger is Entering the Execute method Update");
          String returnValue = "";
@@ -145,7 +145,7 @@ import java.util.Scanner;
              // Übertragung bestätigen
              session.getTransaction().commit(); } finally{}}
 
-     public void UpdateGewinnEBIT(String name, float gewinnebit) {
+     public void GewinnEBIT(String name, float gewinnebit) {
          //Logger wird für die Methode Delete ausgeführt
          logger.info("Logger is Entering the Execute method Update");
          // Eingabeauforderung Unternehmen
@@ -173,7 +173,7 @@ import java.util.Scanner;
              // Übertragung bestätigen
              session.getTransaction().commit(); } finally{}}
 
-     public void UpdateJahresumsatz(String name, float jahresumsatz) {
+     public void Jahresumsatz(String name, float jahresumsatz) {
          //Logger wird für die Methode Delete ausgeführt
          logger.info("Logger is Entering the Execute method Update");
          String returnValue = "";
@@ -203,7 +203,7 @@ import java.util.Scanner;
              // Übertragung bestätigen
              session.getTransaction().commit(); } finally{}}
 
-     public void UpdateFremdkapital(String name, float fremdkapital) {
+     public void Fremdkapital(String name, float fremdkapital) {
          //Logger wird für die Methode Delete ausgeführt
          logger.info("Logger is Entering the Execute method Update");
          String returnValue = "";
@@ -233,7 +233,7 @@ import java.util.Scanner;
              // Übertragung bestätigen
              session.getTransaction().commit(); } finally{}}
 
-     public void UpdateAktuellerAktienkurs(String name, float aktuelleraktienkurs) {
+     public void AktuellerAktienkurs(String name, float aktuelleraktienkurs) {
          //Logger wird für die Methode Delete ausgeführt
          logger.info("Logger is Entering the Execute method Update");
          String returnValue = "";
@@ -264,7 +264,7 @@ import java.util.Scanner;
              // Übertragung bestätigen
              session.getTransaction().commit(); } finally{}}
 
-     public void UpdateGewinnschaezung(String name, float gewinnschaezung) {
+     public void Gewinnschaezung(String name, float gewinnschaezung) {
          //Logger wird für die Methode Delete ausgeführt
          logger.info("Logger is Entering the Execute method Update");
          String returnValue = "";
@@ -295,7 +295,7 @@ import java.util.Scanner;
              // Übertragung bestätigen
              session.getTransaction().commit(); } finally{}}
 
-     public void UpdateGewinnAVG(String name, float gewinnavg) {
+     public void GewinnAVG(String name, float gewinnavg) {
          //Logger wird für die Methode Delete ausgeführt
          logger.info("Logger is Entering the Execute method Update");
          String returnValue = "";
@@ -326,7 +326,7 @@ import java.util.Scanner;
              // Übertragung bestätigen
              session.getTransaction().commit(); } finally{}}
 
-     public void UpdateHalten(String name, float halten) {
+     public void Halten(String name, float halten) {
          //Logger wird für die Methode Delete ausgeführt
          logger.info("Logger is Entering the Execute method Update");
          String returnValue = "";
@@ -355,7 +355,7 @@ import java.util.Scanner;
              // Übertragung bestätigen
              session.getTransaction().commit(); } finally{}}
 
-     public void UpdateVerkaufen(String name, float verkaufen) {
+     public void Verkaufen(String name, float verkaufen) {
          //Logger wird für die Methode Delete ausgeführt
          logger.info("Logger is Entering the Execute method Update");
          String returnValue = "";
@@ -386,7 +386,7 @@ import java.util.Scanner;
              // Übertragung bestätigen
              session.getTransaction().commit(); } finally{}}
 
-     public void UpdateKaufen(String name, float kaufen) {
+     public void Kaufen(String name, float kaufen) {
          //Logger wird für die Methode Delete ausgeführt
          logger.info("Logger is Entering the Execute method Update");
          String returnValue = "";
@@ -417,7 +417,7 @@ import java.util.Scanner;
              // Übertragung bestätigen
              session.getTransaction().commit(); } finally{}}
 
-     public void UpdateKursanstiegUnternehmen(String name, float kursanstiegunernehmen) {
+     public void KursanstiegUnternehmen(String name, float kursanstiegunernehmen) {
          //Logger wird für die Methode Delete ausgeführt
          logger.info("Logger is Entering the Execute method Update");
          String returnValue = "";
@@ -448,7 +448,7 @@ import java.util.Scanner;
              // Übertragung bestätigen
              session.getTransaction().commit(); } finally{}}
 
-     public void UpdateKursanstiegIndex(String name, float kursanstiegindex) {
+     public void KursanstiegIndex(String name, float kursanstiegindex) {
          //Logger wird für die Methode Delete ausgeführt
          logger.info("Logger is Entering the Execute method Update");
          String returnValue = "";
@@ -477,7 +477,7 @@ import java.util.Scanner;
              // Übertragung bestätigen
              session.getTransaction().commit(); } finally{}}
 
-     public void UpdateGewinnschaezungVor4Wochen(String name, float gewinnschaezungvor4wochen) {
+     public void GewinnschaezungVor4Wochen(String name, float gewinnschaezungvor4wochen) {
          //Logger wird für die Methode Delete ausgeführt
          logger.info("Logger is Entering the Execute method Update");
          String returnValue = "";
@@ -509,7 +509,7 @@ import java.util.Scanner;
              // Übertragung bestätigen
              session.getTransaction().commit(); } finally{}}
 
-     public void UpdateKursHeute(String name, float aktienkursTagVeroeffentlichungQartalszahlen) {
+     public void KursHeute(String name, float aktienkursTagVeroeffentlichungQartalszahlen) {
          //Logger wird für die Methode Delete ausgeführt
          logger.info("Logger is Entering the Execute method Update");
          String returnValue = "";
@@ -540,7 +540,7 @@ import java.util.Scanner;
              // Übertragung bestätigen
              session.getTransaction().commit(); } finally{}}
 
-     public void UpdateKursVor6Monaten(String name, float kursvor6monaten) {
+     public void KursVor6Monaten(String name, float kursvor6monaten) {
          //Logger wird für die Methode Delete ausgeführt
          logger.info("Logger is Entering the Execute method Update");
          String returnValue = "";
@@ -571,7 +571,7 @@ import java.util.Scanner;
              // Übertragung bestätigen
              session.getTransaction().commit(); } finally{}}
 
-     public void UpdateKursVor12Monaten(String name, float kursvor12monaten) {
+     public void KursVor12Monaten(String name, float kursvor12monaten) {
          //Logger wird für die Methode Delete ausgeführt
          logger.info("Logger is Entering the Execute method Update");
          String returnValue = "";
@@ -602,7 +602,7 @@ import java.util.Scanner;
              // Übertragung bestätigen
              session.getTransaction().commit(); } finally{}}
 
-     public void UpdateKursVor3Monaten(String name, float kursvor3monaten) {
+     public void KursVor3Monaten(String name, float kursvor3monaten) {
          //Logger wird für die Methode Delete ausgeführt
          logger.info("Logger is Entering the Execute method Update");
          String returnValue = "";
@@ -633,7 +633,7 @@ import java.util.Scanner;
              // Übertragung bestätigen
              session.getTransaction().commit(); } finally{}}
 
-     public void UpdateKursVor2Monaten(String name, float kursvor2monaten) {
+     public void KursVor2Monaten(String name, float kursvor2monaten) {
          //Logger wird für die Methode Delete ausgeführt
          logger.info("Logger is Entering the Execute method Update");
          String returnValue = "";
@@ -664,7 +664,7 @@ import java.util.Scanner;
              // Übertragung bestätigen
              session.getTransaction().commit(); } finally{}}
 
-     public void UpdateKursVor1Monaten(String name, float kursvor1monaten ) {
+     public void KursVor1Monaten(String name, float kursvor1monaten ) {
          //Logger wird für die Methode Delete ausgeführt
          logger.info("Logger is Entering the Execute method Update");
          String returnValue = "";
@@ -695,7 +695,7 @@ import java.util.Scanner;
              // Übertragung bestätigen
              session.getTransaction().commit(); } finally{}}
 
-     public void UpdateDaxVor1Monat(String name, float daxvor1monat) {
+     public void DaxVor1Monat(String name, float daxvor1monat) {
          //Logger wird für die Methode Delete ausgeführt
          logger.info("Logger is Entering the Execute method Update");
          String returnValue = "";
@@ -726,7 +726,7 @@ import java.util.Scanner;
              // Übertragung bestätigen
              session.getTransaction().commit(); } finally{}}
 
-     public void UpdateDaxVor2Monaten( String name, float daxvor2monaten) {
+     public void DaxVor2Monaten( String name, float daxvor2monaten) {
          //Logger wird für die Methode Delete ausgeführt
          logger.info("Logger is Entering the Execute method Update");
          String returnValue = "";
@@ -757,7 +757,7 @@ import java.util.Scanner;
              // Übertragung bestätigen
              session.getTransaction().commit(); } finally{}}
 
-     public void UpdateDaxVor3Monaten(String name, float daxvor3monaten) {
+     public void DaxVor3Monaten(String name, float daxvor3monaten) {
          //Logger wird für die Methode Delete ausgeführt
          logger.info("Logger is Entering the Execute method Update");
          String returnValue = "";

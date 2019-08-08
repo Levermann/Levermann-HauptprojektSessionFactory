@@ -16,13 +16,11 @@ abstract public class UpdateLevermannschritte  {
 
     final static Logger logger = Logger.getLogger(UpdateLevermannschritte.class);
 
-    public void DaoCidFremdschlüssel () {
+    public void UnName (String LevermannschrittAnalyseNameId, String unternehmenname) {
         //Logger wird für die Methode Delete ausgeführt
         logger.info("Logger is Entering the Execute method Update");
         String returnValue = "";
-        Scanner scanner = new Scanner(System.in);
-        // Eingabeauforderung Levermannschritte
-
+        
         //Aufrufen der aktuellen Session aus HibernateUtil
         SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
         Session session = sessionFactory.getCurrentSession();
@@ -35,11 +33,10 @@ abstract public class UpdateLevermannschritte  {
             //Erzeugen eines Objektes vom Typen Levermannschritte
             Levermannschritte Levermannschritte=new Levermannschritte();
             //Select Primärschlüssel
-            String LevermannschrittAnalyseNameId = scanner.next();
             Levermannschritte.setLevermannschrittAnalyseNameId(LevermannschrittAnalyseNameId);
             //Select Name der Firma
-            String name = scanner.next();
-            Levermannschritte.setUnternehmenname_Levermannschritte(name);
+            
+            Levermannschritte.setUnternehmenname_Levermannschritte(unternehmenname);
 
             //Beginn der Datenübertragung
             session.beginTransaction();
@@ -48,13 +45,11 @@ abstract public class UpdateLevermannschritte  {
             // Übertragung bestätigen
             session.getTransaction().commit(); } finally{}}
 
-    public void DaoEigenkapitalquote() {
+    public void Eigenkapitalquote(String LevermannschrittAnalyseNameId, float eigenkapitalquote) {
         //Logger wird für die Methode Delete ausgeführt
         logger.info("Logger is Entering the Execute method Update");
         String returnValue = "";
-        Scanner scanner = new Scanner(System.in);
-        // Eingabeauforderung Levermannschritte
-
+        
         //Aufrufen der aktuellen Session aus HibernateUtil
         SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
         Session session = sessionFactory.getCurrentSession();
@@ -67,10 +62,8 @@ abstract public class UpdateLevermannschritte  {
             //Erzeugen eines Objektes vom Typen Levermannschritte
             Levermannschritte Levermannschritte=new Levermannschritte();
             //Select Primärschlüssel
-            String LevermannschrittAnalyseNameId = scanner.next();
             Levermannschritte.setLevermannschrittAnalyseNameId(LevermannschrittAnalyseNameId);
             //Select Name der Firma
-            int eigenkapitalquote = scanner.nextInt();
             Levermannschritte.setEigenkapitalquote(eigenkapitalquote);
 
             //Beginn der Datenübertragung
@@ -80,13 +73,11 @@ abstract public class UpdateLevermannschritte  {
             // Übertragung bestätigen
             session.getTransaction().commit(); } finally{}}
 
-    public void DaoEBITMarge() {
+    public void EBITMarge(String LevermannschrittAnalyseNameId, float ebitmarge) {
         //Logger wird für die Methode Delete ausgeführt
         logger.info("Logger is Entering the Execute method Update");
         String returnValue = "";
-        Scanner scanner = new Scanner(System.in);
-        // Eingabeauforderung Levermannschritte
-
+        
         //Aufrufen der aktuellen Session aus HibernateUtil
         SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
         Session session = sessionFactory.getCurrentSession();
@@ -99,10 +90,8 @@ abstract public class UpdateLevermannschritte  {
             //Erzeugen eines Objektes vom Typen Levermannschritte
             Levermannschritte Levermannschritte=new Levermannschritte();
             //Select Primärschlüssel
-            String LevermannschrittAnalyseNameId = scanner.next();
             Levermannschritte.setLevermannschrittAnalyseNameId(LevermannschrittAnalyseNameId);
             //Select Name der Firma
-            int ebitmarge = scanner.nextInt();
             Levermannschritte.setEBITMarge(ebitmarge);
 
             //Beginn der Datenübertragung
@@ -112,13 +101,11 @@ abstract public class UpdateLevermannschritte  {
             // Übertragung bestätigen
             session.getTransaction().commit(); } finally{}}
 
-    public void DaoEigenkaitalquote() {
+    public void Eigenkaitalquote(String LevermannschrittAnalyseNameId, float eigenkaitalquote) {
         //Logger wird für die Methode Delete ausgeführt
         logger.info("Logger is Entering the Execute method Update");
         String returnValue = "";
-        Scanner scanner = new Scanner(System.in);
-        // Eingabeauforderung Levermannschritte
-
+        
         //Aufrufen der aktuellen Session aus HibernateUtil
         SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
         Session session = sessionFactory.getCurrentSession();
@@ -131,10 +118,8 @@ abstract public class UpdateLevermannschritte  {
             //Erzeugen eines Objektes vom Typen Levermannschritte
             Levermannschritte Levermannschritte=new Levermannschritte();
             //Select Primärschlüssel
-            String LevermannschrittAnalyseNameId = scanner.next();
             Levermannschritte.setLevermannschrittAnalyseNameId(LevermannschrittAnalyseNameId);
             //Select Name der Firma
-            int eigenkaitalquote = scanner.nextInt();
             Levermannschritte.setEigenkapitalquote(eigenkaitalquote);
 
             //Beginn der Datenübertragung
@@ -144,13 +129,11 @@ abstract public class UpdateLevermannschritte  {
             // Übertragung bestätigen
             session.getTransaction().commit(); } finally{}}
 
-    public void DaoKursGewinnVerhaeltnis() {
+    public void KursGewinnVerhaeltnis(String LevermannschrittAnalyseNameId, float kursgewinnverhaeltnis) {
         //Logger wird für die Methode Delete ausgeführt
         logger.info("Logger is Entering the Execute method Update");
         String returnValue = "";
-        Scanner scanner = new Scanner(System.in);
-        // Eingabeauforderung Levermannschritte
-
+        
         //Aufrufen der aktuellen Session aus HibernateUtil
         SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
         Session session = sessionFactory.getCurrentSession();
@@ -163,10 +146,8 @@ abstract public class UpdateLevermannschritte  {
             //Erzeugen eines Objektes vom Typen Levermannschritte
             Levermannschritte Levermannschritte=new Levermannschritte();
             //Select Primärschlüssel
-            String LevermannschrittAnalyseNameId = scanner.next();
             Levermannschritte.setLevermannschrittAnalyseNameId(LevermannschrittAnalyseNameId);
             //Select Name der Firma
-            int kursgewinnverhaeltnis = scanner.nextInt();
             Levermannschritte.setKursGewinnVerhaeltnis(kursgewinnverhaeltnis);
 
             //Beginn der Datenübertragung
@@ -176,13 +157,11 @@ abstract public class UpdateLevermannschritte  {
             // Übertragung bestätigen
             session.getTransaction().commit(); } finally{}}
 
-    public void DaoKursGewinnverhaeltnisAktuell() {
+    public void KursGewinnverhaeltnisAktuell(String LevermannschrittAnalyseNameId, float kursgewinnverhaeltnisaktuell) {
         //Logger wird für die Methode Delete ausgeführt
         logger.info("Logger is Entering the Execute method Update");
         String returnValue = "";
-        Scanner scanner = new Scanner(System.in);
-        // Eingabeauforderung Levermannschritte
-
+        
         //Aufrufen der aktuellen Session aus HibernateUtil
         SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
         Session session = sessionFactory.getCurrentSession();
@@ -195,10 +174,8 @@ abstract public class UpdateLevermannschritte  {
             //Erzeugen eines Objektes vom Typen Levermannschritte
             Levermannschritte Levermannschritte=new Levermannschritte();
             //Select Primärschlüssel
-            String LevermannschrittAnalyseNameId = scanner.next();
             Levermannschritte.setLevermannschrittAnalyseNameId(LevermannschrittAnalyseNameId);
             //Select Name der Firma
-            int kursgewinnverhaeltnisaktuell = scanner.nextInt();
             Levermannschritte.setKursGewinnVerhaeltnisAktuell(kursgewinnverhaeltnisaktuell);
 
             //Beginn der Datenübertragung
@@ -208,13 +185,11 @@ abstract public class UpdateLevermannschritte  {
             // Übertragung bestätigen
             session.getTransaction().commit(); } finally{}}
 
-    public void DaoAnalysemeinungen() {
+    public void Analysemeinungen(String LevermannschrittAnalyseNameId, float analysemeinungen) {
         //Logger wird für die Methode Delete ausgeführt
         logger.info("Logger is Entering the Execute method Update");
         String returnValue = "";
-        Scanner scanner = new Scanner(System.in);
-        // Eingabeauforderung Levermannschritte
-
+        
         //Aufrufen der aktuellen Session aus HibernateUtil
         SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
         Session session = sessionFactory.getCurrentSession();
@@ -227,10 +202,8 @@ abstract public class UpdateLevermannschritte  {
             //Erzeugen eines Objektes vom Typen Levermannschritte
             Levermannschritte Levermannschritte=new Levermannschritte();
             //Select Primärschlüssel
-            String LevermannschrittAnalyseNameId = scanner.next();
             Levermannschritte.setLevermannschrittAnalyseNameId(LevermannschrittAnalyseNameId);
             //Select Name der Firma
-            int analysemeinungen = scanner.nextInt();
             Levermannschritte.setAnalystenmeinungen(analysemeinungen);
 
             //Beginn der Datenübertragung
@@ -240,13 +213,11 @@ abstract public class UpdateLevermannschritte  {
             // Übertragung bestätigen
             session.getTransaction().commit(); } finally{}}
 
-    public void DaoReaktionaufQuartalszahlen() {
+    public void ReaktionaufQuartalszahlen(String LevermannschrittAnalyseNameId, float reaktionaufquartalszahlen) {
         //Logger wird für die Methode Delete ausgeführt
         logger.info("Logger is Entering the Execute method Update");
         String returnValue = "";
-        Scanner scanner = new Scanner(System.in);
-        // Eingabeauforderung Levermannschritte
-
+        
         //Aufrufen der aktuellen Session aus HibernateUtil
         SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
         Session session = sessionFactory.getCurrentSession();
@@ -259,10 +230,8 @@ abstract public class UpdateLevermannschritte  {
             //Erzeugen eines Objektes vom Typen Levermannschritte
             Levermannschritte Levermannschritte=new Levermannschritte();
             //Select Primärschlüssel
-            String LevermannschrittAnalyseNameId = scanner.next();
             Levermannschritte.setLevermannschrittAnalyseNameId(LevermannschrittAnalyseNameId);
             //Select Name der Firma
-            int reaktionaufquartalszahlen = scanner.nextInt();
             Levermannschritte.setReaktionaufQuartalszahlen(reaktionaufquartalszahlen);
 
             //Beginn der Datenübertragung
@@ -272,13 +241,11 @@ abstract public class UpdateLevermannschritte  {
             // Übertragung bestätigen
             session.getTransaction().commit(); } finally{}}
 
-    public void DaoGewinnrevision() {
+    public void Gewinnrevision(String LevermannschrittAnalyseNameId, float gewinnrevision) {
         //Logger wird für die Methode Delete ausgeführt
         logger.info("Logger is Entering the Execute method Update");
         String returnValue = "";
-        Scanner scanner = new Scanner(System.in);
-        // Eingabeauforderung Levermannschritte
-
+        
         //Aufrufen der aktuellen Session aus HibernateUtil
         SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
         Session session = sessionFactory.getCurrentSession();
@@ -291,10 +258,8 @@ abstract public class UpdateLevermannschritte  {
             //Erzeugen eines Objektes vom Typen Levermannschritte
             Levermannschritte Levermannschritte=new Levermannschritte();
             //Select Primärschlüssel
-            String LevermannschrittAnalyseNameId = scanner.next();
             Levermannschritte.setLevermannschrittAnalyseNameId(LevermannschrittAnalyseNameId);
             //Select Name der Firma
-            int gewinnrevision = scanner.nextInt();
             Levermannschritte.setGewinnrevision(gewinnrevision);
 
             //Beginn der Datenübertragung
@@ -304,13 +269,11 @@ abstract public class UpdateLevermannschritte  {
             // Übertragung bestätigen
             session.getTransaction().commit(); } finally{}}
 
-    public void DaoKursverlauf6Monate() {
+    public void Kursverlauf6Monate(String LevermannschrittAnalyseNameId, float kursverlauf6monate) {
         //Logger wird für die Methode Delete ausgeführt
         logger.info("Logger is Entering the Execute method Update");
         String returnValue = "";
-        Scanner scanner = new Scanner(System.in);
-        // Eingabeauforderung Levermannschritte
-
+        
         //Aufrufen der aktuellen Session aus HibernateUtil
         SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
         Session session = sessionFactory.getCurrentSession();
@@ -323,10 +286,8 @@ abstract public class UpdateLevermannschritte  {
             //Erzeugen eines Objektes vom Typen Levermannschritte
             Levermannschritte Levermannschritte=new Levermannschritte();
             //Select Primärschlüssel
-            String LevermannschrittAnalyseNameId = scanner.next();
             Levermannschritte.setLevermannschrittAnalyseNameId(LevermannschrittAnalyseNameId);
             //Select Name der Firma
-            int kursverlauf6monate = scanner.nextInt();
             Levermannschritte.setKursverlauf6Monate(kursverlauf6monate);
 
             //Beginn der Datenübertragung
@@ -336,13 +297,11 @@ abstract public class UpdateLevermannschritte  {
             // Übertragung bestätigen
             session.getTransaction().commit(); } finally{}}
 
-    public void DaoKursverlauf12Monate() {
+    public void Kursverlauf12Monate(String LevermannschrittAnalyseNameId, float kursverlauf12monate) {
         //Logger wird für die Methode Delete ausgeführt
         logger.info("Logger is Entering the Execute method Update");
         String returnValue = "";
-        Scanner scanner = new Scanner(System.in);
-        // Eingabeauforderung Levermannschritte
-
+        
         //Aufrufen der aktuellen Session aus HibernateUtil
         SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
         Session session = sessionFactory.getCurrentSession();
@@ -355,10 +314,8 @@ abstract public class UpdateLevermannschritte  {
             //Erzeugen eines Objektes vom Typen Levermannschritte
             Levermannschritte Levermannschritte=new Levermannschritte();
             //Select Primärschlüssel
-            String LevermannschrittAnalyseNameId = scanner.next();
             Levermannschritte.setLevermannschrittAnalyseNameId(LevermannschrittAnalyseNameId);
             //Select Name der Firma
-            int kursverlauf12monate = scanner.nextInt();
             Levermannschritte.setKursverlauf12Monate(kursverlauf12monate);
 
             //Beginn der Datenübertragung
@@ -368,13 +325,11 @@ abstract public class UpdateLevermannschritte  {
             // Übertragung bestätigen
             session.getTransaction().commit(); } finally{}}
 
-    public void DaoKursmomentum() {
+    public void Kursmomentum(String LevermannschrittAnalyseNameId, float kursmomentum) {
         //Logger wird für die Methode Delete ausgeführt
         logger.info("Logger is Entering the Execute method Update");
         String returnValue = "";
-        Scanner scanner = new Scanner(System.in);
-        // Eingabeauforderung Levermannschritte
-
+        
         //Aufrufen der aktuellen Session aus HibernateUtil
         SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
         Session session = sessionFactory.getCurrentSession();
@@ -387,10 +342,8 @@ abstract public class UpdateLevermannschritte  {
             //Erzeugen eines Objektes vom Typen Levermannschritte
             Levermannschritte Levermannschritte=new Levermannschritte();
             //Select Primärschlüssel
-            String LevermannschrittAnalyseNameId = scanner.next();
             Levermannschritte.setLevermannschrittAnalyseNameId(LevermannschrittAnalyseNameId);
             //Select Name der Firma
-            int kursmomentum = scanner.nextInt();
             Levermannschritte.setKursmomentum(kursmomentum);
 
             //Beginn der Datenübertragung
@@ -400,13 +353,11 @@ abstract public class UpdateLevermannschritte  {
             // Übertragung bestätigen
             session.getTransaction().commit(); } finally{}}
 
-    public void DaoDreimonatsreversal() {
+    public void Dreimonatsreversal(String LevermannschrittAnalyseNameId, float dreimonatsreversal) {
         //Logger wird für die Methode Delete ausgeführt
         logger.info("Logger is Entering the Execute method Update");
         String returnValue = "";
-        Scanner scanner = new Scanner(System.in);
-        // Eingabeauforderung Levermannschritte
-
+        
         //Aufrufen der aktuellen Session aus HibernateUtil
         SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
         Session session = sessionFactory.getCurrentSession();
@@ -419,10 +370,8 @@ abstract public class UpdateLevermannschritte  {
             //Erzeugen eines Objektes vom Typen Levermannschritte
             Levermannschritte Levermannschritte=new Levermannschritte();
             //Select Primärschlüssel
-            String LevermannschrittAnalyseNameId = scanner.next();
             Levermannschritte.setLevermannschrittAnalyseNameId(LevermannschrittAnalyseNameId);
             //Select Name der Firma
-            int dreimonatsreversal = scanner.nextInt();
             Levermannschritte.setDreimonatsreversal(dreimonatsreversal);
 
             //Beginn der Datenübertragung
@@ -432,13 +381,11 @@ abstract public class UpdateLevermannschritte  {
             // Übertragung bestätigen
             session.getTransaction().commit(); } finally{}}
 
-    public void DaoGewinnwachstum() {
+    public void Gewinnwachstum(String LevermannschrittAnalyseNameId, float gewinnwachstum) {
         //Logger wird für die Methode Delete ausgeführt
         logger.info("Logger is Entering the Execute method Update");
         String returnValue = "";
-        Scanner scanner = new Scanner(System.in);
-        // Eingabeauforderung Levermannschritte
-
+        
         //Aufrufen der aktuellen Session aus HibernateUtil
         SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
         Session session = sessionFactory.getCurrentSession();
@@ -451,10 +398,8 @@ abstract public class UpdateLevermannschritte  {
             //Erzeugen eines Objektes vom Typen Levermannschritte
             Levermannschritte Levermannschritte=new Levermannschritte();
             //Select Primärschlüssel
-            String LevermannschrittAnalyseNameId = scanner.next();
             Levermannschritte.setLevermannschrittAnalyseNameId(LevermannschrittAnalyseNameId);
             //Select Name der Firma
-            int gewinnwachstum = scanner.nextInt();
             Levermannschritte.setGewinnwachstum(gewinnwachstum);
 
             //Beginn der Datenübertragung

@@ -16,11 +16,11 @@ import java.util.Scanner;
 
     final static Logger logger = Logger.getLogger(UpdatePunkteliste.class);
 
-    public void DaoCidFremdschlüssel () {
+    public void UnName (String punktelisteNameId, String unternehmenname) {
         //Logger wird für die Methode Delete ausgeführt
         logger.info("Logger is Entering the Execute method Update");
         String returnValue = "";
-        Scanner scanner = new Scanner(System.in);
+        
         // Eingabeauforderung Punkteliste
 
         //Aufrufen der aktuellen Session aus HibernateUtil
@@ -35,11 +35,9 @@ import java.util.Scanner;
             //Erzeugen eines Objektes vom Typen Punkteliste
             Punkteliste Punkteliste=new Punkteliste();
             //Select Primärschlüssel
-            String PunktelisteNameId = scanner.next();
-            Punkteliste.setPunktelisteNameId(PunktelisteNameId);
+            Punkteliste.setPunktelisteNameId(punktelisteNameId);
             //Select Name der Firma
-            String name = scanner.next();
-            Punkteliste.setPunktelisteNameId (name);
+            Punkteliste.setUnternehmenname_Punkteliste (unternehmenname);
 
             //Beginn der Datenübertragung
             session.beginTransaction();
@@ -48,7 +46,7 @@ import java.util.Scanner;
             // Übertragung bestätigen
             session.getTransaction().commit(); } finally{}}
 
-    public void DaoEigenkapitalquote() {
+    public void Eigenkapitalquote(String punktelisteNameId, float eigenkapitalquote) {
         //Logger wird für die Methode Delete ausgeführt
         logger.info("Logger is Entering the Execute method Update");
         String returnValue = "";
@@ -67,10 +65,9 @@ import java.util.Scanner;
             //Erzeugen eines Objektes vom Typen Punkteliste
             Punkteliste Punkteliste=new Punkteliste();
             //Select Primärschlüssel
-            String PunktelisteNameId = scanner.next();
-            Punkteliste.setPunktelisteNameId(PunktelisteNameId);
+            
+            Punkteliste.setPunktelisteNameId(punktelisteNameId);
             //Select Name der Firma
-            int eigenkapitalquote = scanner.nextInt();
             Punkteliste.setEigenkapitalquote(eigenkapitalquote);
 
             //Beginn der Datenübertragung
@@ -80,7 +77,7 @@ import java.util.Scanner;
             // Übertragung bestätigen
             session.getTransaction().commit(); } finally{}}
 
-    public void DaoEBITMarge() {
+    public void EBITMarge(String punktelisteNameId, float ebitmarge) {
         //Logger wird für die Methode Delete ausgeführt
         logger.info("Logger is Entering the Execute method Update");
         String returnValue = "";
@@ -99,10 +96,9 @@ import java.util.Scanner;
             //Erzeugen eines Objektes vom Typen Punkteliste
             Punkteliste Punkteliste=new Punkteliste();
             //Select Primärschlüssel
-            String PunktelisteNameId = scanner.next();
-            Punkteliste.setPunktelisteNameId(PunktelisteNameId);
+            
+            Punkteliste.setPunktelisteNameId(punktelisteNameId);
             //Select Name der Firma
-            int ebitmarge = scanner.nextInt();
             Punkteliste.setEBITMarge(ebitmarge);
 
             //Beginn der Datenübertragung
@@ -112,7 +108,7 @@ import java.util.Scanner;
             // Übertragung bestätigen
             session.getTransaction().commit(); } finally{}}
 
-    public void DaoEigenkaitalquote() {
+    public void Eigenkaitalquote(String punktelisteNameId, float eigenkaitalquote) {
         //Logger wird für die Methode Delete ausgeführt
         logger.info("Logger is Entering the Execute method Update");
         String returnValue = "";
@@ -131,10 +127,9 @@ import java.util.Scanner;
             //Erzeugen eines Objektes vom Typen Punkteliste
             Punkteliste Punkteliste=new Punkteliste();
             //Select Primärschlüssel
-            String PunktelisteNameId = scanner.next();
-            Punkteliste.setPunktelisteNameId(PunktelisteNameId);
+            
+            Punkteliste.setPunktelisteNameId(punktelisteNameId);
             //Select Name der Firma
-            int eigenkaitalquote = scanner.nextInt();
             Punkteliste.setEigenkapitalquote(eigenkaitalquote);
 
             //Beginn der Datenübertragung
@@ -144,7 +139,7 @@ import java.util.Scanner;
             // Übertragung bestätigen
             session.getTransaction().commit(); } finally{}}
 
-    public void DaoKursGewinnVerhaeltnis() {
+    public void KursGewinnVerhaeltnis(String punktelisteNameId, float kursgewinnverhaeltnis) {
         //Logger wird für die Methode Delete ausgeführt
         logger.info("Logger is Entering the Execute method Update");
         String returnValue = "";
@@ -163,10 +158,9 @@ import java.util.Scanner;
             //Erzeugen eines Objektes vom Typen Punkteliste
             Punkteliste Punkteliste=new Punkteliste();
             //Select Primärschlüssel
-            String PunktelisteNameId = scanner.next();
-            Punkteliste.setPunktelisteNameId(PunktelisteNameId);
+            
+            Punkteliste.setPunktelisteNameId(punktelisteNameId);
             //Select Name der Firma
-            int kursgewinnverhaeltnis = scanner.nextInt();
             Punkteliste.setKursGewinnVerhaeltnis(kursgewinnverhaeltnis);
 
             //Beginn der Datenübertragung
@@ -176,7 +170,7 @@ import java.util.Scanner;
             // Übertragung bestätigen
             session.getTransaction().commit(); } finally{}}
 
-    public void DaoKursGewinnverhaeltnisAktuell() {
+    public void KursGewinnverhaeltnisAktuell(String punktelisteNameId, float kursgewinnverhaeltnisaktuell) {
         //Logger wird für die Methode Delete ausgeführt
         logger.info("Logger is Entering the Execute method Update");
         String returnValue = "";
@@ -195,10 +189,9 @@ import java.util.Scanner;
             //Erzeugen eines Objektes vom Typen Punkteliste
             Punkteliste Punkteliste=new Punkteliste();
             //Select Primärschlüssel
-            String PunktelisteNameId = scanner.next();
-            Punkteliste.setPunktelisteNameId(PunktelisteNameId);
+            
+            Punkteliste.setPunktelisteNameId(punktelisteNameId);
             //Select Name der Firma
-            int kursgewinnverhaeltnisaktuell = scanner.nextInt();
             Punkteliste.setKursGewinnVerhaeltnisAktuell(kursgewinnverhaeltnisaktuell);
 
             //Beginn der Datenübertragung
@@ -208,7 +201,7 @@ import java.util.Scanner;
             // Übertragung bestätigen
             session.getTransaction().commit(); } finally{}}
 
-    public void DaoAnalysemeinungen() {
+    public void Analysemeinungen(String punktelisteNameId, float analysemeinungen) {
         //Logger wird für die Methode Delete ausgeführt
         logger.info("Logger is Entering the Execute method Update");
         String returnValue = "";
@@ -227,10 +220,9 @@ import java.util.Scanner;
             //Erzeugen eines Objektes vom Typen Punkteliste
             Punkteliste Punkteliste=new Punkteliste();
             //Select Primärschlüssel
-            String PunktelisteNameId = scanner.next();
-            Punkteliste.setPunktelisteNameId(PunktelisteNameId);
+            
+            Punkteliste.setPunktelisteNameId(punktelisteNameId);
             //Select Name der Firma
-            int analysemeinungen = scanner.nextInt();
             Punkteliste.setAnalystenmeinungen(analysemeinungen);
 
             //Beginn der Datenübertragung
@@ -240,7 +232,7 @@ import java.util.Scanner;
             // Übertragung bestätigen
             session.getTransaction().commit(); } finally{}}
 
-    public void DaoReaktionaufQuartalszahlen() {
+    public void ReaktionaufQuartalszahlen(String punktelisteNameId, float reaktionaufquartalszahlen) {
         //Logger wird für die Methode Delete ausgeführt
         logger.info("Logger is Entering the Execute method Update");
         String returnValue = "";
@@ -259,10 +251,9 @@ import java.util.Scanner;
             //Erzeugen eines Objektes vom Typen Punkteliste
             Punkteliste Punkteliste=new Punkteliste();
             //Select Primärschlüssel
-            String PunktelisteNameId = scanner.next();
-            Punkteliste.setPunktelisteNameId(PunktelisteNameId);
+            
+            Punkteliste.setPunktelisteNameId(punktelisteNameId);
             //Select Name der Firma
-            int reaktionaufquartalszahlen = scanner.nextInt();
             Punkteliste.setReaktionaufQuartalszahlen(reaktionaufquartalszahlen);
 
             //Beginn der Datenübertragung
@@ -272,7 +263,7 @@ import java.util.Scanner;
             // Übertragung bestätigen
             session.getTransaction().commit(); } finally{}}
 
-    public void DaoGewinnrevision() {
+    public void Gewinnrevision(String punktelisteNameId, float gewinnrevision) {
         //Logger wird für die Methode Delete ausgeführt
         logger.info("Logger is Entering the Execute method Update");
         String returnValue = "";
@@ -291,10 +282,9 @@ import java.util.Scanner;
             //Erzeugen eines Objektes vom Typen Punkteliste
             Punkteliste Punkteliste=new Punkteliste();
             //Select Primärschlüssel
-            String PunktelisteNameId = scanner.next();
-            Punkteliste.setPunktelisteNameId(PunktelisteNameId);
+            
+            Punkteliste.setPunktelisteNameId(punktelisteNameId);
             //Select Name der Firma
-            int gewinnrevision = scanner.nextInt();
             Punkteliste.setGewinnrevision(gewinnrevision);
 
             //Beginn der Datenübertragung
@@ -304,7 +294,7 @@ import java.util.Scanner;
             // Übertragung bestätigen
             session.getTransaction().commit(); } finally{}}
 
-    public void DaoKursverlauf6Monate() {
+    public void Kursverlauf6Monate(String punktelisteNameId, float kursverlauf6monate) {
         //Logger wird für die Methode Delete ausgeführt
         logger.info("Logger is Entering the Execute method Update");
         String returnValue = "";
@@ -323,10 +313,9 @@ import java.util.Scanner;
             //Erzeugen eines Objektes vom Typen Punkteliste
             Punkteliste Punkteliste=new Punkteliste();
             //Select Primärschlüssel
-            String PunktelisteNameId = scanner.next();
-            Punkteliste.setPunktelisteNameId(PunktelisteNameId);
+            
+            Punkteliste.setPunktelisteNameId(punktelisteNameId);
             //Select Name der Firma
-            int kursverlauf6monate = scanner.nextInt();
             Punkteliste.setKursverlauf6Monate(kursverlauf6monate);
 
             //Beginn der Datenübertragung
@@ -336,7 +325,7 @@ import java.util.Scanner;
             // Übertragung bestätigen
             session.getTransaction().commit(); } finally{}}
 
-    public void DaoKursverlauf12Monate() {
+    public void Kursverlauf12Monate(String punktelisteNameId, float kursverlauf12monate) {
         //Logger wird für die Methode Delete ausgeführt
         logger.info("Logger is Entering the Execute method Update");
         String returnValue = "";
@@ -355,10 +344,9 @@ import java.util.Scanner;
             //Erzeugen eines Objektes vom Typen Punkteliste
             Punkteliste Punkteliste=new Punkteliste();
             //Select Primärschlüssel
-            String PunktelisteNameId = scanner.next();
-            Punkteliste.setPunktelisteNameId(PunktelisteNameId);
+            
+            Punkteliste.setPunktelisteNameId(punktelisteNameId);
             //Select Name der Firma
-            int kursverlauf12monate = scanner.nextInt();
             Punkteliste.setKursverlauf12Monate(kursverlauf12monate);
 
             //Beginn der Datenübertragung
@@ -368,7 +356,7 @@ import java.util.Scanner;
             // Übertragung bestätigen
             session.getTransaction().commit(); } finally{}}
 
-    public void DaoKursmomentum() {
+    public void Kursmomentum(String punktelisteNameId, float kursmomentum) {
         //Logger wird für die Methode Delete ausgeführt
         logger.info("Logger is Entering the Execute method Update");
         String returnValue = "";
@@ -387,10 +375,9 @@ import java.util.Scanner;
             //Erzeugen eines Objektes vom Typen Punkteliste
             Punkteliste Punkteliste=new Punkteliste();
             //Select Primärschlüssel
-            String PunktelisteNameId = scanner.next();
-            Punkteliste.setPunktelisteNameId(PunktelisteNameId);
+            
+            Punkteliste.setPunktelisteNameId(punktelisteNameId);
             //Select Name der Firma
-            int kursmomentum = scanner.nextInt();
             Punkteliste.setKursmomentum(kursmomentum);
 
             //Beginn der Datenübertragung
@@ -400,7 +387,7 @@ import java.util.Scanner;
             // Übertragung bestätigen
             session.getTransaction().commit(); } finally{}}
 
-    public void DaoDreimonatsreversal() {
+    public void Dreimonatsreversal(String punktelisteNameId, float dreimonatsreversal) {
         //Logger wird für die Methode Delete ausgeführt
         logger.info("Logger is Entering the Execute method Update");
         String returnValue = "";
@@ -419,10 +406,9 @@ import java.util.Scanner;
             //Erzeugen eines Objektes vom Typen Punkteliste
             Punkteliste Punkteliste=new Punkteliste();
             //Select Primärschlüssel
-            String PunktelisteNameId = scanner.next();
-            Punkteliste.setPunktelisteNameId(PunktelisteNameId);
+            
+            Punkteliste.setPunktelisteNameId(punktelisteNameId);
             //Select Name der Firma
-            int dreimonatsreversal = scanner.nextInt();
             Punkteliste.setDreimonatsreversal(dreimonatsreversal);
 
             //Beginn der Datenübertragung
@@ -432,7 +418,7 @@ import java.util.Scanner;
             // Übertragung bestätigen
             session.getTransaction().commit(); } finally{}}
 
-    public void DaoGewinnwachstum() {
+    public void Gewinnwachstum(String punktelisteNameId, float gewinnwachstum) {
         //Logger wird für die Methode Delete ausgeführt
         logger.info("Logger is Entering the Execute method Update");
         String returnValue = "";
@@ -451,10 +437,9 @@ import java.util.Scanner;
             //Erzeugen eines Objektes vom Typen Punkteliste
             Punkteliste Punkteliste=new Punkteliste();
             //Select Primärschlüssel
-            String PunktelisteNameId = scanner.next();
-            Punkteliste.setPunktelisteNameId(PunktelisteNameId);
+            
+            Punkteliste.setPunktelisteNameId(punktelisteNameId);
             //Select Name der Firma
-            int gewinnwachstum = scanner.nextInt();
             Punkteliste.setGewinnwachstum(gewinnwachstum);
 
             //Beginn der Datenübertragung

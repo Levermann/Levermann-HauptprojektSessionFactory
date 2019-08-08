@@ -20,7 +20,7 @@ import java.util.Scanner;
 
     final static Logger logger = Logger.getLogger(Delete.class);
 
-    public void Dao() {
+    public void Unternehmen( String UnternehmennameId) {
 
     //Logger wird für die Methode Delete ausgeführt
     logger.info("Logger is Entering the Execute method Delete");
@@ -42,13 +42,8 @@ import java.util.Scanner;
        //Erzeugen eines Objektes vom Typen Unternehmen
         Unternehmen Unternehmen=new Unternehmen();
 
-        // Eingabeauforderung ID
-          //  int id = scanner.nextInt();
-            String UnternehmennameId = scanner.next();
-
-
-          //  Unternehmen.setUnternehmennameId(id); 
-          Unternehmen.setUnternehmennameId(UnternehmennameId);
+        //  Unternehmen.setUnternehmennameId(id);
+        Unternehmen.setUnternehmennameId(UnternehmennameId);
             
      // Verbingungsaufbau
         session.beginTransaction();

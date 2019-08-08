@@ -26,7 +26,7 @@ public class Analystenmeinungen {
 
   final static Logger logger = Logger.getLogger(Analystenmeinungen.class);
 
-  public void Gewinnrevision () {
+  public void Gewinnrevision (float gewinnrevision) {
       //Logger wird für die Methode ausgeführt
       logger.info("Logger is Entering the Execute method from Create");
       String returnValue = "";
@@ -75,7 +75,7 @@ public class Analystenmeinungen {
 
                         if (lvsch.getUnternehmenname_Levermannschritte() == un.getUnternehmenname() == true && i >= 0.05 == true){
                             System.out.println("Richtig :D" + lvsch.getUnternehmenname_Levermannschritte() +" = " + un.getUnternehmenname()+ "i = " + i);
-                            lvsch.setGewinnrevision(1); }
+                            lvsch.setGewinnrevision((float) 1); }
 
                     lvsch.setLevermannschrittAnalyseNameId(lvsch.getLevermannschrittAnalyseNameId());
                      // System.out.println("Unternehmen: " + un.getUnternehmenname()+ " Levermannschritt: " + lvsch.getUnternehmenname_Levermannschritte()() );
@@ -91,7 +91,7 @@ public class Analystenmeinungen {
                     for (Levermannschritte lvsch1 : unList1) {
 
                         if (lvsch1.getUnternehmenname_Levermannschritte() == un.getUnternehmenname() == true && i <= - 0.05 == true ){ System.out.println("Richtig :D" + lvsch1.getUnternehmenname_Levermannschritte() +" = " + un.getUnternehmenname() + "i = " + i);
-                            lvsch1.setGewinnrevision(-1); }
+                            lvsch1.setGewinnrevision((float) -1); }
 
                     lvsch1.setLevermannschrittAnalyseNameId(lvsch1.getLevermannschrittAnalyseNameId());
 
@@ -108,7 +108,7 @@ public class Analystenmeinungen {
 
                         if (lvsch1.getUnternehmenname_Levermannschritte() == un.getUnternehmenname() == true && i > 0.005 == false && i < -0.05 == false) {
                             System.out.println("Richtig :D" + lvsch1.getUnternehmenname_Levermannschritte() + " = " + un.getUnternehmenname() + "i = " + i);
-                            lvsch1.setGewinnrevision(0);}
+                            lvsch1.setGewinnrevision((float) 0);}
 
                         lvsch1.setLevermannschrittAnalyseNameId(lvsch1.getLevermannschrittAnalyseNameId());
                         //  System.out.println("Fall 3 : yea LevermannschrittAnalyseNameId:  " + lvsch1.getLevermannschrittAnalyseNameId() + " AM: " + lvsch1.getGewinnrevision());

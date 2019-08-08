@@ -147,11 +147,6 @@ public class Select{
 
      }
 
-
-
-
-
-
          final static Logger logger2 = Logger.getLogger(com.levermann.DatabaseStatements.Select.class);
 
          public void SelectLevermannschritteAlle () {

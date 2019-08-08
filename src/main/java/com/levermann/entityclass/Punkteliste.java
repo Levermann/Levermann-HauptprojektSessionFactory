@@ -25,49 +25,49 @@ import javax.persistence.OneToOne;
 
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id")
-    private Integer id;
+    private Float id;
 
     @Column(name = "Unternehmenname_Punkteliste")
     private String Unternehmenname_Punkteliste;
 
     @Column(name = "Eigenkapitalrendite")
-    private Integer Eigenkapitalrendite;
+    private Float Eigenkapitalrendite;
 
     @Column(name = "EBITMarge")
-    private Integer EBITMarge;
+    private Float EBITMarge;
 
     @Column(name = "Eigenkapitalquote")
-    private Integer Eigenkapitalquote;
+    private Float Eigenkapitalquote;
 
     @Column(name = "KursGewinnVerhaeltnis")
-    private Integer KursGewinnVerhaeltnis;
+    private Float KursGewinnVerhaeltnis;
 
     @Column(name = "KursGewinnVerhaeltnisAktuell")
-    private Integer KursGewinnVerhaeltnisAktuell;
+    private Float KursGewinnVerhaeltnisAktuell;
 
     @Column(name = "Analystenmeinungen")
-    private Integer Analystenmeinungen;
+    private Float Analystenmeinungen;
 
     @Column(name = "ReaktionaufQuartalszahlen")
-    private Integer ReaktionaufQuartalszahlen;
+    private Float ReaktionaufQuartalszahlen;
 
     @Column(name = "Gewinnrevision")
-    private Integer Gewinnrevision;
+    private Float Gewinnrevision;
 
     @Column(name = "Kursverlauf6Monate")
-    private Integer Kursverlauf6Monate;
+    private Float Kursverlauf6Monate;
 
     @Column(name = "Kursverlauf12Monate")
-    private Integer Kursverlauf12Monate;
+    private Float Kursverlauf12Monate;
 
     @Column(name = "Kursmomentum")
-    private Integer Kursmomentum;
+    private Float Kursmomentum;
 
     @Column(name = "Dreimonatsreversal")
-    private Integer Dreimonatsreversal;
+    private Float Dreimonatsreversal;
 
     @Column(name = "Gewinnwachstum")
-    private Integer Gewinnwachstum;
+    private Float Gewinnwachstum;
 
 
     public Punkteliste() {
@@ -89,107 +89,107 @@ import javax.persistence.OneToOne;
         Unternehmenname_Punkteliste = unternehmenname_Punkteliste;
     }
 
-    public Integer getEigenkapitalrendite() {
+    public Float getEigenkapitalrendite() {
         return Eigenkapitalrendite;
     }
 
-    public void setEigenkapitalrendite(Integer eigenkapitalrendite) {
+    public void setEigenkapitalrendite(Float eigenkapitalrendite) {
         Eigenkapitalrendite = eigenkapitalrendite;
     }
 
-    public Integer getEBITMarge() {
+    public Float getEBITMarge() {
         return EBITMarge;
     }
 
-    public void setEBITMarge(Integer EBITMarge) {
+    public void setEBITMarge(Float EBITMarge) {
         this.EBITMarge = EBITMarge;
     }
 
-    public Integer getEigenkapitalquote() {
+    public Float getEigenkapitalquote() {
         return Eigenkapitalquote;
     }
 
-    public void setEigenkapitalquote(Integer eigenkapitalquote) {
+    public void setEigenkapitalquote(Float eigenkapitalquote) {
         Eigenkapitalquote = eigenkapitalquote;
     }
 
-    public Integer getKursGewinnVerhaeltnis() {
+    public Float getKursGewinnVerhaeltnis() {
         return KursGewinnVerhaeltnis;
     }
 
-    public void setKursGewinnVerhaeltnis(Integer kursGewinnVerhaeltnis) {
+    public void setKursGewinnVerhaeltnis(Float kursGewinnVerhaeltnis) {
         KursGewinnVerhaeltnis = kursGewinnVerhaeltnis;
     }
 
-    public Integer getKursGewinnVerhaeltnisAktuell() {
+    public Float getKursGewinnVerhaeltnisAktuell() {
         return KursGewinnVerhaeltnisAktuell;
     }
 
-    public void setKursGewinnVerhaeltnisAktuell(Integer kursGewinnVerhaeltnisAktuell) {
+    public void setKursGewinnVerhaeltnisAktuell(Float kursGewinnVerhaeltnisAktuell) {
         KursGewinnVerhaeltnisAktuell = kursGewinnVerhaeltnisAktuell;
     }
 
-    public Integer getAnalystenmeinungen() {
+    public Float getAnalystenmeinungen() {
         return Analystenmeinungen;
     }
 
-    public void setAnalystenmeinungen(Integer analystenmeinungen) {
+    public void setAnalystenmeinungen(Float analystenmeinungen) {
         Analystenmeinungen = analystenmeinungen;
     }
 
-    public Integer getReaktionaufQuartalszahlen() {
+    public Float getReaktionaufQuartalszahlen() {
         return ReaktionaufQuartalszahlen;
     }
 
-    public void setReaktionaufQuartalszahlen(Integer reaktionaufQuartalszahlen) {
+    public void setReaktionaufQuartalszahlen(Float reaktionaufQuartalszahlen) {
         ReaktionaufQuartalszahlen = reaktionaufQuartalszahlen;
     }
 
-    public Integer getGewinnrevision() {
+    public Float getGewinnrevision() {
         return Gewinnrevision;
     }
 
-    public void setGewinnrevision(Integer gewinnrevision) {
+    public void setGewinnrevision(Float gewinnrevision) {
         Gewinnrevision = gewinnrevision;
     }
 
-    public Integer getKursverlauf6Monate() {
+    public Float getKursverlauf6Monate() {
         return Kursverlauf6Monate;
     }
 
-    public void setKursverlauf6Monate(Integer kursverlauf6Monate) {
+    public void setKursverlauf6Monate(Float kursverlauf6Monate) {
         Kursverlauf6Monate = kursverlauf6Monate;
     }
 
-    public Integer getKursverlauf12Monate() {
+    public Float getKursverlauf12Monate() {
         return Kursverlauf12Monate;
     }
 
-    public void setKursverlauf12Monate(Integer kursverlauf12Monate) {
+    public void setKursverlauf12Monate(Float kursverlauf12Monate) {
         Kursverlauf12Monate = kursverlauf12Monate;
     }
 
-    public Integer getKursmomentum() {
+    public Float getKursmomentum() {
         return Kursmomentum;
     }
 
-    public void setKursmomentum(Integer kursmomentum) {
+    public void setKursmomentum(Float kursmomentum) {
         Kursmomentum = kursmomentum;
     }
 
-    public Integer getDreimonatsreversal() {
+    public Float getDreimonatsreversal() {
         return Dreimonatsreversal;
     }
 
-    public void setDreimonatsreversal(Integer dreimonatsreversal) {
+    public void setDreimonatsreversal(Float dreimonatsreversal) {
         Dreimonatsreversal = dreimonatsreversal;
     }
 
-    public Integer getGewinnwachstum() {
+    public Float getGewinnwachstum() {
         return Gewinnwachstum;
     }
 
-    public void setGewinnwachstum(Integer gewinnwachstum) {
+    public void setGewinnwachstum(Float gewinnwachstum) {
         Gewinnwachstum = gewinnwachstum;
     }
 
@@ -205,11 +205,11 @@ import javax.persistence.OneToOne;
         PunktelisteNameId = PunktelisteNameId;
     }
 
-    public Integer getId() {
+    public Float getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(Float id) {
         this.id = id;
     }
 
