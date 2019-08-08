@@ -74,7 +74,7 @@ public class KursheuteggKursvor6Monaten {
 
                         if (lvsch.getUnternehmenname_Levermannschritte() == un.getUnternehmenname()  == true && i >= 0.05 == true) {
                             System.out.println("Richtig :D" + lvsch.getUnternehmenname_Levermannschritte() + " = " + un.getUnternehmenname()  + "i = " + i);
-                            lvsch.setKursverlauf6Monate(1);
+                            lvsch.setKursverlauf6Monate((float) 1);
                         }
 
                         lvsch.setLevermannschrittAnalyseNameId(lvsch.getLevermannschrittAnalyseNameId());
@@ -93,7 +93,7 @@ public class KursheuteggKursvor6Monaten {
 
                         if (lvsch1.getUnternehmenname_Levermannschritte() == un.getUnternehmenname()  == true && i <= -0.05 == true) {
                             System.out.println("Richtig :D" + lvsch1.getUnternehmenname_Levermannschritte() + " = " + un.getUnternehmenname()  + "i = " + i);
-                            lvsch1.setKursverlauf6Monate(-1);
+                            lvsch1.setKursverlauf6Monate((float) -1);
                         }
 
                         lvsch1.setLevermannschrittAnalyseNameId(lvsch1.getLevermannschrittAnalyseNameId());
@@ -113,7 +113,7 @@ public class KursheuteggKursvor6Monaten {
 
                         if (lvsch1.getUnternehmenname_Levermannschritte() == un.getUnternehmenname()  == true && i > 0.005 == false && i < -0.05 == false) {
                             System.out.println("Richtig :D" + lvsch1.getUnternehmenname_Levermannschritte() + " = " + un.getUnternehmenname()  + "i = " + i);
-                            lvsch1.setKursverlauf6Monate(0);
+                            lvsch1.setKursverlauf6Monate((float) 0);
                         }
 
                         lvsch1.setLevermannschrittAnalyseNameId(lvsch1.getLevermannschrittAnalyseNameId());

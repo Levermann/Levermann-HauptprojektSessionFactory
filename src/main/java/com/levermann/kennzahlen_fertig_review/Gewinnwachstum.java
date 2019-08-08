@@ -74,7 +74,7 @@ public class Gewinnwachstum {
 
                         if (lvsch.getUnternehmenname_Levermannschritte() == un.getUnternehmenname()  == true && i >= 0.05 == true) {
                             System.out.println("Richtig :D" + lvsch.getUnternehmenname_Levermannschritte() + " = " + un.getUnternehmenname()  + "i = " + i);
-                            lvsch.setGewinnwachstum(1);
+                            lvsch.setGewinnwachstum((float) 1);
                         }
 
                         lvsch.setLevermannschrittAnalyseNameId(lvsch.getLevermannschrittAnalyseNameId());
@@ -93,7 +93,7 @@ public class Gewinnwachstum {
 
                         if (lvsch1.getUnternehmenname_Levermannschritte() == un.getUnternehmenname()  == true && i <= -0.05 == true) {
                             System.out.println("Richtig :D" + lvsch1.getUnternehmenname_Levermannschritte() + " = " + un.getUnternehmenname()  + "i = " + i);
-                            lvsch1.setGewinnwachstum(-1);
+                            lvsch1.setGewinnwachstum((float) -1);
                         }
 
                         lvsch1.setLevermannschrittAnalyseNameId(lvsch1.getLevermannschrittAnalyseNameId());
@@ -112,7 +112,7 @@ public class Gewinnwachstum {
 
                         if (lvsch1.getUnternehmenname_Levermannschritte() == un.getUnternehmenname()  == true && i > 0.005 == false && i < -0.05 == false) {
                             System.out.println("Richtig :D" + lvsch1.getUnternehmenname_Levermannschritte() + " = " + un.getUnternehmenname()  + "i = " + i);
-                            lvsch1.setGewinnwachstum(0);
+                            lvsch1.setGewinnwachstum((float) 0);
                         }
 
                         lvsch1.setLevermannschrittAnalyseNameId(lvsch1.getLevermannschrittAnalyseNameId());

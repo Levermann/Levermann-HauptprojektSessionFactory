@@ -1,9 +1,22 @@
 <component name="libraryTable">
   <library name="java">
-    <CLASSES />
-    <JAVADOC />
+    <ANNOTATIONS>
+      <root url="file://C:/Program Files/maven" />
+    </ANNOTATIONS>
+    <CLASSES>
+      <root url="file://C:/Program Files/maven" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="file://C:/Program Files/maven" />
+    </JAVADOC>
+    <NATIVE>
+      <root url="file://C:/Program Files/maven" />
+    </NATIVE>
     <SOURCES>
       <root url="file://$PROJECT_DIR$/src/main/java" />
+      <root url="file://C:/Program Files/maven" />
     </SOURCES>
+    <jarDirectory url="file://C:/Program Files/maven" recursive="false" />
+    <jarDirectory url="file://C:/Program Files/maven" recursive="false" type="SOURCES" />
   </library>
 </component>

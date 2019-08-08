@@ -58,7 +58,7 @@ public class Kursmomentum {
 
                 if (un.getKursverlauf6Monate() == 1 == true && un.getKursverlauf12Monate() ==1 == false ){
 
-                    un.setKursmomentum(1);
+                    un.setKursmomentum((float) 1);
 
                     System.out.println("Fall 1 : yea LevermannschrittAnalyseNameId :  "+un.getLevermannschrittAnalyseNameId () +" AM: "+ un.getKursmomentum());
                 }
@@ -67,7 +67,7 @@ public class Kursmomentum {
                 if (un.getKursverlauf6Monate() == -1 == true && un.getKursverlauf12Monate() ==-1 == false ) {
 
                     {    // un.setLevermannschrittAnalyseNameId (un.getLevermannschrittAnalyseNameId ());
-                        un.setKursmomentum(-1);
+                        un.setKursmomentum((float) -1);
 
                         //   un.setAnalystenmeinungen(111);
                         System.out.println("Fall 2 : yea LevermannschrittAnalyseNameId :  " + un.getLevermannschrittAnalyseNameId () + " AM: " + un.getKursmomentum());
@@ -77,7 +77,7 @@ public class Kursmomentum {
                     if (un.getKursverlauf6Monate() == 0 == true ){
 
                     // un.setLevermannschrittAnalyseNameId (un.getLevermannschrittAnalyseNameId ());
-                    un.setKursmomentum(0);
+                    un.setKursmomentum((float) 0);
 
                     //   un.setAnalystenmeinungen(111);
                     System.out.println("Fall 3 : yea LevermannschrittAnalyseNameId :  "+un.getLevermannschrittAnalyseNameId () +" AM: "+ un.getKursmomentum());
@@ -86,14 +86,14 @@ public class Kursmomentum {
 
             if (un.getKursverlauf6Monate() == 1 == true && un.getKursverlauf12Monate() ==1 == true ){
 
-                un.setKursmomentum(0);
+                un.setKursmomentum((float) 0);
 
                 System.out.println("Fall 1 : yea LevermannschrittAnalyseNameId :  "+un.getLevermannschrittAnalyseNameId () +" AM: "+ un.getKursmomentum());
             }
 
                 if (un.getKursverlauf6Monate() == -1 == true && un.getKursverlauf12Monate() ==-1 == true ){
 
-                    un.setKursmomentum(0);
+                    un.setKursmomentum((float) 0);
 
                     System.out.println("Fall 1 : yea LevermannschrittAnalyseNameId :  "+un.getLevermannschrittAnalyseNameId () +" AM: "+ un.getKursmomentum());
                 }
