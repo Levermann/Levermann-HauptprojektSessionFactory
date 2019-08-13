@@ -3,14 +3,16 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.levermann.GuiNew;
+package Gui;
 
-import com.levermann.GuiNew.*;
+import com.levermann.DatabaseStatements.UpdateUnternehmenDB;
 import javafx.fxml.*;
 import javafx.scene.control.*;
+
+import java.awt.event.ActionEvent;
 import java.net.URL;
 import java.util.ResourceBundle;
-import javafx.event.ActionEvent;
+import javafx.fxml.FXMLLoader.*;
 
 
 
@@ -53,19 +55,19 @@ public class StartseiteController implements Initializable, ControlledScreenInte
      
     }
     
-//      @FXML
-//    private void (ActionEvent event){
-//        
-//       Update update = new Update();
-//        
-//       update.Unternehmen(Integer.parseInt(Unternehmen.getText()));
-//       
-//       
-//       
-//       myController.setScreen(com.levermann.GuiNew.screen0ID);
-//       
-//    }  
-    
+      @FXML
+    private void Jahresueberschuss(ActionEvent event){
+        
+       UpdateUnternehmenDB update = new UpdateUnternehmenDB();
+        
+       update.Jahresueberschuss("Bmw", 2000);
+       
+       
+       
+       myController.setScreen(JavaFXMain.screen0ID);
+       
+    }
+
 
 
 }

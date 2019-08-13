@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.levermann.GuiNew;
+package Gui;
 
 /**
  *
@@ -11,14 +11,35 @@ package com.levermann.GuiNew;
  */
 
 import javafx.beans.property.DoubleProperty;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.layout.StackPane;
 
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.MouseEvent;
 import java.util.HashMap;
 
 public class ScreensController extends StackPane{
+
+    @FXML
+    private TextField vornameTF;
+
+    @FXML
+    protected void go(ActionEvent event) {
+        vornameTF.setText("Button wurde gedrückt!");
+    }
+
+    @FXML
+    protected void enter(MouseEvent event) {
+        vornameTF.setText("Die Maus ist über den Button!");
+    }
+
+
+
+
     
     private HashMap<String, Node> screens = new HashMap<>();
     
@@ -117,5 +138,7 @@ public class ScreensController extends StackPane{
             return true;
         }
     }
-    
+
+    public void handleButtonClick(javafx.event.ActionEvent actionEvent) {
+    }
 }

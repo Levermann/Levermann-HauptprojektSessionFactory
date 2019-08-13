@@ -17,7 +17,7 @@ public class KursGewinnVerhältnis {
     
     final static Logger logger = Logger.getLogger(Eigenkapitalrendite.class);
 
-   public void Eigenkapitalrendite () {
+   public void KursGewinnVerhältnis () {
        //Logger wird für die Methode ausgeführt
        logger.info("Logger is Entering the Execute method from Create");
        String returnValue = "";

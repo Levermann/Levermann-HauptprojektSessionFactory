@@ -1,6 +1,8 @@
 package com.levermann.project;
 
+import com.levermann.DatabaseStatements.Create;
 import com.levermann.DatabaseStatements.Select;
+import com.levermann.kennzahlen_fertig_review.KursgewinnVerhaeltnis5Jahre;
 
 
 abstract public class ConnectionMainFactory  {
@@ -8,6 +10,15 @@ abstract public class ConnectionMainFactory  {
 
  @SuppressWarnings("empty-statement")
  public static void main(String[] args) {
+
+     Create crt = new Create();
+
+     crt.CreateLevermannanalyse("Analyse", "BMW");
+
+
+     //KursgewinnVerhaeltnis5Jahre kg5 = new KursgewinnVerhaeltnis5Jahre();
+
+//     kg5.KursgewinnVerhaeltnis5Jahre();
 
  //Zeigt Systeminfos auf
  // BasicConfigurator.configure();
@@ -48,8 +59,8 @@ abstract public class ConnectionMainFactory  {
 
     // d.CreateUnternehmen( "bmw", (float) 2000.00);
 
-     Select de = new Select();
-     de.SelectUnternehmenByName("bmw");
+     ///Select de = new Select();
+   //  de.SelectUnternehmenByName("bmw");
 
 
 

@@ -24,7 +24,7 @@ import java.util.Scanner;
 public class KursheuteggKursvor1Jahr {
     final static Logger logger = Logger.getLogger(KursheuteggKursvor1Jahr.class);
 
-    public void KursheuteggKursvor12Monaten() {
+    public void KursheuteggKursvor1Jahr() {
         //Logger wird für die Methode ausgeführt
         logger.info("Logger is Entering the Execute method from Create");
         String returnValue = "";
