@@ -6,7 +6,6 @@
 package LevermannTest;
 
 
-import com.mycompany.demo.*;
 import java.util.List;
 import java.util.Scanner;
 import org.hibernate.Query;

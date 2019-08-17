@@ -7,7 +7,6 @@
 
 package LevermannTest;
 
-import com.mycompany.demo.*;
 import java.util.logging.Logger;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
