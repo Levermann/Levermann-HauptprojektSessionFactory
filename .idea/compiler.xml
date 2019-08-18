@@ -6,12 +6,13 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="LevermannAnalyse" />
+        <module name="mavenJavaFXUI" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="LevermannAnalyse" target="1.8" />
       <module name="LMPOCTest" target="1.7" />
+      <module name="mavenJavaFXUI" target="11" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">

@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/LevermannAnalyse.iml" filepath="$PROJECT_DIR$/LevermannAnalyse.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mavenJavaFXUI/mavenJavaFXUI.iml" filepath="$PROJECT_DIR$/mavenJavaFXUI/mavenJavaFXUI.iml" />
     </modules>
   </component>
 </project>

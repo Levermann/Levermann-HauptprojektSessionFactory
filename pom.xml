@@ -4,7 +4,10 @@
     <groupId>com.levermann</groupId>
     <artifactId>LevermannAnalYse</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <packaging>jar</packaging>
+    <modules>
+        <module>mavenJavaFXUI</module>
+    </modules>
+    <packaging>pom</packaging>
     <repositories>
         <repository>
             <id>unknown-jars-temp-repo</id>
