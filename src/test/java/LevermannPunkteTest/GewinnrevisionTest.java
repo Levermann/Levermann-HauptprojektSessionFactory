@@ -1,8 +1,4 @@
 package LevermannPunkteTest;
-import static org.junit.Assert.*;
-
-import com.levermann.kennzahlen_fertig_review.Gewinnrevision;
-import org.junit.Test;
 
 public class GewinnrevisionTest {/*
     @Test
