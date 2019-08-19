@@ -4,24 +4,7 @@
     <option name="SCOPE_TYPE" value="3" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="71376cf0-4a45-4351-8dca-943cab88ca4d" name="Default Changelist" comment="Merge remote-tracking branch 'origin/LisaUpdate1908' into Sicherheitsbranch&#10;&#10;# Conflicts:&#10;#&#9;.idea/dataSources.local.xml&#10;#&#9;.idea/dataSources/b34121eb-3aed-44a8-9368-49552a11cff0.xml&#10;#&#9;.idea/workspace.xml&#10;#&#9;LevermannAnalyse.iml&#10;#&#9;mavenJavaFXUI/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst&#10;#&#9;src/main/java/com/levermann/entityclass/Punkteliste.java&#10;#&#9;src/main/java/com/levermann/entityclass/Unternehmen.java&#10;#&#9;src/main/java/com/levermann/kennzahlen_fertig_review/KursGewinnVerhältnis.java&#10;#&#9;src/main/java/com/levermann/keyFiguresForAnalysis/KursGewinnVerhaeltnis.java&#10;#&#9;src/main/java/com/levermann/keyFiguresForAnalysis/KursGewinnVerhältnis.java&#10;#&#9;src/main/java/com/levermann/keyFiguresForAnalysis/Kursmomentum.java&#10;#&#9;src/main/java/com/levermann/mainMethod/ConnectionMainFactory.java&#10;#&#9;src/main/java/com/levermann/sessionControlClasses/Create.java">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/levermann/keyFiguresForAnalysis/KursGewinnVerhaeltnis.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LevermannAnalyse.iml" beforeDir="false" afterPath="$PROJECT_DIR$/LevermannAnalyse.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/levermann/keyFiguresForAnalysis/Analystenmeinungen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/levermann/keyFiguresForAnalysis/Analystenmeinungen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/levermann/keyFiguresForAnalysis/Dreimonatsreversal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/levermann/keyFiguresForAnalysis/Dreimonatsreversal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/levermann/keyFiguresForAnalysis/Eigenkapitalquote.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/levermann/keyFiguresForAnalysis/Eigenkapitalquote.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/levermann/keyFiguresForAnalysis/Eigenkapitalrendite.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/levermann/keyFiguresForAnalysis/Eigenkapitalrendite.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/levermann/keyFiguresForAnalysis/GewinnEBIT.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/levermann/keyFiguresForAnalysis/GewinnEBIT.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/levermann/keyFiguresForAnalysis/Gewinnrevision.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/levermann/keyFiguresForAnalysis/Gewinnrevision.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/levermann/keyFiguresForAnalysis/Gewinnwachstum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/levermann/keyFiguresForAnalysis/Gewinnwachstum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/levermann/keyFiguresForAnalysis/KursGewinnVerhältnis.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/levermann/keyFiguresForAnalysis/KursgewinnVerhaeltnis5Jahre.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/levermann/keyFiguresForAnalysis/KursgewinnVerhaeltnis5Jahre.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/levermann/keyFiguresForAnalysis/KursheuteggKursvor1Jahr.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/levermann/keyFiguresForAnalysis/KursheuteggKursvor1Jahr.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/levermann/keyFiguresForAnalysis/KursheuteggKursvor6Monaten.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/levermann/keyFiguresForAnalysis/KursheuteggKursvor6Monaten.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/levermann/keyFiguresForAnalysis/Kursmomentum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/levermann/keyFiguresForAnalysis/Kursmomentum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/levermann/keyFiguresForAnalysis/ReaktionaufQuartalszahlen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/levermann/keyFiguresForAnalysis/ReaktionaufQuartalszahlen.java" afterDir="false" />
-    </list>
+    <list default="true" id="71376cf0-4a45-4351-8dca-943cab88ca4d" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -285,7 +268,17 @@
     <option name="allServicesViewState">
       <serviceView>
         <treeState>
-          <expand />
+          <expand>
+            <path>
+              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@72fb0205" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+            </path>
+            <path>
+              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@72fb0205" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@4da214b0" type="9fbbdea:ServiceModel$ServiceNode" />
+            </path>
+          </expand>
           <select />
         </treeState>
       </serviceView>
@@ -557,7 +550,14 @@
       <option name="project" value="LOCAL" />
       <updated>1566157136371</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="merged Florian and Lisa">
+      <created>1566226929039</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1566226929039</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -607,7 +607,8 @@
     <MESSAGE value="Perfect Project --Thanks @Lisa Stolz" />
     <MESSAGE value="deleted boolshit again" />
     <MESSAGE value="renamed packages and co" />
-    <option name="LAST_COMMIT_MESSAGE" value="renamed packages and co" />
+    <MESSAGE value="merged Florian and Lisa" />
+    <option name="LAST_COMMIT_MESSAGE" value="merged Florian and Lisa" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
