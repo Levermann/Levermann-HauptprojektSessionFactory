@@ -6,7 +6,7 @@ import javafx.fxml.FXML;
 public class EnterCompanyNameController {
 
     @FXML
-    private void switchToStartPage() throws IOException {
-        App.setRoot("startPage");
+    private void switchToInput() throws IOException {
+        App.setRoot("input");
     }
 }
