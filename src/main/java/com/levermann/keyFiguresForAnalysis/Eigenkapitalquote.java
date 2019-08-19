@@ -1,8 +1,8 @@
 package com.levermann.keyFiguresForAnalysis;
 
 import com.levermann.sessionControlClasses.HibernateUtil;
-import com.levermann.entityclass.Levermannschritte;
-import com.levermann.entityclass.Unternehmen;
+import com.levermann.entityclass.AnalysisRating;
+import com.levermann.entityclass.Company;
 import org.apache.log4j.Logger;
 import org.hibernate.HibernateException;
 import org.hibernate.Query;
@@ -22,7 +22,7 @@ public class Eigenkapitalquote {
        logger.info("Logger is Entering the Execute method from Create");
        String returnValue = "";
 
-       System.out.println(" Bitte \n 1. Unternehmen \n 2. Datum \n 3. Eigenkapital \n 4. JahresÃ¼berschuss");
+       System.out.println(" Bitte \n 1. Company \n 2. Datum \n 3. Eigenkapital \n 4. JahresÃ¼berschuss");
 
        //Aufrufen der aktuellen Session aus HibernateUtil
        SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
@@ -33,27 +33,27 @@ public class Eigenkapitalquote {
        try {
 
             //create a unternehmen object
-           System.out.println("Creating new Unternehmen Object");
+           System.out.println("Creating new Company Object");
            // Hinzufügen
            logger.info("Logger for Create was saved successfull");
 
            // start a transaction
            session.beginTransaction();
 
-           //HQL Named Query FindAll Unternehmen
-           Query query = session.getNamedQuery("Unternehmen.findAll");
-           List<Unternehmen> unList = (List<Unternehmen>) query.list();
-           for (Unternehmen un : unList) {
+           //HQL Named Query FindAll Company
+           Query query = session.getNamedQuery("Company.findAll");
+           List<Company> unList = (List<Company>) query.list();
+           for (Company un : unList) {
 
                // Berechnung der Eigenkapitalrendite für Punkteverteilung
-              float i;
-              i =  ((float)un.getEigenkapital()/(float)un.getEigenkapital() + (float)un.getJahresumsatz());
+              float eigenkapitalquotePkt;
+             eigenkapitalquotePkt=  ((float)un.getEigenkapital()/(float)un.getEigenkapital() + (float)un.getJahresumsatz());
                DecimalFormat f = new DecimalFormat("#0.00");
-               double toFormat = ((double)Math.round(i*100))/100;
+               double toFormat = ((double)Math.round(eigenkapitalquotePkt*100))/100;
                f.format(toFormat);
 
                 // Aufrunden
-               i = Math.round(i);
+              eigenkapitalquotePkt= Math.round(eigenkapitalquotePkt);
                
                //definiere beide bewertungskriterien
                //BENÖTIGE WERT IN UNTERNEHMENSKLASSE 
@@ -66,63 +66,63 @@ public class Eigenkapitalquote {
                     upperLimit = (float)0.25;
                     lowerLimit = (float)0.15;
                 }
-                float retval = Float.compare(i, upperLimit);
+                float retval = Float.compare(eigenkapitalquotePkt, upperLimit);
                
                // FAll 1, Eigenkapitalquote ist größer als 25/10%
                  if (retval > 0){
 
-                     //HQL Named Query FindAll Levermannschritte
-                     Query query1 = session.getNamedQuery("Levermannschritte.findAll");
-                     List<Levermannschritte> unList1 = (List<Levermannschritte>) query1.list();
-                     for (Levermannschritte lvsch : unList1) {
+                     //HQL Named Query FindAll AnalysisRating
+                     Query query1 = session.getNamedQuery("AnalysisRating.findAll");
+                     List<AnalysisRating> unList1 = (List<AnalysisRating>) query1.list();
+                     for (AnalysisRating lvsch : unList1) {
 
-                         if (lvsch.getUnternehmenname_Levermannschritte() == un.getUnternehmenname()  == true && retval > 0){
-                             System.out.println("Richtig :D" + lvsch.getUnternehmenname_Levermannschritte() +" = " + un.getUnternehmenname() + "i = " + i);
+                         if (lvsch.getCompanyname_AnalysisRating() == un.getCompanyname()  == true && retval > 0){
+                             System.out.println("Richtig :D" + lvsch.getCompanyname_AnalysisRating() +" = " + un.getCompanyname() + "eigenkapitalquotePkt = " + eigenkapitalquotePkt);
                              lvsch.setEigenkapitalrendite((float) 1); }
 
-                     lvsch.setLevermannschrittAnalyseNameId(lvsch.getLevermannschrittAnalyseNameId());
-                      // System.out.println("Unternehmen: " + un.getUnternehmenname() + " Levermannschritt: " + lvsch.getUnternehmenname_Levermannschritte()() );
-                      // System.out.println("Fall 1 : yea LevermannschrittAnalyseNameId:  "+lvsch.getLevermannschrittAnalyseNameId() +" AM: "+ lvsch.getGewinnrevision());
+                     lvsch.setAnalysisRatingName(lvsch.getAnalysisRatingName());
+                      // System.out.println("Company: " + un.getCompanyname() + " Levermannschritt: " + lvsch.getCompanyname_AnalysisRating()() );
+                      // System.out.println("Fall 1 : yea AnalysisRatingName:  "+lvsch.getAnalysisRatingName() +" AM: "+ lvsch.getGewinnrevision());
                          }
                  //Eigenkapitalquote ist kleiner als 25/10%
                  }else{
                     
                  //überprüfe untere grenze
-                 retval = Float.compare(i, lowerLimit);
+                 retval = Float.compare(eigenkapitalquotePkt, lowerLimit);
                // FAll 2, Eigenkapitalquote liegt zwishen 25/10 und 15/5 Prozent
                  if (retval >= 0 ) {
 
-                     //HQL Named Query FindAll Levermannschritte
-                     Query query1 = session.getNamedQuery("Levermannschritte.findAll");
-                     List<Levermannschritte> unList1 = (List<Levermannschritte>) query1.list();
-                     for (Levermannschritte lvsch1 : unList1) {
+                     //HQL Named Query FindAll AnalysisRating
+                     Query query1 = session.getNamedQuery("AnalysisRating.findAll");
+                     List<AnalysisRating> unList1 = (List<AnalysisRating>) query1.list();
+                     for (AnalysisRating lvsch1 : unList1) {
 
-                         if (lvsch1.getUnternehmenname_Levermannschritte() == un.getUnternehmenname()  == true && retval >= 0 ){
-                             System.out.println("Richtig :D" + lvsch1.getUnternehmenname_Levermannschritte() +" = " + un.getUnternehmenname()  + "i = " + i);
+                         if (lvsch1.getCompanyname_AnalysisRating() == un.getCompanyname()  == true && retval >= 0 ){
+                             System.out.println("Richtig :D" + lvsch1.getCompanyname_AnalysisRating() +" = " + un.getCompanyname()  + "eigenkapitalquotePkt = " + eigenkapitalquotePkt);
                              lvsch1.setEigenkapitalrendite((float) 0); }
 
-                     lvsch1.setLevermannschrittAnalyseNameId(lvsch1.getLevermannschrittAnalyseNameId());
+                     lvsch1.setAnalysisRatingName(lvsch1.getAnalysisRatingName());
 
-                   //  System.out.println("Unternehmen: " + un.getUnternehmenname()  + " Levermannschritt: " + lvsch1.getUnternehmenname_Levermannschritte()());
-                   //  System.out.println("Fall 2 : yea LevermannschrittAnalyseNameId:  " + lvsch1.getLevermannschrittAnalyseNameId() + " AM: " + lvsch1.getGewinnrevision());
+                   //  System.out.println("Company: " + un.getCompanyname()  + " Levermannschritt: " + lvsch1.getCompanyname_AnalysisRating()());
+                   //  System.out.println("Fall 2 : yea AnalysisRatingName:  " + lvsch1.getAnalysisRatingName() + " AM: " + lvsch1.getGewinnrevision());
                        }
                      //Fall 3, Eigenkapitalquote liegt unter 15/5%
                  }else{
 
-                     //HQL Named Query FindAll Levermannschritte
-                     Query query1 = session.getNamedQuery("Levermannschritte.findAll");
-                     List<Levermannschritte> unList1 = (List<Levermannschritte>) query1.list();
-                     for (Levermannschritte lvsch1 : unList1) {
+                     //HQL Named Query FindAll AnalysisRating
+                     Query query1 = session.getNamedQuery("AnalysisRating.findAll");
+                     List<AnalysisRating> unList1 = (List<AnalysisRating>) query1.list();
+                     for (AnalysisRating lvsch1 : unList1) {
 
-                         if (lvsch1.getUnternehmenname_Levermannschritte() == un.getUnternehmenname()  == true) {
-                             System.out.println("Richtig :D" + lvsch1.getUnternehmenname_Levermannschritte() + " = " + un.getUnternehmenname()  + "i = " + i);
+                         if (lvsch1.getCompanyname_AnalysisRating() == un.getCompanyname()  == true) {
+                             System.out.println("Richtig :D" + lvsch1.getCompanyname_AnalysisRating() + " = " + un.getCompanyname()  + "eigenkapitalquotePkt = " + eigenkapitalquotePkt);
                              lvsch1.setEigenkapitalrendite((float) -1);}
 
-                         lvsch1.setLevermannschrittAnalyseNameId(lvsch1.getLevermannschrittAnalyseNameId());
-                         //  System.out.println("Fall 3 : yea LevermannschrittAnalyseNameId:  " + lvsch1.getLevermannschrittAnalyseNameId() + " AM: " + lvsch1.getGewinnrevision());
+                         lvsch1.setAnalysisRatingName(lvsch1.getAnalysisRatingName());
+                         //  System.out.println("Fall 3 : yea AnalysisRatingName:  " + lvsch1.getAnalysisRatingName() + " AM: " + lvsch1.getGewinnrevision());
                      }
-                          //    System.out.println("Liste der Levermannschritte = " + un.getUnternehmenname()  + ","
-                         //       + un.getUnternehmenname()  + " Kursgewinn aktuell: " + un.getGewinnschaezung() + " Kursgewinn Verhältniss: " + un.getGewinnschaezungVor4Wochen() + " summe:" + i);
+                          //    System.out.println("Liste der AnalysisRating = " + un.getCompanyname()  + ","
+                         //       + un.getCompanyname()  + " Kursgewinn aktuell: " + un.getGewinnschaezung() + " Kursgewinn Verhältniss: " + un.getGewinnschaezungVor4Wochen() + " summe:" + i);
                  }
                  }
            }
@@ -132,7 +132,7 @@ public class Eigenkapitalquote {
            session.getTransaction().commit();
 
                  // safe Unternhemen Object
-           System.out.println("Speichere Unternehmen...");
+           System.out.println("Speichere Company...");
 
            System.out.println("Done!");
        } catch (HibernateException e) {

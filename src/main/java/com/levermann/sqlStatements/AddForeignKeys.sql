@@ -1,13 +1,13 @@
-alter table levermannschritte
-    add constraint levermannschritte_unternehmen_name_fk
-        foreign key (Unternehmenname_Levermannschritte) references unternehmen (UnternehmennameId);
+alter table AnalysisRating
+    add constraint AnalysisRating_unternehmen_name_fk
+        foreign key (Companyname_AnalysisRating) references company (Companyname);
 
-alter table punkteliste
+alter table AnalysisSteps
     add constraint punkteliste_unternehmen_name_fk
-        foreign key (Unternehmenname_Punkteliste) references unternehmen (UnternehmennameId);
+        foreign key (Companyname_AnalysisSteps) references company (Companyname);
 
-ALTER TABLE `levermannschritte` CHANGE `id` `id` FLOAT NULL DEFAULT NULL AUTO_INCREMENT;
+ALTER TABLE `analysisrating` CHANGE `id` `id` FLOAT NULL DEFAULT NULL AUTO_INCREMENT;
 
-ALTER TABLE `punkteliste` CHANGE `id` `id` FLOAT NULL DEFAULT NULL AUTO_INCREMENT;
+ALTER TABLE `analysissteps` CHANGE `id` `id` FLOAT NULL DEFAULT NULL AUTO_INCREMENT;
 
-ALTER TABLE `unternehmen` CHANGE `id` `id` FLOAT NULL DEFAULT NULL AUTO_INCREMENT;
+ALTER TABLE `company` CHANGE `id` `id` FLOAT NULL DEFAULT NULL AUTO_INCREMENT;

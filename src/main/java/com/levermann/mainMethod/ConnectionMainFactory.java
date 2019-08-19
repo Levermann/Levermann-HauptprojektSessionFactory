@@ -1,7 +1,7 @@
 package com.levermann.mainMethod;
 
-import com.levermann.entityclass.Unternehmen;
 import com.levermann.sessionControlClasses.Create;
+import org.apache.log4j.BasicConfigurator;
 
 
 abstract public class ConnectionMainFactory  {
@@ -9,7 +9,7 @@ abstract public class ConnectionMainFactory  {
 
  @SuppressWarnings("empty-statement")
  public static void main(String[] args) {
-
+     BasicConfigurator.configure();
      //KursgewinnVerhaeltnis5Jahre kg5 = new KursgewinnVerhaeltnis5Jahre();
 
 //     kg5.KursgewinnVerhaeltnis5Jahre();
@@ -39,8 +39,8 @@ abstract public class ConnectionMainFactory  {
   //   Update drm = new Update();
 
     // drm.DaoJahresueberschuss("bmw11", 2000);
-        Create company = new Create();
-        company.CreateUnternehmen("AppleAG", (float) 8905.43);
+        Create CreateAnalysisRating = new Create();
+     CreateAnalysisRating.CreateAnalysisRating("AppleAG");
 //     Create d = new Create();
 
     // d.CreateUnternehmen( "bmw", (float) 2000.00);

@@ -6,9 +6,9 @@
     <persistence-unit name="HibernatePersistenzEM" transaction-type="JTA">
     <provider>org.hibernate.ejb.HibernatePersistence</provider>
     <jta-data-source>java:/DefaultDS</jta-data-source>
-    <class>com.levermann.entityclass.Unternehmen</class>
-    <class>com.levermann.entityclass.Punkteliste</class>
-        <class>com.levermann.entityclass.Levermannschritte</class>
+    <class>com.levermann.entityclass.Company</class>
+    <class>com.levermann.entityclass.AnalysisSteps</class>
+        <class>com.levermann.entityclass.AnalysisRating</class>
 
         <properties>
             <property name="hibernate.connection.driver_class" value="com.mysql.jdbc.Driver"/>
