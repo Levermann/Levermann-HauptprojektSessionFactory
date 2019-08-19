@@ -69,6 +69,14 @@ import java.io.Serializable;
     @Column(name = "Gewinnwachstum", unique = true, nullable = true)
     private Float Gewinnwachstum;
 
+    @ManyToOne
+    @JoinColumn(name = "UnternehmennameId")
+    private Unternehmen unternehmen;
+
+    public Levermannschritte(Unternehmen unternehmen) {
+        this.unternehmen = unternehmen;
+    }
+
 
     public String getLevermannschrittAnalyseNameId() {
         return LevermannschrittAnalyseNameId;

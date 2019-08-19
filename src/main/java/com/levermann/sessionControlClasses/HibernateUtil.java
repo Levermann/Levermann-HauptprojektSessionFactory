@@ -1,13 +1,48 @@
 package com.levermann.sessionControlClasses;
 
+import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
+
+import javax.imageio.spi.ServiceRegistry;
+import java.util.logging.Logger;
 
 public class HibernateUtil {
 
-    private static final SessionFactory sessionFactory = buildSessionFactory();
+    private static SessionFactory sessionFactory = buildSessionFactory();
 
     private static SessionFactory buildSessionFactory() {
+        try {
+            if (sessionFactory == null) {
+                Configuration configuration = new Configuration().configure(HibernateUtil.class.getResource("/hibernate.cfg.xml"));
+                StandardServiceRegistryBuilder serviceRegistryBuilder = new StandardServiceRegistryBuilder();
+                serviceRegistryBuilder.applySettings(configuration.getProperties());
+                ServiceRegistry serviceRegistry = (ServiceRegistry) serviceRegistryBuilder.build();
+                sessionFactory = configuration.buildSessionFactory((org.hibernate.service.ServiceRegistry) serviceRegistry);
+            }
+            return sessionFactory;
+        } catch (Throwable ex) {
+            System.err.println("Initial SessionFactory creation failed" + ex);
+            throw new ExceptionInInitializerError(ex);
+        }
+    }
+    public static SessionFactory getSessionFactory() {
+        return sessionFactory;
+    }
+    public static void shutdown() {
+        // Close caches and connection pools
+        getSessionFactory().close();
+
+    }
+    private static Transaction getTransaction() throws Exception{
+        Session s = getSessionFactory().getCurrentSession();
+        Transaction transaction = s.beginTransaction();
+        transaction.setTimeout(12);
+        return transaction;
+    }
+      /*
         try {
             // Create the SessionFactory from hibernate.cfg.xml
             SessionFactory sessionFactory = new Configuration().configure().buildSessionFactory();
@@ -28,4 +63,6 @@ public class HibernateUtil {
         // Close caches and connection pools
         getSessionFactory().close();
     }
-}
+
+  */
+    }

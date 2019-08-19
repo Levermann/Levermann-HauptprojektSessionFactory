@@ -6,32 +6,47 @@
 package com.levermann.sessionControlClasses;
 
 
-import com.levermann.entityclass.Levermannschritte;
 import com.levermann.entityclass.Punkteliste;
 import com.levermann.entityclass.Unternehmen;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
-import org.hibernate.HibernateException;
 import org.apache.log4j.Logger;
-
-
-import java.util.Scanner;
 
 public class Create {
 
     final static Logger logger1 = Logger.getLogger(Create.class);
 
-    public void CreateUnternehmen( String name, Float  eigenkapital) {
+    public void CreateUnternehmen(String name, Float eigenkapital) {
 
         //Logger wird für die Methode ausgeführt
         logger1.info("Logger is Entering the Execute method from Create");
         String returnValue = "";
 
         //Aufrufen der aktuellen Session aus HibernateUtil
-        SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
-        Session session = sessionFactory.getCurrentSession();
+        SessionFactory sessionOne = (SessionFactory) HibernateUtil.getSessionFactory().openSession();
+        sessionOne.getCurrentSession().beginTransaction();
 
-        try {
+        Unternehmen unternehmen = new Unternehmen();
+        unternehmen.setUnternehmenname("AppleAG");
+        unternehmen.setEigenkapital(12543);
+
+        Punkteliste punkteliste = new Punkteliste();
+        punkteliste.setUnternehmenname_Punkteliste("AppleAG");
+
+        Integer generateUnternehmenId = unternehmen.getId();
+        Float generatePunktelisteId = punkteliste.getId();
+
+        Session sessionTwo = HibernateUtil.getSessionFactory().openSession();
+        sessionTwo.beginTransaction();
+        Unternehmen unternehmen1 = (Unternehmen) sessionTwo.get(Unternehmen.class, generateUnternehmenId);
+        Punkteliste punkteliste1 = (Punkteliste) sessionTwo.get(Punkteliste.class, generatePunktelisteId);
+
+        System.out.println(unternehmen.getId());
+
+        HibernateUtil.shutdown();
+    }
+}
+   /*     try {
             Scanner scanner = new Scanner(System.in);
             //    String datum = scanner.next();
 
@@ -64,6 +79,8 @@ public class Create {
             session.getTransaction().rollback();
             throw new RuntimeException(e);
         } finally {}
+
+
 
 
 
@@ -113,7 +130,9 @@ public class Create {
         throw new RuntimeException(e);
     } finally {}
 
+
     }
+
 
     public void CreateLevermannanalyse(String Analysename, String Firmenname ) {
 
@@ -161,6 +180,6 @@ public class Create {
             throw new RuntimeException(e);
         } finally {}
 
-    }
+    }}
+ */
 
-}

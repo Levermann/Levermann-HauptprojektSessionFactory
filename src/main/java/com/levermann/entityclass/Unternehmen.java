@@ -2,13 +2,14 @@ package com.levermann.entityclass;
 
 import javax.persistence.*;
 import java.io.Serializable;
-import java.util.Objects;
+import java.util.List;
 import javax.inject.Named;
 import javax.annotation.ManagedBean;
 
 @Named
 @ManagedBean
 @Entity
+@Table(name = "unternehmen")
 @Access(AccessType.FIELD)
 //@Table(name="unternehmen")
 @NamedQueries({
@@ -29,7 +30,9 @@ public class Unternehmen implements Serializable  {
         this.jahresueberschuss = jahresueberschuss;
     }*/
 
-    public Unternehmen() {}
+    public Unternehmen(List punktelistes) {
+        this.punktelistes = punktelistes;
+    }
 
 
 
@@ -139,6 +142,16 @@ public class Unternehmen implements Serializable  {
 
     @Column(name="KursgewinnschaezungNaechstesJahr", unique = true, nullable = true)
     private Integer KursgewinnschaezungNaechstesJahr;
+//association One To Many: One Company to Many Punktelisten
+    @OneToMany
+    private List<Punkteliste> punktelistes;
+
+    public Unternehmen() {
+
+    }
+
+    @OneToMany
+    private List<Levermannschritte> levermannschrittes;
 
     public String getUnternehmenname() {
         return UnternehmennameId;

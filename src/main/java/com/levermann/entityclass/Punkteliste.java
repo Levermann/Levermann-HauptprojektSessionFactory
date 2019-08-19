@@ -2,13 +2,10 @@ package com.levermann.entityclass;
 
 import javax.persistence.*;
 import java.io.Serializable;
-import javax.persistence.OneToOne;
-
 
 
 @Entity
 @Access(AccessType.FIELD)
-//@Table(name="unternehmen")
 @NamedQueries({
         @NamedQuery(name = "Punkteliste.findall", query = "SELECT A FROM Punkteliste A"),
         @NamedQuery(name = "Punkteliste.findById", query = "SELECT c FROM Punkteliste c WHERE c.id =:id")
@@ -16,7 +13,6 @@ import javax.persistence.OneToOne;
 })
 @Table(name="punkteliste")
  public class Punkteliste implements Serializable {
-
 
 
     @Id
@@ -69,13 +65,19 @@ import javax.persistence.OneToOne;
     @Column(name = "Gewinnwachstum")
     private Float Gewinnwachstum;
 
+    @ManyToOne
+    @JoinColumn(name = "UnternehmennameId")
+    private Unternehmen unternehmen;
+    private Object Punkteliste;
 
-    public Punkteliste() {
+    public Punkteliste(Unternehmen unternehmen) {
+        this.unternehmen = unternehmen;
     }
 
+    public Punkteliste() {
 
-    @ManyToOne(optional = false)
-    private Unternehmen Punkteliste;
+    }
+
 
     public String getPunktelisteNameId() {
         return PunktelisteNameId;
@@ -194,7 +196,7 @@ import javax.persistence.OneToOne;
     }
 
     public Unternehmen getPunkteliste() {
-        return Punkteliste;
+        return (Unternehmen) Punkteliste;
     }
 
     public void setPunkteliste(Unternehmen punkteliste) {

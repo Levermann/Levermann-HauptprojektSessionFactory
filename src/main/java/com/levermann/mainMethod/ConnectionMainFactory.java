@@ -1,5 +1,6 @@
 package com.levermann.mainMethod;
 
+import com.levermann.entityclass.Unternehmen;
 import com.levermann.sessionControlClasses.Create;
 
 
@@ -8,11 +9,6 @@ abstract public class ConnectionMainFactory  {
 
  @SuppressWarnings("empty-statement")
  public static void main(String[] args) {
-
-     Create crt = new Create();
-
-     crt.CreateLevermannanalyse("Analyse", "BMW");
-
 
      //KursgewinnVerhaeltnis5Jahre kg5 = new KursgewinnVerhaeltnis5Jahre();
 
@@ -24,15 +20,6 @@ abstract public class ConnectionMainFactory  {
   // Gibt die Methoden aus dem Interface aus
 
 
-    // DaoUnternehmen dao0= new Create();
-    // dao0.Dao();
-
-
-     // DaoUnternehmen dao1= new Delete();
-     //dao1.Dao();
-
-     // DaoUnternehmen dao2= new Update();
-     // dao2.Dao();
 
    //  Gewinnrevision gwr = new Gewinnrevision();
   //   gwr.Gewinnrevision();
@@ -52,7 +39,8 @@ abstract public class ConnectionMainFactory  {
   //   Update drm = new Update();
 
     // drm.DaoJahresueberschuss("bmw11", 2000);
-
+        Create company = new Create();
+        company.CreateUnternehmen("AppleAG", (float) 8905.43);
 //     Create d = new Create();
 
     // d.CreateUnternehmen( "bmw", (float) 2000.00);
