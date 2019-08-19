@@ -3,10 +3,10 @@ package com.levermann;
 import java.io.IOException;
 import javafx.fxml.FXML;
 
-public class SecondaryController {
+public class EnterCompanyNameController {
 
     @FXML
-    private void switchToPrimary() throws IOException {
+    private void switchToStartPage() throws IOException {
         App.setRoot("startPage");
     }
 }

@@ -10,8 +10,8 @@ import javafx.scene.layout.*;
 public class StartPageController {
 
     @FXML
-    private void switchToSecondary() throws IOException {
-        App.setRoot("secondary");
+    private void switchToEnterCompanyName() throws IOException {
+        App.setRoot("enterCompanyName");
 
         Image imageBackground = new Image(getClass().getResource("pictures/aktienchart.png").toExternalForm());
         BackgroundImage backgroundImage = new BackgroundImage(imageBackground, BackgroundRepeat.NO_REPEAT,
