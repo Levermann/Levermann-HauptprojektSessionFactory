@@ -102,8 +102,236 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
+<<<<<<< Updated upstream
   <component name="ProjectReloadState">
     <option name="STATE" value="1" />
+=======
+  <component name="ProjectId" id="1PeDkN0FyTGBbY8GJtuEG5yASyE" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope">
+        <subPane subId="Scope 'Tests'; set:Tests; class com.intellij.psi.search.scope.TestsScope">
+          <expand>
+            <path>
+              <item name="LevermannAnalYse" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="LevermannAnalyse" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+            </path>
+            <path>
+              <item name="LevermannAnalYse" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="LevermannAnalyse" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="LevermannAnalYse" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="LevermannAnalyse" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="test" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="LevermannAnalYse" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="LevermannAnalyse" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="test" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="LevermannAnalYse" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="LevermannAnalyse" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="test" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="LevermannTest" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+        <subPane subId="Scope 'Problems'; set:Problems; class com.intellij.psi.search.scope.ProblemsScope">
+          <expand>
+            <path>
+              <item name="LevermannAnalYse" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="LevermannAnalyse" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+            </path>
+            <path>
+              <item name="LevermannAnalYse" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="LevermannAnalyse" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="LevermannAnalYse" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="LevermannAnalyse" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="LevermannAnalYse" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="LevermannAnalyse" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="LevermannAnalYse" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="LevermannAnalyse" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="com" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="LevermannAnalYse" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="LevermannAnalyse" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="com" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="levermann" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="LevermannAnalYse" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="LevermannAnalyse" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="com" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="levermann" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="dao" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="LevermannAnalyse" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Hauptprojekt" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="LevermannAnalyse" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Hauptprojekt" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="LevermannAnalyse" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Hauptprojekt" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="LevermannAnalyse" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Hauptprojekt" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="LevermannAnalyse" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Hauptprojekt" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="levermann" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="LevermannAnalyse" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Hauptprojekt" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="levermann" type="462c0819:PsiDirectoryNode" />
+              <item name="dao" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="LevermannAnalyse" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Hauptprojekt" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="levermann" type="462c0819:PsiDirectoryNode" />
+              <item name="entityclass" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="LevermannAnalyse" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Hauptprojekt" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="levermann" type="462c0819:PsiDirectoryNode" />
+              <item name="Gui" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="LevermannAnalyse" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Hauptprojekt" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="levermann" type="462c0819:PsiDirectoryNode" />
+              <item name="Gui" type="462c0819:PsiDirectoryNode" />
+              <item name="LevermannGUI" type="e9f4de52:FormNode" />
+            </path>
+            <path>
+              <item name="LevermannAnalyse" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Hauptprojekt" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="levermann" type="462c0819:PsiDirectoryNode" />
+              <item name="kennzahlen" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="LevermannAnalyse" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Hauptprojekt" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="levermann" type="462c0819:PsiDirectoryNode" />
+              <item name="kennzahlen_fertig_review" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="LevermannAnalyse" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Hauptprojekt" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="levermann" type="462c0819:PsiDirectoryNode" />
+              <item name="project" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="LevermannAnalyse" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Hauptprojekt" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="levermann" type="462c0819:PsiDirectoryNode" />
+              <item name="TestFiles" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="LevermannAnalyse" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Hauptprojekt" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="LevermannAnalyse" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Hauptprojekt" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="META-INF" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+>>>>>>> Stashed changes
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
