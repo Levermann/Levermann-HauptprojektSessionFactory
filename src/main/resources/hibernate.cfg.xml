@@ -16,15 +16,15 @@
     <property name="show_sql">true</property>
     <!-- List of XML mapping files -->
     <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
-
+    <property name="hbm2ddl.auto">update</property>
       <!--  Put other elements here -->
     <property name="hibernate.current_session_context_class">
       org.hibernate.context.internal.ThreadLocalSessionContext
     </property>
       <mapping package="com.levermann"/>
-    <mapping class="com.levermann.entityclass.Levermannschritte"/>
-    <mapping class="com.levermann.entityclass.Unternehmen"/>
-     <mapping class="com.levermann.entityclass.Punkteliste"/>
+    <mapping class="com.levermann.entityclass.AnalysisRating"/>
+    <mapping class="com.levermann.entityclass.Company"/>
+     <mapping class="com.levermann.entityclass.AnalysisSteps"/>
 
   </session-factory>
 </hibernate-configuration>

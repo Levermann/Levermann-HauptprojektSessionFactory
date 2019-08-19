@@ -7,88 +7,35 @@ import java.io.Serializable;
 @Entity
 @Access(AccessType.FIELD)
 @NamedQueries({
-        @NamedQuery(name = "Punkteliste.findall", query = "SELECT A FROM Punkteliste A"),
-        @NamedQuery(name = "Punkteliste.findById", query = "SELECT c FROM Punkteliste c WHERE c.id =:id")
+        @NamedQuery(name = "AnalysisSteps.findall", query = "SELECT A FROM AnalysisSteps A"),
+        @NamedQuery(name = "AnalysisSteps.findByfindByName", query = "SELECT c FROM AnalysisSteps c WHERE c.AnalysisStepsName =:AnalysisStepsName")
 
 })
-@Table(name="punkteliste")
- public class Punkteliste implements Serializable {
+@Table(name="AnalysisSteps")
+ public class AnalysisSteps implements Serializable {
 
-
-    @Id
-    @Column(name = "PunktelisteNameId")
-    private String PunktelisteNameId;
-
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "id")
-    private Float id;
-
-    @Column(name = "Unternehmenname_Punkteliste")
-    private String Unternehmenname_Punkteliste;
-
-    @Column(name = "Eigenkapitalrendite")
-    private Float Eigenkapitalrendite;
-
-    @Column(name = "EBITMarge")
-    private Float EBITMarge;
-
-    @Column(name = "Eigenkapitalquote")
-    private Float Eigenkapitalquote;
-
-    @Column(name = "KursGewinnVerhaeltnis")
-    private Float KursGewinnVerhaeltnis;
-
-    @Column(name = "KursGewinnVerhaeltnisAktuell")
-    private Float KursGewinnVerhaeltnisAktuell;
-
-    @Column(name = "Analystenmeinungen")
-    private Float Analystenmeinungen;
-
-    @Column(name = "ReaktionaufQuartalszahlen")
-    private Float ReaktionaufQuartalszahlen;
-
-    @Column(name = "Gewinnrevision")
-    private Float Gewinnrevision;
-
-    @Column(name = "Kursverlauf6Monate")
-    private Float Kursverlauf6Monate;
-
-    @Column(name = "Kursverlauf12Monate")
-    private Float Kursverlauf12Monate;
-
-    @Column(name = "Kursmomentum")
-    private Float Kursmomentum;
-
-    @Column(name = "Dreimonatsreversal")
-    private Float Dreimonatsreversal;
-
-    @Column(name = "Gewinnwachstum")
-    private Float Gewinnwachstum;
-
-    @ManyToOne
-    @JoinColumn(name = "UnternehmennameId")
-    private Unternehmen unternehmen;
-    private Object Punkteliste;
-
-    public Punkteliste(Unternehmen unternehmen) {
-        this.unternehmen = unternehmen;
+    public String getAnalysisStepsName() {
+        return AnalysisStepsName;
     }
 
-    public Punkteliste() {
-
+    public void setAnalysisStepsName(String analysisStepsName) {
+        AnalysisStepsName = analysisStepsName;
     }
 
-
-    public String getPunktelisteNameId() {
-        return PunktelisteNameId;
+    public Float getId() {
+        return id;
     }
 
-    public String getUnternehmenname_Punkteliste() {
-        return Unternehmenname_Punkteliste;
+    public void setId(Float id) {
+        this.id = id;
     }
 
-    public void setUnternehmenname_Punkteliste(String unternehmenname_Punkteliste) {
-        Unternehmenname_Punkteliste = unternehmenname_Punkteliste;
+    public String getCompanyname_AnalysisSteps() {
+        return Companyname_AnalysisSteps;
+    }
+
+    public void setCompanyname_AnalysisSteps(String companyname_AnalysisSteps) {
+        Companyname_AnalysisSteps = companyname_AnalysisSteps;
     }
 
     public Float getEigenkapitalrendite() {
@@ -195,24 +142,60 @@ import java.io.Serializable;
         Gewinnwachstum = gewinnwachstum;
     }
 
-    public Unternehmen getPunkteliste() {
-        return (Unternehmen) Punkteliste;
-    }
 
-    public void setPunkteliste(Unternehmen punkteliste) {
-        Punkteliste = punkteliste;
-    }
 
-    public void setPunktelisteNameId(String PunktelisteNameId) {
-        PunktelisteNameId = PunktelisteNameId;
-    }
+    @Id
+    @Column(name = "AnalysisStepsName")
+    private String AnalysisStepsName;
 
-    public Float getId() {
-        return id;
-    }
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "id")
+    private Float id;
 
-    public void setId(Float id) {
-        this.id = id;
-    }
+    @Column(name = "Companyname_AnalysisSteps")
+    private String Companyname_AnalysisSteps;
+
+    @Column(name = "Eigenkapitalrendite")
+    private Float Eigenkapitalrendite;
+
+    @Column(name = "EBITMarge")
+    private Float EBITMarge;
+
+    @Column(name = "Eigenkapitalquote")
+    private Float Eigenkapitalquote;
+
+    @Column(name = "KursGewinnVerhaeltnis")
+    private Float KursGewinnVerhaeltnis;
+
+    @Column(name = "KursGewinnVerhaeltnisAktuell")
+    private Float KursGewinnVerhaeltnisAktuell;
+
+    @Column(name = "Analystenmeinungen")
+    private Float Analystenmeinungen;
+
+    @Column(name = "ReaktionaufQuartalszahlen")
+    private Float ReaktionaufQuartalszahlen;
+
+    @Column(name = "Gewinnrevision")
+    private Float Gewinnrevision;
+
+    @Column(name = "Kursverlauf6Monate")
+    private Float Kursverlauf6Monate;
+
+    @Column(name = "Kursverlauf12Monate")
+    private Float Kursverlauf12Monate;
+
+    @Column(name = "Kursmomentum")
+    private Float Kursmomentum;
+
+    @Column(name = "Dreimonatsreversal")
+    private Float Dreimonatsreversal;
+
+    @Column(name = "Gewinnwachstum")
+    private Float Gewinnwachstum;
+
+
+
+
 
 }

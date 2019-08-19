@@ -6,8 +6,10 @@
 package com.levermann.sessionControlClasses;
 
 
-import com.levermann.entityclass.Punkteliste;
-import com.levermann.entityclass.Unternehmen;
+import com.levermann.entityclass.AnalysisRating;
+import com.levermann.entityclass.AnalysisSteps;
+import com.levermann.entityclass.Company;
+import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.apache.log4j.Logger;
@@ -16,32 +18,37 @@ public class Create {
 
     final static Logger logger1 = Logger.getLogger(Create.class);
 
-    public void CreateUnternehmen(String name, Float eigenkapital) {
+  /*  public void CreateCompany(String name) {
 
         //Logger wird für die Methode ausgeführt
         logger1.info("Logger is Entering the Execute method from Create");
         String returnValue = "";
 
         //Aufrufen der aktuellen Session aus HibernateUtil
-        SessionFactory sessionOne = (SessionFactory) HibernateUtil.getSessionFactory().openSession();
+
+        SessionFactory sessionOne = (SessionFactory) HibernateUtil.getSessionFactory().openSession().sessionWithOptions();
+
         sessionOne.getCurrentSession().beginTransaction();
 
-        Unternehmen unternehmen = new Unternehmen();
-        unternehmen.setUnternehmenname("AppleAG");
-        unternehmen.setEigenkapital(12543);
+        Company company = new Company();
+        company.setCompanyname(name);
 
-        Punkteliste punkteliste = new Punkteliste();
-        punkteliste.setUnternehmenname_Punkteliste("AppleAG");
 
-        Integer generateUnternehmenId = unternehmen.getId();
-        Float generatePunktelisteId = punkteliste.getId();
+
+        AnalysisSteps punkteliste = new AnalysisSteps();
+        punkteliste.setAnalysisStepsName(name);
+        punkteliste.setCompanyname_AnalysisSteps(name);
+
+        Integer generateUnternehmenId = company.getId();
+        Float generateAnalysisStepsId = punkteliste.getId();
 
         Session sessionTwo = HibernateUtil.getSessionFactory().openSession();
         sessionTwo.beginTransaction();
-        Unternehmen unternehmen1 = (Unternehmen) sessionTwo.get(Unternehmen.class, generateUnternehmenId);
-        Punkteliste punkteliste1 = (Punkteliste) sessionTwo.get(Punkteliste.class, generatePunktelisteId);
 
-        System.out.println(unternehmen.getId());
+        Company company1 = (Company) sessionTwo.get(Company.class, generateUnternehmenId);
+        AnalysisSteps punkteliste1 = (AnalysisSteps) sessionTwo.get(AnalysisSteps.class, generateAnalysisStepsId);
+
+        System.out.println(company.getId());
 
         HibernateUtil.shutdown();
     }
@@ -53,8 +60,8 @@ public class Create {
             //create a unternehmen object
             System.out.println("Creating new Unternehmen Object");
             Unternehmen un = new Unternehmen();
-            Punkteliste pkt = new Punkteliste();
-            Levermannschritte lvschrt = new Levermannschritte();
+            AnalysisSteps analysisSteps = new AnalysisSteps();
+            AnalysisRating lvschrt = new AnalysisRating();
 
             // Hinzufügen
             logger1.info("Logger for Create was saved successfull");
@@ -85,10 +92,10 @@ public class Create {
 
 
     }
-
+*/
     final static Logger logger2 = Logger.getLogger(Select.class);
 
-    public void CreatePunktelisten(String Analysename, String Firmenname ) {
+    public void CreateAnalysisSteps(String AnalysisSteps ) {
 
         //Logger wird für die Methode ausgeführt
         logger2.info("Logger is Entering the Execute method from Create");
@@ -104,9 +111,8 @@ public class Create {
 
             //create a object
             System.out.println("Creating new Unternehmen Object");
-            Punkteliste pkt = new Punkteliste();
-            pkt.setPunktelisteNameId(Analysename);
-            pkt.setUnternehmenname_Punkteliste(Firmenname);
+            AnalysisSteps analysisSteps = new AnalysisSteps();
+            analysisSteps.setAnalysisStepsName(AnalysisSteps);
 
             // Hinzufügen
             logger2.info("Logger for Create was saved successfull");
@@ -134,7 +140,7 @@ public class Create {
     }
 
 
-    public void CreateLevermannanalyse(String Analysename, String Firmenname ) {
+    public void CreateAnalysisRating(String AnalysisRatingName ) {
 
         //Logger wird für die Methode ausgeführt
         logger2.info("Logger is Entering the Execute method from Create");
@@ -150,14 +156,13 @@ public class Create {
 
             //create an object
             System.out.println("Creating new Unternehmen Object");
-            Levermannschritte lvschrt = new Levermannschritte();
-            Unternehmen un = new Unternehmen();
 
-            lvschrt.setLevermannschrittAnalyseNameId(Analysename);
-            lvschrt.setUnternehmenname_Levermannschritte(Firmenname);
-            un.getUnternehmenname();
+            AnalysisRating lvschrt = new AnalysisRating();
 
-            lvschrt.getLevermannschrittAnalyseNameId();
+            lvschrt.setAnalysisRatingName(AnalysisRatingName);
+
+
+
             // Hinzufügen
             logger2.info("Logger for Create was saved successfull");
             // start a transaction
@@ -181,5 +186,5 @@ public class Create {
         } finally {}
 
     }}
- */
+
 

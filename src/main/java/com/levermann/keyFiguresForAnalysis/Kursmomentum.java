@@ -9,7 +9,7 @@
 
 package com.levermann.keyFiguresForAnalysis;
 
-import com.levermann.entityclass.Punkteliste;
+import com.levermann.entityclass.AnalysisSteps;
 import com.levermann.sessionControlClasses.HibernateUtil;
 import org.apache.log4j.Logger;
 import org.hibernate.HibernateException;
@@ -51,14 +51,14 @@ public class Kursmomentum {
             session.beginTransaction();
 
             //HQL Named Query FindAll Unternehmen
-            Query query = session.getNamedQuery("Punkteliste.findByName");
-            List<Punkteliste> pktList = (List<Punkteliste>) query.list();
+            Query query = session.getNamedQuery("AnalysisSteps.findall");
+            List<AnalysisSteps> pktList = (List<AnalysisSteps>) query.list();
 
 
 
 
 
-            for (Punkteliste pkt : pktList) {
+            for (AnalysisSteps pkt : pktList) {
 
                     // Fall 1 Kriterium 9: 1 Pkt., Kriterium 10 : 0 oder -1 Pkt.
                     if (pkt.getKursverlauf6Monate() == 1 == true && pkt.getKursverlauf12Monate() ==1 == false ){
@@ -66,29 +66,29 @@ public class Kursmomentum {
                         pkt.setKursverlauf12Monate((float) 1);
                         float kursmomentumPkt = pkt.getKursverlauf12Monate()-pkt.getKursverlauf6Monate();
 
-                    System.out.println("Fall 1 : yea LevermannschrittAnalyseNameId :  "+pkt.getPunktelisteNameId() +" Unternehmen: "+ pkt.getUnternehmenname_Punkteliste());
+                    System.out.println("Fall 1 : yea AnalysisRatingName :  "+pkt.getAnalysisStepsName() +" Unternehmen: "+ pkt.getCompanyname_AnalysisSteps());
                 }
 
                 // Fall 1 Kriterium 9: -1 Pkt., Kriterium 10 : 0 oder 1 Pkt.
                 if (pkt.getKursverlauf6Monate()  == -1 == true && pkt.getKursverlauf12Monate()  == -1 == false ) {
 
-                    {    // un.setLevermannschrittAnalyseNameId (un.getLevermannschrittAnalyseNameId ());
+                    {    // un.setAnalysisRatingName (un.getAnalysisRatingName ());
                         pkt.setKursverlauf12Monate((float) 1);
                         float kursmomentumPkt = pkt.getKursverlauf12Monate()-pkt.getKursverlauf6Monate();
 
                         //   un.setAnalystenmeinungen(111);
-                        System.out.println("Fall 2 : yea LevermannschrittAnalyseNameId :  "+pkt.getPunktelisteNameId() +" Unternehmen: "+ pkt.getUnternehmenname_Punkteliste());
+                        System.out.println("Fall 2 : yea AnalysisRatingName :  "+pkt.getAnalysisStepsName() +" Unternehmen: "+ pkt.getCompanyname_AnalysisSteps());
                     }
                 }
 
                     else {
 
-                    // un.setLevermannschrittAnalyseNameId (un.getLevermannschrittAnalyseNameId ());
+                    // un.setAnalysisRatingName (un.getAnalysisRatingName ());
                     pkt.setKursverlauf12Monate((float) 0);
                     float kursmomentumPkt = pkt.getKursverlauf12Monate()-pkt.getKursverlauf6Monate();
 
                     pkt.setKursmomentum(pkt.getAnalystenmeinungen());
-                    System.out.println("Fall 3 : yea LevermannschrittAnalyseNameId :  "+pkt.getPunktelisteNameId() +" Unternehmen: "+ pkt.getUnternehmenname_Punkteliste());
+                    System.out.println("Fall 3 : yea AnalysisRatingName :  "+pkt.getAnalysisStepsName() +" Unternehmen: "+ pkt.getCompanyname_AnalysisSteps());
 
                 }
 

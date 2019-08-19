@@ -5,20 +5,24 @@
  */
 package com.levermann.sessionControlClasses;
 
-import com.levermann.entityclass.Levermannschritte;
+import com.levermann.entityclass.AnalysisSteps;
 import org.apache.log4j.Logger;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 
-abstract public class UpdateLevermannschritte  {
+import java.util.Scanner;
 
-    final static Logger logger = Logger.getLogger(UpdateLevermannschritte.class);
+ public abstract class UpdateAnalysisSteps {
 
-    public void UnName (String LevermannschrittAnalyseNameId, String unternehmenname) {
+    final static Logger logger = Logger.getLogger(UpdateAnalysisSteps.class);
+
+    public void UnName (String punktelisteNameId, String unternehmenname) {
         //Logger wird für die Methode Delete ausgeführt
         logger.info("Logger is Entering the Execute method Update");
         String returnValue = "";
         
+        // Eingabeauforderung AnalysisSteps
+
         //Aufrufen der aktuellen Session aus HibernateUtil
         SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
         Session session = sessionFactory.getCurrentSession();
@@ -28,26 +32,27 @@ abstract public class UpdateLevermannschritte  {
             logger.info("Logger for Update was saved successfull");
             System.out.println("Eingabe:\n 1. ID \n 2.  ");
 
-            //Erzeugen eines Objektes vom Typen Levermannschritte
-            Levermannschritte Levermannschritte=new Levermannschritte();
+            //Erzeugen eines Objektes vom Typen AnalysisSteps
+            AnalysisSteps AnalysisSteps=new AnalysisSteps();
             //Select Primärschlüssel
-            Levermannschritte.setLevermannschrittAnalyseNameId(LevermannschrittAnalyseNameId);
+            AnalysisSteps.setAnalysisStepsName(punktelisteNameId);
             //Select Name der Firma
-            
-            Levermannschritte.setUnternehmenname_Levermannschritte(unternehmenname);
+            AnalysisSteps.setCompanyname_AnalysisSteps (unternehmenname);
 
             //Beginn der Datenübertragung
             session.beginTransaction();
-            //Umesetzung der Update Methode auf das ausgewählte Levermannschritte
-            session.update(Levermannschritte);
+            //Umesetzung der Update Methode auf das ausgewählte AnalysisSteps
+            session.update(AnalysisSteps);
             // Übertragung bestätigen
             session.getTransaction().commit(); } finally{}}
 
-    public void Eigenkapitalquote(String LevermannschrittAnalyseNameId, float eigenkapitalquote) {
+    public void Eigenkapitalquote(String punktelisteNameId, float eigenkapitalquote) {
         //Logger wird für die Methode Delete ausgeführt
         logger.info("Logger is Entering the Execute method Update");
         String returnValue = "";
-        
+        Scanner scanner = new Scanner(System.in);
+        // Eingabeauforderung AnalysisSteps
+
         //Aufrufen der aktuellen Session aus HibernateUtil
         SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
         Session session = sessionFactory.getCurrentSession();
@@ -55,27 +60,30 @@ abstract public class UpdateLevermannschritte  {
         try {
             // Hinzufügen des Loggers war erfolgreich
             logger.info("Logger for Update was saved successfull");
-            System.out.println("Eingabe:\n 1. ID \n 2. Levermannschritte \n 3. Datum \n 4. Eigenkapital \n 5. Jahresueberschuss");
+            System.out.println("Eingabe:\n 1. ID \n 2. AnalysisSteps \n 3. Datum \n 4. Eigenkapital \n 5. Jahresueberschuss");
 
-            //Erzeugen eines Objektes vom Typen Levermannschritte
-            Levermannschritte Levermannschritte=new Levermannschritte();
+            //Erzeugen eines Objektes vom Typen AnalysisSteps
+            AnalysisSteps AnalysisSteps=new AnalysisSteps();
             //Select Primärschlüssel
-            Levermannschritte.setLevermannschrittAnalyseNameId(LevermannschrittAnalyseNameId);
+            
+            AnalysisSteps.setAnalysisStepsName(punktelisteNameId);
             //Select Name der Firma
-            Levermannschritte.setEigenkapitalquote(eigenkapitalquote);
+            AnalysisSteps.setEigenkapitalquote(eigenkapitalquote);
 
             //Beginn der Datenübertragung
             session.beginTransaction();
-            //Umesetzung der Update Methode auf das ausgewählte Levermannschritte
-            session.update(Levermannschritte);
+            //Umesetzung der Update Methode auf das ausgewählte AnalysisSteps
+            session.update(AnalysisSteps);
             // Übertragung bestätigen
             session.getTransaction().commit(); } finally{}}
 
-    public void EBITMarge(String LevermannschrittAnalyseNameId, float ebitmarge) {
+    public void EBITMarge(String punktelisteNameId, float ebitmarge) {
         //Logger wird für die Methode Delete ausgeführt
         logger.info("Logger is Entering the Execute method Update");
         String returnValue = "";
-        
+        Scanner scanner = new Scanner(System.in);
+        // Eingabeauforderung AnalysisSteps
+
         //Aufrufen der aktuellen Session aus HibernateUtil
         SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
         Session session = sessionFactory.getCurrentSession();
@@ -85,25 +93,28 @@ abstract public class UpdateLevermannschritte  {
             logger.info("Logger for Update was saved successfull");
             System.out.println("Eingabe:\n 1. ID \n 2. ");
 
-            //Erzeugen eines Objektes vom Typen Levermannschritte
-            Levermannschritte Levermannschritte=new Levermannschritte();
+            //Erzeugen eines Objektes vom Typen AnalysisSteps
+            AnalysisSteps AnalysisSteps=new AnalysisSteps();
             //Select Primärschlüssel
-            Levermannschritte.setLevermannschrittAnalyseNameId(LevermannschrittAnalyseNameId);
+            
+            AnalysisSteps.setAnalysisStepsName(punktelisteNameId);
             //Select Name der Firma
-            Levermannschritte.setEBITMarge(ebitmarge);
+            AnalysisSteps.setEBITMarge(ebitmarge);
 
             //Beginn der Datenübertragung
             session.beginTransaction();
-            //Umesetzung der Update Methode auf das ausgewählte Levermannschritte
-            session.update(Levermannschritte);
+            //Umesetzung der Update Methode auf das ausgewählte AnalysisSteps
+            session.update(AnalysisSteps);
             // Übertragung bestätigen
             session.getTransaction().commit(); } finally{}}
 
-    public void Eigenkaitalquote(String LevermannschrittAnalyseNameId, float eigenkaitalquote) {
+    public void Eigenkaitalquote(String punktelisteNameId, float eigenkaitalquote) {
         //Logger wird für die Methode Delete ausgeführt
         logger.info("Logger is Entering the Execute method Update");
         String returnValue = "";
-        
+        Scanner scanner = new Scanner(System.in);
+        // Eingabeauforderung AnalysisSteps
+
         //Aufrufen der aktuellen Session aus HibernateUtil
         SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
         Session session = sessionFactory.getCurrentSession();
@@ -113,25 +124,28 @@ abstract public class UpdateLevermannschritte  {
             logger.info("Logger for Update was saved successfull");
             System.out.println("Eingabe:\n 1. ID \n 2. Jahresüberschuss");
 
-            //Erzeugen eines Objektes vom Typen Levermannschritte
-            Levermannschritte Levermannschritte=new Levermannschritte();
+            //Erzeugen eines Objektes vom Typen AnalysisSteps
+            AnalysisSteps AnalysisSteps=new AnalysisSteps();
             //Select Primärschlüssel
-            Levermannschritte.setLevermannschrittAnalyseNameId(LevermannschrittAnalyseNameId);
+            
+            AnalysisSteps.setAnalysisStepsName(punktelisteNameId);
             //Select Name der Firma
-            Levermannschritte.setEigenkapitalquote(eigenkaitalquote);
+            AnalysisSteps.setEigenkapitalquote(eigenkaitalquote);
 
             //Beginn der Datenübertragung
             session.beginTransaction();
-            //Umesetzung der Update Methode auf das ausgewählte Levermannschritte
-            session.update(Levermannschritte);
+            //Umesetzung der Update Methode auf das ausgewählte AnalysisSteps
+            session.update(AnalysisSteps);
             // Übertragung bestätigen
             session.getTransaction().commit(); } finally{}}
 
-    public void KursGewinnVerhaeltnis(String LevermannschrittAnalyseNameId, float kursgewinnverhaeltnis) {
+    public void KursGewinnVerhaeltnis(String punktelisteNameId, float kursgewinnverhaeltnis) {
         //Logger wird für die Methode Delete ausgeführt
         logger.info("Logger is Entering the Execute method Update");
         String returnValue = "";
-        
+        Scanner scanner = new Scanner(System.in);
+        // Eingabeauforderung AnalysisSteps
+
         //Aufrufen der aktuellen Session aus HibernateUtil
         SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
         Session session = sessionFactory.getCurrentSession();
@@ -141,25 +155,28 @@ abstract public class UpdateLevermannschritte  {
             logger.info("Logger for Update was saved successfull");
             System.out.println("Eingabe:\n 1. ID \n 2. Jahresüberschuss");
 
-            //Erzeugen eines Objektes vom Typen Levermannschritte
-            Levermannschritte Levermannschritte=new Levermannschritte();
+            //Erzeugen eines Objektes vom Typen AnalysisSteps
+            AnalysisSteps AnalysisSteps=new AnalysisSteps();
             //Select Primärschlüssel
-            Levermannschritte.setLevermannschrittAnalyseNameId(LevermannschrittAnalyseNameId);
+            
+            AnalysisSteps.setAnalysisStepsName(punktelisteNameId);
             //Select Name der Firma
-            Levermannschritte.setKursGewinnVerhaeltnis(kursgewinnverhaeltnis);
+            AnalysisSteps.setKursGewinnVerhaeltnis(kursgewinnverhaeltnis);
 
             //Beginn der Datenübertragung
             session.beginTransaction();
-            //Umesetzung der Update Methode auf das ausgewählte Levermannschritte
-            session.update(Levermannschritte);
+            //Umesetzung der Update Methode auf das ausgewählte AnalysisSteps
+            session.update(AnalysisSteps);
             // Übertragung bestätigen
             session.getTransaction().commit(); } finally{}}
 
-    public void KursGewinnverhaeltnisAktuell(String LevermannschrittAnalyseNameId, float kursgewinnverhaeltnisaktuell) {
+    public void KursGewinnverhaeltnisAktuell(String punktelisteNameId, float kursgewinnverhaeltnisaktuell) {
         //Logger wird für die Methode Delete ausgeführt
         logger.info("Logger is Entering the Execute method Update");
         String returnValue = "";
-        
+        Scanner scanner = new Scanner(System.in);
+        // Eingabeauforderung AnalysisSteps
+
         //Aufrufen der aktuellen Session aus HibernateUtil
         SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
         Session session = sessionFactory.getCurrentSession();
@@ -169,25 +186,28 @@ abstract public class UpdateLevermannschritte  {
             logger.info("Logger for Update was saved successfull");
             System.out.println("Eingabe:\n 1. ID \n 2. Jahresüberschuss");
 
-            //Erzeugen eines Objektes vom Typen Levermannschritte
-            Levermannschritte Levermannschritte=new Levermannschritte();
+            //Erzeugen eines Objektes vom Typen AnalysisSteps
+            AnalysisSteps AnalysisSteps=new AnalysisSteps();
             //Select Primärschlüssel
-            Levermannschritte.setLevermannschrittAnalyseNameId(LevermannschrittAnalyseNameId);
+            
+            AnalysisSteps.setAnalysisStepsName(punktelisteNameId);
             //Select Name der Firma
-            Levermannschritte.setKursGewinnVerhaeltnisAktuell(kursgewinnverhaeltnisaktuell);
+            AnalysisSteps.setKursGewinnVerhaeltnisAktuell(kursgewinnverhaeltnisaktuell);
 
             //Beginn der Datenübertragung
             session.beginTransaction();
-            //Umesetzung der Update Methode auf das ausgewählte Levermannschritte
-            session.update(Levermannschritte);
+            //Umesetzung der Update Methode auf das ausgewählte AnalysisSteps
+            session.update(AnalysisSteps);
             // Übertragung bestätigen
             session.getTransaction().commit(); } finally{}}
 
-    public void Analysemeinungen(String LevermannschrittAnalyseNameId, float analysemeinungen) {
+    public void Analysemeinungen(String punktelisteNameId, float analysemeinungen) {
         //Logger wird für die Methode Delete ausgeführt
         logger.info("Logger is Entering the Execute method Update");
         String returnValue = "";
-        
+        Scanner scanner = new Scanner(System.in);
+        // Eingabeauforderung AnalysisSteps
+
         //Aufrufen der aktuellen Session aus HibernateUtil
         SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
         Session session = sessionFactory.getCurrentSession();
@@ -197,25 +217,28 @@ abstract public class UpdateLevermannschritte  {
             logger.info("Logger for Update was saved successfull");
             System.out.println("Eingabe:\n 1. ID \n 2. Jahresüberschuss");
 
-            //Erzeugen eines Objektes vom Typen Levermannschritte
-            Levermannschritte Levermannschritte=new Levermannschritte();
+            //Erzeugen eines Objektes vom Typen AnalysisSteps
+            AnalysisSteps AnalysisSteps=new AnalysisSteps();
             //Select Primärschlüssel
-            Levermannschritte.setLevermannschrittAnalyseNameId(LevermannschrittAnalyseNameId);
+            
+            AnalysisSteps.setAnalysisStepsName(punktelisteNameId);
             //Select Name der Firma
-            Levermannschritte.setAnalystenmeinungen(analysemeinungen);
+            AnalysisSteps.setAnalystenmeinungen(analysemeinungen);
 
             //Beginn der Datenübertragung
             session.beginTransaction();
-            //Umesetzung der Update Methode auf das ausgewählte Levermannschritte
-            session.update(Levermannschritte);
+            //Umesetzung der Update Methode auf das ausgewählte AnalysisSteps
+            session.update(AnalysisSteps);
             // Übertragung bestätigen
             session.getTransaction().commit(); } finally{}}
 
-    public void ReaktionaufQuartalszahlen(String LevermannschrittAnalyseNameId, float reaktionaufquartalszahlen) {
+    public void ReaktionaufQuartalszahlen(String punktelisteNameId, float reaktionaufquartalszahlen) {
         //Logger wird für die Methode Delete ausgeführt
         logger.info("Logger is Entering the Execute method Update");
         String returnValue = "";
-        
+        Scanner scanner = new Scanner(System.in);
+        // Eingabeauforderung AnalysisSteps
+
         //Aufrufen der aktuellen Session aus HibernateUtil
         SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
         Session session = sessionFactory.getCurrentSession();
@@ -225,25 +248,28 @@ abstract public class UpdateLevermannschritte  {
             logger.info("Logger for Update was saved successfull");
             System.out.println("Eingabe:\n 1. ID \n 2. Jahresüberschuss");
 
-            //Erzeugen eines Objektes vom Typen Levermannschritte
-            Levermannschritte Levermannschritte=new Levermannschritte();
+            //Erzeugen eines Objektes vom Typen AnalysisSteps
+            AnalysisSteps AnalysisSteps=new AnalysisSteps();
             //Select Primärschlüssel
-            Levermannschritte.setLevermannschrittAnalyseNameId(LevermannschrittAnalyseNameId);
+            
+            AnalysisSteps.setAnalysisStepsName(punktelisteNameId);
             //Select Name der Firma
-            Levermannschritte.setReaktionaufQuartalszahlen(reaktionaufquartalszahlen);
+            AnalysisSteps.setReaktionaufQuartalszahlen(reaktionaufquartalszahlen);
 
             //Beginn der Datenübertragung
             session.beginTransaction();
-            //Umesetzung der Update Methode auf das ausgewählte Levermannschritte
-            session.update(Levermannschritte);
+            //Umesetzung der Update Methode auf das ausgewählte AnalysisSteps
+            session.update(AnalysisSteps);
             // Übertragung bestätigen
             session.getTransaction().commit(); } finally{}}
 
-    public void Gewinnrevision(String LevermannschrittAnalyseNameId, float gewinnrevision) {
+    public void Gewinnrevision(String punktelisteNameId, float gewinnrevision) {
         //Logger wird für die Methode Delete ausgeführt
         logger.info("Logger is Entering the Execute method Update");
         String returnValue = "";
-        
+        Scanner scanner = new Scanner(System.in);
+        // Eingabeauforderung AnalysisSteps
+
         //Aufrufen der aktuellen Session aus HibernateUtil
         SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
         Session session = sessionFactory.getCurrentSession();
@@ -253,25 +279,28 @@ abstract public class UpdateLevermannschritte  {
             logger.info("Logger for Update was saved successfull");
             System.out.println("Eingabe:\n 1. ID \n 2. Jahresüberschuss");
 
-            //Erzeugen eines Objektes vom Typen Levermannschritte
-            Levermannschritte Levermannschritte=new Levermannschritte();
+            //Erzeugen eines Objektes vom Typen AnalysisSteps
+            AnalysisSteps AnalysisSteps=new AnalysisSteps();
             //Select Primärschlüssel
-            Levermannschritte.setLevermannschrittAnalyseNameId(LevermannschrittAnalyseNameId);
+            
+            AnalysisSteps.setAnalysisStepsName(punktelisteNameId);
             //Select Name der Firma
-            Levermannschritte.setGewinnrevision(gewinnrevision);
+            AnalysisSteps.setGewinnrevision(gewinnrevision);
 
             //Beginn der Datenübertragung
             session.beginTransaction();
-            //Umesetzung der Update Methode auf das ausgewählte Levermannschritte
-            session.update(Levermannschritte);
+            //Umesetzung der Update Methode auf das ausgewählte AnalysisSteps
+            session.update(AnalysisSteps);
             // Übertragung bestätigen
             session.getTransaction().commit(); } finally{}}
 
-    public void Kursverlauf6Monate(String LevermannschrittAnalyseNameId, float kursverlauf6monate) {
+    public void Kursverlauf6Monate(String punktelisteNameId, float kursverlauf6monate) {
         //Logger wird für die Methode Delete ausgeführt
         logger.info("Logger is Entering the Execute method Update");
         String returnValue = "";
-        
+        Scanner scanner = new Scanner(System.in);
+        // Eingabeauforderung AnalysisSteps
+
         //Aufrufen der aktuellen Session aus HibernateUtil
         SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
         Session session = sessionFactory.getCurrentSession();
@@ -281,25 +310,28 @@ abstract public class UpdateLevermannschritte  {
             logger.info("Logger for Update was saved successfull");
             System.out.println("Eingabe:\n 1. ID \n 2. Jahresüberschuss");
 
-            //Erzeugen eines Objektes vom Typen Levermannschritte
-            Levermannschritte Levermannschritte=new Levermannschritte();
+            //Erzeugen eines Objektes vom Typen AnalysisSteps
+            AnalysisSteps AnalysisSteps=new AnalysisSteps();
             //Select Primärschlüssel
-            Levermannschritte.setLevermannschrittAnalyseNameId(LevermannschrittAnalyseNameId);
+            
+            AnalysisSteps.setAnalysisStepsName(punktelisteNameId);
             //Select Name der Firma
-            Levermannschritte.setKursverlauf6Monate(kursverlauf6monate);
+            AnalysisSteps.setKursverlauf6Monate(kursverlauf6monate);
 
             //Beginn der Datenübertragung
             session.beginTransaction();
-            //Umesetzung der Update Methode auf das ausgewählte Levermannschritte
-            session.update(Levermannschritte);
+            //Umesetzung der Update Methode auf das ausgewählte AnalysisSteps
+            session.update(AnalysisSteps);
             // Übertragung bestätigen
             session.getTransaction().commit(); } finally{}}
 
-    public void Kursverlauf12Monate(String LevermannschrittAnalyseNameId, float kursverlauf12monate) {
+    public void Kursverlauf12Monate(String punktelisteNameId, float kursverlauf12monate) {
         //Logger wird für die Methode Delete ausgeführt
         logger.info("Logger is Entering the Execute method Update");
         String returnValue = "";
-        
+        Scanner scanner = new Scanner(System.in);
+        // Eingabeauforderung AnalysisSteps
+
         //Aufrufen der aktuellen Session aus HibernateUtil
         SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
         Session session = sessionFactory.getCurrentSession();
@@ -309,25 +341,28 @@ abstract public class UpdateLevermannschritte  {
             logger.info("Logger for Update was saved successfull");
             System.out.println("Eingabe:\n 1. ID \n 2. Jahresüberschuss");
 
-            //Erzeugen eines Objektes vom Typen Levermannschritte
-            Levermannschritte Levermannschritte=new Levermannschritte();
+            //Erzeugen eines Objektes vom Typen AnalysisSteps
+            AnalysisSteps AnalysisSteps=new AnalysisSteps();
             //Select Primärschlüssel
-            Levermannschritte.setLevermannschrittAnalyseNameId(LevermannschrittAnalyseNameId);
+            
+            AnalysisSteps.setAnalysisStepsName(punktelisteNameId);
             //Select Name der Firma
-            Levermannschritte.setKursverlauf12Monate(kursverlauf12monate);
+            AnalysisSteps.setKursverlauf12Monate(kursverlauf12monate);
 
             //Beginn der Datenübertragung
             session.beginTransaction();
-            //Umesetzung der Update Methode auf das ausgewählte Levermannschritte
-            session.update(Levermannschritte);
+            //Umesetzung der Update Methode auf das ausgewählte AnalysisSteps
+            session.update(AnalysisSteps);
             // Übertragung bestätigen
             session.getTransaction().commit(); } finally{}}
 
-    public void Kursmomentum(String LevermannschrittAnalyseNameId, float kursmomentum) {
+    public void Kursmomentum(String punktelisteNameId, float kursmomentum) {
         //Logger wird für die Methode Delete ausgeführt
         logger.info("Logger is Entering the Execute method Update");
         String returnValue = "";
-        
+        Scanner scanner = new Scanner(System.in);
+        // Eingabeauforderung AnalysisSteps
+
         //Aufrufen der aktuellen Session aus HibernateUtil
         SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
         Session session = sessionFactory.getCurrentSession();
@@ -337,25 +372,28 @@ abstract public class UpdateLevermannschritte  {
             logger.info("Logger for Update was saved successfull");
             System.out.println("Eingabe:\n 1. ID \n 2. Jahresüberschuss");
 
-            //Erzeugen eines Objektes vom Typen Levermannschritte
-            Levermannschritte Levermannschritte=new Levermannschritte();
+            //Erzeugen eines Objektes vom Typen AnalysisSteps
+            AnalysisSteps AnalysisSteps=new AnalysisSteps();
             //Select Primärschlüssel
-            Levermannschritte.setLevermannschrittAnalyseNameId(LevermannschrittAnalyseNameId);
+            
+            AnalysisSteps.setAnalysisStepsName(punktelisteNameId);
             //Select Name der Firma
-            Levermannschritte.setKursmomentum(kursmomentum);
+            AnalysisSteps.setKursmomentum(kursmomentum);
 
             //Beginn der Datenübertragung
             session.beginTransaction();
-            //Umesetzung der Update Methode auf das ausgewählte Levermannschritte
-            session.update(Levermannschritte);
+            //Umesetzung der Update Methode auf das ausgewählte AnalysisSteps
+            session.update(AnalysisSteps);
             // Übertragung bestätigen
             session.getTransaction().commit(); } finally{}}
 
-    public void Dreimonatsreversal(String LevermannschrittAnalyseNameId, float dreimonatsreversal) {
+    public void Dreimonatsreversal(String punktelisteNameId, float dreimonatsreversal) {
         //Logger wird für die Methode Delete ausgeführt
         logger.info("Logger is Entering the Execute method Update");
         String returnValue = "";
-        
+        Scanner scanner = new Scanner(System.in);
+        // Eingabeauforderung AnalysisSteps
+
         //Aufrufen der aktuellen Session aus HibernateUtil
         SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
         Session session = sessionFactory.getCurrentSession();
@@ -365,25 +403,28 @@ abstract public class UpdateLevermannschritte  {
             logger.info("Logger for Update was saved successfull");
             System.out.println("Eingabe:\n 1. ID \n 2. Jahresüberschuss");
 
-            //Erzeugen eines Objektes vom Typen Levermannschritte
-            Levermannschritte Levermannschritte=new Levermannschritte();
+            //Erzeugen eines Objektes vom Typen AnalysisSteps
+            AnalysisSteps AnalysisSteps=new AnalysisSteps();
             //Select Primärschlüssel
-            Levermannschritte.setLevermannschrittAnalyseNameId(LevermannschrittAnalyseNameId);
+            
+            AnalysisSteps.setAnalysisStepsName(punktelisteNameId);
             //Select Name der Firma
-            Levermannschritte.setDreimonatsreversal(dreimonatsreversal);
+            AnalysisSteps.setDreimonatsreversal(dreimonatsreversal);
 
             //Beginn der Datenübertragung
             session.beginTransaction();
-            //Umesetzung der Update Methode auf das ausgewählte Levermannschritte
-            session.update(Levermannschritte);
+            //Umesetzung der Update Methode auf das ausgewählte AnalysisSteps
+            session.update(AnalysisSteps);
             // Übertragung bestätigen
             session.getTransaction().commit(); } finally{}}
 
-    public void Gewinnwachstum(String LevermannschrittAnalyseNameId, float gewinnwachstum) {
+    public void Gewinnwachstum(String punktelisteNameId, float gewinnwachstum) {
         //Logger wird für die Methode Delete ausgeführt
         logger.info("Logger is Entering the Execute method Update");
         String returnValue = "";
-        
+        Scanner scanner = new Scanner(System.in);
+        // Eingabeauforderung AnalysisSteps
+
         //Aufrufen der aktuellen Session aus HibernateUtil
         SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
         Session session = sessionFactory.getCurrentSession();
@@ -393,19 +434,20 @@ abstract public class UpdateLevermannschritte  {
             logger.info("Logger for Update was saved successfull");
             System.out.println("Eingabe:\n 1. ID \n 2. Jahresüberschuss");
 
-            //Erzeugen eines Objektes vom Typen Levermannschritte
-            Levermannschritte Levermannschritte=new Levermannschritte();
+            //Erzeugen eines Objektes vom Typen AnalysisSteps
+            AnalysisSteps AnalysisSteps=new AnalysisSteps();
             //Select Primärschlüssel
-            Levermannschritte.setLevermannschrittAnalyseNameId(LevermannschrittAnalyseNameId);
+            
+            AnalysisSteps.setAnalysisStepsName(punktelisteNameId);
             //Select Name der Firma
-            Levermannschritte.setGewinnwachstum(gewinnwachstum);
+            AnalysisSteps.setGewinnwachstum(gewinnwachstum);
 
             //Beginn der Datenübertragung
             session.beginTransaction();
-            //Umesetzung der Update Methode auf das ausgewählte Levermannschritte
-            session.update(Levermannschritte);
+            //Umesetzung der Update Methode auf das ausgewählte AnalysisSteps
+            session.update(AnalysisSteps);
             // Übertragung bestätigen
             session.getTransaction().commit(); } finally{}}
+
 
 }
-

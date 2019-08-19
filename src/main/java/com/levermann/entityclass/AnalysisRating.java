@@ -11,24 +11,24 @@ import java.io.Serializable;
 @Entity
 @Access(AccessType.FIELD)
 @NamedQueries({
-        @NamedQuery(name = "Levermannschritte.findAll", query = "SELECT B FROM Levermannschritte B"),
-        @NamedQuery(name = "Levermannschritte.findByName", query = "SELECT D  FROM Levermannschritte D WHERE D.id =:id")
+        @NamedQuery(name = "AnalysisRating.findAll", query = "SELECT B FROM AnalysisRating B"),
+        @NamedQuery(name = "AnalysisRating.findByName", query = "SELECT D  FROM AnalysisRating D WHERE D.AnalyseRatingName =:AnalyseRatingName")
 
 })
-@Table(name= "levermannschritte")
- public class Levermannschritte  implements Serializable {
+@Table(name= "AnalysisRating")
+ public class AnalysisRating  implements Serializable {
 
 
     @Id
-    @Column(name = "LevermannschrittAnalyseNameId")
-    private String LevermannschrittAnalyseNameId;
+    @Column(name = "AnalysisRatingName")
+    private String AnalyseRatingName;
 
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id")
     private Float id;
 
-    @Column(name = "Unternehmenname_Levermannschritte", unique = true, nullable = true)
-    private String Unternehmenname_Levermannschritte;
+    @Column(name = "Companyname_AnalysisRating", unique = true, nullable = true)
+    private String Companyname_AnalysisRating;
 
     @Column(name = "Eigenkapitalrendite", unique = true, nullable = true)
     private Float Eigenkapitalrendite;
@@ -69,29 +69,20 @@ import java.io.Serializable;
     @Column(name = "Gewinnwachstum", unique = true, nullable = true)
     private Float Gewinnwachstum;
 
-    @ManyToOne
-    @JoinColumn(name = "UnternehmennameId")
-    private Unternehmen unternehmen;
-
-    public Levermannschritte(Unternehmen unternehmen) {
-        this.unternehmen = unternehmen;
+    public String getAnalysisRatingName() {
+        return AnalyseRatingName;
     }
 
-
-    public String getLevermannschrittAnalyseNameId() {
-        return LevermannschrittAnalyseNameId;
+    public void setAnalysisRatingName(String AnalysisRatingName) {
+        AnalyseRatingName = AnalyseRatingName;
     }
 
-    public void setLevermannschrittAnalyseNameId(String LevermannschrittAnalyseNameId) {
-        LevermannschrittAnalyseNameId = LevermannschrittAnalyseNameId;
+    public String getCompanyname_AnalysisRating() {
+        return Companyname_AnalysisRating;
     }
 
-    public String getUnternehmenname_Levermannschritte() {
-        return Unternehmenname_Levermannschritte;
-    }
-
-    public void setUnternehmenname_Levermannschritte(String unternehmenname_Levermannschritte) {
-        Unternehmenname_Levermannschritte = unternehmenname_Levermannschritte;
+    public void setCompanyname_AnalysisRating(String unternehmenname_AnalysisRating) {
+        Companyname_AnalysisRating = unternehmenname_AnalysisRating;
     }
 
     public Float getEigenkapitalrendite() {
@@ -198,7 +189,7 @@ import java.io.Serializable;
         Gewinnwachstum = gewinnwachstum;
     }
 
-    public Levermannschritte() {
+    public AnalysisRating() {
     }
 
     public Float getId() {

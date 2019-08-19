@@ -9,36 +9,23 @@ import javax.annotation.ManagedBean;
 @Named
 @ManagedBean
 @Entity
-@Table(name = "unternehmen")
+@Table(name = "company")
 @Access(AccessType.FIELD)
 //@Table(name="unternehmen")
 @NamedQueries({
 
 
-        @NamedQuery(name = "Unternehmen.findAll", query = "SELECT A FROM Unternehmen A"),
-        @NamedQuery(name = "Unternehmen.findByName", query = "SELECT c FROM Unternehmen c WHERE c.id =:id"),
-        @NamedQuery(name = "Unternehmen.findByEigenkapital", query = "SELECT c FROM Unternehmen c WHERE c.eigenkapital =:eigenkapital"),
-        @NamedQuery(name = "Unternehmen.findByJahresüberschuss", query = "SELECT jahresueberschuss FROM Unternehmen")
+        @NamedQuery(name = "Company.findAll", query = "SELECT A FROM Company A"),
+        @NamedQuery(name = "Company.findByName", query = "SELECT c FROM Company c WHERE c.Companyname =:Companyname"),
+        @NamedQuery(name = "Company.findByEigenkapital", query = "SELECT c FROM Company c WHERE c.eigenkapital =:eigenkapital"),
+        @NamedQuery(name = "Company.findByJahresüberschuss", query = "SELECT jahresueberschuss FROM Company")
 
 })
-public class Unternehmen implements Serializable  {
-
-/*public Unternehmen(String name, String datum, float eigenkapital, float jahresueberschuss) {
-        this.name = name;
-        this.datum = datum;
-        this.eigenkapital = eigenkapital;
-        this.jahresueberschuss = jahresueberschuss;
-    }*/
-
-    public Unternehmen(List punktelistes) {
-        this.punktelistes = punktelistes;
-    }
-
-
+public class Company implements Serializable  {
 
     @Id
-    @Column(name="UnternehmennameId")
-    private String UnternehmennameId;
+    @Column(name="Companyname")
+    private String Companyname;
 
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name="id")
@@ -143,22 +130,23 @@ public class Unternehmen implements Serializable  {
     @Column(name="KursgewinnschaezungNaechstesJahr", unique = true, nullable = true)
     private Integer KursgewinnschaezungNaechstesJahr;
 //association One To Many: One Company to Many Punktelisten
-    @OneToMany
-    private List<Punkteliste> punktelistes;
 
-    public Unternehmen() {
 
+
+    public String getCompanyname() {
+        return Companyname;
     }
 
-    @OneToMany
-    private List<Levermannschritte> levermannschrittes;
-
-    public String getUnternehmenname() {
-        return UnternehmennameId;
+    public void setCompanyname(String companyname) {
+        Companyname = companyname;
     }
 
-    public void setUnternehmenname(String unternehmennameId) {
-        UnternehmennameId = unternehmennameId;
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     public String getDatum() {
@@ -423,22 +411,6 @@ public class Unternehmen implements Serializable  {
 
     public void setKursgewinnschaezungNaechstesJahr(Integer kursgewinnschaezungNaechstesJahr) {
         KursgewinnschaezungNaechstesJahr = kursgewinnschaezungNaechstesJahr;
-    }
-
-    public String getUnternehmennameId() {
-        return UnternehmennameId;
-    }
-
-    public void setUnternehmennameId(String unternehmennameId) {
-        UnternehmennameId = unternehmennameId;
-    }
-
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
     }
 
 

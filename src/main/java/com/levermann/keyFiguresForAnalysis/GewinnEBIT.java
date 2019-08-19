@@ -1,8 +1,8 @@
 package com.levermann.keyFiguresForAnalysis;
 
 import com.levermann.sessionControlClasses.HibernateUtil;
-import com.levermann.entityclass.Levermannschritte;
-import com.levermann.entityclass.Unternehmen;
+import com.levermann.entityclass.AnalysisRating;
+import com.levermann.entityclass.Company;
 import org.apache.log4j.Logger;
 import org.hibernate.HibernateException;
 import org.hibernate.Query;
@@ -41,9 +41,9 @@ public class GewinnEBIT {
            session.beginTransaction();
 
            //HQL Named Query FindAll Unternehmen
-           Query query = session.getNamedQuery("Unternehmen.findAll");
-           List<Unternehmen> unList = (List<Unternehmen>) query.list();
-           for (Unternehmen un : unList) {
+           Query query = session.getNamedQuery("Company.findAll");
+           List<Company> unList = (List<Company>) query.list();
+           for (Company un : unList) {
 
                // Berechnung der Gewinnmarge/EBIT für Punkteverteilung
               float gewinnEBIT;
@@ -64,18 +64,18 @@ public class GewinnEBIT {
                // FAll 1, EBIT größer als 12 %
                  if (retval > 0){
 
-                     //HQL Named Query FindAll Levermannschritte
-                     Query query1 = session.getNamedQuery("Levermannschritte.findAll");
-                     List<Levermannschritte> unList1 = (List<Levermannschritte>) query1.list();
-                     for (Levermannschritte lvsch : unList1) {
+                     //HQL Named Query FindAll AnalysisRating
+                     Query query1 = session.getNamedQuery("AnalysisRating.findAll");
+                     List<AnalysisRating> unList1 = (List<AnalysisRating>) query1.list();
+                     for (AnalysisRating lvsch : unList1) {
 
-                         if (lvsch.getUnternehmenname_Levermannschritte() == un.getUnternehmenname()  == true && retval > 0){
-                             System.out.println("Richtig :D" + lvsch.getUnternehmenname_Levermannschritte() +" = " + un.getUnternehmenname() + "gewinnEBIT = " + gewinnEBIT);
+                         if (lvsch.getCompanyname_AnalysisRating() == un.getCompanyname()  == true && retval > 0){
+                             System.out.println("Richtig :D" + lvsch.getCompanyname_AnalysisRating() +" = " + un.getCompanyname() + "gewinnEBIT = " + gewinnEBIT);
                              lvsch.setEigenkapitalrendite((float) 1); }
 
-                     lvsch.setLevermannschrittAnalyseNameId(lvsch.getLevermannschrittAnalyseNameId());
-                      // System.out.println("Unternehmen: " + un.getUnternehmenname() + " Levermannschritt: " + lvsch.getUnternehmenname_Levermannschritte()() );
-                      // System.out.println("Fall 1 : yea LevermannschrittAnalyseNameId:  "+lvsch.getLevermannschrittAnalyseNameId() +" AM: "+ lvsch.getGewinnrevision());
+                     lvsch.setAnalysisRatingName(lvsch.getAnalysisRatingName());
+                      // System.out.println("Unternehmen: " + un.getCompanyname() + " Levermannschritt: " + lvsch.getCompanyname_AnalysisRating()() );
+                      // System.out.println("Fall 1 : yea AnalysisRatingName:  "+lvsch.getAnalysisRatingName() +" AM: "+ lvsch.getGewinnrevision());
                          }
                  //EBIT ist kleiner als 12 %
                  }else{
@@ -85,37 +85,37 @@ public class GewinnEBIT {
                // FAll 2, EBIT liegt zwischen 12 und 6 Prozent
                  if (retval >= 0 ) {
 
-                     //HQL Named Query FindAll Levermannschritte
-                     Query query1 = session.getNamedQuery("Levermannschritte.findAll");
-                     List<Levermannschritte> unList1 = (List<Levermannschritte>) query1.list();
-                     for (Levermannschritte lvsch1 : unList1) {
+                     //HQL Named Query FindAll AnalysisRating
+                     Query query1 = session.getNamedQuery("AnalysisRating.findAll");
+                     List<AnalysisRating> unList1 = (List<AnalysisRating>) query1.list();
+                     for (AnalysisRating lvsch1 : unList1) {
 
-                         if (lvsch1.getUnternehmenname_Levermannschritte() == un.getUnternehmenname()  == true && retval >= 0 ){
-                             System.out.println("Richtig :D" + lvsch1.getUnternehmenname_Levermannschritte() +" = " + un.getUnternehmenname()  + "gewinnEBIT = " + gewinnEBIT);
+                         if (lvsch1.getCompanyname_AnalysisRating() == un.getCompanyname()  == true && retval >= 0 ){
+                             System.out.println("Richtig :D" + lvsch1.getCompanyname_AnalysisRating() +" = " + un.getCompanyname()  + "gewinnEBIT = " + gewinnEBIT);
                              lvsch1.setEigenkapitalrendite((float) 0); }
 
-                     lvsch1.setLevermannschrittAnalyseNameId(lvsch1.getLevermannschrittAnalyseNameId());
+                     lvsch1.setAnalysisRatingName(lvsch1.getAnalysisRatingName());
 
-                   //  System.out.println("Unternehmen: " + un.getUnternehmenname()  + " Levermannschritt: " + lvsch1.getUnternehmenname_Levermannschritte()());
-                   //  System.out.println("Fall 2 : yea LevermannschrittAnalyseNameId:  " + lvsch1.getLevermannschrittAnalyseNameId() + " AM: " + lvsch1.getGewinnrevision());
+                   //  System.out.println("Unternehmen: " + un.getCompanyname()  + " Levermannschritt: " + lvsch1.getCompanyname_AnalysisRating()());
+                   //  System.out.println("Fall 2 : yea AnalysisRatingName:  " + lvsch1.getAnalysisRatingName() + " AM: " + lvsch1.getGewinnrevision());
                        }
                      //Fall 3, EBIT liegt unter 6 %
                  }else{
 
-                     //HQL Named Query FindAll Levermannschritte
-                     Query query1 = session.getNamedQuery("Levermannschritte.findAll");
-                     List<Levermannschritte> unList1 = (List<Levermannschritte>) query1.list();
-                     for (Levermannschritte lvsch1 : unList1) {
+                     //HQL Named Query FindAll AnalysisRating
+                     Query query1 = session.getNamedQuery("AnalysisRating.findAll");
+                     List<AnalysisRating> unList1 = (List<AnalysisRating>) query1.list();
+                     for (AnalysisRating lvsch1 : unList1) {
 
-                         if (lvsch1.getUnternehmenname_Levermannschritte() == un.getUnternehmenname()  == true) {
-                             System.out.println("Richtig :D" + lvsch1.getUnternehmenname_Levermannschritte() + " = " + un.getUnternehmenname()  + "gewinnEBIT = " + gewinnEBIT);
+                         if (lvsch1.getCompanyname_AnalysisRating() == un.getCompanyname()  == true) {
+                             System.out.println("Richtig :D" + lvsch1.getCompanyname_AnalysisRating() + " = " + un.getCompanyname()  + "gewinnEBIT = " + gewinnEBIT);
                              lvsch1.setEigenkapitalrendite((float) -1);}
 
-                         lvsch1.setLevermannschrittAnalyseNameId(lvsch1.getLevermannschrittAnalyseNameId());
-                         //  System.out.println("Fall 3 : yea LevermannschrittAnalyseNameId:  " + lvsch1.getLevermannschrittAnalyseNameId() + " AM: " + lvsch1.getGewinnrevision());
+                         lvsch1.setAnalysisRatingName(lvsch1.getAnalysisRatingName());
+                         //  System.out.println("Fall 3 : yea AnalysisRatingName:  " + lvsch1.getAnalysisRatingName() + " AM: " + lvsch1.getGewinnrevision());
                      }
-                          //    System.out.println("Liste der Levermannschritte = " + un.getUnternehmenname()  + ","
-                         //       + un.getUnternehmenname()  + " Kursgewinn aktuell: " + un.getGewinnschaezung() + " Kursgewinn Verhältniss: " + un.getGewinnschaezungVor4Wochen() + " summe:" + i);
+                          //    System.out.println("Liste der AnalysisRating = " + un.getCompanyname()  + ","
+                         //       + un.getCompanyname()  + " Kursgewinn aktuell: " + un.getGewinnschaezung() + " Kursgewinn Verhältniss: " + un.getGewinnschaezungVor4Wochen() + " summe:" + i);
                  }
                  }
            }

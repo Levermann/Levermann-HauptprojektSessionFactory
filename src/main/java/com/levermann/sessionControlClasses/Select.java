@@ -10,8 +10,8 @@ import java.util.List;
 import java.util.Scanner;
 
 
-import com.levermann.entityclass.Levermannschritte;
-import com.levermann.entityclass.Unternehmen;
+import com.levermann.entityclass.AnalysisRating;
+import com.levermann.entityclass.Company;
 import org.apache.log4j.Logger;
 import org.hibernate.HibernateException;
 import org.hibernate.Query;
@@ -47,23 +47,23 @@ public class Select{
             session.beginTransaction();
 
         //HQL Named Query FindAll Unternehmen
-            Query query = session.getNamedQuery("Unternehmen.findAll");
-            List<Unternehmen> unList = query.list();
-            for (Unternehmen un : unList) {
-                System.out.println("Liste der Unternehmen = " + un.getUnternehmenname()  + ","
-                        + un.getUnternehmenname() );}
+            Query query = session.getNamedQuery("Company.findAll");
+            List<Company> unList = query.list();
+            for (Company un : unList) {
+                System.out.println("Liste der Unternehmen = " + un.getCompanyname()  + ","
+                        + un.getCompanyname() );}
 
             /* Ausgabe eines Datensatzes mit UnternehmennameId
             query = session.getNamedQuery("Unternehmen.findByName");
             Unternehmen un = (Unternehmen) query.uniqueResult();
-            System.out.println("Unternehmen UnternehmennameId=" + un.getUnternehmenname()  + " Name=" + un.getUnternehmenname()  + ", City=");
+            System.out.println("Unternehmen UnternehmennameId=" + un.getCompanyname()  + " Name=" + un.getCompanyname()  + ", City=");
 
             // Ausgabe einer Liste mit Namen
             query = session.getNamedQuery("Unternehmen.findByName");
             unList = query.list();
             for (Unternehmen un1 : unList) {
-                System.out.println("List of Employees::" + un1.getUnternehmenname()  + ","
-                        + un1.getUnternehmenname() );
+                System.out.println("List of Employees::" + un1.getCompanyname()  + ","
+                        + un1.getCompanyname() );
             }*/
 
             // safe Unternhemen Object
@@ -84,7 +84,7 @@ public class Select{
 
      final static Logger logger3 = Logger.getLogger(Select.class);
 
-     public void SelectUnternehmenByName (String Unternehmenname) {
+     public void SelectUnternehmenByName (String name) {
          //Logger wird für die Methode ausgeführt
          logger3.info("Logger is Entering the Execute method from Create");
          String returnValue = "";
@@ -109,26 +109,26 @@ public class Select{
              session.beginTransaction();
 
              //HQL Named Query FindAll Unternehmen
-             Query query = session.getNamedQuery("Unternehmen.findAll");
+             Query query = session.getNamedQuery("Company.findAll");
 
-             List<Unternehmen> unList = query.list();
-             for (Unternehmen un : unList) {
-                 un.setUnternehmennameId(Unternehmenname);
+             List<Company> unList = query.list();
+             for (Company un : unList) {
+                 un.setCompanyname(name);
 
-                 System.out.println("Liste der Unternehmen = " + un.getUnternehmenname()  + ","
-                         + un.getUnternehmenname() );}
+                 System.out.println("Liste der Unternehmen = " + un.getCompanyname()  + ","
+                         + un.getCompanyname() );}
 
             /* Ausgabe eines Datensatzes mit UnternehmennameId
             query = session.getNamedQuery("Unternehmen.findByName");
             Unternehmen un = (Unternehmen) query.uniqueResult();
-            System.out.println("Unternehmen UnternehmennameId=" + un.getUnternehmenname()  + " Name=" + un.getUnternehmenname()  + ", City=");
+            System.out.println("Unternehmen UnternehmennameId=" + un.getCompanyname()  + " Name=" + un.getCompanyname()  + ", City=");
 
             // Ausgabe einer Liste mit Namen
             query = session.getNamedQuery("Unternehmen.findByName");
             unList = query.list();
             for (Unternehmen un1 : unList) {
-                System.out.println("List of Employees::" + un1.getUnternehmenname()  + ","
-                        + un1.getUnternehmenname() );
+                System.out.println("List of Employees::" + un1.getCompanyname()  + ","
+                        + un1.getCompanyname() );
             }*/
 
              // safe Unternhemen Object
@@ -149,7 +149,7 @@ public class Select{
 
          final static Logger logger2 = Logger.getLogger(com.levermann.sessionControlClasses.Select.class);
 
-         public void SelectLevermannschritteAlle () {
+         public void SelectAnalysisRatingAlle () {
              //Logger wird für die Methode ausgeführt
              logger2.info("Logger is Entering the Execute method from Create");
              String returnValue = "";
@@ -174,25 +174,25 @@ public class Select{
                  session.beginTransaction();
 
                  //HQL Named Query FindAll Unternehmen
-                 Query query = session.getNamedQuery("Unternehmen.findAll");
-                 List<Unternehmen> unList = query.list();
-                 for (Unternehmen un : unList) {
-                     System.out.println("Liste der Unternehmen = " + un.getUnternehmenname()  + ","
-                             + un.getUnternehmenname() );}
+                 Query query = session.getNamedQuery("Company.findAll");
+                 List<Company> unList = query.list();
+                 for (Company un : unList) {
+                     System.out.println("Liste der Unternehmen = " + un.getCompanyname()  + ","
+                             + un.getCompanyname() );}
 
 
 
-            //HQL Named Query FindAll Levermannschritte
-            Query query1 = session.getNamedQuery("Levermannschritte.findAll");
-            List<Levermannschritte> unList1 = (List<Levermannschritte>) query1.list();
-            for (Levermannschritte un1 : unList1) {
-                System.out.println("Liste der Levermannschritte = " + un1.getLevermannschrittAnalyseNameId() + ","
-                        + un1.getUnternehmenname_Levermannschritte());}
+            //HQL Named Query FindAll AnalysisRating
+            Query query1 = session.getNamedQuery("AnalysisRating.findAll");
+            List<AnalysisRating> unList1 = (List<AnalysisRating>) query1.list();
+            for (AnalysisRating un1 : unList1) {
+                System.out.println("Liste der AnalysisRating = " + un1.getAnalysisRatingName() + ","
+                        + un1.getAnalysisRatingName());}
 
             // Ausgabe eines Datensatzes mit UnternehmennameId
-            query1 = session.getNamedQuery("Levermannschritte.findByName");
-            Levermannschritte un1 = (Levermannschritte) query1.uniqueResult();
-            System.out.println("Levermannschritte LevermannschrittAnalyseNameId=" + un1.getLevermannschrittAnalyseNameId() + " UnternehmennameId= =" + un1.getUnternehmenname_Levermannschritte());
+            query1 = session.getNamedQuery("AnalysisRating.findByName");
+            AnalysisRating un1 = (AnalysisRating) query1.uniqueResult();
+            System.out.println("AnalysisRating LevermannschrittAnalyseNameId=" + un1.getAnalysisRatingName() + " UnternehmennameId= =" + un1.getAnalysisRatingName());
 
 
                  // safe Unternhemen Object
@@ -232,36 +232,36 @@ public class Select{
             Query query = session.getNamedQuery("Unternehmen.findAll");
             List<Unternehmen> unList = query.list();
             for (Unternehmen un : unList) {
-              /*  System.out.println("Liste der Unternehmen = " + un.getUnternehmenname()  + ","
-                        + un.getUnternehmenname() + un.getEigenkapital()+ + un.getJahresueberschuss());}
+              /*  System.out.println("Liste der Unternehmen = " + un.getCompanyname()  + ","
+                        + un.getCompanyname() + un.getEigenkapital()+ + un.getJahresueberschuss());}
 
          if ( un.getEigenkapital() == un.getJahresueberschuss() == true)
             {
-                System.out.println("yes" + un.getUnternehmenname() +un.getUnternehmenname() );
+                System.out.println("yes" + un.getCompanyname() +un.getCompanyname() );
 
-                //HQL Named Query FindAll Levermannschritte
-                Query query1 = session.getNamedQuery("Levermannschritte.findAll");
-                List<Levermannschritte> unList1 = (List<Levermannschritte>) query1.list();
-                for (Levermannschritte un1 : unList1)
+                //HQL Named Query FindAll AnalysisRating
+                Query query1 = session.getNamedQuery("AnalysisRating.findAll");
+                List<AnalysisRating> unList1 = (List<AnalysisRating>) query1.list();
+                for (AnalysisRating un1 : unList1)
 
                 // Ausgabe eines Datensatzes mit UnternehmennameId
-                query1 = session.getNamedQuery("Levermannschritte.findByUnternehmennameId");
+                query1 = session.getNamedQuery("AnalysisRating.findByUnternehmennameId");
                 query1.setInteger("UnternehmennameId3", 6);
-                Levermannschritte un1 = (Levermannschritte) query1.uniqueResult();
-                System.out.println("Levermannschritte LevermannschrittAnalyseNameId=" + un1.getLevermannschrittAnalyseNameId() + " UnternehmennameId=" +  un1.getUnternehmenname_Levermannschritte());
+                AnalysisRating un1 = (AnalysisRating) query1.uniqueResult();
+                System.out.println("AnalysisRating LevermannschrittAnalyseNameId=" + un1.getLevermannschrittAnalyseNameId() + " UnternehmennameId=" +  un1.getCompanyname_AnalysisRating());
 
                 try {
-                    Levermannschritte lv = new Levermannschritte();
+                    AnalysisRating lv = new AnalysisRating();
 
 
                 }
 
             }
 
-            else { System.out.println("nope"+ " "+ un.getUnternehmenname() +" "+un.getUnternehmenname() );
+            else { System.out.println("nope"+ " "+ un.getCompanyname() +" "+un.getCompanyname() );
 
-                Levermannschritte lv = new Levermannschritte();
-                lv.setUnternehmennameId3(un.getUnternehmenname() );
+                AnalysisRating lv = new AnalysisRating();
+                lv.setUnternehmennameId3(un.getCompanyname() );
                 lv.setEigenkapitalrendite(66666);
             }}
 

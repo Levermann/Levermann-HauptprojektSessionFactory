@@ -8,7 +8,7 @@
  */
 package com.levermann.sessionControlClasses;
 
-import com.levermann.entityclass.Unternehmen;
+import com.levermann.entityclass.Company;
 import org.apache.log4j.Logger;
 import org.hibernate.Query;
 import org.hibernate.Session;
@@ -17,9 +17,9 @@ import org.hibernate.SessionFactory;
 import java.util.List;
 import java.util.Scanner;
 
-  public class UpdateUnternehmenDB {
+  public class UpdateCompany {
 
-    final static Logger logger = Logger.getLogger(UpdateUnternehmenDB.class);
+    final static Logger logger = Logger.getLogger(UpdateCompany.class);
 
      public void UnName (String Unternehmenname) {
          //Logger wird für die Methode Delete ausgeführt
@@ -37,14 +37,14 @@ import java.util.Scanner;
       System.out.println("Eingabe:\n 1. ID \n 2.  ");
 
       //Erzeugen eines Objektes vom Typen Unternehmen
-      Unternehmen Unternehmen=new Unternehmen();
+      Company Company =new Company();
       //Select Primärschlüssel
-      Unternehmen.setUnternehmenname( Unternehmenname);
+      Company.setCompanyname( Unternehmenname);
 
     //Beginn der Datenübertragung
     session.beginTransaction();
     //Umesetzung der Update Methode auf das ausgewählte Unternehmen
-    session.update(Unternehmen);
+    session.update(Company);
     // Übertragung bestätigen
     session.getTransaction().commit(); } finally{}}
 
@@ -65,16 +65,16 @@ import java.util.Scanner;
              System.out.println("Eingabe:\n 1. ID \n 2. Unternehmen \n 3. Datum \n 4. Eigenkapital \n 5. Jahresueberschuss");
 
              //Erzeugen eines Objektes vom Typen Unternehmen
-             Unternehmen Unternehmen=new Unternehmen();
+             Company Company =new Company();
              //Select Primärschlüssel
-             Unternehmen.setUnternehmenname( name);
+             Company.setCompanyname( name);
              //Select Name der Firma
-             Unternehmen.setDatum(datum);
+             Company.setDatum(datum);
 
              //Beginn der Datenübertragung
              session.beginTransaction();
              //Umesetzung der Update Methode auf das ausgewählte Unternehmen
-             session.update(Unternehmen);
+             session.update(Company);
              // Übertragung bestätigen
              session.getTransaction().commit(); } finally{}}
 
@@ -95,16 +95,16 @@ import java.util.Scanner;
              System.out.println("Eingabe:\n 1. ID \n 2. ");
 
              //Erzeugen eines Objektes vom Typen Unternehmen
-             Unternehmen Unternehmen=new Unternehmen();
+             Company Company =new Company();
              //Select Primärschlüssel
-             Unternehmen.setUnternehmenname( name);
+             Company.setCompanyname( name);
              //Select Name der Firma
-             Unternehmen.setEigenkapital(eigenkapital);
+             Company.setEigenkapital(eigenkapital);
 
              //Beginn der Datenübertragung
              session.beginTransaction();
              //Umesetzung der Update Methode auf das ausgewählte Unternehmen
-             session.update(Unternehmen);
+             session.update(Company);
              // Übertragung bestätigen
              session.getTransaction().commit(); } finally{}}
 
@@ -128,13 +128,13 @@ import java.util.Scanner;
 
              session.beginTransaction();
         //HQL Named Query FindAll Unternehmen
-         Query query = session.getNamedQuery("Unternehmen.findAll");
-             List<Unternehmen> unList = (List<Unternehmen>) query.list();
-         for (Unternehmen un : unList) {
+         Query query = session.getNamedQuery("Company.findAll");
+             List<Company> unList = (List<Company>) query.list();
+         for (Company un : unList) {
 
-             un.setUnternehmenname( Name);
+             un.setCompanyname( Name);
              un.setJahresueberschuss(Jahresueberschuss);
-             un.getUnternehmenname() ;
+             un.getCompanyname() ;
          }
 
              // Hinzufügen des Loggers war erfolgreich
@@ -160,16 +160,16 @@ import java.util.Scanner;
              System.out.println("Eingabe:\n 1. ID \n 2. Jahresüberschuss");
 
              //Erzeugen eines Objektes vom Typen Unternehmen
-             Unternehmen Unternehmen=new Unternehmen();
+             Company Company =new Company();
              //Select Primärschlüssel
-             Unternehmen.setUnternehmenname( name);
+             Company.setCompanyname( name);
              //Select Name der Firma
-             Unternehmen.setGewinnEBIT(gewinnebit);
+             Company.setGewinnEBIT(gewinnebit);
 
              //Beginn der Datenübertragung
              session.beginTransaction();
              //Umesetzung der Update Methode auf das ausgewählte Unternehmen
-             session.update(Unternehmen);
+             session.update(Company);
              // Übertragung bestätigen
              session.getTransaction().commit(); } finally{}}
 
@@ -190,16 +190,16 @@ import java.util.Scanner;
              System.out.println("Eingabe:\n 1. ID \n 2. Jahresüberschuss");
 
              //Erzeugen eines Objektes vom Typen Unternehmen
-             Unternehmen Unternehmen=new Unternehmen();
+             Company Company =new Company();
              //Select Primärschlüssel
-             Unternehmen.setUnternehmenname( name);
+             Company.setCompanyname( name);
              //Select Name der Firma
-             Unternehmen.setJahresumsatz(jahresumsatz);
+             Company.setJahresumsatz(jahresumsatz);
 
              //Beginn der Datenübertragung
              session.beginTransaction();
              //Umesetzung der Update Methode auf das ausgewählte Unternehmen
-             session.update(Unternehmen);
+             session.update(Company);
              // Übertragung bestätigen
              session.getTransaction().commit(); } finally{}}
 
@@ -220,16 +220,16 @@ import java.util.Scanner;
              System.out.println("Eingabe:\n 1. ID \n 2. Jahresüberschuss");
 
              //Erzeugen eines Objektes vom Typen Unternehmen
-             Unternehmen Unternehmen=new Unternehmen();
+             Company Company =new Company();
              //Select Primärschlüssel
-             Unternehmen.setUnternehmenname( name);
+             Company.setCompanyname( name);
              //Select Name der Firma
-             Unternehmen.setFremdkapital(fremdkapital);
+             Company.setFremdkapital(fremdkapital);
 
              //Beginn der Datenübertragung
              session.beginTransaction();
              //Umesetzung der Update Methode auf das ausgewählte Unternehmen
-             session.update(Unternehmen);
+             session.update(Company);
              // Übertragung bestätigen
              session.getTransaction().commit(); } finally{}}
 
@@ -250,17 +250,17 @@ import java.util.Scanner;
              System.out.println("Eingabe:\n 1. ID \n 2. Jahresüberschuss");
 
              //Erzeugen eines Objektes vom Typen Unternehmen
-             Unternehmen Unternehmen=new Unternehmen();
+             Company Company =new Company();
              //Select Primärschlüssel
              
-             Unternehmen.setUnternehmenname( name);
+             Company.setCompanyname( name);
              //Select Name der Firma
-             Unternehmen.setAktuellerAktienkurs(aktuelleraktienkurs);
+             Company.setAktuellerAktienkurs(aktuelleraktienkurs);
 
              //Beginn der Datenübertragung
              session.beginTransaction();
              //Umesetzung der Update Methode auf das ausgewählte Unternehmen
-             session.update(Unternehmen);
+             session.update(Company);
              // Übertragung bestätigen
              session.getTransaction().commit(); } finally{}}
 
@@ -281,17 +281,17 @@ import java.util.Scanner;
              System.out.println("Eingabe:\n 1. ID \n 2. Jahresüberschuss");
 
              //Erzeugen eines Objektes vom Typen Unternehmen
-             Unternehmen Unternehmen=new Unternehmen();
+             Company Company =new Company();
              //Select Primärschlüssel
              
-             Unternehmen.setUnternehmenname( name);
+             Company.setCompanyname( name);
              //Select Name der Firma
-             Unternehmen.setGewinnschaezung(gewinnschaezung);
+             Company.setGewinnschaezung(gewinnschaezung);
 
              //Beginn der Datenübertragung
              session.beginTransaction();
              //Umesetzung der Update Methode auf das ausgewählte Unternehmen
-             session.update(Unternehmen);
+             session.update(Company);
              // Übertragung bestätigen
              session.getTransaction().commit(); } finally{}}
 
@@ -312,17 +312,17 @@ import java.util.Scanner;
              System.out.println("Eingabe:\n 1. ID \n 2. Jahresüberschuss");
 
              //Erzeugen eines Objektes vom Typen Unternehmen
-             Unternehmen Unternehmen=new Unternehmen();
+             Company Company =new Company();
              //Select Primärschlüssel
              
-             Unternehmen.setUnternehmenname( name);
+             Company.setCompanyname( name);
              //Select Name der Firma
-             Unternehmen.setGewinnAVG(gewinnavg);
+             Company.setGewinnAVG(gewinnavg);
 
              //Beginn der Datenübertragung
              session.beginTransaction();
              //Umesetzung der Update Methode auf das ausgewählte Unternehmen
-             session.update(Unternehmen);
+             session.update(Company);
              // Übertragung bestätigen
              session.getTransaction().commit(); } finally{}}
 
@@ -341,17 +341,17 @@ import java.util.Scanner;
              System.out.println("Eingabe:\n 1. ID \n 2. Jahresüberschuss");
 
              //Erzeugen eines Objektes vom Typen Unternehmen
-             Unternehmen Unternehmen=new Unternehmen();
+             Company Company =new Company();
              //Select Primärschlüssel
              
-             Unternehmen.setUnternehmenname( name);
+             Company.setCompanyname( name);
              //Select Name der Firma
-             Unternehmen.setHalten(halten);
+             Company.setHalten(halten);
 
              //Beginn der Datenübertragung
              session.beginTransaction();
              //Umesetzung der Update Methode auf das ausgewählte Unternehmen
-             session.update(Unternehmen);
+             session.update(Company);
              // Übertragung bestätigen
              session.getTransaction().commit(); } finally{}}
 
@@ -372,17 +372,17 @@ import java.util.Scanner;
              System.out.println("Eingabe:\n 1. ID \n 2. Jahresüberschuss");
 
              //Erzeugen eines Objektes vom Typen Unternehmen
-             Unternehmen Unternehmen=new Unternehmen();
+             Company Company =new Company();
              //Select Primärschlüssel
              
-             Unternehmen.setUnternehmenname( name);
+             Company.setCompanyname( name);
              //Select Name der Firma
-             Unternehmen.setVerkaufen(verkaufen);
+             Company.setVerkaufen(verkaufen);
 
              //Beginn der Datenübertragung
              session.beginTransaction();
              //Umesetzung der Update Methode auf das ausgewählte Unternehmen
-             session.update(Unternehmen);
+             session.update(Company);
              // Übertragung bestätigen
              session.getTransaction().commit(); } finally{}}
 
@@ -403,17 +403,17 @@ import java.util.Scanner;
              System.out.println("Eingabe:\n 1. ID \n 2. Jahresüberschuss");
 
              //Erzeugen eines Objektes vom Typen Unternehmen
-             Unternehmen Unternehmen=new Unternehmen();
+             Company Company =new Company();
              //Select Primärschlüssel
              
-             Unternehmen.setUnternehmenname( name);
+             Company.setCompanyname( name);
              //Select Name der Firma
-             Unternehmen.setKaufen(kaufen);
+             Company.setKaufen(kaufen);
 
              //Beginn der Datenübertragung
              session.beginTransaction();
              //Umesetzung der Update Methode auf das ausgewählte Unternehmen
-             session.update(Unternehmen);
+             session.update(Company);
              // Übertragung bestätigen
              session.getTransaction().commit(); } finally{}}
 
@@ -434,17 +434,17 @@ import java.util.Scanner;
              System.out.println("Eingabe:\n 1. ID \n 2. Jahresüberschuss");
 
              //Erzeugen eines Objektes vom Typen Unternehmen
-             Unternehmen Unternehmen=new Unternehmen();
+             Company Company =new Company();
              //Select Primärschlüssel
              
-             Unternehmen.setUnternehmenname( name);
+             Company.setCompanyname( name);
              //Select Name der Firma
-             Unternehmen.setKursanstiegUnternehmen(kursanstiegunernehmen);
+             Company.setKursanstiegUnternehmen(kursanstiegunernehmen);
 
              //Beginn der Datenübertragung
              session.beginTransaction();
              //Umesetzung der Update Methode auf das ausgewählte Unternehmen
-             session.update(Unternehmen);
+             session.update(Company);
              // Übertragung bestätigen
              session.getTransaction().commit(); } finally{}}
 
@@ -463,17 +463,17 @@ import java.util.Scanner;
              System.out.println("Eingabe:\n 1. ID \n 2. Jahresüberschuss");
 
              //Erzeugen eines Objektes vom Typen Unternehmen
-             Unternehmen Unternehmen=new Unternehmen();
+             Company Company =new Company();
              //Select Primärschlüssel
              
-             Unternehmen.setUnternehmenname( name);
+             Company.setCompanyname( name);
              //Select Name der Firma
-             Unternehmen.setKursanstiegIndex(kursanstiegindex);
+             Company.setKursanstiegIndex(kursanstiegindex);
 
              //Beginn der Datenübertragung
              session.beginTransaction();
              //Umesetzung der Update Methode auf das ausgewählte Unternehmen
-             session.update(Unternehmen);
+             session.update(Company);
              // Übertragung bestätigen
              session.getTransaction().commit(); } finally{}}
 
@@ -494,18 +494,18 @@ import java.util.Scanner;
              System.out.println("Eingabe:\n 1. ID \n 2. Jahresüberschuss");
 
              //Erzeugen eines Objektes vom Typen Unternehmen
-             Unternehmen Unternehmen=new Unternehmen();
+             Company Company =new Company();
              //Select Primärschlüssel
              
-             Unternehmen.setUnternehmenname( name);
+             Company.setCompanyname( name);
              //Select Name der Firma
 
-             Unternehmen.setGewinnschaezungVor4Wochen(gewinnschaezungvor4wochen);
+             Company.setGewinnschaezungVor4Wochen(gewinnschaezungvor4wochen);
 
              //Beginn der Datenübertragung
              session.beginTransaction();
              //Umesetzung der Update Methode auf das ausgewählte Unternehmen
-             session.update(Unternehmen);
+             session.update(Company);
              // Übertragung bestätigen
              session.getTransaction().commit(); } finally{}}
 
@@ -526,17 +526,17 @@ import java.util.Scanner;
              System.out.println("Eingabe:\n 1. ID \n 2. Jahresüberschuss");
 
              //Erzeugen eines Objektes vom Typen Unternehmen
-             Unternehmen Unternehmen=new Unternehmen();
+             Company Company =new Company();
              //Select Primärschlüssel
              
-             Unternehmen.setUnternehmenname( name);
+             Company.setCompanyname( name);
              //Select Name der Firma
-             Unternehmen.setAktienkursTagVeroeffentlichungQartalszahlen(aktienkursTagVeroeffentlichungQartalszahlen);
+             Company.setAktienkursTagVeroeffentlichungQartalszahlen(aktienkursTagVeroeffentlichungQartalszahlen);
 
              //Beginn der Datenübertragung
              session.beginTransaction();
              //Umesetzung der Update Methode auf das ausgewählte Unternehmen
-             session.update(Unternehmen);
+             session.update(Company);
              // Übertragung bestätigen
              session.getTransaction().commit(); } finally{}}
 
@@ -557,17 +557,17 @@ import java.util.Scanner;
              System.out.println("Eingabe:\n 1. ID \n 2. Jahresüberschuss");
 
              //Erzeugen eines Objektes vom Typen Unternehmen
-             Unternehmen Unternehmen=new Unternehmen();
+             Company Company =new Company();
              //Select Primärschlüssel
              
-             Unternehmen.setUnternehmenname( name);
+             Company.setCompanyname( name);
              //Select Name der Firma
-             Unternehmen.setKursVor6Monaten(kursvor6monaten);
+             Company.setKursVor6Monaten(kursvor6monaten);
 
              //Beginn der Datenübertragung
              session.beginTransaction();
              //Umesetzung der Update Methode auf das ausgewählte Unternehmen
-             session.update(Unternehmen);
+             session.update(Company);
              // Übertragung bestätigen
              session.getTransaction().commit(); } finally{}}
 
@@ -588,17 +588,17 @@ import java.util.Scanner;
              System.out.println("Eingabe:\n 1. ID \n 2. Jahresüberschuss");
 
              //Erzeugen eines Objektes vom Typen Unternehmen
-             Unternehmen Unternehmen=new Unternehmen();
+             Company Company =new Company();
              //Select Primärschlüssel
              
-             Unternehmen.setUnternehmenname( name);
+             Company.setCompanyname( name);
              //Select Name der Firma
-             Unternehmen.setKursVor6Monaten(kursvor12monaten);
+             Company.setKursVor6Monaten(kursvor12monaten);
 
              //Beginn der Datenübertragung
              session.beginTransaction();
              //Umesetzung der Update Methode auf das ausgewählte Unternehmen
-             session.update(Unternehmen);
+             session.update(Company);
              // Übertragung bestätigen
              session.getTransaction().commit(); } finally{}}
 
@@ -619,17 +619,17 @@ import java.util.Scanner;
              System.out.println("Eingabe:\n 1. ID \n 2. Jahresüberschuss");
 
              //Erzeugen eines Objektes vom Typen Unternehmen
-             Unternehmen Unternehmen=new Unternehmen();
+             Company Company =new Company();
              //Select Primärschlüssel
              
-             Unternehmen.setUnternehmenname( name);
+             Company.setCompanyname( name);
              //Select Name der Firma
-             Unternehmen.setKursVor3Monaten(kursvor3monaten);
+             Company.setKursVor3Monaten(kursvor3monaten);
 
              //Beginn der Datenübertragung
              session.beginTransaction();
              //Umesetzung der Update Methode auf das ausgewählte Unternehmen
-             session.update(Unternehmen);
+             session.update(Company);
              // Übertragung bestätigen
              session.getTransaction().commit(); } finally{}}
 
@@ -650,17 +650,17 @@ import java.util.Scanner;
              System.out.println("Eingabe:\n 1. ID \n 2. Jahresüberschuss");
 
              //Erzeugen eines Objektes vom Typen Unternehmen
-             Unternehmen Unternehmen=new Unternehmen();
+             Company Company =new Company();
              //Select Primärschlüssel
              
-             Unternehmen.setUnternehmenname( name);
+             Company.setCompanyname( name);
              //Select Name der Firma
-             Unternehmen.setKursVor2Monaten(kursvor2monaten);
+             Company.setKursVor2Monaten(kursvor2monaten);
 
              //Beginn der Datenübertragung
              session.beginTransaction();
              //Umesetzung der Update Methode auf das ausgewählte Unternehmen
-             session.update(Unternehmen);
+             session.update(Company);
              // Übertragung bestätigen
              session.getTransaction().commit(); } finally{}}
 
@@ -681,17 +681,17 @@ import java.util.Scanner;
              System.out.println("Eingabe:\n 1. ID \n 2. Jahresüberschuss");
 
              //Erzeugen eines Objektes vom Typen Unternehmen
-             Unternehmen Unternehmen=new Unternehmen();
+             Company Company =new Company();
              //Select Primärschlüssel
              
-             Unternehmen.setUnternehmenname( name);
+             Company.setCompanyname( name);
              //Select Name der Firma
-             Unternehmen.setKursVor6Monaten(kursvor1monaten);
+             Company.setKursVor6Monaten(kursvor1monaten);
 
              //Beginn der Datenübertragung
              session.beginTransaction();
              //Umesetzung der Update Methode auf das ausgewählte Unternehmen
-             session.update(Unternehmen);
+             session.update(Company);
              // Übertragung bestätigen
              session.getTransaction().commit(); } finally{}}
 
@@ -712,17 +712,17 @@ import java.util.Scanner;
              System.out.println("Eingabe:\n 1. ID \n 2. Jahresüberschuss");
 
              //Erzeugen eines Objektes vom Typen Unternehmen
-             Unternehmen Unternehmen=new Unternehmen();
+             Company Company =new Company();
              //Select Primärschlüssel
              
-             Unternehmen.setUnternehmenname( name);
+             Company.setCompanyname( name);
              //Select Name der Firma
-             Unternehmen.setDaxVor1Monat(daxvor1monat);
+             Company.setDaxVor1Monat(daxvor1monat);
 
              //Beginn der Datenübertragung
              session.beginTransaction();
              //Umesetzung der Update Methode auf das ausgewählte Unternehmen
-             session.update(Unternehmen);
+             session.update(Company);
              // Übertragung bestätigen
              session.getTransaction().commit(); } finally{}}
 
@@ -743,17 +743,17 @@ import java.util.Scanner;
              System.out.println("Eingabe:\n 1. ID \n 2. Jahresüberschuss");
 
              //Erzeugen eines Objektes vom Typen Unternehmen
-             Unternehmen Unternehmen=new Unternehmen();
+             Company Company =new Company();
              //Select Primärschlüssel
              
-             Unternehmen.setUnternehmenname( name);
+             Company.setCompanyname( name);
              //Select Name der Firma
-             Unternehmen.setDaxVor2Monaten(daxvor2monaten);
+             Company.setDaxVor2Monaten(daxvor2monaten);
 
              //Beginn der Datenübertragung
              session.beginTransaction();
              //Umesetzung der Update Methode auf das ausgewählte Unternehmen
-             session.update(Unternehmen);
+             session.update(Company);
              // Übertragung bestätigen
              session.getTransaction().commit(); } finally{}}
 
@@ -774,17 +774,17 @@ import java.util.Scanner;
              System.out.println("Eingabe:\n 1. ID \n 2. Jahresüberschuss");
 
              //Erzeugen eines Objektes vom Typen Unternehmen
-             Unternehmen Unternehmen=new Unternehmen();
+             Company Company =new Company();
              //Select Primärschlüssel
              
-             Unternehmen.setUnternehmenname( name);
+             Company.setCompanyname( name);
              //Select Name der Firma
-             Unternehmen.setDaxVor2Monaten(daxvor3monaten);
+             Company.setDaxVor2Monaten(daxvor3monaten);
 
              //Beginn der Datenübertragung
              session.beginTransaction();
              //Umesetzung der Update Methode auf das ausgewählte Unternehmen
-             session.update(Unternehmen);
+             session.update(Company);
              // Übertragung bestätigen
              session.getTransaction().commit(); } finally{}}
 
@@ -805,17 +805,17 @@ import java.util.Scanner;
              System.out.println("Eingabe:\n 1. ID \n 2. Jahresüberschuss");
 
              //Erzeugen eines Objektes vom Typen Unternehmen
-             Unternehmen Unternehmen=new Unternehmen();
+             Company Company =new Company();
              //Select Primärschlüssel
              
-             Unternehmen.setUnternehmenname( name);
+             Company.setCompanyname( name);
              //Select Name der Firma
-             Unternehmen.setGewinnschaezungNaechstesJahr(gewinnschaetzungnaechstesjahr);
+             Company.setGewinnschaezungNaechstesJahr(gewinnschaetzungnaechstesjahr);
 
              //Beginn der Datenübertragung
              session.beginTransaction();
              //Umesetzung der Update Methode auf das ausgewählte Unternehmen
-             session.update(Unternehmen);
+             session.update(Company);
              // Übertragung bestätigen
              session.getTransaction().commit(); } finally{}}
 
@@ -836,17 +836,17 @@ import java.util.Scanner;
              System.out.println("Eingabe:\n 1. ID \n 2. Jahresüberschuss");
 
              //Erzeugen eines Objektes vom Typen Unternehmen
-             Unternehmen Unternehmen=new Unternehmen();
+             Company Company =new Company();
              //Select Primärschlüssel
              
-             Unternehmen.setUnternehmenname( name);
+             Company.setCompanyname( name);
              //Select Name der Firma
-             Unternehmen.setGewinnschaezungDiesesJahr(gewinnschaezungdiesesjahr);
+             Company.setGewinnschaezungDiesesJahr(gewinnschaezungdiesesjahr);
 
              //Beginn der Datenübertragung
              session.beginTransaction();
              //Umesetzung der Update Methode auf das ausgewählte Unternehmen
-             session.update(Unternehmen);
+             session.update(Company);
              // Übertragung bestätigen
              session.getTransaction().commit(); } finally{}}
 
@@ -867,17 +867,17 @@ import java.util.Scanner;
              System.out.println("Eingabe:\n 1. ID \n 2. Jahresüberschuss");
 
              //Erzeugen eines Objektes vom Typen Unternehmen
-             Unternehmen Unternehmen=new Unternehmen();
+             Company Company =new Company();
              //Select Primärschlüssel
              
-             Unternehmen.setUnternehmenname( name);
+             Company.setCompanyname( name);
              //Select Name der Firma
-             Unternehmen.setFinanzsektor(finanzsektor);
+             Company.setFinanzsektor(finanzsektor);
 
              //Beginn der Datenübertragung
              session.beginTransaction();
              //Umesetzung der Update Methode auf das ausgewählte Unternehmen
-             session.update(Unternehmen);
+             session.update(Company);
              // Übertragung bestätigen
              session.getTransaction().commit(); } finally{}}
 
