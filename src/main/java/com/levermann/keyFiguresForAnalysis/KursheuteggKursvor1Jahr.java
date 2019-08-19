@@ -53,26 +53,26 @@ public class KursheuteggKursvor1Jahr {
             for (Unternehmen un : unList) {
 
                 // Berechnung der WerteVeränderung für Punkteverteilung
-                float i;
-                i = ((float) un.getAktuellerAktienkurs() / (float) un.getKursVor12Monaten()) * 100 - 100;
+                float KursheuteggKursvor1JahrPkt;
+               KursheuteggKursvor1JahrPkt= ((float) un.getAktuellerAktienkurs() / (float) un.getKursVor12Monaten()) * 100 - 100;
                 DecimalFormat f = new DecimalFormat("#0.00");
-                double toFormat = ((double) Math.round(i * 100)) / 100;
+                double toFormat = ((double) Math.round(KursheuteggKursvor1JahrPkt * 100)) / 100;
                 f.format(toFormat);
 
                 // Aufrunden
-                i = Math.round(i);
-                i = i / 100;
+               KursheuteggKursvor1JahrPkt= Math.round(KursheuteggKursvor1JahrPkt);
+               KursheuteggKursvor1JahrPkt=KursheuteggKursvor1JahrPkt/ 100;
 
                 // FAll 1, Gewinnschätzung aktuell ist um mind höher als vor 4 Wochen
-                if (i > 0.05 == true) {
+                if (KursheuteggKursvor1JahrPkt > 0.05 == true) {
 
                     //HQL Named Query FindAll Levermannschritte
                     Query query1 = session.getNamedQuery("Levermannschritte.findAll");
                     List<Levermannschritte> unList1 = (List<Levermannschritte>) query1.list();
                     for (Levermannschritte lvsch : unList1) {
 
-                        if (lvsch.getUnternehmenname_Levermannschritte() == un.getUnternehmenname()  == true && i >= 0.05 == true) {
-                            System.out.println("Richtig :D" + lvsch.getUnternehmenname_Levermannschritte() + " = " + un.getUnternehmenname()  + "i = " + i);
+                        if (lvsch.getUnternehmenname_Levermannschritte() == un.getUnternehmenname()  == true &&KursheuteggKursvor1JahrPkt>= 0.05 == true) {
+                            System.out.println("Richtig :D" + lvsch.getUnternehmenname_Levermannschritte() + " = " + un.getUnternehmenname()  + "KursheuteggKursvor1JahrPkt = " + KursheuteggKursvor1JahrPkt);
                             lvsch.setKursverlauf12Monate((float) 1);
                         }
 
@@ -83,15 +83,15 @@ public class KursheuteggKursvor1Jahr {
                 }
 
                 // FAll 1, Gewinnschätzung aktuell ist um mind. -0.05 niedriger als vor 4 Wochen
-                if (i < -0.05 == true) {
+                if (KursheuteggKursvor1JahrPkt < -0.05 == true) {
 
                     //HQL Named Query FindAll Levermannschritte
                     Query query1 = session.getNamedQuery("Levermannschritte.findAll");
                     List<Levermannschritte> unList1 = (List<Levermannschritte>) query1.list();
                     for (Levermannschritte lvsch1 : unList1) {
 
-                        if (lvsch1.getUnternehmenname_Levermannschritte() == un.getUnternehmenname()  == true && i <= -0.05 == true) {
-                            System.out.println("Richtig :D" + lvsch1.getUnternehmenname_Levermannschritte() + " = " + un.getUnternehmenname()  + "i = " + i);
+                        if (lvsch1.getUnternehmenname_Levermannschritte() == un.getUnternehmenname()  == true &&KursheuteggKursvor1JahrPkt<= -0.05 == true) {
+                            System.out.println("Richtig :D" + lvsch1.getUnternehmenname_Levermannschritte() + " = " + un.getUnternehmenname()  + "KursheuteggKursvor1JahrPkt = " + KursheuteggKursvor1JahrPkt);
                             lvsch1.setKursverlauf12Monate((float) -1);
                         }
 
@@ -102,15 +102,15 @@ public class KursheuteggKursvor1Jahr {
                     }
                 }
 
-                if (i >= 0.05 == false && i <= -0.05 == false) {
+                if (KursheuteggKursvor1JahrPkt >= 0.05 == false &&KursheuteggKursvor1JahrPkt<= -0.05 == false) {
 
                     //HQL Named Query FindAll Levermannschritte
                     Query query1 = session.getNamedQuery("Levermannschritte.findAll");
                     List<Levermannschritte> unList1 = (List<Levermannschritte>) query1.list();
                     for (Levermannschritte lvsch1 : unList1) {
 
-                        if (lvsch1.getUnternehmenname_Levermannschritte() == un.getUnternehmenname()  == true && i > 0.005 == false && i < -0.05 == false) {
-                            System.out.println("Richtig :D" + lvsch1.getUnternehmenname_Levermannschritte() + " = " + un.getUnternehmenname()  + "i = " + i);
+                        if (lvsch1.getUnternehmenname_Levermannschritte() == un.getUnternehmenname()  == true &&KursheuteggKursvor1JahrPkt> 0.005 == false &&KursheuteggKursvor1JahrPkt< -0.05 == false) {
+                            System.out.println("Richtig :D" + lvsch1.getUnternehmenname_Levermannschritte() + " = " + un.getUnternehmenname()  + "KursheuteggKursvor1JahrPkt = " + KursheuteggKursvor1JahrPkt);
                             lvsch1.setKursverlauf12Monate((float) 0);
                         }
 

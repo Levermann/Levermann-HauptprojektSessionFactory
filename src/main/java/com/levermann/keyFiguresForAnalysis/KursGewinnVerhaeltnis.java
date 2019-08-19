@@ -1,8 +1,8 @@
 package com.levermann.keyFiguresForAnalysis;
 
-import com.levermann.sessionControlClasses.HibernateUtil;
 import com.levermann.entityclass.Levermannschritte;
 import com.levermann.entityclass.Unternehmen;
+import com.levermann.sessionControlClasses.HibernateUtil;
 import org.apache.log4j.Logger;
 import org.hibernate.HibernateException;
 import org.hibernate.Query;
@@ -13,11 +13,11 @@ import java.text.DecimalFormat;
 import java.util.List;
 import java.util.Scanner;
 
-public class KursGewinnVerhältnis {
+public class KursGewinnVerhaeltnis {
     
     final static Logger logger = Logger.getLogger(Eigenkapitalrendite.class);
 
-   public void KursGewinnVerhältnis () {
+   public void KursGewinnVerhaeltnis () {
        //Logger wird für die Methode ausgeführt
        logger.info("Logger is Entering the Execute method from Create");
        String returnValue = "";
@@ -46,23 +46,23 @@ public class KursGewinnVerhältnis {
            for (Unternehmen un : unList) {
 
                // Berechnung der Eigenkapitalrendite für Punkteverteilung
-              float i;
-              i =  ((float)un.getAktuellerAktienkurs()/(float)un.getGewinnschaezung());
+              float KursGewinnVerhaeltnisPkt;
+             KursGewinnVerhaeltnisPkt=  ((float)un.getAktuellerAktienkurs()/(float)un.getGewinnschaezung());
                DecimalFormat f = new DecimalFormat("#0.00");
-               double toFormat = ((double)Math.round(i*100))/100;
+               double toFormat = ((double)Math.round(KursGewinnVerhaeltnisPkt*100))/100;
                f.format(toFormat);
 
                 // Aufrunden
-               i = Math.round(i);
+              KursGewinnVerhaeltnisPkt= Math.round(KursGewinnVerhaeltnisPkt);
                
                //definiere beide bewertungskriterien
                 int retval1, retval2, retval3;
                 float upperLimit = (float)16.0;
                 float lowerLimit = (float)12.0;
 
-                retval1 = Float.compare(i, upperLimit);
-                retval2 = Float.compare(i, (float)0.0);
-                retval3 = Float.compare(i, lowerLimit);
+                retval1 = Float.compare(KursGewinnVerhaeltnisPkt, upperLimit);
+                retval2 = Float.compare(KursGewinnVerhaeltnisPkt, (float)0.0);
+                retval3 = Float.compare(KursGewinnVerhaeltnisPkt, lowerLimit);
                 if (retval3 < 0 && retval2 > 0){
                     //return 1;
                 }else if(retval2 < 0 || retval1 > 0){
@@ -71,7 +71,7 @@ public class KursGewinnVerhältnis {
                     //return 0;
                 }
 
-                float retval = Float.compare(i, upperLimit);
+                float retval = Float.compare(KursGewinnVerhaeltnisPkt, upperLimit);
                
                // FAll 1, Kursgewinnverhältnis liegt zwischen 0 und 12
                  if (retval3 < 0 && retval2 > 0){
@@ -82,7 +82,7 @@ public class KursGewinnVerhältnis {
                      for (Levermannschritte lvsch : unList1) {
 
                          if (lvsch.getUnternehmenname_Levermannschritte() == un.getUnternehmenname()  == true){
-                             System.out.println("Richtig :D" + lvsch.getUnternehmenname_Levermannschritte() +" = " + un.getUnternehmenname() + "i = " + i);
+                             System.out.println("Richtig :D" + lvsch.getUnternehmenname_Levermannschritte() +" = " + un.getUnternehmenname() + "KursGewinnVerhaeltnisPkt = " + KursGewinnVerhaeltnisPkt);
                              lvsch.setEigenkapitalrendite((float) 1); }
 
                      lvsch.setLevermannschrittAnalyseNameId(lvsch.getLevermannschrittAnalyseNameId());
@@ -101,7 +101,7 @@ public class KursGewinnVerhältnis {
                      for (Levermannschritte lvsch1 : unList1) {
 
                          if (lvsch1.getUnternehmenname_Levermannschritte() == un.getUnternehmenname()  == true && retval >= 0 ){
-                             System.out.println("Richtig :D" + lvsch1.getUnternehmenname_Levermannschritte() +" = " + un.getUnternehmenname()  + "i = " + i);
+                             System.out.println("Richtig :D" + lvsch1.getUnternehmenname_Levermannschritte() +" = " + un.getUnternehmenname()  + "KursGewinnVerhaeltnisPkt = " + KursGewinnVerhaeltnisPkt);
                              lvsch1.setEigenkapitalrendite((float) -1); }
 
                      lvsch1.setLevermannschrittAnalyseNameId(lvsch1.getLevermannschrittAnalyseNameId());
@@ -118,7 +118,7 @@ public class KursGewinnVerhältnis {
                      for (Levermannschritte lvsch1 : unList1) {
 
                          if (lvsch1.getUnternehmenname_Levermannschritte() == un.getUnternehmenname()  == true) {
-                             System.out.println("Richtig :D" + lvsch1.getUnternehmenname_Levermannschritte() + " = " + un.getUnternehmenname()  + "i = " + i);
+                             System.out.println("Richtig :D" + lvsch1.getUnternehmenname_Levermannschritte() + " = " + un.getUnternehmenname()  + "KursGewinnVerhaeltnisPkt = " + KursGewinnVerhaeltnisPkt);
                              lvsch1.setEigenkapitalrendite((float) 0);}
 
                          lvsch1.setLevermannschrittAnalyseNameId(lvsch1.getLevermannschrittAnalyseNameId());

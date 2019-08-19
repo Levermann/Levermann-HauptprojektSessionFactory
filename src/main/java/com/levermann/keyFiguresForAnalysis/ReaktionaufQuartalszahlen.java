@@ -54,45 +54,45 @@ public class ReaktionaufQuartalszahlen {
             for (Unternehmen un : unList) {
 
                 // Berechnung der WerteVeränderung für Punkteverteilung
-                float i;
-                i = ((float) un.getAktienkursTagVeroeffentlichungQartalszahlen()/ (float) un.getKursanstiegIndex()) * 100 - 100;
+                float dreimonatsreversalPkt;
+               dreimonatsreversalPkt= ((float) un.getAktienkursTagVeroeffentlichungQartalszahlen()/ (float) un.getKursanstiegIndex()) * 100 - 100;
                 DecimalFormat f = new DecimalFormat("#0.00");
-                double toFormat = ((double) Math.round(i * 100)) / 100;
+                double toFormat = ((double) Math.round(dreimonatsreversalPkt * 100)) / 100;
                 f.format(toFormat);
 
                 // Aufrunden
-                i = Math.round(i);
-                i = i / 100;
+               dreimonatsreversalPkt= Math.round(dreimonatsreversalPkt);
+               dreimonatsreversalPkt=dreimonatsreversalPkt/ 100;
 
                 // FAll 1, Gewinnschätzung aktuell ist um mind höher als vor 4 Wochen
-                if (i > 1.00 == true) {
+                if (dreimonatsreversalPkt > 1.00 == true) {
 
                     //HQL Named Query FindAll Levermannschritte
                     Query query1 = session.getNamedQuery("Levermannschritte.findAll");
                     List<Levermannschritte> unList1 = (List<Levermannschritte>) query1.list();
                     for (Levermannschritte lvsch : unList1) {
 
-                        if (lvsch.getUnternehmenname_Levermannschritte() == un.getUnternehmenname()  == true && i >= 0.05 == true) {
-                            System.out.println("Richtig :D" + lvsch.getUnternehmenname_Levermannschritte() + " = " + un.getUnternehmenname()  + "i = " + i);
+                        if (lvsch.getUnternehmenname_Levermannschritte() == un.getUnternehmenname()  == true &&dreimonatsreversalPkt>= 0.05 == true) {
+                            System.out.println("Richtig :D" + lvsch.getUnternehmenname_Levermannschritte() + " = " + un.getUnternehmenname()  + "i = " + dreimonatsreversalPkt);
                             lvsch.setReaktionaufQuartalszahlen((float) 1);
                         }
 
                         lvsch.setLevermannschrittAnalyseNameId (lvsch.getLevermannschrittAnalyseNameId ());
-                         System.out.println("Unternehmen: " + un.getUnternehmenname() + " Levermannschritt: " + lvsch.getUnternehmenname_Levermannschritte()  + "   " + i);
+                         System.out.println("Unternehmen: " + un.getUnternehmenname() + " Levermannschritt: " + lvsch.getUnternehmenname_Levermannschritte()  + "  dreimonatsreversalPkt " + dreimonatsreversalPkt);
                         // System.out.println("Fall 1 : yea LevermannschrittAnalyseNameId :  "+lvsch.getLevermannschrittAnalyseNameId () +" AM: "+ lvsch.getGewinnrevision());
                     }
                 }
 
                 // FAll 1, Gewinnschätzung aktuell ist um mind. -0.05 niedriger als vor 4 Wochen
-                if (i < -1.00 == true) {
+                if (dreimonatsreversalPkt < -1.00 == true) {
 
                     //HQL Named Query FindAll Levermannschritte
                     Query query1 = session.getNamedQuery("Levermannschritte.findAll");
                     List<Levermannschritte> unList1 = (List<Levermannschritte>) query1.list();
                     for (Levermannschritte lvsch1 : unList1) {
 
-                        if (lvsch1.getUnternehmenname_Levermannschritte() == un.getUnternehmenname()  == true && i <= -0.05 == true) {
-                            System.out.println("Richtig :D" + lvsch1.getUnternehmenname_Levermannschritte() + " = " + un.getUnternehmenname()  + "i = " + i);
+                        if (lvsch1.getUnternehmenname_Levermannschritte() == un.getUnternehmenname()  == true &&dreimonatsreversalPkt<= -0.05 == true) {
+                            System.out.println("Richtig :D" + lvsch1.getUnternehmenname_Levermannschritte() + " = " + un.getUnternehmenname()  + "i = " + dreimonatsreversalPkt);
                             lvsch1.setReaktionaufQuartalszahlen((float) -1);
                         }
 
@@ -103,15 +103,15 @@ public class ReaktionaufQuartalszahlen {
                     }
                 }
 
-                if (i < -1.00 == false && i > 1.00 == false ) {
+                if (dreimonatsreversalPkt < -1.00 == false &&dreimonatsreversalPkt> 1.00 == false ) {
 
                     //HQL Named Query FindAll Levermannschritte
                     Query query1 = session.getNamedQuery("Levermannschritte.findAll");
                     List<Levermannschritte> unList1 = (List<Levermannschritte>) query1.list();
                     for (Levermannschritte lvsch1 : unList1) {
 
-                        if (lvsch1.getUnternehmenname_Levermannschritte() == un.getUnternehmenname()  == true && i > 0.005 == false && i < -0.05 == false) {
-                            System.out.println("Richtig :D" + lvsch1.getUnternehmenname_Levermannschritte() + " = " + un.getUnternehmenname()  + "i = " + i);
+                        if (lvsch1.getUnternehmenname_Levermannschritte() == un.getUnternehmenname()  == true &&dreimonatsreversalPkt> 0.005 == false &&dreimonatsreversalPkt< -0.05 == false) {
+                            System.out.println("Richtig :D" + lvsch1.getUnternehmenname_Levermannschritte() + " = " + un.getUnternehmenname()  + "i = " + dreimonatsreversalPkt);
                             lvsch1.setReaktionaufQuartalszahlen((float) 0);
                         }
 

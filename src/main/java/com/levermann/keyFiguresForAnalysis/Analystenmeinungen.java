@@ -1,5 +1,5 @@
 /*
- * Datenbankzugriff und Veränderung mit zwei Datenbanken
+ * Datenbankzugriff und Veränderung mit zweanalyseMeinungPktDatenbanken
  * Levermann Spalten:  Analysemeinungen: 1, -1 oder 0
  * Unternehmen Spalten: Gewinnschaezung, GewinnschaezungVor4Wochen
  *Autor: Andreas Chladny
@@ -55,26 +55,26 @@ public class Analystenmeinungen {
           for (Unternehmen un : unList) {
 
               // Berechnung der WerteVeränderung für Punkteverteilung
-             float i;
-             i =  ((((float)un.getKaufen()*1 )+ ((float)un.getHalten()*2) + ((float)un.getVerkaufen()*3))/3)*100-100;
+             float analyseMeinungPkt;
+             analyseMeinungPkt=  ((((float)un.getKaufen()*1 )+ ((float)un.getHalten()*2) + ((float)un.getVerkaufen()*3))/3)*100-100;
               DecimalFormat f = new DecimalFormat("#0.00");
-              double toFormat = ((double)Math.round(i*100))/100;
+              double toFormat = ((double)Math.round(analyseMeinungPkt*100))/100;
               f.format(toFormat);
 
                // Aufrunden
-              i = Math.round(i);
-              i = i / 100;
+              analyseMeinungPkt= Math.round(analyseMeinungPkt);
+              analyseMeinungPkt= analyseMeinungPkt/ 100;
 
               // FAll 1, Gewinnschätzung aktuell ist um mind höher als vor 4 Wochen
-                if (i > 0.05 == true){
+                if (analyseMeinungPkt> 0.05 == true){
 
                     //HQL Named Query FindAll Levermannschritte
                     Query query1 = session.getNamedQuery("Levermannschritte.findAll");
                     List<Levermannschritte> unList1 = (List<Levermannschritte>) query1.list();
                     for (Levermannschritte lvsch : unList1) {
 
-                        if (lvsch.getUnternehmenname_Levermannschritte() == un.getUnternehmenname() == true && i >= 0.05 == true){
-                            System.out.println("Richtig :D" + lvsch.getUnternehmenname_Levermannschritte() +" = " + un.getUnternehmenname()+ "i = " + i);
+                        if (lvsch.getUnternehmenname_Levermannschritte() == un.getUnternehmenname() == true && analyseMeinungPkt>= 0.05 == true){
+                            System.out.println("Richtig :D" + lvsch.getUnternehmenname_Levermannschritte() +" = " + un.getUnternehmenname()+ "analyseMeinungPkt= " + analyseMeinungPkt);
                             lvsch.setGewinnrevision((float) 1); }
 
                     lvsch.setLevermannschrittAnalyseNameId(lvsch.getLevermannschrittAnalyseNameId());
@@ -83,14 +83,14 @@ public class Analystenmeinungen {
                         }}
 
               // FAll 1, Gewinnschätzung aktuell ist um mind. -0.05 niedriger als vor 4 Wochen
-                if (i < - 0.05 == true ) {
+                if (analyseMeinungPkt< - 0.05 == true ) {
 
                     //HQL Named Query FindAll Levermannschritte
                     Query query1 = session.getNamedQuery("Levermannschritte.findAll");
                     List<Levermannschritte> unList1 = (List<Levermannschritte>) query1.list();
                     for (Levermannschritte lvsch1 : unList1) {
 
-                        if (lvsch1.getUnternehmenname_Levermannschritte() == un.getUnternehmenname() == true && i <= - 0.05 == true ){ System.out.println("Richtig :D" + lvsch1.getUnternehmenname_Levermannschritte() +" = " + un.getUnternehmenname() + "i = " + i);
+                        if (lvsch1.getUnternehmenname_Levermannschritte() == un.getUnternehmenname() == true && analyseMeinungPkt<= - 0.05 == true ){ System.out.println("Richtig :D" + lvsch1.getUnternehmenname_Levermannschritte() +" = " + un.getUnternehmenname() + "analyseMeinungPkt= " + analyseMeinungPkt);
                             lvsch1.setGewinnrevision((float) -1); }
 
                     lvsch1.setLevermannschrittAnalyseNameId(lvsch1.getLevermannschrittAnalyseNameId());
@@ -99,15 +99,15 @@ public class Analystenmeinungen {
                   //  System.out.println("Fall 2 : yea LevermannschrittAnalyseNameId:  " + lvsch1.getLevermannschrittAnalyseNameId() + " AM: " + lvsch1.getGewinnrevision());
                       }}
 
-                if (i >= 0.05 == false && i <= - 0.05 == false ) {
+                if (analyseMeinungPkt>= 0.05 == false && analyseMeinungPkt<= - 0.05 == false ) {
 
                     //HQL Named Query FindAll Levermannschritte
                     Query query1 = session.getNamedQuery("Levermannschritte.findAll");
                     List<Levermannschritte> unList1 = (List<Levermannschritte>) query1.list();
                     for (Levermannschritte lvsch1 : unList1) {
 
-                        if (lvsch1.getUnternehmenname_Levermannschritte() == un.getUnternehmenname() == true && i > 0.005 == false && i < -0.05 == false) {
-                            System.out.println("Richtig :D" + lvsch1.getUnternehmenname_Levermannschritte() + " = " + un.getUnternehmenname() + "i = " + i);
+                        if (lvsch1.getUnternehmenname_Levermannschritte() == un.getUnternehmenname() == true && analyseMeinungPkt> 0.005 == false && analyseMeinungPkt< -0.05 == false) {
+                            System.out.println("Richtig :D" + lvsch1.getUnternehmenname_Levermannschritte() + " = " + un.getUnternehmenname() + "analyseMeinungPkt= " + analyseMeinungPkt);
                             lvsch1.setGewinnrevision((float) 0);}
 
                         lvsch1.setLevermannschrittAnalyseNameId(lvsch1.getLevermannschrittAnalyseNameId());

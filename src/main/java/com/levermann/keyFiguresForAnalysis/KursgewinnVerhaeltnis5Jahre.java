@@ -46,25 +46,25 @@ public class KursgewinnVerhaeltnis5Jahre {
            for (Unternehmen un : unList) {
 
                // Berechnung der Eigenkapitalrendite für Punkteverteilung
-              float i;
-              i =  ((float)un.getAktuellerAktienkurs()/(((float)un.getKursgewinnVor3Jahren() + (float)un.getKursgewinnVor2Jahren() + (float)un.getKursgewinnVor1Jahr() + (float)un.getAktuellenErwartetenKursgewinn() + (float)un.getKursgewinnschaezungNaechstesJahr())/(float)5));
+              float kursgewinnVerhaeltnis5JahrePkt;
+             kursgewinnVerhaeltnis5JahrePkt=  ((float)un.getAktuellerAktienkurs()/(((float)un.getKursgewinnVor3Jahren() + (float)un.getKursgewinnVor2Jahren() + (float)un.getKursgewinnVor1Jahr() + (float)un.getAktuellenErwartetenKursgewinn() + (float)un.getKursgewinnschaezungNaechstesJahr())/(float)5));
                DecimalFormat f = new DecimalFormat("#0.00");
-               double toFormat = ((double)Math.round(i*100))/100;
+               double toFormat = ((double)Math.round(kursgewinnVerhaeltnis5JahrePkt*100))/100;
                f.format(toFormat);
 
                 // Aufrunden
-               i = Math.round(i);
+              kursgewinnVerhaeltnis5JahrePkt= Math.round(kursgewinnVerhaeltnis5JahrePkt);
 
                //definiere beide bewertungskriterien
                 int retval1, retval2, retval3;
                 float upperLimit = (float)16.0;
                 float lowerLimit = (float)12.0;
 
-                retval1 = Float.compare(i, upperLimit);
-                retval2 = Float.compare(i, (float)0.0);
-                retval3 = Float.compare(i, lowerLimit);
+                retval1 = Float.compare(kursgewinnVerhaeltnis5JahrePkt, upperLimit);
+                retval2 = Float.compare(kursgewinnVerhaeltnis5JahrePkt, (float)0.0);
+                retval3 = Float.compare(kursgewinnVerhaeltnis5JahrePkt, lowerLimit);
 
-                float retval = Float.compare(i, upperLimit);
+                float retval = Float.compare(kursgewinnVerhaeltnis5JahrePkt, upperLimit);
 
                // FAll 1, Kursgewinnverhältnis liegt zwischen 0 und 12
                  if (retval3 < 0 && retval2 > 0){
@@ -75,7 +75,7 @@ public class KursgewinnVerhaeltnis5Jahre {
                      for (Levermannschritte lvsch : unList1) {
 
                          if (lvsch.getUnternehmenname_Levermannschritte() == un.getUnternehmenname()  == true){
-                             System.out.println("Richtig :D" + lvsch.getUnternehmenname_Levermannschritte() +" = " + un.getUnternehmenname() + "i = " + i);
+                             System.out.println("Richtig :D" + lvsch.getUnternehmenname_Levermannschritte() +" = " + un.getUnternehmenname() + "kursgewinnVerhaeltnis5JahrePkt = " + kursgewinnVerhaeltnis5JahrePkt);
                              lvsch.setEigenkapitalrendite((float) 1); }
 
                      lvsch.setLevermannschrittAnalyseNameId(lvsch.getLevermannschrittAnalyseNameId());
@@ -94,7 +94,7 @@ public class KursgewinnVerhaeltnis5Jahre {
                      for (Levermannschritte lvsch1 : unList1) {
 
                          if (lvsch1.getUnternehmenname_Levermannschritte() == un.getUnternehmenname()  == true && retval >= 0 ){
-                             System.out.println("Richtig :D" + lvsch1.getUnternehmenname_Levermannschritte() +" = " + un.getUnternehmenname()  + "i = " + i);
+                             System.out.println("Richtig :D" + lvsch1.getUnternehmenname_Levermannschritte() +" = " + un.getUnternehmenname()  + "kursgewinnVerhaeltnis5JahrePkt = " + kursgewinnVerhaeltnis5JahrePkt);
                              lvsch1.setEigenkapitalrendite((float) -1); }
 
                      lvsch1.setLevermannschrittAnalyseNameId(lvsch1.getLevermannschrittAnalyseNameId());
@@ -111,7 +111,7 @@ public class KursgewinnVerhaeltnis5Jahre {
                      for (Levermannschritte lvsch1 : unList1) {
 
                          if (lvsch1.getUnternehmenname_Levermannschritte() == un.getUnternehmenname()  == true) {
-                             System.out.println("Richtig :D" + lvsch1.getUnternehmenname_Levermannschritte() + " = " + un.getUnternehmenname()  + "i = " + i);
+                             System.out.println("Richtig :D" + lvsch1.getUnternehmenname_Levermannschritte() + " = " + un.getUnternehmenname()  + "kursgewinnVerhaeltnis5JahrePkt = " + kursgewinnVerhaeltnis5JahrePkt);
                              lvsch1.setEigenkapitalrendite((float) 0);}
 
                          lvsch1.setLevermannschrittAnalyseNameId(lvsch1.getLevermannschrittAnalyseNameId());

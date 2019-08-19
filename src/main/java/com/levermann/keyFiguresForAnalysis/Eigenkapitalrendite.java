@@ -46,20 +46,20 @@ final static Logger logger = Logger.getLogger(Eigenkapitalrendite.class);
            for (Unternehmen un : unList) {
 
                // Berechnung der Eigenkapitalrendite für Punkteverteilung
-              float i;
-              i =  ((float)un.getJahresueberschuss()/(float)un.getEigenkapital());
+              float eigenkapitalrenditePkt;
+             eigenkapitalrenditePkt=  ((float)un.getJahresueberschuss()/(float)un.getEigenkapital());
                DecimalFormat f = new DecimalFormat("#0.00");
-               double toFormat = ((double)Math.round(i*100))/100;
+               double toFormat = ((double)Math.round(eigenkapitalrenditePkt*100))/100;
                f.format(toFormat);
 
                 // Aufrunden
-               i = Math.round(i);
+              eigenkapitalrenditePkt= Math.round(eigenkapitalrenditePkt);
                
                //definiere beide bewertungskriterien
                 float upperLimit = (float)0.2;
                 float lowerLimit = (float)0.1;
 
-                float retval = Float.compare(i, upperLimit);
+                float retval = Float.compare(eigenkapitalrenditePkt, upperLimit);
                 
                   
                
@@ -72,7 +72,7 @@ final static Logger logger = Logger.getLogger(Eigenkapitalrendite.class);
                      for (Levermannschritte lvsch : unList1) {
 
                          if (lvsch.getUnternehmenname_Levermannschritte() == un.getUnternehmenname()  == true && retval > 0){
-                             System.out.println("Richtig :D" + lvsch.getUnternehmenname_Levermannschritte() +" = " + un.getUnternehmenname() + "i = " + i);
+                             System.out.println("Richtig :D" + lvsch.getUnternehmenname_Levermannschritte() +" = " + un.getUnternehmenname() + "eigenkapitalrenditePkt = " + eigenkapitalrenditePkt);
                              lvsch.setEigenkapitalrendite((float) 1); }
 
                      lvsch.setLevermannschrittAnalyseNameId(lvsch.getLevermannschrittAnalyseNameId());
@@ -83,7 +83,7 @@ final static Logger logger = Logger.getLogger(Eigenkapitalrendite.class);
                  }else{
                     
                  //überprüfe untere grenze
-                 retval = Float.compare(i, lowerLimit);
+                 retval = Float.compare(eigenkapitalrenditePkt, lowerLimit);
                // FAll 2, Eigenkapitalrendite liegt zwishen 10 und 20 Prozent
                  if (retval >= 0 ) {
 
@@ -93,7 +93,7 @@ final static Logger logger = Logger.getLogger(Eigenkapitalrendite.class);
                      for (Levermannschritte lvsch1 : unList1) {
 
                          if (lvsch1.getUnternehmenname_Levermannschritte() == un.getUnternehmenname()  == true && retval >= 0 ){
-                             System.out.println("Richtig :D" + lvsch1.getUnternehmenname_Levermannschritte() +" = " + un.getUnternehmenname()  + "i = " + i);
+                             System.out.println("Richtig :D" + lvsch1.getUnternehmenname_Levermannschritte() +" = " + un.getUnternehmenname()  + "eigenkapitalrenditePkt = " + eigenkapitalrenditePkt);
                              lvsch1.setEigenkapitalrendite((float) 0); }
 
                      lvsch1.setLevermannschrittAnalyseNameId(lvsch1.getLevermannschrittAnalyseNameId());
@@ -110,7 +110,7 @@ final static Logger logger = Logger.getLogger(Eigenkapitalrendite.class);
                      for (Levermannschritte lvsch1 : unList1) {
 
                          if (lvsch1.getUnternehmenname_Levermannschritte() == un.getUnternehmenname()  == true) {
-                             System.out.println("Richtig :D" + lvsch1.getUnternehmenname_Levermannschritte() + " = " + un.getUnternehmenname()  + "i = " + i);
+                             System.out.println("Richtig :D" + lvsch1.getUnternehmenname_Levermannschritte() + " = " + un.getUnternehmenname()  + "eigenkapitalrenditePkt = " + eigenkapitalrenditePkt);
                              lvsch1.setEigenkapitalrendite((float) -1);}
 
                          lvsch1.setLevermannschrittAnalyseNameId(lvsch1.getLevermannschrittAnalyseNameId());

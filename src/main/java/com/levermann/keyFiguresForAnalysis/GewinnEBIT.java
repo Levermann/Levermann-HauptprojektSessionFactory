@@ -46,20 +46,20 @@ public class GewinnEBIT {
            for (Unternehmen un : unList) {
 
                // Berechnung der Gewinnmarge/EBIT für Punkteverteilung
-              float i;
-              i =  ((float)un.getGewinnEBIT()/(float)un.getJahresumsatz());
+              float gewinnEBIT;
+             gewinnEBIT=  ((float)un.getGewinnEBIT()/(float)un.getJahresumsatz());
                DecimalFormat f = new DecimalFormat("#0.00");
-               double toFormat = ((double)Math.round(i*100))/100;
+               double toFormat = ((double)Math.round(gewinnEBIT*100))/100;
                f.format(toFormat);
 
                 // Aufrunden
-               i = Math.round(i);
+              gewinnEBIT= Math.round(gewinnEBIT);
                
                //definiere beide bewertungskriterien
                 float upperLimit = (float)0.12;
                 float lowerLimit = (float)0.06;
 
-                float retval = Float.compare(i, upperLimit);
+                float retval = Float.compare(gewinnEBIT, upperLimit);
                
                // FAll 1, EBIT größer als 12 %
                  if (retval > 0){
@@ -70,7 +70,7 @@ public class GewinnEBIT {
                      for (Levermannschritte lvsch : unList1) {
 
                          if (lvsch.getUnternehmenname_Levermannschritte() == un.getUnternehmenname()  == true && retval > 0){
-                             System.out.println("Richtig :D" + lvsch.getUnternehmenname_Levermannschritte() +" = " + un.getUnternehmenname() + "i = " + i);
+                             System.out.println("Richtig :D" + lvsch.getUnternehmenname_Levermannschritte() +" = " + un.getUnternehmenname() + "gewinnEBIT = " + gewinnEBIT);
                              lvsch.setEigenkapitalrendite((float) 1); }
 
                      lvsch.setLevermannschrittAnalyseNameId(lvsch.getLevermannschrittAnalyseNameId());
@@ -81,7 +81,7 @@ public class GewinnEBIT {
                  }else{
                     
                  //überprüfe untere grenze
-                 retval = Float.compare(i, lowerLimit);
+                 retval = Float.compare(gewinnEBIT, lowerLimit);
                // FAll 2, EBIT liegt zwischen 12 und 6 Prozent
                  if (retval >= 0 ) {
 
@@ -91,7 +91,7 @@ public class GewinnEBIT {
                      for (Levermannschritte lvsch1 : unList1) {
 
                          if (lvsch1.getUnternehmenname_Levermannschritte() == un.getUnternehmenname()  == true && retval >= 0 ){
-                             System.out.println("Richtig :D" + lvsch1.getUnternehmenname_Levermannschritte() +" = " + un.getUnternehmenname()  + "i = " + i);
+                             System.out.println("Richtig :D" + lvsch1.getUnternehmenname_Levermannschritte() +" = " + un.getUnternehmenname()  + "gewinnEBIT = " + gewinnEBIT);
                              lvsch1.setEigenkapitalrendite((float) 0); }
 
                      lvsch1.setLevermannschrittAnalyseNameId(lvsch1.getLevermannschrittAnalyseNameId());
@@ -108,7 +108,7 @@ public class GewinnEBIT {
                      for (Levermannschritte lvsch1 : unList1) {
 
                          if (lvsch1.getUnternehmenname_Levermannschritte() == un.getUnternehmenname()  == true) {
-                             System.out.println("Richtig :D" + lvsch1.getUnternehmenname_Levermannschritte() + " = " + un.getUnternehmenname()  + "i = " + i);
+                             System.out.println("Richtig :D" + lvsch1.getUnternehmenname_Levermannschritte() + " = " + un.getUnternehmenname()  + "gewinnEBIT = " + gewinnEBIT);
                              lvsch1.setEigenkapitalrendite((float) -1);}
 
                          lvsch1.setLevermannschrittAnalyseNameId(lvsch1.getLevermannschrittAnalyseNameId());
