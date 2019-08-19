@@ -1,61 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="71376cf0-4a45-4351-8dca-943cab88ca4d" name="Default Changelist" comment="Renaming Tables and classes from &#10;Unternehmen = Company&#10;Levermannschritte = AnalysisRating&#10;Punkteliste = AnalysisSteps">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/levermann/sqlStatements/DroppTables.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/b34121eb-3aed-44a8-9368-49552a11cff0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/b34121eb-3aed-44a8-9368-49552a11cff0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Beans_Binding.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Beans_Binding.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_hibernate_commons_annotations_3_1_0_GA.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_hibernate_commons_annotations_3_2_0_Final.xml" afterDir="false" />
+    <list default="true" id="71376cf0-4a45-4351-8dca-943cab88ca4d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LevermannAnalyse.iml" beforeDir="false" afterPath="$PROJECT_DIR$/LevermannAnalyse.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/beansbinding-doc.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/beansbinding-src.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/mavenJavaFXUI.iml" beforeDir="false" afterPath="$PROJECT_DIR$/mavenJavaFXUI/mavenJavaFXUI.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/target/classes/com/levermann/App.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/target/classes/com/levermann/SecondaryController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/target/classes/module-info.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/levermann/entityclass/Levermannschritte.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/levermann/entityclass/AnalysisRating.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/levermann/entityclass/Punkteliste.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/levermann/entityclass/AnalysisSteps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/levermann/entityclass/Unternehmen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/levermann/entityclass/Company.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/levermann/keyFiguresForAnalysis/Analystenmeinungen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/levermann/keyFiguresForAnalysis/Analystenmeinungen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/levermann/keyFiguresForAnalysis/Dreimonatsreversal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/levermann/keyFiguresForAnalysis/Dreimonatsreversal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/levermann/keyFiguresForAnalysis/Eigenkapitalquote.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/levermann/keyFiguresForAnalysis/Eigenkapitalquote.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/levermann/keyFiguresForAnalysis/Eigenkapitalrendite.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/levermann/keyFiguresForAnalysis/Eigenkapitalrendite.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/levermann/keyFiguresForAnalysis/GewinnEBIT.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/levermann/keyFiguresForAnalysis/GewinnEBIT.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/levermann/keyFiguresForAnalysis/Gewinnrevision.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/levermann/keyFiguresForAnalysis/Gewinnrevision.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/levermann/keyFiguresForAnalysis/Gewinnwachstum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/levermann/keyFiguresForAnalysis/Gewinnwachstum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/levermann/keyFiguresForAnalysis/KursGewinnVerhaeltnis.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/levermann/keyFiguresForAnalysis/KursGewinnVerhaeltnis.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/levermann/keyFiguresForAnalysis/KursgewinnVerhaeltnis5Jahre.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/levermann/keyFiguresForAnalysis/KursgewinnVerhaeltnis5Jahre.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/levermann/keyFiguresForAnalysis/KursheuteggKursvor1Jahr.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/levermann/keyFiguresForAnalysis/KursheuteggKursvor1Jahr.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/levermann/keyFiguresForAnalysis/KursheuteggKursvor6Monaten.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/levermann/keyFiguresForAnalysis/KursheuteggKursvor6Monaten.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/levermann/keyFiguresForAnalysis/Kursmomentum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/levermann/keyFiguresForAnalysis/Kursmomentum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/levermann/keyFiguresForAnalysis/ReaktionaufQuartalszahlen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/levermann/keyFiguresForAnalysis/ReaktionaufQuartalszahlen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/levermann/mainMethod/ConnectionMainFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/levermann/mainMethod/ConnectionMainFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/levermann/sessionControlClasses/Create.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/levermann/sessionControlClasses/Create.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/levermann/sessionControlClasses/Delete.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/levermann/sessionControlClasses/Delete.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/levermann/sessionControlClasses/Select.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/levermann/sessionControlClasses/Select.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/levermann/sessionControlClasses/UpdateLevermannschritte.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/levermann/sessionControlClasses/UpdateAnalysisRating.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/levermann/sessionControlClasses/UpdatePunkteliste.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/levermann/sessionControlClasses/UpdateAnalysisSteps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/levermann/sessionControlClasses/UpdateUnternehmenDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/levermann/sessionControlClasses/UpdateCompany.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/levermann/sqlStatements/AddForeignKeys.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/levermann/sqlStatements/AddForeignKeys.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/levermann/sqlStatements/CreateDatabases.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/levermann/sqlStatements/CreateDatabases.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/AnalyseEinsehen.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/AnalyseErstellen.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/AnalyseSpeichern.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/LevermannPunkteTest/GewinnrevisionTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/LevermannTest/ConnectionMainTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/LevermannTest/CreateTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/LevermannTest/DeleteTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/LevermannTest/GewinnrevisionTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/LevermannTest/PunktelisteTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/LevermannTest/SelectTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/LevermannTest/UnternehmenTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/LevermannTest/UpdateTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/LevermannTest/newClassTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/levermann/entityclass/PunktelisteTest.java" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -394,7 +341,7 @@
       <workItem from="1565420683751" duration="5932000" />
       <workItem from="1565435858746" duration="1946000" />
       <workItem from="1566219210250" duration="4218000" />
-      <workItem from="1566230990304" duration="10004000" />
+      <workItem from="1566230990304" duration="10905000" />
     </task>
     <task id="LOCAL-00001" summary="l">
       <created>1554567642271</created>
@@ -641,7 +588,14 @@
       <option name="project" value="LOCAL" />
       <updated>1566227023517</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="Renaming Tables and classes from &#10;Unternehmen = Company&#10;Levermannschritte = AnalysisRating&#10;Punkteliste = AnalysisSteps">
+      <created>1566241656355</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1566241656355</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -717,6 +671,11 @@
           <url>file://$PROJECT_DIR$/src/main/java/com/levermann/sessionControlClasses/Create.java</url>
           <line>38</line>
           <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/levermann/sessionControlClasses/HibernateUtil.java</url>
+          <line>16</line>
+          <option name="timeStamp" value="9" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
