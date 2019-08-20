@@ -13,7 +13,7 @@ public class ShowResultController {
 
 
     @FXML
-    private void switchToEnterCompanyName() throws IOException {
-        App.setRoot("input");
+    private void switchToCompanyOverview() throws IOException {
+        App.setRoot("companyOverview");
     }
 }
