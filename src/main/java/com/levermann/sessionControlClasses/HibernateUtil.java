@@ -22,11 +22,11 @@ public class HibernateUtil {
                 ServiceRegistry serviceRegistry = (ServiceRegistry) serviceRegistryBuilder.build();
                 sessionFactory = configuration.buildSessionFactory((org.hibernate.service.ServiceRegistry) serviceRegistry);
             }
-            return sessionFactory;
+
         } catch (Throwable ex) {
             System.err.println("Initial SessionFactory creation failed" + ex);
             throw new ExceptionInInitializerError(ex);
-        }
+        }return sessionFactory;
     }
     public static SessionFactory getSessionFactory() {
         return sessionFactory;

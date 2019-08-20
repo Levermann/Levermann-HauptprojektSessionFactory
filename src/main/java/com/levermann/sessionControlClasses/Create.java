@@ -14,11 +14,14 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.apache.log4j.Logger;
 
+
 public class Create {
+
+    final static Company company = null;
 
     final static Logger logger1 = Logger.getLogger(Create.class);
 
-  /*  public void CreateCompany(String name) {
+  public void CreateCompany(String name) {
 
         //Logger wird für die Methode ausgeführt
         logger1.info("Logger is Entering the Execute method from Create");
@@ -52,7 +55,7 @@ public class Create {
 
         HibernateUtil.shutdown();
     }
-}
+
    /*     try {
             Scanner scanner = new Scanner(System.in);
             //    String datum = scanner.next();
@@ -111,7 +114,7 @@ public class Create {
 
             //create a object
             System.out.println("Creating new Unternehmen Object");
-            AnalysisSteps analysisSteps = new AnalysisSteps();
+            AnalysisSteps analysisSteps = new AnalysisSteps(company);
             analysisSteps.setAnalysisStepsName(AnalysisSteps);
 
             // Hinzufügen

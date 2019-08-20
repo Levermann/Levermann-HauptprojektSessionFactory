@@ -8,6 +8,8 @@
  */
 package com.levermann.sessionControlClasses;
 
+import com.levermann.entityclass.AnalysisRating;
+import com.levermann.entityclass.AnalysisSteps;
 import com.levermann.entityclass.Company;
 import org.apache.log4j.Logger;
 import org.hibernate.Query;
@@ -18,6 +20,9 @@ import java.util.List;
 import java.util.Scanner;
 
   public class UpdateCompany {
+
+      final static AnalysisRating analysisRatings = null;
+      final static AnalysisSteps analysisSteps = null;
 
     final static Logger logger = Logger.getLogger(UpdateCompany.class);
 
@@ -37,7 +42,7 @@ import java.util.Scanner;
       System.out.println("Eingabe:\n 1. ID \n 2.  ");
 
       //Erzeugen eines Objektes vom Typen Unternehmen
-      Company Company =new Company();
+      Company Company =new Company(analysisRatings, analysisSteps);
       //Select Primärschlüssel
       Company.setCompanyname( Unternehmenname);
 
@@ -65,7 +70,7 @@ import java.util.Scanner;
              System.out.println("Eingabe:\n 1. ID \n 2. Unternehmen \n 3. Datum \n 4. Eigenkapital \n 5. Jahresueberschuss");
 
              //Erzeugen eines Objektes vom Typen Unternehmen
-             Company Company =new Company();
+             Company Company =new Company(analysisRatings, analysisSteps);
              //Select Primärschlüssel
              Company.setCompanyname( name);
              //Select Name der Firma
@@ -95,7 +100,7 @@ import java.util.Scanner;
              System.out.println("Eingabe:\n 1. ID \n 2. ");
 
              //Erzeugen eines Objektes vom Typen Unternehmen
-             Company Company =new Company();
+             Company Company =new Company(analysisRatings, analysisSteps);
              //Select Primärschlüssel
              Company.setCompanyname( name);
              //Select Name der Firma
@@ -160,7 +165,7 @@ import java.util.Scanner;
              System.out.println("Eingabe:\n 1. ID \n 2. Jahresüberschuss");
 
              //Erzeugen eines Objektes vom Typen Unternehmen
-             Company Company =new Company();
+             Company Company =new Company(analysisRatings, analysisSteps);
              //Select Primärschlüssel
              Company.setCompanyname( name);
              //Select Name der Firma
@@ -190,7 +195,7 @@ import java.util.Scanner;
              System.out.println("Eingabe:\n 1. ID \n 2. Jahresüberschuss");
 
              //Erzeugen eines Objektes vom Typen Unternehmen
-             Company Company =new Company();
+             Company Company =new Company(analysisRatings, analysisSteps);
              //Select Primärschlüssel
              Company.setCompanyname( name);
              //Select Name der Firma
@@ -220,7 +225,7 @@ import java.util.Scanner;
              System.out.println("Eingabe:\n 1. ID \n 2. Jahresüberschuss");
 
              //Erzeugen eines Objektes vom Typen Unternehmen
-             Company Company =new Company();
+             Company Company =new Company(analysisRatings, analysisSteps);
              //Select Primärschlüssel
              Company.setCompanyname( name);
              //Select Name der Firma
@@ -250,7 +255,7 @@ import java.util.Scanner;
              System.out.println("Eingabe:\n 1. ID \n 2. Jahresüberschuss");
 
              //Erzeugen eines Objektes vom Typen Unternehmen
-             Company Company =new Company();
+             Company Company =new Company(analysisRatings, analysisSteps);
              //Select Primärschlüssel
              
              Company.setCompanyname( name);
@@ -281,7 +286,7 @@ import java.util.Scanner;
              System.out.println("Eingabe:\n 1. ID \n 2. Jahresüberschuss");
 
              //Erzeugen eines Objektes vom Typen Unternehmen
-             Company Company =new Company();
+             Company Company =new Company(analysisRatings, analysisSteps);
              //Select Primärschlüssel
              
              Company.setCompanyname( name);
@@ -312,7 +317,7 @@ import java.util.Scanner;
              System.out.println("Eingabe:\n 1. ID \n 2. Jahresüberschuss");
 
              //Erzeugen eines Objektes vom Typen Unternehmen
-             Company Company =new Company();
+             Company Company =new Company(analysisRatings, analysisSteps);
              //Select Primärschlüssel
              
              Company.setCompanyname( name);
@@ -341,7 +346,7 @@ import java.util.Scanner;
              System.out.println("Eingabe:\n 1. ID \n 2. Jahresüberschuss");
 
              //Erzeugen eines Objektes vom Typen Unternehmen
-             Company Company =new Company();
+             Company Company =new Company(analysisRatings, analysisSteps);
              //Select Primärschlüssel
              
              Company.setCompanyname( name);
@@ -372,7 +377,7 @@ import java.util.Scanner;
              System.out.println("Eingabe:\n 1. ID \n 2. Jahresüberschuss");
 
              //Erzeugen eines Objektes vom Typen Unternehmen
-             Company Company =new Company();
+             Company Company =new Company(analysisRatings, analysisSteps);
              //Select Primärschlüssel
              
              Company.setCompanyname( name);
@@ -403,7 +408,7 @@ import java.util.Scanner;
              System.out.println("Eingabe:\n 1. ID \n 2. Jahresüberschuss");
 
              //Erzeugen eines Objektes vom Typen Unternehmen
-             Company Company =new Company();
+             Company Company =new Company(analysisRatings, analysisSteps);
              //Select Primärschlüssel
              
              Company.setCompanyname( name);
@@ -434,7 +439,7 @@ import java.util.Scanner;
              System.out.println("Eingabe:\n 1. ID \n 2. Jahresüberschuss");
 
              //Erzeugen eines Objektes vom Typen Unternehmen
-             Company Company =new Company();
+             Company Company =new Company(analysisRatings, analysisSteps);
              //Select Primärschlüssel
              
              Company.setCompanyname( name);
@@ -463,7 +468,7 @@ import java.util.Scanner;
              System.out.println("Eingabe:\n 1. ID \n 2. Jahresüberschuss");
 
              //Erzeugen eines Objektes vom Typen Unternehmen
-             Company Company =new Company();
+             Company Company =new Company(analysisRatings, analysisSteps);
              //Select Primärschlüssel
              
              Company.setCompanyname( name);
@@ -494,7 +499,7 @@ import java.util.Scanner;
              System.out.println("Eingabe:\n 1. ID \n 2. Jahresüberschuss");
 
              //Erzeugen eines Objektes vom Typen Unternehmen
-             Company Company =new Company();
+             Company Company =new Company(analysisRatings, analysisSteps);
              //Select Primärschlüssel
              
              Company.setCompanyname( name);
@@ -526,7 +531,7 @@ import java.util.Scanner;
              System.out.println("Eingabe:\n 1. ID \n 2. Jahresüberschuss");
 
              //Erzeugen eines Objektes vom Typen Unternehmen
-             Company Company =new Company();
+             Company Company =new Company(analysisRatings, analysisSteps);
              //Select Primärschlüssel
              
              Company.setCompanyname( name);
@@ -557,7 +562,7 @@ import java.util.Scanner;
              System.out.println("Eingabe:\n 1. ID \n 2. Jahresüberschuss");
 
              //Erzeugen eines Objektes vom Typen Unternehmen
-             Company Company =new Company();
+             Company Company =new Company(analysisRatings, analysisSteps);
              //Select Primärschlüssel
              
              Company.setCompanyname( name);
@@ -588,7 +593,7 @@ import java.util.Scanner;
              System.out.println("Eingabe:\n 1. ID \n 2. Jahresüberschuss");
 
              //Erzeugen eines Objektes vom Typen Unternehmen
-             Company Company =new Company();
+             Company Company =new Company(analysisRatings, analysisSteps);
              //Select Primärschlüssel
              
              Company.setCompanyname( name);
@@ -619,7 +624,7 @@ import java.util.Scanner;
              System.out.println("Eingabe:\n 1. ID \n 2. Jahresüberschuss");
 
              //Erzeugen eines Objektes vom Typen Unternehmen
-             Company Company =new Company();
+             Company Company =new Company(analysisRatings, analysisSteps);
              //Select Primärschlüssel
              
              Company.setCompanyname( name);
@@ -650,7 +655,7 @@ import java.util.Scanner;
              System.out.println("Eingabe:\n 1. ID \n 2. Jahresüberschuss");
 
              //Erzeugen eines Objektes vom Typen Unternehmen
-             Company Company =new Company();
+             Company Company =new Company(analysisRatings, analysisSteps);
              //Select Primärschlüssel
              
              Company.setCompanyname( name);
@@ -681,7 +686,7 @@ import java.util.Scanner;
              System.out.println("Eingabe:\n 1. ID \n 2. Jahresüberschuss");
 
              //Erzeugen eines Objektes vom Typen Unternehmen
-             Company Company =new Company();
+             Company Company =new Company(analysisRatings, analysisSteps);
              //Select Primärschlüssel
              
              Company.setCompanyname( name);
@@ -712,7 +717,7 @@ import java.util.Scanner;
              System.out.println("Eingabe:\n 1. ID \n 2. Jahresüberschuss");
 
              //Erzeugen eines Objektes vom Typen Unternehmen
-             Company Company =new Company();
+             Company Company =new Company(analysisRatings, analysisSteps);
              //Select Primärschlüssel
              
              Company.setCompanyname( name);
@@ -743,7 +748,7 @@ import java.util.Scanner;
              System.out.println("Eingabe:\n 1. ID \n 2. Jahresüberschuss");
 
              //Erzeugen eines Objektes vom Typen Unternehmen
-             Company Company =new Company();
+             Company Company =new Company(analysisRatings, analysisSteps);
              //Select Primärschlüssel
              
              Company.setCompanyname( name);
@@ -774,7 +779,7 @@ import java.util.Scanner;
              System.out.println("Eingabe:\n 1. ID \n 2. Jahresüberschuss");
 
              //Erzeugen eines Objektes vom Typen Unternehmen
-             Company Company =new Company();
+             Company Company =new Company(analysisRatings, analysisSteps);
              //Select Primärschlüssel
              
              Company.setCompanyname( name);
@@ -805,7 +810,7 @@ import java.util.Scanner;
              System.out.println("Eingabe:\n 1. ID \n 2. Jahresüberschuss");
 
              //Erzeugen eines Objektes vom Typen Unternehmen
-             Company Company =new Company();
+             Company Company =new Company(analysisRatings, analysisSteps);
              //Select Primärschlüssel
              
              Company.setCompanyname( name);
@@ -836,7 +841,7 @@ import java.util.Scanner;
              System.out.println("Eingabe:\n 1. ID \n 2. Jahresüberschuss");
 
              //Erzeugen eines Objektes vom Typen Unternehmen
-             Company Company =new Company();
+             Company Company =new Company(analysisRatings, analysisSteps);
              //Select Primärschlüssel
              
              Company.setCompanyname( name);
@@ -867,7 +872,7 @@ import java.util.Scanner;
              System.out.println("Eingabe:\n 1. ID \n 2. Jahresüberschuss");
 
              //Erzeugen eines Objektes vom Typen Unternehmen
-             Company Company =new Company();
+             Company Company =new Company(analysisRatings, analysisSteps);
              //Select Primärschlüssel
              
              Company.setCompanyname( name);

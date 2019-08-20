@@ -6,17 +6,21 @@
 package com.levermann.sessionControlClasses;
 
 import com.levermann.entityclass.AnalysisSteps;
+import com.levermann.entityclass.Company;
 import org.apache.log4j.Logger;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 
 import java.util.Scanner;
 
- public abstract class UpdateAnalysisSteps {
 
-    final static Logger logger = Logger.getLogger(UpdateAnalysisSteps.class);
+ public abstract class UpdateAnalysisSteps {
+     final static Company company = null;
+
+     final static Logger logger = Logger.getLogger(UpdateAnalysisSteps.class);
 
     public void UnName (String punktelisteNameId, String unternehmenname) {
+
         //Logger wird für die Methode Delete ausgeführt
         logger.info("Logger is Entering the Execute method Update");
         String returnValue = "";
@@ -31,9 +35,10 @@ import java.util.Scanner;
             // Hinzufügen des Loggers war erfolgreich
             logger.info("Logger for Update was saved successfull");
             System.out.println("Eingabe:\n 1. ID \n 2.  ");
+            Company company = new Company();
 
             //Erzeugen eines Objektes vom Typen AnalysisSteps
-            AnalysisSteps AnalysisSteps=new AnalysisSteps();
+            AnalysisSteps AnalysisSteps=new AnalysisSteps(company);
             //Select Primärschlüssel
             AnalysisSteps.setAnalysisStepsName(punktelisteNameId);
             //Select Name der Firma
@@ -63,7 +68,7 @@ import java.util.Scanner;
             System.out.println("Eingabe:\n 1. ID \n 2. AnalysisSteps \n 3. Datum \n 4. Eigenkapital \n 5. Jahresueberschuss");
 
             //Erzeugen eines Objektes vom Typen AnalysisSteps
-            AnalysisSteps AnalysisSteps=new AnalysisSteps();
+            AnalysisSteps AnalysisSteps=new AnalysisSteps(company);
             //Select Primärschlüssel
             
             AnalysisSteps.setAnalysisStepsName(punktelisteNameId);
@@ -94,7 +99,7 @@ import java.util.Scanner;
             System.out.println("Eingabe:\n 1. ID \n 2. ");
 
             //Erzeugen eines Objektes vom Typen AnalysisSteps
-            AnalysisSteps AnalysisSteps=new AnalysisSteps();
+            AnalysisSteps AnalysisSteps=new AnalysisSteps(company);
             //Select Primärschlüssel
             
             AnalysisSteps.setAnalysisStepsName(punktelisteNameId);
@@ -125,7 +130,7 @@ import java.util.Scanner;
             System.out.println("Eingabe:\n 1. ID \n 2. Jahresüberschuss");
 
             //Erzeugen eines Objektes vom Typen AnalysisSteps
-            AnalysisSteps AnalysisSteps=new AnalysisSteps();
+            AnalysisSteps AnalysisSteps=new AnalysisSteps(company);
             //Select Primärschlüssel
             
             AnalysisSteps.setAnalysisStepsName(punktelisteNameId);
@@ -156,7 +161,7 @@ import java.util.Scanner;
             System.out.println("Eingabe:\n 1. ID \n 2. Jahresüberschuss");
 
             //Erzeugen eines Objektes vom Typen AnalysisSteps
-            AnalysisSteps AnalysisSteps=new AnalysisSteps();
+            AnalysisSteps AnalysisSteps=new AnalysisSteps(company);
             //Select Primärschlüssel
             
             AnalysisSteps.setAnalysisStepsName(punktelisteNameId);
@@ -187,7 +192,7 @@ import java.util.Scanner;
             System.out.println("Eingabe:\n 1. ID \n 2. Jahresüberschuss");
 
             //Erzeugen eines Objektes vom Typen AnalysisSteps
-            AnalysisSteps AnalysisSteps=new AnalysisSteps();
+            AnalysisSteps AnalysisSteps=new AnalysisSteps(company);
             //Select Primärschlüssel
             
             AnalysisSteps.setAnalysisStepsName(punktelisteNameId);
@@ -218,7 +223,7 @@ import java.util.Scanner;
             System.out.println("Eingabe:\n 1. ID \n 2. Jahresüberschuss");
 
             //Erzeugen eines Objektes vom Typen AnalysisSteps
-            AnalysisSteps AnalysisSteps=new AnalysisSteps();
+            AnalysisSteps AnalysisSteps=new AnalysisSteps(company);
             //Select Primärschlüssel
             
             AnalysisSteps.setAnalysisStepsName(punktelisteNameId);
@@ -249,7 +254,7 @@ import java.util.Scanner;
             System.out.println("Eingabe:\n 1. ID \n 2. Jahresüberschuss");
 
             //Erzeugen eines Objektes vom Typen AnalysisSteps
-            AnalysisSteps AnalysisSteps=new AnalysisSteps();
+            AnalysisSteps AnalysisSteps=new AnalysisSteps(company);
             //Select Primärschlüssel
             
             AnalysisSteps.setAnalysisStepsName(punktelisteNameId);
@@ -280,7 +285,7 @@ import java.util.Scanner;
             System.out.println("Eingabe:\n 1. ID \n 2. Jahresüberschuss");
 
             //Erzeugen eines Objektes vom Typen AnalysisSteps
-            AnalysisSteps AnalysisSteps=new AnalysisSteps();
+            AnalysisSteps AnalysisSteps=new AnalysisSteps(company);
             //Select Primärschlüssel
             
             AnalysisSteps.setAnalysisStepsName(punktelisteNameId);
@@ -311,7 +316,7 @@ import java.util.Scanner;
             System.out.println("Eingabe:\n 1. ID \n 2. Jahresüberschuss");
 
             //Erzeugen eines Objektes vom Typen AnalysisSteps
-            AnalysisSteps AnalysisSteps=new AnalysisSteps();
+            AnalysisSteps AnalysisSteps=new AnalysisSteps(company);
             //Select Primärschlüssel
             
             AnalysisSteps.setAnalysisStepsName(punktelisteNameId);
@@ -342,7 +347,7 @@ import java.util.Scanner;
             System.out.println("Eingabe:\n 1. ID \n 2. Jahresüberschuss");
 
             //Erzeugen eines Objektes vom Typen AnalysisSteps
-            AnalysisSteps AnalysisSteps=new AnalysisSteps();
+            AnalysisSteps AnalysisSteps=new AnalysisSteps(company);
             //Select Primärschlüssel
             
             AnalysisSteps.setAnalysisStepsName(punktelisteNameId);
@@ -373,7 +378,7 @@ import java.util.Scanner;
             System.out.println("Eingabe:\n 1. ID \n 2. Jahresüberschuss");
 
             //Erzeugen eines Objektes vom Typen AnalysisSteps
-            AnalysisSteps AnalysisSteps=new AnalysisSteps();
+            AnalysisSteps AnalysisSteps=new AnalysisSteps(company);
             //Select Primärschlüssel
             
             AnalysisSteps.setAnalysisStepsName(punktelisteNameId);
@@ -404,7 +409,7 @@ import java.util.Scanner;
             System.out.println("Eingabe:\n 1. ID \n 2. Jahresüberschuss");
 
             //Erzeugen eines Objektes vom Typen AnalysisSteps
-            AnalysisSteps AnalysisSteps=new AnalysisSteps();
+            AnalysisSteps AnalysisSteps=new AnalysisSteps(company);
             //Select Primärschlüssel
             
             AnalysisSteps.setAnalysisStepsName(punktelisteNameId);
@@ -435,7 +440,7 @@ import java.util.Scanner;
             System.out.println("Eingabe:\n 1. ID \n 2. Jahresüberschuss");
 
             //Erzeugen eines Objektes vom Typen AnalysisSteps
-            AnalysisSteps AnalysisSteps=new AnalysisSteps();
+            AnalysisSteps AnalysisSteps=new AnalysisSteps(company);
             //Select Primärschlüssel
             
             AnalysisSteps.setAnalysisStepsName(punktelisteNameId);

@@ -69,6 +69,10 @@ import java.io.Serializable;
     @Column(name = "Gewinnwachstum", unique = true, nullable = true)
     private Float Gewinnwachstum;
 
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "Companyname_AnalysisRating")
+    private Company company;
+
     public String getAnalysisRatingName() {
         return AnalyseRatingName;
     }

@@ -1,5 +1,6 @@
 package com.levermann.mainMethod;
 
+import com.levermann.entityclass.Company;
 import com.levermann.sessionControlClasses.Create;
 import org.apache.log4j.BasicConfigurator;
 
@@ -10,6 +11,9 @@ abstract public class ConnectionMainFactory  {
  @SuppressWarnings("empty-statement")
  public static void main(String[] args) {
      BasicConfigurator.configure();
+
+     Company company = new Company();
+
      //KursgewinnVerhaeltnis5Jahre kg5 = new KursgewinnVerhaeltnis5Jahre();
 
 //     kg5.KursgewinnVerhaeltnis5Jahre();

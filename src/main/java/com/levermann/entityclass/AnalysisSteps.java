@@ -14,6 +14,68 @@ import java.io.Serializable;
 @Table(name="AnalysisSteps")
  public class AnalysisSteps implements Serializable {
 
+    public AnalysisSteps(Company company) {
+        this.company = company;
+    }
+
+    public AnalysisSteps() {
+
+    }
+
+    @Id
+    @Column(name = "AnalysisStepsName")
+    private String AnalysisStepsName;
+
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "id")
+    private Float id;
+
+    @Column(name = "Companyname_AnalysisSteps")
+    private String Companyname_AnalysisSteps;
+
+    @Column(name = "Eigenkapitalrendite")
+    private Float Eigenkapitalrendite;
+
+    @Column(name = "EBITMarge")
+    private Float EBITMarge;
+
+    @Column(name = "Eigenkapitalquote")
+    private Float Eigenkapitalquote;
+
+    @Column(name = "KursGewinnVerhaeltnis")
+    private Float KursGewinnVerhaeltnis;
+
+    @Column(name = "KursGewinnVerhaeltnisAktuell")
+    private Float KursGewinnVerhaeltnisAktuell;
+
+    @Column(name = "Analystenmeinungen")
+    private Float Analystenmeinungen;
+
+    @Column(name = "ReaktionaufQuartalszahlen")
+    private Float ReaktionaufQuartalszahlen;
+
+    @Column(name = "Gewinnrevision")
+    private Float Gewinnrevision;
+
+    @Column(name = "Kursverlauf6Monate")
+    private Float Kursverlauf6Monate;
+
+    @Column(name = "Kursverlauf12Monate")
+    private Float Kursverlauf12Monate;
+
+    @Column(name = "Kursmomentum")
+    private Float Kursmomentum;
+
+    @Column(name = "Dreimonatsreversal")
+    private Float Dreimonatsreversal;
+
+    @Column(name = "Gewinnwachstum")
+    private Float Gewinnwachstum;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "Companyname_AnalysisSteps")
+    private Company company;
+
     public String getAnalysisStepsName() {
         return AnalysisStepsName;
     }
@@ -141,61 +203,6 @@ import java.io.Serializable;
     public void setGewinnwachstum(Float gewinnwachstum) {
         Gewinnwachstum = gewinnwachstum;
     }
-
-
-
-    @Id
-    @Column(name = "AnalysisStepsName")
-    private String AnalysisStepsName;
-
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "id")
-    private Float id;
-
-    @Column(name = "Companyname_AnalysisSteps")
-    private String Companyname_AnalysisSteps;
-
-    @Column(name = "Eigenkapitalrendite")
-    private Float Eigenkapitalrendite;
-
-    @Column(name = "EBITMarge")
-    private Float EBITMarge;
-
-    @Column(name = "Eigenkapitalquote")
-    private Float Eigenkapitalquote;
-
-    @Column(name = "KursGewinnVerhaeltnis")
-    private Float KursGewinnVerhaeltnis;
-
-    @Column(name = "KursGewinnVerhaeltnisAktuell")
-    private Float KursGewinnVerhaeltnisAktuell;
-
-    @Column(name = "Analystenmeinungen")
-    private Float Analystenmeinungen;
-
-    @Column(name = "ReaktionaufQuartalszahlen")
-    private Float ReaktionaufQuartalszahlen;
-
-    @Column(name = "Gewinnrevision")
-    private Float Gewinnrevision;
-
-    @Column(name = "Kursverlauf6Monate")
-    private Float Kursverlauf6Monate;
-
-    @Column(name = "Kursverlauf12Monate")
-    private Float Kursverlauf12Monate;
-
-    @Column(name = "Kursmomentum")
-    private Float Kursmomentum;
-
-    @Column(name = "Dreimonatsreversal")
-    private Float Dreimonatsreversal;
-
-    @Column(name = "Gewinnwachstum")
-    private Float Gewinnwachstum;
-
-
-
 
 
 }

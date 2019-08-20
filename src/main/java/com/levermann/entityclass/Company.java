@@ -130,8 +130,22 @@ public class Company implements Serializable  {
     @Column(name="KursgewinnschaezungNaechstesJahr", unique = true, nullable = true)
     private Integer KursgewinnschaezungNaechstesJahr;
 //association One To Many: One Company to Many Punktelisten
+    @OneToMany(mappedBy = "company")
+    private List<AnalysisRating> analysisRatings;
+    @OneToMany(mappedBy = "company")
+    private List<AnalysisSteps> analysisSteps;
 
+    public Company(List<AnalysisRating> analysisRatings, List<AnalysisSteps> analysisSteps) {
+        this.analysisRatings = analysisRatings;
+        this.analysisSteps = analysisSteps;
+    }
 
+    public Company() {
+
+    }
+
+    public Company(AnalysisRating analysisRatings, AnalysisSteps analysisSteps) {
+    }
 
     public String getCompanyname() {
         return Companyname;

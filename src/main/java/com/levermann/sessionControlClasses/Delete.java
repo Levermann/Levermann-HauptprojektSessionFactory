@@ -9,6 +9,8 @@ on Track
 package com.levermann.sessionControlClasses;
 
 
+import com.levermann.entityclass.AnalysisRating;
+import com.levermann.entityclass.AnalysisSteps;
 import com.levermann.entityclass.Company;
 import org.apache.log4j.Logger;
 import org.hibernate.HibernateException;
@@ -17,7 +19,8 @@ import org.hibernate.SessionFactory;
 import java.util.Scanner;
 
   public class Delete {
-
+      final static AnalysisRating analysisRatings = null;
+      final static AnalysisSteps analysisSteps = null;
     final static Logger logger = Logger.getLogger(Delete.class);
 
     public void Company( String name) {
@@ -40,7 +43,7 @@ import java.util.Scanner;
        System.out.println("Sie befinden sich in der IDauswahl, bitte name Eingeben:");
 
        //Erzeugen eines Objektes vom Typen Unternehmen
-        Company Company =new Company();
+        Company Company =new Company(analysisRatings, analysisSteps);
 
         //  Unternehmen.setUnternehmennameId(id);
         Company.setCompanyname(name);
