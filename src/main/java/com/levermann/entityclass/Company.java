@@ -76,8 +76,8 @@ public class Company implements Serializable  {
     @Column(name="GewinnschaezungVor4Wochen")
     private float GewinnschaezungVor4Wochen;
 
-   @Column(name="AktienkursTagVeroeffentlichungQartalszahlen")
-   private float AktienkursTagVeroeffentlichungQartalszahlen;
+    @Column(name="AktienkursTagVeroeffentlichungQartalszahlen")
+    private float AktienkursTagVeroeffentlichungQartalszahlen;
 
     @Column(name="KursVor6Monaten")
     private float KursVor6Monaten;
