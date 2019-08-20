@@ -5,15 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="71376cf0-4a45-4351-8dca-943cab88ca4d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/mavenJavaFXUI/src/main/java/com/levermann/CompanyOverviewController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mavenJavaFXUI/src/main/resources/com/levermann/companyOverview.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/src/main/java/com/levermann/ShowResultController.java" beforeDir="false" afterPath="$PROJECT_DIR$/mavenJavaFXUI/src/main/java/com/levermann/ShowResultController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/src/main/resources/com/levermann/showResult.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/mavenJavaFXUI/src/main/resources/com/levermann/showResult.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/target/classes/com/levermann/ShowResultController.class" beforeDir="false" afterPath="$PROJECT_DIR$/mavenJavaFXUI/target/classes/com/levermann/ShowResultController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/target/classes/com/levermann/showResult.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/mavenJavaFXUI/target/classes/com/levermann/showResult.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/target/maven-status/maven-compiler-plugin/compile/null/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/mavenJavaFXUI/target/maven-status/maven-compiler-plugin/compile/null/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/target/maven-status/maven-compiler-plugin/compile/null/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/mavenJavaFXUI/target/maven-status/maven-compiler-plugin/compile/null/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/src/main/java/com/levermann/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/mavenJavaFXUI/src/main/java/com/levermann/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/src/main/java/com/levermann/CompanyManageUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/mavenJavaFXUI/src/main/java/com/levermann/CompanyManageUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/src/main/java/com/levermann/CompanyOverviewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/mavenJavaFXUI/src/main/java/com/levermann/CompanyOverviewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/src/main/java/com/levermann/EnterCompanyNameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/mavenJavaFXUI/src/main/java/com/levermann/EnterCompanyNameController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/src/main/resources/com/levermann/companyOverview.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/mavenJavaFXUI/src/main/resources/com/levermann/companyOverview.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/target/classes/com/levermann/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/mavenJavaFXUI/target/classes/com/levermann/App.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/target/classes/com/levermann/EnterCompanyNameController.class" beforeDir="false" afterPath="$PROJECT_DIR$/mavenJavaFXUI/target/classes/com/levermann/EnterCompanyNameController.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -324,7 +323,7 @@
       <workItem from="1565420683751" duration="5932000" />
       <workItem from="1565435858746" duration="1946000" />
       <workItem from="1566219210250" duration="14032000" />
-      <workItem from="1566246028530" duration="15186000" />
+      <workItem from="1566246028530" duration="21198000" />
     </task>
     <task id="LOCAL-00001" summary="l">
       <created>1554567642271</created>
@@ -585,7 +584,14 @@
       <option name="project" value="LOCAL" />
       <updated>1566289541139</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="added CompanyOverviewController">
+      <created>1566292556245</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1566292556245</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TodoView">
@@ -647,7 +653,8 @@
     <MESSAGE value="latest version 19.08.2019" />
     <MESSAGE value="renamed Controller" />
     <MESSAGE value="Created ManyToOne and OneTOMany associations for Mapping with Tables" />
-    <option name="LAST_COMMIT_MESSAGE" value="Created ManyToOne and OneTOMany associations for Mapping with Tables" />
+    <MESSAGE value="added CompanyOverviewController" />
+    <option name="LAST_COMMIT_MESSAGE" value="added CompanyOverviewController" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

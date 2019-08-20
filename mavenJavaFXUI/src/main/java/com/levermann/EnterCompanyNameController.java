@@ -8,5 +8,6 @@ public class EnterCompanyNameController {
     @FXML
     private void switchToInput() throws IOException {
         App.setRoot("input");
+
     }
 }

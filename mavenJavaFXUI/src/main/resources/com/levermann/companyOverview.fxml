@@ -20,14 +20,14 @@
                   <Font name="Berlin Sans FB" size="18.0" />
                </font>
             </Label>
-            <TableView layoutX="163.0" layoutY="117.0" prefHeight="357.0" prefWidth="914.0">
+            <TableView fx:id="tableID" layoutX="163.0" layoutY="117.0" prefHeight="357.0" prefWidth="914.0">
               <columns>
-                <TableColumn prefWidth="225.0" text="Company" />
-                <TableColumn prefWidth="168.0" text="creation date" />
-                  <TableColumn prefWidth="184.0" text="score" />
-                  <TableColumn prefWidth="111.0" text="delete" />
-                  <TableColumn prefWidth="115.0" text="edit" />
-                  <TableColumn prefWidth="114.0" text="show" />
+                <TableColumn fx:id="companyName" prefWidth="225.0" text="Company" />
+                <TableColumn fx:id="creationDate" prefWidth="168.0" text="creation date" />
+                  <TableColumn fx:id="analysisScore" prefWidth="184.0" text="score" />
+                  <TableColumn fx:id="delete" prefWidth="111.0" text="delete" />
+                  <TableColumn fx:id="edit" prefWidth="115.0" text="edit" />
+                  <TableColumn fx:id="show" prefWidth="114.0" text="show" />
               </columns>
             </TableView>
          </children>
