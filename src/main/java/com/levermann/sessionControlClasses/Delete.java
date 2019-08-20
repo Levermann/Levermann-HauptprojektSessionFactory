@@ -9,7 +9,9 @@ on Track
 package com.levermann.sessionControlClasses;
 
 
-import com.levermann.entityclass.Unternehmen;
+import com.levermann.entityclass.AnalysisRating;
+import com.levermann.entityclass.AnalysisSteps;
+import com.levermann.entityclass.Company;
 import org.apache.log4j.Logger;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
@@ -17,10 +19,11 @@ import org.hibernate.SessionFactory;
 import java.util.Scanner;
 
   public class Delete {
-
+      final static AnalysisRating analysisRatings = null;
+      final static AnalysisSteps analysisSteps = null;
     final static Logger logger = Logger.getLogger(Delete.class);
 
-    public void Unternehmen( String UnternehmennameId) {
+    public void Company( String name) {
 
     //Logger wird für die Methode Delete ausgeführt
     logger.info("Logger is Entering the Execute method Delete");
@@ -40,16 +43,16 @@ import java.util.Scanner;
        System.out.println("Sie befinden sich in der IDauswahl, bitte name Eingeben:");
 
        //Erzeugen eines Objektes vom Typen Unternehmen
-        Unternehmen Unternehmen=new Unternehmen();
+        Company Company =new Company(analysisRatings, analysisSteps);
 
         //  Unternehmen.setUnternehmennameId(id);
-        Unternehmen.setUnternehmennameId(UnternehmennameId);
+        Company.setCompanyname(name);
             
      // Verbingungsaufbau
         session.beginTransaction();
-        session.delete(Unternehmen);
+        session.delete(Company);
         session.getTransaction().commit();
-        System.out.println(" ID = " + Unternehmen.getUnternehmennameId() +" Name = " + Unternehmen.getUnternehmenname() + " wurde gelöscht");
+        System.out.println(" ID = " + Company.getCompanyname() +" Name = " + Company.getCompanyname() + " wurde gelöscht");
      
     } catch (HibernateException e) {
         System.out.println("Hibernate Exception" + e.getMessage());

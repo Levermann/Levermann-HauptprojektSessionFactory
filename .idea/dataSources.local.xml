@@ -13,7 +13,14 @@
         <introspection-scope>
           <node kind="schema">
             <name qname="@" />
+            <name qname="information_schema" />
+            <name qname="levermann_aktuell" />
+            <name qname="mysql" />
             <name qname="new_schema_old" />
+            <name qname="performance_schema" />
+            <name qname="phpmyadmin" />
+            <name qname="test" />
+            <name qname="user" />
           </node>
         </introspection-scope>
       </schema-mapping>

@@ -4,10 +4,10 @@
       <root url="jar://$PROJECT_DIR$/lib/beansbinding.jar!/" />
     </CLASSES>
     <JAVADOC>
-      <root url="jar://$PROJECT_DIR$/lib/beansbinding-doc.zip!/" />
+      <root url="file://$PROJECT_DIR$/lib/beansbinding-doc" />
     </JAVADOC>
     <SOURCES>
-      <root url="jar://$PROJECT_DIR$/lib/beansbinding-src.zip!/" />
+      <root url="file://$PROJECT_DIR$/lib/beansbinding-src/src" />
     </SOURCES>
   </library>
 </component>

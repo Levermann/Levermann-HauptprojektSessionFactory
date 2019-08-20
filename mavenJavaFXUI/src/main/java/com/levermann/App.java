@@ -8,6 +8,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
+
 /**
  * JavaFX App
  */
@@ -17,9 +18,13 @@ public class App extends Application {
 
     @Override
     public void start(Stage stage) throws IOException {
-        scene = new Scene(loadFXML("startPage"));
-        stage.setScene(scene);
-        stage.show();
+
+            scene = new Scene(loadFXML("startPage"));
+            stage.setScene(scene);
+            stage.show();
+            stage.setTitle("Main Menu");
+
+
     }
 
     static void setRoot(String fxml) throws IOException {
