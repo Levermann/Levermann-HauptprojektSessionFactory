@@ -41,17 +41,13 @@ public class CompanyManageUI  {
         this.company1.set(company1);
     }
 
-    public SimpleStringProperty getDateFormat() {
-        return dateFormat;
-    }
+    public SimpleStringProperty getDateFormat() { return dateFormat; }
 
     public int getScore1() {
         return score1.get();
     }
 
-    public SimpleIntegerProperty score1Property() {
-        return score1;
-    }
+    public SimpleIntegerProperty score1Property() { return score1; }
 
     public void setScore1(int score1) {
         this.score1.set(score1);

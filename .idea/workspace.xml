@@ -5,12 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="71376cf0-4a45-4351-8dca-943cab88ca4d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/b34121eb-3aed-44a8-9368-49552a11cff0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/b34121eb-3aed-44a8-9368-49552a11cff0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/target/maven-status/maven-compiler-plugin/compile/null/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/mavenJavaFXUI/target/maven-status/maven-compiler-plugin/compile/null/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/src/main/java/com/levermann/CompanyManageUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/mavenJavaFXUI/src/main/java/com/levermann/CompanyManageUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/src/main/java/com/levermann/InputController.java" beforeDir="false" afterPath="$PROJECT_DIR$/mavenJavaFXUI/src/main/java/com/levermann/InputController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/src/main/resources/com/levermann/input.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/mavenJavaFXUI/src/main/resources/com/levermann/input.fxml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -115,6 +113,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="SQL" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="TestNG" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.TestNG" value="" />
     <property name="database.console.LAST_STATE" value="false" />
@@ -127,7 +126,7 @@
     <property name="project.structure.proportion" value="0.097943194" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="preferences.externalResources" />
+    <property name="settings.editor.selected.configurable" value="database.main" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
@@ -281,22 +280,7 @@
     <option name="allServicesViewState">
       <serviceView>
         <treeState>
-          <expand>
-            <path>
-              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@2457e8c8" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-            </path>
-            <path>
-              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@2457e8c8" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@5fdb4bf8" type="9fbbdea:ServiceModel$ServiceNode" />
-            </path>
-            <path>
-              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@2457e8c8" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@69f95952" type="9fbbdea:ServiceModel$ServiceNode" />
-            </path>
-          </expand>
+          <expand />
           <select />
         </treeState>
       </serviceView>
@@ -337,7 +321,7 @@
       <workItem from="1565435858746" duration="1946000" />
       <workItem from="1566219210250" duration="14032000" />
       <workItem from="1566246028530" duration="21198000" />
-      <workItem from="1566302773388" duration="1536000" />
+      <workItem from="1566302773388" duration="8466000" />
     </task>
     <task id="LOCAL-00001" summary="l">
       <created>1554567642271</created>
@@ -605,7 +589,14 @@
       <option name="project" value="LOCAL" />
       <updated>1566292556245</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="added CompanyOverviewController&#10;TestcommitMax">
+      <created>1566304327367</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1566304327367</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TodoView">
@@ -668,7 +659,8 @@
     <MESSAGE value="renamed Controller" />
     <MESSAGE value="Created ManyToOne and OneTOMany associations for Mapping with Tables" />
     <MESSAGE value="added CompanyOverviewController" />
-    <option name="LAST_COMMIT_MESSAGE" value="added CompanyOverviewController" />
+    <MESSAGE value="added CompanyOverviewController&#10;TestcommitMax" />
+    <option name="LAST_COMMIT_MESSAGE" value="added CompanyOverviewController&#10;TestcommitMax" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
