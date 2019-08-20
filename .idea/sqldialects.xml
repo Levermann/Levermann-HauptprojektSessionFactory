@@ -2,5 +2,6 @@
 <project version="4">
   <component name="SqlDialectMappings">
     <file url="file://$PROJECT_DIR$/src/main/java/com/levermann/sqlStatements/AddForeignKeys.sql" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/levermann/sqlStatements/CreateDatabases.sql" dialect="MySQL" />
   </component>
 </project>

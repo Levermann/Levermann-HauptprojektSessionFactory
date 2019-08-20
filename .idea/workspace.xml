@@ -5,14 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="71376cf0-4a45-4351-8dca-943cab88ca4d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/b34121eb-3aed-44a8-9368-49552a11cff0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/b34121eb-3aed-44a8-9368-49552a11cff0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/src/main/java/com/levermann/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/mavenJavaFXUI/src/main/java/com/levermann/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/src/main/java/com/levermann/CompanyManageUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/mavenJavaFXUI/src/main/java/com/levermann/CompanyManageUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/src/main/java/com/levermann/CompanyOverviewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/mavenJavaFXUI/src/main/java/com/levermann/CompanyOverviewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/src/main/java/com/levermann/EnterCompanyNameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/mavenJavaFXUI/src/main/java/com/levermann/EnterCompanyNameController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/src/main/resources/com/levermann/companyOverview.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/mavenJavaFXUI/src/main/resources/com/levermann/companyOverview.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/target/classes/com/levermann/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/mavenJavaFXUI/target/classes/com/levermann/App.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/target/classes/com/levermann/EnterCompanyNameController.class" beforeDir="false" afterPath="$PROJECT_DIR$/mavenJavaFXUI/target/classes/com/levermann/EnterCompanyNameController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/target/maven-status/maven-compiler-plugin/compile/null/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/mavenJavaFXUI/target/maven-status/maven-compiler-plugin/compile/null/createdFiles.lst" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -283,7 +281,22 @@
     <option name="allServicesViewState">
       <serviceView>
         <treeState>
-          <expand />
+          <expand>
+            <path>
+              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@2457e8c8" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+            </path>
+            <path>
+              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@2457e8c8" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@5fdb4bf8" type="9fbbdea:ServiceModel$ServiceNode" />
+            </path>
+            <path>
+              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@2457e8c8" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@69f95952" type="9fbbdea:ServiceModel$ServiceNode" />
+            </path>
+          </expand>
           <select />
         </treeState>
       </serviceView>
@@ -324,6 +337,7 @@
       <workItem from="1565435858746" duration="1946000" />
       <workItem from="1566219210250" duration="14032000" />
       <workItem from="1566246028530" duration="21198000" />
+      <workItem from="1566302773388" duration="1536000" />
     </task>
     <task id="LOCAL-00001" summary="l">
       <created>1554567642271</created>
