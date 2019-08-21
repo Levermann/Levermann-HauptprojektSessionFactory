@@ -37,4 +37,10 @@ public class StartPageController implements ControlledScreenInterface {
         myController.setScreen(App.companyOverviewID);
         App.setStageTitle("Allgemeine Unternehmensübersicht");
     }
+    @FXML
+    private void switchToInformations() throws IOException{
+        //App.setRoot("companyOverview");
+        myController.setScreen(App.informationID);
+        App.setStageTitle("Allgemeine Unternehmensübersicht");
+    }
 }

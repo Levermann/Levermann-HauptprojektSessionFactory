@@ -7,4 +7,5 @@ com\levermann\App.class
 com\levermann\ShowResultController.class
 module-info.class
 com\levermann\ControlledScreenInterface.class
+com\levermann\InformationController.class
 com\levermann\StartPageController.class
