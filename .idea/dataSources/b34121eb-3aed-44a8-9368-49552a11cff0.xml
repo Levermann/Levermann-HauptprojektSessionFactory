@@ -12655,8 +12655,7 @@ col_name</ColNames>
       <ColumnKind>normal</ColumnKind>
     </column>
     <index id="2498" parent="495" name="db_name">
-      <ColNames>db_name
-table_name
+      <ColNames>table_name
 column_name</ColNames>
       <Unique>1</Unique>
       <Type>btree</Type>

@@ -64,6 +64,7 @@ public class InputController implements ControlledScreenInterface {
     private CheckBox finanzwerte;
 
     ScreensController myController;
+    private Connection con;
 
     @Override
     public void setScreenParent(ScreensController screenParent){
@@ -87,23 +88,17 @@ public class InputController implements ControlledScreenInterface {
 
     private void fillDBvalues() {
         //TODO Die vom Benutzer eingegebenen Daten in die MySQL Datenbank schreiben
-        System.out.println("Connecting to Levermann database...");
+        System.out.println("Trying to connect to Levermann database...");
 
-        try(Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/levermann", "Levermann", "Levermann")){
+        try {
+            //Class.forName("com.mysql.jdbc.Driver");
+            con = DriverManager.getConnection("localhost", "Levermann", "Levermann");
             System.out.println("Levermann database connected!");
-            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/levermann", "Levermann", "Levermann");
             con.close();
-        }catch(SQLException e){
-            System.out.println("Ich bin dumm und connecte nicht....");
+        }catch (Exception e){
+            System.err.println("Could not connect to Leverman database...");
             //throw new IllegalStateException("Cannot connect to Levermann database!");
         }
-
-        /**
-         * MysqlDataSource dataSource = new MysqlDataSource();
-         * dataSource.setUser("Levermann");
-         * dataSource.setPassword("Levermann");
-         * dataSource.setServerName("jdbc:mysql://localhost:3306/levermann");
-         * Connection conn = dataSource.getconnection();**/
          //TODO Füge hier SQL-Queries ein, die die jeweiligen Datensätze in die Table "Company" hinzufügen
 
         /**
