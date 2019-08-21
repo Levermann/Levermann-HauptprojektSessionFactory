@@ -18,6 +18,7 @@
     <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
     <property name="hbm2ddl.auto">update</property>
       <!--  Put other elements here -->
+
     <property name="hibernate.current_session_context_class">
       org.hibernate.context.internal.ThreadLocalSessionContext
     </property>
