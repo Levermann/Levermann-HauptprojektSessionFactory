@@ -15,7 +15,7 @@ import java.net.URL;
 import java.util.Date;
 import java.util.ResourceBundle;
 
-public class CompanyOverviewController implements Initializable {
+public class CompanyOverviewController implements Initializable, ControlledScreenInterface {
 
 
 
@@ -41,6 +41,12 @@ public class CompanyOverviewController implements Initializable {
 
     );
 
+    ScreensController myController;
+
+    @Override
+    public void setScreenParent(ScreensController screenParent){
+        myController = screenParent;
+    }
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -55,9 +61,13 @@ public class CompanyOverviewController implements Initializable {
     }
     @FXML
     private void switchToEnterCompanyName() throws IOException {
-        App.setRoot("enterCompanyName");
+        //App.setRoot("enterCompanyName");
+        myController.setScreen(App.enterCompanyNameID);
+        App.setStageTitle("Unternehmensnamen angeben");
     }
     public void switchToPrimaryPage(ActionEvent actionEvent) throws IOException {
-        App.setRoot("startPage");
+        //App.setRoot("startPage");
+        myController.setScreen(App.startPageID);
+        App.setStageTitle("Hauptmenü");
     }
 }

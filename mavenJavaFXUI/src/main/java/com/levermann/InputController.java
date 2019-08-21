@@ -3,12 +3,14 @@ package com.levermann;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.CheckBox;
+import javafx.scene.control.Control;
 import javafx.scene.control.TextField;
+import javafx.stage.Screen;
 
 import java.io.IOException;
 import java.sql.*;
 
-public class InputController {
+public class InputController implements ControlledScreenInterface {
 
     @FXML
     private TextField jahresueberschuss;
@@ -61,21 +63,32 @@ public class InputController {
     @FXML
     private CheckBox finanzwerte;
 
+    ScreensController myController;
 
+    @Override
+    public void setScreenParent(ScreensController screenParent){
+        myController = screenParent;
+    }
 
     @FXML
     private void switchToShowResult() throws IOException {
         fillDBvalues();
-        App.setRoot("showResult");
+        //App.setRoot("showResult");
+        myController.setScreen(App.showResultID);
+        App.setStageTitle("Unternehmensergebnisse");
     }
 
     public void switchToPrimaryPage(ActionEvent actionEvent) throws IOException {
-        App.setRoot("startPage");
+        //App.setRoot("startPage");
+        //TODO Schließe die Session, zurück zu Startseite
+        myController.setScreen(App.startPageID);
+        App.setStageTitle("Hauptmenü");
     }
 
     private void fillDBvalues() {
         //TODO Die vom Benutzer eingegebenen Daten in die MySQL Datenbank schreiben
         System.out.println("Connecting to Levermann database...");
+
         try(Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/levermann", "Levermann", "Levermann")){
             System.out.println("Levermann database connected!");
             Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/levermann", "Levermann", "Levermann");

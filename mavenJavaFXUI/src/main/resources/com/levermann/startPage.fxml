@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox alignment="CENTER" prefHeight="671.0" prefWidth="1292.0" spacing="20.0" style="-fx-background-image: url('pictures/aktienchart.png'); -fx-background-color: black;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.levermann.StartPageController">
+<VBox alignment="CENTER" prefHeight="671.0" prefWidth="1292.0" spacing="20.0" style="-fx-background-image: url('pictures/aktienchart.png'); -fx-background-color: black;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.levermann.StartPageController">
    <children>
       <Label alignment="CENTER" prefHeight="63.0" prefWidth="378.0" text="Levermannanalyse" textAlignment="CENTER" textFill="#9c2626">
          <font>
