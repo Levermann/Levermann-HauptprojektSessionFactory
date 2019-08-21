@@ -7,7 +7,7 @@ import java.io.Serializable;
 
 
 @Named
-@ManagedBean
+
 @Entity
 @Access(AccessType.FIELD)
 @NamedQueries({

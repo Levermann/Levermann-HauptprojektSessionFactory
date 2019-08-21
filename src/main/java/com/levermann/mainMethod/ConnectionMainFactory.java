@@ -2,7 +2,9 @@ package com.levermann.mainMethod;
 
 import com.levermann.entityclass.Company;
 import com.levermann.sessionControlClasses.HibernateUtil;
+import com.levermann.utilHandling.CompanyG;
 import org.apache.log4j.BasicConfigurator;
+import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
@@ -15,32 +17,32 @@ abstract public class ConnectionMainFactory  {
 
      BasicConfigurator.configure();
 
-     try {
-         Session s = HibernateUtil.getSession();
-         s.beginTransaction();
-         s.getTransaction().commit();
-         System.out.println("Insert");
+    final Session session = HibernateUtil.getSessionFactory().openSession();
+        Transaction tx = null;
 
-     }
-     catch (Exception e) {
-         System.out.println("Erroryyy" + e.getMessage());
-     }
-  /*   final Session session = HibernateUtil.getSessionFactory().openSession();
-        session.beginTransaction();
+     try {
+         tx = session.beginTransaction();
+
+         CompanyG companyG = new CompanyG();
+         companyG.setSession(session);
 
         Company company = new Company();
         company.setCompanyname("BMW");
         company.setEigenkapital(123214);
         company.setFremdkapital(324234);
+         System.out.println("Got name with credentials " + company.getId());
 
-        session.save(company);
+         companyG.makePersistent(company);
+         Company company1 = companyG.getACompanyByID(0);
+         System.out.println(company1.getCompanyname());
 
-        session.getTransaction().commit();
-        HibernateUtil.shutdown();
+     } catch (HibernateException e){
+			e.printStackTrace();
+		} catch (Exception e){
+			e.printStackTrace();
+		} finally {
+			System.out.println("Done !");
+		}
 
-
-   */
-
-     }
-
- }
+	}
+}

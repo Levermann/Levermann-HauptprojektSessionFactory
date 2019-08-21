@@ -7,7 +7,7 @@ import javax.inject.Named;
 import javax.annotation.ManagedBean;
 
 @Named
-@ManagedBean
+
 @Entity
 @Table(name = "company")
 @Access(AccessType.FIELD)
