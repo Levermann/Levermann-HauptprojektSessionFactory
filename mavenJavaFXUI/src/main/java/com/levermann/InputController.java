@@ -6,6 +6,7 @@ import javafx.scene.control.CheckBox;
 import javafx.scene.control.TextField;
 
 import java.io.IOException;
+import java.sql.*;
 
 public class InputController {
 
@@ -74,11 +75,21 @@ public class InputController {
 
     private void fillDBvalues() {
         //TODO Die vom Benutzer eingegebenen Daten in die MySQL Datenbank schreiben
+        System.out.println("Connecting to Levermann database...");
+        try(Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/levermann", "Levermann", "Levermann")){
+            System.out.println("Levermann database connected!");
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/levermann", "Levermann", "Levermann");
+            con.close();
+        }catch(SQLException e){
+            System.out.println("Ich bin dumm und connecte nicht....");
+            //throw new IllegalStateException("Cannot connect to Levermann database!");
+        }
+
         /**
          * MysqlDataSource dataSource = new MysqlDataSource();
          * dataSource.setUser("Levermann");
          * dataSource.setPassword("Levermann");
-         * dataSource.setServerName("localhost");
+         * dataSource.setServerName("jdbc:mysql://localhost:3306/levermann");
          * Connection conn = dataSource.getconnection();**/
          //TODO Füge hier SQL-Queries ein, die die jeweiligen Datensätze in die Table "Company" hinzufügen
 
