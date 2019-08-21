@@ -9,11 +9,11 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox alignment="CENTER" prefHeight="671.0" prefWidth="1292.0" spacing="20.0"  xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.levermann.ShowResultController">
+<VBox alignment="CENTER" prefHeight="671.0" prefWidth="1292.0" spacing="20.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.levermann.ShowResultController">
    <children>
       <AnchorPane prefHeight="660.0" prefWidth="1252.0">
          <children>
-            <Button fx:id="showOverviewOfCompaniesButton" layoutX="1185.0" layoutY="571.0" onAction="#switchToCompanyOverview" prefHeight="46.0" prefWidth="53.0" text="Next" />
+            <Button fx:id="showOverviewOfCompaniesButton" layoutX="987.0" layoutY="519.0" onAction="#switchToCompanyOverview" prefHeight="21.0" prefWidth="112.0" style="-fx-border-color: black;" text="Next" AnchorPane.bottomAnchor="87.0" AnchorPane.leftAnchor="987.0" AnchorPane.rightAnchor="153.0" AnchorPane.topAnchor="519.0" />
             <Label alignment="TOP_CENTER" layoutX="393.0" layoutY="41.0" prefHeight="63.0" prefWidth="378.0" text="Ergebnisse Ihrer Analyse" textAlignment="CENTER" textFill="#9c2626">
                <font>
                   <Font name="Berlin Sans FB" size="18.0" />
@@ -24,7 +24,7 @@
                 <TableColumn prefWidth="75.0" text="Schritt" />
                 <TableColumn prefWidth="371.0" text="Kennzahlen" />
                   <TableColumn prefWidth="286.0" text="Ergebnis" />
-                  <TableColumn prefWidth="169.0" text="Bewertung" />
+                  <TableColumn prefWidth="235.0" text="Bewertung" />
               </columns>
             </TableView>
          </children>
