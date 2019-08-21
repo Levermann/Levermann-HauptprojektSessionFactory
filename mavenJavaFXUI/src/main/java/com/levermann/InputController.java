@@ -99,6 +99,16 @@ public class InputController implements ControlledScreenInterface {
         }
 
         /**
+         *  try{
+         *           Class.forName("org.mariadb.jdbc.Driver");
+         *                 "jdbc:mariadb://localhost:3306/project", "root", "");
+         *
+         *         Connection connection = DriverManager.getConnection(
+         *         Statement statement = connection.createStatement();
+         *
+         *         String uname="xyz",pass="abc";
+         *        statement.executeUpdate("insert into user values('"+uname+"','"+pass+"')");}
+         *
          * MysqlDataSource dataSource = new MysqlDataSource();
          * dataSource.setUser("Levermann");
          * dataSource.setPassword("Levermann");

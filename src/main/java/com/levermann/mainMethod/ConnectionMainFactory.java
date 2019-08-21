@@ -1,8 +1,12 @@
 package com.levermann.mainMethod;
 
 import com.levermann.entityclass.Company;
-import com.levermann.sessionControlClasses.Create;
+import com.levermann.sessionControlClasses.HibernateUtil;
+import com.levermann.utilHandling.CompanyG;
 import org.apache.log4j.BasicConfigurator;
+import org.hibernate.HibernateException;
+import org.hibernate.Session;
+import org.hibernate.Transaction;
 
 
 abstract public class ConnectionMainFactory  {
@@ -10,52 +14,35 @@ abstract public class ConnectionMainFactory  {
 
  @SuppressWarnings("empty-statement")
  public static void main(String[] args) {
+
      BasicConfigurator.configure();
 
-     Company company = new Company();
+    final Session session = HibernateUtil.getSessionFactory().openSession();
+        Transaction tx = null;
 
-     //KursgewinnVerhaeltnis5Jahre kg5 = new KursgewinnVerhaeltnis5Jahre();
+     try {
+         tx = session.beginTransaction();
 
-//     kg5.KursgewinnVerhaeltnis5Jahre();
+         CompanyG companyG = new CompanyG();
+         companyG.setSession(session);
 
- //Zeigt Systeminfos auf
- // BasicConfigurator.configure();
+        Company company = new Company();
+        company.setCompanyname("BMW");
+        company.setEigenkapital(123214);
+        company.setFremdkapital(324234);
+         System.out.println("Got name with credentials " + company.getId());
 
-  // Gibt die Methoden aus dem Interface aus
+         companyG.makePersistent(company);
+         Company company1 = companyG.getACompanyByID(0);
+         System.out.println(company1.getCompanyname());
 
+     } catch (HibernateException e){
+			e.printStackTrace();
+		} catch (Exception e){
+			e.printStackTrace();
+		} finally {
+			System.out.println("Done !");
+		}
 
-
-   //  Gewinnrevision gwr = new Gewinnrevision();
-  //   gwr.Gewinnrevision();
-
-   //  KursheuteggKursvor1Jahr kw6 = new KursheuteggKursvor1Jahr();
-     //kw6.KursheuteggKursvor12Monaten();
-
-   //  Kursmomentum km = new Kursmomentum();
-    // km.Kursmomentum();
-
-     // Gewinnwachstum gww = new Gewinnwachstum();
-     // gww.Gewinnwachstum();
-
-    // Select select = new Select();
-     // select.Dao();
-
-  //   Update drm = new Update();
-
-    // drm.DaoJahresueberschuss("bmw11", 2000);
-        Create CreateAnalysisRating = new Create();
-     CreateAnalysisRating.CreateAnalysisRating("AppleAG");
-//     Create d = new Create();
-
-    // d.CreateUnternehmen( "bmw", (float) 2000.00);
-
-     ///Select de = new Select();
-   //  de.SelectUnternehmenByName("bmw");
-
-
-
- }
-
-
-
+	}
 }

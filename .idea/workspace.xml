@@ -5,29 +5,39 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="71376cf0-4a45-4351-8dca-943cab88ca4d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/mavenJavaFXUI/src/main/java/com/levermann/ControlledScreenInterface.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mavenJavaFXUI/src/main/java/com/levermann/ScreensController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/MariaDB.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mariadb_jdbc_mariadb_java_client_2_4_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/mariadb_java_client_2_4_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/mariadb_java_client_2_4_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/levermann/DB/Memory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/levermann/utilHandling/CompanyG.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/levermann/utilHandling/Generic.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/levermann/utilHandling/GenericHibernate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/b34121eb-3aed-44a8-9368-49552a11cff0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/b34121eb-3aed-44a8-9368-49552a11cff0.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/src/main/java/com/levermann/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/mavenJavaFXUI/src/main/java/com/levermann/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/src/main/java/com/levermann/CompanyOverviewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/mavenJavaFXUI/src/main/java/com/levermann/CompanyOverviewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/src/main/java/com/levermann/EnterCompanyNameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/mavenJavaFXUI/src/main/java/com/levermann/EnterCompanyNameController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LevermannAnalyse.iml" beforeDir="false" afterPath="$PROJECT_DIR$/LevermannAnalyse.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/src/main/java/com/levermann/InputController.java" beforeDir="false" afterPath="$PROJECT_DIR$/mavenJavaFXUI/src/main/java/com/levermann/InputController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/src/main/java/com/levermann/ShowResultController.java" beforeDir="false" afterPath="$PROJECT_DIR$/mavenJavaFXUI/src/main/java/com/levermann/ShowResultController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/src/main/java/com/levermann/StartPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/mavenJavaFXUI/src/main/java/com/levermann/StartPageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/src/main/resources/com/levermann/companyOverview.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/mavenJavaFXUI/src/main/resources/com/levermann/companyOverview.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/src/main/resources/com/levermann/enterCompanyName.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/mavenJavaFXUI/src/main/resources/com/levermann/enterCompanyName.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/src/main/resources/com/levermann/showResult.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/mavenJavaFXUI/src/main/resources/com/levermann/showResult.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/src/main/resources/com/levermann/startPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/mavenJavaFXUI/src/main/resources/com/levermann/startPage.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/target/classes/com/levermann/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/mavenJavaFXUI/target/classes/com/levermann/App.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/target/classes/com/levermann/EnterCompanyNameController.class" beforeDir="false" afterPath="$PROJECT_DIR$/mavenJavaFXUI/target/classes/com/levermann/EnterCompanyNameController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/target/classes/com/levermann/InputController.class" beforeDir="false" afterPath="$PROJECT_DIR$/mavenJavaFXUI/target/classes/com/levermann/InputController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/target/classes/com/levermann/ShowResultController.class" beforeDir="false" afterPath="$PROJECT_DIR$/mavenJavaFXUI/target/classes/com/levermann/ShowResultController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/target/classes/com/levermann/StartPageController.class" beforeDir="false" afterPath="$PROJECT_DIR$/mavenJavaFXUI/target/classes/com/levermann/StartPageController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/target/classes/com/levermann/enterCompanyName.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/mavenJavaFXUI/target/classes/com/levermann/enterCompanyName.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/target/classes/com/levermann/showResult.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/mavenJavaFXUI/target/classes/com/levermann/showResult.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/target/classes/com/levermann/startPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/mavenJavaFXUI/target/classes/com/levermann/startPage.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/target/classes/com/levermann/secondary.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/target/maven-archiver/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/target/maven-status/maven-compiler-plugin/compile/null/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/mavenJavaFXUI/target/maven-status/maven-compiler-plugin/compile/null/createdFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/target/maven-status/maven-compiler-plugin/compile/null/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/mavenJavaFXUI/target/maven-status/maven-compiler-plugin/compile/null/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/target/mavenJavaFXUI-1.0-SNAPSHOT.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/levermann/entityclass/AnalysisRating.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/levermann/entityclass/AnalysisRating.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/levermann/entityclass/Company.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/levermann/entityclass/Company.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/levermann/mainMethod/ConnectionMainFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/levermann/mainMethod/ConnectionMainFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/levermann/sessionControlClasses/Create.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/levermann/sessionControlClasses/Delete.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/levermann/sessionControlClasses/HibernateUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/levermann/sessionControlClasses/HibernateUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/levermann/sessionControlClasses/Select.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/levermann/sessionControlClasses/UpdateAnalysisRating.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/levermann/sessionControlClasses/UpdateAnalysisSteps.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/levermann/sessionControlClasses/UpdateCompany.java" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -56,14 +66,25 @@
       </path>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="hibernate.cfg.xml/Hibernate" type="feb32156:DbDataSourceImpl" />
+        <item name="HibernatePersistenzEM/Hibernate" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="HibernatePersistenzEM/Hibernate" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
       </path>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="hibernate.cfg.xml/Hibernate" type="feb32156:DbDataSourceImpl" />
+        <item name="HibernatePersistenzEM/Hibernate" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="levermann: schema" type="ebfa3cd1:MariaImplModel$Schema" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="HibernatePersistenzEM/Hibernate" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="levermann: schema" type="ebfa3cd1:MariaImplModel$Schema" />
+        <item name="company: table" type="dbc44a63:MariaImplModel$Table" />
       </path>
     </expand>
     <select />
@@ -73,7 +94,7 @@
   </component>
   <component name="ExecutionTargetDialog">
     <checked>
-      <node key="b34121eb-3aed-44a8-9368-49552a11cff0" />
+      <node key="dc581826-53de-4be6-8ac7-b267f6d12794" />
     </checked>
   </component>
   <component name="FavoritesManager">
@@ -137,7 +158,7 @@
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.TestNG" value="" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java" />
-    <property name="last_opened_file_path" value="F:/Programme/JDBC/mysql-connector-java-8.0.17" />
+    <property name="last_opened_file_path" value="$USER_HOME$/MariaDB/mariadb-java-client-2.4.3.jar!/" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -148,6 +169,9 @@
     <property name="settings.editor.selected.configurable" value="database.main" />
   </component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.levermann.dao" />
+    </key>
     <key name="CreateTestDialog.RecentsKey">
       <recent name="com.levermann.GuiNew" />
       <recent name="com.levermann.entityclass" />
@@ -159,13 +183,6 @@
       <recent name="com" />
       <recent name="com.levermann.kennzahlen" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Lisa\IdeaProjects\Levermann-HauptprojektSessionFactory\src\main\resources" />
-      <recent name="C:\Users\Landb\Documents\Projekt\Hauptprojekt\src\main\java\Gui" />
-      <recent name="C:\Users\Landb\Documents\Projekt\Hauptprojekt\src\main\java\com\levermann\GuiNew" />
-      <recent name="C:\Users\Landb\Documents\Projekt\Hauptprojekt\src\main\resources" />
-      <recent name="C:\Users\Landb\Documents\Projekt\Hauptprojekt\src\main\resources\META-INF" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Lisa\IdeaProjects\Levermann-HauptprojektSessionFactory\mavenJavaFXUI\src\main\resources\com\levermann" />
       <recent name="C:\Users\Lisa\IdeaProjects\Levermann-HauptprojektSessionFactory\src\main\resources" />
@@ -176,8 +193,12 @@
       <recent name="com.levermann.dao" />
       <recent name="com.levermann.project" />
     </key>
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="com.levermann.dao" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Lisa\IdeaProjects\Levermann-HauptprojektSessionFactory\src\main\resources" />
+      <recent name="C:\Users\Landb\Documents\Projekt\Hauptprojekt\src\main\java\Gui" />
+      <recent name="C:\Users\Landb\Documents\Projekt\Hauptprojekt\src\main\java\com\levermann\GuiNew" />
+      <recent name="C:\Users\Landb\Documents\Projekt\Hauptprojekt\src\main\resources" />
+      <recent name="C:\Users\Landb\Documents\Projekt\Hauptprojekt\src\main\resources\META-INF" />
     </key>
   </component>
   <component name="RunAnythingCache">
@@ -299,11 +320,24 @@
     <option name="allServicesViewState">
       <serviceView>
         <treeState>
-          <expand />
+          <expand>
+            <path>
+              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@7b05f414" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+            </path>
+            <path>
+              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@7b05f414" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@50936038" type="9fbbdea:ServiceModel$ServiceNode" />
+            </path>
+          </expand>
           <select />
         </treeState>
       </serviceView>
     </option>
+  </component>
+  <component name="StructureViewFactory">
+    <option name="ACTIVE_ACTIONS" value=",SHOW_LAMBDA,SHOW_ANONYMOUS" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -342,6 +376,7 @@
       <workItem from="1566246028530" duration="21198000" />
       <workItem from="1566302773388" duration="8714000" />
       <workItem from="1566371910759" duration="12082000" />
+      <workItem from="1566393467576" duration="4259000" />
     </task>
     <task id="LOCAL-00001" summary="l">
       <created>1554567642271</created>
@@ -648,6 +683,11 @@
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
+        <entry key="1">
+          <value>
+            <State />
+          </value>
+        </entry>
         <entry key="MAIN">
           <value>
             <State>
@@ -709,13 +749,6 @@
         </breakpoint>
       </breakpoints>
     </breakpoint-manager>
-    <watches-manager>
-      <configuration name="Application">
-        <watch expression="((FileURLMapper)var4 (slot_2)).file" language="JAVA" custom="sun.misc.FileURLMapper" />
-        <watch expression="this" />
-        <watch expression="Firmenname" />
-      </configuration>
-    </watches-manager>
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
