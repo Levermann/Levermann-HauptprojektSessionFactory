@@ -2,7 +2,7 @@ create schema levermann;
 create table company(
                             Companyname varchar (11) not null ,
                              id float (20)  unique ,
-                             datum float(11),
+                             datum varchar(11),
                              eigenkapital float(11),
                              jahresueberschuss float(11),
                              GewinnEBIT float (11),

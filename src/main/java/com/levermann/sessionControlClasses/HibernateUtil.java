@@ -8,8 +8,6 @@ import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
 import org.hibernate.service.ServiceRegistry;
 
-import static java.lang.System.setProperty;
-
 public class HibernateUtil
 {
 
@@ -29,7 +27,7 @@ public class HibernateUtil
                 .setProperty("hibernate.connection.password", "Levermann")
                         .setProperty("hibernate.connection.autoReconnect", "true")
                         .setProperty("hibernate.order_updates", "true")
-           .addAnnotatedClass(com.levermann.sessionControlClasses.CompanyEntity.class);
+           .addAnnotatedClass(Company.class);
                 // .addAnnotatedClass(com.levermann.entityclass.Company)
 
 

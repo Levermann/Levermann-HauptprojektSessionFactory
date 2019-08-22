@@ -1,6 +1,6 @@
 package com.levermann.mainMethod;
 
-import com.levermann.sessionControlClasses.CompanyEntity;
+import com.levermann.sessionControlClasses.Company;
 import com.levermann.sessionControlClasses.HibernateUtil;
 import com.levermann.utilHandling.CompanyG;
 import org.apache.log4j.BasicConfigurator;
@@ -9,7 +9,7 @@ import org.hibernate.Session;
 import org.hibernate.Transaction;
 
 
-abstract public class ConnectionMainFactory  {
+abstract public class ConnectionMainFactoryCreate {
 
 
  @SuppressWarnings("empty-statement")
@@ -27,16 +27,16 @@ abstract public class ConnectionMainFactory  {
          companyG.setSession(session);
 
 
-        CompanyEntity company = new CompanyEntity();
-        company.setCompanyname("FuckYouBmkw");
+        Company company = new Company();
+        company.setCompanyname("TestFirmaNe");
          System.out.println("Got name with credentials " + company.getCompanyname());
 
          companyG.makePersistent(company);
-         CompanyEntity company1 = companyG.getACompanyByID(company.getCompanyname());
+         Company company1 = companyG.getACompanyByID(company.getCompanyname());
          System.out.println(company1.getCompanyname());
 
          session.save(company);
-
+         session.getTransaction().commit();
          session.close();
 
      } catch (HibernateException e){

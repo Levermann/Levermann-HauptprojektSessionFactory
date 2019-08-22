@@ -4,10 +4,10 @@ import javax.persistence.*;
 import java.io.Serializable;
 
 @Entity
-@Table(name = "analysissteps", schema = "levermann")
-public class AnalysisstepsEntity  implements Serializable {
-    private String analysisStepsName;
-    private String companynameAnalysisSteps;
+@Table(name = "analysisrating", schema = "levermann")
+public class Analysisrating implements Serializable {
+    private String analysisRatingName;
+    private String companynameAnalysisRating;
     private Double eigenkapitalrendite;
     private Double ebitMarge;
     private Double eigenkapitalquote;
@@ -23,23 +23,23 @@ public class AnalysisstepsEntity  implements Serializable {
     private Double gewinnwachstum;
 
     @Id
-    @Column(name = "AnalysisStepsName", nullable = false, length = 20)
-    public String getAnalysisStepsName() {
-        return analysisStepsName;
+    @Column(name = "AnalysisRatingName", nullable = false, length = 20)
+    public String getAnalysisRatingName() {
+        return analysisRatingName;
     }
 
-    public void setAnalysisStepsName(String analysisStepsName) {
-        this.analysisStepsName = analysisStepsName;
+    public void setAnalysisRatingName(String analysisRatingName) {
+        this.analysisRatingName = analysisRatingName;
     }
 
     @Basic
-    @Column(name = "Companyname_AnalysisSteps", nullable = false, length = 20)
-    public String getCompanynameAnalysisSteps() {
-        return companynameAnalysisSteps;
+    @Column(name = "Companyname_AnalysisRating", nullable = false, length = 20)
+    public String getCompanynameAnalysisRating() {
+        return companynameAnalysisRating;
     }
 
-    public void setCompanynameAnalysisSteps(String companynameAnalysisSteps) {
-        this.companynameAnalysisSteps = companynameAnalysisSteps;
+    public void setCompanynameAnalysisRating(String companynameAnalysisRating) {
+        this.companynameAnalysisRating = companynameAnalysisRating;
     }
 
     @Basic
@@ -177,11 +177,11 @@ public class AnalysisstepsEntity  implements Serializable {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        AnalysisstepsEntity that = (AnalysisstepsEntity) o;
+        Analysisrating that = (Analysisrating) o;
 
-        if (analysisStepsName != null ? !analysisStepsName.equals(that.analysisStepsName) : that.analysisStepsName != null)
+        if (analysisRatingName != null ? !analysisRatingName.equals(that.analysisRatingName) : that.analysisRatingName != null)
             return false;
-        if (companynameAnalysisSteps != null ? !companynameAnalysisSteps.equals(that.companynameAnalysisSteps) : that.companynameAnalysisSteps != null)
+        if (companynameAnalysisRating != null ? !companynameAnalysisRating.equals(that.companynameAnalysisRating) : that.companynameAnalysisRating != null)
             return false;
         if (eigenkapitalrendite != null ? !eigenkapitalrendite.equals(that.eigenkapitalrendite) : that.eigenkapitalrendite != null)
             return false;
@@ -213,8 +213,8 @@ public class AnalysisstepsEntity  implements Serializable {
 
     @Override
     public int hashCode() {
-        int result = analysisStepsName != null ? analysisStepsName.hashCode() : 0;
-        result = 31 * result + (companynameAnalysisSteps != null ? companynameAnalysisSteps.hashCode() : 0);
+        int result = analysisRatingName != null ? analysisRatingName.hashCode() : 0;
+        result = 31 * result + (companynameAnalysisRating != null ? companynameAnalysisRating.hashCode() : 0);
         result = 31 * result + (eigenkapitalrendite != null ? eigenkapitalrendite.hashCode() : 0);
         result = 31 * result + (ebitMarge != null ? ebitMarge.hashCode() : 0);
         result = 31 * result + (eigenkapitalquote != null ? eigenkapitalquote.hashCode() : 0);

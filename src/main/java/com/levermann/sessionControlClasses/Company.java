@@ -5,7 +5,7 @@ import java.io.Serializable;
 
 @Entity
 @Table(name = "company", schema = "levermann")
-public class CompanyEntity implements Serializable {
+public class Company implements Serializable {
 
     private String companyname;
     private Double datum;
@@ -54,7 +54,7 @@ public class CompanyEntity implements Serializable {
 
     @Basic
     @Column(name = "datum", nullable = true, precision = 0)
-    public Double getDatum() {
+    public String getDatum() {
         return datum;
     }
 
@@ -387,7 +387,7 @@ public class CompanyEntity implements Serializable {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        CompanyEntity that = (CompanyEntity) o;
+        Company that = (Company) o;
 
         if (companyname != null ? !companyname.equals(that.companyname) : that.companyname != null) return false;
         if (datum != null ? !datum.equals(that.datum) : that.datum != null) return false;

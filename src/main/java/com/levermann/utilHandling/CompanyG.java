@@ -2,31 +2,31 @@ package com.levermann.utilHandling;
 import java.io.Serializable;
 import java.util.List;
 
-import com.levermann.sessionControlClasses.CompanyEntity;
+import com.levermann.sessionControlClasses.Company;
 import org.hibernate.criterion.Restrictions;
 
 /**
- * A DAO implementation for the {@link CompanyEntity} class
+ * A DAO implementation for the {@link Company} class
  *
  * @author saifasif
  */
-public class CompanyG extends GenericHibernate<CompanyEntity, Serializable> {
+public class CompanyG extends GenericHibernate<Company, Serializable> {
 
     //private Criteria criteria = HibernateUtil.getSession().createCriteria(Human.class);
 
-    public  CompanyEntity getACompanyByID(String id) {
-        List<CompanyEntity> resultList = findByCriteria(Restrictions.eq("id", id));
+    public Company getACompanyByID(String id) {
+        List<Company> resultList = findByCriteria(Restrictions.eq("id", id));
         if (!resultList.isEmpty()) {
             return findByCriteria(Restrictions.eq("id", id)).get(0);
         }
         return null;
     }
 
-    public  List<CompanyEntity> getAllCompanies() {
+    public  List<Company> getAllCompanies() {
         return findAll();
     }
 
-    public  List<CompanyEntity> findByExample(CompanyEntity exampleInstance) {
+    public  List<Company> findByExample(Company exampleInstance) {
         return null;
     }
 

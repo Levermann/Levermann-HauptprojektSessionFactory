@@ -23,12 +23,12 @@
         <property name="hibernate.c3p0.idle_test_period" >3000</property>
 
 
-        <mapping class="com.levermann.sessionControlClasses.AnalysisratingEntity"/>
-        <mapping resource="com/levermann/sessionControlClasses/AnalysisratingEntity.hbm.xml"/>
-        <mapping class="com.levermann.sessionControlClasses.AnalysisstepsEntity"/>
-        <mapping resource="com/levermann/sessionControlClasses/AnalysisstepsEntity.hbm.xml"/>
-        <mapping class="com.levermann.sessionControlClasses.CompanyEntity"/>
-        <mapping resource="com/levermann/sessionControlClasses/CompanyEntity.hbm.xml"/>
+        <mapping class="com.levermann.sessionControlClasses.Analysisrating"/>
+        <mapping resource="com/levermann/sessionControlClasses/Analysisrating.hbm.xml"/>
+        <mapping class="com.levermann.sessionControlClasses.Analysissteps"/>
+        <mapping resource="com/levermann/sessionControlClasses/Analysissteps.hbm.xml"/>
+        <mapping class="com.levermann.sessionControlClasses.Company"/>
+        <mapping resource="com/levermann/sessionControlClasses/Company.hbm.xml"/>
 
         <event type="pre-update">
             <listener class="org.hibernate.cfg.beanvalidation.BeanValidationEventListener"/>

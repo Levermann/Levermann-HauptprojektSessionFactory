@@ -4,7 +4,7 @@
     "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
 
-    <class name="com.levermann.sessionControlClasses.AnalysisstepsEntity" table="analysissteps" schema="levermann">
+    <class name="com.levermann.sessionControlClasses.Analysissteps" table="analysissteps" schema="levermann">
         <id name="analysisStepsName">
             <column name="AnalysisStepsName" sql-type="varchar(20)" length="20"/>
         </id>
