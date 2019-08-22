@@ -11,7 +11,6 @@ import javax.annotation.ManagedBean;
 @Entity
 @Table(name = "company")
 @Access(AccessType.FIELD)
-//@Table(name="unternehmen")
 @NamedQueries({
 
 
@@ -129,7 +128,7 @@ public class Company implements Serializable  {
 
     @Column(name="KursgewinnschaezungNaechstesJahr", unique = true, nullable = true)
     private Integer KursgewinnschaezungNaechstesJahr;
-//association One To Many: One Company to Many Punktelisten
+    //association One To Many: One Company to Many Punktelisten
     @OneToMany(mappedBy = "company")
     private List<AnalysisRating> analysisRatings;
     @OneToMany(mappedBy = "company")

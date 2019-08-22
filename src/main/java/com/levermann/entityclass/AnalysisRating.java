@@ -1,6 +1,5 @@
 package com.levermann.entityclass;
 
-import javax.annotation.ManagedBean;
 import javax.inject.Named;
 import javax.persistence.*;
 import java.io.Serializable;
@@ -16,7 +15,7 @@ import java.io.Serializable;
 
 })
 @Table(name= "AnalysisRating")
- public class AnalysisRating  implements Serializable {
+public class AnalysisRating  implements Serializable {
 
 
     @Id
@@ -72,6 +71,10 @@ import java.io.Serializable;
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "Companyname_AnalysisRating")
     private Company company;
+
+    public AnalysisRating() {
+
+    }
 
     public String getAnalysisRatingName() {
         return AnalyseRatingName;
@@ -193,7 +196,8 @@ import java.io.Serializable;
         Gewinnwachstum = gewinnwachstum;
     }
 
-    public AnalysisRating() {
+    public AnalysisRating(Company company) {
+        this.company = company;
     }
 
     public Float getId() {
