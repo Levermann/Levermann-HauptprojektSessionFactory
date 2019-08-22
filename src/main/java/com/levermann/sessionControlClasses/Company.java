@@ -4,11 +4,10 @@ import javax.persistence.*;
 import java.io.Serializable;
 
 @Entity
-@Table(name = "company", schema = "levermann")
 public class Company implements Serializable {
 
     private String companyname;
-    private Double datum;
+    private String datum;
     private Double eigenkapital;
     private Double jahresueberschuss;
     private Double gewinnEbit;
@@ -43,7 +42,6 @@ public class Company implements Serializable {
     private Double kursgewinnschaezungNaechstesJahr;
 
     @Id
-    @Column(name = "Companyname", nullable = false, length = 11)
     public String getCompanyname() {
         return companyname;
     }
@@ -53,17 +51,15 @@ public class Company implements Serializable {
     }
 
     @Basic
-    @Column(name = "datum", nullable = true, precision = 0)
     public String getDatum() {
         return datum;
     }
 
-    public void setDatum(Double datum) {
+    public void setDatum(String datum) {
         this.datum = datum;
     }
 
     @Basic
-    @Column(name = "eigenkapital", nullable = true, precision = 0)
     public Double getEigenkapital() {
         return eigenkapital;
     }
@@ -73,7 +69,6 @@ public class Company implements Serializable {
     }
 
     @Basic
-    @Column(name = "jahresueberschuss", nullable = true, precision = 0)
     public Double getJahresueberschuss() {
         return jahresueberschuss;
     }
@@ -83,7 +78,6 @@ public class Company implements Serializable {
     }
 
     @Basic
-    @Column(name = "GewinnEBIT", nullable = true, precision = 0)
     public Double getGewinnEbit() {
         return gewinnEbit;
     }
@@ -93,7 +87,6 @@ public class Company implements Serializable {
     }
 
     @Basic
-    @Column(name = "Jahresumsatz", nullable = true, precision = 0)
     public Double getJahresumsatz() {
         return jahresumsatz;
     }
@@ -103,7 +96,6 @@ public class Company implements Serializable {
     }
 
     @Basic
-    @Column(name = "Fremdkapital", nullable = true, precision = 0)
     public Double getFremdkapital() {
         return fremdkapital;
     }
@@ -113,7 +105,6 @@ public class Company implements Serializable {
     }
 
     @Basic
-    @Column(name = "AktuellerAktienkurs", nullable = true, precision = 0)
     public Double getAktuellerAktienkurs() {
         return aktuellerAktienkurs;
     }
@@ -123,7 +114,6 @@ public class Company implements Serializable {
     }
 
     @Basic
-    @Column(name = "Gewinnschaezung", nullable = true, precision = 0)
     public Double getGewinnschaezung() {
         return gewinnschaezung;
     }
@@ -133,7 +123,6 @@ public class Company implements Serializable {
     }
 
     @Basic
-    @Column(name = "GewinnAVG", nullable = true, precision = 0)
     public Double getGewinnAvg() {
         return gewinnAvg;
     }
@@ -143,7 +132,6 @@ public class Company implements Serializable {
     }
 
     @Basic
-    @Column(name = "Halten", nullable = true, precision = 0)
     public Double getHalten() {
         return halten;
     }
@@ -153,7 +141,6 @@ public class Company implements Serializable {
     }
 
     @Basic
-    @Column(name = "Verkaufen", nullable = true, precision = 0)
     public Double getVerkaufen() {
         return verkaufen;
     }
@@ -163,7 +150,6 @@ public class Company implements Serializable {
     }
 
     @Basic
-    @Column(name = "Kaufen", nullable = true, precision = 0)
     public Double getKaufen() {
         return kaufen;
     }
@@ -173,7 +159,6 @@ public class Company implements Serializable {
     }
 
     @Basic
-    @Column(name = "KursanstiegUnternehmen", nullable = true, precision = 0)
     public Double getKursanstiegUnternehmen() {
         return kursanstiegUnternehmen;
     }
@@ -183,7 +168,6 @@ public class Company implements Serializable {
     }
 
     @Basic
-    @Column(name = "KursanstiegIndex", nullable = true, precision = 0)
     public Double getKursanstiegIndex() {
         return kursanstiegIndex;
     }
@@ -193,7 +177,6 @@ public class Company implements Serializable {
     }
 
     @Basic
-    @Column(name = "GewinnschaezungVor4Wochen", nullable = true, precision = 0)
     public Double getGewinnschaezungVor4Wochen() {
         return gewinnschaezungVor4Wochen;
     }
@@ -203,7 +186,6 @@ public class Company implements Serializable {
     }
 
     @Basic
-    @Column(name = "AktienkursTagVeroeffentlichungQartalszahlen", nullable = true, precision = 0)
     public Double getAktienkursTagVeroeffentlichungQartalszahlen() {
         return aktienkursTagVeroeffentlichungQartalszahlen;
     }
@@ -213,7 +195,6 @@ public class Company implements Serializable {
     }
 
     @Basic
-    @Column(name = "KursVor6Monaten", nullable = true, precision = 0)
     public Double getKursVor6Monaten() {
         return kursVor6Monaten;
     }
@@ -223,7 +204,6 @@ public class Company implements Serializable {
     }
 
     @Basic
-    @Column(name = "KursVor12Monaten", nullable = true, precision = 0)
     public Double getKursVor12Monaten() {
         return kursVor12Monaten;
     }
@@ -233,7 +213,6 @@ public class Company implements Serializable {
     }
 
     @Basic
-    @Column(name = "KursVor3Monaten", nullable = true, precision = 0)
     public Double getKursVor3Monaten() {
         return kursVor3Monaten;
     }
@@ -243,7 +222,6 @@ public class Company implements Serializable {
     }
 
     @Basic
-    @Column(name = "KursVor2Monaten", nullable = true, precision = 0)
     public Double getKursVor2Monaten() {
         return kursVor2Monaten;
     }
@@ -253,7 +231,6 @@ public class Company implements Serializable {
     }
 
     @Basic
-    @Column(name = "KursVor1Monat", nullable = true, precision = 0)
     public Double getKursVor1Monat() {
         return kursVor1Monat;
     }
@@ -263,7 +240,6 @@ public class Company implements Serializable {
     }
 
     @Basic
-    @Column(name = "DaxVor1Monat", nullable = true, precision = 0)
     public Double getDaxVor1Monat() {
         return daxVor1Monat;
     }
@@ -273,7 +249,6 @@ public class Company implements Serializable {
     }
 
     @Basic
-    @Column(name = "DaxVor2Monaten", nullable = true, precision = 0)
     public Double getDaxVor2Monaten() {
         return daxVor2Monaten;
     }
@@ -283,7 +258,6 @@ public class Company implements Serializable {
     }
 
     @Basic
-    @Column(name = "DaxVor3Monaten", nullable = true, precision = 0)
     public Double getDaxVor3Monaten() {
         return daxVor3Monaten;
     }
@@ -293,7 +267,6 @@ public class Company implements Serializable {
     }
 
     @Basic
-    @Column(name = "GewinnschaezungNaechstesJahr", nullable = true, precision = 0)
     public Double getGewinnschaezungNaechstesJahr() {
         return gewinnschaezungNaechstesJahr;
     }
@@ -303,7 +276,6 @@ public class Company implements Serializable {
     }
 
     @Basic
-    @Column(name = "GewinnschaezungDiesesJahr", nullable = true, precision = 0)
     public Double getGewinnschaezungDiesesJahr() {
         return gewinnschaezungDiesesJahr;
     }
@@ -313,7 +285,6 @@ public class Company implements Serializable {
     }
 
     @Basic
-    @Column(name = "Finanzsektor", nullable = true, precision = 0)
     public Double getFinanzsektor() {
         return finanzsektor;
     }
@@ -323,7 +294,6 @@ public class Company implements Serializable {
     }
 
     @Basic
-    @Column(name = "PerfInJedemMonat", nullable = true, precision = 0)
     public Double getPerfInJedemMonat() {
         return perfInJedemMonat;
     }
@@ -333,7 +303,6 @@ public class Company implements Serializable {
     }
 
     @Basic
-    @Column(name = "KursgewinnVor3Jahren", nullable = true, precision = 0)
     public Double getKursgewinnVor3Jahren() {
         return kursgewinnVor3Jahren;
     }
@@ -343,7 +312,6 @@ public class Company implements Serializable {
     }
 
     @Basic
-    @Column(name = "KursgewinnVor2Jahren", nullable = true, precision = 0)
     public Double getKursgewinnVor2Jahren() {
         return kursgewinnVor2Jahren;
     }
@@ -353,7 +321,6 @@ public class Company implements Serializable {
     }
 
     @Basic
-    @Column(name = "KursgewinnVor1Jahr", nullable = true, precision = 0)
     public Double getKursgewinnVor1Jahr() {
         return kursgewinnVor1Jahr;
     }
@@ -363,7 +330,6 @@ public class Company implements Serializable {
     }
 
     @Basic
-    @Column(name = "AktuellenErwartetenKursgewinn", nullable = true, precision = 0)
     public Double getAktuellenErwartetenKursgewinn() {
         return aktuellenErwartetenKursgewinn;
     }
@@ -373,7 +339,6 @@ public class Company implements Serializable {
     }
 
     @Basic
-    @Column(name = "KursgewinnschaezungNaechstesJahr", nullable = true, precision = 0)
     public Double getKursgewinnschaezungNaechstesJahr() {
         return kursgewinnschaezungNaechstesJahr;
     }

@@ -24,11 +24,8 @@
 
 
         <mapping class="com.levermann.sessionControlClasses.Analysisrating"/>
-        <mapping resource="com/levermann/sessionControlClasses/Analysisrating.hbm.xml"/>
         <mapping class="com.levermann.sessionControlClasses.Analysissteps"/>
-        <mapping resource="com/levermann/sessionControlClasses/Analysissteps.hbm.xml"/>
         <mapping class="com.levermann.sessionControlClasses.Company"/>
-        <mapping resource="com/levermann/sessionControlClasses/Company.hbm.xml"/>
 
         <event type="pre-update">
             <listener class="org.hibernate.cfg.beanvalidation.BeanValidationEventListener"/>

@@ -4,7 +4,6 @@ import javax.persistence.*;
 import java.io.Serializable;
 
 @Entity
-@Table(name = "analysissteps", schema = "levermann")
 public class Analysissteps implements Serializable {
     private String analysisStepsName;
     private String companynameAnalysisSteps;
@@ -23,7 +22,6 @@ public class Analysissteps implements Serializable {
     private Double gewinnwachstum;
 
     @Id
-    @Column(name = "AnalysisStepsName", nullable = false, length = 20)
     public String getAnalysisStepsName() {
         return analysisStepsName;
     }
@@ -33,7 +31,6 @@ public class Analysissteps implements Serializable {
     }
 
     @Basic
-    @Column(name = "Companyname_AnalysisSteps", nullable = false, length = 20)
     public String getCompanynameAnalysisSteps() {
         return companynameAnalysisSteps;
     }
@@ -43,7 +40,6 @@ public class Analysissteps implements Serializable {
     }
 
     @Basic
-    @Column(name = "Eigenkapitalrendite", nullable = true, precision = 0)
     public Double getEigenkapitalrendite() {
         return eigenkapitalrendite;
     }
@@ -53,7 +49,6 @@ public class Analysissteps implements Serializable {
     }
 
     @Basic
-    @Column(name = "EBITMarge", nullable = true, precision = 0)
     public Double getEbitMarge() {
         return ebitMarge;
     }
@@ -63,7 +58,6 @@ public class Analysissteps implements Serializable {
     }
 
     @Basic
-    @Column(name = "Eigenkapitalquote", nullable = true, precision = 0)
     public Double getEigenkapitalquote() {
         return eigenkapitalquote;
     }
@@ -73,7 +67,6 @@ public class Analysissteps implements Serializable {
     }
 
     @Basic
-    @Column(name = "KursGewinnVerhaeltnis", nullable = true, precision = 0)
     public Double getKursGewinnVerhaeltnis() {
         return kursGewinnVerhaeltnis;
     }
@@ -83,7 +76,6 @@ public class Analysissteps implements Serializable {
     }
 
     @Basic
-    @Column(name = "KursGewinnVerhaeltnisAktuell", nullable = true, precision = 0)
     public Double getKursGewinnVerhaeltnisAktuell() {
         return kursGewinnVerhaeltnisAktuell;
     }
@@ -93,7 +85,6 @@ public class Analysissteps implements Serializable {
     }
 
     @Basic
-    @Column(name = "Analystenmeinungen", nullable = true, precision = 0)
     public Double getAnalystenmeinungen() {
         return analystenmeinungen;
     }
@@ -103,7 +94,6 @@ public class Analysissteps implements Serializable {
     }
 
     @Basic
-    @Column(name = "ReaktionaufQuartalszahlen", nullable = true, precision = 0)
     public Double getReaktionaufQuartalszahlen() {
         return reaktionaufQuartalszahlen;
     }
@@ -113,7 +103,6 @@ public class Analysissteps implements Serializable {
     }
 
     @Basic
-    @Column(name = "Gewinnrevision", nullable = true, precision = 0)
     public Double getGewinnrevision() {
         return gewinnrevision;
     }
@@ -123,7 +112,6 @@ public class Analysissteps implements Serializable {
     }
 
     @Basic
-    @Column(name = "Kursverlauf6Monate", nullable = true, precision = 0)
     public Double getKursverlauf6Monate() {
         return kursverlauf6Monate;
     }
@@ -133,7 +121,6 @@ public class Analysissteps implements Serializable {
     }
 
     @Basic
-    @Column(name = "Kursverlauf12Monate", nullable = true, precision = 0)
     public Double getKursverlauf12Monate() {
         return kursverlauf12Monate;
     }
@@ -143,7 +130,6 @@ public class Analysissteps implements Serializable {
     }
 
     @Basic
-    @Column(name = "Kursmomentum", nullable = true, precision = 0)
     public Double getKursmomentum() {
         return kursmomentum;
     }
@@ -153,7 +139,6 @@ public class Analysissteps implements Serializable {
     }
 
     @Basic
-    @Column(name = "Dreimonatsreversal", nullable = true, precision = 0)
     public Double getDreimonatsreversal() {
         return dreimonatsreversal;
     }
@@ -163,7 +148,6 @@ public class Analysissteps implements Serializable {
     }
 
     @Basic
-    @Column(name = "Gewinnwachstum", nullable = true, precision = 0)
     public Double getGewinnwachstum() {
         return gewinnwachstum;
     }

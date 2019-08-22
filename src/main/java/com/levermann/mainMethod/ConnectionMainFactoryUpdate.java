@@ -35,13 +35,13 @@ abstract public class ConnectionMainFactoryUpdate {
 
 
         Company company = new Company();
-         company.setDatum(date);
          company.setCompanyname("d");
+         company.setDatum((date).toString());
         company.setEigenkapital(500.00);
-         company.setAktienkursTagVeroeffentlichungQartalszahlen(500.00);
-         company.setAktienkursTagVeroeffentlichungQartalszahlen(500.00);
-         company.setAktienkursTagVeroeffentlichungQartalszahlen(500.00);
-         company.setAktienkursTagVeroeffentlichungQartalszahlen(500.00);
+         company.setJahresueberschuss(500.00);
+         company.setGewinnEbit(500.00);
+         company.setJahresumsatz(500.00);
+         company.setFremdkapital(500.00);
          company.setAktienkursTagVeroeffentlichungQartalszahlen(500.00);
          company.setAktienkursTagVeroeffentlichungQartalszahlen(500.00);
          company.setAktienkursTagVeroeffentlichungQartalszahlen(500.00);
