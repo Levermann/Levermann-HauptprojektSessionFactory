@@ -12,7 +12,7 @@
       <AnchorPane prefHeight="200.0" prefWidth="200.0">
          <children>
               <Label layoutX="265.0" layoutY="92.0" text="Name des Unternehmens:" />
-            <TextField layoutX="413.0" layoutY="88.0" prefHeight="25.0" prefWidth="234.0" />
+            <TextField fx:id="companyName" layoutX="413.0" layoutY="88.0" prefHeight="25.0" prefWidth="234.0" />
          </children>
       </AnchorPane>
         <Button fx:id="switchtoInputButton" onAction="#switchToInput" text="OK weiter zur Eingabemaske" />
