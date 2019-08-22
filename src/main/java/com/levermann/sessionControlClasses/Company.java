@@ -2,6 +2,8 @@ package com.levermann.sessionControlClasses;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.text.DateFormat;
+import java.util.Date;
 
 @Entity
 public class Company implements Serializable {
@@ -55,9 +57,7 @@ public class Company implements Serializable {
         return datum;
     }
 
-    public void setDatum(String datum) {
-        this.datum = datum;
-    }
+    public void setDatum(String datum) { this.datum = datum; }
 
     @Basic
     public Double getEigenkapital() {

@@ -28,7 +28,7 @@ abstract public class ConnectionMainFactoryCreate {
 
 
         Company company = new Company();
-        company.setCompanyname("erer");
+        company.setCompanyname("GEilsteee");
          System.out.println("Got name with credentials " + company.getCompanyname());
 
          companyG.makePersistent(company);

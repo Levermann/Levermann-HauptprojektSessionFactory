@@ -9,7 +9,7 @@ import java.util.List;
 /**
  * A DAO implementation for the {@link Analysissteps} class
  *
- * @author saifasif
+ * @author LisaStolz
  */
 public class AnalysisstepsG extends GenericHibernate<Analysissteps, Serializable> {
 

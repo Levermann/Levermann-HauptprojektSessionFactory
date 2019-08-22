@@ -8,7 +8,7 @@ import java.util.List;
      *
      * @param <T>
      * @param <ID>
-     * @author MuhammadSaif
+     * @author LisaStolz
      */
     public interface Generic<T, ID extends Serializable> {
 

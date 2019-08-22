@@ -8,7 +8,7 @@ import org.hibernate.criterion.Restrictions;
 /**
  * A DAO implementation for the {@link Company} class
  *
- * @author saifasif
+ * @author LisaStolz
  */
 public class CompanyG extends GenericHibernate<Company, Serializable> {
 

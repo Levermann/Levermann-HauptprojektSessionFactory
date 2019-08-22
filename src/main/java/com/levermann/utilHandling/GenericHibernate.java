@@ -20,7 +20,7 @@ import com.levermann.sessionControlClasses.HibernateUtil;
  *
  * @param <T>
  * @param <ID>
- * @author msaif
+ * @author LisaStolz
  */
 public abstract class GenericHibernate<T, ID extends Serializable>
         implements Generic<T, ID> {
