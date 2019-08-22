@@ -90,13 +90,22 @@ public class InputController implements ControlledScreenInterface {
         //TODO Die vom Benutzer eingegebenen Daten in die MySQL Datenbank schreiben
         System.out.println("Trying to connect to Levermann database...");
 
+        try{
+            Class.forName("com.mysql.jdbc.Driver");
+            System.out.println("JDBC Driver loaded!");
+        }catch(Exception e){
+            System.err.println("Ich bin dumm und lade den Treiber nicht....");
+            System.err.println(e);
+        }
+
         try {
             //Class.forName("com.mysql.jdbc.Driver");
-            con = DriverManager.getConnection("localhost", "Levermann", "Levermann");
+            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/levermann", "Levermann", "Levermann");
             System.out.println("Levermann database connected!");
             con.close();
         }catch (Exception e){
             System.err.println("Could not connect to Leverman database...");
+            System.err.println(e);
             //throw new IllegalStateException("Cannot connect to Levermann database!");
         }
          //TODO Füge hier SQL-Queries ein, die die jeweiligen Datensätze in die Table "Company" hinzufügen
