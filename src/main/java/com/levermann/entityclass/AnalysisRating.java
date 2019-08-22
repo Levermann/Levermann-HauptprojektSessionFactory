@@ -1,12 +1,8 @@
 package com.levermann.entityclass;
 
-import javax.annotation.ManagedBean;
-import javax.inject.Named;
 import javax.persistence.*;
-import java.io.Serializable;
 
 
-@Named
 
 @Entity
 @Access(AccessType.FIELD)
@@ -16,16 +12,34 @@ import java.io.Serializable;
 
 })
 @Table(name= "AnalysisRating")
- public class AnalysisRating  implements Serializable {
-
+ public class AnalysisRating   {
+    @Override
+    public String toString() {
+        return "AnalysisRating{" +
+                "AnalyseRatingName='" + AnalyseRatingName + '\'' +
+                ", Companyname_AnalysisRating='" + Companyname_AnalysisRating + '\'' +
+                ", Eigenkapitalrendite=" + Eigenkapitalrendite +
+                ", EBITMarge=" + EBITMarge +
+                ", Eigenkapitalquote=" + Eigenkapitalquote +
+                ", KursGewinnVerhaeltnis=" + KursGewinnVerhaeltnis +
+                ", KursGewinnVerhaeltnisAktuell=" + KursGewinnVerhaeltnisAktuell +
+                ", Analystenmeinungen=" + Analystenmeinungen +
+                ", ReaktionaufQuartalszahlen=" + ReaktionaufQuartalszahlen +
+                ", Gewinnrevision=" + Gewinnrevision +
+                ", Kursverlauf6Monate=" + Kursverlauf6Monate +
+                ", Kursverlauf12Monate=" + Kursverlauf12Monate +
+                ", Kursmomentum=" + Kursmomentum +
+                ", Dreimonatsreversal=" + Dreimonatsreversal +
+                ", Gewinnwachstum=" + Gewinnwachstum +
+                ", company=" + company +
+                '}';
+    }
 
     @Id
     @Column(name = "AnalysisRatingName")
     private String AnalyseRatingName;
 
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "id")
-    private Float id;
+
 
     @Column(name = "Companyname_AnalysisRating", unique = true, nullable = true)
     private String Companyname_AnalysisRating;
@@ -196,11 +210,5 @@ import java.io.Serializable;
     public AnalysisRating() {
     }
 
-    public Float getId() {
-        return id;
-    }
 
-    public void setId(Float id) {
-        this.id = id;
-    }
 }

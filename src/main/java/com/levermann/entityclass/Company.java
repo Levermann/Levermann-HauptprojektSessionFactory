@@ -1,12 +1,8 @@
 package com.levermann.entityclass;
 
 import javax.persistence.*;
-import java.io.Serializable;
 import java.util.List;
-import javax.inject.Named;
-import javax.annotation.ManagedBean;
 
-@Named
 
 @Entity
 @Table(name = "company")
@@ -21,7 +17,7 @@ import javax.annotation.ManagedBean;
         @NamedQuery(name = "Company.findByJahresüberschuss", query = "SELECT jahresueberschuss FROM Company")
 
 })
-public class Company implements Serializable  {
+public class Company   {
 
     @Id
     @Column(name="Companyname")
@@ -428,4 +424,46 @@ public class Company implements Serializable  {
     }
 
 
+    @Override
+    public String toString() {
+        return "Company{" +
+                "Companyname='" + Companyname + '\'' +
+                ", id=" + id +
+                ", datum='" + datum + '\'' +
+                ", eigenkapital=" + eigenkapital +
+                ", jahresueberschuss=" + jahresueberschuss +
+                ", GewinnEBIT=" + GewinnEBIT +
+                ", Jahresumsatz=" + Jahresumsatz +
+                ", Fremdkapital=" + Fremdkapital +
+                ", AktuellerAktienkurs=" + AktuellerAktienkurs +
+                ", Gewinnschaezung=" + Gewinnschaezung +
+                ", GewinnAVG=" + GewinnAVG +
+                ", Halten=" + Halten +
+                ", Verkaufen=" + Verkaufen +
+                ", Kaufen=" + Kaufen +
+                ", KursanstiegUnternehmen=" + KursanstiegUnternehmen +
+                ", KursanstiegIndex=" + KursanstiegIndex +
+                ", GewinnschaezungVor4Wochen=" + GewinnschaezungVor4Wochen +
+                ", AktienkursTagVeroeffentlichungQartalszahlen=" + AktienkursTagVeroeffentlichungQartalszahlen +
+                ", KursVor6Monaten=" + KursVor6Monaten +
+                ", KursVor12Monaten=" + KursVor12Monaten +
+                ", KursVor3Monaten=" + KursVor3Monaten +
+                ", KursVor2Monaten=" + KursVor2Monaten +
+                ", KursVor1Monat=" + KursVor1Monat +
+                ", DaxVor1Monat=" + DaxVor1Monat +
+                ", DaxVor2Monaten=" + DaxVor2Monaten +
+                ", DaxVor3Monaten=" + DaxVor3Monaten +
+                ", GewinnschaezungNaechstesJahr=" + GewinnschaezungNaechstesJahr +
+                ", GewinnschaezungDiesesJahr=" + GewinnschaezungDiesesJahr +
+                ", Finanzsektor=" + Finanzsektor +
+                ", PerfInJedemMonat=" + PerfInJedemMonat +
+                ", KursgewinnVor3Jahren=" + KursgewinnVor3Jahren +
+                ", KursgewinnVor2Jahren=" + KursgewinnVor2Jahren +
+                ", KursgewinnVor1Jahr=" + KursgewinnVor1Jahr +
+                ", AktuellenErwartetenKursgewinn=" + AktuellenErwartetenKursgewinn +
+                ", KursgewinnschaezungNaechstesJahr=" + KursgewinnschaezungNaechstesJahr +
+                ", analysisRatings=" + analysisRatings +
+                ", analysisSteps=" + analysisSteps +
+                '}';
+    }
 }

@@ -1,75 +1,61 @@
 package com.levermann.sessionControlClasses;
 
-import java.util.ArrayList;
-import java.util.List;
 
-import org.apache.log4j.Logger;
-import org.hibernate.Session;
+
+import org.hibernate.HibernateException;
 import org.hibernate.SessionFactory;
-import org.hibernate.Transaction;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
 import org.hibernate.service.ServiceRegistry;
 
-public class HibernateUtil {
+import static java.lang.System.setProperty;
 
-    private static final Logger log = Logger.getLogger(HibernateUtil.class);
+public class HibernateUtil
+{
 
-    /*
-     * Since we will be using annotated classes, it is best to maintain a list
-     * of such classes so we add them up easily
-     */
-    @SuppressWarnings({"unchecked", "rawtypes", "serial"})
-    private static final List<Class<?>> classList = new ArrayList() {{
-        add(com.levermann.entityclass.Company.class);
-    }};
     private static SessionFactory sessionFactory = buildSessionFactory();
 
-    private static  SessionFactory buildSessionFactory() {
-        /*
-         * Load up the configuration using the hibernate.cfg.xml
-         */
-        Configuration configuration = new Configuration().configure(HibernateUtil.class.getResource("/hibernate.cfg.xml"));
+    private static SessionFactory buildSessionFactory()
+    {
+        try
+        {
+            if (sessionFactory == null)
+            {
+                Configuration configuration = new Configuration()
+                .setProperty("hibernate.dialect", "org.hibernate.dialect.MySQLDialect")
+                .setProperty("hibernate.connection.driver_class", "com.mysql.jdbc.Driver")
+                .setProperty("hibernate.connection.url", "jdbc:mysql://localhost:3306/levermann?zeroDateTimeBehavior=convertToNull")
+                .setProperty("hibernate.connection.username", "Levermann")
+                .setProperty("hibernate.connection.password", "Levermann")
+                        .setProperty("hibernate.connection.autoReconnect", "true")
+                        .setProperty("hibernate.order_updates", "true")
+           .addAnnotatedClass(com.levermann.sessionControlClasses.CompanyEntity.class);
+                // .addAnnotatedClass(com.levermann.entityclass.Company)
 
-        /*
-         * Build the registry using the properties in the configuration
-         */
-        ServiceRegistry serviceRegistry = new StandardServiceRegistryBuilder().applySettings(
-                configuration.getProperties()).build();
 
-        /*
-         * Now load the classes
-         */
-        for (Class<?> pojoClass : classList) {
-            log.info("Adding annotated class : " + pojoClass.getCanonicalName());
-            configuration.addAnnotatedClass(pojoClass);
+                StandardServiceRegistryBuilder serviceRegistryBuilder = new StandardServiceRegistryBuilder();
+                serviceRegistryBuilder.applySettings(configuration.getProperties());
+                ServiceRegistry serviceRegistry = serviceRegistryBuilder.build();
+                sessionFactory = configuration.buildSessionFactory(serviceRegistry);
+            }
+
+        } catch (HibernateException ex)
+        {
+            System.err.println("Initial SessionFactory creation failed." + ex);
+            ex.printStackTrace();
         }
 
-        /*
-         * and finally buils the session factory
-         */
-        return configuration.buildSessionFactory(serviceRegistry);
+        return sessionFactory;
+
     }
 
-    public static  SessionFactory getSessionFactory() {
+    public static SessionFactory getSessionFactory()
+    {
         return sessionFactory;
     }
 
-    public static  void shutdown() {
+    public static void shutdown()
+    {
         getSessionFactory().close();
     }
-
-    /**
-     * The main utility method to be used to retreive the transaction.
-     *
-     * @return {@link Transaction} The transaction of the current session
-     */
-    public static  Transaction getTransaction() throws Exception {
-        Session s = getSessionFactory().getCurrentSession();
-        Transaction tx = s.beginTransaction();
-        tx.setTimeout(10);
-        return tx;
-        //return getSessionFactory().getCurrentSession().beginTransaction();;
-    }
-
 }

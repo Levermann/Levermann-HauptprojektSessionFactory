@@ -1,7 +1,6 @@
 package com.levermann.entityclass;
 
 import javax.persistence.*;
-import java.io.Serializable;
 
 
 @Entity
@@ -12,7 +11,29 @@ import java.io.Serializable;
 
 })
 @Table(name="AnalysisSteps")
- public class AnalysisSteps implements Serializable {
+ public class AnalysisSteps  {
+    @Override
+    public String toString() {
+        return "AnalysisSteps{" +
+                "AnalysisStepsName='" + AnalysisStepsName + '\'' +
+                ", id=" + id +
+                ", Companyname_AnalysisSteps='" + Companyname_AnalysisSteps + '\'' +
+                ", Eigenkapitalrendite=" + Eigenkapitalrendite +
+                ", EBITMarge=" + EBITMarge +
+                ", Eigenkapitalquote=" + Eigenkapitalquote +
+                ", KursGewinnVerhaeltnis=" + KursGewinnVerhaeltnis +
+                ", KursGewinnVerhaeltnisAktuell=" + KursGewinnVerhaeltnisAktuell +
+                ", Analystenmeinungen=" + Analystenmeinungen +
+                ", ReaktionaufQuartalszahlen=" + ReaktionaufQuartalszahlen +
+                ", Gewinnrevision=" + Gewinnrevision +
+                ", Kursverlauf6Monate=" + Kursverlauf6Monate +
+                ", Kursverlauf12Monate=" + Kursverlauf12Monate +
+                ", Kursmomentum=" + Kursmomentum +
+                ", Dreimonatsreversal=" + Dreimonatsreversal +
+                ", Gewinnwachstum=" + Gewinnwachstum +
+                ", company=" + company +
+                '}';
+    }
 
     public AnalysisSteps(Company company) {
         this.company = company;

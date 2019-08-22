@@ -1,6 +1,6 @@
 package com.levermann.mainMethod;
 
-import com.levermann.entityclass.Company;
+import com.levermann.sessionControlClasses.CompanyEntity;
 import com.levermann.sessionControlClasses.HibernateUtil;
 import com.levermann.utilHandling.CompanyG;
 import org.apache.log4j.BasicConfigurator;
@@ -26,15 +26,18 @@ abstract public class ConnectionMainFactory  {
          CompanyG companyG = new CompanyG();
          companyG.setSession(session);
 
-        Company company = new Company();
-        company.setCompanyname("BMW");
-        company.setEigenkapital(123214);
-        company.setFremdkapital(324234);
-         System.out.println("Got name with credentials " + company.getId());
+
+        CompanyEntity company = new CompanyEntity();
+        company.setCompanyname("FuckYouBmkw");
+         System.out.println("Got name with credentials " + company.getCompanyname());
 
          companyG.makePersistent(company);
-         Company company1 = companyG.getACompanyByID(0);
+         CompanyEntity company1 = companyG.getACompanyByID(company.getCompanyname());
          System.out.println(company1.getCompanyname());
+
+         session.save(company);
+
+         session.close();
 
      } catch (HibernateException e){
 			e.printStackTrace();

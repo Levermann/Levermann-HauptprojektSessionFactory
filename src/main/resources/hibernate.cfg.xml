@@ -1,30 +1,49 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
 <hibernate-configuration>
-  <session-factory>
-    <!-- JDBC Database connection settings -->
-    <property name="connection.url">jdbc:mysql://localhost:3306/levermann?useSSL=false</property>
-    <property name="connection.serverTimezone">UTC</property>
-    <property name="connection.useLegacyDatetimeCode">false</property>
-    <property name="connection.username">Levermann</property>
-    <property name="connection.password">Levermann</property>
-    <!-- JDBC connection pool settings ... using built-in test pool -->
-    <property name="connection.pool_size">1</property>
-    <!-- Select our SQL dialect -->
-    <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
-    <!-- Echo the SQL to stdout -->
-    <property name="show_sql">true</property>
-    <!-- List of XML mapping files -->
-    <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
-    <property name="hbm2ddl.auto">update</property>
-      <!--  Put other elements here -->
-    <property name="hibernate.current_session_context_class">
-      org.hibernate.context.internal.ThreadLocalSessionContext
-    </property>
-      <mapping package="com.levermann"/>
-    <mapping class="com.levermann.entityclass.AnalysisRating"/>
-    <mapping class="com.levermann.entityclass.Company"/>
-     <mapping class="com.levermann.entityclass.AnalysisSteps"/>
+    <session-factory>
 
-  </session-factory>
+        <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="connection.url"><![CDATA[jdbc:mysql://localhost:3306/levermann?useSSL=false&serverTimezone=UTC]]></property>
+        <property name="connection.serverTimezone">UTC</property>
+        <property name="connection.useLegacyDatetimeCode">false</property>
+        <!-- JDBC connection pool settings ... using built-in test pool -->
+        <property name="connection.pool_size">1</property>
+        <!-- Select our SQL dialect -->
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+        <!-- Echo the SQL to stdout -->
+        <property name="show_sql">true</property>
+        <property name="hibernate.hbm2ddl.auto">update</property>
+        <property name="hibernate.show_sql"> true </property>
+        <property name="hibernate.c3p0.min_size">20 </property>
+        <property name="hibernate.c3p0.timeout" >300 </property>
+        <property name="hibernate.c3p0.max_statements"> 50</property>
+        <property name="hibernate.c3p0.idle_test_period" >3000</property>
+
+
+        <mapping class="com.levermann.sessionControlClasses.AnalysisratingEntity"/>
+        <mapping resource="com/levermann/sessionControlClasses/AnalysisratingEntity.hbm.xml"/>
+        <mapping class="com.levermann.sessionControlClasses.AnalysisstepsEntity"/>
+        <mapping resource="com/levermann/sessionControlClasses/AnalysisstepsEntity.hbm.xml"/>
+        <mapping class="com.levermann.sessionControlClasses.CompanyEntity"/>
+        <mapping resource="com/levermann/sessionControlClasses/CompanyEntity.hbm.xml"/>
+
+        <event type="pre-update">
+            <listener class="org.hibernate.cfg.beanvalidation.BeanValidationEventListener"/>
+        </event>
+        <event type="pre-update">
+            <listener class="org.hibernate.cfg.beanvalidation.BeanValidationEventListener"/>
+        </event>
+        <event type="pre-delete">
+            <listener class="org.hibernate.cfg.beanvalidation.BeanValidationEventListener"/>
+        </event>
+
+        <!-- <property name="connection.username"/> -->
+        <!-- <property name="connection.password"/> -->
+
+        <!-- DB schema will be updated if needed -->
+        <!-- <property name="hibernate.hbm2ddl.auto">update</property> -->
+    </session-factory>
 </hibernate-configuration>
