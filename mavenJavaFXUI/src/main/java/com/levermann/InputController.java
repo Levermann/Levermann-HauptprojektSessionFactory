@@ -87,31 +87,39 @@ public class InputController implements ControlledScreenInterface {
     }
 
     private void fillDBvalues() {
-        //TODO Die vom Benutzer eingegebenen Daten in die MySQL Datenbank schreiben
-        System.out.println("Trying to connect to Levermann database...");
 
-        try{
+        //Load the jdbc diver
+        System.out.println("Trying to load the JDBC driver...");
+        try {
             Class.forName("com.mysql.jdbc.Driver");
             System.out.println("JDBC Driver loaded!");
-        }catch(Exception e){
-            System.err.println("Ich bin dumm und lade den Treiber nicht....");
+        } catch (Exception e) {
+            System.err.println("Cound not load JDBC driver...");
             System.err.println(e);
+            throw new IllegalStateException("Failed loading the JDBC driver!");
         }
 
+        //connect to the levermann database
+        System.out.println("Trying to connect to Levermann database...");
         try {
-            //Class.forName("com.mysql.jdbc.Driver");
             con = DriverManager.getConnection("jdbc:mysql://localhost:3306/levermann", "Levermann", "Levermann");
             System.out.println("Levermann database connected!");
-            con.close();
-        }catch (Exception e){
+        } catch (Exception e) {
             System.err.println("Could not connect to Leverman database...");
             System.err.println(e);
-            //throw new IllegalStateException("Cannot connect to Levermann database!");
+            throw new IllegalStateException("Failed connecting to Levermann database!");
         }
-         //TODO Füge hier SQL-Queries ein, die die jeweiligen Datensätze in die Table "Company" hinzufügen
 
-        /**
-         * conn.close();
-         */
+        //TODO Füge hier SQL-Queries ein, die die jeweiligen Datensätze in die Table "Company" hinzufügen
+
+        System.out.println("Trying to close the connection to Levermann database...");
+        try{
+            con.close();
+            System.out.println("Levermann database disconnected!");
+        }catch(Exception e){
+            System.err.println("Could not disconnect Leverman database...");
+            System.err.println(e);
+            throw new IllegalStateException("Failed disconnecting Levermann database!");
+        }
     }
 }
