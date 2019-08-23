@@ -5,12 +5,6 @@ import java.io.Serializable;
 
 
 @Entity
-@Access(AccessType.FIELD)
-@NamedQueries({
-        @NamedQuery(name = "AnalysisSteps.findall", query = "SELECT A FROM AnalysisSteps A"),
-        @NamedQuery(name = "AnalysisSteps.findByfindByName", query = "SELECT c FROM AnalysisSteps c WHERE c.AnalysisStepsName =:AnalysisStepsName")
-
-})
 @Table(name="AnalysisSteps")
 public class AnalysisSteps implements Serializable {
 
@@ -25,50 +19,50 @@ public class AnalysisSteps implements Serializable {
     @Id
     @Column(name = "AnalysisStepsName")
     private String AnalysisStepsName;
-
+    @Basic
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id")
     private Float id;
-
-    @Column(name = "Companyname_AnalysisSteps")
+    @Basic
+    @Column(name = "Companyname_AnalysisSteps", insertable = false, updatable = false)
     private String Companyname_AnalysisSteps;
-
+    @Basic
     @Column(name = "Eigenkapitalrendite")
     private Float Eigenkapitalrendite;
-
+    @Basic
     @Column(name = "EBITMarge")
     private Float EBITMarge;
-
+    @Basic
     @Column(name = "Eigenkapitalquote")
     private Float Eigenkapitalquote;
-
+    @Basic
     @Column(name = "KursGewinnVerhaeltnis")
     private Float KursGewinnVerhaeltnis;
-
+    @Basic
     @Column(name = "KursGewinnVerhaeltnisAktuell")
     private Float KursGewinnVerhaeltnisAktuell;
-
+    @Basic
     @Column(name = "Analystenmeinungen")
     private Float Analystenmeinungen;
-
+    @Basic
     @Column(name = "ReaktionaufQuartalszahlen")
     private Float ReaktionaufQuartalszahlen;
-
+    @Basic
     @Column(name = "Gewinnrevision")
     private Float Gewinnrevision;
-
+    @Basic
     @Column(name = "Kursverlauf6Monate")
     private Float Kursverlauf6Monate;
-
+    @Basic
     @Column(name = "Kursverlauf12Monate")
     private Float Kursverlauf12Monate;
-
+    @Basic
     @Column(name = "Kursmomentum")
     private Float Kursmomentum;
-
+    @Basic
     @Column(name = "Dreimonatsreversal")
     private Float Dreimonatsreversal;
-
+    @Basic
     @Column(name = "Gewinnwachstum")
     private Float Gewinnwachstum;
 

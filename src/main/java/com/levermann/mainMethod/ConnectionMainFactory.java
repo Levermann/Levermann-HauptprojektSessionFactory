@@ -27,14 +27,16 @@ abstract public class ConnectionMainFactory  {
          companyG.setSession(session);
 
         Company company = new Company();
-        company.setCompanyname("BMW");
-        company.setEigenkapital(123214);
-        company.setFremdkapital(324234);
-         System.out.println("Got name with credentials " + company.getId());
+        company.setCompanyname("Audi");
+        System.out.println("Got name with credentials " + company.getCompanyname());
 
          companyG.makePersistent(company);
-         Company company1 = companyG.getACompanyByID(0);
+         Company company1 = companyG.getACompanyByID(company.getCompanyname());
          System.out.println(company1.getCompanyname());
+
+         session.save(company);
+         session.getTransaction().commit();
+         session.close();
 
      } catch (HibernateException e){
 			e.printStackTrace();

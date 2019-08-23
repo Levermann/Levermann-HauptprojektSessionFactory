@@ -14,10 +14,10 @@ public class CompanyG extends GenericHibernate<Company, Serializable> {
 
     //private Criteria criteria = HibernateUtil.getSession().createCriteria(Human.class);
 
-    public  Company getACompanyByID(int id) {
-        List<Company> resultList = findByCriteria(Restrictions.eq("id", id));
+    public  Company getACompanyByID(String id) {
+        List<Company> resultList = findByCriteria(Restrictions.eq("Companyname", id));
         if (!resultList.isEmpty()) {
-            return findByCriteria(Restrictions.eq("id", id)).get(0);
+            return findByCriteria(Restrictions.eq("Companyname", id)).get(0);
         }
         return null;
     }

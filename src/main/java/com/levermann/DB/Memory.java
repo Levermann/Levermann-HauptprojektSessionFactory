@@ -35,8 +35,8 @@ public class Memory {
 
     private Memory(){
         try {
-            Class.forName("org.hsqldb.jdbcDriver");
-            Connection conn = DriverManager.getConnection("jdbc:hsqldb:mem:aname", "sa", "");
+            Class.forName("com.mysql.jdbc.Driver");
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/levermann?useSSL=false&serverTimezone=UTC", "Levermann", "Levermann");
             Statement stmnt = conn.createStatement();
             stmnt.execute(CREATE_TABLE);
         } catch (SQLException e) {
