@@ -27,7 +27,9 @@ abstract public class ConnectionMainFactory  {
          companyG.setSession(session);
 
         Company company = new Company();
-        company.setCompanyname("Audi");
+        company.setCompanyname("Apple");
+         company.setEigenkapital(123214);
+         company.setFremdkapital(324234);
         System.out.println("Got name with credentials " + company.getCompanyname());
 
          companyG.makePersistent(company);

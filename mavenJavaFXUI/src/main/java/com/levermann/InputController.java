@@ -91,7 +91,7 @@ public class InputController implements ControlledScreenInterface {
         //Load the jdbc diver
         System.out.println("Trying to load the JDBC driver...");
         try {
-            Class.forName("com.mysql.jdbc.Driver");
+            Class.forName("com.mysql.cj.jdbc.Driver");
             System.out.println("JDBC Driver loaded!");
         } catch (Exception e) {
             System.err.println("Cound not load JDBC driver...");

@@ -15,7 +15,7 @@ public class AnalysisRating  implements Serializable {
 
     @Basic
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "id")
+    @Column(name = "id", unique = true, nullable = true)
     private Float id;
 
     @Basic
