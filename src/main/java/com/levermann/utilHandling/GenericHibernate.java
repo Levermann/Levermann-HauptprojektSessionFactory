@@ -34,6 +34,7 @@ public abstract class GenericHibernate<T, ID extends Serializable>
         this.persistentClass = (Class<T>) ((ParameterizedType) getClass().getGenericSuperclass()).getActualTypeArguments()[0];
     }
 
+
     protected  Session getSession() {
         try {
             if (session == null) {
