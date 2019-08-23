@@ -89,8 +89,8 @@ public class App extends Application {
     }
 
     public static void setStageSize(int height, int width){
-        stage.setHeight(height);
-        stage.setWidth(width);
+        stage.setHeight(800);
+        stage.setWidth(1200);
     }
 
     //http://javafx.com/javafx/11.0.1 für fxml
