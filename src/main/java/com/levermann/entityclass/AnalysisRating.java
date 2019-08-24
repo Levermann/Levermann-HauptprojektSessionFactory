@@ -5,7 +5,16 @@ import javax.persistence.*;
 import java.io.Serializable;
 
 
+@Named
+
 @Entity
+@Access(AccessType.FIELD)
+@NamedQueries({
+        @NamedQuery(name = "AnalysisRating.findAll", query = "SELECT B FROM AnalysisRating B"),
+        @NamedQuery(name = "AnalysisRating.findByName", query = "SELECT D  FROM AnalysisRating D WHERE D.AnalysisRatingName =:AnalyseRatingName")
+
+})
+@Table(name= "AnalysisRating")
 public class AnalysisRating  implements Serializable {
 
 

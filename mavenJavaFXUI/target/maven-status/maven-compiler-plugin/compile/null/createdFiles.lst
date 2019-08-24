@@ -8,4 +8,5 @@ com\levermann\ShowResultController.class
 module-info.class
 com\levermann\ControlledScreenInterface.class
 com\levermann\InformationController.class
+com\levermann\Mapping.class
 com\levermann\StartPageController.class

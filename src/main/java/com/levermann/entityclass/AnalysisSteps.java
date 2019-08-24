@@ -4,8 +4,14 @@ import javax.persistence.*;
 import java.io.Serializable;
 
 
+@NamedQueries({
+        @NamedQuery(name = "AnalysisSteps.findall", query = "SELECT A FROM AnalysisSteps A"),
+        @NamedQuery(name = "AnalysisSteps.findByfindByName", query = "SELECT c FROM AnalysisSteps c WHERE c.AnalysisStepsName =:AnalysisStepsName")
+
+})
+
 @Entity
-@Table(name="AnalysisSteps")
+@Table(name = "analysissteps")
 public class AnalysisSteps implements Serializable {
 
     public AnalysisSteps(Company company) {

@@ -58,6 +58,7 @@
       <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/apache/maven/maven-model/2.0.6/maven-model-2.0.6.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$MAVEN_REPOSITORY$/xom/xom/1.0/xom-1.0.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/jcraft/jsch/0.1.27/jsch-0.1.27.jar" path-in-jar="/" />
+      <element id="module-output" name="mavenJavaFXUI" />
     </root>
   </artifact>
 </component>

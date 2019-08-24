@@ -16,7 +16,7 @@
                <font>
                   <Font size="18.0" />
                </font></Label>
-            <TextField alignment="CENTER" layoutX="392.0" layoutY="81.0" prefHeight="25.0" prefWidth="214.0" />
+             <TextField fx:id="Companyname" layoutX="413.0" layoutY="88.0" prefHeight="25.0" prefWidth="234.0" />
               <Button fx:id="switchtoInputButton" layoutX="748.0" layoutY="220.0" onAction="#switchToInput" style="-fx-border-color: black;" text="OK weiter zur Eingabemaske" />
          </children>
       </AnchorPane>

@@ -2,11 +2,22 @@ package com.levermann.entityclass;
 
 import javax.persistence.*;
 import java.io.Serializable;
-import java.util.List;
-import javax.inject.Named;
-import javax.annotation.ManagedBean;
+
+
+
 
 @Entity
+@Table(name = "company")
+@Access(AccessType.FIELD)
+@NamedQueries({
+
+
+        @NamedQuery(name = "Company.findAll", query = "SELECT A FROM Company A"),
+        @NamedQuery(name = "Company.findByName", query = "SELECT c FROM Company c WHERE c.Companyname =:Companyname"),
+        @NamedQuery(name = "Company.findByEigenkapital", query = "SELECT c FROM Company c WHERE c.eigenkapital =:eigenkapital"),
+        @NamedQuery(name = "Company.findByJahresüberschuss", query = "SELECT jahresueberschuss FROM Company")
+
+})
 public class Company implements Serializable  {
 
     @Id
@@ -14,7 +25,7 @@ public class Company implements Serializable  {
     private String Companyname;
     @Basic
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name="id")
+    @Column(name="id", nullable = true)
     private Integer id;
     @Basic
     @Column(name="datum")
