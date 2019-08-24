@@ -7,7 +7,6 @@ import javafx.beans.property.SimpleStringProperty;
 
 
 
-
 public class CompanyManageUI  {
 
     private final SimpleStringProperty company1;
