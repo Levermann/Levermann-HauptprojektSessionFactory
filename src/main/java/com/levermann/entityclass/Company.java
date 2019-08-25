@@ -2,16 +2,13 @@ package com.levermann.entityclass;
 
 import javax.persistence.*;
 import java.io.Serializable;
-import java.util.List;
-import javax.inject.Named;
-import javax.annotation.ManagedBean;
 
-@Named
-@ManagedBean
+
+
+
 @Entity
 @Table(name = "company")
 @Access(AccessType.FIELD)
-//@Table(name="unternehmen")
 @NamedQueries({
 
 
@@ -26,111 +23,111 @@ public class Company implements Serializable  {
     @Id
     @Column(name="Companyname")
     private String Companyname;
-
+    @Basic
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name="id")
+    @Column(name="id", nullable = true)
     private Integer id;
-
+    @Basic
     @Column(name="datum")
     private String datum;
-
+    @Basic
     @Column(name="eigenkapital")
     private float eigenkapital;
-
+    @Basic
     @Column(name="jahresueberschuss")
     private float jahresueberschuss;
-
+    @Basic
     @Column(name="GewinnEBIT")
     private float GewinnEBIT;
-
+    @Basic
     @Column(name="Jahresumsatz")
     private float Jahresumsatz;
-
+    @Basic
     @Column(name="Fremdkapital")
     private float Fremdkapital;
-
+    @Basic
     @Column(name="AktuellerAktienkurs")
     private float AktuellerAktienkurs;
-
+    @Basic
     @Column(name="Gewinnschaezung")
     private float Gewinnschaezung;
-
+    @Basic
     @Column(name="GewinnAVG")
     private float GewinnAVG;
-
+    @Basic
     @Column(name="Halten")
     private float Halten;
-
+    @Basic
     @Column(name="Verkaufen")
     private float Verkaufen;
-
+    @Basic
     @Column(name="Kaufen")
     private float Kaufen;
-
+    @Basic
     @Column(name="KursanstiegUnternehmen")
     private float KursanstiegUnternehmen;
-
+    @Basic
     @Column(name="KursanstiegIndex")
     private float KursanstiegIndex;
-
+    @Basic
     @Column(name="GewinnschaezungVor4Wochen")
     private float GewinnschaezungVor4Wochen;
-
+    @Basic
     @Column(name="AktienkursTagVeroeffentlichungQartalszahlen")
     private float AktienkursTagVeroeffentlichungQartalszahlen;
-
+    @Basic
     @Column(name="KursVor6Monaten")
     private float KursVor6Monaten;
-
+    @Basic
     @Column(name="KursVor12Monaten")
     private float KursVor12Monaten;
-
+    @Basic
     @Column(name="KursVor3Monaten")
     private float KursVor3Monaten;
-
+    @Basic
     @Column(name="KursVor2Monaten")
     private float KursVor2Monaten;
-
+    @Basic
     @Column(name="KursVor1Monat")
     private float KursVor1Monat;
-
+    @Basic
     @Column(name="DaxVor1Monat")
     private float DaxVor1Monat;
-
+    @Basic
     @Column(name="DaxVor2Monaten")
     private float DaxVor2Monaten;
-
+    @Basic
     @Column(name="DaxVor3Monaten")
     private float DaxVor3Monaten;
-
+    @Basic
     @Column(name="GewinnschaezungNaechstesJahr")
     private float GewinnschaezungNaechstesJahr;
-
+    @Basic
     @Column(name="GewinnschaezungDiesesJahr")
     private float GewinnschaezungDiesesJahr;
-
+    @Basic
     @Column(name="Finanzsektor")
     private float Finanzsektor;
-
+    @Basic
     @Column(name="PerfInJedemMonat", unique = true, nullable = true)
     private Integer PerfInJedemMonat;
-
+    @Basic
     @Column(name="KursgewinnVor3Jahren", unique = true, nullable = true)
     private Integer KursgewinnVor3Jahren;
-
+    @Basic
     @Column(name="KursgewinnVor2Jahren", unique = true, nullable = true)
     private Integer KursgewinnVor2Jahren;
-
+    @Basic
     @Column(name="KursgewinnVor1Jahr", unique = true, nullable = true)
     private Integer KursgewinnVor1Jahr;
-
+    @Basic
     @Column(name="AktuellenErwartetenKursgewinn", unique = true, nullable = true)
     private Integer AktuellenErwartetenKursgewinn;
-
+    @Basic
     @Column(name="KursgewinnschaezungNaechstesJahr", unique = true, nullable = true)
     private Integer KursgewinnschaezungNaechstesJahr;
-//association One To Many: One Company to Many Punktelisten
-    @OneToMany(mappedBy = "company")
+    //association One To Many: One Company to Many Punktelisten
+  /*  @OneToMany(mappedBy = "company")
     private List<AnalysisRating> analysisRatings;
     @OneToMany(mappedBy = "company")
     private List<AnalysisSteps> analysisSteps;
@@ -147,6 +144,8 @@ public class Company implements Serializable  {
     public Company(AnalysisRating analysisRatings, AnalysisSteps analysisSteps) {
     }
 
+
+   */
     public String getCompanyname() {
         return Companyname;
     }

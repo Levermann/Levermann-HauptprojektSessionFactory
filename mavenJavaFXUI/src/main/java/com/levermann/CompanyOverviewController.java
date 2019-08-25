@@ -36,7 +36,7 @@ public class CompanyOverviewController implements Initializable, ControlledScree
 
 
     final ObservableList<CompanyManageUI> overview = FXCollections.observableArrayList(
-            new CompanyManageUI("BMW", "hansWurschti", 12, "hierMüllIcon", "hiePfeilIcon", "hierLupenIcon")
+            new CompanyManageUI("BMW", "16.12.1999", 12, "hierMüllIcon", "hiePfeilIcon", "hierLupenIcon")
 
 
     );

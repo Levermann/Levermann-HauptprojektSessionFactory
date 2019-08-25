@@ -1,71 +1,85 @@
 package com.levermann.entityclass;
 
-import javax.annotation.ManagedBean;
 import javax.inject.Named;
 import javax.persistence.*;
 import java.io.Serializable;
 
 
 @Named
-@ManagedBean
+
 @Entity
 @Access(AccessType.FIELD)
 @NamedQueries({
         @NamedQuery(name = "AnalysisRating.findAll", query = "SELECT B FROM AnalysisRating B"),
-        @NamedQuery(name = "AnalysisRating.findByName", query = "SELECT D  FROM AnalysisRating D WHERE D.AnalyseRatingName =:AnalyseRatingName")
+        @NamedQuery(name = "AnalysisRating.findByName", query = "SELECT D  FROM AnalysisRating D WHERE D.AnalysisRatingName =:AnalyseRatingName")
 
 })
 @Table(name= "AnalysisRating")
- public class AnalysisRating  implements Serializable {
+public class AnalysisRating  implements Serializable {
 
 
     @Id
     @Column(name = "AnalysisRatingName")
-    private String AnalyseRatingName;
+    private String AnalysisRatingName;
 
+    @Basic
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "id")
+    @Column(name = "id", unique = true, nullable = true)
     private Float id;
 
-    @Column(name = "Companyname_AnalysisRating", unique = true, nullable = true)
+    @Basic
+    @Column(name = "Companyname_AnalysisRating", insertable = false, updatable = false)
     private String Companyname_AnalysisRating;
 
+    @Basic
     @Column(name = "Eigenkapitalrendite", unique = true, nullable = true)
     private Float Eigenkapitalrendite;
 
+    @Basic
     @Column(name = "EBITMarge", unique = true, nullable = true)
     private Float EBITMarge;
 
+    @Basic
     @Column(name = "Eigenkapitalquote", unique = true, nullable = true)
     private Float Eigenkapitalquote;
 
+    @Basic
     @Column(name = "KursGewinnVerhaeltnis", unique = true, nullable = true)
     private Float KursGewinnVerhaeltnis;
 
+    @Basic
     @Column(name = "KursGewinnVerhaeltnisAktuell", unique = true, nullable = true)
     private Float KursGewinnVerhaeltnisAktuell;
 
+    @Basic
     @Column(name = "Analystenmeinungen", unique = true, nullable = true)
     private Float Analystenmeinungen;
 
+    @Basic
     @Column(name = "ReaktionaufQuartalszahlen", unique = true, nullable = true)
     private Float ReaktionaufQuartalszahlen;
 
+    @Basic
     @Column(name = "Gewinnrevision", unique = true, nullable = true)
     private Float Gewinnrevision;
 
+    @Basic
     @Column(name = "Kursverlauf6Monate", unique = true, nullable = true)
     private Float Kursverlauf6Monate;
 
+    @Basic
     @Column(name = "Kursverlauf12Monate", unique = true, nullable = true)
     private Float Kursverlauf12Monate;
 
+    @Basic
     @Column(name = "Kursmomentum", unique = true, nullable = true)
     private Float Kursmomentum;
 
+    @Basic
     @Column(name = "Dreimonatsreversal", unique = true, nullable = true)
     private Float Dreimonatsreversal;
 
+    @Basic
     @Column(name = "Gewinnwachstum", unique = true, nullable = true)
     private Float Gewinnwachstum;
 
@@ -73,12 +87,16 @@ import java.io.Serializable;
     @JoinColumn(name = "Companyname_AnalysisRating")
     private Company company;
 
+    public AnalysisRating() {
+
+    }
+
     public String getAnalysisRatingName() {
-        return AnalyseRatingName;
+        return AnalysisRatingName;
     }
 
     public void setAnalysisRatingName(String AnalysisRatingName) {
-        AnalyseRatingName = AnalyseRatingName;
+        AnalysisRatingName = AnalysisRatingName;
     }
 
     public String getCompanyname_AnalysisRating() {
@@ -193,7 +211,8 @@ import java.io.Serializable;
         Gewinnwachstum = gewinnwachstum;
     }
 
-    public AnalysisRating() {
+    public AnalysisRating(Company company) {
+        this.company = company;
     }
 
     public Float getId() {

@@ -5,22 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="71376cf0-4a45-4351-8dca-943cab88ca4d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_protobuf_protobuf_java_3_6_1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_5_1_23.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_8_0_15.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mavenJavaFXUI/src/main/java/com/levermann/SimpleMapProperty.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LevermannAnalyse.iml" beforeDir="false" afterPath="$PROJECT_DIR$/LevermannAnalyse.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/mavenJavaFXUI.iml" beforeDir="false" afterPath="$PROJECT_DIR$/mavenJavaFXUI/mavenJavaFXUI.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mavenJavaFXUI/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/src/main/java/com/levermann/EnterCompanyNameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/mavenJavaFXUI/src/main/java/com/levermann/EnterCompanyNameController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/src/main/java/com/levermann/InputController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/src/main/resources/com/levermann/enterCompanyName.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/mavenJavaFXUI/src/main/resources/com/levermann/enterCompanyName.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/target/classes/com/levermann/EnterCompanyNameController.class" beforeDir="false" afterPath="$PROJECT_DIR$/mavenJavaFXUI/target/classes/com/levermann/EnterCompanyNameController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/target/classes/com/levermann/InputController.class" beforeDir="false" afterPath="$PROJECT_DIR$/mavenJavaFXUI/target/classes/com/levermann/InputController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/target/classes/com/levermann/enterCompanyName.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/mavenJavaFXUI/target/classes/com/levermann/enterCompanyName.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/src/main/java/com/levermann/CompanyManageUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/mavenJavaFXUI/src/main/java/com/levermann/CompanyManageUI.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -87,6 +74,8 @@
         <option value="Interface" />
         <option value="TestNG Test Class" />
         <option value="FxmlFile" />
+        <option value="hibernate-configuration-5.2" />
+        <option value="hibernate-main-5.2" />
         <option value="Class" />
       </list>
     </option>
@@ -100,7 +89,7 @@
     </option>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="MaxiUpdate1908" />
+        <entry key="$PROJECT_DIR$" value="xy" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -126,6 +115,7 @@
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="Downloaded.Files.Path.Enabled" value="false" />
     <property name="Git.Branch.Popup.ShowAllRemotes" value="true" />
+    <property name="JPA.DatabaseSchemaImportDialog" value="b34121eb-3aed-44a8-9368-49552a11cff0" />
     <property name="Repository.Attach.Annotations" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
@@ -141,19 +131,26 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.14746094" />
-    <property name="project.structure.side.proportion" value="0.25773194" />
+    <property name="project.structure.side.proportion" value="0.2" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="database.main" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
   </component>
   <component name="RecentsManager">
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="com.levermann.dao" />
+    <key name="ImportMappingsDialog.RecentPackages">
+      <recent name="com.levermann.sessionControlClasses" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
       <recent name="com.levermann.GuiNew" />
       <recent name="com.levermann.entityclass" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Lisa\IdeaProjects\Levermann-HauptprojektSessionFactory\src\main\java\com\levermann\sessionControlClasses" />
+      <recent name="C:\Users\Lisa\IdeaProjects\Levermann-HauptprojektSessionFactory\src\main\resources\resources" />
+      <recent name="C:\Users\Lisa\IdeaProjects\Levermann-HauptprojektSessionFactory\src\main\java\com\levermann\sqlStatements" />
+      <recent name="C:\Users\Lisa\IdeaProjects\Levermann-HauptprojektSessionFactory\src\main\java\com\levermann\mappingXMLs" />
+      <recent name="C:\Users\Lisa\IdeaProjects\Levermann-HauptprojektSessionFactory\src\main\resources" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -163,7 +160,7 @@
       <recent name="com.levermann.kennzahlen" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Max\IdeaProjects\Levermann-HauptprojektSessionFactory\src\main\java\com\levermann\sqlStatements" />
+      <recent name="C:\Users\Lisa\IdeaProjects\Levermann-HauptprojektSessionFactory\src\main\java\com\levermann\sqlStatements" />
       <recent name="C:\Users\Lisa\IdeaProjects\Levermann-HauptprojektSessionFactory\mavenJavaFXUI\src\main\resources\com\levermann" />
       <recent name="C:\Users\Lisa\IdeaProjects\Levermann-HauptprojektSessionFactory\src\main\resources" />
       <recent name="C:\Users\Landb\Documents\Projekt\Hauptprojekt\src\main\java\com\levermann\SQL-Abfragen" />
@@ -173,12 +170,8 @@
       <recent name="com.levermann.dao" />
       <recent name="com.levermann.project" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Lisa\IdeaProjects\Levermann-HauptprojektSessionFactory\src\main\resources" />
-      <recent name="C:\Users\Landb\Documents\Projekt\Hauptprojekt\src\main\java\Gui" />
-      <recent name="C:\Users\Landb\Documents\Projekt\Hauptprojekt\src\main\java\com\levermann\GuiNew" />
-      <recent name="C:\Users\Landb\Documents\Projekt\Hauptprojekt\src\main\resources" />
-      <recent name="C:\Users\Landb\Documents\Projekt\Hauptprojekt\src\main\resources\META-INF" />
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.levermann.dao" />
     </key>
   </component>
   <component name="RunAnythingCache">
@@ -236,6 +229,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="12" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="com.levermann.sessionControlClasses.Main" />
+      <module name="LevermannAnalyse" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
       <module name="LMPOCTest" />
       <option name="VM_PARAMETERS" />
@@ -283,14 +285,42 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="mavenJavaFXUI [javafx:run]" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="javafx:run" />
+              </list>
+            </option>
+            <option name="pomFileName" value="pom.xml" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$/mavenJavaFXUI" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
     <list>
       <item itemvalue="Application.ConnectionMainFactory" />
       <item itemvalue="Application.App" />
+      <item itemvalue="Application.Main" />
+      <item itemvalue="Maven.mavenJavaFXUI [javafx:run]" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
         <item itemvalue="Application.App" />
-        <item itemvalue="Application.App" />
+        <item itemvalue="Application.Main" />
         <item itemvalue="Application.App" />
         <item itemvalue="Application.App" />
       </list>
@@ -305,6 +335,9 @@
         </treeState>
       </serviceView>
     </option>
+  </component>
+  <component name="StructureViewFactory">
+    <option name="ACTIVE_ACTIONS" value=",SHOW_LAMBDA,SHOW_ANONYMOUS" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -342,7 +375,12 @@
       <workItem from="1566219210250" duration="14032000" />
       <workItem from="1566246028530" duration="21198000" />
       <workItem from="1566302773388" duration="8714000" />
-      <workItem from="1566371910759" duration="35422000" />
+      <workItem from="1566371910759" duration="12082000" />
+      <workItem from="1566393467576" duration="9295000" />
+      <workItem from="1566483292961" duration="7337000" />
+      <workItem from="1566491635410" duration="25623000" />
+      <workItem from="1566585459730" duration="21406000" />
+      <workItem from="1566650626276" duration="6535000" />
     </task>
     <task id="LOCAL-00001" summary="l">
       <created>1554567642271</created>
@@ -631,35 +669,63 @@
       <option name="project" value="LOCAL" />
       <updated>1566375913409</updated>
     </task>
-    <task id="LOCAL-00042" summary="Added Gui Framework">
-      <created>1566388661680</created>
+    <task id="LOCAL-00042" summary="latest Version 21.08">
+      <created>1566397858070</created>
       <option name="number" value="00042" />
       <option name="presentableId" value="LOCAL-00042" />
       <option name="project" value="LOCAL" />
-      <updated>1566388661680</updated>
+      <updated>1566397858070</updated>
     </task>
-    <task id="LOCAL-00043" summary="Cleaned up a bit">
-      <created>1566403251132</created>
+    <task id="LOCAL-00043" summary="new Controller">
+      <created>1566415778372</created>
       <option name="number" value="00043" />
       <option name="presentableId" value="LOCAL-00043" />
       <option name="project" value="LOCAL" />
-      <updated>1566403251132</updated>
+      <updated>1566415778372</updated>
     </task>
-    <task id="LOCAL-00044" summary="Andi hatte die hammergenialsupergeile idee, dass mavenJavaFXUI ne eigene POM hat, haben die dependency für mysql hinzugefügt&#10;Connection works">
-      <created>1566459745645</created>
+    <task id="LOCAL-00044" summary="mysql connector in der POM -.-">
+      <created>1566470240857</created>
       <option name="number" value="00044" />
       <option name="presentableId" value="LOCAL-00044" />
       <option name="project" value="LOCAL" />
-      <updated>1566459745645</updated>
+      <updated>1566470240857</updated>
     </task>
-    <task id="LOCAL-00045" summary="Errorhandling &amp; con.close">
-      <created>1566461628849</created>
+    <task id="LOCAL-00045" summary="Update Entity with equals and hash">
+      <created>1566487066599</created>
       <option name="number" value="00045" />
       <option name="presentableId" value="LOCAL-00045" />
       <option name="project" value="LOCAL" />
-      <updated>1566461628849</updated>
+      <updated>1566487066599</updated>
     </task>
-    <option name="localTasksCounter" value="46" />
+    <task id="LOCAL-00046" summary="Update Entity with equals and hash">
+      <created>1566565666593</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1566565666593</updated>
+    </task>
+    <task id="LOCAL-00047" summary="IT WORKS">
+      <created>1566585200035</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1566585200035</updated>
+    </task>
+    <task id="LOCAL-00048" summary="IT WORKS + Andis Sql Abfrage">
+      <created>1566586415125</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1566586415125</updated>
+    </task>
+    <task id="LOCAL-00049" summary="added Named Queries and Information fxml">
+      <created>1566652254510</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1566652254510</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
     <servers />
   </component>
   <component name="TodoView">
@@ -677,6 +743,11 @@
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
+        <entry key="1">
+          <value>
+            <State />
+          </value>
+        </entry>
         <entry key="MAIN">
           <value>
             <State>
@@ -695,7 +766,13 @@
         </entry>
         <entry key="User">
           <value>
-            <list />
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="me" />
+                </option>
+              </RecentGroup>
+            </list>
           </value>
         </entry>
       </map>
@@ -703,9 +780,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Anpasssung an die neu angelegte, einheitliche Datenbank" />
-    <MESSAGE value="Hibernate util + dao pattern" />
-    <MESSAGE value="Hibernate util + dao pattern + persistance xml + Entitymanager" />
     <MESSAGE value="Umstellung auf SessionFactory" />
     <MESSAGE value="Select für Jahresüberschuss erstellt" />
     <MESSAGE value="Update" />
@@ -724,11 +798,14 @@
     <MESSAGE value="added CompanyOverviewController&#10;TestcommitMax" />
     <MESSAGE value="Added @FXML Annotationen für Textfelder &amp; Checkboxen" />
     <MESSAGE value="Addes JDBC Driver&#10;Connection still failing" />
-    <MESSAGE value="Added Gui Framework" />
-    <MESSAGE value="Cleaned up a bit" />
-    <MESSAGE value="Andi hatte die hammergenialsupergeile idee, dass mavenJavaFXUI ne eigene POM hat, haben die dependency für mysql hinzugefügt&#10;Connection works" />
-    <MESSAGE value="Errorhandling &amp; con.close" />
-    <option name="LAST_COMMIT_MESSAGE" value="Errorhandling &amp; con.close" />
+    <MESSAGE value="latest Version 21.08" />
+    <MESSAGE value="new Controller" />
+    <MESSAGE value="mysql connector in der POM -.-" />
+    <MESSAGE value="Update Entity with equals and hash" />
+    <MESSAGE value="IT WORKS" />
+    <MESSAGE value="IT WORKS + Andis Sql Abfrage" />
+    <MESSAGE value="added Named Queries and Information fxml" />
+    <option name="LAST_COMMIT_MESSAGE" value="added Named Queries and Information fxml" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -741,20 +818,13 @@
         </breakpoint>
       </breakpoints>
     </breakpoint-manager>
-    <watches-manager>
-      <configuration name="Application">
-        <watch expression="((FileURLMapper)var4 (slot_2)).file" language="JAVA" custom="sun.misc.FileURLMapper" />
-        <watch expression="this" />
-        <watch expression="Firmenname" />
-      </configuration>
-    </watches-manager>
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/LevermannAnalyse$ConnectionMainFactory.ic" NAME="ConnectionMainFactory Coverage Results" MODIFIED="1555703147535" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/LevermannAnalyse$ConnectionMainFactory.ic" NAME="ConnectionMainFactory Coverage Results" MODIFIED="1566639806873" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.levermann.TestFiles.*</FILTER>
     </SUITE>
   </component>

@@ -1,14 +1,14 @@
 package com.levermann;
 
 import java.io.IOException;
+
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
 
 public class EnterCompanyNameController implements ControlledScreenInterface {
 
     @FXML
-    public static TextField companyName;
-
+    public static TextField Companyname;
     ScreensController myController;
 
     public void setScreenParent(ScreensController screenParent){
@@ -20,5 +20,9 @@ public class EnterCompanyNameController implements ControlledScreenInterface {
         //App.setRoot("input");
         myController.setScreen(App.inputID);
         App.setStageTitle("Kerndateneingabe");
+
+        String UserEingabeCompany = Companyname.getText();
+        Companyname.setText(String.valueOf(UserEingabeCompany));
+
     }
 }

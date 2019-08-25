@@ -31,4 +31,16 @@ public class StartPageController implements ControlledScreenInterface {
         ImageView imageView = new ImageView(imageBackground);
          **/
     }
+    @FXML
+    private void switchToCompanyOverview() throws IOException{
+        //App.setRoot("companyOverview");
+        myController.setScreen(App.companyOverviewID);
+        App.setStageTitle("Allgemeine Unternehmensübersicht");
+    }
+    @FXML
+    private void switchToInformations() throws IOException{
+        //App.setRoot("companyOverview");
+        myController.setScreen(App.informationID);
+        App.setStageTitle("Allgemeine Unternehmensübersicht");
+    }
 }

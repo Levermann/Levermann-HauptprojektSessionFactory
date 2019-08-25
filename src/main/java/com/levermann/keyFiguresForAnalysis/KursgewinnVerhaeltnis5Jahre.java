@@ -1,8 +1,8 @@
 package com.levermann.keyFiguresForAnalysis;
 
-import com.levermann.sessionControlClasses.HibernateUtil;
 import com.levermann.entityclass.AnalysisRating;
 import com.levermann.entityclass.Company;
+import com.levermann.sessionControlClasses.HibernateUtil;
 import org.apache.log4j.Logger;
 import org.hibernate.HibernateException;
 import org.hibernate.Query;

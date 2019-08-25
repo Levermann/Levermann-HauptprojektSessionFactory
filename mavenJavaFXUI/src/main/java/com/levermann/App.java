@@ -27,6 +27,8 @@ public class App extends Application {
     public static String showResultFile = "showResult.fxml";
     public static String companyOverviewID = "companyOverview";
     public static String companyOverviewFile = "companyOverview.fxml";
+    public static String informationID = "information";
+    public static String informationFile = "information.fxml";
 
     private static Stage stage;
 
@@ -41,7 +43,7 @@ public class App extends Application {
         mainContainer.loadScreen(App.inputID, App.inputFile);
         mainContainer.loadScreen(App.showResultID, App.showResultFile);
         mainContainer.loadScreen(App.companyOverviewID, App. companyOverviewFile);
-
+        mainContainer.loadScreen(App.informationID, App.informationFile);
         mainContainer.setScreen(App.startPageID);
 
         Group root = new Group();
@@ -73,8 +75,8 @@ public class App extends Application {
     }
 
     public static void setStageSize(int height, int width){
-        stage.setHeight(height);
-        stage.setWidth(width);
+        stage.setHeight(800);
+        stage.setWidth(1200);
     }
 
     static void setRoot(String fxml) throws IOException {

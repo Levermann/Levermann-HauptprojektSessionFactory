@@ -9,12 +9,12 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox alignment="CENTER" prefHeight="671.0" prefWidth="1292.0" spacing="20.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.levermann.CompanyOverviewController">
+<VBox alignment="CENTER" prefHeight="671.0" prefWidth="1292.0" spacing="20.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.levermann.CompanyOverviewController">
    <children>
       <AnchorPane prefHeight="660.0" prefWidth="1252.0">
          <children>
-            <Button fx:id="addSecondCompany" layoutX="1185.0" layoutY="571.0" onAction="#switchToEnterCompanyName" prefHeight="46.0" prefWidth="53.0" text="Add" />
-             <Button fx:id="getBackToPrimaryPage" layoutX="725.0" layoutY="559.0" onAction="#switchToPrimaryPage" mnemonicParsing="false" prefHeight="25.0" prefWidth="91.0" text="main menu" />
+            <Button fx:id="addSecondCompany" layoutX="1012.0" layoutY="559.0" onAction="#switchToEnterCompanyName" prefHeight="25.0" prefWidth="70.0" text="Add" />
+             <Button fx:id="getBackToPrimaryPage" layoutX="909.0" layoutY="559.0" mnemonicParsing="false" onAction="#switchToPrimaryPage" prefHeight="25.0" prefWidth="91.0" text="main menu" />
              <Label alignment="TOP_CENTER" layoutX="408.0" layoutY="41.0" prefHeight="63.0" prefWidth="378.0" text="Overview" textAlignment="CENTER" textFill="#9c2626">
                <font>
                   <Font name="Berlin Sans FB" size="18.0" />
