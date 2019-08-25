@@ -15,7 +15,7 @@
       <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/mavenJavaFXUI.iml" beforeDir="false" afterPath="$PROJECT_DIR$/mavenJavaFXUI/mavenJavaFXUI.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mavenJavaFXUI/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/src/main/java/com/levermann/EnterCompanyNameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/mavenJavaFXUI/src/main/java/com/levermann/EnterCompanyNameController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/src/main/java/com/levermann/InputController.java" beforeDir="false" afterPath="$PROJECT_DIR$/mavenJavaFXUI/src/main/java/com/levermann/InputController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/src/main/java/com/levermann/InputController.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/src/main/resources/com/levermann/enterCompanyName.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/mavenJavaFXUI/src/main/resources/com/levermann/enterCompanyName.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/target/classes/com/levermann/EnterCompanyNameController.class" beforeDir="false" afterPath="$PROJECT_DIR$/mavenJavaFXUI/target/classes/com/levermann/EnterCompanyNameController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/target/classes/com/levermann/InputController.class" beforeDir="false" afterPath="$PROJECT_DIR$/mavenJavaFXUI/target/classes/com/levermann/InputController.class" afterDir="false" />
@@ -100,7 +100,7 @@
     </option>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="Master" />
+        <entry key="$PROJECT_DIR$" value="MaxiUpdate1908" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
