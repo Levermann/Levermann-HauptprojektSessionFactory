@@ -10,7 +10,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="LevermannAnalyse" target="1.8" />
+      <module name="LevermannAnalyse" target="11" />
       <module name="mavenJavaFXUI" target="11" />
     </bytecodeTargetLevel>
   </component>

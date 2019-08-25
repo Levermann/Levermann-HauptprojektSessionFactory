@@ -1,4 +1,5 @@
 com\levermann\InputController.class
+com\levermann\SimpleMapProperty.class
 com\levermann\EnterCompanyNameController.class
 com\levermann\ScreensController.class
 com\levermann\CompanyOverviewController.class
