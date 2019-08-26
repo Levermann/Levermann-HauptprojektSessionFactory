@@ -24,4 +24,11 @@ public class ShowResultController implements ControlledScreenInterface{
         myController.setScreen(App.companyOverviewID);
         App.setStageTitle("Allgemeine Unternehmensübersicht");
     }
+
+    @FXML
+    private void switchToShowUserInputs() throws IOException{
+        //App.setRoot("companyOverview");
+        myController.setScreen(App.showUserInputID);
+        App.setStageTitle("Allgemeine Unternehmensübersicht");
+    }
 }

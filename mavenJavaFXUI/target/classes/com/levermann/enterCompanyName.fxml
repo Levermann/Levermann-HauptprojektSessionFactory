@@ -8,16 +8,16 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox alignment="CENTER" prefHeight="547.0" prefWidth="998.0" spacing="20.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.levermann.EnterCompanyNameController">
+<VBox alignment="CENTER" prefHeight="810.0" prefWidth="1500.0" spacing="20.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.levermann.EnterCompanyNameController">
     <children>
-      <AnchorPane prefHeight="287.0" prefWidth="958.0">
+      <AnchorPane prefHeight="817.0" prefWidth="1460.0">
          <children>
-              <Label alignment="CENTER" layoutX="392.0" layoutY="45.0" text="Name des Unternehmens:">
+              <Label alignment="CENTER" layoutX="531.0" layoutY="318.0" text="Name des Unternehmens:">
                <font>
                   <Font size="18.0" />
                </font></Label>
-             <TextField fx:id="Companyname" layoutX="413.0" layoutY="88.0" prefHeight="25.0" prefWidth="234.0" />
-              <Button fx:id="switchtoInputButton" layoutX="748.0" layoutY="220.0" onAction="#switchToInput" style="-fx-border-color: black;" text="OK weiter zur Eingabemaske" />
+             <TextField id="companyNameTextfield" fx:id="Companyname" alignment="CENTER" layoutX="531.0" layoutY="354.0" prefHeight="25.0" prefWidth="234.0" />
+              <Button fx:id="switchtoInputButton" layoutX="531.0" layoutY="419.0" onAction="#switchToInput" style="-fx-border-color: black;" text="OK weiter zur Eingabemaske" />
          </children>
       </AnchorPane>
     </children>

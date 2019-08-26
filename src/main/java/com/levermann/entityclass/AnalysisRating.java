@@ -96,7 +96,6 @@ public class AnalysisRating  implements Serializable {
     }
 
     public void setAnalysisRatingName(String AnalysisRatingName) {
-        AnalysisRatingName = AnalysisRatingName;
     }
 
     public String getCompanyname_AnalysisRating() {

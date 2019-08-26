@@ -4,8 +4,11 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import javafx.scene.Group;
+
+
 
 import java.io.IOException;
 
@@ -29,6 +32,8 @@ public class App extends Application {
     public static String companyOverviewFile = "companyOverview.fxml";
     public static String informationID = "information";
     public static String informationFile = "information.fxml";
+    public static String showUserInputID = "ShowUserInput";
+    public static String showUserInputFile = "userInput.fxml";
 
     private static Stage stage;
 
@@ -44,14 +49,18 @@ public class App extends Application {
         mainContainer.loadScreen(App.showResultID, App.showResultFile);
         mainContainer.loadScreen(App.companyOverviewID, App. companyOverviewFile);
         mainContainer.loadScreen(App.informationID, App.informationFile);
+        mainContainer.loadScreen(App.showUserInputID, App.showUserInputFile);
         mainContainer.setScreen(App.startPageID);
+
 
         Group root = new Group();
         root.getChildren().addAll(mainContainer);
         Scene scene = new Scene(root);
         stage.setScene(scene);
         setStageTitle("Hauptmenü");
-        //setStageSize(500,1000);
+
+        //stage.setTitle("Hauptmenü");
+        setStageSize(810,1500);
         stage.show();
 
             /**
@@ -60,6 +69,19 @@ public class App extends Application {
             stage.show();
             stage.setTitle("Main Menu");
         **/
+    }
+
+    static void setRoot(String fxml) throws IOException {
+        scene.setRoot(loadFXML(fxml));
+    }
+
+    private static Parent loadFXML(String fxml) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource(fxml + ".fxml"));
+        return fxmlLoader.load();
+    }
+
+    public static void main(String[] args) {
+        launch();
     }
 
     private void setStage(Stage startStage){
@@ -75,21 +97,8 @@ public class App extends Application {
     }
 
     public static void setStageSize(int height, int width){
-        stage.setHeight(800);
-        stage.setWidth(1200);
-    }
-
-    static void setRoot(String fxml) throws IOException {
-        scene.setRoot(loadFXML(fxml));
-    }
-
-    private static Parent loadFXML(String fxml) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource(fxml + ".fxml"));
-        return fxmlLoader.load();
-    }
-
-    public static void main(String[] args) {
-        launch();
+        stage.setHeight(810);
+        stage.setWidth(1500);
     }
 
     //http://javafx.com/javafx/11.0.1 für fxml
