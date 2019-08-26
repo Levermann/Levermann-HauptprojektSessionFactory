@@ -4,13 +4,13 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import javafx.scene.Group;
 
 
 
 import java.io.IOException;
-import java.util.ResourceBundle;
 
 
 /**
@@ -58,6 +58,7 @@ public class App extends Application {
         Scene scene = new Scene(root);
         stage.setScene(scene);
         setStageTitle("Hauptmenü");
+
         //stage.setTitle("Hauptmenü");
         setStageSize(810,1500);
         stage.show();

@@ -5,31 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ef1c18af-56f3-4a36-8891-4764d24d597a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/mavenJavaFXUI/src/main/java/com/levermann/ShowUserInputController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mavenJavaFXUI/src/main/java/com/levermann/ShowUserInputManageUI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mavenJavaFXUI/src/main/resources/com/levermann/userInput.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LevermannAnalyse.iml" beforeDir="false" afterPath="$PROJECT_DIR$/LevermannAnalYse.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/mavenJavaFXUI.iml" beforeDir="false" afterPath="$PROJECT_DIR$/mavenJavaFXUI/mavenJavaFXUI.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/src/main/java/com/levermann/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/mavenJavaFXUI/src/main/java/com/levermann/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/src/main/java/com/levermann/ShowResultController.java" beforeDir="false" afterPath="$PROJECT_DIR$/mavenJavaFXUI/src/main/java/com/levermann/ShowResultController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/src/main/resources/com/levermann/companyOverview.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/mavenJavaFXUI/src/main/resources/com/levermann/companyOverview.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/src/main/resources/com/levermann/enterCompanyName.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/mavenJavaFXUI/src/main/resources/com/levermann/enterCompanyName.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/src/main/resources/com/levermann/information.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/mavenJavaFXUI/src/main/resources/com/levermann/information.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/src/main/resources/com/levermann/input.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/mavenJavaFXUI/src/main/resources/com/levermann/input.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/src/main/resources/com/levermann/showResult.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/mavenJavaFXUI/src/main/resources/com/levermann/showResult.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/src/main/resources/com/levermann/startPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/mavenJavaFXUI/src/main/resources/com/levermann/startPage.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/target/classes/com/levermann/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/mavenJavaFXUI/target/classes/com/levermann/App.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/target/classes/com/levermann/ShowResultController.class" beforeDir="false" afterPath="$PROJECT_DIR$/mavenJavaFXUI/target/classes/com/levermann/ShowResultController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/src/main/resources/pictures/aktienchart.png" beforeDir="false" afterPath="$PROJECT_DIR$/mavenJavaFXUI/src/main/resources/pictures/aktienchart.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/target/classes/com/levermann/enterCompanyName.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/mavenJavaFXUI/target/classes/com/levermann/enterCompanyName.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/target/classes/com/levermann/showResult.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/mavenJavaFXUI/target/classes/com/levermann/showResult.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/target/classes/com/levermann/startPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/mavenJavaFXUI/target/classes/com/levermann/startPage.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/target/maven-status/maven-compiler-plugin/compile/null/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/mavenJavaFXUI/target/maven-status/maven-compiler-plugin/compile/null/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/target/maven-status/maven-compiler-plugin/compile/null/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/mavenJavaFXUI/target/maven-status/maven-compiler-plugin/compile/null/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/levermann/entityclass/AnalysisRating.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/levermann/entityclass/AnalysisRating.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/levermann/keyFiguresForAnalysis/Eigenkapitalquote.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/levermann/keyFiguresForAnalysis/Eigenkapitalquote.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/levermann/mainMethod/ConnectionMainFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/levermann/mainMethod/ConnectionMainFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/target/classes/pictures/aktienchart.png" beforeDir="false" afterPath="$PROJECT_DIR$/mavenJavaFXUI/target/classes/pictures/aktienchart.png" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -404,13 +387,6 @@
       <workItem from="1566585459730" duration="21406000" />
       <workItem from="1566650626276" duration="6535000" />
     </task>
-    <task id="LOCAL-00001" summary="l">
-      <created>1554567642271</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1554567642271</updated>
-    </task>
     <task id="LOCAL-00002" summary="Anpasssung an die neu angelegte, einheitliche Datenbank">
       <created>1554579073830</created>
       <option name="number" value="00002" />
@@ -747,7 +723,14 @@
       <option name="project" value="LOCAL" />
       <updated>1566652254510</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="added UserInput Controller to check or update the Inputs manually">
+      <created>1566819045928</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1566819045930</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="TodoView">
@@ -802,7 +785,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Umstellung auf SessionFactory" />
     <MESSAGE value="Select für Jahresüberschuss erstellt" />
     <MESSAGE value="Update" />
     <MESSAGE value="Update 29.05.2019 SQL-Abfragen" />
@@ -827,7 +809,8 @@
     <MESSAGE value="IT WORKS" />
     <MESSAGE value="IT WORKS + Andis Sql Abfrage" />
     <MESSAGE value="added Named Queries and Information fxml" />
-    <option name="LAST_COMMIT_MESSAGE" value="added Named Queries and Information fxml" />
+    <MESSAGE value="added UserInput Controller to check or update the Inputs manually" />
+    <option name="LAST_COMMIT_MESSAGE" value="added UserInput Controller to check or update the Inputs manually" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
