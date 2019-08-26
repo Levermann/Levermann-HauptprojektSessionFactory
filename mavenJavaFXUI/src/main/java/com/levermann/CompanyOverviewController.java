@@ -1,6 +1,5 @@
 package com.levermann;
 
-import javafx.beans.property.Property;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -12,7 +11,6 @@ import javafx.scene.control.cell.PropertyValueFactory;
 
 import java.io.IOException;
 import java.net.URL;
-import java.util.Date;
 import java.util.ResourceBundle;
 
 public class CompanyOverviewController implements Initializable, ControlledScreenInterface {
@@ -47,7 +45,7 @@ public class CompanyOverviewController implements Initializable, ControlledScree
     public void setScreenParent(ScreensController screenParent){
         myController = screenParent;
     }
-
+//TODO Der Firmenname, der vom User in EnterCompanyName Seite eingegeben wurde muss ersetzt werden durch company1
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         companyName.setCellValueFactory(new PropertyValueFactory<CompanyManageUI, String>("company1"));

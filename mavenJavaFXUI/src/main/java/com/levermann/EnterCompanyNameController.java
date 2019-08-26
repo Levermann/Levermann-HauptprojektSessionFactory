@@ -21,8 +21,8 @@ public class EnterCompanyNameController implements ControlledScreenInterface {
         myController.setScreen(App.inputID);
         App.setStageTitle("Kerndateneingabe");
 
-        String UserEingabeCompany = Companyname.getText();
-        Companyname.setText(String.valueOf(UserEingabeCompany));
+        String UserInputCompany = Companyname.getText();
+        Companyname.setText(String.valueOf(UserInputCompany));
 
     }
 }
