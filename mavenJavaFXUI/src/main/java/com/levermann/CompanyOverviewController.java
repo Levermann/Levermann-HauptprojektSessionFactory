@@ -38,7 +38,7 @@ public class CompanyOverviewController implements Initializable, ControlledScree
     TableColumn<CompanyManageUI, String> show;
 
     public ObservableList<CompanyManageUI> overview = FXCollections.observableArrayList(
-        new CompanyManageUI("BMW", "16.12.1999", 12, "hierMüllIcon", "hiePfeilIcon", "hierLupenIcon")
+        //new CompanyManageUI("BMW", "16.12.1999", 12, "hierMüllIcon", "hiePfeilIcon", "hierLupenIcon")
     );
     ScreensController myController;
 
@@ -61,8 +61,6 @@ public class CompanyOverviewController implements Initializable, ControlledScree
     @FXML
     private void tableAktualisieren(){
         overview.add(new CompanyManageUI(companyNameString, dateString, analysisScoreTest, deleteString,editString, showString));
-        //tableID.refresh();
-        //System.out.println("hi");
     }
 
     @FXML
