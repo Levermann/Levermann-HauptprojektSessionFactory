@@ -15,6 +15,9 @@ import java.util.ResourceBundle;
 
 public class ShowUserInputController implements Initializable, ControlledScreenInterface {
 
+    public static String jahresueberschuss;
+    //public static String 
+
     @FXML
     TableView<ShowUserInputManageUI> checkInputsID;
     @FXML
@@ -47,7 +50,6 @@ public class ShowUserInputController implements Initializable, ControlledScreenI
             new ShowUserInputManageUI("Aktienkurs vor 3 Monaten", (float) 1231),
             new ShowUserInputManageUI("Gewinnschätzung für nächstes Jahr", (float) 1231),
             new ShowUserInputManageUI("Gewinnschätzung für dieses Jahr", (float) 1231)
-
             );
 
     ScreensController myController;

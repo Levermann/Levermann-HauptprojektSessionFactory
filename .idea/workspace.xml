@@ -5,14 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ef1c18af-56f3-4a36-8891-4764d24d597a" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/LevermannAnalyse_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/LevermannAnalyse_jar.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/src/main/resources/com/levermann/enterCompanyName.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/mavenJavaFXUI/src/main/resources/com/levermann/enterCompanyName.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/src/main/resources/com/levermann/input.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/mavenJavaFXUI/src/main/resources/com/levermann/input.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/src/main/resources/com/levermann/showResult.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/mavenJavaFXUI/src/main/resources/com/levermann/showResult.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/src/main/resources/pictures/aktienchart.png" beforeDir="false" afterPath="$PROJECT_DIR$/mavenJavaFXUI/src/main/resources/pictures/aktienchart.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/target/classes/com/levermann/enterCompanyName.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/mavenJavaFXUI/target/classes/com/levermann/enterCompanyName.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/target/classes/com/levermann/showResult.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/mavenJavaFXUI/target/classes/com/levermann/showResult.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/target/classes/pictures/aktienchart.png" beforeDir="false" afterPath="$PROJECT_DIR$/mavenJavaFXUI/target/classes/pictures/aktienchart.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/src/main/java/com/levermann/CompanyManageUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/mavenJavaFXUI/src/main/java/com/levermann/CompanyManageUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/src/main/java/com/levermann/CompanyOverviewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/mavenJavaFXUI/src/main/java/com/levermann/CompanyOverviewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/src/main/java/com/levermann/EnterCompanyNameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/mavenJavaFXUI/src/main/java/com/levermann/EnterCompanyNameController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/src/main/java/com/levermann/ShowUserInputController.java" beforeDir="false" afterPath="$PROJECT_DIR$/mavenJavaFXUI/src/main/java/com/levermann/ShowUserInputController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/src/main/resources/com/levermann/companyOverview.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/mavenJavaFXUI/src/main/resources/com/levermann/companyOverview.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/target/classes/com/levermann/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/mavenJavaFXUI/target/classes/com/levermann/App.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/target/classes/com/levermann/EnterCompanyNameController.class" beforeDir="false" afterPath="$PROJECT_DIR$/mavenJavaFXUI/target/classes/com/levermann/EnterCompanyNameController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/target/classes/com/levermann/InputController.class" beforeDir="false" afterPath="$PROJECT_DIR$/mavenJavaFXUI/target/classes/com/levermann/InputController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/target/classes/com/levermann/input.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/mavenJavaFXUI/target/classes/com/levermann/input.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/target/maven-status/maven-compiler-plugin/compile/null/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/mavenJavaFXUI/target/maven-status/maven-compiler-plugin/compile/null/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/target/maven-status/maven-compiler-plugin/compile/null/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/mavenJavaFXUI/target/maven-status/maven-compiler-plugin/compile/null/inputFiles.lst" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -94,7 +99,7 @@
     </option>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="xy" />
+        <entry key="$PROJECT_DIR$" value="Maxi2508" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -143,15 +148,19 @@
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
   </component>
   <component name="RecentsManager">
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="com.levermann.dao" />
-    </key>
     <key name="ImportMappingsDialog.RecentPackages">
       <recent name="com.levermann.sessionControlClasses" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
       <recent name="com.levermann.GuiNew" />
       <recent name="com.levermann.entityclass" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Lisa\IdeaProjects\Levermann-HauptprojektSessionFactory\src\main\java\com\levermann\sessionControlClasses" />
+      <recent name="C:\Users\Lisa\IdeaProjects\Levermann-HauptprojektSessionFactory\src\main\resources\resources" />
+      <recent name="C:\Users\Lisa\IdeaProjects\Levermann-HauptprojektSessionFactory\src\main\java\com\levermann\sqlStatements" />
+      <recent name="C:\Users\Lisa\IdeaProjects\Levermann-HauptprojektSessionFactory\src\main\java\com\levermann\mappingXMLs" />
+      <recent name="C:\Users\Lisa\IdeaProjects\Levermann-HauptprojektSessionFactory\src\main\resources" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -171,12 +180,8 @@
       <recent name="com.levermann.dao" />
       <recent name="com.levermann.project" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Lisa\IdeaProjects\Levermann-HauptprojektSessionFactory\src\main\java\com\levermann\sessionControlClasses" />
-      <recent name="C:\Users\Lisa\IdeaProjects\Levermann-HauptprojektSessionFactory\src\main\resources\resources" />
-      <recent name="C:\Users\Lisa\IdeaProjects\Levermann-HauptprojektSessionFactory\src\main\java\com\levermann\sqlStatements" />
-      <recent name="C:\Users\Lisa\IdeaProjects\Levermann-HauptprojektSessionFactory\src\main\java\com\levermann\mappingXMLs" />
-      <recent name="C:\Users\Lisa\IdeaProjects\Levermann-HauptprojektSessionFactory\src\main\resources" />
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.levermann.dao" />
     </key>
   </component>
   <component name="RunAnythingCache">

@@ -8,7 +8,7 @@ import javafx.scene.control.TextField;
 public class EnterCompanyNameController implements ControlledScreenInterface {
 
     @FXML
-    public static TextField Companyname;
+    public TextField Companyname;
     ScreensController myController;
 
     public void setScreenParent(ScreensController screenParent){
@@ -21,8 +21,15 @@ public class EnterCompanyNameController implements ControlledScreenInterface {
         myController.setScreen(App.inputID);
         App.setStageTitle("Kerndateneingabe");
 
+        CompanyOverviewController.companyNameString = Companyname.getText();
+
         String UserEingabeCompany = Companyname.getText();
         Companyname.setText(String.valueOf(UserEingabeCompany));
 
     }
+
+    public String getCompanyName(){
+        return this.Companyname.getText();
+    }
+
 }

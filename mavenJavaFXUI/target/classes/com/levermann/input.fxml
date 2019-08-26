@@ -16,13 +16,13 @@
    <children>
       <Pane prefHeight="618.0" prefWidth="1252.0">
          <children>
-            <Label layoutX="221.0" layoutY="-5.0" prefHeight="43.0" prefWidth="529.0" text="Bitte geben Sie alle Informationen für das Unternehmen ein">
+            <Label layoutX="400.0" layoutY="-7.0" prefHeight="43.0" prefWidth="529.0" text="Bitte geben Sie alle Informationen für das Unternehmen ein">
                <font>
                   <Font size="20.0" />
                </font>
             </Label>
             <Button fx:id="showResultButton" layoutX="853.0" layoutY="559.0" mnemonicParsing="false" onAction="#switchToShowResult" prefHeight="25.0" prefWidth="104.0" style="-fx-border-color: black;" text="OK, show Results" />
-            <Pane layoutX="5.0" layoutY="63.0" prefHeight="509.0" prefWidth="1242.0">
+            <Pane layoutX="189.0" layoutY="55.0" prefHeight="509.0" prefWidth="950.0">
                <children>
                   <Label layoutX="14.0" layoutY="15.0" prefHeight="25.0" prefWidth="176.0" text="Jahresüberschuss" />
                   <Label layoutX="14.0" layoutY="65.0" prefHeight="25.0" prefWidth="176.0" text="Eigenkapital" />
