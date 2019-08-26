@@ -10,6 +10,7 @@ import javafx.scene.Group;
 
 
 import java.io.IOException;
+import java.util.ResourceBundle;
 
 
 /**
@@ -31,6 +32,8 @@ public class App extends Application {
     public static String companyOverviewFile = "companyOverview.fxml";
     public static String informationID = "information";
     public static String informationFile = "information.fxml";
+    public static String showUserInputID = "ShowUserInput";
+    public static String showUserInputFile = "userInput.fxml";
 
     private static Stage stage;
 
@@ -46,7 +49,9 @@ public class App extends Application {
         mainContainer.loadScreen(App.showResultID, App.showResultFile);
         mainContainer.loadScreen(App.companyOverviewID, App. companyOverviewFile);
         mainContainer.loadScreen(App.informationID, App.informationFile);
+        mainContainer.loadScreen(App.showUserInputID, App.showUserInputFile);
         mainContainer.setScreen(App.startPageID);
+
 
         Group root = new Group();
         root.getChildren().addAll(mainContainer);
@@ -54,7 +59,7 @@ public class App extends Application {
         stage.setScene(scene);
         setStageTitle("Hauptmenü");
         //stage.setTitle("Hauptmenü");
-        //setStageSize(500,1000);
+        setStageSize(810,1500);
         stage.show();
 
             /**
@@ -91,8 +96,8 @@ public class App extends Application {
     }
 
     public static void setStageSize(int height, int width){
-        stage.setHeight(800);
-        stage.setWidth(1200);
+        stage.setHeight(810);
+        stage.setWidth(1500);
     }
 
     //http://javafx.com/javafx/11.0.1 für fxml

@@ -47,7 +47,7 @@ public class Eigenkapitalquote {
 
                // Berechnung der Eigenkapitalrendite für Punkteverteilung
               float eigenkapitalquotePkt;
-             eigenkapitalquotePkt=  ((float)un.getEigenkapital()/(float)un.getEigenkapital() + (float)un.getJahresumsatz());
+             eigenkapitalquotePkt=  (1 + (float)un.getJahresumsatz());
                DecimalFormat f = new DecimalFormat("#0.00");
                double toFormat = ((double)Math.round(eigenkapitalquotePkt*100))/100;
                f.format(toFormat);
