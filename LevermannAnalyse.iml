@@ -40,7 +40,7 @@
       <sourceFolder url="file://$MODULE_DIR$/target/generated-sources/annotations" isTestSource="false" generated="true" />
       <excludeFolder url="file://$MODULE_DIR$/target" />
     </content>
-    <orderEntry type="inheritedJdk" />
+    <orderEntry type="jdk" jdkName="1.8" jdkType="JavaSDK" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="java" level="project" />
     <orderEntry type="library" name="MigLayout" level="project" />
@@ -48,10 +48,6 @@
     <orderEntry type="library" name="JGoodies Forms" level="project" />
     <orderEntry type="library" name="jaxb-api-2.3.0" level="project" />
     <orderEntry type="library" name="Maven: org.hibernate:hibernate-commons-annotations:3.1.0.GA" level="project" />
-    <orderEntry type="library" name="JDBC" level="project" />
-    <orderEntry type="library" name="MariaDB" level="project" />
-    <orderEntry type="library" name="mariadb-java-client-2.4.1" level="project" />
-    <orderEntry type="library" name="mariadb-java-client-2.4.3" level="project" />
     <orderEntry type="library" name="Maven: org.hibernate:hibernate-core:5.0.8.Final" level="project" />
     <orderEntry type="library" name="Maven: org.jboss.logging:jboss-logging:3.3.0.Final" level="project" />
     <orderEntry type="library" name="Maven: org.apache.geronimo.specs:geronimo-jta_1.1_spec:1.1.1" level="project" />

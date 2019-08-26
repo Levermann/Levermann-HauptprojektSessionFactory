@@ -1,5 +1,6 @@
 package com.levermann;
 
+import com.levermann.sessionControlClasses.Company;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -14,7 +15,7 @@ import java.io.IOException;
  * JavaFX App
  */
 public class App extends Application {
-
+Company gn = new Company ();
     private static Scene scene;
 
     public static String startPageID = "startPage";
