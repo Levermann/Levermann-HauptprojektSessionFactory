@@ -13,7 +13,7 @@
     -fx-background-insets: 0, 0 0 1 0;
 }
 .table-row-cell:even{
-    -fx-background-color: #ffb3b3;
+    -fx-background-color: #00FF00;
     -fx-background-insets: 0, 0 0 1 0;
 }
 

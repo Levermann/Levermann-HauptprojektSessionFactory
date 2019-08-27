@@ -5,12 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ef1c18af-56f3-4a36-8891-4764d24d597a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/mavenJavaFXUI/src/main/resources/com/levermann/lisasStyle.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/src/main/java/com/levermann/CompanyOverviewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/mavenJavaFXUI/src/main/java/com/levermann/CompanyOverviewController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/src/main/resources/com/levermann/companyOverview.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/mavenJavaFXUI/src/main/resources/com/levermann/companyOverview.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/src/main/resources/com/levermann/information.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/mavenJavaFXUI/src/main/resources/com/levermann/information.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/target/classes/com/levermann/InputController.class" beforeDir="false" afterPath="$PROJECT_DIR$/mavenJavaFXUI/target/classes/com/levermann/InputController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/src/main/resources/com/levermann/lisasStyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/mavenJavaFXUI/src/main/resources/com/levermann/lisasStyle.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -402,13 +399,6 @@
       <workItem from="1566585459730" duration="21406000" />
       <workItem from="1566650626276" duration="6535000" />
     </task>
-    <task id="LOCAL-00006" summary="Hibernate util + dao pattern">
-      <created>1554807313832</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1554807313832</updated>
-    </task>
     <task id="LOCAL-00007" summary="Hibernate util + dao pattern">
       <created>1554807385686</created>
       <option name="number" value="00007" />
@@ -745,7 +735,14 @@
       <option name="project" value="LOCAL" />
       <updated>1566939352913</updated>
     </task>
-    <option name="localTasksCounter" value="55" />
+    <task id="LOCAL-00055" summary="added Stylesheet">
+      <created>1566944705506</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1566944705506</updated>
+    </task>
+    <option name="localTasksCounter" value="56" />
     <servers />
   </component>
   <component name="TodoView">
@@ -800,7 +797,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Update 07.08.2019" />
     <MESSAGE value="Merge remote-tracking branch 'HauptprojektSessionFactory/Gui-blend' into TestBranchFlorian&#10;&#10;# Conflicts:&#10;#&#9;src/main/java/com/levermann/TestFiles/ConnectionMain.java&#10;#&#9;src/main/java/com/levermann/TestFiles/SelectOld.java&#10;#&#9;src/main/java/com/levermann/dao/Update.java&#10;#&#9;src/main/java/com/levermann/project/ConnectionMainFactory.java" />
     <MESSAGE value="upate 07.08.2019&#10;Add SQL statements for database creation&#10;Change Update parameter ID to parameter Company name for all&#10;Levermannschritte" />
     <MESSAGE value="upate 08.08.2019" />
@@ -825,7 +821,8 @@
     <MESSAGE value="Change to JDK 8 and now it WORKS AGAIN -.-" />
     <MESSAGE value="Maxis Businesslogik geadded" />
     <MESSAGE value="UserInput via Session and JDBC in die DB" />
-    <option name="LAST_COMMIT_MESSAGE" value="UserInput via Session and JDBC in die DB" />
+    <MESSAGE value="added Stylesheet" />
+    <option name="LAST_COMMIT_MESSAGE" value="added Stylesheet" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
