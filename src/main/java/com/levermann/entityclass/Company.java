@@ -19,7 +19,51 @@ import java.io.Serializable;
 
 })
 public class Company implements Serializable  {
-
+    public Company(String companyname, String datum, float eigenkapital, float jahresueberschuss, float gewinnEBIT,
+                   float jahresumsatz, float fremdkapital, float aktuellerAktienkurs, float gewinnschaezung,
+                   float gewinnAVG, float halten, float verkaufen, float kaufen, float kursanstiegUnternehmen,
+                   float kursanstiegIndex, float gewinnschaezungVor4Wochen,
+                   float aktienkursTagVeroeffentlichungQartalszahlen, float kursVor6Monaten, float kursVor12Monaten,
+                   float kursVor3Monaten, float kursVor2Monaten, float kursVor1Monat, float daxVor1Monat,
+                   float daxVor2Monaten, float daxVor3Monaten, float gewinnschaezungNaechstesJahr,
+                   float gewinnschaezungDiesesJahr, float finanzsektor, Integer perfInJedemMonat,
+                   Integer kursgewinnVor3Jahren, Integer kursgewinnVor2Jahren, Integer kursgewinnVor1Jahr,
+                   Integer aktuellenErwartetenKursgewinn, Integer kursgewinnschaezungNaechstesJahr) {
+        Companyname = companyname;
+        this.datum = datum;
+        this.eigenkapital = eigenkapital;
+        this.jahresueberschuss = jahresueberschuss;
+        GewinnEBIT = gewinnEBIT;
+        Jahresumsatz = jahresumsatz;
+        Fremdkapital = fremdkapital;
+        AktuellerAktienkurs = aktuellerAktienkurs;
+        Gewinnschaezung = gewinnschaezung;
+        GewinnAVG = gewinnAVG;
+        Halten = halten;
+        Verkaufen = verkaufen;
+        Kaufen = kaufen;
+        KursanstiegUnternehmen = kursanstiegUnternehmen;
+        KursanstiegIndex = kursanstiegIndex;
+        GewinnschaezungVor4Wochen = gewinnschaezungVor4Wochen;
+        AktienkursTagVeroeffentlichungQartalszahlen = aktienkursTagVeroeffentlichungQartalszahlen;
+        KursVor6Monaten = kursVor6Monaten;
+        KursVor12Monaten = kursVor12Monaten;
+        KursVor3Monaten = kursVor3Monaten;
+        KursVor2Monaten = kursVor2Monaten;
+        KursVor1Monat = kursVor1Monat;
+        DaxVor1Monat = daxVor1Monat;
+        DaxVor2Monaten = daxVor2Monaten;
+        DaxVor3Monaten = daxVor3Monaten;
+        GewinnschaezungNaechstesJahr = gewinnschaezungNaechstesJahr;
+        GewinnschaezungDiesesJahr = gewinnschaezungDiesesJahr;
+        Finanzsektor = finanzsektor;
+        PerfInJedemMonat = perfInJedemMonat;
+        KursgewinnVor3Jahren = kursgewinnVor3Jahren;
+        KursgewinnVor2Jahren = kursgewinnVor2Jahren;
+        KursgewinnVor1Jahr = kursgewinnVor1Jahr;
+        AktuellenErwartetenKursgewinn = aktuellenErwartetenKursgewinn;
+        KursgewinnschaezungNaechstesJahr = kursgewinnschaezungNaechstesJahr;
+    }
     @Id
     @Column(name="Companyname")
     private String Companyname;
@@ -126,6 +170,11 @@ public class Company implements Serializable  {
     @Basic
     @Column(name="KursgewinnschaezungNaechstesJahr", unique = true, nullable = true)
     private Integer KursgewinnschaezungNaechstesJahr;
+
+    public Company() {
+
+    }
+
     //association One To Many: One Company to Many Punktelisten
   /*  @OneToMany(mappedBy = "company")
     private List<AnalysisRating> analysisRatings;

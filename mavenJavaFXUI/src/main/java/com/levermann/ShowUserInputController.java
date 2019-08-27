@@ -14,7 +14,6 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 public class ShowUserInputController implements Initializable, ControlledScreenInterface {
-
     public static String jahresueberschuss;
     public static String eigenkapital;
     public static String gewinnEBIT;
