@@ -75,6 +75,7 @@ public class InputController implements ControlledScreenInterface {
     private void switchToShowResult() throws IOException {
         fillDBvalues();
         //App.setRoot("showResult");
+        setValues();
         myController.setScreen(App.showResultID);
         App.setStageTitle("Unternehmensergebnisse");
     }
@@ -84,6 +85,33 @@ public class InputController implements ControlledScreenInterface {
         //TODO Schließe die Session, zurück zu Startseite
         myController.setScreen(App.startPageID);
         App.setStageTitle("Hauptmenü");
+    }
+
+    private void setValues(){
+        ShowUserInputController.jahresueberschuss = this.jahresueberschuss.getText();
+        ShowUserInputController.eigenkapital = this.eigenkapital.getText();
+        ShowUserInputController.gewinnEBIT = this.gewinnEBIT.getText();
+        ShowUserInputController.fremdkapital = this.fremdkapital.getText();
+        ShowUserInputController.aktuellerAktienkurs = this.aktuellerAktienkurs.getText();
+        ShowUserInputController.geschaetzterGewinn = this.geschaetzterGewinn.getText();
+        ShowUserInputController.analystenMeinungen = "KeineMeinung";
+        ShowUserInputController.kaufen = this.analystenKaufen.getText();
+        ShowUserInputController.verkaufen = this.analystenVerkaufen.getText();
+        ShowUserInputController.halten = this.analystenHalten.getText();
+        ShowUserInputController.kursAnstiegUnternehmen = this.kursanstiegUnternehmen.getText();
+        ShowUserInputController.kursanstiegAktienindex = this.kursanstiegAktienindex.getText();
+        ShowUserInputController.gewinnschaetzungVor4Wochen = this.gewinnschaetzungVor4Wochen.getText();
+        ShowUserInputController.aktuelleGewinnschaetzung = this.aktuelleGewinnschaetzung.getText();
+        ShowUserInputController.aktienkursVor6Monaten = this.aktienkursVor6Monaten.getText();
+        ShowUserInputController.aktienkursVor12Monaten = this.aktienkursVor12Monaten.getText();
+        ShowUserInputController.kursVor1Monat = this.kursVor1Monat.getText();
+        ShowUserInputController.kursVor2Monaten = this.kursVor2Monaten.getText();
+        ShowUserInputController.kursVor3Monaten = this.kursVor3Monaten.getText();
+        ShowUserInputController.aktienkursVor1Monaten = this.aktienkursVor1Monat.getText();
+        ShowUserInputController.aktienkursVor2Monaten = this.aktienkursVor2Monaten.getText();
+        ShowUserInputController.aktienkursVor3Monaten = this.aktienkursVor3Monaten.getText();
+        ShowUserInputController.gewinnschaetzungFuerNaechstesJahr = this.gewinnschaetzungNaechstesJahr.getText();
+        ShowUserInputController.gewinnschaetzungFuerDiesesJahr = this.gewinnschaetzungDiesesJahr.getText();
     }
 
     private void fillDBvalues() {

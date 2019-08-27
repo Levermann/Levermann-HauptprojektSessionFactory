@@ -17,6 +17,13 @@ public class CompanyOverviewController implements Initializable, ControlledScree
 
 
 
+    public static String companyNameString;
+    public static String dateString = "16.12.1999";
+    public static String deleteString = "hierMüllIcon";
+    public static String editString = "hierPfeilIcon";
+    public static String showString = "hierLupenIcon";
+    public static int analysisScoreTest = 10;
+
     @FXML
     TableView<CompanyManageUI> tableID;
     @FXML
@@ -33,7 +40,7 @@ public class CompanyOverviewController implements Initializable, ControlledScree
     TableColumn<CompanyManageUI, String> show;
 
 
-    final ObservableList<CompanyManageUI> overview = FXCollections.observableArrayList(
+    public ObservableList<CompanyManageUI> overview = FXCollections.observableArrayList(
             new CompanyManageUI("BMW", "16.12.1999", 12, "hierMüllIcon", "hiePfeilIcon", "hierLupenIcon")
 
 
@@ -57,6 +64,13 @@ public class CompanyOverviewController implements Initializable, ControlledScree
 
         tableID.setItems(overview);
     }
+    @FXML
+    private void tableAktualisieren(){
+        overview.add(new CompanyManageUI(companyNameString, dateString, analysisScoreTest, deleteString,editString, showString));
+        //tableID.refresh();
+        //System.out.println("hi");
+    }
+
     @FXML
     private void switchToEnterCompanyName() throws IOException {
         //App.setRoot("enterCompanyName");

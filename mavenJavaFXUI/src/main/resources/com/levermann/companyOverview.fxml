@@ -30,6 +30,7 @@
                   <TableColumn fx:id="show" prefWidth="114.0" text="show" />
               </columns>
             </TableView>
+            <Button layoutX="786.0" layoutY="559.0" mnemonicParsing="false" onAction="#tableAktualisieren" text="Aktualisieren" />
          </children>
       </AnchorPane>
    </children>
