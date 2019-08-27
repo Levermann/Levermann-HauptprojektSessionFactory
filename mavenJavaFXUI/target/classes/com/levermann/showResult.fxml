@@ -13,7 +13,7 @@
    <children>
       <AnchorPane prefHeight="660.0" prefWidth="1252.0">
          <children>
-            <Button fx:id="showOverviewOfCompaniesButton" layoutX="987.0" layoutY="519.0" onAction="#switchToCompanyOverview" prefHeight="21.0" prefWidth="112.0" style="-fx-border-color: black;" text="Übersicht" AnchorPane.bottomAnchor="87.0" AnchorPane.leftAnchor="987.0" AnchorPane.rightAnchor="153.0" AnchorPane.topAnchor="519.0" />
+            <Button fx:id="showOverviewOfCompaniesButton" layoutX="987.0" layoutY="519.0" onAction="#switchToCompanyOverview" prefHeight="21.0" prefWidth="112.0" style="-fx-border-color: black;" text="Übersicht" />
             <Label alignment="TOP_CENTER" layoutX="393.0" layoutY="41.0" prefHeight="63.0" prefWidth="378.0" text="Ergebnisse Ihrer Analyse" textAlignment="CENTER" textFill="#9c2626">
                <font>
                   <Font name="Berlin Sans FB" size="18.0" />
@@ -27,7 +27,7 @@
                   <TableColumn prefWidth="235.0" text="Bewertung" />
               </columns>
             </TableView>
-            <Button layoutX="866.0" layoutY="520.0" onAction="#switchToShowUserInputs" mnemonicParsing="false" prefHeight="21.0" prefWidth="112.0" style="-fx-border-color: black;" text="Eingabe einsehen" />
+            <Button layoutX="866.0" layoutY="520.0" mnemonicParsing="false" onAction="#switchToShowUserInputs" prefHeight="21.0" prefWidth="112.0" style="-fx-border-color: black;" text="Eingabe einsehen" />
          </children>
       </AnchorPane>
    </children>

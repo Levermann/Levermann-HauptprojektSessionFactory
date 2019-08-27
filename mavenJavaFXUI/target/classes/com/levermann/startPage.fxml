@@ -27,7 +27,7 @@
             <RowConstraints maxHeight="98.0" minHeight="8.0" prefHeight="52.0" vgrow="SOMETIMES" />
       </rowConstraints>
          <children>
-            <Button fx:id="startAnalysisButton" contentDisplay="CENTER" mnemonicParsing="false" onAction="#switchToEnterCompanyName" prefHeight="18.0" prefWidth="112.0" style="-fx-border-color: black;" text="Start analysis now" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" GridPane.vgrow="SOMETIMES" />
+            <Button fx:id="startAnalysisButton" contentDisplay="CENTER" mnemonicParsing="false" onAction="#switchToInput" prefHeight="18.0" prefWidth="112.0" style="-fx-border-color: black;" text="Start analysis now" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" GridPane.vgrow="SOMETIMES" />
             <Label alignment="CENTER" prefHeight="63.0" prefWidth="378.0" text="Levermannanalyse" textAlignment="CENTER" textFill="#9c2626" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
                <font>
                   <Font name="Berlin Sans FB" size="48.0" />

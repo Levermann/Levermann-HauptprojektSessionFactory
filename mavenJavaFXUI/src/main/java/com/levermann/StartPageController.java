@@ -18,9 +18,9 @@ public class StartPageController implements ControlledScreenInterface {
     }
 
     @FXML
-    private void switchToEnterCompanyName() throws IOException {
+    private void switchToInput() throws IOException {
         //App.setRoot("enterCompanyName");
-        myController.setScreen(App.enterCompanyNameID);
+        myController.setScreen(App.inputID);
         App.setStageTitle("Unternehmensnamen angeben");
         /**
          Image imageBackground = new Image(getClass().getResource("pictures/aktienchart.png").toExternalForm());

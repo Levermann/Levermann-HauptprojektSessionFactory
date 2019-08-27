@@ -16,7 +16,7 @@ public class CompanyManageUI  {
     private final SimpleStringProperty edit1;
     private final SimpleStringProperty show1;
 
-    public CompanyManageUI(String companyName, String creationDate, Integer analysisScore,
+    public CompanyManageUI(String companyName, String creationDate, int analysisScore,
                            String delete, String  edit, String show) {
         this.company1 = new SimpleStringProperty(companyName);
         this.dateFormat = new SimpleStringProperty (creationDate);
