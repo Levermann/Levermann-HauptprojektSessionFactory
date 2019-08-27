@@ -1,27 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.net.URL?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollBar?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 
-<?import java.net.URL?>
-<VBox alignment="CENTER" prefHeight="810.0" prefWidth="1500.0" spacing="20.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.levermann.ShowUserInputController">
+<VBox alignment="CENTER" prefHeight="810.0" prefWidth="1500.0" spacing="20.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.levermann.ShowUserInputController">
     <stylesheets>
         <URL value="@lisasStyle.css" />
     </stylesheets>
     <children>
-      <AnchorPane prefHeight="718.0" prefWidth="1291.0">
+      <AnchorPane prefHeight="716.0" prefWidth="1460.0">
          <children>
-              <Button fx:id="BackToBasicsButton" alignment="BOTTOM_CENTER" contentDisplay="BOTTOM" layoutX="619.0" layoutY="667.0" onAction="#switchToPrimaryPageAgain" style="-fx-border-color: black;" text="zurück" />
-            <TableView fx:id="checkInputsID" prefHeight="718.0" prefWidth="583.0">
+              <Button fx:id="BackToBasicsButton" alignment="BOTTOM_CENTER" contentDisplay="BOTTOM" layoutX="1171.0" layoutY="683.0" onAction="#switchToPrimaryPageAgain" style="-fx-border-color: black;" text="zurück" />
+            <TableView fx:id="checkInputsID" layoutX="446.0" prefHeight="724.0" prefWidth="583.0" style="-fx-border-color: #6E6E6E;">
               <columns>
                 <TableColumn fx:id="userInputFigures" prefWidth="291.0" text="Kennzahlen" />
                 <TableColumn fx:id="userInputValues" prefWidth="291.0" text="Werte" />
               </columns>
             </TableView>
+            <ScrollBar layoutX="1029.0" orientation="VERTICAL" prefHeight="724.0" prefWidth="14.0" />
          </children>
       </AnchorPane>
     </children>
