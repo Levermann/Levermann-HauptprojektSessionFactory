@@ -5,7 +5,7 @@ import javax.persistence.*;
 import java.io.Serializable;
 
 
-@Named
+
 
 @Entity
 @Access(AccessType.FIELD)
@@ -24,86 +24,92 @@ public class AnalysisRating  implements Serializable {
 
     @Basic
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "id", unique = true, nullable = true)
+    @Column(name = "id")
     private Float id;
 
     @Basic
-    @Column(name = "Companyname_AnalysisRating", insertable = false, updatable = false)
+    @Column(name = "Companyname_AnalysisRating")
     private String Companyname_AnalysisRating;
 
     @Basic
-    @Column(name = "Eigenkapitalrendite", unique = true, nullable = true)
+    @Column(name = "Eigenkapitalrendite")
     private Float Eigenkapitalrendite;
 
     @Basic
-    @Column(name = "EBITMarge", unique = true, nullable = true)
+    @Column(name = "EBITMarge")
     private Float EBITMarge;
 
     @Basic
-    @Column(name = "Eigenkapitalquote", unique = true, nullable = true)
+    @Column(name = "Eigenkapitalquote")
     private Float Eigenkapitalquote;
 
     @Basic
-    @Column(name = "KursGewinnVerhaeltnis", unique = true, nullable = true)
+    @Column(name = "KursGewinnVerhaeltnis")
     private Float KursGewinnVerhaeltnis;
 
     @Basic
-    @Column(name = "KursGewinnVerhaeltnisAktuell", unique = true, nullable = true)
+    @Column(name = "KursGewinnVerhaeltnisAktuell")
     private Float KursGewinnVerhaeltnisAktuell;
 
     @Basic
-    @Column(name = "Analystenmeinungen", unique = true, nullable = true)
+    @Column(name = "Analystenmeinungen")
     private Float Analystenmeinungen;
 
     @Basic
-    @Column(name = "ReaktionaufQuartalszahlen", unique = true, nullable = true)
+    @Column(name = "ReaktionaufQuartalszahlen")
     private Float ReaktionaufQuartalszahlen;
 
     @Basic
-    @Column(name = "Gewinnrevision", unique = true, nullable = true)
+    @Column(name = "Gewinnrevision")
     private Float Gewinnrevision;
 
     @Basic
-    @Column(name = "Kursverlauf6Monate", unique = true, nullable = true)
+    @Column(name = "Kursverlauf6Monate")
     private Float Kursverlauf6Monate;
 
     @Basic
-    @Column(name = "Kursverlauf12Monate", unique = true, nullable = true)
+    @Column(name = "Kursverlauf12Monate")
     private Float Kursverlauf12Monate;
 
     @Basic
-    @Column(name = "Kursmomentum", unique = true, nullable = true)
+    @Column(name = "Kursmomentum")
     private Float Kursmomentum;
 
     @Basic
-    @Column(name = "Dreimonatsreversal", unique = true, nullable = true)
+    @Column(name = "Dreimonatsreversal")
     private Float Dreimonatsreversal;
 
     @Basic
-    @Column(name = "Gewinnwachstum", unique = true, nullable = true)
+    @Column(name = "Gewinnwachstum")
     private Float Gewinnwachstum;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "Companyname_AnalysisRating")
-    private Company company;
 
-    public AnalysisRating() {
 
-    }
+    public AnalysisRating() { }
+
 
     public String getAnalysisRatingName() {
         return AnalysisRatingName;
     }
 
-    public void setAnalysisRatingName(String AnalysisRatingName) {
+    public void setAnalysisRatingName(String analysisRatingName) {
+        AnalysisRatingName = analysisRatingName;
+    }
+
+    public Float getId() {
+        return id;
+    }
+
+    public void setId(Float id) {
+        this.id = id;
     }
 
     public String getCompanyname_AnalysisRating() {
         return Companyname_AnalysisRating;
     }
 
-    public void setCompanyname_AnalysisRating(String unternehmenname_AnalysisRating) {
-        Companyname_AnalysisRating = unternehmenname_AnalysisRating;
+    public void setCompanyname_AnalysisRating(String companyname_AnalysisRating) {
+        Companyname_AnalysisRating = companyname_AnalysisRating;
     }
 
     public Float getEigenkapitalrendite() {
@@ -210,15 +216,5 @@ public class AnalysisRating  implements Serializable {
         Gewinnwachstum = gewinnwachstum;
     }
 
-    public AnalysisRating(Company company) {
-        this.company = company;
-    }
 
-    public Float getId() {
-        return id;
-    }
-
-    public void setId(Float id) {
-        this.id = id;
-    }
 }

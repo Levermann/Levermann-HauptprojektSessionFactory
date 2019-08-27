@@ -31,7 +31,16 @@ public class Memory {
             "                             KursgewinnVor2Jahren float (11),\n" +
             "                             KursgewinnVor1Jahr float (11),\n" +
             "                             AktuellenErwartetenKursgewinn float (11),\n" +
-            "                             KursgewinnschaezungNaechstesJahr float (11),;";
+            "                             KursgewinnschaezungNaechstesJahr float (11),);"+
+   "CREATE TABLE analysisrating(AnalysisRatingName varchar(11) ,\n " +
+            "id float (20)  unique , Companyname_AnalysisRating varchar (11), Eigenkapitalrendite float(11), EBITMarge float(11),  Eigenkapitalquote float (11), KursGewinnVerhaeltnis float (11)," +
+            "KursGewinnVerhaeltnisAktuell float (11), Analystenmeinungen float (11), ReaktionaufQuartalszahlen float (11),  Gewinnrevision float (11),  Kursverlauf6Monate float (11)," +
+            " Kursverlauf12Monate float (11),\n" +
+            "                             Kursmomentum float (11),\n" +
+            "                             Dreimonatsreversal float (11),\n" +
+            "                             Gewinnwachstum float (11))" ;
+
+            ;
 
     private Memory(){
         try {

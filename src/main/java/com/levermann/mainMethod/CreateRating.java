@@ -1,16 +1,15 @@
 package com.levermann.mainMethod;
 
-import com.levermann.entityclass.Company;
+import com.levermann.entityclass.AnalysisRating;
 import com.levermann.sessionControlClasses.HibernateUtil;
-import com.levermann.utilHandling.CompanyG;
+import com.levermann.utilHandling.AnalysisRatingG;
 import org.apache.log4j.BasicConfigurator;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
 
-abstract public class ConnectionMainFactory  {
-
+abstract public class CreateRating {
 
  @SuppressWarnings("empty-statement")
  public static void main(String[] args) {
@@ -24,17 +23,14 @@ abstract public class ConnectionMainFactory  {
          tx = session.beginTransaction();
 
 
-        Company company = new Company();
-        company.setCompanyname("KA");
+         AnalysisRating analysisRating = new AnalysisRating();
+         analysisRating.setAnalysisRatingName("KA");
+         analysisRating.setId((float) 22);
+         analysisRating.setCompanyname_AnalysisRating("KAAA");
 
-        company.setId(7);
-         company.setEigenkapital(123214);
-         company.setFremdkapital(324234);
-        System.out.println("Got name with credentials " + company.getCompanyname());
+        System.out.println("Got name with credentials " + analysisRating.getAnalysisRatingName()+ analysisRating.getCompanyname_AnalysisRating());
 
-
-
-         session.save(company);
+         session.save(analysisRating);
          session.getTransaction().commit();
          session.close();
 

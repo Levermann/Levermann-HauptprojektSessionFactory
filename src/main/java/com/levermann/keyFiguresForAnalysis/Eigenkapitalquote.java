@@ -1,8 +1,8 @@
 package com.levermann.keyFiguresForAnalysis;
 
-import com.levermann.sessionControlClasses.HibernateUtil;
 import com.levermann.entityclass.AnalysisRating;
 import com.levermann.entityclass.Company;
+import com.levermann.sessionControlClasses.HibernateUtil;
 import org.apache.log4j.Logger;
 import org.hibernate.HibernateException;
 import org.hibernate.Query;
@@ -47,7 +47,7 @@ public class Eigenkapitalquote {
 
                // Berechnung der Eigenkapitalrendite für Punkteverteilung
               float eigenkapitalquotePkt;
-             eigenkapitalquotePkt=  (1 + (float)un.getJahresumsatz());
+             eigenkapitalquotePkt=  ((float)un.getEigenkapital()/(float)un.getEigenkapital() + (float)un.getJahresumsatz());
                DecimalFormat f = new DecimalFormat("#0.00");
                double toFormat = ((double)Math.round(eigenkapitalquotePkt*100))/100;
                f.format(toFormat);

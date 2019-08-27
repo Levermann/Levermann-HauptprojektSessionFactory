@@ -12,10 +12,7 @@ package com.levermann.keyFiguresForAnalysis;
 import com.levermann.entityclass.AnalysisSteps;
 import com.levermann.sessionControlClasses.HibernateUtil;
 import org.apache.log4j.Logger;
-import org.hibernate.HibernateException;
-import org.hibernate.Query;
-import org.hibernate.Session;
-import org.hibernate.SessionFactory;
+import org.hibernate.*;
 
 import java.util.List;
 import java.util.Scanner;
@@ -31,24 +28,12 @@ public class Kursmomentum {
 
         System.out.println(" Bitte \n 1. Unternehmen \n 2. Datum \n 3. Eigenkapital \n 4. JahresÃ¼berschuss");
 
-        //Aufrufen der aktuellen Session aus HibernateUtil
-        SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
-        Session session = sessionFactory.getCurrentSession();
-        Session session1 = sessionFactory.getCurrentSession();
-        Scanner scanner = new Scanner(System.in);
+        final Session session = HibernateUtil.getSessionFactory().openSession();
+        Transaction tx = null;
 
         try {
 
-            //create a unternehmen object
-            System.out.println("Creating new Unternehmen Object");
-
-            // Unternehmen un = new Unternehmen();
-
-            // Hinzufügen
-            logger.info("Logger for Create was saved successfull");
-
-            // start a transaction
-            session.beginTransaction();
+            tx = session.beginTransaction();
 
             //HQL Named Query FindAll Unternehmen
             Query query = session.getNamedQuery("AnalysisSteps.findall");
@@ -60,10 +45,13 @@ public class Kursmomentum {
 
             for (AnalysisSteps pkt : pktList) {
 
+                pkt.setKursmomentum((float) 0);
+
                     // Fall 1 Kriterium 9: 1 Pkt., Kriterium 10 : 0 oder -1 Pkt.
                     if (pkt.getKursverlauf6Monate() == 1 == true && pkt.getKursverlauf12Monate() ==1 == false ){
 
-                        pkt.setKursverlauf12Monate((float) 1);
+                        pkt.setKursmomentum((float) 1);
+
                         float kursmomentumPkt = pkt.getKursverlauf12Monate()-pkt.getKursverlauf6Monate();
 
                     System.out.println("Fall 1 : yea AnalysisRatingName :  "+pkt.getAnalysisStepsName() +" Unternehmen: "+ pkt.getCompanyname_AnalysisSteps());
@@ -73,7 +61,8 @@ public class Kursmomentum {
                 if (pkt.getKursverlauf6Monate()  == -1 == true && pkt.getKursverlauf12Monate()  == -1 == false ) {
 
                     {    // un.setAnalysisRatingName (un.getAnalysisRatingName ());
-                        pkt.setKursverlauf12Monate((float) 1);
+                        pkt.setKursmomentum((float) 1);
+
                         float kursmomentumPkt = pkt.getKursverlauf12Monate()-pkt.getKursverlauf6Monate();
 
                         //   un.setAnalystenmeinungen(111);
@@ -81,24 +70,17 @@ public class Kursmomentum {
                     }
                 }
 
-                    else {
 
-                    // un.setAnalysisRatingName (un.getAnalysisRatingName ());
-                    pkt.setKursverlauf12Monate((float) 0);
-                    float kursmomentumPkt = pkt.getKursverlauf12Monate()-pkt.getKursverlauf6Monate();
 
-                    pkt.setKursmomentum(pkt.getAnalystenmeinungen());
-                    System.out.println("Fall 3 : yea AnalysisRatingName :  "+pkt.getAnalysisStepsName() +" Unternehmen: "+ pkt.getCompanyname_AnalysisSteps());
+                session.getTransaction().commit();
 
-                }
-
+                System.out.println(pkt.getKursmomentum());
+                session.save(pkt);
 
             }
 
 
 
-            //commit transaction
-            session.getTransaction().commit();
 
 
 
@@ -107,14 +89,15 @@ public class Kursmomentum {
 
 
 
-            System.out.println("Done!");
-        } catch (HibernateException e) {
-            System.out.println("Hibernate Exception" + e.getMessage());
-            session.getTransaction().rollback();
-            throw new RuntimeException(e);
+            session.close();
+
+        } catch (HibernateException e){
+            e.printStackTrace();
+        } catch (Exception e){
+            e.printStackTrace();
         } finally {
+            System.out.println("Done !");
         }
 
     }
-
 }

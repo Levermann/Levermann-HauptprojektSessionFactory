@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox alignment="CENTER" prefHeight="810.0" prefWidth="1500.0" spacing="20.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.levermann.InformationController">
+    <children>
+      <AnchorPane prefHeight="643.0" prefWidth="1291.0">
+         <children>
+            <Accordion layoutX="4.0" layoutY="-11.0" prefHeight="521.0" prefWidth="1291.0">
+              <panes>
+                <TitledPane animated="false" prefHeight="295.0" prefWidth="1291.0" text="1. Eigenkapitalrendite" textFill="#3dc92e">
+                  <content>
+                    <AnchorPane maxHeight="1.7976931348623157E308" minHeight="0.0" minWidth="0.0" prefHeight="159.0" prefWidth="1289.0">
+                        <children>
+                            <Text fontSmoothingType="LCD" layoutX="14.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Definition: Die Eigenkapitalrendite (engl. Return on Equity, kurz RoE) beschreibt das Verhältnis von Gewinn zu Eigenkapital.
+Bedeutung: Die Eigenkapitalrendite hat für Aktien eine wichtige Bedeutung. Es hat sich herausgestellt, dass es eine Verbindung zwischen der Eigenkapitalrendite und der Performance der Aktie gibt. Je höher die Eigenkapitalrendite ist, desto wahrscheinlicher ist eine Wertsteigerung.
+Bewertung: Beträgt der Prozentsatz weniger als 10 Prozent, gibt es einen Minuspunkt. Liegt der Wert zwischen 10 und 20 Prozent, werden 0 Punkte verteilt. Und wenn er über 20 Prozent liegt, gibt es einen Pluspunkt
+" wrappingWidth="1218.0">
+                                <font>
+                                    <Font size="14.0" />
+                                </font>
+                            </Text>
+                        </children>
+                        </AnchorPane>
+                  </content>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                </TitledPane>
+                <TitledPane animated="false" text="2. EBIT Marge" textFill="#3dc92e">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="150.0" prefWidth="1289.0">
+                           <children>
+                              <Text fontSmoothingType="LCD" layoutX="14.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Definition: Die EBIT-Marge ist eine betriebswirtschaftliche Kennzahl, die Aussagen über die Rentabilität von Unternehmen macht. Sie ergibt sich aus dem Quotienten von EBIT und Umsatz.Bedeutung: Hohe EBIT-Margen sind ein Qualitätskriterium für das Anlagerisiko. Je höher die EBIT-Marge ist, desto leichter lassen sich Umsatzrückgänge wirtschaftlich verkraften. Mit der EBIT-Marge hast Du einen Blick auf das operative Ergebnis eines Unternehmens. Je höher die Prozentzahl, um so profitabler ist das Unternehmen. Das EBIT ist der Gewinn vor Zinsen und Steuern." wrappingWidth="1218.0">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </AnchorPane>
+                  </content>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                </TitledPane>
+                  <TitledPane animated="false" text="3. Eigenkapitalquote" textFill="#3dc92e">
+                      <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="150.0" prefWidth="1289.0">
+                              <children>
+                                  <Text fontSmoothingType="LCD" layoutX="14.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Definition: Die Eigenkapitalquote ist eine betriebswirtschaftliche Kennzahl, die das Verhältnis von Eigenkapital zum Gesamtkapital eines Unternehmens wiedergibt. Ist sie oberhalb der 25 Prozent-Marke, darfst Du der Aktie einen Pluspunkt geben Bedeutung: Die Eigenkapitalquote ist die bedeutendste Bilanzkennzahl, die Auskunft über die Kapitalstruktur eines Unternehmens gibt. Sie ist für die Kreditwürdigkeit eines Unternehmens von Bedeutung." wrappingWidth="1218.0">
+                                      <font>
+                                          <Font size="14.0" />
+                                      </font>
+                                  </Text>
+                              </children>
+                          </AnchorPane>
+                      </content>
+                      <font>
+                          <Font size="14.0" />
+                      </font>
+                  </TitledPane>
+                  <TitledPane animated="false" text="4. Kurs Gewinn Verhältnis" textFill="#3dc92e">
+                      <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="150.0" prefWidth="1289.0">
+                              <children>
+                                  <Text fontSmoothingType="LCD" layoutX="14.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Definition: Das Kurs-Gewinn-Verhältnis (kurz KGV) ist eine ökonomische Kennzahl zur Beurteilung von Aktien. Hierfür wird der Kurs der Aktie ins Verhältnis zu dem für einen Vergleichszeitraum bestimmten oder erwarteten Gewinn je Aktie gesetzt. Bedeutung: Das KGV sagt aus, mit welchem Vielfachen ihres erwarteten Ergebnisses eine Aktie an der Börse zurzeit bewertet wird. Anders formuliert besagt das KGV nach wie vielen Jahren der Gewinn des Unternehmens den Preis der Aktie bezahlt hat. Bewertung: Die bewertete Aktie erhält für ein KGV unter 12 einen Punkt. Liegt die Kennzahl zwischen 12 und 16 gibt es keinen Punkt. Alle Werte darüber erhalten einen Minuspunkt" wrappingWidth="1218.0">
+                                      <font>
+                                          <Font size="14.0" />
+                                      </font>
+                                  </Text>
+                              </children>
+                          </AnchorPane>
+                      </content>
+                      <font>
+                          <Font size="14.0" />
+                      </font>
+                  </TitledPane>
+                  <TitledPane animated="false" text="5. Kurs Gewinn Verhältnis Aktuell" textFill="#3dc92e">
+                      <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="150.0" prefWidth="1289.0">
+                              <children>
+                                  <Text fontSmoothingType="LCD" layoutX="14.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Definition: Entwicklung des durchschnittlichen Jahresgewinns im Verhältnis zum Kurs Bedeutung: KVG zeigt, ob die Aktien eher günstig oder teuer sind im Vergleich zum Rest niedriger KGV hat in der Vergangenheit zu Überrenditen geführt" wrappingWidth="1218.0">
+                                      <font>
+                                          <Font size="14.0" />
+                                      </font>
+                                  </Text>
+                              </children>
+                          </AnchorPane>
+                      </content>
+                      <font>
+                          <Font size="14.0" />
+                      </font>
+                  </TitledPane>
+                  <TitledPane animated="false" text="6. Analystenmeinungen" textFill="#3dc92e">
+                      <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="150.0" prefWidth="1289.0">
+                              <children>
+                                  <Text fontSmoothingType="LCD" layoutX="14.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Definition: Aktien werden von den Analysten in einer dreistufigen Skala eingestuft: Kaufen=1, Halten=2, Verkaufen=3. Es wird ein Durchschnittswert der Analystenmeinungen berechnet. Bedeutung: Die Meinungen der Analysten spiegeln eine Mehrheitsmeinung wieder, die keine Überraschungen mehr sind und somit auch kein großes Kurspotential mit sich bringen. Im Falle von großen und mittelgroßen Unternehmen wird diese Kennzahl als Kontraindikator verwendet. Für kleinere Unternehmen mit geringer Anzahl an Analystenmeinung gilt dies nicht. Für die Einteilung der Unternehmen in Smallcap, Midcap und Largecap siehe Kennzahl 14. Bewertung: Es gibt bei Verkaufsempfehlungen großer Unternehmen einen Pluspunkt (entgegengesetzt der Expertenmeinung) und bei Kaufempfehlungen einen Minuspunkt" wrappingWidth="1218.0">
+                                      <font>
+                                          <Font size="14.0" />
+                                      </font>
+                                  </Text>
+                              </children>
+                          </AnchorPane>
+                      </content>
+                      <font>
+                          <Font size="14.0" />
+                      </font>
+                  </TitledPane>
+                  <TitledPane animated="false" text="7. Reaktion auf Quartalszahlen" textFill="#3dc92e">
+                      <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="150.0" prefWidth="1289.0">
+                              <children>
+                                  <Text fontSmoothingType="LCD" layoutX="14.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Definition: Es wird berechnet wie sich der Kurs der Aktie am Tag der Veröffentlichung der letzten Quartalszahlen im Vergleich zum zugehörigen Index verändert hat. Die Kennzahl ergibt sich aus der Differenz der Tagesperformance des betrachteten Wertes und des Index. Bedeutung: Überraschend positive oder negative Quartalszahlen drücken sich in der Performance des Wertes am Handelstag aus. Auf positive oder negative Nachrichten folgen häufig weitere positive oder negative Nachrichten. " wrappingWidth="1218.0">
+                                      <font>
+                                          <Font size="14.0" />
+                                      </font>
+                                  </Text>
+                              </children>
+                          </AnchorPane>
+                      </content>
+                      <font>
+                          <Font size="14.0" />
+                      </font>
+                  </TitledPane>
+                  <TitledPane animated="false" text="8. Gewinnrevision" textFill="#3dc92e">
+                      <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="150.0" prefWidth="1289.0">
+                              <children>
+                                  <Text fontSmoothingType="LCD" layoutX="14.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Definition: Berechnet wird die Differenz der Analystenerwartungen für den Gewinn pro Aktie vor 4 Wochen mit den aktuellen Erwartungen für das laufende Jahr sowie das kommende Jahr. Bedeutung: Auf den Börsenkurs hat eine Gewinnwarnung oder prognostizierte Erhöhung immer einen riesigen Einfluss. Überraschend positive oder negative Analystenerwartungen drücken sich in der Performance des Wertes am Handelstag aus. Bewertung: Sobald es eine Änderung von über 5 Prozent gibt, addierst oder subtrahierst Du einen Punkt – je nachdem ob es nach oben oder unten ging " wrappingWidth="1218.0">
+                                      <font>
+                                          <Font size="14.0" />
+                                      </font>
+                                  </Text>
+                              </children>
+                          </AnchorPane>
+                      </content>
+                      <font>
+                          <Font size="14.0" />
+                      </font>
+                  </TitledPane>
+                  <TitledPane animated="false" text="9. Kursverlauf 6 Monate" textFill="#3dc92e">
+                      <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="150.0" prefWidth="1289.0">
+                              <children>
+                                  <Text fontSmoothingType="LCD" layoutX="14.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Definition: Berechnet wird die Differenz zwischen dem Kurs vor 6 Monaten und dem Kurs von heute. Bedeutung: Eine Aktie, deren Kurs in einem bestimmten Zeitraum um mehr als +5% oder -5% verändert hat, wird sich mit relativer Wahrscheinlichkeit weiter in die selbe Richtung entwickeln. Bewertung: Bei einem Kursanstieg über 5 Prozent gibt es einen Pluspunkt, bei einem Kursverlust von über 5 Prozent einen Minuspunkt. Dazwischen gibt es keinen. " wrappingWidth="1218.0">
+                                      <font>
+                                          <Font size="14.0" />
+                                      </font>
+                                  </Text>
+                              </children>
+                          </AnchorPane>
+                      </content>
+                      <font>
+                          <Font size="14.0" />
+                      </font>
+                  </TitledPane>
+                  <TitledPane animated="false" text="10. Kursverlauf 12 Monate" textFill="#3dc92e">
+                      <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="150.0" prefWidth="1289.0">
+                              <children>
+                                  <Text fontSmoothingType="LCD" layoutX="14.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Definition: Berechnet wird die Differenz zwischen dem Kurs vor 12 Monaten und dem Kurs von heute. Bedeutung: Eine Aktie, deren Kurs in einem bestimmten Zeitraum um mehr als +5% oder -5% verändert hat, wird sich mit relativer Wahrscheinlichkeit weiter in die selbe Richtung entwickeln. Bewertung: Gibt es in dem Entwicklungsverlauf eine Trendwende, so kommt Kennzahl 12 ins Spiel. Gibt es eine positive Trendwende zwischen den 6 und 12 Monaten, darfst Du hier einen weiteren Punkt vergeben. Wenn es negativ ist, dann natürlich nicht. " wrappingWidth="1218.0">
+                                      <font>
+                                          <Font size="14.0" />
+                                      </font>
+                                  </Text>
+                              </children>
+                          </AnchorPane>
+                      </content>
+                      <font>
+                          <Font size="14.0" />
+                      </font>
+                  </TitledPane>
+                  <TitledPane animated="false" text="11. Kursmomentum" textFill="#3dc92e">
+                      <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="150.0" prefWidth="1289.0">
+                              <children>
+                                  <Text fontSmoothingType="LCD" layoutX="14.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Definition: Mit dieser Kennzahl wird berechnet, ob es zu einer Trendumkehr gekommen ist. Bedeutung: Trendwenden zum Positiven werden belohnt. Trendwenden zum Negativen werden bestraft. Bewertung: +1 falls 9=1 und 10=0 oder -1, -1 falls 9=-1 und 10=0 oder 1, sonst 0 " wrappingWidth="1218.0">
+                                      <font>
+                                          <Font size="14.0" />
+                                      </font>
+                                  </Text>
+                              </children>
+                          </AnchorPane>
+                      </content>
+                      <font>
+                          <Font size="14.0" />
+                      </font>
+                  </TitledPane>
+                  <TitledPane animated="false" text="12. Dreimonatsreversal" textFill="#3dc92e">
+                      <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="150.0" prefWidth="1289.0">
+                              <children>
+                                  <Text fontSmoothingType="LCD" layoutX="14.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Definition: Bei der vorletzten Kennzahl handelt es sich um den Reversaleffekt, der aber nur in großen Indizes wie dem DAX eine Rolle spielt. Dieser Faktor berücksichtigt die Entwicklung des Wertes in den letzten 3 Monaten in Relation zum Vergleichsindex. Bedeutung: Viele Fonds sortieren Werte aus, die in den letzten 3 Monaten eine schlechte Performance hingelegt haben oder kaufen Aktien hinzu, die eine positive Performance hinter sich haben. Diese Käufe und Verkäufe wirken sich Anfangs auf den Kurs aus und korrigieren sich später wieder. Bewertung: +1 falls Performance in jedem Monat schlechter ist als Vergleichsindex, -1 falls Performance in jedem Monat besser ist als Vergleichsindex, sonst 0 " wrappingWidth="1218.0">
+                                      <font>
+                                          <Font size="14.0" />
+                                      </font>
+                                  </Text>
+                              </children>
+                          </AnchorPane>
+                      </content>
+                      <font>
+                          <Font size="14.0" />
+                      </font>
+                  </TitledPane>
+                  <TitledPane animated="false" text="13. Gewinnwachstum" textFill="#3dc92e">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Text fontSmoothingType="LCD" layoutX="14.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="1218.0"/>
+                           </children></AnchorPane>
+                    </content>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </TitledPane>
+              </panes>
+            </Accordion>
+         </children>
+      </AnchorPane>
+        <Button fx:id="InfoButton" alignment="BOTTOM_CENTER" contentDisplay="BOTTOM" onAction="#switchToPrimaryPage" style="-fx-border-color: black;" text="zurück" />
+    </children>
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+</VBox>
