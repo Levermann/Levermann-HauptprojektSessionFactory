@@ -13,9 +13,9 @@
     <children>
       <AnchorPane prefHeight="643.0" prefWidth="1291.0">
          <children>
-            <Accordion layoutX="4.0" layoutY="-11.0" prefHeight="521.0" prefWidth="1291.0">
+            <Accordion layoutX="4.0" layoutY="-11.0" prefHeight="521.0" prefWidth="1291.0" style="-fx-border-color: #58FA58;">
               <panes>
-                <TitledPane animated="false" prefHeight="295.0" prefWidth="1291.0" text="1. Eigenkapitalrendite" textFill="#3dc92e">
+                <TitledPane animated="false" prefHeight="295.0" prefWidth="1291.0" style="-fx-background-color: #58FA58;" text="1. Eigenkapitalrendite" textFill="#3dc92e">
                   <content>
                     <AnchorPane maxHeight="1.7976931348623157E308" minHeight="0.0" minWidth="0.0" prefHeight="159.0" prefWidth="1289.0">
                         <children>
