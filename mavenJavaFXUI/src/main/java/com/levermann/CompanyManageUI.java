@@ -1,17 +1,8 @@
 package com.levermann;
 
 import com.levermann.entityclass.Company;
-import com.levermann.sessionControlClasses.HibernateUtil;
-import javafx.beans.property.ObjectProperty;
-import javafx.beans.property.SimpleIntegerProperty;
-import javafx.beans.property.SimpleMapProperty;
-import javafx.beans.property.SimpleStringProperty;
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.scene.control.Button;
 import org.hibernate.Session;
-
-import javax.swing.*;
 
 import static com.levermann.sessionControlClasses.HibernateUtil.getSessionFactory;
 

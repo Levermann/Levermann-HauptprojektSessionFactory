@@ -204,7 +204,7 @@ private void disconnectToDB(){
             float daxVor3Monaten = Float.parseFloat(aktienkursVor3MonatenDB.getText());
             float gewinnschaezungDiesesJahr = Float.parseFloat(gewinnschaetzungDiesesJahrDB.getText());
             float gewinnschaezungNaechstesJahr = Float.parseFloat(gewinnschaetzungNaechstesJahrDB.getText());
-            float finanzsektor = 1;
+            float finanzsektor = 0;
             int perfInJedemMonat = Integer.parseInt(perfinjedemmonatDB.getText());
             int kursgewinnVor3Jahren = Integer.parseInt(gewinnVor3JahrenDB.getText());
             int kursgewinnVor2Jahren = Integer.parseInt(gewinnVor2JahrenDB.getText());
@@ -224,14 +224,12 @@ private void disconnectToDB(){
                      aktuellenErwartetenKursgewinn,  kursgewinnschaezungNaechstesJahr);
             addtoDB.add(company);
 
-
             Session session1 = HibernateUtil.getSessionFactory().openSession();
             session1.beginTransaction();
             session1.save(company);
             session1.getTransaction().commit();
             //TODO eventuell hier noch die Methodenaufrufe für die Berechnungen bevor die Session closed
             session1.close();
-
             disconnectToDB();
         }
     }
