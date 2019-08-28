@@ -16,7 +16,15 @@
     -fx-background-color: #00FF00;
     -fx-background-insets: 0, 0 0 1 0;
 }
-
+.table-view .button{
+    -fx-border-color: #000000;
+    -fx-background-color: #ffffff;
+    -fx-background-image: url('/pictures/MusterButton.png');
+    -fx-font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+    -fx-font-size: 9pt;
+    -fx-text-fill: #ffffff;
+    -fx-background-insets: 0 0 0 0, 0, 1, 2;
+}
 /* The main scrollbar **track** CSS class  */
 .table-view .scroll-bar:horizontal .track,
 .table-view .scroll-bar:vertical .track{
