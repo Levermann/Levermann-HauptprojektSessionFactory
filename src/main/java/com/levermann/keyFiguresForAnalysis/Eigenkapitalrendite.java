@@ -124,7 +124,7 @@ public void CalculateEigenkapitalrendite( ) {
                             un2.setCompanyname_AnalysisRating(un1.getCompanyname_AnalysisSteps());
                             un2.setEigenkapitalrendite((float) 0);
 
-                            System.out.println("keine Null Bro :D");
+                            System.out.println("Null Bro :D");
                         }
                     }
                 }
