@@ -6,9 +6,12 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
+import javafx.scene.control.TableCell;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.control.cell.TextFieldTableCell;
 
 import java.io.IOException;
 import java.net.URL;
@@ -17,15 +20,6 @@ import java.util.ResourceBundle;
 
 public class CompanyOverviewController implements Initializable, ControlledScreenInterface {
 
-
-
-
-    public static String companyNameString;
-    public static String dateString = "16.12.1999";
-    public static String deleteString = "hierMüllIcon";
-    public static String editString = "hierPfeilIcon";
-    public static String showString = "hierLupenIcon";
-    public static int analysisScoreTest = 10;
 
     @FXML
     TableView<CompanyManageUI> tableID;
@@ -36,18 +30,59 @@ public class CompanyOverviewController implements Initializable, ControlledScree
     @FXML
     TableColumn<CompanyManageUI, Integer> analysisScore;
     @FXML
-    TableColumn<CompanyManageUI, String> delete;
+    TableColumn<CompanyManageUI, Button> delete;
     @FXML
-    TableColumn<CompanyManageUI, String> edit;
+    TableColumn<CompanyManageUI, Button> edit;
     @FXML
-    TableColumn<CompanyManageUI, String> show;
+    TableColumn<CompanyManageUI, Button> show;
+
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        initTable();
+    }
+
+    private void initTable(){
+        initCols();
+        loadData();
+    }
+
+    private void initCols(){
+        companyName.setCellValueFactory(new PropertyValueFactory<CompanyManageUI, String>("company1"));
+        creationDate.setCellValueFactory(new PropertyValueFactory<CompanyManageUI, String>("dateFormat"));
+        analysisScore.setCellValueFactory(new PropertyValueFactory<CompanyManageUI, Integer>("score1"));
+        delete.setCellValueFactory(new PropertyValueFactory<CompanyManageUI, Button>("delete1"));
+        edit.setCellValueFactory(new PropertyValueFactory<CompanyManageUI, Button>("edit1"));
+        show.setCellValueFactory(new PropertyValueFactory<CompanyManageUI, Button>("show1"));
+
+        editTableCols();
+    }
+
+    private void editTableCols(){
+/*
+        companyName.setCellFactory(TextFieldTableCell.forTableColumn());
+        companyName.setOnEditCommit(e -> {
+            e.getTableView().getItems().get(e.getTablePosition().getRow().setCompany1(e.getNewValue()));
+        });
+
+        creationDate.setCellFactory(TextFieldTableCell.forTableColumn());
+        creationDate.setOnEditCommit(e -> {
+            e.getTableView().getItems().get(e.getTablePosition().getRow().setDateFormat(e.getNewValue()));
+        });
+
+ */
+
+        tableID.setEditable(true);
+    }
+
+    private void loadData(){
+        ObservableList<CompanyManageUI> overview = FXCollections.observableArrayList();
+        for (int i= 0; i < 7; i++){
+            overview.add(new CompanyManageUI("BMW", "heute" + i, 12 + i, new Button("delete"), new Button("edit"), new Button("show")));
+        }
+        tableID.setItems(overview);
+    }
 
 
-    public ObservableList<CompanyManageUI> overview = FXCollections.observableArrayList(
-            new CompanyManageUI("BMW", "li", 12, "hierMüllIcon", "hiePfeilIcon", "hierLupenIcon")
-
-
-    );
 
     ScreensController myController;
 
@@ -56,22 +91,10 @@ public class CompanyOverviewController implements Initializable, ControlledScree
         myController = screenParent;
     }
     //TODO Der Firmenname, der vom User in EnterCompanyName Seite eingegeben wurde muss ersetzt werden durch company1
-    @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {
-        companyName.setCellValueFactory(new PropertyValueFactory<CompanyManageUI, String>("company1"));
-        creationDate.setCellValueFactory(new PropertyValueFactory<CompanyManageUI, String>("dateFormat"));
-        analysisScore.setCellValueFactory(new PropertyValueFactory<CompanyManageUI, Integer>("score1"));
-        delete.setCellValueFactory(new PropertyValueFactory<CompanyManageUI, String>("delete1"));
-        edit.setCellValueFactory(new PropertyValueFactory<CompanyManageUI, String>("edit1"));
-        show.setCellValueFactory(new PropertyValueFactory<CompanyManageUI, String>("show1"));
 
-        tableID.setItems(overview);
-    }
     @FXML
     private void tableAktualisieren(){
-        overview.add(new CompanyManageUI(companyNameString, dateString, analysisScoreTest, deleteString,editString, showString));
-        //tableID.refresh();
-        //System.out.println("hi");
+
     }
 
     @FXML

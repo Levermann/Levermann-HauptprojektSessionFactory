@@ -1,94 +1,95 @@
 package com.levermann;
 
+import com.levermann.entityclass.Company;
+import com.levermann.sessionControlClasses.HibernateUtil;
 import javafx.beans.property.ObjectProperty;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleMapProperty;
 import javafx.beans.property.SimpleStringProperty;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.scene.control.Button;
+import org.hibernate.Session;
 
 import javax.swing.*;
+
+import static com.levermann.sessionControlClasses.HibernateUtil.getSessionFactory;
 
 
 public class CompanyManageUI  {
 
-    private final SimpleStringProperty company1;
-    private final SimpleStringProperty dateFormat;
-    private final SimpleIntegerProperty score1;
-    private final SimpleStringProperty delete1;
-    private final SimpleStringProperty edit1;
-    private final SimpleStringProperty show1;
+    private String company1;
+    private String dateFormat;
+    private int score1;
+    private Button delete1;
+    private Button edit1;
+    private Button show1;
 
-    public CompanyManageUI(String companyName, String creationDate, int analysisScore,
-                           String delete, String  edit, String show) {
-        this.company1 = new SimpleStringProperty(companyName);
-        this.dateFormat = new SimpleStringProperty (creationDate);
-        this.score1 = new SimpleIntegerProperty (analysisScore);
-        this.delete1 = new SimpleStringProperty (delete);
-        this.edit1 = new SimpleStringProperty(edit);
-        this.show1 = new SimpleStringProperty(show);
+
+    public CompanyManageUI(String company1, String dateFormat, int score1,
+                           Button delete1, Button  edit1, Button show1) {
+        this.company1 = company1;
+        this.dateFormat = dateFormat;
+        this.score1 = score1;
+        this.delete1 = new Button("deleteIt");
+        delete1.setOnAction(event -> {
+            Company company = new Company();
+            Session session1 = getSessionFactory().openSession();
+            session1.delete(company);
+            session1.getTransaction().commit();
+            //TODO eventuell hier noch die Methodenaufrufe für die Berechnungen bevor die Session closed
+            session1.close();
+        });
+        this.edit1 = new Button("editIt");
+        this.show1 = new Button("showIt");
     }
-
 
 
     public String getCompany1() {
-        return company1.get();
-    }
-
-    public SimpleStringProperty company1Property() {
         return company1;
     }
 
     public void setCompany1(String company1) {
-        this.company1.set(company1);
+        this.company1 = company1;
     }
 
-    public SimpleStringProperty getDateFormat() { return dateFormat; }
+    public String getDateFormat() {
+        return dateFormat;
+    }
+
+    public void setDateFormat(String dateFormat) {
+        this.dateFormat = dateFormat;
+    }
 
     public int getScore1() {
-        return score1.get();
+        return score1;
     }
-
-    public SimpleIntegerProperty score1Property() { return score1; }
 
     public void setScore1(int score1) {
-        this.score1.set(score1);
+        this.score1 = score1;
     }
 
-    public String getDelete1() {
-        return delete1.get();
-    }
-
-    public SimpleStringProperty delete1Property() {
+    public Button getDelete1() {
         return delete1;
     }
 
-    public void setDelete1(String delete1) {
-        this.delete1.set(delete1);
+    public void setDelete1(Button delete1) {
+        this.delete1 = delete1;
     }
 
-    public String getEdit1() {
-        return edit1.get();
-    }
-
-    public SimpleStringProperty edit1Property() {
+    public Button getEdit1() {
         return edit1;
     }
 
-    public void setEdit1(String edit1) {
-        this.edit1.set(edit1);
+    public void setEdit1(Button edit1) {
+        this.edit1 = edit1;
     }
 
-    public String getShow1() {
-        return show1.get();
-    }
-
-    public SimpleStringProperty show1Property() {
+    public Button getShow1() {
         return show1;
     }
 
-    public void setShow1(String show1) {
-        this.show1.set(show1);
+    public void setShow1(Button show1) {
+        this.show1 = show1;
     }
-
-
 }
