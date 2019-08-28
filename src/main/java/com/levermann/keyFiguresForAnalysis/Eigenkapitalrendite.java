@@ -1,4 +1,4 @@
-package com.levermann.keyFiguresForAnalysisOld;
+package com.levermann.keyFiguresForAnalysis;
 
 
 import com.levermann.entityclass.AnalysisRating;
@@ -52,7 +52,8 @@ public void CalculateEigenkapitalrendite( ) {
                 System.out.println("Fuuuuuuuuuuuuuuuuck");
                 un1.setCompanyname_AnalysisSteps(un1.getCompanyname_AnalysisSteps());
                 un1.setEigenkapitalrendite(un.getJahresueberschuss() / un.getEigenkapital());
-                if (un1.getEigenkapitalrendite() > 0) {
+
+                if (un1.getEigenkapitalrendite() > 20) {
                     //HQL Named Query FindAll Levermannschritte
                     Query query2 = session.getNamedQuery("AnalysisRating.findAll");
                     List<AnalysisRating> unList2 = (List<AnalysisRating>) query2.list();
@@ -76,33 +77,7 @@ public void CalculateEigenkapitalrendite( ) {
                         }
                     }
                 }
-                if (un1.getEigenkapitalrendite() == 0) {
-                    //HQL Named Query FindAll Levermannschritte
-                    Query query2 = session.getNamedQuery("AnalysisRating.findAll");
-                    List<AnalysisRating> unList2 = (List<AnalysisRating>) query2.list();
-                    for (AnalysisRating un2 : unList2) {
-                        System.out.println("Analyse Liste = " + un2.getAnalysisRatingName()
-                                + ","
-                                + un2.getCompanyname_AnalysisRating());
-
-                        // Ausgabe eines Datensatzes mit Cid
-                        query2 = session.getNamedQuery("AnalysisRating.findByName");
-                        query2.setString("Companyname_AnalysisRating", company);
-                        unList2 = query2.list();
-                        System.out.println("fuck y");
-                        if (un2.getCompanyname_AnalysisRating().equals(company)) {
-
-                            System.out.println("Fuuuuuuuuuuuuuuuuck");
-
-                            un2.setCompanyname_AnalysisRating(un1.getCompanyname_AnalysisSteps());
-                            un2.setEigenkapitalrendite((float) 0);
-
-                            System.out.println("keine Null Bro :D");
-                        }
-                    }
-                }
-
-                if (un1.getEigenkapitalrendite() < 0) {
+                if (un1.getEigenkapitalrendite() < 10) {
                     //HQL Named Query FindAll Levermannschritte
                     Query query2 = session.getNamedQuery("AnalysisRating.findAll");
                     List<AnalysisRating> unList2 = (List<AnalysisRating>) query2.list();
@@ -127,8 +102,34 @@ public void CalculateEigenkapitalrendite( ) {
                         }
                     }
                 }
+
+                if (un1.getEigenkapitalrendite() >= 10 && un1.getEigenkapitalrendite() <=20) {
+                    //HQL Named Query FindAll Levermannschritte
+                    Query query2 = session.getNamedQuery("AnalysisRating.findAll");
+                    List<AnalysisRating> unList2 = (List<AnalysisRating>) query2.list();
+                    for (AnalysisRating un2 : unList2) {
+                        System.out.println("Analyse Liste = " + un2.getAnalysisRatingName()
+                                + ","
+                                + un2.getCompanyname_AnalysisRating());
+
+                        // Ausgabe eines Datensatzes mit Cid
+                        query2 = session.getNamedQuery("AnalysisRating.findByName");
+                        query2.setString("Companyname_AnalysisRating", company);
+                        unList2 = query2.list();
+                        System.out.println("fuck y");
+                        if (un2.getCompanyname_AnalysisRating().equals(company)) {
+
+                            System.out.println("Fuuuuuuuuuuuuuuuuck");
+
+                            un2.setCompanyname_AnalysisRating(un1.getCompanyname_AnalysisSteps());
+                            un2.setEigenkapitalrendite((float) 0);
+
+                            System.out.println("keine Null Bro :D");
+                        }
+                    }
+                }
             }}}
-    
+
         session.getTransaction().commit();
           //    System.out.println("fuck youuuuuuuuuuuu" + un1.getEigenkapitalrendite()+ un1.getCompanyname_AnalysisSteps());
            System.out.println("Speichere Unternehmen...");
@@ -139,9 +140,5 @@ public void CalculateEigenkapitalrendite( ) {
            throw new RuntimeException(e);
        } finally {
        }
-
    }
-
-
-
 }

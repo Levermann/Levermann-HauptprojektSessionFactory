@@ -1,6 +1,6 @@
 package com.levermann.mainMethod;
 
-import com.levermann.keyFiguresForAnalysisOld.Eigenkapitalrendite;
+import com.levermann.keyFiguresForAnalysis.Eigenkapitalrendite;
 import org.apache.log4j.BasicConfigurator;
 
 

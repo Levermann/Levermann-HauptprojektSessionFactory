@@ -7,7 +7,7 @@
  *
  */
 
-package com.levermann.keyFiguresForAnalysis;
+package com.levermann.keyFiguresForAnalysisOld;
 
 import com.levermann.entityclass.AnalysisRating;
 import com.levermann.entityclass.Company;
@@ -79,11 +79,9 @@ public class Dreimonatsreversal {
 
                         lvsch.setAnalysisRatingName(lvsch.getAnalysisRatingName());
                          System.out.println("Unternehmen: " + un.getCompanyname() + " Levermannschritt: " + lvsch.getCompanyname_AnalysisRating()  + " analyseMeinungPkt =  " + analyseMeinungPkt);
-                        // System.out.println("Fall 1 : yea AnalysisRatingName:  "+lvsch.getAnalysisRatingName() +" AM: "+ lvsch.getGewinnrevision());
                     }
                 }
 
-                // FAll 1, Gewinnschätzung aktuell ist um mind. -0.05 niedriger als vor 4 Wochen
                 if (analyseMeinungPkt > 0.00 == true) {
 
                     //HQL Named Query FindAll AnalysisRating
@@ -95,11 +93,7 @@ public class Dreimonatsreversal {
                             System.out.println("Richtig :D" + lvsch1.getCompanyname_AnalysisRating() + " = " + un.getCompanyname()  + "analyseMeinungPkt = " + analyseMeinungPkt);
                             lvsch1.setDreimonatsreversal((float) -1);
                         }
-
                         lvsch1.setAnalysisRatingName(lvsch1.getAnalysisRatingName());
-
-                        //  System.out.println("Unternehmen: " + un.getCompanyname()  + " Levermannschritt: " + lvsch1.getCompanyname_AnalysisRating()());
-                        //  System.out.println("Fall 2 : yea AnalysisRatingName:  " + lvsch1.getAnalysisRatingName() + " AM: " + lvsch1.getGewinnrevision());
                     }
                 }
 
@@ -116,10 +110,7 @@ public class Dreimonatsreversal {
                         }
 
                         lvsch1.setAnalysisRatingName(lvsch1.getAnalysisRatingName());
-                        //  System.out.println("Fall 3 : yea AnalysisRatingName:  " + lvsch1.getAnalysisRatingName() + " AM: " + lvsch1.getGewinnrevision());
                     }
-                    //    System.out.println("Liste der AnalysisRating = " + un.getCompanyname()  + ","
-                    //       + un.getCompanyname()  + " Kursgewinn aktuell: " + un.getGewinnschaezung() + " Kursgewinn Verhältniss: " + un.getKursverlauf6Monate() + " summe:" + i);
                 }
             }
 
@@ -127,7 +118,6 @@ public class Dreimonatsreversal {
             //commit transaction
             session.getTransaction().commit();
 
-            // safe Unternhemen Object
             System.out.println("Speichere Unternehmen...");
 
             System.out.println("Done!");

@@ -5,15 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ef1c18af-56f3-4a36-8891-4764d24d597a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/levermann/UpdateRating/Eigenkapitalrendite.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/levermann/UpdateSteps/Eigenkapitalrendite.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/levermann/entityclass/AnalysisRating.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/levermann/entityclass/AnalysisRating.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/levermann/keyFiguresForAnalysisOld/Eigenkapitalquote.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/levermann/keyFiguresForAnalysisOld/Eigenkapitalquote.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/levermann/keyFiguresForAnalysisOld/Eigenkapitalrendite.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/levermann/keyFiguresForAnalysisOld/Eigenkapitalrendite.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/levermann/keyFiguresForAnalysisOld/GewinnEBIT.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/levermann/keyFiguresForAnalysisOld/GewinnEBIT.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/levermann/keyFiguresForAnalysisOld/KursGewinnVerhaeltnis.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/levermann/keyFiguresForAnalysisOld/KursGewinnVerhaeltnis.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/levermann/keyFiguresForAnalysisOld/KursgewinnVerhaeltnis5Jahre.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/levermann/keyFiguresForAnalysisOld/KursgewinnVerhaeltnis5Jahre.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/levermann/keyFiguresForAnalysis/Dreimonatsreversal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/levermann/keyFiguresForAnalysisOld/Dreimonatsreversal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/levermann/keyFiguresForAnalysis/Kursmomentum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/levermann/keyFiguresForAnalysisOld/Kursmomentum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/levermann/keyFiguresForAnalysisOld/Eigenkapitalrendite.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/levermann/keyFiguresForAnalysis/Eigenkapitalrendite.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/levermann/mainMethod/MainClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/levermann/mainMethod/MainClass.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -418,14 +413,7 @@
       <workItem from="1566650626276" duration="6535000" />
       <workItem from="1566940023613" duration="12018000" />
       <workItem from="1566987718940" duration="1006000" />
-      <workItem from="1566988867265" duration="20782000" />
-    </task>
-    <task id="LOCAL-00006" summary="Hibernate util + dao pattern">
-      <created>1554807313832</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1554807313832</updated>
+      <workItem from="1566988867265" duration="22790000" />
     </task>
     <task id="LOCAL-00007" summary="Hibernate util + dao pattern">
       <created>1554807385686</created>
@@ -763,7 +751,14 @@
       <option name="project" value="LOCAL" />
       <updated>1567010966938</updated>
     </task>
-    <option name="localTasksCounter" value="55" />
+    <task id="LOCAL-00055" summary="Eigenkapitalrendite done for update AnSteps and Rating">
+      <created>1567012837794</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1567012837794</updated>
+    </task>
+    <option name="localTasksCounter" value="56" />
     <servers />
   </component>
   <component name="TodoView">
@@ -818,7 +813,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Update 07.08.2019" />
     <MESSAGE value="Merge remote-tracking branch 'HauptprojektSessionFactory/Gui-blend' into TestBranchFlorian&#10;&#10;# Conflicts:&#10;#&#9;src/main/java/com/levermann/TestFiles/ConnectionMain.java&#10;#&#9;src/main/java/com/levermann/TestFiles/SelectOld.java&#10;#&#9;src/main/java/com/levermann/dao/Update.java&#10;#&#9;src/main/java/com/levermann/project/ConnectionMainFactory.java" />
     <MESSAGE value="upate 07.08.2019&#10;Add SQL statements for database creation&#10;Change Update parameter ID to parameter Company name for all&#10;Levermannschritte" />
     <MESSAGE value="upate 08.08.2019" />
@@ -843,7 +837,8 @@
     <MESSAGE value="Change to JDK 8 and now it WORKS AGAIN -.-" />
     <MESSAGE value="Maxis Businesslogik geadded" />
     <MESSAGE value="Eigenkapitalrendite done for update AnSteps" />
-    <option name="LAST_COMMIT_MESSAGE" value="Eigenkapitalrendite done for update AnSteps" />
+    <MESSAGE value="Eigenkapitalrendite done for update AnSteps and Rating" />
+    <option name="LAST_COMMIT_MESSAGE" value="Eigenkapitalrendite done for update AnSteps and Rating" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -855,17 +850,17 @@
           <option name="timeStamp" value="1" />
         </breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/levermann/keyFiguresForAnalysis/Dreimonatsreversal.java</url>
-          <line>86</line>
+          <url>file://$PROJECT_DIR$/src/main/java/com/levermann/keyFiguresForAnalysisOld/Dreimonatsreversal.java</url>
+          <line>84</line>
           <option name="timeStamp" value="25" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/levermann/keyFiguresForAnalysis/Dreimonatsreversal.java</url>
-          <line>93</line>
+          <url>file://$PROJECT_DIR$/src/main/java/com/levermann/keyFiguresForAnalysisOld/Dreimonatsreversal.java</url>
+          <line>91</line>
           <option name="timeStamp" value="26" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/levermann/keyFiguresForAnalysis/Dreimonatsreversal.java</url>
+          <url>file://$PROJECT_DIR$/src/main/java/com/levermann/keyFiguresForAnalysisOld/Dreimonatsreversal.java</url>
           <line>57</line>
           <option name="timeStamp" value="27" />
         </line-breakpoint>
@@ -905,8 +900,8 @@
           <option name="timeStamp" value="67" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/levermann/keyFiguresForAnalysisOld/Eigenkapitalrendite.java</url>
-          <line>68</line>
+          <url>file://$PROJECT_DIR$/src/main/java/com/levermann/keyFiguresForAnalysis/Eigenkapitalrendite.java</url>
+          <line>64</line>
           <option name="timeStamp" value="68" />
         </line-breakpoint>
       </breakpoints>

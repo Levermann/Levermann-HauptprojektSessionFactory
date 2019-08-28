@@ -7,7 +7,7 @@
  *
  */
 
-package com.levermann.keyFiguresForAnalysis;
+package com.levermann.keyFiguresForAnalysisOld;
 
 import com.levermann.entityclass.AnalysisSteps;
 import com.levermann.sessionControlClasses.HibernateUtil;
