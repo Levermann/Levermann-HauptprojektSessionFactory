@@ -55,10 +55,23 @@ public void CalculateEigenkapitalrendite( ) {
                 un1.setCompanyname_AnalysisSteps(un1.getCompanyname_AnalysisSteps());
 
                 // Calculate 13 Steps and fill in AnalysisSteps
-                un1.setEigenkapitalrendite(un.getJahresueberschuss() / un.getEigenkapital());
-                un1.setEBITMarge(un.getGewinnEBIT()/un.getJahresumsatz());
-                un1.setEigenkapitalquote();
+
+
+                un1.setEigenkapitalrendite(un.getJahresueberschuss() / un.getEigenkapital()); // Punkt 1
+                un1.setEBITMarge(un.getGewinnEBIT()/un.getJahresumsatz());                    // Punkt 2
+                un1.setEigenkapitalquote((float) 1);                                          // Punkt 3
+                un1.setKursGewinnVerhaeltnis((float) 1);                                      // Punkt 4
+                un1.setKursGewinnVerhaeltnisAktuell((float) 1);                               // Punkt 5
+                un1.setAnalystenmeinungen((float) 1);                                         // Punkt 6
+                un1.setReaktionaufQuartalszahlen((float)1);                                    // Punkt
+                un1.setGewinnrevision();
+                un1.setKursverlauf6Monate();
+                un1.setKursverlauf12Monate();
+                un1.setKursmomentum();
+                un1.setDreimonatsreversal();
+                un1.setGewinnwachstum();
                 un1.set
+
 
                         // Set Eigenkapitalrendite
 
