@@ -50,8 +50,17 @@ public void CalculateEigenkapitalrendite( ) {
             if (un1.getCompanyname_AnalysisSteps().equals(company)) {
 
                 System.out.println("Fuuuuuuuuuuuuuuuuck");
+
+                //Set Company
                 un1.setCompanyname_AnalysisSteps(un1.getCompanyname_AnalysisSteps());
+
+                // Calculate 13 Steps and fill in AnalysisSteps
                 un1.setEigenkapitalrendite(un.getJahresueberschuss() / un.getEigenkapital());
+                un1.setEBITMarge(un.getGewinnEBIT()/un.getJahresumsatz());
+                un1.setEigenkapitalquote();
+                un1.set
+
+                        // Set Eigenkapitalrendite
 
                 if (un1.getEigenkapitalrendite() > 20) {
                     //HQL Named Query FindAll Levermannschritte
@@ -128,6 +137,15 @@ public void CalculateEigenkapitalrendite( ) {
                         }
                     }
                 }
+
+                // Set EBIT-Marge
+
+                // Set Eigenkapitalquote
+
+                // KGV 5 Jahre
+
+                //  KGV aktuell
+
             }}}
 
         session.getTransaction().commit();

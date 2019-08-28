@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ef1c18af-56f3-4a36-8891-4764d24d597a" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/levermann/keyFiguresForAnalysis/Eigenkapitalrendite.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/levermann/keyFiguresForAnalysis/Eigenkapitalrendite.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -43,6 +44,13 @@
         <item name="hibernate.cfg.xml/Hibernate" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="levermann: schema" type="ebfa3cd1:MariaImplModel$Schema" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="hibernate.cfg.xml/Hibernate" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="levermann: schema" type="ebfa3cd1:MariaImplModel$Schema" />
+        <item name="company: table" type="dbc44a63:MariaImplModel$Table" />
       </path>
     </expand>
     <select />
@@ -409,14 +417,7 @@
       <workItem from="1566650626276" duration="6535000" />
       <workItem from="1566940023613" duration="12018000" />
       <workItem from="1566987718940" duration="1006000" />
-      <workItem from="1566988867265" duration="23194000" />
-    </task>
-    <task id="LOCAL-00008" summary="Hibernate util + dao pattern + persistance xml + Entitymanager">
-      <created>1554844074472</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1554844074472</updated>
+      <workItem from="1566988867265" duration="23936000" />
     </task>
     <task id="LOCAL-00009" summary="Umstellung auf SessionFactory">
       <created>1555580651860</created>
@@ -754,7 +755,14 @@
       <option name="project" value="LOCAL" />
       <updated>1567014907747</updated>
     </task>
-    <option name="localTasksCounter" value="57" />
+    <task id="LOCAL-00057" summary="Eigenkapitalrendite done for update AnSteps and Rating">
+      <created>1567015033372</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1567015033372</updated>
+    </task>
+    <option name="localTasksCounter" value="58" />
     <servers />
   </component>
   <component name="TodoView">
