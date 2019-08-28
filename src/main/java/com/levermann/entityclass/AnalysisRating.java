@@ -84,8 +84,8 @@ public class AnalysisRating  implements Serializable {
     private Float Gewinnwachstum;
 
 
-
     public AnalysisRating() { }
+
 
 
     public String getAnalysisRatingName() {

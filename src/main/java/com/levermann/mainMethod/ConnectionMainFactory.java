@@ -25,9 +25,9 @@ abstract public class ConnectionMainFactory  {
 
 
         Company company = new Company();
-        company.setCompanyname("KA");
+        company.setCompanyname("BMW");
 
-        company.setId(7);
+        company.setId(8);
          company.setEigenkapital(123214);
          company.setFremdkapital(324234);
         System.out.println("Got name with credentials " + company.getCompanyname());

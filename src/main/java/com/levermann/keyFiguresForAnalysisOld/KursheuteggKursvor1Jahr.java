@@ -1,31 +1,27 @@
 /*
  * Datenbankzugriff und Veränderung mit zwei Datenbanken
- * Levermann Spalten:  Kursverlauf6Monate: 1, -1 oder 0
- * Unternehmen Spalten: AktuellerAktienkurs, KursVor6Monaten
+ * Levermann Spalten:  Kursverlauf12Monate: 1, -1 oder 0
+ * Unternehmen Spalten: AktuellerAktienkurs, KursVor12Monaten
  * Autor: Lisa Stolz
  *
  *
  */
-
-package com.levermann.keyFiguresForAnalysis;
+package com.levermann.keyFiguresForAnalysisOld;
 
 import com.levermann.entityclass.AnalysisRating;
 import com.levermann.entityclass.Company;
 import com.levermann.sessionControlClasses.HibernateUtil;
 import org.apache.log4j.Logger;
-import org.hibernate.HibernateException;
-import org.hibernate.Query;
-import org.hibernate.Session;
-import org.hibernate.SessionFactory;
+import org.hibernate.*;
 
 import java.text.DecimalFormat;
 import java.util.List;
 import java.util.Scanner;
 
-public class KursheuteggKursvor6Monaten {
-    final static Logger logger = Logger.getLogger(Gewinnrevision.class);
+public class KursheuteggKursvor1Jahr {
+    final static Logger logger = Logger.getLogger(KursheuteggKursvor1Jahr.class);
 
-    public void KursheuteggKursvor6Monaten() {
+    public void KursheuteggKursvor1Jahr() {
         //Logger wird für die Methode ausgeführt
         logger.info("Logger is Entering the Execute method from Create");
         String returnValue = "";
@@ -33,10 +29,8 @@ public class KursheuteggKursvor6Monaten {
         System.out.println(" Bitte \n 1. Unternehmen \n 2. Datum \n 3. Eigenkapital \n 4. JahresÃ¼berschuss");
 
         //Aufrufen der aktuellen Session aus HibernateUtil
-        SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
-        Session session = sessionFactory.getCurrentSession();
-        Session session1 = sessionFactory.getCurrentSession();
-        Scanner scanner = new Scanner(System.in);
+        final Session session = HibernateUtil.getSessionFactory().openSession();
+        Transaction tx = null;
 
         try {
 
@@ -54,27 +48,27 @@ public class KursheuteggKursvor6Monaten {
             for (Company un : unList) {
 
                 // Berechnung der WerteVeränderung für Punkteverteilung
-                float kursheuteggKursvor6MonatenPkt;
-               kursheuteggKursvor6MonatenPkt= ((float) un.getAktuellerAktienkurs() / (float) un.getKursVor6Monaten()) * 100 - 100;
+                float KursheuteggKursvor1JahrPkt;
+               KursheuteggKursvor1JahrPkt= ((float) un.getAktuellerAktienkurs() / (float) un.getKursVor12Monaten()) * 100 - 100;
                 DecimalFormat f = new DecimalFormat("#0.00");
-                double toFormat = ((double) Math.round(kursheuteggKursvor6MonatenPkt * 100)) / 100;
+                double toFormat = ((double) Math.round(KursheuteggKursvor1JahrPkt * 100)) / 100;
                 f.format(toFormat);
 
                 // Aufrunden
-               kursheuteggKursvor6MonatenPkt= Math.round(kursheuteggKursvor6MonatenPkt);
-               kursheuteggKursvor6MonatenPkt=kursheuteggKursvor6MonatenPkt/ 100;
+               KursheuteggKursvor1JahrPkt= Math.round(KursheuteggKursvor1JahrPkt);
+               KursheuteggKursvor1JahrPkt=KursheuteggKursvor1JahrPkt/ 100;
 
-                // FAll 1, Kursschätzung Wert: +1
-                if (kursheuteggKursvor6MonatenPkt > 0.05 == true) {
+                // FAll 1, Gewinnschätzung aktuell ist um mind höher als vor 4 Wochen
+                if (KursheuteggKursvor1JahrPkt > 0.05 == true) {
 
                     //HQL Named Query FindAll AnalysisRating
                     Query query1 = session.getNamedQuery("AnalysisRating.findAll");
                     List<AnalysisRating> unList1 = (List<AnalysisRating>) query1.list();
                     for (AnalysisRating lvsch : unList1) {
 
-                        if (lvsch.getCompanyname_AnalysisRating() == un.getCompanyname()  == true &&kursheuteggKursvor6MonatenPkt>= 0.05 == true) {
-                            System.out.println("Richtig :D" + lvsch.getCompanyname_AnalysisRating() + " = " + un.getCompanyname()  + "kursheuteggKursvor6MonatenPkt = " + kursheuteggKursvor6MonatenPkt);
-                            lvsch.setKursverlauf6Monate((float) 1);
+                        if (lvsch.getCompanyname_AnalysisRating() == un.getCompanyname()  == true &&KursheuteggKursvor1JahrPkt>= 0.05 == true) {
+                            System.out.println("Richtig :D" + lvsch.getCompanyname_AnalysisRating() + " = " + un.getCompanyname()  + "KursheuteggKursvor1JahrPkt = " + KursheuteggKursvor1JahrPkt);
+                            lvsch.setKursverlauf12Monate((float) 1);
                         }
 
                         lvsch.setAnalysisRatingName(lvsch.getAnalysisRatingName());
@@ -83,17 +77,17 @@ public class KursheuteggKursvor6Monaten {
                     }
                 }
 
-                // FAll 2, Kursschätzung Wert: -1
-                if (kursheuteggKursvor6MonatenPkt < -0.05 == true) {
+                // FAll 1, Gewinnschätzung aktuell ist um mind. -0.05 niedriger als vor 4 Wochen
+                if (KursheuteggKursvor1JahrPkt < -0.05 == true) {
 
                     //HQL Named Query FindAll AnalysisRating
                     Query query1 = session.getNamedQuery("AnalysisRating.findAll");
                     List<AnalysisRating> unList1 = (List<AnalysisRating>) query1.list();
                     for (AnalysisRating lvsch1 : unList1) {
 
-                        if (lvsch1.getCompanyname_AnalysisRating() == un.getCompanyname()  == true &&kursheuteggKursvor6MonatenPkt<= -0.05 == true) {
-                            System.out.println("Richtig :D" + lvsch1.getCompanyname_AnalysisRating() + " = " + un.getCompanyname()  + "kursheuteggKursvor6MonatenPkt = " + kursheuteggKursvor6MonatenPkt);
-                            lvsch1.setKursverlauf6Monate((float) -1);
+                        if (lvsch1.getCompanyname_AnalysisRating() == un.getCompanyname()  == true &&KursheuteggKursvor1JahrPkt<= -0.05 == true) {
+                            System.out.println("Richtig :D" + lvsch1.getCompanyname_AnalysisRating() + " = " + un.getCompanyname()  + "KursheuteggKursvor1JahrPkt = " + KursheuteggKursvor1JahrPkt);
+                            lvsch1.setKursverlauf12Monate((float) -1);
                         }
 
                         lvsch1.setAnalysisRatingName(lvsch1.getAnalysisRatingName());
@@ -103,17 +97,16 @@ public class KursheuteggKursvor6Monaten {
                     }
                 }
 
-                //Fall 3, Kursschätzung Wert: 0
-                if (kursheuteggKursvor6MonatenPkt >= 0.05 == false &&kursheuteggKursvor6MonatenPkt<= -0.05 == false) {
+                if (KursheuteggKursvor1JahrPkt >= 0.05 == false &&KursheuteggKursvor1JahrPkt<= -0.05 == false) {
 
                     //HQL Named Query FindAll AnalysisRating
                     Query query1 = session.getNamedQuery("AnalysisRating.findAll");
                     List<AnalysisRating> unList1 = (List<AnalysisRating>) query1.list();
                     for (AnalysisRating lvsch1 : unList1) {
 
-                        if (lvsch1.getCompanyname_AnalysisRating() == un.getCompanyname()  == true &&kursheuteggKursvor6MonatenPkt> 0.005 == false &&kursheuteggKursvor6MonatenPkt< -0.05 == false) {
-                            System.out.println("Richtig :D" + lvsch1.getCompanyname_AnalysisRating() + " = " + un.getCompanyname()  + "kursheuteggKursvor6MonatenPkt = " + kursheuteggKursvor6MonatenPkt);
-                            lvsch1.setKursverlauf6Monate((float) 0);
+                        if (lvsch1.getCompanyname_AnalysisRating() == un.getCompanyname()  == true &&KursheuteggKursvor1JahrPkt> 0.005 == false &&KursheuteggKursvor1JahrPkt< -0.05 == false) {
+                            System.out.println("Richtig :D" + lvsch1.getCompanyname_AnalysisRating() + " = " + un.getCompanyname()  + "KursheuteggKursvor1JahrPkt = " + KursheuteggKursvor1JahrPkt);
+                            lvsch1.setKursverlauf12Monate((float) 0);
                         }
 
                         lvsch1.setAnalysisRatingName(lvsch1.getAnalysisRatingName());

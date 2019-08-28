@@ -15,7 +15,6 @@ import org.apache.log4j.Logger;
 import org.hibernate.*;
 
 import java.util.List;
-import java.util.Scanner;
 
 public class Kursmomentum {
 
@@ -39,12 +38,8 @@ public class Kursmomentum {
             Query query = session.getNamedQuery("AnalysisSteps.findall");
             List<AnalysisSteps> pktList = (List<AnalysisSteps>) query.list();
 
-
-
-
-
-            for (AnalysisSteps pkt : pktList) {
-
+            for (AnalysisSteps pkt : pktList)
+            {
                 pkt.setKursmomentum((float) 0);
 
                     // Fall 1 Kriterium 9: 1 Pkt., Kriterium 10 : 0 oder -1 Pkt.
@@ -69,8 +64,6 @@ public class Kursmomentum {
                         System.out.println("Fall 2 : yea AnalysisRatingName :  "+pkt.getAnalysisStepsName() +" Unternehmen: "+ pkt.getCompanyname_AnalysisSteps());
                     }
                 }
-
-
 
                 session.getTransaction().commit();
 

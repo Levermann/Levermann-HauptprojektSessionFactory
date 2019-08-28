@@ -1,12 +1,11 @@
 package com.levermann.mainMethod;
 
-import com.levermann.entityclass.Company;
+import com.levermann.keyFiguresForAnalysis.Dreimonatsreversal;
 import com.levermann.keyFiguresForAnalysis.Kursmomentum;
-import com.levermann.sessionControlClasses.HibernateUtil;
+import com.levermann.keyFiguresForAnalysisOld.Analystenmeinungen;
+import com.levermann.keyFiguresForAnalysisOld.Eigenkapitalrendite;
+import com.levermann.keyFiguresForAnalysisOld.Gewinnrevision;
 import org.apache.log4j.BasicConfigurator;
-import org.hibernate.HibernateException;
-import org.hibernate.Session;
-import org.hibernate.Transaction;
 
 
 abstract public class MainClass {
@@ -17,9 +16,19 @@ abstract public class MainClass {
 
      BasicConfigurator.configure();
 
-     Kursmomentum km = new Kursmomentum();
+
+
+     Eigenkapitalrendite anm = new Eigenkapitalrendite();
+
+     anm.CalculateEigenkapitalrendite();
+
+
+/*
+        Kursmomentum km = new Kursmomentum();
 
      km.Kursmomentum();
+
+ */
 
 
  }

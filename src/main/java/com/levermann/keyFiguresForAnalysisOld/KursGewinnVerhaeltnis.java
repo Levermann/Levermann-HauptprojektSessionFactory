@@ -1,32 +1,20 @@
-/*
- * Datenbankzugriff und Veränderung mit zwei Datenbanken
- * Levermann Spalten:  Gewinnrevision: 1, -1 oder 0
- * Unternehmen Spalten: Gewinnschaezung, GewinnschaezungVor4Wochen
- *
- *
- *
- */
-package com.levermann.keyFiguresForAnalysis;
-
+package com.levermann.keyFiguresForAnalysisOld;
 
 import com.levermann.entityclass.AnalysisRating;
 import com.levermann.entityclass.Company;
 import com.levermann.sessionControlClasses.HibernateUtil;
 import org.apache.log4j.Logger;
-import org.hibernate.HibernateException;
-import org.hibernate.Query;
-import org.hibernate.Session;
-import org.hibernate.SessionFactory;
+import org.hibernate.*;
 
 import java.text.DecimalFormat;
 import java.util.List;
 import java.util.Scanner;
 
- public class Gewinnrevision {
+public class KursGewinnVerhaeltnis {
+    
+    final static Logger logger = Logger.getLogger(Eigenkapitalrendite.class);
 
-   final static Logger logger = Logger.getLogger(Gewinnrevision.class);
-
-   public void Gewinnrevision () {
+   public void KursGewinnVerhaeltnis () {
        //Logger wird für die Methode ausgeführt
        logger.info("Logger is Entering the Execute method from Create");
        String returnValue = "";
@@ -34,10 +22,8 @@ import java.util.Scanner;
        System.out.println(" Bitte \n 1. Unternehmen \n 2. Datum \n 3. Eigenkapital \n 4. JahresÃ¼berschuss");
 
        //Aufrufen der aktuellen Session aus HibernateUtil
-       SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
-       Session session = sessionFactory.getCurrentSession();
-       Session session1 = sessionFactory.getCurrentSession();
-       Scanner scanner = new Scanner(System.in);
+       final Session session = HibernateUtil.getSessionFactory().openSession();
+       Transaction tx = null;
 
        try {
 
@@ -54,62 +40,81 @@ import java.util.Scanner;
            List<Company> unList = (List<Company>) query.list();
            for (Company un : unList) {
 
-               // Berechnung der WerteVeränderung für Punkteverteilung
-              float gewinnrevisionPkt;
-             gewinnrevisionPkt=  ((float)un.getGewinnschaezung()/(float)un.getGewinnschaezungVor4Wochen())*100-100;
+               // Berechnung der Eigenkapitalrendite für Punkteverteilung
+              float KursGewinnVerhaeltnisPkt;
+             KursGewinnVerhaeltnisPkt=  ((float)un.getAktuellerAktienkurs()/(float)un.getGewinnschaezung());
                DecimalFormat f = new DecimalFormat("#0.00");
-               double toFormat = ((double)Math.round(gewinnrevisionPkt*100))/100;
+               double toFormat = ((double)Math.round(KursGewinnVerhaeltnisPkt*100))/100;
                f.format(toFormat);
 
                 // Aufrunden
-              gewinnrevisionPkt= Math.round(gewinnrevisionPkt);
-              gewinnrevisionPkt=gewinnrevisionPkt/ 100;
+              KursGewinnVerhaeltnisPkt= Math.round(KursGewinnVerhaeltnisPkt);
+               
+               //definiere beide bewertungskriterien
+                int retval1, retval2, retval3;
+                float upperLimit = (float)16.0;
+                float lowerLimit = (float)12.0;
 
-               // FAll 1, Gewinnschätzung aktuell ist um mind höher als vor 4 Wochen
-                 if (gewinnrevisionPkt > 0.05 == true){
+                retval1 = Float.compare(KursGewinnVerhaeltnisPkt, upperLimit);
+                retval2 = Float.compare(KursGewinnVerhaeltnisPkt, (float)0.0);
+                retval3 = Float.compare(KursGewinnVerhaeltnisPkt, lowerLimit);
+                if (retval3 < 0 && retval2 > 0){
+                    //return 1;
+                }else if(retval2 < 0 || retval1 > 0){
+                    //return -1;
+                }else{
+                    //return 0;
+                }
+
+                float retval = Float.compare(KursGewinnVerhaeltnisPkt, upperLimit);
+               
+               // FAll 1, Kursgewinnverhältnis liegt zwischen 0 und 12
+                 if (retval3 < 0 && retval2 > 0){
 
                      //HQL Named Query FindAll AnalysisRating
                      Query query1 = session.getNamedQuery("AnalysisRating.findAll");
                      List<AnalysisRating> unList1 = (List<AnalysisRating>) query1.list();
                      for (AnalysisRating lvsch : unList1) {
 
-                         if (lvsch.getCompanyname_AnalysisRating() == un.getCompanyname()  == true &&gewinnrevisionPkt>= 0.05 == true){
-                             System.out.println("Richtig :D" + lvsch.getCompanyname_AnalysisRating() +" = " + un.getCompanyname() + "gewinnrevisionPkt = " + gewinnrevisionPkt);
-                             lvsch.setGewinnrevision((float) 1); }
+                         if (lvsch.getCompanyname_AnalysisRating() == un.getCompanyname()  == true){
+                             System.out.println("Richtig :D" + lvsch.getCompanyname_AnalysisRating() +" = " + un.getCompanyname() + "KursGewinnVerhaeltnisPkt = " + KursGewinnVerhaeltnisPkt);
+                             lvsch.setEigenkapitalrendite((float) 1); }
 
                      lvsch.setAnalysisRatingName(lvsch.getAnalysisRatingName());
                       // System.out.println("Unternehmen: " + un.getCompanyname() + " Levermannschritt: " + lvsch.getCompanyname_AnalysisRating()() );
                       // System.out.println("Fall 1 : yea AnalysisRatingName:  "+lvsch.getAnalysisRatingName() +" AM: "+ lvsch.getGewinnrevision());
-                         }}
+                         }
+                 //Eigenkapitalquote ist kleiner als 25/10%
+                 }
 
-               // FAll 1, Gewinnschätzung aktuell ist um mind. -0.05 niedriger als vor 4 Wochen
-                 if (gewinnrevisionPkt < - 0.05 == true ) {
+               // FAll 2, Kursgewinnverhältnis ist kleiner 0 oder größer 16
+               else if (retval2 < 0 || retval1 > 0 ) {
 
                      //HQL Named Query FindAll AnalysisRating
                      Query query1 = session.getNamedQuery("AnalysisRating.findAll");
                      List<AnalysisRating> unList1 = (List<AnalysisRating>) query1.list();
                      for (AnalysisRating lvsch1 : unList1) {
 
-                         if (lvsch1.getCompanyname_AnalysisRating() == un.getCompanyname()  == true &&gewinnrevisionPkt<= - 0.05 == true ){
-                             System.out.println("Richtig :D" + lvsch1.getCompanyname_AnalysisRating() +" = " + un.getCompanyname()  + "gewinnrevisionPkt = " + gewinnrevisionPkt);
-                             lvsch1.setGewinnrevision((float) -1); }
+                         if (lvsch1.getCompanyname_AnalysisRating() == un.getCompanyname()  == true && retval >= 0 ){
+                             System.out.println("Richtig :D" + lvsch1.getCompanyname_AnalysisRating() +" = " + un.getCompanyname()  + "KursGewinnVerhaeltnisPkt = " + KursGewinnVerhaeltnisPkt);
+                             lvsch1.setEigenkapitalrendite((float) -1); }
 
                      lvsch1.setAnalysisRatingName(lvsch1.getAnalysisRatingName());
 
                    //  System.out.println("Unternehmen: " + un.getCompanyname()  + " Levermannschritt: " + lvsch1.getCompanyname_AnalysisRating()());
                    //  System.out.println("Fall 2 : yea AnalysisRatingName:  " + lvsch1.getAnalysisRatingName() + " AM: " + lvsch1.getGewinnrevision());
-                       }}
-
-                 if (gewinnrevisionPkt >= 0.05 == false &&gewinnrevisionPkt<= - 0.05 == false ) {
+                       }
+                     //Fall 3, Kursgewinnverhältnis liegt zwischen 12 und 16
+                 }else{
 
                      //HQL Named Query FindAll AnalysisRating
                      Query query1 = session.getNamedQuery("AnalysisRating.findAll");
                      List<AnalysisRating> unList1 = (List<AnalysisRating>) query1.list();
                      for (AnalysisRating lvsch1 : unList1) {
 
-                         if (lvsch1.getCompanyname_AnalysisRating() == un.getCompanyname()  == true &&gewinnrevisionPkt> 0.005 == false &&gewinnrevisionPkt< -0.05 == false) {
-                             System.out.println("Richtig :D" + lvsch1.getCompanyname_AnalysisRating() + " = " + un.getCompanyname()  + "gewinnrevisionPkt = " + gewinnrevisionPkt);
-                             lvsch1.setGewinnrevision((float) 0);}
+                         if (lvsch1.getCompanyname_AnalysisRating() == un.getCompanyname()  == true) {
+                             System.out.println("Richtig :D" + lvsch1.getCompanyname_AnalysisRating() + " = " + un.getCompanyname()  + "KursGewinnVerhaeltnisPkt = " + KursGewinnVerhaeltnisPkt);
+                             lvsch1.setEigenkapitalrendite((float) 0);}
 
                          lvsch1.setAnalysisRatingName(lvsch1.getAnalysisRatingName());
                          //  System.out.println("Fall 3 : yea AnalysisRatingName:  " + lvsch1.getAnalysisRatingName() + " AM: " + lvsch1.getGewinnrevision());
@@ -117,6 +122,7 @@ import java.util.Scanner;
                           //    System.out.println("Liste der AnalysisRating = " + un.getCompanyname()  + ","
                          //       + un.getCompanyname()  + " Kursgewinn aktuell: " + un.getGewinnschaezung() + " Kursgewinn Verhältniss: " + un.getGewinnschaezungVor4Wochen() + " summe:" + i);
                  }
+                 
            }
 
 
@@ -135,5 +141,5 @@ import java.util.Scanner;
        }
 
    }
-
+    
 }
