@@ -11,7 +11,7 @@ import java.io.Serializable;
 @Access(AccessType.FIELD)
 @NamedQueries({
         @NamedQuery(name = "AnalysisRating.findAll", query = "SELECT B FROM AnalysisRating B"),
-        @NamedQuery(name = "AnalysisRating.findByName", query = "SELECT D  FROM AnalysisRating D WHERE D.AnalysisRatingName =:AnalyseRatingName")
+        @NamedQuery(name = "AnalysisRating.findByName", query = "SELECT D  FROM AnalysisRating D WHERE D.Companyname_AnalysisRating =:Companyname_AnalysisRating")
 
 })
 @Table(name= "AnalysisRating")

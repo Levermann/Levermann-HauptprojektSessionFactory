@@ -1,5 +1,6 @@
 package com.levermann.keyFiguresForAnalysisOld;
 
+import com.levermann.UpdateSteps.Eigenkapitalrendite;
 import com.levermann.entityclass.AnalysisRating;
 import com.levermann.entityclass.Company;
 import com.levermann.sessionControlClasses.HibernateUtil;
@@ -8,7 +9,6 @@ import org.hibernate.*;
 
 import java.text.DecimalFormat;
 import java.util.List;
-import java.util.Scanner;
 
 public class GewinnEBIT {
     

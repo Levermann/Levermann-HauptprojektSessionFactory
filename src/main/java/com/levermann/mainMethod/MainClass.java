@@ -1,10 +1,6 @@
 package com.levermann.mainMethod;
 
-import com.levermann.keyFiguresForAnalysis.Dreimonatsreversal;
-import com.levermann.keyFiguresForAnalysis.Kursmomentum;
-import com.levermann.keyFiguresForAnalysisOld.Analystenmeinungen;
 import com.levermann.keyFiguresForAnalysisOld.Eigenkapitalrendite;
-import com.levermann.keyFiguresForAnalysisOld.Gewinnrevision;
 import org.apache.log4j.BasicConfigurator;
 
 
