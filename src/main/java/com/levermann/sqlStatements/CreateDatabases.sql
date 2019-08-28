@@ -1,6 +1,6 @@
 create schema levermann;
 create table company(
-                            Companyname varchar (11) not null ,
+                            Companyname varchar (50) not null ,
                              id float (20)  unique ,
                              datum float(11),
                              eigenkapital float(11),
@@ -41,9 +41,9 @@ create table company(
 
 create table AnalysisSteps(
 
-                              AnalysisStepsName	varchar(20) not null unique,
+                              AnalysisStepsName	varchar(50) not null unique,
                             id float (20)  unique ,
-                              Companyname_AnalysisSteps varchar (20) not null ,
+                              Companyname_AnalysisSteps varchar (50) not null ,
                              Eigenkapitalrendite float(11),
                              EBITMarge float(11),
                              Eigenkapitalquote float(11),
@@ -63,9 +63,9 @@ create table AnalysisSteps(
 
 create table AnalysisRating(
 
-                               AnalysisRatingName	varchar(20) not null unique,
+                               AnalysisRatingName	varchar(50) not null unique,
                                  id float (20)  unique ,
-                               Companyname_AnalysisRating varchar (20) not null ,
+                               Companyname_AnalysisRating varchar (50) not null ,
                                   Eigenkapitalrendite float(11),
                                   EBITMarge float(11),
                                   Eigenkapitalquote float(11),
@@ -79,6 +79,7 @@ create table AnalysisRating(
                                   Kursmomentum float(11),
                                   Dreimonatsreversal float(11),
                                   Gewinnwachstum float(11),
+                                  GesamtPunkte float(11),
                                   PRIMARY KEY (AnalysisRatingName)
 
 );
