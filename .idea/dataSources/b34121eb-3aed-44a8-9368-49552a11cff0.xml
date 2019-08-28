@@ -5517,7 +5517,7 @@
     </column>
     <column id="1260" parent="325" name="datum">
       <Position>3</Position>
-      <DataType>float|0s</DataType>
+      <DataType>varchar(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
     <column id="1261" parent="325" name="eigenkapital">

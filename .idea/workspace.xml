@@ -5,12 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ef1c18af-56f3-4a36-8891-4764d24d597a" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/src/main/java/com/levermann/CompanyOverviewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/mavenJavaFXUI/src/main/java/com/levermann/CompanyOverviewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/src/main/java/com/levermann/InputController.java" beforeDir="false" afterPath="$PROJECT_DIR$/mavenJavaFXUI/src/main/java/com/levermann/InputController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/src/main/java/com/levermann/ShowUserInputController.java" beforeDir="false" afterPath="$PROJECT_DIR$/mavenJavaFXUI/src/main/java/com/levermann/ShowUserInputController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/src/main/java/com/levermann/ShowUserInputManageUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/mavenJavaFXUI/src/main/java/com/levermann/ShowUserInputManageUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/src/main/resources/com/levermann/userInput.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/mavenJavaFXUI/src/main/resources/com/levermann/userInput.fxml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,6 +19,7 @@
   </component>
   <component name="CoverageViewManager">
     <option name="myFlattenPackages" value="true" />
+    <option name="myElementSize" value="126" />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -80,6 +80,7 @@
         <option value="hibernate-configuration-5.2" />
         <option value="hibernate-main-5.2" />
         <option value="Class" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -92,7 +93,7 @@
     </option>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="Maxi2508" />
+        <entry key="$PROJECT_DIR$" value="xy" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -131,6 +132,7 @@
     <property name="database.console.LAST_STATE" value="false" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/mavenJavaFXUI/src/main/resources/com/levermann" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -141,19 +143,15 @@
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
   </component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.levermann.dao" />
+    </key>
     <key name="ImportMappingsDialog.RecentPackages">
       <recent name="com.levermann.sessionControlClasses" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
       <recent name="com.levermann.GuiNew" />
       <recent name="com.levermann.entityclass" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Lisa\IdeaProjects\Levermann-HauptprojektSessionFactory\src\main\java\com\levermann\sessionControlClasses" />
-      <recent name="C:\Users\Lisa\IdeaProjects\Levermann-HauptprojektSessionFactory\src\main\resources\resources" />
-      <recent name="C:\Users\Lisa\IdeaProjects\Levermann-HauptprojektSessionFactory\src\main\java\com\levermann\sqlStatements" />
-      <recent name="C:\Users\Lisa\IdeaProjects\Levermann-HauptprojektSessionFactory\src\main\java\com\levermann\mappingXMLs" />
-      <recent name="C:\Users\Lisa\IdeaProjects\Levermann-HauptprojektSessionFactory\src\main\resources" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -173,8 +171,12 @@
       <recent name="com.levermann.dao" />
       <recent name="com.levermann.project" />
     </key>
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="com.levermann.dao" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Lisa\IdeaProjects\Levermann-HauptprojektSessionFactory\src\main\java\com\levermann\sessionControlClasses" />
+      <recent name="C:\Users\Lisa\IdeaProjects\Levermann-HauptprojektSessionFactory\src\main\resources\resources" />
+      <recent name="C:\Users\Lisa\IdeaProjects\Levermann-HauptprojektSessionFactory\src\main\java\com\levermann\sqlStatements" />
+      <recent name="C:\Users\Lisa\IdeaProjects\Levermann-HauptprojektSessionFactory\src\main\java\com\levermann\mappingXMLs" />
+      <recent name="C:\Users\Lisa\IdeaProjects\Levermann-HauptprojektSessionFactory\src\main\resources" />
     </key>
   </component>
   <component name="RunAnythingCache">
@@ -194,7 +196,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.ConnectionMainFactory">
+  <component name="RunManager" selected="Application.App">
     <configuration default="true" type="TORNADOFX_RUNCONFIGURATION" factoryName="TornadoFX Configuration Factory" run-type="App" live-views="false" live-stylesheets="false" dump-stylesheets="false">
       <module name="LMPOCTest" />
       <method v="2">
@@ -202,11 +204,10 @@
       </method>
     </configuration>
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="ALTERNATIVE_JRE_PATH" value="12" />
+      <option name="ALTERNATIVE_JRE_PATH" value="Java 8" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="com.levermann.App" />
       <module name="mavenJavaFXUI" />
-      <option name="VM_PARAMETERS" value="--module-path C:\Users\Lisa\javafx-sdk-12.0.2\lib --add-modules=javafx.controls,javafx.fxml" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.levermann.*" />
@@ -218,7 +219,7 @@
       </method>
     </configuration>
     <configuration name="ConnectionMainFactory" type="Application" factoryName="Application" nameIsGenerated="true">
-      <option name="ALTERNATIVE_JRE_PATH" value="12" />
+      <option name="ALTERNATIVE_JRE_PATH" value="Java 8" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="com.levermann.mainMethod.ConnectionMainFactory" />
       <module name="LevermannAnalYse" />
@@ -240,6 +241,10 @@
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
+    </configuration>
+    <configuration name="mavenJavaFXUI-1.0-SNAPSHOT.jar" type="JarApplication" temporary="true">
+      <option name="JAR_PATH" value="$PROJECT_DIR$/mavenJavaFXUI/target/mavenJavaFXUI-1.0-SNAPSHOT.jar" />
+      <method v="2" />
     </configuration>
     <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
       <module name="LMPOCTest" />
@@ -317,14 +322,15 @@
       <item itemvalue="Application.ConnectionMainFactory" />
       <item itemvalue="Application.App" />
       <item itemvalue="Application.Main" />
+      <item itemvalue="JAR Application.mavenJavaFXUI-1.0-SNAPSHOT.jar" />
       <item itemvalue="Maven.mavenJavaFXUI [javafx:run]" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
         <item itemvalue="Application.App" />
+        <item itemvalue="JAR Application.mavenJavaFXUI-1.0-SNAPSHOT.jar" />
         <item itemvalue="Application.Main" />
-        <item itemvalue="Application.App" />
+        <item itemvalue="Application.Main" />
         <item itemvalue="Application.App" />
       </list>
     </recent_temporary>
@@ -333,7 +339,12 @@
     <option name="allServicesViewState">
       <serviceView>
         <treeState>
-          <expand />
+          <expand>
+            <path>
+              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@252e0141" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+            </path>
+          </expand>
           <select />
         </treeState>
       </serviceView>
@@ -347,7 +358,7 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="71376cf0-4a45-4351-8dca-943cab88ca4d" name="Default Changelist" comment="" />
+      <changelist id="ef1c18af-56f3-4a36-8891-4764d24d597a" name="Default Changelist" comment="" />
       <created>1554563104347</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -384,76 +395,7 @@
       <workItem from="1566491635410" duration="25623000" />
       <workItem from="1566585459730" duration="21406000" />
       <workItem from="1566650626276" duration="6535000" />
-    </task>
-    <task id="LOCAL-00003" summary="Hibernate util + dao pattern">
-      <created>1554798798186</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1554798798186</updated>
-    </task>
-    <task id="LOCAL-00004" summary="Hibernate util + dao pattern">
-      <created>1554805954604</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1554805954604</updated>
-    </task>
-    <task id="LOCAL-00005" summary="Hibernate util + dao pattern">
-      <created>1554806222499</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1554806222499</updated>
-    </task>
-    <task id="LOCAL-00006" summary="Hibernate util + dao pattern">
-      <created>1554807313832</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1554807313832</updated>
-    </task>
-    <task id="LOCAL-00007" summary="Hibernate util + dao pattern">
-      <created>1554807385686</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1554807385686</updated>
-    </task>
-    <task id="LOCAL-00008" summary="Hibernate util + dao pattern + persistance xml + Entitymanager">
-      <created>1554844074472</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1554844074472</updated>
-    </task>
-    <task id="LOCAL-00009" summary="Umstellung auf SessionFactory">
-      <created>1555580651860</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1555580651860</updated>
-    </task>
-    <task id="LOCAL-00010" summary="Umstellung auf SessionFactory">
-      <created>1555717392457</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1555717392457</updated>
-    </task>
-    <task id="LOCAL-00011" summary="Umstellung auf SessionFactory">
-      <created>1555718662260</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1555718662260</updated>
-    </task>
-    <task id="LOCAL-00012" summary="Umstellung auf SessionFactory">
-      <created>1555720761856</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1555720761856</updated>
+      <workItem from="1567001123150" duration="3682000" />
     </task>
     <task id="LOCAL-00013" summary="Umstellung auf SessionFactory">
       <created>1559037054010</created>
@@ -721,14 +663,84 @@
       <option name="project" value="LOCAL" />
       <updated>1566819045930</updated>
     </task>
-    <task id="LOCAL-00051" summary="ObservableList sieht Eingabe">
-      <created>1566847492963</created>
+    <task id="LOCAL-00051" summary="added UserInput Controller to check or update the Inputs manually">
+      <created>1566820021608</created>
       <option name="number" value="00051" />
       <option name="presentableId" value="LOCAL-00051" />
       <option name="project" value="LOCAL" />
-      <updated>1566847492964</updated>
+      <updated>1566820021608</updated>
     </task>
-    <option name="localTasksCounter" value="52" />
+    <task id="LOCAL-00052" summary="Change to JDK 8 and now it WORKS AGAIN -.-">
+      <created>1566863479624</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1566863479624</updated>
+    </task>
+    <task id="LOCAL-00053" summary="Maxis Businesslogik geadded">
+      <created>1566864568774</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1566864568774</updated>
+    </task>
+    <task id="LOCAL-00054" summary="UserInput via Session and JDBC in die DB">
+      <created>1566939352913</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1566939352913</updated>
+    </task>
+    <task id="LOCAL-00055" summary="added Stylesheet">
+      <created>1566944705506</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1566944705506</updated>
+    </task>
+    <task id="LOCAL-00056" summary="added Stylesheet">
+      <created>1566945734732</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1566945734732</updated>
+    </task>
+    <task id="LOCAL-00057" summary="added Stylesheet">
+      <created>1566946843421</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1566946843421</updated>
+    </task>
+    <task id="LOCAL-00058" summary="table">
+      <created>1566955368686</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1566955368686</updated>
+    </task>
+    <task id="LOCAL-00059" summary="Style">
+      <created>1566984608904</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1566984608905</updated>
+    </task>
+    <task id="LOCAL-00060" summary="session delete button">
+      <created>1566988656512</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1566988656512</updated>
+    </task>
+    <task id="LOCAL-00061" summary="style">
+      <created>1566994795520</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1566994795521</updated>
+    </task>
+    <option name="localTasksCounter" value="62" />
     <servers />
   </component>
   <component name="TodoView">
@@ -783,13 +795,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Update" />
-    <MESSAGE value="Update 29.05.2019 SQL-Abfragen" />
-    <MESSAGE value="Update 07.08.2019" />
-    <MESSAGE value="Merge remote-tracking branch 'HauptprojektSessionFactory/Gui-blend' into TestBranchFlorian&#10;&#10;# Conflicts:&#10;#&#9;src/main/java/com/levermann/TestFiles/ConnectionMain.java&#10;#&#9;src/main/java/com/levermann/TestFiles/SelectOld.java&#10;#&#9;src/main/java/com/levermann/dao/Update.java&#10;#&#9;src/main/java/com/levermann/project/ConnectionMainFactory.java" />
-    <MESSAGE value="upate 07.08.2019&#10;Add SQL statements for database creation&#10;Change Update parameter ID to parameter Company name for all&#10;Levermannschritte" />
-    <MESSAGE value="upate 08.08.2019" />
-    <MESSAGE value="Perfect Project --Thanks @Lisa Stolz" />
     <MESSAGE value="deleted boolshit again" />
     <MESSAGE value="renamed packages and co" />
     <MESSAGE value="latest version 19.08.2019" />
@@ -807,8 +812,15 @@
     <MESSAGE value="IT WORKS + Andis Sql Abfrage" />
     <MESSAGE value="added Named Queries and Information fxml" />
     <MESSAGE value="added UserInput Controller to check or update the Inputs manually" />
-    <MESSAGE value="ObservableList sieht Eingabe" />
-    <option name="LAST_COMMIT_MESSAGE" value="ObservableList sieht Eingabe" />
+    <MESSAGE value="Change to JDK 8 and now it WORKS AGAIN -.-" />
+    <MESSAGE value="Maxis Businesslogik geadded" />
+    <MESSAGE value="UserInput via Session and JDBC in die DB" />
+    <MESSAGE value="added Stylesheet" />
+    <MESSAGE value="table" />
+    <MESSAGE value="Style" />
+    <MESSAGE value="session delete button" />
+    <MESSAGE value="style" />
+    <option name="LAST_COMMIT_MESSAGE" value="style" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -819,6 +831,11 @@
           </properties>
           <option name="timeStamp" value="1" />
         </breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/mavenJavaFXUI/src/main/java/com/levermann/CompanyOverviewController.java</url>
+          <line>79</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
@@ -830,5 +847,6 @@
     <SUITE FILE_PATH="coverage/LevermannAnalyse$ConnectionMainFactory.ic" NAME="ConnectionMainFactory Coverage Results" MODIFIED="1566639806873" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.levermann.TestFiles.*</FILTER>
     </SUITE>
+    <SUITE FILE_PATH="coverage/LevermannAnalyse$.ic" NAME=" Coverage Results" MODIFIED="1566843097175" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

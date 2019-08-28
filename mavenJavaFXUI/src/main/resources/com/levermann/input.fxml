@@ -9,7 +9,11 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
+<?import java.net.URL?>
 <VBox alignment="CENTER" prefHeight="671.0" prefWidth="1292.0" spacing="20.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.levermann.InputController">
+   <stylesheets>
+      <URL value="@input.css" />
+   </stylesheets>
    <padding>
       <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
    </padding>
@@ -21,61 +25,88 @@
                   <Font size="20.0" />
                </font>
             </Label>
-            <Button fx:id="showResultButton" layoutX="853.0" layoutY="559.0" mnemonicParsing="false" onAction="#switchToShowResult" prefHeight="25.0" prefWidth="104.0" style="-fx-border-color: black;" text="OK, show Results" />
-            <Pane layoutX="189.0" layoutY="55.0" prefHeight="509.0" prefWidth="950.0">
+            <Button fx:id="showResultButton" layoutX="935.0" layoutY="578.0" mnemonicParsing="false" onAction="#switchToShowResult" prefHeight="25.0" prefWidth="104.0" style="-fx-border-color: black;" text="OK, show Results" />
+           <Button fx:id="btnAddFigures" layoutX="726.0" layoutY="578.0" onAction="#someMethod" prefHeight="25.0" prefWidth="104.0" style="-fx-border-color: black;" text="Add to DB" />
+            <Pane layoutX="174.0" layoutY="55.0" prefHeight="509.0" prefWidth="993.0">
                <children>
-                  <Label layoutX="14.0" layoutY="15.0" prefHeight="25.0" prefWidth="176.0" text="Jahresüberschuss" />
-                  <Label layoutX="14.0" layoutY="65.0" prefHeight="25.0" prefWidth="176.0" text="Eigenkapital" />
-                  <Label layoutX="14.0" layoutY="115.0" prefHeight="25.0" prefWidth="176.0" text="Gewinn(EBIT)" />
-                  <Label layoutX="14.0" layoutY="165.0" prefHeight="25.0" prefWidth="176.0" text="Fremdkapital" />
-                  <Label layoutX="14.0" layoutY="215.0" prefHeight="25.0" prefWidth="176.0" text="Aktueller Aktienkurs" />
-                  <Label layoutX="14.0" layoutY="265.0" prefHeight="25.0" prefWidth="176.0" text="geschätzer Gewinn" />
-                  <Label layoutX="14.0" layoutY="315.0" prefHeight="25.0" prefWidth="176.0" text="Analystenmeinungen" />
-                  <Label layoutX="14.0" layoutY="340.0" prefHeight="25.0" prefWidth="176.0" text="Kaufen" />
+                  <Label fx:id="ju" layoutX="14.0" layoutY="50.0" prefHeight="25.0" prefWidth="176.0" text="Jahresüberschuss" />
+                  <Label fx:id="ek" layoutX="13.0" layoutY="100.0" prefHeight="25.0" prefWidth="176.0" text="Eigenkapital" />
+                  <Label fx:id="ebit" layoutX="13.0" layoutY="146.0" prefHeight="25.0" prefWidth="176.0" text="Gewinn(EBIT)" />
+                  <Label fx:id="fk" layoutX="14.0" layoutY="208.0" prefHeight="25.0" prefWidth="176.0" text="Fremdkapital" />
+                  <Label fx:id="aa" layoutX="14.0" layoutY="255.0" prefHeight="25.0" prefWidth="176.0" text="Aktueller Aktienkurs" />
+                  <Label fx:id="gg" layoutX="232.0" layoutY="368.0" prefHeight="25.0" prefWidth="176.0" text="geschätzer Gewinn" />
+                  <Label fx:id="a" layoutX="13.0" layoutY="316.0" prefHeight="25.0" prefWidth="176.0" text="Analystenmeinungen" />
+                  <Label fx:id="kaufen" layoutX="14.0" layoutY="340.0" prefHeight="25.0" prefWidth="176.0" text="Kaufen" />
                   <Label layoutX="14.0" layoutY="390.0" prefHeight="25.0" prefWidth="176.0" text="Verkaufen" />
                   <Label layoutX="14.0" layoutY="440.0" prefHeight="25.0" prefWidth="176.0" text="Halten" />
-                  <Label layoutX="320.0" layoutY="14.0" prefHeight="25.0" prefWidth="176.0" text="Kursanstieg des Unternehmens" />
-                  <Label layoutX="320.0" layoutY="62.0" prefHeight="25.0" prefWidth="176.0" text="Kursanstieg Aktienindex" />
-                  <Label layoutX="320.0" layoutY="110.0" prefHeight="25.0" prefWidth="176.0" text="Gewinnschätzung vor 4 Wochen" />
-                  <Label layoutX="320.0" layoutY="158.0" prefHeight="25.0" prefWidth="176.0" text="Aktuelle Gewinnschätzung" />
-                  <Label layoutX="320.0" layoutY="208.0" prefHeight="25.0" prefWidth="176.0" text="Aktienkurs vor 6 Monaten" />
-                  <Label layoutX="320.0" layoutY="260.0" prefHeight="25.0" prefWidth="176.0" text="Aktienkurs vor 12 Monaten" />
-                  <Label layoutX="708.0" layoutY="14.0" prefHeight="25.0" prefWidth="176.0" text="Kurs vor 1 Monat" />
-                  <Label layoutX="708.0" layoutY="62.0" prefHeight="25.0" prefWidth="176.0" text="Kurs vor 2 Monaten" />
-                  <Label layoutX="708.0" layoutY="110.0" prefHeight="25.0" prefWidth="176.0" text="Kurs vor 3 Monaten" />
-                  <Label layoutX="708.0" layoutY="158.0" prefHeight="25.0" prefWidth="176.0" text="Aktienkurs vor 1 Monat" />
-                  <Label layoutX="708.0" layoutY="208.0" prefHeight="25.0" prefWidth="176.0" text="Aktienkurs vor 2 Monaten" />
-                  <Label layoutX="708.0" layoutY="260.0" prefHeight="25.0" prefWidth="176.0" text="Aktienkurs vor 3 Monaten" />
-                  <Label layoutX="708.0" layoutY="316.0" prefHeight="25.0" prefWidth="228.0" text="Gewinnschätzung für nächstes Jahr" />
-                  <Label layoutX="708.0" layoutY="366.0" prefHeight="25.0" prefWidth="228.0" text="Gewinnschätzung für dieses Jahr" />
-                  <TextField fx:id="jahresueberschuss" layoutX="14.0" layoutY="40.0" prefHeight="25.0" prefWidth="176.0" />
-                  <TextField fx:id="eigenkapital" layoutX="14.0" layoutY="90.0" prefHeight="25.0" prefWidth="176.0" />
-                  <TextField fx:id="gewinnEBIT" layoutX="14.0" layoutY="140.0" prefHeight="25.0" prefWidth="176.0" />
-                  <TextField fx:id="fremdkapital" layoutX="14.0" layoutY="190.0" prefHeight="25.0" prefWidth="176.0" />
-                  <TextField fx:id="aktuellerAktienkurs" layoutX="14.0" layoutY="240.0" prefHeight="25.0" prefWidth="176.0" />
-                  <TextField fx:id="geschaetzterGewinn" layoutX="14.0" layoutY="290.0" prefHeight="25.0" prefWidth="176.0" />
-                  <TextField fx:id="analystenKaufen" layoutX="14.0" layoutY="366.0" prefHeight="25.0" prefWidth="176.0" />
-                  <TextField fx:id="analystenVerkaufen" layoutX="14.0" layoutY="416.0" prefHeight="25.0" prefWidth="176.0" />
-                  <TextField fx:id="analystenHalten" layoutX="14.0" layoutY="466.0" prefHeight="25.0" prefWidth="176.0" />
-                  <TextField fx:id="kursanstiegUnternehmen" layoutX="320.0" layoutY="39.0" prefHeight="25.0" prefWidth="176.0" />
-                  <TextField fx:id="kursanstiegAktienindex" layoutX="320.0" layoutY="87.0" prefHeight="25.0" prefWidth="176.0" />
-                  <TextField fx:id="gewinnschaetzungVor4Wochen" layoutX="320.0" layoutY="135.0" prefHeight="25.0" prefWidth="176.0" />
-                  <TextField fx:id="aktuelleGewinnschaetzung" layoutX="320.0" layoutY="183.0" prefHeight="25.0" prefWidth="176.0" />
-                  <TextField fx:id="aktienkursVor6Monaten" layoutX="320.0" layoutY="233.0" prefHeight="25.0" prefWidth="176.0" />
-                  <TextField fx:id="aktienkursVor12Monaten" layoutX="320.0" layoutY="285.0" prefHeight="25.0" prefWidth="176.0" />
-                  <TextField fx:id="kursVor1Monat" layoutX="708.0" layoutY="39.0" prefHeight="25.0" prefWidth="176.0" />
-                  <TextField fx:id="kursVor2Monaten" layoutX="708.0" layoutY="87.0" prefHeight="25.0" prefWidth="176.0" />
-                  <TextField fx:id="kursVor3Monaten" layoutX="708.0" layoutY="135.0" prefHeight="25.0" prefWidth="176.0" />
-                  <TextField fx:id="aktienkursVor1Monat" layoutX="708.0" layoutY="183.0" prefHeight="25.0" prefWidth="176.0" />
-                  <TextField fx:id="aktienkursVor2Monaten" layoutX="708.0" layoutY="233.0" prefHeight="25.0" prefWidth="176.0" />
-                  <TextField fx:id="aktienkursVor3Monaten" layoutX="708.0" layoutY="285.0" prefHeight="25.0" prefWidth="176.0" />
-                  <TextField fx:id="gewinnschaetzungNaechstesJahr" layoutX="708.0" layoutY="341.0" prefHeight="25.0" prefWidth="176.0" />
-                  <TextField fx:id="gewinnschaetzungDiesesJahr" layoutX="708.0" layoutY="391.0" prefHeight="25.0" prefWidth="176.0" />
-                  <CheckBox fx:id="smallCap" layoutX="320.0" layoutY="320.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="185.0" text="Small Cap?" />
-                  <CheckBox fx:id="finanzwerte" layoutX="320.0" layoutY="357.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="185.0" text="Finanzwerte (z.B. Banken etc.)" />
+                  <Label layoutX="232.0" layoutY="2.0" prefHeight="25.0" prefWidth="176.0" text="Kursanstieg des Unternehmens" />
+                  <Label layoutX="232.0" layoutY="50.0" prefHeight="25.0" prefWidth="176.0" text="Kursanstieg Aktienindex" />
+                  <Label layoutX="232.0" layoutY="98.0" prefHeight="25.0" prefWidth="176.0" text="Gewinnschätzung vor 4 Wochen" />
+                  <Label layoutX="232.0" layoutY="146.0" prefHeight="25.0" prefWidth="176.0" text="Aktuelle Gewinnschätzung" />
+                  <Label layoutX="232.0" layoutY="196.0" prefHeight="25.0" prefWidth="176.0" text="Aktienkurs vor 6 Monaten" />
+                  <Label layoutX="234.0" layoutY="248.0" prefHeight="25.0" prefWidth="176.0" text="Aktienkurs vor 12 Monaten" />
+                  <Label layoutX="454.0" layoutY="3.0" prefHeight="25.0" prefWidth="176.0" text="Kurs vor 1 Monat" />
+                  <Label layoutX="454.0" layoutY="51.0" prefHeight="25.0" prefWidth="176.0" text="Kurs vor 2 Monaten" />
+                  <Label layoutX="454.0" layoutY="99.0" prefHeight="25.0" prefWidth="176.0" text="Kurs vor 3 Monaten" />
+                  <Label layoutX="454.0" layoutY="147.0" prefHeight="25.0" prefWidth="176.0" text="Aktienkurs vor 1 Monat" />
+                  <Label layoutX="454.0" layoutY="197.0" prefHeight="25.0" prefWidth="176.0" text="Aktienkurs vor 2 Monaten" />
+                  <Label layoutX="454.0" layoutY="249.0" prefHeight="25.0" prefWidth="176.0" text="Aktienkurs vor 3 Monaten" />
+                  <Label layoutX="454.0" layoutY="305.0" prefHeight="25.0" prefWidth="228.0" text="Gewinnschätzung für nächstes Jahr" />
+                  <Label layoutX="454.0" layoutY="355.0" prefHeight="25.0" prefWidth="228.0" text="Gewinnschätzung für dieses Jahr" />
+                  <Label layoutX="14.0" layoutY="6.0" prefHeight="17.0" prefWidth="161.0" text="Untenehmensname" />
+                  <Label layoutX="652.0" layoutY="7.0" prefHeight="17.0" prefWidth="161.0" text="ID" />
+                  <Label layoutX="652.0" layoutY="54.0" prefHeight="17.0" prefWidth="161.0" text="Datum" />
+                  <Label layoutX="652.0" layoutY="101.0" prefHeight="17.0" prefWidth="161.0" text="Jahresumsatz" />
+                  <Label layoutX="652.0" layoutY="150.0" prefHeight="17.0" prefWidth="161.0" text="Gewinnschätzung" />
+                  <Label layoutX="652.0" layoutY="200.0" prefHeight="17.0" prefWidth="161.0" text="Gewinn AVG" />
+                  <Label layoutX="652.0" layoutY="252.0" prefHeight="17.0" prefWidth="185.0" text="Kurs am Tag der Veröffentlichung" />
+                  <Label layoutX="652.0" layoutY="306.0" prefHeight="17.0" prefWidth="161.0" text="Perf in jedem Monat" />
+                  <Label layoutX="651.0" layoutY="357.0" prefHeight="17.0" prefWidth="161.0" text="Gewinn vor 3 Jahren" />
+                  <Label layoutX="652.0" layoutY="406.0" prefHeight="17.0" prefWidth="161.0" text="Gewinn vor 2 Jahren" />
+                  <Label layoutX="454.0" layoutY="416.0" prefHeight="17.0" prefWidth="161.0" text="Gewinn vor 1 Jahr" />
+                  <Label layoutX="234.0" layoutY="426.0" prefHeight="17.0" prefWidth="176.0" text="Aktueller erwarteter Kursgewinn" />
+                  <Label layoutX="652.0" layoutY="456.0" prefHeight="17.0" prefWidth="196.0" text="Kursgewinnschätzung nächstes Jahr" />
+                  <TextField fx:id="jahresueberschussDB" layoutX="13.0" layoutY="75.0" prefHeight="25.0" prefWidth="176.0" />
+                  <TextField fx:id="eigenkapitalDB" layoutX="13.0" layoutY="123.0" prefHeight="25.0" prefWidth="176.0" />
+                  <TextField fx:id="gewinnEBITDB" layoutX="14.0" layoutY="171.0" prefHeight="25.0" prefWidth="176.0" />
+                  <TextField fx:id="fremdkapitalDB" layoutX="13.0" layoutY="233.0" prefHeight="25.0" prefWidth="176.0" />
+                  <TextField fx:id="aktuellerAktienkursDB" layoutX="13.0" layoutY="285.0" prefHeight="25.0" prefWidth="176.0" />
+                  <TextField fx:id="geschaetzterGewinnDB" layoutX="232.0" layoutY="394.0" prefHeight="25.0" prefWidth="176.0" />
+                  <TextField fx:id="analystenKaufenDB" layoutX="14.0" layoutY="366.0" prefHeight="25.0" prefWidth="176.0" />
+                  <TextField fx:id="analystenVerkaufenDB" layoutX="14.0" layoutY="416.0" prefHeight="25.0" prefWidth="176.0" />
+                  <TextField fx:id="analystenHaltenDB" layoutX="14.0" layoutY="466.0" prefHeight="25.0" prefWidth="176.0" />
+                  <TextField fx:id="kursanstiegUnternehmenDB" layoutX="232.0" layoutY="27.0" prefHeight="25.0" prefWidth="176.0" />
+                  <TextField fx:id="kursanstiegAktienindexDB" layoutX="232.0" layoutY="75.0" prefHeight="25.0" prefWidth="176.0" />
+                  <TextField fx:id="gewinnschaetzungVor4WochenDB" layoutX="232.0" layoutY="123.0" prefHeight="25.0" prefWidth="176.0" />
+                  <TextField fx:id="aktuelleGewinnschaetzungDB" layoutX="232.0" layoutY="171.0" prefHeight="25.0" prefWidth="176.0" />
+                  <TextField fx:id="aktienkursVor6MonatenDB" layoutX="232.0" layoutY="221.0" prefHeight="25.0" prefWidth="176.0" />
+                  <TextField fx:id="aktienkursVor12MonatenDB" layoutX="234.0" layoutY="273.0" prefHeight="25.0" prefWidth="176.0" />
+                  <TextField fx:id="kursVor1MonatDB" layoutX="454.0" layoutY="28.0" prefHeight="25.0" prefWidth="176.0" />
+                  <TextField fx:id="kursVor2MonatenDB" layoutX="454.0" layoutY="76.0" prefHeight="25.0" prefWidth="176.0" />
+                  <TextField fx:id="kursVor3MonatenDB" layoutX="454.0" layoutY="124.0" prefHeight="25.0" prefWidth="176.0" />
+                  <TextField fx:id="aktienkursVor1MonatDB" layoutX="454.0" layoutY="172.0" prefHeight="25.0" prefWidth="176.0" />
+                  <TextField fx:id="aktienkursVor2MonatenDB" layoutX="454.0" layoutY="222.0" prefHeight="25.0" prefWidth="176.0" />
+                  <TextField fx:id="aktienkursVor3MonatenDB" layoutX="454.0" layoutY="274.0" prefHeight="25.0" prefWidth="176.0" />
+                  <TextField fx:id="gewinnschaetzungNaechstesJahrDB" layoutX="454.0" layoutY="330.0" prefHeight="25.0" prefWidth="176.0" />
+                  <TextField fx:id="gewinnschaetzungDiesesJahrDB" layoutX="454.0" layoutY="380.0" prefHeight="25.0" prefWidth="176.0" />
+                  <CheckBox fx:id="smallCapDB" layoutX="234.0" layoutY="308.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="185.0" text="Small Cap?" />
+                  <CheckBox fx:id="finanzwerteDB" layoutX="234.0" layoutY="345.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="185.0" text="Finanzwerte (z.B. Banken etc.)" />
+                  <TextField fx:id="unternehmennameDB" layoutX="13.0" layoutY="27.0" prefHeight="25.0" prefWidth="176.0" />
+                  <TextField fx:id="idDB" layoutX="652.0" layoutY="27.0" prefHeight="25.0" prefWidth="176.0" />
+                  <TextField fx:id="datumDB" layoutX="652.0" layoutY="74.0" prefHeight="25.0" prefWidth="176.0" />
+                  <TextField fx:id="jahresumsatzDB" layoutX="652.0" layoutY="121.0" prefHeight="25.0" prefWidth="176.0" />
+                  <TextField fx:id="gewinnschaetzungDB" layoutX="652.0" layoutY="170.0" prefHeight="25.0" prefWidth="176.0" />
+                  <TextField fx:id="gewinnavgDB" layoutX="652.0" layoutY="220.0" prefHeight="25.0" prefWidth="176.0" />
+                  <TextField fx:id="kursamtagderveroeffentlichungDB" layoutX="652.0" layoutY="272.0" prefHeight="25.0" prefWidth="176.0" />
+                  <TextField fx:id="perfinjedemmonatDB" layoutX="652.0" layoutY="326.0" prefHeight="25.0" prefWidth="176.0" />
+                  <TextField fx:id="gewinnVor3JahrenDB" layoutX="651.0" layoutY="377.0" prefHeight="25.0" prefWidth="176.0" />
+                  <TextField fx:id="gewinnVor2JahrenDB" layoutX="652.0" layoutY="426.0" prefHeight="25.0" prefWidth="176.0" />
+                  <TextField fx:id="gewinnVor1JahrDB" layoutX="454.0" layoutY="436.0" prefHeight="25.0" prefWidth="176.0" />
+                  <TextField fx:id="aktuellerErwarteterKursgewinnDB" layoutX="234.0" layoutY="446.0" prefHeight="25.0" prefWidth="176.0" />
+                  <TextField fx:id="kursgewinnschaetzungNaechstesJahrDB" layoutX="652.0" layoutY="476.0" prefHeight="25.0" prefWidth="176.0" />
                </children>
             </Pane>
-            <Button fx:id="getBackToPrimaryPage" layoutX="725.0" layoutY="559.0" mnemonicParsing="false" onAction="#switchToPrimaryPage" prefHeight="25.0" prefWidth="91.0" style="-fx-border-color: black;" text="main menu" />
+            <Button fx:id="getBackToPrimaryPage" layoutX="838.0" layoutY="578.0" mnemonicParsing="false" onAction="#switchToPrimaryPage" prefHeight="25.0" prefWidth="91.0" style="-fx-border-color: black;" text="main menu" />
          </children>
       </Pane>
    </children>

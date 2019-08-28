@@ -1,0 +1,25 @@
+*,
+.root {
+    -fx-background-color: #FFFFFF;
+}
+.text-field {
+    -fx-background-color: white;
+    -fx-border-color: #D8D8D8;
+    -fx-padding: 5px;
+}
+.check-box {
+    -fx-background-color: white;
+    -fx-padding: 5px;
+}
+.check-box:selected .mark {
+
+    -fx-background-color: white;
+}
+.check-box .box{
+    -fx-background-color: #28a3f4;
+}
+
+
+
+
+*
