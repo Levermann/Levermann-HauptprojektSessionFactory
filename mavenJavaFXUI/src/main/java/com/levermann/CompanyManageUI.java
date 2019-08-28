@@ -4,7 +4,9 @@ import javafx.beans.property.ObjectProperty;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleMapProperty;
 import javafx.beans.property.SimpleStringProperty;
+import javafx.scene.control.Button;
 
+import javax.swing.*;
 
 
 public class CompanyManageUI  {

@@ -1,20 +1,22 @@
 package com.levermann;
 
+import javafx.beans.property.Property;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.Scene;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.Date;
 import java.util.ResourceBundle;
 
 public class CompanyOverviewController implements Initializable, ControlledScreenInterface {
+
 
 
 
@@ -42,7 +44,7 @@ public class CompanyOverviewController implements Initializable, ControlledScree
 
 
     public ObservableList<CompanyManageUI> overview = FXCollections.observableArrayList(
-            new CompanyManageUI("BMW", "16.12.1999", 12, "hierMüllIcon", "hiePfeilIcon", "hierLupenIcon")
+            new CompanyManageUI("BMW", "li", 12, "hierMüllIcon", "hiePfeilIcon", "hierLupenIcon")
 
 
     );
@@ -53,7 +55,7 @@ public class CompanyOverviewController implements Initializable, ControlledScree
     public void setScreenParent(ScreensController screenParent){
         myController = screenParent;
     }
-//TODO Der Firmenname, der vom User in EnterCompanyName Seite eingegeben wurde muss ersetzt werden durch company1
+    //TODO Der Firmenname, der vom User in EnterCompanyName Seite eingegeben wurde muss ersetzt werden durch company1
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         companyName.setCellValueFactory(new PropertyValueFactory<CompanyManageUI, String>("company1"));
