@@ -169,6 +169,10 @@ public class Company implements Serializable  {
     @Basic
     @Column(name="KursgewinnschaezungNaechstesJahr", unique = true, nullable = true)
     private Integer KursgewinnschaezungNaechstesJahr;
+    @Basic
+    @Column(name="GesamtPunkte")
+    private float GesamtPunkte;
+
 
     public Company() {
 
@@ -475,4 +479,11 @@ public class Company implements Serializable  {
     }
 
 
+    public float getGesamtPunkte() {
+        return GesamtPunkte;
+    }
+
+    public void setGesamtPunkte(float gesamtPunkte) {
+        GesamtPunkte = gesamtPunkte;
+    }
 }

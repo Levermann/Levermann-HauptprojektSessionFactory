@@ -2,7 +2,7 @@ create schema levermann;
 create table company(
                             Companyname varchar (50) not null ,
                              id float (20)  unique ,
-                             datum float(11),
+                             datum varchar(11),
                              eigenkapital float(11),
                              jahresueberschuss float(11),
                              GewinnEBIT float (11),
@@ -35,6 +35,7 @@ create table company(
                              KursgewinnVor1Jahr float (11),
                              AktuellenErwartetenKursgewinn float (11),
                              KursgewinnschaezungNaechstesJahr float (11),
+                            GesamtPunkte float(11),
                               PRIMARY KEY (Companyname)
 
 );
@@ -79,7 +80,6 @@ create table AnalysisRating(
                                   Kursmomentum float(11),
                                   Dreimonatsreversal float(11),
                                   Gewinnwachstum float(11),
-                                  GesamtPunkte float(11),
                                   PRIMARY KEY (AnalysisRatingName)
 
 );
