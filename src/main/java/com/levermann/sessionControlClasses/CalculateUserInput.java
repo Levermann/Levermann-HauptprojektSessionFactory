@@ -128,7 +128,22 @@ public class CalculateUserInput {
                                     un2.setEigenkapitalquote((float) -1);
                             }
                         }
-
+                        /**
+                         * Punkteliste befüllen: Schritt 4 Kurs-Gewinn-Verhältnis aktuelles Jahr
+                         */
+                        for (AnalysisRating un2 : analysisRatingsFilled) {
+                            query7 = session.getNamedQuery("AnalysisRating.findByName");
+                            query7.setString("Companyname_AnalysisRating", company);
+                            if (un2.getCompanyname_AnalysisRating().equals(company)) {
+                                un2.setKursGewinnVerhaeltnisAktuell((float)0);
+                                un2.setCompanyname_AnalysisRating(un1.getCompanyname_AnalysisSteps());
+                                if (un1.getKursGewinnVerhaeltnisAktuell() > (float) 0.0 && un1.getKursGewinnVerhaeltnisAktuell() < (float) 12.0) {
+                                    un2.setKursGewinnVerhaeltnisAktuell((float) 1);
+                                } else if (un1.getKursGewinnVerhaeltnisAktuell() < (float) 0.0 || un1.getKursGewinnVerhaeltnisAktuell() > (float) 16.0) {
+                                    un2.setKursGewinnVerhaeltnisAktuell((float) -1);
+                                }
+                            }
+                        }
 
                         // Set EBIT-Marge
 

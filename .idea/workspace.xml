@@ -365,17 +365,17 @@
             <path>
               <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
               <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@99e11300" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@77d0e7aa" type="9fbbdea:ServiceModel$ServiceNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@5c496509" type="9fbbdea:ServiceModel$ServiceNode" />
             </path>
             <path>
               <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
               <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@99e11300" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@457217d" type="9fbbdea:ServiceModel$ServiceNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@22a65a61" type="9fbbdea:ServiceModel$ServiceNode" />
             </path>
             <path>
               <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
               <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@99e11300" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@4a06daab" type="9fbbdea:ServiceModel$ServiceNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@7bfe55a1" type="9fbbdea:ServiceModel$ServiceNode" />
             </path>
           </expand>
           <select />
@@ -428,14 +428,7 @@
       <workItem from="1566491635410" duration="25623000" />
       <workItem from="1566585459730" duration="21406000" />
       <workItem from="1566650626276" duration="6535000" />
-      <workItem from="1567001123150" duration="31255000" />
-    </task>
-    <task id="LOCAL-00023" summary="upate 08.08.2019">
-      <created>1565262385082</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1565262385082</updated>
+      <workItem from="1567001123150" duration="32509000" />
     </task>
     <task id="LOCAL-00024" summary="upate 08.08.2019">
       <created>1565263612659</created>
@@ -773,7 +766,14 @@
       <option name="project" value="LOCAL" />
       <updated>1567076628510</updated>
     </task>
-    <option name="localTasksCounter" value="72" />
+    <task id="LOCAL-00072" summary="eigenkapitalquto und ebitmarge save">
+      <created>1567077498363</created>
+      <option name="number" value="00072" />
+      <option name="presentableId" value="LOCAL-00072" />
+      <option name="project" value="LOCAL" />
+      <updated>1567077498363</updated>
+    </task>
+    <option name="localTasksCounter" value="73" />
     <servers />
   </component>
   <component name="TodoView">
@@ -838,7 +838,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Added @FXML Annotationen für Textfelder &amp; Checkboxen" />
     <MESSAGE value="Addes JDBC Driver&#10;Connection still failing" />
     <MESSAGE value="latest Version 21.08" />
     <MESSAGE value="new Controller" />
@@ -863,7 +862,8 @@
     <MESSAGE value="new Class CalculateUserInput @FlorianLand :*" />
     <MESSAGE value="update" />
     <MESSAGE value="eigenkapitalrendite save" />
-    <option name="LAST_COMMIT_MESSAGE" value="eigenkapitalrendite save" />
+    <MESSAGE value="eigenkapitalquto und ebitmarge save" />
+    <option name="LAST_COMMIT_MESSAGE" value="eigenkapitalquto und ebitmarge save" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -878,11 +878,6 @@
           <url>file://$PROJECT_DIR$/mavenJavaFXUI/src/main/java/com/levermann/CompanyOverviewController.java</url>
           <line>75</line>
           <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/levermann/sessionControlClasses/CalculateUserInput.java</url>
-          <line>93</line>
-          <option name="timeStamp" value="10" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
