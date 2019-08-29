@@ -15,7 +15,9 @@ import java.io.Serializable;
 public class AnalysisSteps implements Serializable {
 
 
-    public AnalysisSteps() {
+    public AnalysisSteps(String analysisstepsname, String companyname_AnalysisSteps) {
+        AnalysisStepsName = analysisstepsname;
+        Companyname_AnalysisSteps = companyname_AnalysisSteps;
 
     }
 
@@ -27,7 +29,7 @@ public class AnalysisSteps implements Serializable {
     @Column(name = "id")
     private Float id;
     @Basic
-    @Column(name = "Companyname_AnalysisSteps", insertable = false, updatable = false)
+    @Column(name = "Companyname_AnalysisSteps")
     private String Companyname_AnalysisSteps;
     @Basic
     @Column(name = "Eigenkapitalrendite")
@@ -69,6 +71,9 @@ public class AnalysisSteps implements Serializable {
     @Column(name = "Gewinnwachstum")
     private Float Gewinnwachstum;
 
+    public AnalysisSteps() {
+
+    }
 
 
     public String getAnalysisStepsName() {

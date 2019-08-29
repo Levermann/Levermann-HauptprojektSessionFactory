@@ -16,8 +16,11 @@ import java.io.Serializable;
 })
 @Table(name= "AnalysisRating")
 public class AnalysisRating  implements Serializable {
+    public AnalysisRating(String Analysisratingname, String companyname_AnalysisRating ) {
+        AnalysisRatingName = Analysisratingname;
+        Companyname_AnalysisRating = companyname_AnalysisRating;
 
-
+    }
     @Id
     @Column(name = "AnalysisRatingName")
     private String AnalysisRatingName;
