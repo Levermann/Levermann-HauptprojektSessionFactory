@@ -59,6 +59,13 @@
         <item name="levermann: schema" type="ebfa3cd1:MariaImplModel$Schema" />
         <item name="analysissteps: table" type="dbc44a63:MariaImplModel$Table" />
       </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="hibernate.cfg.xml/Hibernate" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="levermann: schema" type="ebfa3cd1:MariaImplModel$Schema" />
+        <item name="company: table" type="dbc44a63:MariaImplModel$Table" />
+      </path>
     </expand>
     <select />
   </component>
@@ -428,14 +435,7 @@
       <workItem from="1566491635410" duration="25623000" />
       <workItem from="1566585459730" duration="21406000" />
       <workItem from="1566650626276" duration="6535000" />
-      <workItem from="1567001123150" duration="32509000" />
-    </task>
-    <task id="LOCAL-00024" summary="upate 08.08.2019">
-      <created>1565263612659</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1565263612659</updated>
+      <workItem from="1567001123150" duration="34680000" />
     </task>
     <task id="LOCAL-00025" summary="upate 08.08.2019">
       <created>1565268660749</created>
@@ -773,7 +773,14 @@
       <option name="project" value="LOCAL" />
       <updated>1567077498363</updated>
     </task>
-    <option name="localTasksCounter" value="73" />
+    <task id="LOCAL-00073" summary="kgv aktuell save">
+      <created>1567078575285</created>
+      <option name="number" value="00073" />
+      <option name="presentableId" value="LOCAL-00073" />
+      <option name="project" value="LOCAL" />
+      <updated>1567078575285</updated>
+    </task>
+    <option name="localTasksCounter" value="74" />
     <servers />
   </component>
   <component name="TodoView">
@@ -838,7 +845,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Addes JDBC Driver&#10;Connection still failing" />
     <MESSAGE value="latest Version 21.08" />
     <MESSAGE value="new Controller" />
     <MESSAGE value="mysql connector in der POM -.-" />
@@ -863,7 +869,8 @@
     <MESSAGE value="update" />
     <MESSAGE value="eigenkapitalrendite save" />
     <MESSAGE value="eigenkapitalquto und ebitmarge save" />
-    <option name="LAST_COMMIT_MESSAGE" value="eigenkapitalquto und ebitmarge save" />
+    <MESSAGE value="kgv aktuell save" />
+    <option name="LAST_COMMIT_MESSAGE" value="kgv aktuell save" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

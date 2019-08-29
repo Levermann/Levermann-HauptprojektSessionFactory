@@ -62,7 +62,7 @@ public class CalculateUserInput {
                         un1.setEigenkapitalquote(un.getEigenkapital() / (un.getEigenkapital() + un.getFremdkapital()));                                       // Punkt 3
                         un1.setKursGewinnVerhaeltnisAktuell(un.getAktuellerAktienkurs() / un.getGewinnschaezung());                                      // Punkt 4
                         un1.setKursGewinnVerhaeltnis(un.getAktuellerAktienkurs() / un.getGewinnAVG());                               // Punkt 5 über 5 jahre
-                        un1.setAnalystenmeinungen((un.getKaufen() + un.getHalten() * 2 + un.getVerkaufen() * 3) / (un.getKaufen() + un.getVerkaufen() + un.getHalten()));                                         // Punkt 6
+                        un1.setAnalystenmeinungen((un.getKaufen() + (un.getHalten() * (float) 2.0) + (un.getVerkaufen() * (float) 3.0)) / (un.getKaufen() + un.getVerkaufen() + un.getHalten()));                                         // Punkt 6
                         un1.setReaktionaufQuartalszahlen(un.getKursanstiegUnternehmen() - un.getKursanstiegIndex());          // Punkt 7
                         un1.setGewinnrevision(((un.getGewinnschaezung() / un.getGewinnschaezungVor4Wochen()) - 1) * 100);                                               // Punkt 8
 
@@ -145,6 +145,50 @@ public class CalculateUserInput {
                             }
                         }
 
+                        /**
+                         * Punkteliste befüllen: Schritt 5 Kurs-Gewinn-Verhältnis über 5 Jahre
+                         */
+                        for (AnalysisRating un2 : analysisRatingsFilled) {
+                            query7 = session.getNamedQuery("AnalysisRating.findByName");
+                            query7.setString("Companyname_AnalysisRating", company);
+                            if (un2.getCompanyname_AnalysisRating().equals(company)) {
+                                un2.setKursGewinnVerhaeltnis((float)0);
+                                un2.setCompanyname_AnalysisRating(un1.getCompanyname_AnalysisSteps());
+                                if (un1.getKursGewinnVerhaeltnis() > (float) 0.0 && un1.getKursGewinnVerhaeltnis() < (float) 12.0) {
+                                    un2.setKursGewinnVerhaeltnis((float) 1);
+                                } else if (un1.getKursGewinnVerhaeltnis() < (float) 0.0 || un1.getKursGewinnVerhaeltnis() > (float) 16.0) {
+                                    un2.setKursGewinnVerhaeltnis((float) -1);
+                                }
+                            }
+                        }
+                        /**
+                         * Punkteliste befüllen: Schritt 6 Analystenmeinungen
+                         */
+                        for (AnalysisRating un2 : analysisRatingsFilled) {
+                            query7 = session.getNamedQuery("AnalysisRating.findByName");
+                            query7.setString("Companyname_AnalysisRating", company);
+                            if (un2.getCompanyname_AnalysisRating().equals(company)) {
+                                un2.setAnalystenmeinungen((float)0);
+                                un2.setCompanyname_AnalysisRating(un1.getCompanyname_AnalysisSteps());
+                                if (un.getHalten() + un.getVerkaufen() + un.getKaufen() <= (float) 5.0){
+                                    if (un1.getAnalystenmeinungen() <= (float) 1.5) {
+                                        un2.setAnalystenmeinungen((float) 1);
+                                    } else if (un1.getAnalystenmeinungen() >= (float) 2.5) {
+                                        un2.setAnalystenmeinungen((float) -1);
+                                    }
+                                }
+
+                                if (un.getHalten() + un.getVerkaufen() + un.getKaufen() > (float) 5.0){
+                                    if (un1.getAnalystenmeinungen() >= (float) 2.5) {
+                                        un2.setAnalystenmeinungen((float) 1);
+                                    } else if (un1.getAnalystenmeinungen() <= (float) 1.5) {
+                                        un2.setAnalystenmeinungen((float) -1);
+                                    }
+                                }
+
+
+                            }
+                        }
                         // Set EBIT-Marge
 
                         // Set Eigenkapitalquote
