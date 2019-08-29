@@ -1,6 +1,7 @@
 package com.levermann;
 
 import com.levermann.DB.DBConnection;
+import com.levermann.entityclass.Company;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -10,6 +11,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import org.apache.log4j.Logger;
 
 import java.io.IOException;
 import java.net.URL;
@@ -19,24 +21,19 @@ import java.sql.SQLException;
 import java.util.ResourceBundle;
 
 public class CompanyOverviewController implements Initializable, ControlledScreenInterface {
+    final static Logger logger = Logger.getLogger(com.levermann.CompanyOverviewController.class);
     private Connection con;
 
+    @FXML
+    private TableView<Company> tableID;
+    @FXML
+    private TableColumn<Company, String> companyName;
+    @FXML
+    private TableColumn<Company, String> creationDate;
+    @FXML
+    private TableColumn<Company, Float> analysisScore;
 
-    private static final String BMW = "gu";
-    @FXML
-    TableView<CompanyManageUI> tableID;
-    @FXML
-    TableColumn<CompanyManageUI, String> companyName;
-    @FXML
-    TableColumn<CompanyManageUI, String> creationDate;
-    @FXML
-    TableColumn<CompanyManageUI, Integer> analysisScore;
-    @FXML
-    TableColumn<CompanyManageUI, Button> delete;
-    @FXML
-    TableColumn<CompanyManageUI, Button> edit;
-    @FXML
-    TableColumn<CompanyManageUI, Button> show;
+
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -48,55 +45,24 @@ public class CompanyOverviewController implements Initializable, ControlledScree
             System.err.println("Could not connect to Leverman database...");
             e.printStackTrace();
         }
+        try {
+            ResultSet rs = con.createStatement().executeQuery("select Companyname, datum, GesamtPunkte from company");
 
-        initTable();
-    }
+            while (rs.next()) {
+                overview.add(new Company(rs.getString("Companyname"), rs.getString("datum"), rs.getFloat("GesamtPunke")));
+            }
 
-    private void initTable(){
-        initCols();
-        loadData();
-    }
-
-    private void initCols(){
-        companyName.setCellValueFactory(new PropertyValueFactory<CompanyManageUI, String>("company1"));
-        creationDate.setCellValueFactory(new PropertyValueFactory<CompanyManageUI, String>("dateFormat"));
-        analysisScore.setCellValueFactory(new PropertyValueFactory<CompanyManageUI, Integer>("score1"));
-        delete.setCellValueFactory(new PropertyValueFactory<CompanyManageUI, Button>("delete1"));
-        edit.setCellValueFactory(new PropertyValueFactory<CompanyManageUI, Button>("edit1"));
-        show.setCellValueFactory(new PropertyValueFactory<CompanyManageUI, Button>("show1"));
-
-        editTableCols();
-    }
-
-    private void editTableCols(){
-/*
-        companyName.setCellFactory(TextFieldTableCell.forTableColumn());
-        companyName.setOnEditCommit(e -> {
-            e.getTableView().getItems().get(e.getTablePosition().getRow().setCompany1(e.getNewValue()));
-        });
-
-        creationDate.setCellFactory(TextFieldTableCell.forTableColumn());
-        creationDate.setOnEditCommit(e -> {
-            e.getTableView().getItems().get(e.getTablePosition().getRow().setDateFormat(e.getNewValue()));
-        });
-
- */
-
-        tableID.setEditable(true);
-    }
-
-    private void loadData(){
-        ObservableList<CompanyManageUI> overview = FXCollections.observableArrayList();
-        for (int i= 0; i < 7; i++){
-            overview.add(new CompanyManageUI(BMW, "heute" + i, 12 + i, new Button("delete"), new Button("edit"), new Button("show")));
-
-
-
+        } catch (SQLException e) {
+            e.printStackTrace();
         }
+
+        companyName.setCellValueFactory(new PropertyValueFactory<Company, String>("Companyname"));
+        creationDate.setCellValueFactory(new PropertyValueFactory<Company, String>("datum"));
+        analysisScore.setCellValueFactory(new PropertyValueFactory<Company, Float>("GesamtPunkte"));
+
         tableID.setItems(overview);
     }
-
-
+    ObservableList<Company> overview = FXCollections.observableArrayList();
 
     ScreensController myController;
 

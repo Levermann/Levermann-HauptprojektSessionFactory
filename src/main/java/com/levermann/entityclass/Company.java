@@ -19,6 +19,16 @@ import java.io.Serializable;
 
 })
 public class Company implements Serializable  {
+
+
+    public Company(String Companyname, String datum, float GesamtPunkte) {
+        this.Companyname = Companyname;
+        this.datum = datum;
+        this.GesamtPunkte = GesamtPunkte;
+    }
+
+
+
     public Company(String companyname, String datum, float eigenkapital, float jahresueberschuss, float gewinnEBIT,
                    float jahresumsatz, float fremdkapital, float aktuellerAktienkurs, float gewinnschaezung,
                    float gewinnAVG, float halten, float verkaufen, float kaufen, float kursanstiegUnternehmen,
