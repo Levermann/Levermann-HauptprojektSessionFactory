@@ -23,7 +23,7 @@ abstract public class ConnectionMainFactory  {
      try {
          tx = session.beginTransaction();
 
-Object ob = session.load(Company.class, new String ("Bmw"));
+Object ob = session.load(Company.class, new String());
 Company DP = (Company)  ob;
          System.out.println("name:" + DP.getCompanyname());
 

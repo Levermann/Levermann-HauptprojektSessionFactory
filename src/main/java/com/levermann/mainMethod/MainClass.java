@@ -22,7 +22,7 @@ abstract public class MainClass {
      anm.CalculateEigenkapitalrendite();
 
 
- */
+
 
 
  }
