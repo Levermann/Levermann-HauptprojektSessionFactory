@@ -286,6 +286,7 @@ public class CalculateUserInput {
                             }
                         }
 
+                        //TODO Methode, welche die Gesamtpunktezahl in neues Feld Analysisrating speichert
                     }}}
 
             session.getTransaction().commit();

@@ -257,7 +257,6 @@ private void disconnectToDB(){
             CalculateUserInput xyz = new CalculateUserInput();
             xyz.CalculateEigenkapitalrendite();
 
-            //TODO eventuell hier noch die Methodenaufrufe für die Berechnungen bevor die Session closed
             session1.close();
             disconnectToDB();
         }
