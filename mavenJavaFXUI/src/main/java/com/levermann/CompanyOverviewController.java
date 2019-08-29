@@ -1,5 +1,6 @@
 package com.levermann;
 
+import com.levermann.DB.DBConnection;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -12,9 +13,13 @@ import javafx.scene.control.cell.PropertyValueFactory;
 
 import java.io.IOException;
 import java.net.URL;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ResourceBundle;
 
 public class CompanyOverviewController implements Initializable, ControlledScreenInterface {
+    private Connection con;
 
 
     private static final String BMW = "gu";
@@ -35,6 +40,15 @@ public class CompanyOverviewController implements Initializable, ControlledScree
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        try {
+            Connection con = DBConnection.getConnection();
+            System.out.println("Levermann database connected!");
+
+        } catch (SQLException e) {
+            System.err.println("Could not connect to Leverman database...");
+            e.printStackTrace();
+        }
+
         initTable();
     }
 
