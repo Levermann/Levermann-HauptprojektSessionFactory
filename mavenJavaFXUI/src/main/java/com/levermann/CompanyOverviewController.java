@@ -17,6 +17,7 @@ import java.util.ResourceBundle;
 public class CompanyOverviewController implements Initializable, ControlledScreenInterface {
 
 
+    private static final String BMW = "gu";
     @FXML
     TableView<CompanyManageUI> tableID;
     @FXML
@@ -73,7 +74,10 @@ public class CompanyOverviewController implements Initializable, ControlledScree
     private void loadData(){
         ObservableList<CompanyManageUI> overview = FXCollections.observableArrayList();
         for (int i= 0; i < 7; i++){
-            overview.add(new CompanyManageUI("BMW", "heute" + i, 12 + i, new Button("delete"), new Button("edit"), new Button("show")));
+            overview.add(new CompanyManageUI(BMW, "heute" + i, 12 + i, new Button("delete"), new Button("edit"), new Button("show")));
+
+
+
         }
         tableID.setItems(overview);
     }
