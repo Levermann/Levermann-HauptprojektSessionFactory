@@ -5,8 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ef1c18af-56f3-4a36-8891-4764d24d597a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/levermann/entityclass/AnalysisRating.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/levermann/entityclass/AnalysisRating.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/levermann/entityclass/AnalysisSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/levermann/entityclass/AnalysisSteps.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/levermann/utilHandling/AnalysisRatingG.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/levermann/utilHandling/AnalysisStepsG.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -76,8 +76,8 @@
         <option value="FxmlFile" />
         <option value="hibernate-configuration-5.2" />
         <option value="hibernate-main-5.2" />
-        <option value="Class" />
         <option value="CSS File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -387,14 +387,7 @@
       <workItem from="1566491635410" duration="25623000" />
       <workItem from="1566585459730" duration="21406000" />
       <workItem from="1566650626276" duration="6535000" />
-      <workItem from="1567001123150" duration="20110000" />
-    </task>
-    <task id="LOCAL-00017" summary="Update 29.05.2019 SQL-Abfragen">
-      <created>1559120609592</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1559120609592</updated>
+      <workItem from="1567001123150" duration="20393000" />
     </task>
     <task id="LOCAL-00018" summary="Update 07.08.2019">
       <created>1565171495946</created>
@@ -732,7 +725,14 @@
       <option name="project" value="LOCAL" />
       <updated>1567038812606</updated>
     </task>
-    <option name="localTasksCounter" value="66" />
+    <task id="LOCAL-00066" summary="anpassung entity Associations weg">
+      <created>1567039181763</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1567039181763</updated>
+    </task>
+    <option name="localTasksCounter" value="67" />
     <servers />
   </component>
   <component name="TodoView">
@@ -797,7 +797,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="renamed Controller" />
     <MESSAGE value="Created ManyToOne and OneTOMany associations for Mapping with Tables" />
     <MESSAGE value="added CompanyOverviewController" />
     <MESSAGE value="added CompanyOverviewController&#10;TestcommitMax" />
@@ -822,7 +821,8 @@
     <MESSAGE value="funktionierende Liste für userinput nur nicht die richtigen werte" />
     <MESSAGE value="checkbox design" />
     <MESSAGE value="added Gesamtpunkte" />
-    <option name="LAST_COMMIT_MESSAGE" value="added Gesamtpunkte" />
+    <MESSAGE value="anpassung entity Associations weg" />
+    <option name="LAST_COMMIT_MESSAGE" value="anpassung entity Associations weg" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
