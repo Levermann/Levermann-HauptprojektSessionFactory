@@ -435,14 +435,7 @@
       <workItem from="1566491635410" duration="25623000" />
       <workItem from="1566585459730" duration="21406000" />
       <workItem from="1566650626276" duration="6535000" />
-      <workItem from="1567001123150" duration="34680000" />
-    </task>
-    <task id="LOCAL-00025" summary="upate 08.08.2019">
-      <created>1565268660749</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1565268660749</updated>
+      <workItem from="1567001123150" duration="36760000" />
     </task>
     <task id="LOCAL-00026" summary="upate 08.08.2019">
       <created>1565293765277</created>
@@ -780,7 +773,14 @@
       <option name="project" value="LOCAL" />
       <updated>1567078575285</updated>
     </task>
-    <option name="localTasksCounter" value="74" />
+    <task id="LOCAL-00074" summary="analystenmeinungen save">
+      <created>1567080958459</created>
+      <option name="number" value="00074" />
+      <option name="presentableId" value="LOCAL-00074" />
+      <option name="project" value="LOCAL" />
+      <updated>1567080958459</updated>
+    </task>
+    <option name="localTasksCounter" value="75" />
     <servers />
   </component>
   <component name="TodoView">
@@ -845,7 +845,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="latest Version 21.08" />
     <MESSAGE value="new Controller" />
     <MESSAGE value="mysql connector in der POM -.-" />
     <MESSAGE value="Update Entity with equals and hash" />
@@ -870,7 +869,8 @@
     <MESSAGE value="eigenkapitalrendite save" />
     <MESSAGE value="eigenkapitalquto und ebitmarge save" />
     <MESSAGE value="kgv aktuell save" />
-    <option name="LAST_COMMIT_MESSAGE" value="kgv aktuell save" />
+    <MESSAGE value="analystenmeinungen save" />
+    <option name="LAST_COMMIT_MESSAGE" value="analystenmeinungen save" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -64,20 +64,14 @@ public class CalculateUserInput {
                         un1.setKursGewinnVerhaeltnis(un.getAktuellerAktienkurs() / un.getGewinnAVG());                               // Punkt 5 über 5 jahre
                         un1.setAnalystenmeinungen((un.getKaufen() + (un.getHalten() * (float) 2.0) + (un.getVerkaufen() * (float) 3.0)) / (un.getKaufen() + un.getVerkaufen() + un.getHalten()));                                         // Punkt 6
                         un1.setReaktionaufQuartalszahlen(un.getKursanstiegUnternehmen() - un.getKursanstiegIndex());          // Punkt 7
-                        un1.setGewinnrevision(((un.getGewinnschaezung() / un.getGewinnschaezungVor4Wochen()) - 1) * 100);                                               // Punkt 8
+                        un1.setGewinnrevision((un.getGewinnschaezung()  / un.getGewinnschaezungVor4Wochen()) - 1) ;                                               // Punkt 8
 
                         un1.setKursverlauf6Monate((un.getAktuellerAktienkurs() - un.getKursVor6Monaten()) / un.getKursVor6Monaten());                                           // Punkt 9
                         un1.setKursverlauf12Monate((un.getAktuellerAktienkurs() - un.getKursVor12Monaten()) / un.getKursVor12Monaten());                                       // Punkt 10
                         //                // TODO setze hier die Punkteliste anhand kennzahl 9 und 10 un1.setKursmomentum();                                             // Punkt 11
-                        //   un1.setDreimonatsreversal((float) 0);                                          // Punkt 12
+
                         // un1.setGewinnwachstum((float) 13);                                              // Punkt 13
-
-
-                        // Set Eigenkapitalrendite
-
-
-
-                        // Set Eigenkapitalrendite
+                        un1.setGewinnwachstum((un.getGewinnschaezungNaechstesJahr() - un.getGewinnschaezungDiesesJahr() ) / un.getGewinnschaezungDiesesJahr());
                         /**
                          * Punkteliste befüllen: Schritt 1 Eigenkapitalrendite
                          */
@@ -189,13 +183,81 @@ public class CalculateUserInput {
 
                             }
                         }
-                        // Set EBIT-Marge
-
-                        // Set Eigenkapitalquote
-
-                        // KGV 5 Jahre
-
-                        //  KGV aktuell
+                        /**
+                         * Punkteliste befüllen: Schritt 7 Reaktion auf Quartalszahlen
+                         */
+                        for (AnalysisRating un2 : analysisRatingsFilled) {
+                            query7 = session.getNamedQuery("AnalysisRating.findByName");
+                            query7.setString("Companyname_AnalysisRating", company);
+                            if (un2.getCompanyname_AnalysisRating().equals(company)) {
+                                un2.setReaktionaufQuartalszahlen((float)0);
+                                un2.setCompanyname_AnalysisRating(un1.getCompanyname_AnalysisSteps());
+                                if (un1.getReaktionaufQuartalszahlen() > (float) 0.01) {
+                                    un2.setReaktionaufQuartalszahlen((float) 1);
+                                } else if (un1.getReaktionaufQuartalszahlen() < (float) -0.01)
+                                    un2.setReaktionaufQuartalszahlen((float) -1);
+                            }
+                        }
+                        /**
+                         * Punkteliste befüllen: Schritt 8 Gewinnrevision
+                         */
+                        for (AnalysisRating un2 : analysisRatingsFilled) {
+                            query7 = session.getNamedQuery("AnalysisRating.findByName");
+                            query7.setString("Companyname_AnalysisRating", company);
+                            if (un2.getCompanyname_AnalysisRating().equals(company)) {
+                                un2.setGewinnrevision((float)0);
+                                un2.setCompanyname_AnalysisRating(un1.getCompanyname_AnalysisSteps());
+                                if (un1.getGewinnrevision() > (float) 0.05) {
+                                    un2.setGewinnrevision((float) 1);
+                                } else if (un1.getGewinnrevision() < (float) -0.05)
+                                    un2.setGewinnrevision((float) -1);
+                            }
+                        }
+                        /**
+                         * Punkteliste befüllen: Schritt 9 6-Monats-Kursverlauf
+                         */
+                        for (AnalysisRating un2 : analysisRatingsFilled) {
+                            query7 = session.getNamedQuery("AnalysisRating.findByName");
+                            query7.setString("Companyname_AnalysisRating", company);
+                            if (un2.getCompanyname_AnalysisRating().equals(company)) {
+                                un2.setKursverlauf6Monate((float)0);
+                                un2.setCompanyname_AnalysisRating(un1.getCompanyname_AnalysisSteps());
+                                if (un1.getKursverlauf6Monate() > (float) 0.05) {
+                                    un2.setKursverlauf6Monate((float) 1);
+                                } else if (un1.getKursverlauf6Monate() < (float) -0.05)
+                                    un2.setKursverlauf6Monate((float) -1);
+                            }
+                        }
+                        /**
+                         * Punkteliste befüllen: Schritt 10 12-Monats-Kursverlauf
+                         */
+                        for (AnalysisRating un2 : analysisRatingsFilled) {
+                            query7 = session.getNamedQuery("AnalysisRating.findByName");
+                            query7.setString("Companyname_AnalysisRating", company);
+                            if (un2.getCompanyname_AnalysisRating().equals(company)) {
+                                un2.setKursverlauf12Monate((float)0);
+                                un2.setCompanyname_AnalysisRating(un1.getCompanyname_AnalysisSteps());
+                                if (un1.getKursverlauf12Monate() > (float) 0.05) {
+                                    un2.setKursverlauf12Monate((float) 1);
+                                } else if (un1.getKursverlauf12Monate() < (float) -0.05)
+                                    un2.setKursverlauf12Monate((float) -1);
+                            }
+                        }
+                        /**
+                         * Punkteliste befüllen: Schritt 11 Kursmomentum
+                         */
+                        for (AnalysisRating un2 : analysisRatingsFilled) {
+                            query7 = session.getNamedQuery("AnalysisRating.findByName");
+                            query7.setString("Companyname_AnalysisRating", company);
+                            if (un2.getCompanyname_AnalysisRating().equals(company)) {
+                                un2.setKursmomentum((float)0);
+                                un2.setCompanyname_AnalysisRating(un1.getCompanyname_AnalysisSteps());
+                                if (un2.getKursverlauf6Monate() == (float) 1 && un2.getKursverlauf12Monate() != (float) 1) {
+                                    un2.setKursmomentum((float) 1);
+                                } else if (un2.getKursverlauf6Monate() == (float) -1 && un2.getKursverlauf12Monate() != (float) -1)
+                                    un2.setKursmomentum((float) -1);
+                            }
+                        }
 
                         /**
                          * Schritt 12 Reversaleffekt
@@ -211,6 +273,21 @@ public class CalculateUserInput {
                                     un2.setDreimonatsreversal((float) -1);
                             } else {
                                 un2.setDreimonatsreversal((float) 0);
+                            }
+                        }
+                        /**
+                         * Punkteliste befüllen: Schritt 13 Gewinnwachstum
+                         */
+                        for (AnalysisRating un2 : analysisRatingsFilled) {
+                            query7 = session.getNamedQuery("AnalysisRating.findByName");
+                            query7.setString("Companyname_AnalysisRating", company);
+                            if (un2.getCompanyname_AnalysisRating().equals(company)) {
+                                un2.setGewinnwachstum((float)0);
+                                un2.setCompanyname_AnalysisRating(un1.getCompanyname_AnalysisSteps());
+                                if (un1.getGewinnwachstum() > (float) 0.05) {
+                                    un2.setGewinnwachstum((float) 1);
+                                } else if (un1.getGewinnwachstum() < (float) -0.05)
+                                    un2.setGewinnwachstum((float) -1);
                             }
                         }
 
