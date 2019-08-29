@@ -55,23 +55,20 @@ public class CalculateUserInput {
                         //Set Company
                         un1.setCompanyname_AnalysisSteps(un1.getCompanyname_AnalysisSteps());
 
-                        // Calculate 13 Steps and fill in AnalysisSteps
-
-                        un1.setEigenkapitalrendite(un.getJahresueberschuss() / un.getEigenkapital()); // Punkt 1
-                        un1.setEBITMarge(un.getGewinnEBIT() / un.getJahresumsatz());                    // Punkt 2
-                        un1.setEigenkapitalquote(un.getEigenkapital() / (un.getEigenkapital() + un.getFremdkapital()));                                       // Punkt 3
-                        un1.setKursGewinnVerhaeltnisAktuell(un.getAktuellerAktienkurs() / un.getGewinnschaezung());                                      // Punkt 4
-                        un1.setKursGewinnVerhaeltnis(un.getAktuellerAktienkurs() / un.getGewinnAVG());                               // Punkt 5 über 5 jahre
-                        un1.setAnalystenmeinungen((un.getKaufen() + (un.getHalten() * (float) 2.0) + (un.getVerkaufen() * (float) 3.0)) / (un.getKaufen() + un.getVerkaufen() + un.getHalten()));                                         // Punkt 6
-                        un1.setReaktionaufQuartalszahlen(un.getKursanstiegUnternehmen() - un.getKursanstiegIndex());          // Punkt 7
-                        un1.setGewinnrevision((un.getGewinnschaezung()  / un.getGewinnschaezungVor4Wochen()) - 1) ;                                               // Punkt 8
-
-                        un1.setKursverlauf6Monate((un.getAktuellerAktienkurs() - un.getKursVor6Monaten()) / un.getKursVor6Monaten());                                           // Punkt 9
-                        un1.setKursverlauf12Monate((un.getAktuellerAktienkurs() - un.getKursVor12Monaten()) / un.getKursVor12Monaten());                                       // Punkt 10
-                        //                // TODO setze hier die Punkteliste anhand kennzahl 9 und 10 un1.setKursmomentum();                                             // Punkt 11
-
-                        // un1.setGewinnwachstum((float) 13);                                              // Punkt 13
-                        un1.setGewinnwachstum((un.getGewinnschaezungNaechstesJahr() - un.getGewinnschaezungDiesesJahr() ) / un.getGewinnschaezungDiesesJahr());
+                        /**
+                         * Berechnung der 13 Levermannschritte:
+                         */
+                        un1.setEigenkapitalrendite(un.getJahresueberschuss() / un.getEigenkapital()); //Punkt 1
+                        un1.setEBITMarge(un.getGewinnEBIT() / un.getJahresumsatz());                  // Punkt 2
+                        un1.setEigenkapitalquote(un.getEigenkapital() / (un.getEigenkapital() + un.getFremdkapital()));    // Punkt 3
+                        un1.setKursGewinnVerhaeltnisAktuell(un.getAktuellerAktienkurs() / un.getGewinnschaezung());        // Punkt 4
+                        un1.setKursGewinnVerhaeltnis(un.getAktuellerAktienkurs() / un.getGewinnAVG());                     // Punkt 5 über 5 jahre
+                        un1.setAnalystenmeinungen((un.getKaufen() + (un.getHalten() * (float) 2.0) + (un.getVerkaufen() * (float) 3.0)) / (un.getKaufen() + un.getVerkaufen() + un.getHalten()));    // Punkt 6
+                        un1.setReaktionaufQuartalszahlen(un.getKursanstiegUnternehmen() - un.getKursanstiegIndex());       // Punkt 7
+                        un1.setGewinnrevision((un.getGewinnschaezung()  / un.getGewinnschaezungVor4Wochen()) - 1) ;        // Punkt 8
+                        un1.setKursverlauf6Monate((un.getAktuellerAktienkurs() - un.getKursVor6Monaten()) / un.getKursVor6Monaten());    // Punkt 9
+                        un1.setKursverlauf12Monate((un.getAktuellerAktienkurs() - un.getKursVor12Monaten()) / un.getKursVor12Monaten());    // Punkt 10
+                        un1.setGewinnwachstum((un.getGewinnschaezungNaechstesJahr() - un.getGewinnschaezungDiesesJahr() ) / un.getGewinnschaezungDiesesJahr()); // Punkt 13
                         /**
                          * Punkteliste befüllen: Schritt 1 Eigenkapitalrendite
                          */
@@ -179,8 +176,6 @@ public class CalculateUserInput {
                                         un2.setAnalystenmeinungen((float) -1);
                                     }
                                 }
-
-
                             }
                         }
                         /**
