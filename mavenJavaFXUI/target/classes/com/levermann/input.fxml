@@ -27,38 +27,131 @@
             </Label>
             <Button fx:id="showResultButton" layoutX="935.0" layoutY="578.0" mnemonicParsing="false" onAction="#switchToShowResult" prefHeight="25.0" prefWidth="104.0" style="-fx-border-color: black;" text="OK, show Results" />
            <Button fx:id="btnAddFigures" layoutX="726.0" layoutY="578.0" onAction="#someMethod" prefHeight="25.0" prefWidth="104.0" style="-fx-border-color: black;" text="Add to DB" />
-                  <Label fx:id="ju" layoutX="200.0" layoutY="126.0" prefHeight="25.0" prefWidth="176.0" text="Jahresüberschuss" />
-                  <Label fx:id="ek" layoutX="200.0" layoutY="196.0" prefHeight="25.0" prefWidth="176.0" text="Eigenkapital" />
-                  <Label fx:id="ebit" layoutX="200.0" layoutY="268.0" prefHeight="25.0" prefWidth="176.0" text="Gewinn(EBIT)" />
-                  <Label fx:id="fk" layoutX="200.0" layoutY="335.0" prefHeight="25.0" prefWidth="176.0" text="Fremdkapital" />
-                  <Label fx:id="aa" layoutX="200.0" layoutY="404.0" prefHeight="25.0" prefWidth="176.0" text="Aktueller Aktienkurs" />
-                  <Label fx:id="kaufen" layoutX="200.0" layoutY="475.0" prefHeight="25.0" prefWidth="176.0" text="Kaufen" />
-                  <Label layoutX="400.0" layoutY="126.0" prefHeight="25.0" prefWidth="176.0" text="Verkaufen" />
-                  <Label layoutX="400.0" layoutY="198.0" prefHeight="25.0" prefWidth="176.0" text="Halten" />
-                  <Label layoutX="400.0" layoutY="260.0" prefHeight="25.0" prefWidth="176.0" text="Kursanstieg des Unternehmens" />
-                  <Label layoutX="400.0" layoutY="328.0" prefHeight="25.0" prefWidth="176.0" text="Kursanstieg Aktienindex" />
-                  <Label layoutX="400.0" layoutY="403.0" prefHeight="25.0" prefWidth="176.0" text="Gewinnschätzung vor 4 Wochen" />
-                  <Label layoutX="400.0" layoutY="471.0" prefHeight="25.0" prefWidth="176.0" text="Aktuelle Gewinnschätzung" />
-                  <Label layoutX="600.0" layoutY="125.0" prefHeight="25.0" prefWidth="176.0" text="Aktienkurs vor 6 Monaten" />
-                  <Label layoutX="600.0" layoutY="189.0" prefHeight="25.0" prefWidth="176.0" text="Aktienkurs vor 12 Monaten" />
-                  <Label layoutX="600.0" layoutY="340.0" prefHeight="25.0" prefWidth="176.0" text="Kurs vor 1 Monat" />
-                  <Label layoutX="600.0" layoutY="403.0" prefHeight="25.0" prefWidth="176.0" text="Kurs vor 2 Monaten" />
-                  <Label layoutX="600.0" layoutY="479.0" prefHeight="25.0" prefWidth="176.0" text="Kurs vor 3 Monaten" />
-                  <Label layoutX="800.0" layoutY="125.0" prefHeight="25.0" prefWidth="176.0" text="Aktienkurs vor 1 Monat" />
-                  <Label layoutX="796.0" layoutY="196.0" prefHeight="25.0" prefWidth="176.0" text="Aktienkurs vor 2 Monaten" />
-                  <Label layoutX="800.0" layoutY="268.0" prefHeight="25.0" prefWidth="176.0" text="Aktienkurs vor 3 Monaten" />
-                  <Label layoutX="800.0" layoutY="332.0" prefHeight="25.0" prefWidth="228.0" text="Gewinnschätzung für nächstes Jahr" />
-                  <Label layoutX="800.0" layoutY="405.0" prefHeight="25.0" prefWidth="228.0" text="Gewinnschätzung für dieses Jahr" />
-                  <Label layoutX="299.0" layoutY="67.0" prefHeight="17.0" prefWidth="120.0" text="Untenehmensname" />
-                  <Label layoutX="675.0" layoutY="67.0" prefHeight="17.0" prefWidth="66.0" text="Datum" />
-                  <Label layoutX="1000.0" layoutY="130.0" prefHeight="17.0" prefWidth="161.0" text="Jahresumsatz" />
-                  <Label layoutX="1000.0" layoutY="201.0" prefHeight="17.0" prefWidth="161.0" text="Gewinnschätzung" />
-                  <Label layoutX="1000.0" layoutY="272.0" prefHeight="17.0" prefWidth="161.0" text="Gewinn AVG" />
-                  <Label layoutX="1000.0" layoutY="337.0" prefHeight="17.0" prefWidth="161.0" text="Gewinn vor 3 Jahren" />
+                  <Label fx:id="ju" layoutX="200.0" layoutY="126.0" prefHeight="25.0" prefWidth="176.0" text="Jahresüberschuss">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
+                  <Label fx:id="ek" layoutX="200.0" layoutY="196.0" prefHeight="25.0" prefWidth="176.0" text="Eigenkapital">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
+                  <Label fx:id="ebit" layoutX="200.0" layoutY="268.0" prefHeight="25.0" prefWidth="176.0" text="Gewinn(EBIT)">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
+                  <Label fx:id="fk" layoutX="200.0" layoutY="335.0" prefHeight="25.0" prefWidth="176.0" text="Fremdkapital">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
+                  <Label fx:id="aa" layoutX="200.0" layoutY="404.0" prefHeight="25.0" prefWidth="176.0" text="Aktueller Aktienkurs">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
+                  <Label fx:id="kaufen" layoutX="200.0" layoutY="475.0" prefHeight="25.0" prefWidth="176.0" text="Kaufen">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
+                  <Label layoutX="400.0" layoutY="126.0" prefHeight="25.0" prefWidth="176.0" text="Verkaufen">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
+                  <Label layoutX="400.0" layoutY="198.0" prefHeight="25.0" prefWidth="176.0" text="Halten">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
+                  <Label layoutX="400.0" layoutY="260.0" prefHeight="25.0" prefWidth="176.0" text="Kursanstieg des Unternehmens">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
+                  <Label layoutX="400.0" layoutY="328.0" prefHeight="25.0" prefWidth="176.0" text="Kursanstieg Aktienindex">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
+                  <Label layoutX="400.0" layoutY="403.0" prefHeight="25.0" prefWidth="176.0" text="Gewinnschätzung vor 4 Wochen">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
+                  <Label layoutX="400.0" layoutY="471.0" prefHeight="25.0" prefWidth="176.0" text="Aktuelle Gewinnschätzung">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
+                  <Label layoutX="600.0" layoutY="125.0" prefHeight="25.0" prefWidth="176.0" text="Aktienkurs vor 6 Monaten">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
+                  <Label layoutX="600.0" layoutY="189.0" prefHeight="25.0" prefWidth="176.0" text="Aktienkurs vor 12 Monaten">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
+                  <Label layoutX="600.0" layoutY="340.0" prefHeight="25.0" prefWidth="176.0" text="Kurs vor 1 Monat">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
+                  <Label layoutX="600.0" layoutY="403.0" prefHeight="25.0" prefWidth="176.0" text="Kurs vor 2 Monaten">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
+                  <Label layoutX="600.0" layoutY="479.0" prefHeight="25.0" prefWidth="176.0" text="Kurs vor 3 Monaten">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
+                  <Label layoutX="800.0" layoutY="125.0" prefHeight="25.0" prefWidth="176.0" text="Aktienkurs vor 1 Monat">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
+                  <Label layoutX="796.0" layoutY="196.0" prefHeight="25.0" prefWidth="176.0" text="Aktienkurs vor 2 Monaten">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
+                  <Label layoutX="800.0" layoutY="268.0" prefHeight="25.0" prefWidth="176.0" text="Aktienkurs vor 3 Monaten">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
+                  <Label layoutX="800.0" layoutY="332.0" prefHeight="25.0" prefWidth="228.0" text="Gewinnschätzung für nächstes Jahr">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
+                  <Label layoutX="800.0" layoutY="405.0" prefHeight="25.0" prefWidth="228.0" text="Gewinnschätzung für dieses Jahr">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
+                  <Label layoutX="310.0" layoutY="61.0" prefHeight="29.0" prefWidth="125.0" text="Untenehmensname:" textFill="#575757" underline="true">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
+                  <Label layoutX="688.0" layoutY="62.0" prefHeight="25.0" prefWidth="59.0" text="Datum:" textFill="#575757" underline="true">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
+                  <Label layoutX="1000.0" layoutY="130.0" prefHeight="17.0" prefWidth="161.0" text="Jahresumsatz">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
+                  <Label layoutX="1000.0" layoutY="201.0" prefHeight="17.0" prefWidth="161.0" text="Gewinnschätzung">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
+                  <Label layoutX="1000.0" layoutY="272.0" prefHeight="17.0" prefWidth="161.0" text="Gewinn AVG">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
+                  <Label layoutX="1000.0" layoutY="337.0" prefHeight="17.0" prefWidth="161.0" text="Gewinn vor 3 Jahren">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
                   <Label layoutX="1000.0" layoutY="408.0" prefHeight="17.0" prefWidth="161.0" text="Gewinn vor 2 Jahren" />
-                  <Label layoutX="800.0" layoutY="483.0" prefHeight="17.0" prefWidth="161.0" text="Gewinn vor 1 Jahr" />
-                  <Label layoutX="600.0" layoutY="272.0" prefHeight="17.0" prefWidth="176.0" text="Aktueller erwarteter Kursgewinn" />
-                  <Label layoutX="1000.0" layoutY="477.0" prefHeight="17.0" prefWidth="196.0" text="Kursgewinnschätzung nächstes Jahr" />
+                  <Label layoutX="800.0" layoutY="483.0" prefHeight="17.0" prefWidth="161.0" text="Gewinn vor 1 Jahr">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
+                  <Label layoutX="600.0" layoutY="272.0" prefHeight="17.0" prefWidth="176.0" text="Aktueller erwarteter Kursgewinn">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
+                  <Label layoutX="1000.0" layoutY="477.0" prefHeight="17.0" prefWidth="196.0" text="Kursgewinnschätzung nächstes Jahr">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
                   <TextField fx:id="unternehmennameDB" layoutX="444.0" layoutY="61.0" prefHeight="25.0" prefWidth="176.0" />
                   <TextField fx:id="datumDB" layoutX="750.0" layoutY="61.0" prefHeight="25.0" prefWidth="176.0" />
                   <TextField fx:id="jahresueberschussDB" layoutX="200.0" layoutY="150.0" prefHeight="25.0" prefWidth="176.0" />

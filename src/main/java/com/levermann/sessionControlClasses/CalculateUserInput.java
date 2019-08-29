@@ -286,6 +286,14 @@ public class CalculateUserInput {
                             }
                         }
 
+                        for (AnalysisRating un2 : analysisRatingsFilled) {
+                            query7 = session.getNamedQuery("AnalysisRating.findByName");
+                            query7.setString("Companyname_AnalysisRating", company);
+                            if (un2.getCompanyname_AnalysisRating().equals(company)) {
+
+                                un.setGesamtPunkte( un2.getEigenkapitalrendite() + un2.getEBITMarge() + un2.getEigenkapitalquote()+ un2.getKursGewinnVerhaeltnis()+ un2.getKursGewinnVerhaeltnisAktuell()+ un2.getAnalystenmeinungen()+ un2.getReaktionaufQuartalszahlen()+ un2.getGewinnrevision()+ un2.getKursverlauf6Monate()+ un2.getKursverlauf12Monate()+ un2.getKursmomentum()+ un2.getDreimonatsreversal()+ un2.getGewinnwachstum());
+                            }}
+
                         //TODO Methode, welche die Gesamtpunktezahl in neues Feld Analysisrating speichert
                     }}}
 

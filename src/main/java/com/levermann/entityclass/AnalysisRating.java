@@ -123,7 +123,7 @@ public class AnalysisRating  implements Serializable {
         Eigenkapitalrendite = eigenkapitalrendite;
     }
 
-    public Float getEBITMarge() {
+        public Float getEBITMarge() {
         return EBITMarge;
     }
 
