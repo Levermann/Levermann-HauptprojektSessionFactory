@@ -4,13 +4,8 @@
     <option name="SCOPE_TYPE" value="3" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ef1c18af-56f3-4a36-8891-4764d24d597a" name="Default Changelist" comment="lol2">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/src/main/java/com/levermann/InputController.java" beforeDir="false" afterPath="$PROJECT_DIR$/mavenJavaFXUI/src/main/java/com/levermann/InputController.java" afterDir="false" />
+    <list default="true" id="ef1c18af-56f3-4a36-8891-4764d24d597a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/src/main/resources/com/levermann/input.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/mavenJavaFXUI/src/main/resources/com/levermann/input.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/target/classes/com/levermann/InputController.class" beforeDir="false" afterPath="$PROJECT_DIR$/mavenJavaFXUI/target/classes/com/levermann/InputController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/target/classes/com/levermann/input.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/mavenJavaFXUI/target/classes/com/levermann/input.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/levermann/entityclass/Company.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/levermann/entityclass/Company.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -420,14 +415,7 @@
       <workItem from="1566491635410" duration="25623000" />
       <workItem from="1566585459730" duration="21406000" />
       <workItem from="1566650626276" duration="6535000" />
-      <workItem from="1567001123150" duration="49332000" />
-    </task>
-    <task id="LOCAL-00031" summary="Perfect Project --Thanks @Lisa Stolz">
-      <created>1566128218456</created>
-      <option name="number" value="00031" />
-      <option name="presentableId" value="LOCAL-00031" />
-      <option name="project" value="LOCAL" />
-      <updated>1566128218456</updated>
+      <workItem from="1567001123150" duration="49829000" />
     </task>
     <task id="LOCAL-00032" summary="deleted boolshit again">
       <created>1566128285279</created>
@@ -765,7 +753,14 @@
       <option name="project" value="LOCAL" />
       <updated>1567092865157</updated>
     </task>
-    <option name="localTasksCounter" value="80" />
+    <task id="LOCAL-00080" summary="topaktuell 29.08">
+      <created>1567104268657</created>
+      <option name="number" value="00080" />
+      <option name="presentableId" value="LOCAL-00080" />
+      <option name="project" value="LOCAL" />
+      <updated>1567104268657</updated>
+    </task>
+    <option name="localTasksCounter" value="81" />
     <servers />
   </component>
   <component name="TodoView">
@@ -830,7 +825,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="IT WORKS" />
     <MESSAGE value="IT WORKS + Andis Sql Abfrage" />
     <MESSAGE value="added Named Queries and Information fxml" />
     <MESSAGE value="added UserInput Controller to check or update the Inputs manually" />
@@ -855,7 +849,8 @@
     <MESSAGE value="punkte complete save" />
     <MESSAGE value="lol" />
     <MESSAGE value="lol2" />
-    <option name="LAST_COMMIT_MESSAGE" value="lol2" />
+    <MESSAGE value="topaktuell 29.08" />
+    <option name="LAST_COMMIT_MESSAGE" value="topaktuell 29.08" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
