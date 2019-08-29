@@ -27,15 +27,11 @@ public class InputController implements ControlledScreenInterface {
     @FXML
     public TextField eigenkapitalDB;
     @FXML
-    public TextField idDB;
-    @FXML
     public TextField datumDB;
     @FXML
     public TextField gewinnschaetzungDB;
     @FXML
     public TextField gewinnavgDB;
-    @FXML
-    public TextField kursamtagderveroeffentlichungDB;
     @FXML
     public TextField perfinjedemmonatDB;
     @FXML
@@ -56,8 +52,6 @@ public class InputController implements ControlledScreenInterface {
     private TextField fremdkapitalDB;
     @FXML
     private TextField aktuellerAktienkursDB;
-    @FXML
-    private TextField geschaetzterGewinnDB;
     @FXML
     private TextField analystenKaufenDB;
     @FXML
@@ -92,8 +86,6 @@ public class InputController implements ControlledScreenInterface {
     private TextField gewinnschaetzungNaechstesJahrDB;
     @FXML
     private TextField gewinnschaetzungDiesesJahrDB;
-    @FXML
-    private CheckBox smallCapDB;
     @FXML
     private CheckBox finanzwerteDB;
 
@@ -214,7 +206,6 @@ private void disconnectToDB(){
             float gewinnschaezungDiesesJahr = Float.parseFloat(gewinnschaetzungDiesesJahrDB.getText());
             float gewinnschaezungNaechstesJahr = Float.parseFloat(gewinnschaetzungNaechstesJahrDB.getText());
             float finanzsektor = 0;
-            int perfInJedemMonat = Integer.parseInt(perfinjedemmonatDB.getText());
             int kursgewinnVor3Jahren = Integer.parseInt(gewinnVor3JahrenDB.getText());
             int kursgewinnVor2Jahren = Integer.parseInt(gewinnVor2JahrenDB.getText());
             int kursgewinnVor1Jahr = Integer.parseInt(gewinnVor1JahrDB.getText());
@@ -228,7 +219,7 @@ private void disconnectToDB(){
              aktienkursTagVeroeffentlichungQartalszahlen,  kursVor6Monaten,  kursVor12Monaten,
              kursVor3Monaten,  kursVor2Monaten,  kursVor1Monat,  daxVor1Monat,
              daxVor2Monaten,  daxVor3Monaten,  gewinnschaezungNaechstesJahr,
-             gewinnschaezungDiesesJahr,  finanzsektor, perfInJedemMonat,
+             gewinnschaezungDiesesJahr,  finanzsektor,
                      kursgewinnVor3Jahren,  kursgewinnVor2Jahren,  kursgewinnVor1Jahr,
                      aktuellenErwartetenKursgewinn,  kursgewinnschaezungNaechstesJahr);
 

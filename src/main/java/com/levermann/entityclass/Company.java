@@ -26,7 +26,7 @@ public class Company implements Serializable  {
                    float aktienkursTagVeroeffentlichungQartalszahlen, float kursVor6Monaten, float kursVor12Monaten,
                    float kursVor3Monaten, float kursVor2Monaten, float kursVor1Monat, float daxVor1Monat,
                    float daxVor2Monaten, float daxVor3Monaten, float gewinnschaezungNaechstesJahr,
-                   float gewinnschaezungDiesesJahr, float finanzsektor, Integer perfInJedemMonat,
+                   float gewinnschaezungDiesesJahr, float finanzsektor,
                    Integer kursgewinnVor3Jahren, Integer kursgewinnVor2Jahren, Integer kursgewinnVor1Jahr,
                    Integer aktuellenErwartetenKursgewinn, Integer kursgewinnschaezungNaechstesJahr) {
         Companyname = companyname;
@@ -57,7 +57,6 @@ public class Company implements Serializable  {
         GewinnschaezungNaechstesJahr = gewinnschaezungNaechstesJahr;
         GewinnschaezungDiesesJahr = gewinnschaezungDiesesJahr;
         Finanzsektor = finanzsektor;
-        PerfInJedemMonat = perfInJedemMonat;
         KursgewinnVor3Jahren = kursgewinnVor3Jahren;
         KursgewinnVor2Jahren = kursgewinnVor2Jahren;
         KursgewinnVor1Jahr = kursgewinnVor1Jahr;
