@@ -2,21 +2,21 @@ package com.levermann;
 
 import com.levermann.DB.DBConnection;
 import com.levermann.entityclass.Company;
+import com.levermann.sessionControlClasses.HibernateUtil;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import org.apache.log4j.Logger;
+import org.hibernate.Session;
 
 import java.io.IOException;
 import java.net.URL;
 import java.sql.Connection;
-import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ResourceBundle;
 
@@ -33,8 +33,6 @@ public class CompanyOverviewController implements Initializable, ControlledScree
     @FXML
     private TableColumn<Company, Float> analysisScore;
 
-
-
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         try {
@@ -45,24 +43,49 @@ public class CompanyOverviewController implements Initializable, ControlledScree
             System.err.println("Could not connect to Leverman database...");
             e.printStackTrace();
         }
-        try {
-            ResultSet rs = con.createStatement().executeQuery("select Companyname, datum, GesamtPunkte from company");
 
-            while (rs.next()) {
-                overview.add(new Company(rs.getString("Companyname"), rs.getString("datum"), rs.getFloat("GesamtPunke")));
-            }
+        Company company = new Company();
 
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
+        Session session1 = HibernateUtil.getSessionFactory().openSession();
+        session1.beginTransaction();
+        /*
+        Company company1 = (Company) session1.get(Company.class, 1L);
+        company1.getGesamtPunkte();
+        company1.getCompanyname();
+        company1.getDatum();
 
+         */
+        String nameforOverview = company.getCompanyname();
+        String datumForOverview = company.getDatum();
+        float SumScore = company.getGesamtPunkte();
+        System.out.println(company.getCompanyname() + " - " +company.getGesamtPunkte());
+
+
+        final ObservableList<Company> overview = FXCollections.observableArrayList(
+                new Company(nameforOverview, datumForOverview, SumScore)
+        );
         companyName.setCellValueFactory(new PropertyValueFactory<Company, String>("Companyname"));
         creationDate.setCellValueFactory(new PropertyValueFactory<Company, String>("datum"));
         analysisScore.setCellValueFactory(new PropertyValueFactory<Company, Float>("GesamtPunkte"));
 
         tableID.setItems(overview);
+
+
+        session1.getTransaction().commit();
+
+        session1.close();
+
+        System.out.println("Trying to close the connection to Levermann database...");
+        try{
+            con.close();
+            System.out.println("Levermann database disconnected!");
+        }catch(Exception e){
+            System.err.println("Could not disconnect Leverman database...");
+            System.err.println(e);
+            throw new IllegalStateException("Failed disconnecting Levermann database!");
+        }
     }
-    ObservableList<Company> overview = FXCollections.observableArrayList();
+
 
     ScreensController myController;
 
