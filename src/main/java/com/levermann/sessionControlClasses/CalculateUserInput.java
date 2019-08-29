@@ -78,82 +78,40 @@ public class CalculateUserInput {
 
 
                         // Set Eigenkapitalrendite
-
-                        if (un1.getEigenkapitalrendite() > 20) {
-                            //HQL Named Query FindAll Levermannschritte
-                            Query query2 = session.getNamedQuery("AnalysisRating.findAll");
-                            List<AnalysisRating> unList2 = (List<AnalysisRating>) query2.list();
-                            for (AnalysisRating un2 : unList2) {
-                                System.out.println("Analyse Liste = " + un2.getAnalysisRatingName()
-                                        + ","
-                                        + un2.getCompanyname_AnalysisRating());
-                                // Ausgabe eines Datensatzes mit Cid
-                                query2 = session.getNamedQuery("AnalysisRating.findByName");
-                                query2.setString("Companyname_AnalysisRating", company);
-                                unList2 = query2.list();
-                                System.out.println("fuck y");
-                                if (un2.getCompanyname_AnalysisRating().equals(company)) {
-
-                                    System.out.println("Fuuuuuuuuuuuuuuuuck");
-
-                                    un2.setCompanyname_AnalysisRating(un1.getCompanyname_AnalysisSteps());
+                        /**
+                         * Punkteliste befüllen: Schritt 1 Eigenkapitalrendite
+                         */
+                        for (AnalysisRating un2 : analysisRatingsFilled) {
+                            query7 = session.getNamedQuery("AnalysisRating.findByName");
+                            query7.setString("Companyname_AnalysisRating", company);
+                            if (un2.getCompanyname_AnalysisRating().equals(company)) {
+                                un2.setCompanyname_AnalysisRating(un1.getCompanyname_AnalysisSteps());
+                                if (un1.getEigenkapitalrendite() > 20) {
                                     un2.setEigenkapitalrendite((float) 1);
-
-                                    System.out.println("keine Null Bro :D");
-                                }
-                            }
-                        }
-                        if (un1.getEigenkapitalrendite() < 10) {
-                            //HQL Named Query FindAll Levermannschritte
-                            Query query2 = session.getNamedQuery("AnalysisRating.findAll");
-                            List<AnalysisRating> unList2 = (List<AnalysisRating>) query2.list();
-                            for (AnalysisRating un2 : unList2) {
-                                System.out.println("Analyse Liste = " + un2.getAnalysisRatingName()
-                                        + ","
-                                        + un2.getCompanyname_AnalysisRating());
-
-                                // Ausgabe eines Datensatzes mit Cid
-                                query2 = session.getNamedQuery("AnalysisRating.findByName");
-                                query2.setString("Companyname_AnalysisRating", company);
-                                unList2 = query2.list();
-                                System.out.println("fuck y");
-                                if (un2.getCompanyname_AnalysisRating().equals(company)) {
-
-                                    System.out.println("Fuuuuuuuuuuuuuuuuck");
-
-                                    un2.setCompanyname_AnalysisRating(un1.getCompanyname_AnalysisSteps());
+                                } else if (un1.getEigenkapitalrendite() <10)
                                     un2.setEigenkapitalrendite((float) -1);
-
-                                    System.out.println("keine Null Bro :D");
-                                }
+                            } else {
+                                un2.setEigenkapitalrendite((float) 0);
+                            }
+                        }
+                        /**
+                         * Punkteliste befüllen: Schritt 2 Gewinnmarge
+                         */
+                        for (AnalysisRating un2 : analysisRatingsFilled) {
+                            query7 = session.getNamedQuery("AnalysisRating.findByName");
+                            query7.setString("Companyname_AnalysisRating", company);
+                            if (un2.getCompanyname_AnalysisRating().equals(company)) {
+                                un2.setCompanyname_AnalysisRating(un1.getCompanyname_AnalysisSteps());
+                                if (un1.getEBITMarge() > 12) {
+                                    un2.setEBITMarge((float) 1);
+                                } else if (un1.getEBITMarge() <6)
+                                    un2.setEBITMarge((float) -1);
+                            } else {
+                                un2.setEigenkapitalrendite((float) 0);
                             }
                         }
 
-                        if (un1.getEigenkapitalrendite() >= 10 && un1.getEigenkapitalrendite() <=20) {
-                            //HQL Named Query FindAll Levermannschritte
-                            Query query2 = session.getNamedQuery("AnalysisRating.findAll");
-                            List<AnalysisRating> unList2 = (List<AnalysisRating>) query2.list();
-                            for (AnalysisRating un2 : unList2) {
-                                System.out.println("Analyse Liste = " + un2.getAnalysisRatingName()
-                                        + ","
-                                        + un2.getCompanyname_AnalysisRating());
 
-                                // Ausgabe eines Datensatzes mit Cid
-                                query2 = session.getNamedQuery("AnalysisRating.findByName");
-                                query2.setString("Companyname_AnalysisRating", company);
-                                unList2 = query2.list();
-                                System.out.println("fuck y");
-                                if (un2.getCompanyname_AnalysisRating().equals(company)) {
-
-                                    System.out.println("Fuuuuuuuuuuuuuuuuck");
-
-                                    un2.setCompanyname_AnalysisRating(un1.getCompanyname_AnalysisSteps());
-                                    un2.setEigenkapitalrendite((float) 0);
-
-                                    System.out.println("Null Bro :D");
-                                }
-                            }
-                        }
 
                         // Set EBIT-Marge
 
@@ -162,14 +120,14 @@ public class CalculateUserInput {
                         // KGV 5 Jahre
 
                         //  KGV aktuell
-                        //Reversal
+
+                        /**
+                         * Schritt 12 Reversaleffekt
+                         */
                         for (AnalysisRating un2 : analysisRatingsFilled) {
                             query7 = session.getNamedQuery("AnalysisRating.findByName");
                             query7.setString("Companyname_AnalysisRating", company);
                             if (un2.getCompanyname_AnalysisRating().equals(company)) {
-
-                                System.out.println("Fuuuuuuuuuuuuuuuuck :)");
-
                                 un2.setCompanyname_AnalysisRating(un1.getCompanyname_AnalysisSteps());
                                 if (un.getKursVor1Monat() - un.getDaxVor1Monat() < un.getKursanstiegIndex() && un.getKursVor2Monaten() - un.getDaxVor2Monaten() < un.getKursanstiegIndex() && un.getKursVor3Monaten() - un.getDaxVor3Monaten() < un.getKursanstiegIndex()) {
                                     un2.setDreimonatsreversal((float) 1);
