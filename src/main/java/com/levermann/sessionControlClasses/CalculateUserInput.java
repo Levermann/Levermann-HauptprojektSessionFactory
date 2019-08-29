@@ -13,7 +13,7 @@ import java.util.List;
 
 public class CalculateUserInput {
 
-    
+
     final static Logger logger = Logger.getLogger(com.levermann.keyFiguresForAnalysis.Eigenkapitalrendite.class);
 
     public void CalculateEigenkapitalrendite( ) {
