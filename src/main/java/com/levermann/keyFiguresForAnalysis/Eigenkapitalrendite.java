@@ -174,8 +174,10 @@ public class Eigenkapitalrendite {
                                 un2.setCompanyname_AnalysisRating(un1.getCompanyname_AnalysisSteps());
                                 if (un.getKursVor1Monat() - un.getDaxVor1Monat() < un.getKursanstiegIndex() && un.getKursVor2Monaten() - un.getDaxVor2Monaten() < un.getKursanstiegIndex() && un.getKursVor3Monaten() - un.getDaxVor3Monaten() < un.getKursanstiegIndex()) {
                                     un2.setDreimonatsreversal((float) 1);
+
                                 } else if (un.getKursVor1Monat() - un.getDaxVor1Monat() > un.getKursanstiegIndex() && un.getKursVor2Monaten() - un.getDaxVor2Monaten() > un.getKursanstiegIndex() && un.getKursVor3Monaten() - un.getDaxVor3Monaten() > un.getKursanstiegIndex())
                                     un2.setDreimonatsreversal((float) -1);
+
                             } else {
                                 un2.setDreimonatsreversal((float) 0);
                             }
