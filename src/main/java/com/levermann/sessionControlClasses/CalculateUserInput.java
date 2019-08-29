@@ -85,15 +85,21 @@ public class CalculateUserInput {
                             query7 = session.getNamedQuery("AnalysisRating.findByName");
                             query7.setString("Companyname_AnalysisRating", company);
                             if (un2.getCompanyname_AnalysisRating().equals(company)) {
+
                                 un2.setCompanyname_AnalysisRating(un1.getCompanyname_AnalysisSteps());
-                                if (un1.getEigenkapitalrendite() > 20) {
+                                if (un1.getEigenkapitalrendite() > (float) 0.2) {
+                                    System.out.println("is größer muss 1");
                                     un2.setEigenkapitalrendite((float) 1);
-                                } else if (un1.getEigenkapitalrendite() <10)
+                                }
+                                 if (un1.getEigenkapitalrendite() < (float) 0.1){
                                     un2.setEigenkapitalrendite((float) -1);
-                            } else {
-                                un2.setEigenkapitalrendite((float) 0);
+                                }
+                             if (un1.getEigenkapitalrendite() ==  (float) 0.2 || un1.getEigenkapitalrendite() == (float) 0.1) {
+                                    System.out.println("muss 0 rein in db");
+                                un2.setEigenkapitalrendite((float)0);
                             }
-                        }
+                            }
+                    }
                         /**
                          * Punkteliste befüllen: Schritt 2 Gewinnmarge
                          */
@@ -102,15 +108,32 @@ public class CalculateUserInput {
                             query7.setString("Companyname_AnalysisRating", company);
                             if (un2.getCompanyname_AnalysisRating().equals(company)) {
                                 un2.setCompanyname_AnalysisRating(un1.getCompanyname_AnalysisSteps());
-                                if (un1.getEBITMarge() > 12) {
+                                if (un1.getEBITMarge() > (float) 0.12) {
                                     un2.setEBITMarge((float) 1);
-                                } else if (un1.getEBITMarge() <6)
+                                } else if (un1.getEBITMarge() < 0.6) {
                                     un2.setEBITMarge((float) -1);
-                            } else {
-                                un2.setEigenkapitalrendite((float) 0);
+                                } else {
+                                    un2.setEBITMarge((float) 0);
+                                }
                             }
                         }
-
+                        /**
+                         * Punkteliste befüllen: Schritt 3 Eigenkapitalquote
+                         */
+                        //TODO eventuell switch case für den Sonderfall Finanzwerte
+                        for (AnalysisRating un2 : analysisRatingsFilled) {
+                            query7 = session.getNamedQuery("AnalysisRating.findByName");
+                            query7.setString("Companyname_AnalysisRating", company);
+                            if (un2.getCompanyname_AnalysisRating().equals(company)) {
+                                un2.setCompanyname_AnalysisRating(un1.getCompanyname_AnalysisSteps());
+                                if (un1.getEigenkapitalquote() > 25) {
+                                    un2.setEigenkapitalquote((float) 1);
+                                } else if (un1.getEigenkapitalquote() <15)
+                                    un2.setEigenkapitalquote((float) -1);
+                            } else {
+                                un2.setEigenkapitalquote((float) 0);
+                            }
+                        }
 
 
                         // Set EBIT-Marge

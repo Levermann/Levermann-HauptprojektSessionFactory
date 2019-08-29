@@ -24,63 +24,63 @@ public class AnalysisRating  implements Serializable {
 
     @Basic
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "id", unique = true, nullable = true)
+    @Column(name = "id")
     private Float id;
 
     @Basic
-    @Column(name = "Companyname_AnalysisRating", insertable = false, updatable = false)
+    @Column(name = "Companyname_AnalysisRating")
     private String Companyname_AnalysisRating;
 
     @Basic
-    @Column(name = "Eigenkapitalrendite", unique = true, nullable = true)
+    @Column(name = "Eigenkapitalrendite")
     private Float Eigenkapitalrendite;
 
     @Basic
-    @Column(name = "EBITMarge", unique = true, nullable = true)
+    @Column(name = "EBITMarge")
     private Float EBITMarge;
 
     @Basic
-    @Column(name = "Eigenkapitalquote", unique = true, nullable = true)
+    @Column(name = "Eigenkapitalquote")
     private Float Eigenkapitalquote;
 
     @Basic
-    @Column(name = "KursGewinnVerhaeltnis", unique = true, nullable = true)
+    @Column(name = "KursGewinnVerhaeltnis")
     private Float KursGewinnVerhaeltnis;
 
     @Basic
-    @Column(name = "KursGewinnVerhaeltnisAktuell", unique = true, nullable = true)
+    @Column(name = "KursGewinnVerhaeltnisAktuell")
     private Float KursGewinnVerhaeltnisAktuell;
 
     @Basic
-    @Column(name = "Analystenmeinungen", unique = true, nullable = true)
+    @Column(name = "Analystenmeinungen")
     private Float Analystenmeinungen;
 
     @Basic
-    @Column(name = "ReaktionaufQuartalszahlen", unique = true, nullable = true)
+    @Column(name = "ReaktionaufQuartalszahlen")
     private Float ReaktionaufQuartalszahlen;
 
     @Basic
-    @Column(name = "Gewinnrevision", unique = true, nullable = true)
+    @Column(name = "Gewinnrevision")
     private Float Gewinnrevision;
 
     @Basic
-    @Column(name = "Kursverlauf6Monate", unique = true, nullable = true)
+    @Column(name = "Kursverlauf6Monate")
     private Float Kursverlauf6Monate;
 
     @Basic
-    @Column(name = "Kursverlauf12Monate", unique = true, nullable = true)
+    @Column(name = "Kursverlauf12Monate")
     private Float Kursverlauf12Monate;
 
     @Basic
-    @Column(name = "Kursmomentum", unique = true, nullable = true)
+    @Column(name = "Kursmomentum")
     private Float Kursmomentum;
 
     @Basic
-    @Column(name = "Dreimonatsreversal", unique = true, nullable = true)
+    @Column(name = "Dreimonatsreversal")
     private Float Dreimonatsreversal;
 
     @Basic
-    @Column(name = "Gewinnwachstum", unique = true, nullable = true)
+    @Column(name = "Gewinnwachstum")
     private Float Gewinnwachstum;
 
 
