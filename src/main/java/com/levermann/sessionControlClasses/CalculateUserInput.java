@@ -103,13 +103,12 @@ public class CalculateUserInput {
                             query7 = session.getNamedQuery("AnalysisRating.findByName");
                             query7.setString("Companyname_AnalysisRating", company);
                             if (un2.getCompanyname_AnalysisRating().equals(company)) {
+                                un2.setEBITMarge((float)0);
                                 un2.setCompanyname_AnalysisRating(un1.getCompanyname_AnalysisSteps());
                                 if (un1.getEBITMarge() > (float) 0.12) {
                                     un2.setEBITMarge((float) 1);
-                                } else if (un1.getEBITMarge() < 0.6) {
+                                } else if (un1.getEBITMarge() < (float) 0.06) {
                                     un2.setEBITMarge((float) -1);
-                                } else {
-                                    un2.setEBITMarge((float) 0);
                                 }
                             }
                         }
@@ -121,13 +120,12 @@ public class CalculateUserInput {
                             query7 = session.getNamedQuery("AnalysisRating.findByName");
                             query7.setString("Companyname_AnalysisRating", company);
                             if (un2.getCompanyname_AnalysisRating().equals(company)) {
+                                un2.setEigenkapitalquote((float)0);
                                 un2.setCompanyname_AnalysisRating(un1.getCompanyname_AnalysisSteps());
-                                if (un1.getEigenkapitalquote() > 25) {
+                                if (un1.getEigenkapitalquote() > (float) 0.25) {
                                     un2.setEigenkapitalquote((float) 1);
-                                } else if (un1.getEigenkapitalquote() <15)
+                                } else if (un1.getEigenkapitalquote() < (float) 0.15)
                                     un2.setEigenkapitalquote((float) -1);
-                            } else {
-                                un2.setEigenkapitalquote((float) 0);
                             }
                         }
 

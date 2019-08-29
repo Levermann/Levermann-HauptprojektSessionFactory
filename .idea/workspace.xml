@@ -428,14 +428,7 @@
       <workItem from="1566491635410" duration="25623000" />
       <workItem from="1566585459730" duration="21406000" />
       <workItem from="1566650626276" duration="6535000" />
-      <workItem from="1567001123150" duration="30589000" />
-    </task>
-    <task id="LOCAL-00022" summary="upate 07.08.2019&#10;Add SQL statements for database creation&#10;Change Update parameter ID to parameter Company name for all&#10;Levermannschritte">
-      <created>1565178846320</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1565178846320</updated>
+      <workItem from="1567001123150" duration="31255000" />
     </task>
     <task id="LOCAL-00023" summary="upate 08.08.2019">
       <created>1565262385082</created>
@@ -773,7 +766,14 @@
       <option name="project" value="LOCAL" />
       <updated>1567076101722</updated>
     </task>
-    <option name="localTasksCounter" value="71" />
+    <task id="LOCAL-00071" summary="eigenkapitalrendite save">
+      <created>1567076628510</created>
+      <option name="number" value="00071" />
+      <option name="presentableId" value="LOCAL-00071" />
+      <option name="project" value="LOCAL" />
+      <updated>1567076628510</updated>
+    </task>
+    <option name="localTasksCounter" value="72" />
     <servers />
   </component>
   <component name="TodoView">
