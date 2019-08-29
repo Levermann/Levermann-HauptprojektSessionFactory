@@ -5,10 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ef1c18af-56f3-4a36-8891-4764d24d597a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/Lisa.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/src/main/java/com/levermann/CompanyOverviewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/mavenJavaFXUI/src/main/java/com/levermann/CompanyOverviewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/src/main/resources/com/levermann/companyOverview.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/mavenJavaFXUI/src/main/resources/com/levermann/companyOverview.fxml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -414,14 +412,7 @@
       <workItem from="1566491635410" duration="25623000" />
       <workItem from="1566585459730" duration="21406000" />
       <workItem from="1566650626276" duration="6535000" />
-      <workItem from="1567001123150" duration="61036000" />
-    </task>
-    <task id="LOCAL-00036" summary="Created ManyToOne and OneTOMany associations for Mapping with Tables">
-      <created>1566262610930</created>
-      <option name="number" value="00036" />
-      <option name="presentableId" value="LOCAL-00036" />
-      <option name="project" value="LOCAL" />
-      <updated>1566262610930</updated>
+      <workItem from="1567001123150" duration="61749000" />
     </task>
     <task id="LOCAL-00037" summary="Created ManyToOne and OneTOMany associations for Mapping with Tables">
       <created>1566289541139</created>
@@ -759,7 +750,14 @@
       <option name="project" value="LOCAL" />
       <updated>1567113089933</updated>
     </task>
-    <option name="localTasksCounter" value="85" />
+    <task id="LOCAL-00085" summary="hjkhjgjkk">
+      <created>1567116955527</created>
+      <option name="number" value="00085" />
+      <option name="presentableId" value="LOCAL-00085" />
+      <option name="project" value="LOCAL" />
+      <updated>1567116955527</updated>
+    </task>
+    <option name="localTasksCounter" value="86" />
     <servers />
   </component>
   <component name="TodoView">
@@ -824,7 +822,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Change to JDK 8 and now it WORKS AGAIN -.-" />
     <MESSAGE value="Maxis Businesslogik geadded" />
     <MESSAGE value="UserInput via Session and JDBC in die DB" />
     <MESSAGE value="added Stylesheet" />
@@ -849,7 +846,8 @@
     <MESSAGE value="inputcontroller verbessert" />
     <MESSAGE value="added Gesamtpunkte to entity company" />
     <MESSAGE value="fghfshggsh" />
-    <option name="LAST_COMMIT_MESSAGE" value="fghfshggsh" />
+    <MESSAGE value="hjkhjgjkk" />
+    <option name="LAST_COMMIT_MESSAGE" value="hjkhjgjkk" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -860,6 +858,11 @@
           </properties>
           <option name="timeStamp" value="1" />
         </breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/mavenJavaFXUI/src/main/java/com/levermann/CompanyOverviewController.java</url>
+          <line>92</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>

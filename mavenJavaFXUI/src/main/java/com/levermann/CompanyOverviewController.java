@@ -12,12 +12,15 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import org.apache.log4j.Logger;
+import org.hibernate.Query;
 import org.hibernate.Session;
 
 import java.io.IOException;
 import java.net.URL;
 import java.sql.Connection;
+import java.sql.DriverManager;
 import java.sql.SQLException;
+import java.util.List;
 import java.util.ResourceBundle;
 
 public class CompanyOverviewController implements Initializable, ControlledScreenInterface {
@@ -35,16 +38,27 @@ public class CompanyOverviewController implements Initializable, ControlledScree
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        System.out.println("Trying to load the JDBC driver...");
         try {
-            Connection con = DBConnection.getConnection();
-            System.out.println("Levermann database connected!");
-
-        } catch (SQLException e) {
-            System.err.println("Could not connect to Leverman database...");
-            e.printStackTrace();
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            System.out.println("JDBC Driver loaded!");
+        } catch (Exception e) {
+            System.err.println("Cound not load JDBC driver...");
+            System.err.println(e);
+            throw new IllegalStateException("Failed loading the JDBC driver!");
         }
 
-        Company company = new Company();
+        System.out.println("Trying to connect to Levermann database...");
+        try {
+            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/levermann?useSSL=false&serverTimezone=UTC", "Levermann", "Levermann");
+            System.out.println("Levermann database connected!");
+        } catch (Exception e) {
+            System.err.println("Could not connect to Leverman database...");
+            System.err.println(e);
+            throw new IllegalStateException("Failed connecting to Levermann database!");
+        }
+
+      //  Company company = new Company();
 
         Session session1 = HibernateUtil.getSessionFactory().openSession();
         session1.beginTransaction();
@@ -55,24 +69,27 @@ public class CompanyOverviewController implements Initializable, ControlledScree
         company1.getDatum();
 
          */
-        String nameforOverview = company.getCompanyname();
-        String datumForOverview = company.getDatum();
-        float SumScore = company.getGesamtPunkte();
-        System.out.println(company.getCompanyname() + " - " +company.getGesamtPunkte());
+        Query query = session1.getNamedQuery("Company.findAll");
+        List<Company> unList = (List<Company>) query.list();
+
+        for (Company un : unList) {
+
+            String nameforOverview = un.getCompanyname();
+            String datumForOverview = un.getDatum();
+            float SumScore = un.getGesamtPunkte();
 
 
-        final ObservableList<Company> overview = FXCollections.observableArrayList(
-                new Company(nameforOverview, datumForOverview, SumScore)
-        );
-        companyName.setCellValueFactory(new PropertyValueFactory<Company, String>("Companyname"));
-        creationDate.setCellValueFactory(new PropertyValueFactory<Company, String>("datum"));
-        analysisScore.setCellValueFactory(new PropertyValueFactory<Company, Float>("GesamtPunkte"));
+            final ObservableList<Company> overview = FXCollections.observableArrayList(
+                    new Company(nameforOverview, datumForOverview, SumScore)
+            );
+            companyName.setCellValueFactory(new PropertyValueFactory<Company, String>("Companyname"));
+            creationDate.setCellValueFactory(new PropertyValueFactory<Company, String>("datum"));
+            analysisScore.setCellValueFactory(new PropertyValueFactory<Company, Float>("GesamtPunkte"));
 
-        tableID.setItems(overview);
-
+            tableID.setItems(overview);
+        }
 
         session1.getTransaction().commit();
-
         session1.close();
 
         System.out.println("Trying to close the connection to Levermann database...");
