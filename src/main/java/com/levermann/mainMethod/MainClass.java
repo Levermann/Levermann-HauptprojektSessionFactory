@@ -1,6 +1,7 @@
 package com.levermann.mainMethod;
 
 import com.levermann.keyFiguresForAnalysis.Eigenkapitalrendite;
+import com.levermann.sessionControlClasses.CalculateUserInput;
 import org.apache.log4j.BasicConfigurator;
 
 
@@ -14,15 +15,12 @@ abstract public class MainClass {
 
 
 
-     Eigenkapitalrendite anm = new Eigenkapitalrendite();
+
+
+  CalculateUserInput anm = new CalculateUserInput();
 
      anm.CalculateEigenkapitalrendite();
 
-
-/*
-        Kursmomentum km = new Kursmomentum();
-
-     km.Kursmomentum();
 
  */
 

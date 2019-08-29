@@ -23,18 +23,13 @@ abstract public class ConnectionMainFactory  {
      try {
          tx = session.beginTransaction();
 
-
-        Company company = new Company();
-        company.setCompanyname("BMW");
-
-        company.setId(8);
-         company.setEigenkapital(123214);
-         company.setFremdkapital(324234);
-        System.out.println("Got name with credentials " + company.getCompanyname());
+Object ob = session.load(Company.class, new String ("Bmw"));
+Company DP = (Company)  ob;
+         System.out.println("name:" + DP.getCompanyname());
 
 
 
-         session.save(company);
+
          session.getTransaction().commit();
          session.close();
 
