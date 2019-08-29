@@ -85,19 +85,15 @@ public class CalculateUserInput {
                             query7 = session.getNamedQuery("AnalysisRating.findByName");
                             query7.setString("Companyname_AnalysisRating", company);
                             if (un2.getCompanyname_AnalysisRating().equals(company)) {
-
+                                un2.setEigenkapitalrendite((float)0);
                                 un2.setCompanyname_AnalysisRating(un1.getCompanyname_AnalysisSteps());
                                 if (un1.getEigenkapitalrendite() > (float) 0.2) {
                                     System.out.println("is größer muss 1");
                                     un2.setEigenkapitalrendite((float) 1);
                                 }
-                                 if (un1.getEigenkapitalrendite() < (float) 0.1){
+                                else if (un1.getEigenkapitalrendite() < (float) 0.1){
                                     un2.setEigenkapitalrendite((float) -1);
                                 }
-                             if (un1.getEigenkapitalrendite() ==  (float) 0.2 || un1.getEigenkapitalrendite() == (float) 0.1) {
-                                    System.out.println("muss 0 rein in db");
-                                un2.setEigenkapitalrendite((float)0);
-                            }
                             }
                     }
                         /**
