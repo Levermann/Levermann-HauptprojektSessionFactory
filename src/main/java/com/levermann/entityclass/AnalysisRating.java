@@ -5,13 +5,13 @@ import javax.persistence.*;
 import java.io.Serializable;
 
 
-@Named
+
 
 @Entity
 @Access(AccessType.FIELD)
 @NamedQueries({
         @NamedQuery(name = "AnalysisRating.findAll", query = "SELECT B FROM AnalysisRating B"),
-        @NamedQuery(name = "AnalysisRating.findByName", query = "SELECT D  FROM AnalysisRating D WHERE D.AnalysisRatingName =:AnalyseRatingName")
+        @NamedQuery(name = "AnalysisRating.findByName", query = "SELECT D  FROM AnalysisRating D WHERE D.Companyname_AnalysisRating =:Companyname_AnalysisRating")
 
 })
 @Table(name= "AnalysisRating")
@@ -83,27 +83,33 @@ public class AnalysisRating  implements Serializable {
     @Column(name = "Gewinnwachstum", unique = true, nullable = true)
     private Float Gewinnwachstum;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "Companyname_AnalysisRating")
-    private Company company;
 
-    public AnalysisRating() {
+    public AnalysisRating() { }
 
-    }
+
 
     public String getAnalysisRatingName() {
         return AnalysisRatingName;
     }
 
-    public void setAnalysisRatingName(String AnalysisRatingName) {
+    public void setAnalysisRatingName(String analysisRatingName) {
+        AnalysisRatingName = analysisRatingName;
+    }
+
+    public Float getId() {
+        return id;
+    }
+
+    public void setId(Float id) {
+        this.id = id;
     }
 
     public String getCompanyname_AnalysisRating() {
         return Companyname_AnalysisRating;
     }
 
-    public void setCompanyname_AnalysisRating(String unternehmenname_AnalysisRating) {
-        Companyname_AnalysisRating = unternehmenname_AnalysisRating;
+    public void setCompanyname_AnalysisRating(String companyname_AnalysisRating) {
+        Companyname_AnalysisRating = companyname_AnalysisRating;
     }
 
     public Float getEigenkapitalrendite() {
@@ -210,15 +216,5 @@ public class AnalysisRating  implements Serializable {
         Gewinnwachstum = gewinnwachstum;
     }
 
-    public AnalysisRating(Company company) {
-        this.company = company;
-    }
 
-    public Float getId() {
-        return id;
-    }
-
-    public void setId(Float id) {
-        this.id = id;
-    }
 }
