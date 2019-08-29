@@ -9,7 +9,11 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
+<?import java.net.URL?>
 <VBox alignment="CENTER" prefHeight="671.0" prefWidth="1292.0" spacing="20.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.levermann.InputController">
+   <stylesheets>
+      <URL value="@input.css" />
+   </stylesheets>
    <padding>
       <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
    </padding>
@@ -21,9 +25,9 @@
                   <Font size="20.0" />
                </font>
             </Label>
-            <Button fx:id="showResultButton" layoutX="853.0" layoutY="559.0" mnemonicParsing="false" onAction="#switchToShowResult" prefHeight="25.0" prefWidth="104.0" style="-fx-border-color: black;" text="OK, show Results" />
-           <Button fx:id="btnAddFigures" layoutX="633.0" layoutY="559.0" onAction="#someMethod" prefHeight="25.0" prefWidth="104.0" style="-fx-border-color: black;" text="Add to DB" />
-            <Pane layoutX="146.0" layoutY="55.0" prefHeight="509.0" prefWidth="993.0">
+            <Button fx:id="showResultButton" layoutX="935.0" layoutY="578.0" mnemonicParsing="false" onAction="#switchToShowResult" prefHeight="25.0" prefWidth="104.0" style="-fx-border-color: black;" text="OK, show Results" />
+           <Button fx:id="btnAddFigures" layoutX="726.0" layoutY="578.0" onAction="#someMethod" prefHeight="25.0" prefWidth="104.0" style="-fx-border-color: black;" text="Add to DB" />
+            <Pane layoutX="174.0" layoutY="55.0" prefHeight="509.0" prefWidth="993.0">
                <children>
                   <Label fx:id="ju" layoutX="14.0" layoutY="50.0" prefHeight="25.0" prefWidth="176.0" text="Jahresüberschuss" />
                   <Label fx:id="ek" layoutX="13.0" layoutY="100.0" prefHeight="25.0" prefWidth="176.0" text="Eigenkapital" />
@@ -102,7 +106,7 @@
                   <TextField fx:id="kursgewinnschaetzungNaechstesJahrDB" layoutX="652.0" layoutY="476.0" prefHeight="25.0" prefWidth="176.0" />
                </children>
             </Pane>
-            <Button fx:id="getBackToPrimaryPage" layoutX="725.0" layoutY="559.0" mnemonicParsing="false" onAction="#switchToPrimaryPage" prefHeight="25.0" prefWidth="91.0" style="-fx-border-color: black;" text="main menu" />
+            <Button fx:id="getBackToPrimaryPage" layoutX="838.0" layoutY="578.0" mnemonicParsing="false" onAction="#switchToPrimaryPage" prefHeight="25.0" prefWidth="91.0" style="-fx-border-color: black;" text="main menu" />
          </children>
       </Pane>
    </children>
