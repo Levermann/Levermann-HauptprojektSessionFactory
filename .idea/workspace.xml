@@ -412,14 +412,7 @@
       <workItem from="1566491635410" duration="25623000" />
       <workItem from="1566585459730" duration="21406000" />
       <workItem from="1566650626276" duration="6535000" />
-      <workItem from="1567001123150" duration="61749000" />
-    </task>
-    <task id="LOCAL-00037" summary="Created ManyToOne and OneTOMany associations for Mapping with Tables">
-      <created>1566289541139</created>
-      <option name="number" value="00037" />
-      <option name="presentableId" value="LOCAL-00037" />
-      <option name="project" value="LOCAL" />
-      <updated>1566289541139</updated>
+      <workItem from="1567001123150" duration="63281000" />
     </task>
     <task id="LOCAL-00038" summary="added CompanyOverviewController">
       <created>1566292556245</created>
@@ -757,7 +750,14 @@
       <option name="project" value="LOCAL" />
       <updated>1567116955527</updated>
     </task>
-    <option name="localTasksCounter" value="86" />
+    <task id="LOCAL-00086" summary="kaka">
+      <created>1567117671497</created>
+      <option name="number" value="00086" />
+      <option name="presentableId" value="LOCAL-00086" />
+      <option name="project" value="LOCAL" />
+      <updated>1567117671497</updated>
+    </task>
+    <option name="localTasksCounter" value="87" />
     <servers />
   </component>
   <component name="TodoView">
@@ -822,7 +822,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Maxis Businesslogik geadded" />
     <MESSAGE value="UserInput via Session and JDBC in die DB" />
     <MESSAGE value="added Stylesheet" />
     <MESSAGE value="table" />
@@ -847,7 +846,8 @@
     <MESSAGE value="added Gesamtpunkte to entity company" />
     <MESSAGE value="fghfshggsh" />
     <MESSAGE value="hjkhjgjkk" />
-    <option name="LAST_COMMIT_MESSAGE" value="hjkhjgjkk" />
+    <MESSAGE value="kaka" />
+    <option name="LAST_COMMIT_MESSAGE" value="kaka" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -860,7 +860,7 @@
         </breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/mavenJavaFXUI/src/main/java/com/levermann/CompanyOverviewController.java</url>
-          <line>92</line>
+          <line>101</line>
           <option name="timeStamp" value="11" />
         </line-breakpoint>
       </breakpoints>

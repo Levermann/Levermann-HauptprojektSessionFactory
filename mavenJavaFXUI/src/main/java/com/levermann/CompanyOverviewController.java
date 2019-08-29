@@ -70,9 +70,13 @@ public class CompanyOverviewController implements Initializable, ControlledScree
 
          */
         Query query = session1.getNamedQuery("Company.findAll");
+        query.setMaxResults(20);
         List<Company> unList = (List<Company>) query.list();
 
         for (Company un : unList) {
+
+
+
 
             String nameforOverview = un.getCompanyname();
             String datumForOverview = un.getDatum();
@@ -80,13 +84,18 @@ public class CompanyOverviewController implements Initializable, ControlledScree
 
 
             final ObservableList<Company> overview = FXCollections.observableArrayList(
+                    new Company(nameforOverview, datumForOverview, SumScore),
+                    new Company(nameforOverview, datumForOverview, SumScore),
+                    new Company(nameforOverview, datumForOverview, SumScore),
+                    new Company(nameforOverview, datumForOverview, SumScore),
                     new Company(nameforOverview, datumForOverview, SumScore)
             );
+
             companyName.setCellValueFactory(new PropertyValueFactory<Company, String>("Companyname"));
             creationDate.setCellValueFactory(new PropertyValueFactory<Company, String>("datum"));
             analysisScore.setCellValueFactory(new PropertyValueFactory<Company, Float>("GesamtPunkte"));
 
-            tableID.setItems(overview);
+            tableID.setItems(overview);        
         }
 
         session1.getTransaction().commit();
