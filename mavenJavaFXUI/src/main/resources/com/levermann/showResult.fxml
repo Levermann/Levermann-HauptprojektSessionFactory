@@ -17,21 +17,25 @@
    <children>
       <AnchorPane prefHeight="660.0" prefWidth="1252.0">
          <children>
+            <Button layoutX="934.0" layoutY="520.0" mnemonicParsing="false" onAction="#switchToShowUserInputs" prefHeight="21.0" prefWidth="112.0" style="-fx-border-color: black;" text="Eingabe einsehen" />
             <Button fx:id="showOverviewOfCompaniesButton" layoutX="1084.0" layoutY="519.0" onAction="#switchToCompanyOverview" prefHeight="21.0" prefWidth="112.0" style="-fx-border-color: black;" text="Übersicht" />
-            <Label alignment="TOP_CENTER" layoutX="526.0" layoutY="41.0" prefHeight="63.0" prefWidth="378.0" text="Ergebnisse Ihrer Analyse" textAlignment="CENTER" textFill="#58fa58">
+            <Label alignment="TOP_CENTER" layoutX="510.0" layoutY="26.0" prefHeight="63.0" prefWidth="378.0" text="Ergebnisse Ihrer Analyse" textAlignment="CENTER" textFill="#58fa58">
                <font>
                   <Font name="Berlin Sans FB" size="24.0" />
                </font>
             </Label>
-            <TableView layoutX="227.0" layoutY="117.0" prefHeight="357.0" prefWidth="968.0" style="-fx-border-color: #6E6E6E;">
+            <TableView fx:id="tableRating" layoutX="159.0" layoutY="89.0" prefHeight="400.0" prefWidth="500.0" style="-fx-border-color: black;">
               <columns>
-                <TableColumn prefWidth="75.0" text="Schritt" />
-                <TableColumn prefWidth="371.0" text="Kennzahlen" />
-                  <TableColumn prefWidth="286.0" text="Ergebnis" />
-                  <TableColumn prefWidth="235.0" text="Bewertung" />
+                <TableColumn fx:id="keyFiguresSteps" prefWidth="225.0" text="Kennzahl" />
+                <TableColumn fx:id="resultSteps" prefWidth="273.0" text="Ergebnis" />
               </columns>
             </TableView>
-            <Button layoutX="957.0" layoutY="520.0" mnemonicParsing="false" onAction="#switchToShowUserInputs" prefHeight="21.0" prefWidth="112.0" style="-fx-border-color: black;" text="Eingabe einsehen" />
+            <TableView layoutX="743.0" layoutY="89.0" prefHeight="400.0" prefWidth="500.0" style="-fx-border-color: black;">
+              <columns>
+                <TableColumn fx:id="keyFiguresRating" prefWidth="225.0" text="Kennzahl" />
+                <TableColumn fx:id="resultRating" prefWidth="273.0" text="Bewertung" />
+              </columns>
+            </TableView>
          </children>
       </AnchorPane>
    </children>

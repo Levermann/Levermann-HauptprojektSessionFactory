@@ -119,7 +119,6 @@ public class CompanyOverviewController implements Initializable, ControlledScree
         initCols();
     }
 
-
     ScreensController myController;
 
     @Override
