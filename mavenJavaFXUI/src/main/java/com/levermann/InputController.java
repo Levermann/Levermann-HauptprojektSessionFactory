@@ -13,13 +13,12 @@ import javafx.scene.control.CheckBox;
 import javafx.scene.control.TextField;
 import org.hibernate.Session;
 
-import javax.inject.Inject;
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.util.List;
 
 public class InputController implements ControlledScreenInterface {
+
 
     @FXML
     public TextField unternehmennameDB;
@@ -107,13 +106,12 @@ public class InputController implements ControlledScreenInterface {
         myController = screenParent;
     }
 
-
     @FXML
-    private void switchToShowResult(ActionEvent actionEvent) throws IOException {
+    private void switchToShowResult() throws IOException {
         fillDBvalues();
         //App.setRoot("showResult");
-        //zeigeInputAn(actionEvent);
-        setValues();
+       // setValues();
+        takeOverUserInput();
         myController.setScreen(App.showResultID);
         App.setStageTitle("Unternehmensergebnisse");
     }
@@ -176,37 +174,42 @@ private void disconnectToDB(){
          * conn.close();
          */
 
-    private void setValues(){
-            ShowUserInputController.jahresueberschuss = jahresueberschussDB.getText();
-            ShowUserInputController.eigenkapital = this.eigenkapitalDB.getText();
-            ShowUserInputController.gewinnEBIT = this.gewinnEBITDB.getText();
-            ShowUserInputController.fremdkapital = this.fremdkapitalDB.getText();
-            ShowUserInputController.aktuellerAktienkurs = this.aktuellerAktienkursDB.getText();
-            ShowUserInputController.geschaetzterGewinn = this.geschaetzterGewinnDB.getText();
-            ShowUserInputController.analystenMeinungen = "KeineMeinung";
-            ShowUserInputController.kaufen = this.analystenKaufenDB.getText();
-            ShowUserInputController.verkaufen = this.analystenVerkaufenDB.getText();
-            ShowUserInputController.halten = this.analystenHaltenDB.getText();
-            ShowUserInputController.kursAnstiegUnternehmen = this.kursanstiegUnternehmenDB.getText();
-            ShowUserInputController.kursanstiegAktienindex = this.kursanstiegAktienindexDB.getText();
-            ShowUserInputController.gewinnschaetzungVor4Wochen = this.gewinnschaetzungVor4WochenDB.getText();
-            ShowUserInputController.aktuelleGewinnschaetzung = this.aktuelleGewinnschaetzungDB.getText();
-            ShowUserInputController.aktienkursVor6Monaten = this.aktienkursVor6MonatenDB.getText();
-            ShowUserInputController.aktienkursVor12Monaten = this.aktienkursVor12MonatenDB.getText();
-            ShowUserInputController.kursVor1Monat = this.kursVor1MonatDB.getText();
-            ShowUserInputController.kursVor2Monaten = this.kursVor2MonatenDB.getText();
-            ShowUserInputController.kursVor3Monaten = this.kursVor3MonatenDB.getText();
-            ShowUserInputController.aktienkursVor1Monaten = this.aktienkursVor1MonatDB.getText();
-            ShowUserInputController.aktienkursVor2Monaten = this.aktienkursVor2MonatenDB.getText();
-            ShowUserInputController.aktienkursVor3Monaten = this.aktienkursVor3MonatenDB.getText();
-            ShowUserInputController.gewinnschaetzungFuerNaechstesJahr = this.gewinnschaetzungNaechstesJahrDB.getText();
-            ShowUserInputController.gewinnschaetzungFuerDiesesJahr = this.gewinnschaetzungDiesesJahrDB.getText();
+        private void takeOverUserInput(){
+            ShowUserInputController.eigenkapital = Float.parseFloat(eigenkapitalDB.getText());
+            ShowUserInputController.jahresueberschuss = Float.parseFloat(jahresueberschussDB.getText());
+            ShowUserInputController.gewinnEBIT = Float.parseFloat(gewinnEBITDB.getText());
+            ShowUserInputController.fremdkapital = Float.parseFloat(fremdkapitalDB.getText());
+            ShowUserInputController.aktuellerAktienkurs = Float.parseFloat(aktuellerAktienkursDB.getText());
+            ShowUserInputController.kaufen = Float.parseFloat(analystenKaufenDB.getText());
+            ShowUserInputController.verkaufen = Float.parseFloat(analystenVerkaufenDB.getText());
+            ShowUserInputController.halten = Float.parseFloat(analystenHaltenDB.getText());
+            ShowUserInputController.kursAnstiegUnternehmen = Float.parseFloat(kursanstiegUnternehmenDB.getText());
+            ShowUserInputController.kursAnstiegAktienindex = Float.parseFloat(kursanstiegAktienindexDB.getText());
+            ShowUserInputController.gewinnschaetzungVor4Wochen = Float.parseFloat(gewinnschaetzungVor4WochenDB.getText());
+            ShowUserInputController.aktuelleGewinnschaetzung = Float.parseFloat(aktuelleGewinnschaetzungDB.getText());
+            ShowUserInputController.aktienkursVor6Monaten = Float.parseFloat(aktienkursVor6MonatenDB.getText());
+            ShowUserInputController.aktienkursVor12Monaten = Float.parseFloat(aktienkursVor12MonatenDB.getText());
+            ShowUserInputController.aktuellerErwarteterKursgewinn = Float.parseFloat(aktuellerErwarteterKursgewinnDB.getText());
+            ShowUserInputController.kursVor1Monat = Float.parseFloat(kursVor1MonatDB.getText());
+            ShowUserInputController.kursVor2Monaten = Float.parseFloat(kursVor2MonatenDB.getText());
+            ShowUserInputController.kursVor3Monaten = Float.parseFloat(kursVor3MonatenDB.getText());
+            ShowUserInputController.aktienkursVor1Monaten = Float.parseFloat(aktienkursVor1MonatDB.getText());
+            ShowUserInputController.aktienkursVor2Monaten = Float.parseFloat(aktienkursVor2MonatenDB.getText());
+            ShowUserInputController.aktienkursVor3Monaten = Float.parseFloat(aktienkursVor3MonatenDB.getText());
+            ShowUserInputController.gewinnschaetzungFuerNaechstesJahr = Float.parseFloat(gewinnschaetzungNaechstesJahrDB.getText());
+            ShowUserInputController.gewinnschaetzungFuerDiesesJahr = Float.parseFloat(gewinnschaetzungDiesesJahrDB.getText());
+            ShowUserInputController.gewinnVor1Jahr = Float.parseFloat(gewinnVor1JahrDB.getText());
+            ShowUserInputController.jahresumsatz = Float.parseFloat(jahresumsatzDB.getText());
+            ShowUserInputController.gewinnschaetzung = Float.parseFloat(gewinnschaetzungDB.getText());
+            ShowUserInputController.gewinnAVG = Float.parseFloat(gewinnavgDB.getText());
+            ShowUserInputController.GewinnVor3Jahren = Float.parseFloat(gewinnVor3JahrenDB.getText());
+            ShowUserInputController.GewinnVor2Jahren = Float.parseFloat(gewinnVor2JahrenDB.getText());
+            ShowUserInputController.kursgewinnschaetzungNaechstesJahr = Float.parseFloat(kursgewinnschaetzungNaechstesJahrDB.getText());
         }
 
         @FXML
         public void someMethod (ActionEvent event){
             fillDBvalues();
-
             String companyname = unternehmennameDB.getText();
             String datum = "12.32.42";
             float eigenkapital = Float.parseFloat(eigenkapitalDB.getText());
@@ -240,6 +243,8 @@ private void disconnectToDB(){
             int kursgewinnVor1Jahr = Integer.parseInt(gewinnVor1JahrDB.getText());
             int aktuellenErwartetenKursgewinn = Integer.parseInt(aktuellerErwarteterKursgewinnDB.getText());
             int kursgewinnschaezungNaechstesJahr = Integer.parseInt(kursgewinnschaetzungNaechstesJahrDB.getText());
+
+
 
             Company company = new Company(companyname,  datum,  eigenkapital,  jahresueberschuss,  gewinnEBIT,
              jahresumsatz,  fremdkapital,  aktuellerAktienkurs,  gewinnschaezung,

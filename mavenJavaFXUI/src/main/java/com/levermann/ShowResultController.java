@@ -30,5 +30,6 @@ public class ShowResultController implements ControlledScreenInterface{
         //App.setRoot("companyOverview");
         myController.setScreen(App.showUserInputID);
         App.setStageTitle("Allgemeine Unternehmensübersicht");
+
     }
 }
