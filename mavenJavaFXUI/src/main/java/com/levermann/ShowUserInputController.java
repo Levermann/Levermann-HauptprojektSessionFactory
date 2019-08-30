@@ -65,7 +65,6 @@ public class ShowUserInputController implements Initializable, ControlledScreenI
     public void initialize(URL location, ResourceBundle resources) {
         userInputFigures.setCellValueFactory(new PropertyValueFactory<ShowUserInputManageUI, String>("inputFigure1"));
         userInputValues.setCellValueFactory(new PropertyValueFactory<ShowUserInputManageUI, Float>("inputValue1"));
-
         checkInputsID.setItems(checkIt);
     }
 
