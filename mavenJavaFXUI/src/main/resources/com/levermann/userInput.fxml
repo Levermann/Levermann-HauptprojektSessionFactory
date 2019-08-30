@@ -3,11 +3,13 @@
 <?import java.net.URL?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollBar?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
 <VBox alignment="CENTER" prefHeight="810.0" prefWidth="1500.0" spacing="20.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.levermann.ShowUserInputController">
     <stylesheets>
@@ -16,15 +18,20 @@
     <children>
       <AnchorPane prefHeight="716.0" prefWidth="1460.0">
          <children>
-              <Button fx:id="BackToBasicsButton" alignment="BOTTOM_CENTER" contentDisplay="BOTTOM" layoutX="1171.0" layoutY="683.0" onAction="#switchToPrimaryPageAgain" style="-fx-border-color: black;" text="zurück" />
-            <TableView fx:id="checkInputsID" layoutX="446.0" prefHeight="724.0" prefWidth="583.0" style="-fx-border-color: #6E6E6E;">
+              <Button fx:id="BackToBasicsButton" alignment="BOTTOM_CENTER" contentDisplay="BOTTOM" layoutX="976.0" layoutY="635.0" onAction="#switchToPrimaryPageAgain" style="-fx-border-color: black;" text="zurück" AnchorPane.leftAnchor="967.0" AnchorPane.rightAnchor="440.0" />
+            <TableView fx:id="checkInputsID" layoutX="446.0" layoutY="59.0" prefHeight="562.0" prefWidth="583.0" style="-fx-border-color: #6E6E6E;" AnchorPane.leftAnchor="440.0" AnchorPane.rightAnchor="440.0">
               <columns>
                 <TableColumn fx:id="userInputFigures" prefWidth="291.0" text="Kennzahlen" />
                 <TableColumn fx:id="userInputValues" prefWidth="291.0" text="Werte" />
               </columns>
             </TableView>
             <ScrollBar layoutX="1029.0" orientation="VERTICAL" prefHeight="724.0" prefWidth="14.0" />
-            <Button fx:id="AktualisierenButton2" alignment="BOTTOM_CENTER" contentDisplay="BOTTOM" layoutX="1171.0" layoutY="632.0" onAction="#zeigeInputAn" style="-fx-border-color: black;" text="Aktualisieren" />
+            <Button fx:id="AktualisierenButton2" alignment="BOTTOM_CENTER" contentDisplay="BOTTOM" layoutX="874.0" layoutY="635.0" onAction="#zeigeInputAn" style="-fx-border-color: black;" text="Aktualisieren" />
+            <Label layoutX="559.0" layoutY="6.0" prefHeight="43.0" prefWidth="306.0" text="Übersicht über ihre eingegebenen Werte:" AnchorPane.leftAnchor="570.0" AnchorPane.rightAnchor="570.0">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </Label>
          </children>
       </AnchorPane>
     </children>

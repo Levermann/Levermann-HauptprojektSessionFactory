@@ -166,6 +166,12 @@ public class CompanyOverviewController implements Initializable, ControlledScree
     }
 
     @FXML
+    private void takeStringandShowResult() throws IOException {
+        //App.setRoot("enterCompanyName");
+        myController.setScreen(App.showResultID);
+        App.setStageTitle("Unternehmensnamen angeben");
+    }
+    @FXML
     private void switchToEnterCompanyName() throws IOException {
         //App.setRoot("enterCompanyName");
         myController.setScreen(App.enterCompanyNameID);
