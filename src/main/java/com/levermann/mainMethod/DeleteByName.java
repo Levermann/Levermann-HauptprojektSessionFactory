@@ -14,7 +14,7 @@ import org.hibernate.Transaction;
 
 import java.util.List;
 
-public class TestMain {
+public class DeleteByName {
     public static void main(String[] args) {
 
         BasicConfigurator.configure();
