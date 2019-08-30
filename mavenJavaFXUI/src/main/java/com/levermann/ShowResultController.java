@@ -11,9 +11,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
-import org.hibernate.Query;
-import org.hibernate.Session;
-import org.hibernate.SessionFactory;
+import org.hibernate.*;
 
 import java.awt.event.ActionEvent;
 import java.io.IOException;
@@ -89,91 +87,135 @@ public class ShowResultController implements Initializable, ControlledScreenInte
         App.setStageTitle("Allgemeine Unternehmensübersicht");
     }
     private void getDataAnalysisRating(){
-        ConnectionDB();
-        SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
-        Session session1 = sessionFactory.getCurrentSession();
-
-        session1.beginTransaction();
 
 
-                Query queryAR = session1.getNamedQuery("AnalysisRating.findAll");
-                List<AnalysisRating> ListAR = (List<AnalysisRating>) queryAR.list();
 
-                for (AnalysisRating rating : ListAR) {
-                    if (Companyname1.equals(rating.getCompanyname_AnalysisRating())) {
-                        float eigenkapitalrenditeAR = rating.getEigenkapitalrendite();
-                        float ebitAR = rating.getEBITMarge();
-                        float eigenkapitalquoteAR = rating.getEigenkapitalquote();
-                        float KGVAR = rating.getKursGewinnVerhaeltnis();
-                        float AGVAktuellAR = rating.getKursGewinnVerhaeltnisAktuell();
-                        float analystenmeinungenAR = rating.getAnalystenmeinungen();
-                        float reaktionQAR = rating.getReaktionaufQuartalszahlen();
-                        float gewinnrevisionAR = rating.getGewinnrevision();
-                        float kursverlauf6AR = rating.getKursverlauf6Monate();
-                        float kursverlauf12AR = rating.getKursverlauf12Monate();
-                        float kursmomentumAR = rating.getKursmomentum();
-                        float dreimonrevAR = rating.getDreimonatsreversal();
-                        float gewinnwachstumAR = rating.getGewinnwachstum();
-                        observableListAR.add(new CompanyManageUI("Eigenkapitalrendite", eigenkapitalrenditeAR));
-                        observableListAR.add(new CompanyManageUI("EbitMarge", ebitAR));
-                        observableListAR.add(new CompanyManageUI("Eigenkapitalquote", eigenkapitalquoteAR));
-                        observableListAR.add(new CompanyManageUI("KursGewinnVerhältnis", KGVAR));
-                        observableListAR.add(new CompanyManageUI("KursGewinnVerhältnisAktuell", AGVAktuellAR));
-                        observableListAR.add(new CompanyManageUI("Analystenmeinungen", analystenmeinungenAR));
-                        observableListAR.add(new CompanyManageUI("Reaktion auf Quartalszahlen", reaktionQAR));
-                        observableListAR.add(new CompanyManageUI("Gewinnrevision", gewinnrevisionAR));
-                        observableListAR.add(new CompanyManageUI("Kursverlauf 6 Monate", kursverlauf6AR));
-                        observableListAR.add(new CompanyManageUI("Kursverlauf 12 Monate", kursverlauf12AR));
-                        observableListAR.add(new CompanyManageUI("Kursmomentum", kursmomentumAR));
-                        observableListAR.add(new CompanyManageUI("Dreimonantsreversal", dreimonrevAR));
-                        observableListAR.add(new CompanyManageUI("Gewinnwachstum", gewinnwachstumAR));
+        //Aufrufen der aktuellen Session aus HibernateUtil
+        final Session session = HibernateUtil.getSessionFactory().openSession();
+        Query query7 = session.getNamedQuery("AnalysisRating.findAll");
+        final List<AnalysisRating> analysisRatingsFilled = (List<AnalysisRating>) query7.list();
 
+        try {
+            Transaction tx = null;
+            tx = session.beginTransaction();
+
+            //HQL Named Query FindAll Unternehmen
+            Query query = session.getNamedQuery("Company.findAll");
+            List<Company> unList = (List<Company>) query.list();
+
+            for (Company un : unList) {
+
+                //todo Hier companyname setzen
+
+                String company = Companyname1;
+
+                //HQL Named Query FindAll Levermannschritte
+                Query query1 = session.getNamedQuery("AnalysisSteps.findall");
+                List<AnalysisSteps> ListAS = (List<AnalysisSteps>) query1.list();
+                for (AnalysisSteps steps : ListAS) {
+
+                    System.out.println("Analyse Liste = " + steps.getAnalysisStepsName()
+                            + ","
+                            + steps.getCompanyname_AnalysisSteps());
+
+                    // Ausgabe eines Datensatzes mit Cid
+                    query1 = session.getNamedQuery("AnalysisSteps.findByName");
+                    query1.setString("Companyname_AnalysisSteps", company);
+                    ListAS = query1.list();
+                    System.out.println("fuck y");
+
+
+
+
+
+
+                    if (steps.getCompanyname_AnalysisSteps().equals(company)) {
+
+                        System.out.println("Fuuuuuuuuuuuuuuuuck");
+
+                        //Set Company
+                        steps.setCompanyname_AnalysisSteps(steps.getCompanyname_AnalysisSteps());
+                        float eigenkapitalrenditeAS = steps.getEigenkapitalrendite();
+                        float ebitAS = steps.getEBITMarge();
+                        float eigenkapitalquoteAS = steps.getEigenkapitalquote();
+                        float KGVAS = steps.getKursGewinnVerhaeltnis();
+                        float AGVAktuellAS = steps.getKursGewinnVerhaeltnisAktuell();
+                        float analystenmeinungenAS = steps.getAnalystenmeinungen();
+                        float reaktionQAS = steps.getReaktionaufQuartalszahlen();
+                        float gewinnrevisionAS = steps.getGewinnrevision();
+                        float kursverlauf6AS = steps.getKursverlauf6Monate();
+                        float kursverlauf12AS = steps.getKursverlauf12Monate();
+                        float kursmomentumAS = steps.getKursmomentum();
+                        float dreimonrevAS = steps.getDreimonatsreversal();
+                        float gewinnwachstumAS = steps.getGewinnwachstum();
+                        observableListAS.add(new AnalysisStepsManageUI("Eigenkapitalrendite", eigenkapitalrenditeAS));
+                        observableListAS.add(new AnalysisStepsManageUI("EbitMarge", ebitAS));
+                        observableListAS.add(new AnalysisStepsManageUI("Eigenkapitalquote", eigenkapitalquoteAS));
+                        observableListAS.add(new AnalysisStepsManageUI("KursGewinnVerhältnis", KGVAS));
+                        observableListAS.add(new AnalysisStepsManageUI("KursGewinnVerhältnisAktuell", AGVAktuellAS));
+                        observableListAS.add(new AnalysisStepsManageUI("Analystenmeinungen", analystenmeinungenAS));
+                        observableListAS.add(new AnalysisStepsManageUI("Reaktion auf Quartalszahlen", reaktionQAS));
+                        observableListAS.add(new AnalysisStepsManageUI("Gewinnrevision", gewinnrevisionAS));
+                        observableListAS.add(new AnalysisStepsManageUI("Kursverlauf 6 Monate", kursverlauf6AS));
+                        observableListAS.add(new AnalysisStepsManageUI("Kursverlauf 12 Monate", kursverlauf12AS));
+                        observableListAS.add(new AnalysisStepsManageUI("Kursmomentum", kursmomentumAS));
+                        observableListAS.add(new AnalysisStepsManageUI("Dreimonantsreversal", dreimonrevAS));
+                        observableListAS.add(new AnalysisStepsManageUI("Gewinnwachstum", gewinnwachstumAS));
+
+
+                        for (AnalysisRating rating : analysisRatingsFilled) {
+                            query7 = session.getNamedQuery("AnalysisRating.findByName");
+                            query7.setString("Companyname_AnalysisRating", company);
+
+                            if (Companyname1.equals(rating.getCompanyname_AnalysisRating())) {
+                                float eigenkapitalrenditeAR = rating.getEigenkapitalrendite();
+                                float ebitAR = rating.getEBITMarge();
+                                float eigenkapitalquoteAR = rating.getEigenkapitalquote();
+                                float KGVAR = rating.getKursGewinnVerhaeltnis();
+                                float AGVAktuellAR = rating.getKursGewinnVerhaeltnisAktuell();
+                                float analystenmeinungenAR = rating.getAnalystenmeinungen();
+                                float reaktionQAR = rating.getReaktionaufQuartalszahlen();
+                                float gewinnrevisionAR = rating.getGewinnrevision();
+                                float kursverlauf6AR = rating.getKursverlauf6Monate();
+                                float kursverlauf12AR = rating.getKursverlauf12Monate();
+                                float kursmomentumAR = rating.getKursmomentum();
+                                float dreimonrevAR = rating.getDreimonatsreversal();
+                                float gewinnwachstumAR = rating.getGewinnwachstum();
+                                observableListAR.add(new CompanyManageUI("Eigenkapitalrendite", eigenkapitalrenditeAR));
+                                observableListAR.add(new CompanyManageUI("EbitMarge", ebitAR));
+                                observableListAR.add(new CompanyManageUI("Eigenkapitalquote", eigenkapitalquoteAR));
+                                observableListAR.add(new CompanyManageUI("KursGewinnVerhältnis", KGVAR));
+                                observableListAR.add(new CompanyManageUI("KursGewinnVerhältnisAktuell", AGVAktuellAR));
+                                observableListAR.add(new CompanyManageUI("Analystenmeinungen", analystenmeinungenAR));
+                                observableListAR.add(new CompanyManageUI("Reaktion auf Quartalszahlen", reaktionQAR));
+                                observableListAR.add(new CompanyManageUI("Gewinnrevision", gewinnrevisionAR));
+                                observableListAR.add(new CompanyManageUI("Kursverlauf 6 Monate", kursverlauf6AR));
+                                observableListAR.add(new CompanyManageUI("Kursverlauf 12 Monate", kursverlauf12AR));
+                                observableListAR.add(new CompanyManageUI("Kursmomentum", kursmomentumAR));
+                                observableListAR.add(new CompanyManageUI("Dreimonantsreversal", dreimonrevAR));
+                                observableListAR.add(new CompanyManageUI("Gewinnwachstum", gewinnwachstumAR));
+
+                                System.out.println("company   :"  + rating.getCompanyname_AnalysisRating());
+
+                            }
+                        }
                     }
-                }
-
-        Query queryAS = session1.getNamedQuery("AnalysisSteps.findall");
-        List<AnalysisSteps> ListAS = (List<AnalysisSteps>) queryAS.list();
-
-        for (AnalysisSteps steps : ListAS) {
-            if (Companyname1.equals(steps.getCompanyname_AnalysisSteps())) {
-                float eigenkapitalrenditeAS = steps.getEigenkapitalrendite();
-                float ebitAS = steps.getEBITMarge();
-                float eigenkapitalquoteAS = steps.getEigenkapitalquote();
-                float KGVAS = steps.getKursGewinnVerhaeltnis();
-                float AGVAktuellAS = steps.getKursGewinnVerhaeltnisAktuell();
-                float analystenmeinungenAS = steps.getAnalystenmeinungen();
-                float reaktionQAS = steps.getReaktionaufQuartalszahlen();
-                float gewinnrevisionAS = steps.getGewinnrevision();
-                float kursverlauf6AS = steps.getKursverlauf6Monate();
-                float kursverlauf12AS = steps.getKursverlauf12Monate();
-                float kursmomentumAS = steps.getKursmomentum();
-                float dreimonrevAS = steps.getDreimonatsreversal();
-                float gewinnwachstumAS = steps.getGewinnwachstum();
-                observableListAS.add(new AnalysisStepsManageUI("Eigenkapitalrendite", eigenkapitalrenditeAS));
-                observableListAS.add(new AnalysisStepsManageUI("EbitMarge", ebitAS));
-                observableListAS.add(new AnalysisStepsManageUI("Eigenkapitalquote", eigenkapitalquoteAS));
-                observableListAS.add(new AnalysisStepsManageUI("KursGewinnVerhältnis", KGVAS));
-                observableListAS.add(new AnalysisStepsManageUI("KursGewinnVerhältnisAktuell", AGVAktuellAS));
-                observableListAS.add(new AnalysisStepsManageUI("Analystenmeinungen", analystenmeinungenAS));
-                observableListAS.add(new AnalysisStepsManageUI("Reaktion auf Quartalszahlen", reaktionQAS));
-                observableListAS.add(new AnalysisStepsManageUI("Gewinnrevision", gewinnrevisionAS));
-                observableListAS.add(new AnalysisStepsManageUI("Kursverlauf 6 Monate", kursverlauf6AS));
-                observableListAS.add(new AnalysisStepsManageUI("Kursverlauf 12 Monate", kursverlauf12AS));
-                observableListAS.add(new AnalysisStepsManageUI("Kursmomentum", kursmomentumAS));
-                observableListAS.add(new AnalysisStepsManageUI("Dreimonantsreversal", dreimonrevAS));
-                observableListAS.add(new AnalysisStepsManageUI("Gewinnwachstum", gewinnwachstumAS));
-            }
         }
 
-
-        session1.getTransaction().commit();
-        DisconnectionDB();
-
-
-
-
-
     }
+            session.getTransaction().commit();
+            session.close();
+            //    System.out.println("fuck youuuuuuuuuuuu" + un1.getEigenkapitalrendite()+ un1.getCompanyname_AnalysisSteps());
+            System.out.println("Speichere Unternehmen...");
+            System.out.println("Done!");
+        } catch (HibernateException e) {
+            System.out.println("Hibernate Exception" + e.getMessage());
+            session.getTransaction().rollback();
+            throw new RuntimeException(e);
+        } finally {
+        }
+    }
+
 /*
     private void getDataAnalysisSteps(){
         ConnectionDB();
