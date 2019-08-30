@@ -6,6 +6,7 @@ import javafx.scene.Group;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import org.apache.log4j.BasicConfigurator;
 
 import java.io.IOException;
 
@@ -79,6 +80,8 @@ public class App extends Application {
 
     public static void main(String[] args) {
         launch();
+        BasicConfigurator.configure();
+
     }
 
     private void setStage(Stage startStage){
@@ -98,6 +101,5 @@ public class App extends Application {
         stage.setWidth(1500);
     }
 
-    //http://javafx.com/javafx/11.0.1 für fxml
 
 }

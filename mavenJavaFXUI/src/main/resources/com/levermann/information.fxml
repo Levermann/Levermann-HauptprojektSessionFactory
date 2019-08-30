@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.net.URL?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Accordion?>
 <?import javafx.scene.control.Button?>
@@ -9,7 +10,6 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<?import java.net.URL?>
 <VBox alignment="CENTER" prefHeight="810.0" prefWidth="1500.0" spacing="20.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.levermann.InformationController">
     <stylesheets>
         <URL value="@lisasStyle.css" />
@@ -23,10 +23,7 @@
                   <content>
                     <AnchorPane maxHeight="1.7976931348623157E308" minHeight="0.0" minWidth="0.0" prefHeight="159.0" prefWidth="1289.0">
                         <children>
-                            <Text fontSmoothingType="LCD" layoutX="14.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Definition: Die Eigenkapitalrendite (engl. Return on Equity, kurz RoE) beschreibt das Verhältnis von Gewinn zu Eigenkapital.
-Bedeutung: Die Eigenkapitalrendite hat für Aktien eine wichtige Bedeutung. Es hat sich herausgestellt, dass es eine Verbindung zwischen der Eigenkapitalrendite und der Performance der Aktie gibt. Je höher die Eigenkapitalrendite ist, desto wahrscheinlicher ist eine Wertsteigerung.
-Bewertung: Beträgt der Prozentsatz weniger als 10 Prozent, gibt es einen Minuspunkt. Liegt der Wert zwischen 10 und 20 Prozent, werden 0 Punkte verteilt. Und wenn er über 20 Prozent liegt, gibt es einen Pluspunkt
-" wrappingWidth="1218.0">
+                            <Text fontSmoothingType="LCD" layoutX="14.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Definition: Die Eigenkapitalrendite (engl. Return on Equity, kurz RoE) beschreibt das Verhältnis von Gewinn zu Eigenkapital. Bedeutung: Die Eigenkapitalrendite hat für Aktien eine wichtige Bedeutung. Es hat sich herausgestellt, dass es eine Verbindung zwischen der Eigenkapitalrendite und der Performance der Aktie gibt. Je höher die Eigenkapitalrendite ist, desto wahrscheinlicher ist eine Wertsteigerung. Bewertung: Beträgt der Prozentsatz weniger als 10 Prozent, gibt es einen Minuspunkt. Liegt der Wert zwischen 10 und 20 Prozent, werden 0 Punkte verteilt. Und wenn er über 20 Prozent liegt, gibt es einen Pluspunkt " wrappingWidth="1218.0">
                                 <font>
                                     <Font size="14.0" />
                                 </font>
@@ -218,7 +215,10 @@ Bewertung: Beträgt der Prozentsatz weniger als 10 Prozent, gibt es einen Minusp
                     <content>
                       <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                            <children>
-                              <Text fontSmoothingType="LCD" layoutX="14.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="1218.0"/>
+                              <Text fontSmoothingType="LCD" layoutX="14.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Vergleicht die Gewinnschätzungen für dieses Geschäftsjahr und die für dasnächsten" wrappingWidth="1218.0">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font></Text>
                            </children></AnchorPane>
                     </content>
                      <font>

@@ -19,6 +19,16 @@ import java.io.Serializable;
 
 })
 public class Company implements Serializable  {
+
+
+    public Company(String Companyname, String datum, float GesamtPunkte) {
+        this.Companyname = Companyname;
+        this.datum = datum;
+        this.GesamtPunkte = GesamtPunkte;
+    }
+
+
+
     public Company(String companyname, String datum, float eigenkapital, float jahresueberschuss, float gewinnEBIT,
                    float jahresumsatz, float fremdkapital, float aktuellerAktienkurs, float gewinnschaezung,
                    float gewinnAVG, float halten, float verkaufen, float kaufen, float kursanstiegUnternehmen,
@@ -26,7 +36,7 @@ public class Company implements Serializable  {
                    float aktienkursTagVeroeffentlichungQartalszahlen, float kursVor6Monaten, float kursVor12Monaten,
                    float kursVor3Monaten, float kursVor2Monaten, float kursVor1Monat, float daxVor1Monat,
                    float daxVor2Monaten, float daxVor3Monaten, float gewinnschaezungNaechstesJahr,
-                   float gewinnschaezungDiesesJahr, float finanzsektor, Integer perfInJedemMonat,
+                   float gewinnschaezungDiesesJahr, float finanzsektor,
                    Integer kursgewinnVor3Jahren, Integer kursgewinnVor2Jahren, Integer kursgewinnVor1Jahr,
                    Integer aktuellenErwartetenKursgewinn, Integer kursgewinnschaezungNaechstesJahr) {
         Companyname = companyname;
@@ -57,7 +67,6 @@ public class Company implements Serializable  {
         GewinnschaezungNaechstesJahr = gewinnschaezungNaechstesJahr;
         GewinnschaezungDiesesJahr = gewinnschaezungDiesesJahr;
         Finanzsektor = finanzsektor;
-        PerfInJedemMonat = perfInJedemMonat;
         KursgewinnVor3Jahren = kursgewinnVor3Jahren;
         KursgewinnVor2Jahren = kursgewinnVor2Jahren;
         KursgewinnVor1Jahr = kursgewinnVor1Jahr;
@@ -170,6 +179,10 @@ public class Company implements Serializable  {
     @Basic
     @Column(name="KursgewinnschaezungNaechstesJahr", unique = true, nullable = true)
     private Integer KursgewinnschaezungNaechstesJahr;
+    @Basic
+    @Column(name="GesamtPunkte")
+    private float GesamtPunkte;
+
 
     public Company() {
 
@@ -476,4 +489,11 @@ public class Company implements Serializable  {
     }
 
 
+    public float getGesamtPunkte() {
+        return GesamtPunkte;
+    }
+
+    public void setGesamtPunkte(float gesamtPunkte) {
+        GesamtPunkte = gesamtPunkte;
+    }
 }

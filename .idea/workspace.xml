@@ -5,18 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ef1c18af-56f3-4a36-8891-4764d24d597a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/b34121eb-3aed-44a8-9368-49552a11cff0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/b34121eb-3aed-44a8-9368-49552a11cff0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LevermannAnalYse.iml" beforeDir="false" afterPath="$PROJECT_DIR$/LevermannAnalYse.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/mavenJavaFXUI.iml" beforeDir="false" afterPath="$PROJECT_DIR$/mavenJavaFXUI/mavenJavaFXUI.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/src/main/java/com/levermann/InputController.java" beforeDir="false" afterPath="$PROJECT_DIR$/mavenJavaFXUI/src/main/java/com/levermann/InputController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/src/main/java/com/levermann/ShowUserInputController.java" beforeDir="false" afterPath="$PROJECT_DIR$/mavenJavaFXUI/src/main/java/com/levermann/ShowUserInputController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/src/main/java/com/levermann/ShowUserInputManageUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/mavenJavaFXUI/src/main/java/com/levermann/ShowUserInputManageUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/src/main/resources/com/levermann/userInput.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/mavenJavaFXUI/src/main/resources/com/levermann/userInput.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/target/classes/com/levermann/InputController.class" beforeDir="false" afterPath="$PROJECT_DIR$/mavenJavaFXUI/target/classes/com/levermann/InputController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/src/main/java/com/levermann/CompanyOverviewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/mavenJavaFXUI/src/main/java/com/levermann/CompanyOverviewController.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -62,10 +52,6 @@
         <item name="levermann: schema" type="ebfa3cd1:MariaImplModel$Schema" />
         <item name="company: table" type="dbc44a63:MariaImplModel$Table" />
       </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="resources:hibernate.cfg.xml/Hibernate" type="feb32156:DbDataSourceImpl" />
-      </path>
     </expand>
     <select />
   </component>
@@ -104,7 +90,7 @@
     </option>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="xy" />
+        <entry key="$PROJECT_DIR$" value="blubblubAlready" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -151,7 +137,8 @@
     <property name="project.structure.proportion" value="0.14746094" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
@@ -215,7 +202,7 @@
       </method>
     </configuration>
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="ALTERNATIVE_JRE_PATH" value="1.8" />
+      <option name="ALTERNATIVE_JRE_PATH" value="Java 8" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="com.levermann.App" />
       <module name="mavenJavaFXUI" />
@@ -230,7 +217,7 @@
       </method>
     </configuration>
     <configuration name="ConnectionMainFactory" type="Application" factoryName="Application" nameIsGenerated="true">
-      <option name="ALTERNATIVE_JRE_PATH" value="1.8" />
+      <option name="ALTERNATIVE_JRE_PATH" value="Java 8" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="com.levermann.mainMethod.ConnectionMainFactory" />
       <module name="LevermannAnalYse" />
@@ -245,9 +232,23 @@
       </method>
     </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="ALTERNATIVE_JRE_PATH" value="1.8" />
+      <option name="ALTERNATIVE_JRE_PATH" value="12" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="com.levermann.sessionControlClasses.Main" />
+      <module name="LevermannAnalyse" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.levermann.mainMethod.TestMain" />
+      <module name="LevermannAnalYse" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.levermann.mainMethod.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -334,14 +335,15 @@
       <item itemvalue="Application.Main" />
       <item itemvalue="JAR Application.mavenJavaFXUI-1.0-SNAPSHOT.jar" />
       <item itemvalue="Maven.mavenJavaFXUI [javafx:run]" />
+      <item itemvalue="Application.TestMain" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.App" />
+        <item itemvalue="Application.TestMain" />
         <item itemvalue="JAR Application.mavenJavaFXUI-1.0-SNAPSHOT.jar" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.Main" />
-        <item itemvalue="Application.App" />
       </list>
     </recent_temporary>
   </component>
@@ -352,7 +354,22 @@
           <expand>
             <path>
               <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@7c5dc286" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@99e11300" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+            </path>
+            <path>
+              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@99e11300" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@58d60fa2" type="9fbbdea:ServiceModel$ServiceNode" />
+            </path>
+            <path>
+              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@99e11300" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@28a21ee9" type="9fbbdea:ServiceModel$ServiceNode" />
+            </path>
+            <path>
+              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@99e11300" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@222ebb95" type="9fbbdea:ServiceModel$ServiceNode" />
             </path>
           </expand>
           <select />
@@ -405,205 +422,7 @@
       <workItem from="1566491635410" duration="25623000" />
       <workItem from="1566585459730" duration="21406000" />
       <workItem from="1566650626276" duration="6535000" />
-      <workItem from="1567001123150" duration="3682000" />
-      <workItem from="1567007511830" duration="9262000" />
-      <workItem from="1567156959700" duration="618000" />
-    </task>
-    <task id="LOCAL-00013" summary="Umstellung auf SessionFactory">
-      <created>1559037054010</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1559037054010</updated>
-    </task>
-    <task id="LOCAL-00014" summary="Select für Jahresüberschuss erstellt">
-      <created>1559041299318</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1559041299318</updated>
-    </task>
-    <task id="LOCAL-00015" summary="Select für Jahresüberschuss erstellt">
-      <created>1559041360595</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1559041360595</updated>
-    </task>
-    <task id="LOCAL-00016" summary="Update">
-      <created>1559042750025</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1559042750025</updated>
-    </task>
-    <task id="LOCAL-00017" summary="Update 29.05.2019 SQL-Abfragen">
-      <created>1559120609592</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1559120609592</updated>
-    </task>
-    <task id="LOCAL-00018" summary="Update 07.08.2019">
-      <created>1565171495946</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1565171495946</updated>
-    </task>
-    <task id="LOCAL-00019" summary="Update 07.08.2019">
-      <created>1565176719645</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1565176719645</updated>
-    </task>
-    <task id="LOCAL-00020" summary="Update 07.08.2019">
-      <created>1565178380853</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1565178380853</updated>
-    </task>
-    <task id="LOCAL-00021" summary="upate 07.08.2019&#10;Add SQL statements for database creation&#10;Change Update parameter ID to parameter Company name for all&#10;Levermannschritte">
-      <created>1565178773110</created>
-      <option name="number" value="00021" />
-      <option name="presentableId" value="LOCAL-00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1565178773110</updated>
-    </task>
-    <task id="LOCAL-00022" summary="upate 07.08.2019&#10;Add SQL statements for database creation&#10;Change Update parameter ID to parameter Company name for all&#10;Levermannschritte">
-      <created>1565178846320</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1565178846320</updated>
-    </task>
-    <task id="LOCAL-00023" summary="upate 08.08.2019">
-      <created>1565262385082</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1565262385082</updated>
-    </task>
-    <task id="LOCAL-00024" summary="upate 08.08.2019">
-      <created>1565263612659</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1565263612659</updated>
-    </task>
-    <task id="LOCAL-00025" summary="upate 08.08.2019">
-      <created>1565268660749</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1565268660749</updated>
-    </task>
-    <task id="LOCAL-00026" summary="upate 08.08.2019">
-      <created>1565293765277</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1565293765277</updated>
-    </task>
-    <task id="LOCAL-00027" summary="upate 08.08.2019">
-      <created>1565293930616</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1565293930616</updated>
-    </task>
-    <task id="LOCAL-00028" summary="upate 08.08.2019">
-      <created>1565343265760</created>
-      <option name="number" value="00028" />
-      <option name="presentableId" value="LOCAL-00028" />
-      <option name="project" value="LOCAL" />
-      <updated>1565343265760</updated>
-    </task>
-    <task id="LOCAL-00029" summary="upate 08.08.2019">
-      <created>1566126931793</created>
-      <option name="number" value="00029" />
-      <option name="presentableId" value="LOCAL-00029" />
-      <option name="project" value="LOCAL" />
-      <updated>1566126931793</updated>
-    </task>
-    <task id="LOCAL-00030" summary="upate 08.08.2019">
-      <created>1566127236873</created>
-      <option name="number" value="00030" />
-      <option name="presentableId" value="LOCAL-00030" />
-      <option name="project" value="LOCAL" />
-      <updated>1566127236873</updated>
-    </task>
-    <task id="LOCAL-00031" summary="Perfect Project --Thanks @Lisa Stolz">
-      <created>1566128218456</created>
-      <option name="number" value="00031" />
-      <option name="presentableId" value="LOCAL-00031" />
-      <option name="project" value="LOCAL" />
-      <updated>1566128218456</updated>
-    </task>
-    <task id="LOCAL-00032" summary="deleted boolshit again">
-      <created>1566128285279</created>
-      <option name="number" value="00032" />
-      <option name="presentableId" value="LOCAL-00032" />
-      <option name="project" value="LOCAL" />
-      <updated>1566128285279</updated>
-    </task>
-    <task id="LOCAL-00033" summary="renamed packages and co">
-      <created>1566157136371</created>
-      <option name="number" value="00033" />
-      <option name="presentableId" value="LOCAL-00033" />
-      <option name="project" value="LOCAL" />
-      <updated>1566157136371</updated>
-    </task>
-    <task id="LOCAL-00034" summary="latest version 19.08.2019">
-      <created>1566225228785</created>
-      <option name="number" value="00034" />
-      <option name="presentableId" value="LOCAL-00034" />
-      <option name="project" value="LOCAL" />
-      <updated>1566225228786</updated>
-    </task>
-    <task id="LOCAL-00035" summary="renamed Controller">
-      <created>1566234238939</created>
-      <option name="number" value="00035" />
-      <option name="presentableId" value="LOCAL-00035" />
-      <option name="project" value="LOCAL" />
-      <updated>1566234238939</updated>
-    </task>
-    <task id="LOCAL-00036" summary="Created ManyToOne and OneTOMany associations for Mapping with Tables">
-      <created>1566262610930</created>
-      <option name="number" value="00036" />
-      <option name="presentableId" value="LOCAL-00036" />
-      <option name="project" value="LOCAL" />
-      <updated>1566262610930</updated>
-    </task>
-    <task id="LOCAL-00037" summary="Created ManyToOne and OneTOMany associations for Mapping with Tables">
-      <created>1566289541139</created>
-      <option name="number" value="00037" />
-      <option name="presentableId" value="LOCAL-00037" />
-      <option name="project" value="LOCAL" />
-      <updated>1566289541139</updated>
-    </task>
-    <task id="LOCAL-00038" summary="added CompanyOverviewController">
-      <created>1566292556245</created>
-      <option name="number" value="00038" />
-      <option name="presentableId" value="LOCAL-00038" />
-      <option name="project" value="LOCAL" />
-      <updated>1566292556245</updated>
-    </task>
-    <task id="LOCAL-00039" summary="added CompanyOverviewController&#10;TestcommitMax">
-      <created>1566304327367</created>
-      <option name="number" value="00039" />
-      <option name="presentableId" value="LOCAL-00039" />
-      <option name="project" value="LOCAL" />
-      <updated>1566304327367</updated>
-    </task>
-    <task id="LOCAL-00040" summary="Added @FXML Annotationen für Textfelder &amp; Checkboxen">
-      <created>1566324494013</created>
-      <option name="number" value="00040" />
-      <option name="presentableId" value="LOCAL-00040" />
-      <option name="project" value="LOCAL" />
-      <updated>1566324494013</updated>
+      <workItem from="1567001123150" duration="77058000" />
     </task>
     <task id="LOCAL-00041" summary="Addes JDBC Driver&#10;Connection still failing">
       <created>1566375913409</created>
@@ -752,7 +571,203 @@
       <option name="project" value="LOCAL" />
       <updated>1566994795521</updated>
     </task>
-    <option name="localTasksCounter" value="62" />
+    <task id="LOCAL-00062" summary="funktionierende Liste für userinput nur nicht die richtigen werte">
+      <created>1567005685845</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1567005685845</updated>
+    </task>
+    <task id="LOCAL-00063" summary="checkbox design">
+      <created>1567025435249</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1567025435249</updated>
+    </task>
+    <task id="LOCAL-00064" summary="checkbox design">
+      <created>1567025830046</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1567025830046</updated>
+    </task>
+    <task id="LOCAL-00065" summary="added Gesamtpunkte">
+      <created>1567038812606</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1567038812606</updated>
+    </task>
+    <task id="LOCAL-00066" summary="anpassung entity Associations weg">
+      <created>1567039181763</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1567039181763</updated>
+    </task>
+    <task id="LOCAL-00067" summary="new Class CalculateUserInput @FlorianLand :*">
+      <created>1567039546920</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1567039546920</updated>
+    </task>
+    <task id="LOCAL-00068" summary="new Class CalculateUserInput @FlorianLand :*">
+      <created>1567039845966</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1567039845966</updated>
+    </task>
+    <task id="LOCAL-00069" summary="update">
+      <created>1567041711670</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1567041711670</updated>
+    </task>
+    <task id="LOCAL-00070" summary="eigenkapitalrendite save">
+      <created>1567076101722</created>
+      <option name="number" value="00070" />
+      <option name="presentableId" value="LOCAL-00070" />
+      <option name="project" value="LOCAL" />
+      <updated>1567076101722</updated>
+    </task>
+    <task id="LOCAL-00071" summary="eigenkapitalrendite save">
+      <created>1567076628510</created>
+      <option name="number" value="00071" />
+      <option name="presentableId" value="LOCAL-00071" />
+      <option name="project" value="LOCAL" />
+      <updated>1567076628510</updated>
+    </task>
+    <task id="LOCAL-00072" summary="eigenkapitalquto und ebitmarge save">
+      <created>1567077498363</created>
+      <option name="number" value="00072" />
+      <option name="presentableId" value="LOCAL-00072" />
+      <option name="project" value="LOCAL" />
+      <updated>1567077498363</updated>
+    </task>
+    <task id="LOCAL-00073" summary="kgv aktuell save">
+      <created>1567078575285</created>
+      <option name="number" value="00073" />
+      <option name="presentableId" value="LOCAL-00073" />
+      <option name="project" value="LOCAL" />
+      <updated>1567078575285</updated>
+    </task>
+    <task id="LOCAL-00074" summary="analystenmeinungen save">
+      <created>1567080958459</created>
+      <option name="number" value="00074" />
+      <option name="presentableId" value="LOCAL-00074" />
+      <option name="project" value="LOCAL" />
+      <updated>1567080958459</updated>
+    </task>
+    <task id="LOCAL-00075" summary="punkte complete save">
+      <created>1567082977989</created>
+      <option name="number" value="00075" />
+      <option name="presentableId" value="LOCAL-00075" />
+      <option name="project" value="LOCAL" />
+      <updated>1567082977989</updated>
+    </task>
+    <task id="LOCAL-00076" summary="punkte complete save">
+      <created>1567083390333</created>
+      <option name="number" value="00076" />
+      <option name="presentableId" value="LOCAL-00076" />
+      <option name="project" value="LOCAL" />
+      <updated>1567083390333</updated>
+    </task>
+    <task id="LOCAL-00077" summary="lol">
+      <created>1567088101276</created>
+      <option name="number" value="00077" />
+      <option name="presentableId" value="LOCAL-00077" />
+      <option name="project" value="LOCAL" />
+      <updated>1567088101276</updated>
+    </task>
+    <task id="LOCAL-00078" summary="lol2">
+      <created>1567088372396</created>
+      <option name="number" value="00078" />
+      <option name="presentableId" value="LOCAL-00078" />
+      <option name="project" value="LOCAL" />
+      <updated>1567088372396</updated>
+    </task>
+    <task id="LOCAL-00079" summary="lol2">
+      <created>1567092865157</created>
+      <option name="number" value="00079" />
+      <option name="presentableId" value="LOCAL-00079" />
+      <option name="project" value="LOCAL" />
+      <updated>1567092865157</updated>
+    </task>
+    <task id="LOCAL-00080" summary="topaktuell 29.08">
+      <created>1567104268657</created>
+      <option name="number" value="00080" />
+      <option name="presentableId" value="LOCAL-00080" />
+      <option name="project" value="LOCAL" />
+      <updated>1567104268657</updated>
+    </task>
+    <task id="LOCAL-00081" summary="inputcontroller verbessert">
+      <created>1567104887614</created>
+      <option name="number" value="00081" />
+      <option name="presentableId" value="LOCAL-00081" />
+      <option name="project" value="LOCAL" />
+      <updated>1567104887614</updated>
+    </task>
+    <task id="LOCAL-00082" summary="added Gesamtpunkte to entity company">
+      <created>1567105989735</created>
+      <option name="number" value="00082" />
+      <option name="presentableId" value="LOCAL-00082" />
+      <option name="project" value="LOCAL" />
+      <updated>1567105989735</updated>
+    </task>
+    <task id="LOCAL-00083" summary="fghfshggsh">
+      <created>1567112963788</created>
+      <option name="number" value="00083" />
+      <option name="presentableId" value="LOCAL-00083" />
+      <option name="project" value="LOCAL" />
+      <updated>1567112963788</updated>
+    </task>
+    <task id="LOCAL-00084" summary="fghfshggsh">
+      <created>1567113089933</created>
+      <option name="number" value="00084" />
+      <option name="presentableId" value="LOCAL-00084" />
+      <option name="project" value="LOCAL" />
+      <updated>1567113089933</updated>
+    </task>
+    <task id="LOCAL-00085" summary="hjkhjgjkk">
+      <created>1567116955527</created>
+      <option name="number" value="00085" />
+      <option name="presentableId" value="LOCAL-00085" />
+      <option name="project" value="LOCAL" />
+      <updated>1567116955527</updated>
+    </task>
+    <task id="LOCAL-00086" summary="kaka">
+      <created>1567117671497</created>
+      <option name="number" value="00086" />
+      <option name="presentableId" value="LOCAL-00086" />
+      <option name="project" value="LOCAL" />
+      <updated>1567117671497</updated>
+    </task>
+    <task id="LOCAL-00087" summary="kaka">
+      <created>1567119092592</created>
+      <option name="number" value="00087" />
+      <option name="presentableId" value="LOCAL-00087" />
+      <option name="project" value="LOCAL" />
+      <updated>1567119092592</updated>
+    </task>
+    <task id="LOCAL-00088" summary="kaka">
+      <created>1567123873535</created>
+      <option name="number" value="00088" />
+      <option name="presentableId" value="LOCAL-00088" />
+      <option name="project" value="LOCAL" />
+      <updated>1567123873535</updated>
+    </task>
+    <task id="LOCAL-00089" summary="mhm">
+      <created>1567135275870</created>
+      <option name="number" value="00089" />
+      <option name="presentableId" value="LOCAL-00089" />
+      <option name="project" value="LOCAL" />
+      <updated>1567135275870</updated>
+    </task>
+    <option name="localTasksCounter" value="90" />
     <servers />
   </component>
   <component name="TodoView">
@@ -817,32 +832,32 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="deleted boolshit again" />
-    <MESSAGE value="renamed packages and co" />
-    <MESSAGE value="latest version 19.08.2019" />
-    <MESSAGE value="renamed Controller" />
-    <MESSAGE value="Created ManyToOne and OneTOMany associations for Mapping with Tables" />
-    <MESSAGE value="added CompanyOverviewController" />
-    <MESSAGE value="added CompanyOverviewController&#10;TestcommitMax" />
-    <MESSAGE value="Added @FXML Annotationen für Textfelder &amp; Checkboxen" />
-    <MESSAGE value="Addes JDBC Driver&#10;Connection still failing" />
-    <MESSAGE value="latest Version 21.08" />
-    <MESSAGE value="new Controller" />
-    <MESSAGE value="mysql connector in der POM -.-" />
-    <MESSAGE value="Update Entity with equals and hash" />
-    <MESSAGE value="IT WORKS" />
-    <MESSAGE value="IT WORKS + Andis Sql Abfrage" />
-    <MESSAGE value="added Named Queries and Information fxml" />
-    <MESSAGE value="added UserInput Controller to check or update the Inputs manually" />
-    <MESSAGE value="Change to JDK 8 and now it WORKS AGAIN -.-" />
-    <MESSAGE value="Maxis Businesslogik geadded" />
-    <MESSAGE value="UserInput via Session and JDBC in die DB" />
     <MESSAGE value="added Stylesheet" />
     <MESSAGE value="table" />
     <MESSAGE value="Style" />
     <MESSAGE value="session delete button" />
     <MESSAGE value="style" />
-    <option name="LAST_COMMIT_MESSAGE" value="style" />
+    <MESSAGE value="funktionierende Liste für userinput nur nicht die richtigen werte" />
+    <MESSAGE value="checkbox design" />
+    <MESSAGE value="added Gesamtpunkte" />
+    <MESSAGE value="anpassung entity Associations weg" />
+    <MESSAGE value="new Class CalculateUserInput @FlorianLand :*" />
+    <MESSAGE value="update" />
+    <MESSAGE value="eigenkapitalrendite save" />
+    <MESSAGE value="eigenkapitalquto und ebitmarge save" />
+    <MESSAGE value="kgv aktuell save" />
+    <MESSAGE value="analystenmeinungen save" />
+    <MESSAGE value="punkte complete save" />
+    <MESSAGE value="lol" />
+    <MESSAGE value="lol2" />
+    <MESSAGE value="topaktuell 29.08" />
+    <MESSAGE value="inputcontroller verbessert" />
+    <MESSAGE value="added Gesamtpunkte to entity company" />
+    <MESSAGE value="fghfshggsh" />
+    <MESSAGE value="hjkhjgjkk" />
+    <MESSAGE value="kaka" />
+    <MESSAGE value="mhm" />
+    <option name="LAST_COMMIT_MESSAGE" value="mhm" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -861,9 +876,9 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/LevermannAnalyse$.ic" NAME=" Coverage Results" MODIFIED="1566843097175" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/LevermannAnalyse$ConnectionMainFactory.ic" NAME="ConnectionMainFactory Coverage Results" MODIFIED="1566639806873" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.levermann.TestFiles.*</FILTER>
     </SUITE>
+    <SUITE FILE_PATH="coverage/LevermannAnalyse$.ic" NAME=" Coverage Results" MODIFIED="1566843097175" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

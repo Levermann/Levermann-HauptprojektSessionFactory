@@ -6,7 +6,7 @@ import java.io.Serializable;
 
 @NamedQueries({
         @NamedQuery(name = "AnalysisSteps.findall", query = "SELECT A FROM AnalysisSteps A"),
-        @NamedQuery(name = "AnalysisSteps.findByfindByName", query = "SELECT c FROM AnalysisSteps c WHERE c.AnalysisStepsName =:AnalysisStepsName")
+        @NamedQuery(name = "AnalysisSteps.findByName", query = "SELECT c FROM AnalysisSteps c WHERE c.Companyname_AnalysisSteps =:Companyname_AnalysisSteps")
 
 })
 
@@ -14,11 +14,10 @@ import java.io.Serializable;
 @Table(name = "analysissteps")
 public class AnalysisSteps implements Serializable {
 
-    public AnalysisSteps(Company company) {
-        this.company = company;
-    }
 
-    public AnalysisSteps() {
+    public AnalysisSteps(String analysisstepsname, String companyname_AnalysisSteps) {
+        AnalysisStepsName = analysisstepsname;
+        Companyname_AnalysisSteps = companyname_AnalysisSteps;
 
     }
 
@@ -30,7 +29,7 @@ public class AnalysisSteps implements Serializable {
     @Column(name = "id")
     private Float id;
     @Basic
-    @Column(name = "Companyname_AnalysisSteps", insertable = false, updatable = false)
+    @Column(name = "Companyname_AnalysisSteps")
     private String Companyname_AnalysisSteps;
     @Basic
     @Column(name = "Eigenkapitalrendite")
@@ -72,9 +71,10 @@ public class AnalysisSteps implements Serializable {
     @Column(name = "Gewinnwachstum")
     private Float Gewinnwachstum;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "Companyname_AnalysisSteps")
-    private Company company;
+    public AnalysisSteps() {
+
+    }
+
 
     public String getAnalysisStepsName() {
         return AnalysisStepsName;

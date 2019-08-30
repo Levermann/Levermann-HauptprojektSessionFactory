@@ -1,6 +1,9 @@
 package com.levermann;
 
+import com.levermann.entityclass.AnalysisRating;
+import com.levermann.entityclass.AnalysisSteps;
 import com.levermann.entityclass.Company;
+import com.levermann.sessionControlClasses.CalculateUserInput;
 import com.levermann.sessionControlClasses.HibernateUtil;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -25,15 +28,11 @@ public class InputController implements ControlledScreenInterface {
     @FXML
     public TextField eigenkapitalDB;
     @FXML
-    public TextField idDB;
-    @FXML
     public TextField datumDB;
     @FXML
     public TextField gewinnschaetzungDB;
     @FXML
     public TextField gewinnavgDB;
-    @FXML
-    public TextField kursamtagderveroeffentlichungDB;
     @FXML
     public TextField perfinjedemmonatDB;
     @FXML
@@ -54,8 +53,6 @@ public class InputController implements ControlledScreenInterface {
     private TextField fremdkapitalDB;
     @FXML
     private TextField aktuellerAktienkursDB;
-    @FXML
-    private TextField geschaetzterGewinnDB;
     @FXML
     private TextField analystenKaufenDB;
     @FXML
@@ -91,8 +88,6 @@ public class InputController implements ControlledScreenInterface {
     @FXML
     private TextField gewinnschaetzungDiesesJahrDB;
     @FXML
-    private CheckBox smallCapDB;
-    @FXML
     private CheckBox finanzwerteDB;
 
     ScreensController myController;
@@ -100,6 +95,12 @@ public class InputController implements ControlledScreenInterface {
 
     public ObservableList<Company> addtoDB = FXCollections.observableArrayList(
             new Company()
+    );
+    public ObservableList<AnalysisRating> addtoDBAnalysisRating = FXCollections.observableArrayList(
+            new AnalysisRating()
+    );
+    public ObservableList<AnalysisSteps> addtoDBAnalysisSteps = FXCollections.observableArrayList(
+            new AnalysisSteps()
     );
     @Override
     public void setScreenParent(ScreensController screenParent){
@@ -216,9 +217,9 @@ private void disconnectToDB(){
             float aktuellerAktienkurs = Float.parseFloat(aktuellerAktienkursDB.getText());
             float gewinnschaezung = Float.parseFloat(aktuelleGewinnschaetzungDB.getText());
             float gewinnAVG = Float.parseFloat(gewinnavgDB.getText());
-            float halten = 1;
-            float verkaufen = 0;
-            float kaufen = 0;
+            float halten = Float.parseFloat(analystenHaltenDB.getText());
+            float verkaufen = Float.parseFloat(analystenVerkaufenDB.getText());
+            float kaufen = Float.parseFloat(analystenKaufenDB.getText());
             float kursanstiegUnternehmen = Float.parseFloat(kursanstiegUnternehmenDB.getText());
             float kursanstiegIndex = Float.parseFloat(kursanstiegAktienindexDB.getText());
             float gewinnschaezungVor4Wochen = Float.parseFloat(gewinnEBITDB.getText());
@@ -233,8 +234,7 @@ private void disconnectToDB(){
             float daxVor3Monaten = Float.parseFloat(aktienkursVor3MonatenDB.getText());
             float gewinnschaezungDiesesJahr = Float.parseFloat(gewinnschaetzungDiesesJahrDB.getText());
             float gewinnschaezungNaechstesJahr = Float.parseFloat(gewinnschaetzungNaechstesJahrDB.getText());
-            float finanzsektor = 1;
-            int perfInJedemMonat = Integer.parseInt(perfinjedemmonatDB.getText());
+            float finanzsektor = 0;
             int kursgewinnVor3Jahren = Integer.parseInt(gewinnVor3JahrenDB.getText());
             int kursgewinnVor2Jahren = Integer.parseInt(gewinnVor2JahrenDB.getText());
             int kursgewinnVor1Jahr = Integer.parseInt(gewinnVor1JahrDB.getText());
@@ -248,19 +248,36 @@ private void disconnectToDB(){
              aktienkursTagVeroeffentlichungQartalszahlen,  kursVor6Monaten,  kursVor12Monaten,
              kursVor3Monaten,  kursVor2Monaten,  kursVor1Monat,  daxVor1Monat,
              daxVor2Monaten,  daxVor3Monaten,  gewinnschaezungNaechstesJahr,
-             gewinnschaezungDiesesJahr,  finanzsektor, perfInJedemMonat,
+             gewinnschaezungDiesesJahr,  finanzsektor,
                      kursgewinnVor3Jahren,  kursgewinnVor2Jahren,  kursgewinnVor1Jahr,
                      aktuellenErwartetenKursgewinn,  kursgewinnschaezungNaechstesJahr);
+
+
+            String Analysisratingname = unternehmennameDB.getText() + "analyse";
+            String companyname_AnalysisRating = unternehmennameDB.getText();
+
+            AnalysisRating analysisRating = new AnalysisRating(Analysisratingname, companyname_AnalysisRating);
+
+            String analysisstepsname = unternehmennameDB.getText() + "analyse";
+            String companyname_AnalysisSteps = unternehmennameDB.getText();
+
+            AnalysisSteps analysisSteps = new AnalysisSteps(analysisstepsname, companyname_AnalysisSteps);
+
             addtoDB.add(company);
+            addtoDBAnalysisRating.add(analysisRating);
+            addtoDBAnalysisSteps.add(analysisSteps);
 
 
             Session session1 = HibernateUtil.getSessionFactory().openSession();
             session1.beginTransaction();
             session1.save(company);
+            session1.save(analysisRating);
+            session1.save(analysisSteps);
             session1.getTransaction().commit();
-            //TODO eventuell hier noch die Methodenaufrufe für die Berechnungen bevor die Session closed
-            session1.close();
+            CalculateUserInput xyz = new CalculateUserInput();
+            xyz.CalculateEigenkapitalrendite();
 
+            session1.close();
             disconnectToDB();
         }
     }

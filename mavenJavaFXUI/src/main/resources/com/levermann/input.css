@@ -1,23 +1,37 @@
 *,
-.root {
+
+.check-box:focused{
+    -fx-color: #2EFE2E;
+    -fx-focused-color: #2EFE2E;
+}
+.check-box .box{
+    -fx-border-color: #2EFE2E;
+    -fx-shadow-highlight-color: #2EFE2E;
+    -fx-outer-border: #848484;
     -fx-background-color: #FFFFFF;
+    -fx-background-insets: #2EFE2E;
+    -fx-background-radius: 2,2,1,1;
+    -fx-padding: 0.25em;
+}
+.check-box:focused .box{
+    -fx-background-color: #848484;
+    -fx-background-insets: -1.4, 0,1,2;
+    -fx-background-radius: 3,4,2,1,1;
+}
+.button{
+    -fx-border-color: #000000;
+    -fx-background-color: #ffffff;
+    -fx-font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+    -fx-font-size: 9pt;
+    -fx-text-fill:#000000;
+    -fx-background-insets: 0 0 0 0, 0, 1, 2;
 }
 .text-field {
     -fx-background-color: white;
     -fx-border-color: #D8D8D8;
     -fx-padding: 5px;
 }
-.check-box {
-    -fx-background-color: white;
-    -fx-padding: 5px;
-}
-.check-box:selected .mark {
 
-    -fx-background-color: white;
-}
-.check-box .box{
-    -fx-background-color: #28a3f4;
-}
 
 
 

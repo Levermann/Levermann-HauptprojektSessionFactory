@@ -1,8 +1,8 @@
 create schema levermann;
 create table company(
-                            Companyname varchar (11) not null ,
+                            Companyname varchar (50) not null ,
                              id float (20)  unique ,
-                             datum float(11),
+                             datum varchar(11),
                              eigenkapital float(11),
                              jahresueberschuss float(11),
                              GewinnEBIT float (11),
@@ -35,15 +35,16 @@ create table company(
                              KursgewinnVor1Jahr float (11),
                              AktuellenErwartetenKursgewinn float (11),
                              KursgewinnschaezungNaechstesJahr float (11),
+                            GesamtPunkte float(11),
                               PRIMARY KEY (Companyname)
 
 );
 
 create table AnalysisSteps(
 
-                              AnalysisStepsName	varchar(20) not null unique,
+                              AnalysisStepsName	varchar(50) not null unique,
                             id float (20)  unique ,
-                              Companyname_AnalysisSteps varchar (20) not null ,
+                              Companyname_AnalysisSteps varchar (50) not null ,
                              Eigenkapitalrendite float(11),
                              EBITMarge float(11),
                              Eigenkapitalquote float(11),
@@ -63,9 +64,9 @@ create table AnalysisSteps(
 
 create table AnalysisRating(
 
-                               AnalysisRatingName	varchar(20) not null unique,
+                               AnalysisRatingName	varchar(50) not null unique,
                                  id float (20)  unique ,
-                               Companyname_AnalysisRating varchar (20) not null ,
+                               Companyname_AnalysisRating varchar (50) not null ,
                                   Eigenkapitalrendite float(11),
                                   EBITMarge float(11),
                                   Eigenkapitalquote float(11),
