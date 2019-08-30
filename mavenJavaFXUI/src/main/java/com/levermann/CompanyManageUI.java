@@ -16,23 +16,49 @@ public class CompanyManageUI  {
     private Button edit1;
     private Button show1;
 
-/*
-    public CompanyManageUI(Button delete1) {
+
+    public CompanyManageUI(String company1, String dateFormat, int score1,
+                           Button delete1, Button  edit1, Button show1) {
+        this.company1 = company1;
+        this.dateFormat = dateFormat;
+        this.score1 = score1;
         this.delete1 = new Button("deleteIt");
-      delete1.setOnAction(event -> {
-            Company company = new Company(delete1);
+        delete1.setOnAction(event -> {
+            Company company = new Company();
             Session session1 = getSessionFactory().openSession();
             session1.delete(company);
             session1.getTransaction().commit();
             //TODO eventuell hier noch die Methodenaufrufe für die Berechnungen bevor die Session closed
             session1.close();
         });
-
-
-
+        this.edit1 = new Button("editIt");
+        this.show1 = new Button("showIt");
     }
 
- */
+
+    public String getCompany1() {
+        return company1;
+    }
+
+    public void setCompany1(String company1) {
+        this.company1 = company1;
+    }
+
+    public String getDateFormat() {
+        return dateFormat;
+    }
+
+    public void setDateFormat(String dateFormat) {
+        this.dateFormat = dateFormat;
+    }
+
+    public int getScore1() {
+        return score1;
+    }
+
+    public void setScore1(int score1) {
+        this.score1 = score1;
+    }
 
     public Button getDelete1() {
         return delete1;

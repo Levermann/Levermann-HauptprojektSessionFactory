@@ -26,10 +26,10 @@
             </Label>
              <TableView fx:id="tableID" layoutX="263.0" layoutY="117.0" prefHeight="413.0" prefWidth="918.0" style="-fx-border-color: #6E6E6E;">
                  <columns>
-                     <TableColumn fx:id="companyName" prefWidth="225.0" text="Company" />
-                     <TableColumn fx:id="creationDate" prefWidth="168.0" text="creation date" />
-                     <TableColumn fx:id="analysisScore" prefWidth="184.0" text="score" />
-                     <TableColumn fx:id="delete" prefWidth="111.0" text="delete" />
+                     <TableColumn fx:id="companyName" prefWidth="343.0" text="Company" />
+                     <TableColumn fx:id="creationDate" prefWidth="247.0" text="creation date" />
+                     <TableColumn fx:id="analysisScore" prefWidth="164.0" text="score" />
+                     <TableColumn fx:id="delete" prefWidth="162.0" text="delete" />
                  </columns>
              </TableView>
             <Button layoutX="912.0" layoutY="559.0" mnemonicParsing="false" onAction="#tableAktualisieren" style="-fx-border-color: black;" text="Aktualisieren" />
