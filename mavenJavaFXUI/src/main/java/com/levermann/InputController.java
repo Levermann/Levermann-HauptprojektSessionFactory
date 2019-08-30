@@ -33,8 +33,6 @@ public class InputController implements ControlledScreenInterface {
     @FXML
     public TextField gewinnavgDB;
     @FXML
-    public TextField perfinjedemmonatDB;
-    @FXML
     public TextField gewinnVor3JahrenDB;
     @FXML
     public TextField gewinnVor2JahrenDB;
@@ -179,7 +177,7 @@ private void disconnectToDB(){
             fillDBvalues();
 
             String companyname = unternehmennameDB.getText();
-            String datum = "12.32.42";
+            String datum = datumDB.getText();
             float eigenkapital = Float.parseFloat(eigenkapitalDB.getText());
             float jahresueberschuss = Float.parseFloat(jahresueberschussDB.getText());
             float gewinnEBIT = Float.parseFloat(gewinnEBITDB.getText());

@@ -1,6 +1,5 @@
 package com.levermann;
 
-import com.levermann.DB.DBConnection;
 import com.levermann.entityclass.Company;
 import com.levermann.sessionControlClasses.HibernateUtil;
 import javafx.collections.FXCollections;
@@ -8,6 +7,7 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
@@ -19,7 +19,6 @@ import java.io.IOException;
 import java.net.URL;
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.sql.SQLException;
 import java.util.List;
 import java.util.ResourceBundle;
 
@@ -35,6 +34,8 @@ public class CompanyOverviewController implements Initializable, ControlledScree
     private TableColumn<Company, String> creationDate;
     @FXML
     private TableColumn<Company, Float> analysisScore;
+    @FXML
+    private TableColumn<Company, Button> delete;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -77,14 +78,15 @@ public class CompanyOverviewController implements Initializable, ControlledScree
             String nameforOverview = un.getCompanyname();
             String datumForOverview = un.getDatum();
             float SumScore = un.getGesamtPunkte();
-
+            Button deletemach = new Button("delete");
 
             final ObservableList<Company> overview = FXCollections.observableArrayList(
-                    new Company(nameforOverview, datumForOverview, SumScore)
+                    new Company(nameforOverview, datumForOverview, SumScore, deletemach)
             );
                 companyName.setCellValueFactory(new PropertyValueFactory<Company, String>("Companyname"));
                 creationDate.setCellValueFactory(new PropertyValueFactory<Company, String>("datum"));
                 analysisScore.setCellValueFactory(new PropertyValueFactory<Company, Float>("GesamtPunkte"));
+                delete.setCellValueFactory(new PropertyValueFactory<Company, Button>("delete1"));
 
             tableID.getItems().addAll(overview);
         }

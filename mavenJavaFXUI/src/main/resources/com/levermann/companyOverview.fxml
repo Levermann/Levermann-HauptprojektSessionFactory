@@ -29,7 +29,7 @@
                      <TableColumn fx:id="companyName" prefWidth="225.0" text="Company" />
                      <TableColumn fx:id="creationDate" prefWidth="168.0" text="creation date" />
                      <TableColumn fx:id="analysisScore" prefWidth="184.0" text="score" />
-
+                     <TableColumn fx:id="delete" prefWidth="111.0" text="delete" />
                  </columns>
              </TableView>
             <Button layoutX="912.0" layoutY="559.0" mnemonicParsing="false" onAction="#tableAktualisieren" style="-fx-border-color: black;" text="Aktualisieren" />

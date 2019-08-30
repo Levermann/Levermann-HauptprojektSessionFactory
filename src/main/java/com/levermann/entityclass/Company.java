@@ -1,9 +1,12 @@
 package com.levermann.entityclass;
 
+import javafx.scene.control.Button;
+import org.hibernate.Session;
+
 import javax.persistence.*;
 import java.io.Serializable;
 
-
+import static com.levermann.sessionControlClasses.HibernateUtil.getSessionFactory;
 
 
 @Entity
@@ -21,10 +24,12 @@ import java.io.Serializable;
 public class Company implements Serializable  {
 
 
-    public Company(String Companyname, String datum, float GesamtPunkte) {
+    public Company(String Companyname, String datum, float GesamtPunkte, Button delete1) {
         this.Companyname = Companyname;
         this.datum = datum;
         this.GesamtPunkte = GesamtPunkte;
+        delete1 = new Button("deleteIt");
+       
     }
 
 
@@ -73,6 +78,7 @@ public class Company implements Serializable  {
         AktuellenErwartetenKursgewinn = aktuellenErwartetenKursgewinn;
         KursgewinnschaezungNaechstesJahr = kursgewinnschaezungNaechstesJahr;
     }
+
     @Id
     @Column(name="Companyname")
     private String Companyname;
@@ -184,8 +190,9 @@ public class Company implements Serializable  {
     private float GesamtPunkte;
 
 
-    public Company() {
 
+    public Company() {
+        
     }
 
     //association One To Many: One Company to Many Punktelisten
