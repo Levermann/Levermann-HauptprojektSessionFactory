@@ -185,7 +185,7 @@ public class ShowResultController implements Initializable, ControlledScreenInte
         } finally {
         }
     }
-    
+
 
     private void ConnectionDB() {
         //TODO Die vom Benutzer eingegebenen Daten in die MySQL Datenbank schreiben

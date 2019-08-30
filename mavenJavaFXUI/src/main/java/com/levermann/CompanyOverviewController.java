@@ -1,6 +1,8 @@
 package com.levermann;
 
 import com.levermann.DB.DBConnection;
+import com.levermann.entityclass.AnalysisRating;
+import com.levermann.entityclass.AnalysisSteps;
 import com.levermann.entityclass.Company;
 import com.levermann.sessionControlClasses.HibernateUtil;
 import javafx.collections.FXCollections;
@@ -11,11 +13,10 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import org.apache.log4j.Logger;
-import org.hibernate.Query;
-import org.hibernate.Session;
-import org.hibernate.SessionFactory;
+import org.hibernate.*;
 
 import java.io.IOException;
 import java.net.URL;
@@ -27,7 +28,8 @@ import java.util.ResourceBundle;
 public class CompanyOverviewController implements Initializable, ControlledScreenInterface {
     final static Logger logger = Logger.getLogger(com.levermann.CompanyOverviewController.class);
     private Connection con;
-
+    @FXML
+    private TextField companyNameDelete;
     @FXML
     private TableView<Company> tableID;
     @FXML
@@ -173,5 +175,95 @@ public class CompanyOverviewController implements Initializable, ControlledScree
         //App.setRoot("startPage");
         myController.setScreen(App.startPageID);
         App.setStageTitle("Hauptmenü");
+    }
+
+    @FXML
+    private void deleteCompanyButtonController(ActionEvent actionEvent) throws IOException{
+
+        String deleteName = companyNameDelete.getText();
+        System.out.println("Trying to load the JDBC driver...");
+        try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            System.out.println("JDBC Driver loaded!");
+        } catch (Exception e) {
+            System.err.println("Cound not load JDBC driver...");
+            System.err.println(e);
+            throw new IllegalStateException("Failed loading the JDBC driver!");
+        }
+
+        System.out.println("Trying to connect to Levermann database...");
+        try {
+            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/levermann?useSSL=false&serverTimezone=UTC", "Levermann", "Levermann");
+            System.out.println("Levermann database connected!");
+        } catch (Exception e) {
+            System.err.println("Could not connect to Leverman database...");
+            System.err.println(e);
+            throw new IllegalStateException("Failed connecting to Levermann database!");
+        }
+
+        //Aufrufen der aktuellen Session aus HibernateUtil
+        final Session session = HibernateUtil.getSessionFactory().openSession();
+        Query query7 = session.getNamedQuery("AnalysisRating.findAll");
+        final List<AnalysisRating> analysisRatingsFilled = (List<AnalysisRating>) query7.list();
+
+        try {
+            Transaction tx = null;
+            tx = session.beginTransaction();
+
+            //HQL Named Query FindAll Unternehmen
+            Query query = session.getNamedQuery("Company.findAll");
+            List<Company> unList = (List<Company>) query.list();
+
+            for (Company un : unList) {
+
+                //todo Hier companyname setzen
+
+                String companyUserInput = deleteName;
+
+                //HQL Named Query FindAll Levermannschritte
+                Query query1 = session.getNamedQuery("AnalysisSteps.findall");
+                List<AnalysisSteps> unList1 = (List<AnalysisSteps>) query1.list();
+                for (AnalysisSteps un1 : unList1) {
+                    System.out.println("Analyse Liste = " + un1.getAnalysisStepsName()
+                            + ","
+                            + un1.getCompanyname_AnalysisSteps());
+
+                    // Ausgabe eines Datensatzes mit Cid
+                    query1 = session.getNamedQuery("AnalysisSteps.findByName");
+                    query1.setString("Companyname_AnalysisSteps", companyUserInput);
+                    //unList1 = query1.list();
+                    System.out.println("fuck y");
+
+                        for (AnalysisRating un2 : analysisRatingsFilled) {
+                            query7 = session.getNamedQuery("AnalysisRating.findByName");
+                            query7.setString("Companyname_AnalysisRating", companyUserInput);
+                            if (un.getCompanyname().equals(companyUserInput) && un2.getCompanyname_AnalysisRating().equals(companyUserInput) && un1.getCompanyname_AnalysisSteps().equals(companyUserInput)) {
+                                //un2.setEigenkapitalrendite((float)0);
+
+                                System.out.println("Das Unternehmen" + un.getCompanyname() + "wurde erfolgreich gelöscht");
+
+                                session.delete(un1);
+                                session.delete(un2);
+                                session.delete(un);
+                            }
+                        }
+                    }}
+
+            session.getTransaction().commit();
+            session.close();
+            //    System.out.println("fuck youuuuuuuuuuuu" + un1.getEigenkapitalrendite()+ un1.getCompanyname_AnalysisSteps());
+            System.out.println("Speichere Unternehmen...");
+            System.out.println("Done!");
+        } catch (HibernateException e) {
+            System.out.println("Hibernate Exception" + e.getMessage());
+            session.getTransaction().rollback();
+            throw new RuntimeException(e);
+        } finally {
+        }
+
+
+
+        tableAktualisieren();
+
     }
 }

@@ -10,6 +10,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
+<?import javafx.scene.control.TextField?>
 <VBox alignment="CENTER" prefHeight="810.0" prefWidth="1500.0" spacing="20.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.levermann.CompanyOverviewController">
     <stylesheets>
         <URL value="@lisasStyle.css" />
@@ -33,6 +34,9 @@
                  </columns>
              </TableView>
             <Button layoutX="912.0" layoutY="559.0" mnemonicParsing="false" onAction="#tableAktualisieren" style="-fx-border-color: black;" text="Aktualisieren" />
+             <Label layoutX="263.0" layoutY="533.0" prefHeight="17.0" prefWidth="257.0" text="Unternehmensname für Löschen eingeben:" />
+             <TextField fx:id="companyNameDelete" layoutX="263.0" layoutY="560.0" prefHeight="25.0" prefWidth="158.0" />
+             <Button fx:id="getBackToPrimaryPage1" layoutX="437.0" layoutY="559.0" mnemonicParsing="false" onAction="#deleteCompanyButtonController" prefHeight="25.0" prefWidth="91.0" style="-fx-border-color: black;" text="Löschen" />
          </children>
       </AnchorPane>
    </children>
