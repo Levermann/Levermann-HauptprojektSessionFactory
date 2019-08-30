@@ -5,6 +5,7 @@ import com.levermann.entityclass.AnalysisSteps;
 import com.levermann.entityclass.Company;
 import com.levermann.sessionControlClasses.CalculateUserInput;
 import com.levermann.sessionControlClasses.HibernateUtil;
+import com.levermann.utilHandling.CompanyG;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -12,6 +13,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.TextField;
 import org.hibernate.Session;
+import org.hibernate.SessionFactory;
 
 import java.io.IOException;
 import java.sql.Connection;
@@ -32,8 +34,6 @@ public class InputController implements ControlledScreenInterface {
     public TextField gewinnschaetzungDB;
     @FXML
     public TextField gewinnavgDB;
-    @FXML
-    public TextField perfinjedemmonatDB;
     @FXML
     public TextField gewinnVor3JahrenDB;
     @FXML
@@ -106,11 +106,13 @@ public class InputController implements ControlledScreenInterface {
         myController = screenParent;
     }
 
+
     @FXML
     private void switchToShowResult() throws IOException {
         fillDBvalues();
         //App.setRoot("showResult");
        // setValues();
+        hi();
         takeOverUserInput();
         myController.setScreen(App.showResultID);
         App.setStageTitle("Unternehmensergebnisse");
@@ -173,7 +175,9 @@ private void disconnectToDB(){
         /**
          * conn.close();
          */
-
+       private void hi(){
+            ShowResultController.Companyname1 = unternehmennameDB.getText();
+        }
         private void takeOverUserInput(){
             ShowUserInputController.eigenkapital = Float.parseFloat(eigenkapitalDB.getText());
             ShowUserInputController.jahresueberschuss = Float.parseFloat(jahresueberschussDB.getText());
@@ -207,11 +211,14 @@ private void disconnectToDB(){
             ShowUserInputController.kursgewinnschaetzungNaechstesJahr = Float.parseFloat(kursgewinnschaetzungNaechstesJahrDB.getText());
         }
 
-        @FXML
+
+
+    @FXML
         public void someMethod (ActionEvent event){
             fillDBvalues();
+
             String companyname = unternehmennameDB.getText();
-            String datum = "12.32.42";
+            String datum = datumDB.getText();
             float eigenkapital = Float.parseFloat(eigenkapitalDB.getText());
             float jahresueberschuss = Float.parseFloat(jahresueberschussDB.getText());
             float gewinnEBIT = Float.parseFloat(gewinnEBITDB.getText());
@@ -244,9 +251,7 @@ private void disconnectToDB(){
             int aktuellenErwartetenKursgewinn = Integer.parseInt(aktuellerErwarteterKursgewinnDB.getText());
             int kursgewinnschaezungNaechstesJahr = Integer.parseInt(kursgewinnschaetzungNaechstesJahrDB.getText());
 
-
-
-            Company company = new Company(companyname,  datum,  eigenkapital,  jahresueberschuss,  gewinnEBIT,
+            Company wxyz = new Company(companyname,  datum,  eigenkapital,  jahresueberschuss,  gewinnEBIT,
              jahresumsatz,  fremdkapital,  aktuellerAktienkurs,  gewinnschaezung,
              gewinnAVG,  halten,  verkaufen,  kaufen,  kursanstiegUnternehmen,
              kursanstiegIndex,  gewinnschaezungVor4Wochen,
@@ -268,14 +273,21 @@ private void disconnectToDB(){
 
             AnalysisSteps analysisSteps = new AnalysisSteps(analysisstepsname, companyname_AnalysisSteps);
 
-            addtoDB.add(company);
+            addtoDB.add(wxyz);
             addtoDBAnalysisRating.add(analysisRating);
             addtoDBAnalysisSteps.add(analysisSteps);
 
 
-            Session session1 = HibernateUtil.getSessionFactory().openSession();
+            SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
+            Session session1 = sessionFactory.getCurrentSession();
+
             session1.beginTransaction();
-            session1.save(company);
+
+            CompanyG companyG = new CompanyG();
+            companyG.setSession(session1);
+
+            companyG.makePersistent(wxyz);
+            session1.save(wxyz);
             session1.save(analysisRating);
             session1.save(analysisSteps);
             session1.getTransaction().commit();

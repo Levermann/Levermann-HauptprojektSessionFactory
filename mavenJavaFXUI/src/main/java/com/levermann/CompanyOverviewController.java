@@ -1,6 +1,8 @@
 package com.levermann;
 
 import com.levermann.DB.DBConnection;
+import com.levermann.entityclass.AnalysisRating;
+import com.levermann.entityclass.AnalysisSteps;
 import com.levermann.entityclass.Company;
 import com.levermann.sessionControlClasses.HibernateUtil;
 import javafx.collections.FXCollections;
@@ -8,39 +10,24 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
-import javafx.scene.control.TablePosition;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import org.apache.log4j.Logger;
-import org.hibernate.Query;
-import org.hibernate.Session;
-import org.hibernate.Transaction;
-import com.levermann.entityclass.AnalysisRating;
-import com.levermann.entityclass.AnalysisSteps;
-import com.levermann.entityclass.Company;
-import com.levermann.keyFiguresForAnalysis.Eigenkapitalrendite;
-import com.levermann.sessionControlClasses.CalculateUserInput;
-import com.levermann.sessionControlClasses.HibernateUtil;
-import org.apache.log4j.BasicConfigurator;
-import org.hibernate.HibernateException;
-import org.hibernate.Query;
-import org.hibernate.Session;
-import org.hibernate.Transaction;
+import org.hibernate.*;
 
 import java.io.IOException;
 import java.net.URL;
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.sql.SQLException;
 import java.util.List;
 import java.util.ResourceBundle;
 
 public class CompanyOverviewController implements Initializable, ControlledScreenInterface {
     final static Logger logger = Logger.getLogger(com.levermann.CompanyOverviewController.class);
     private Connection con;
-
     @FXML
     private TextField companyNameDelete;
     @FXML
@@ -51,9 +38,12 @@ public class CompanyOverviewController implements Initializable, ControlledScree
     private TableColumn<Company, String> creationDate;
     @FXML
     private TableColumn<Company, Float> analysisScore;
+    @FXML
+    private TableColumn<Company, Button> delete;
 
-    @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {
+    private void ConnectionDB() {
+        //TODO Die vom Benutzer eingegebenen Daten in die MySQL Datenbank schreiben
+        //Load the jdbc diver
         System.out.println("Trying to load the JDBC driver...");
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
@@ -64,6 +54,7 @@ public class CompanyOverviewController implements Initializable, ControlledScree
             throw new IllegalStateException("Failed loading the JDBC driver!");
         }
 
+        //connect to the levermann database
         System.out.println("Trying to connect to Levermann database...");
         try {
             con = DriverManager.getConnection("jdbc:mysql://localhost:3306/levermann?useSSL=false&serverTimezone=UTC", "Levermann", "Levermann");
@@ -73,10 +64,27 @@ public class CompanyOverviewController implements Initializable, ControlledScree
             System.err.println(e);
             throw new IllegalStateException("Failed connecting to Levermann database!");
         }
+    }
 
-      //  Company company = new Company();
+    //TODO Füge hier SQL-Queries ein, die die jeweiligen Datensätze in die Table "Company" hinzufügen
+    private void DisconnectionDB(){
+        System.out.println("Trying to close the connection to Levermann database...");
+        try{
+            con.close();
+            System.out.println("Levermann database disconnected!");
+        }catch(Exception e){
+            System.err.println("Could not disconnect Leverman database...");
+            System.err.println(e);
+            throw new IllegalStateException("Failed disconnecting Levermann database!");
+        }
+    }
 
-        Session session1 = HibernateUtil.getSessionFactory().openSession();
+    public void initCols(){
+
+        ConnectionDB();
+        SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
+        Session session1 = sessionFactory.getCurrentSession();
+
         session1.beginTransaction();
         /*
         Company company1 = (Company) session1.get(Company.class, 1L);
@@ -93,30 +101,25 @@ public class CompanyOverviewController implements Initializable, ControlledScree
             String nameforOverview = un.getCompanyname();
             String datumForOverview = un.getDatum();
             float SumScore = un.getGesamtPunkte();
-
+            Button deletemach = new Button("delete");
 
             final ObservableList<Company> overview = FXCollections.observableArrayList(
-                    new Company(nameforOverview, datumForOverview, SumScore)
+                    new Company(nameforOverview, datumForOverview, SumScore, deletemach)
             );
             companyName.setCellValueFactory(new PropertyValueFactory<Company, String>("Companyname"));
             creationDate.setCellValueFactory(new PropertyValueFactory<Company, String>("datum"));
             analysisScore.setCellValueFactory(new PropertyValueFactory<Company, Float>("GesamtPunkte"));
+            delete.setCellValueFactory(new PropertyValueFactory<Company, Button>("delete1"));
 
             tableID.getItems().addAll(overview);
         }
+        DisconnectionDB();
 
         session1.getTransaction().commit();
-        session1.close();
-
-        System.out.println("Trying to close the connection to Levermann database...");
-        try{
-            con.close();
-            System.out.println("Levermann database disconnected!");
-        }catch(Exception e){
-            System.err.println("Could not disconnect Leverman database...");
-            System.err.println(e);
-            throw new IllegalStateException("Failed disconnecting Levermann database!");
-        }
+    }
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        initCols();
     }
 
     ScreensController myController;
@@ -127,43 +130,13 @@ public class CompanyOverviewController implements Initializable, ControlledScree
     }
     //TODO Der Firmenname, der vom User in EnterCompanyName Seite eingegeben wurde muss ersetzt werden durch company1
 
-
-
     @FXML
     private void tableAktualisieren(){
+        ConnectionDB();
+        SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
+        Session session1 = sessionFactory.getCurrentSession();
 
-
-        System.out.println("Trying to load the JDBC driver...");
-        try {
-            Class.forName("com.mysql.cj.jdbc.Driver");
-            System.out.println("JDBC Driver loaded!");
-        } catch (Exception e) {
-            System.err.println("Cound not load JDBC driver...");
-            System.err.println(e);
-            throw new IllegalStateException("Failed loading the JDBC driver!");
-        }
-
-        System.out.println("Trying to connect to Levermann database...");
-        try {
-            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/levermann?useSSL=false&serverTimezone=UTC", "Levermann", "Levermann");
-            System.out.println("Levermann database connected!");
-        } catch (Exception e) {
-            System.err.println("Could not connect to Leverman database...");
-            System.err.println(e);
-            throw new IllegalStateException("Failed connecting to Levermann database!");
-        }
-
-        //  Company company = new Company();
-
-        Session session1 = HibernateUtil.getSessionFactory().openSession();
         session1.beginTransaction();
-        /*
-        Company company1 = (Company) session1.get(Company.class, 1L);
-        company1.getGesamtPunkte();
-        company1.getCompanyname();
-        company1.getDatum();
-
-         */
         tableID.getItems().clear();
 
         Query query = session1.getNamedQuery("Company.findAll");
@@ -174,32 +147,30 @@ public class CompanyOverviewController implements Initializable, ControlledScree
             String nameforOverview = un.getCompanyname();
             String datumForOverview = un.getDatum();
             float SumScore = un.getGesamtPunkte();
-
+            Button deletemach = new Button("delete");
 
             final ObservableList<Company> overview = FXCollections.observableArrayList(
-                    new Company(nameforOverview, datumForOverview, SumScore)
+                    new Company(nameforOverview, datumForOverview, SumScore, deletemach)
             );
             companyName.setCellValueFactory(new PropertyValueFactory<Company, String>("Companyname"));
             creationDate.setCellValueFactory(new PropertyValueFactory<Company, String>("datum"));
             analysisScore.setCellValueFactory(new PropertyValueFactory<Company, Float>("GesamtPunkte"));
+            delete.setCellValueFactory(new PropertyValueFactory<Company, Button>("delete1"));
 
             tableID.getItems().addAll(overview);
         }
 
-        session1.getTransaction().commit();
-        session1.close();
 
-        System.out.println("Trying to close the connection to Levermann database...");
-        try{
-            con.close();
-            System.out.println("Levermann database disconnected!");
-        }catch(Exception e){
-            System.err.println("Could not disconnect Leverman database...");
-            System.err.println(e);
-            throw new IllegalStateException("Failed disconnecting Levermann database!");
-        }
+        session1.getTransaction().commit();
+        DisconnectionDB();
     }
 
+    @FXML
+    private void takeStringandShowResult() throws IOException {
+        //App.setRoot("enterCompanyName");
+        myController.setScreen(App.showResultID);
+        App.setStageTitle("Unternehmensnamen angeben");
+    }
     @FXML
     private void switchToEnterCompanyName() throws IOException {
         //App.setRoot("enterCompanyName");
@@ -253,7 +224,7 @@ public class CompanyOverviewController implements Initializable, ControlledScree
 
                 //todo Hier companyname setzen
 
-                String company = deleteName;
+                String companyUserInput = deleteName;
 
                 //HQL Named Query FindAll Levermannschritte
                 Query query1 = session.getNamedQuery("AnalysisSteps.findall");
@@ -265,29 +236,24 @@ public class CompanyOverviewController implements Initializable, ControlledScree
 
                     // Ausgabe eines Datensatzes mit Cid
                     query1 = session.getNamedQuery("AnalysisSteps.findByName");
-                    query1.setString("Companyname_AnalysisSteps", company);
-                    unList1 = query1.list();
+                    query1.setString("Companyname_AnalysisSteps", companyUserInput);
+                    //unList1 = query1.list();
                     System.out.println("fuck y");
-                    if (un1.getCompanyname_AnalysisSteps().equals(company)) {
-
-                        System.out.println("Fuuuuuuuuuuuuuuuuck");
-
-                        //Set Company
-                        un1.setCompanyname_AnalysisSteps(un1.getCompanyname_AnalysisSteps());
 
                         for (AnalysisRating un2 : analysisRatingsFilled) {
                             query7 = session.getNamedQuery("AnalysisRating.findByName");
-                            query7.setString("Companyname_AnalysisRating", company);
-                            if (un2.getCompanyname_AnalysisRating().equals(company)) {
+                            query7.setString("Companyname_AnalysisRating", companyUserInput);
+                            if (un.getCompanyname().equals(companyUserInput) && un2.getCompanyname_AnalysisRating().equals(companyUserInput) && un1.getCompanyname_AnalysisSteps().equals(companyUserInput)) {
                                 //un2.setEigenkapitalrendite((float)0);
 
-                                System.out.println("company   :"  + un2.getCompanyname_AnalysisRating());
-                                session.delete(un);
+                                System.out.println("Das Unternehmen" + un.getCompanyname() + "wurde erfolgreich gelöscht");
+
                                 session.delete(un1);
                                 session.delete(un2);
+                                session.delete(un);
                             }
                         }
-                    }}}
+                    }}
 
             session.getTransaction().commit();
             session.close();
@@ -300,6 +266,9 @@ public class CompanyOverviewController implements Initializable, ControlledScree
             throw new RuntimeException(e);
         } finally {
         }
+
+
+
         tableAktualisieren();
 
     }

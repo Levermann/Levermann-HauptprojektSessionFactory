@@ -1,7 +1,7 @@
 create schema levermann;
 create table company(
                             Companyname varchar (50) not null ,
-                             id float (20)  unique ,
+                             id float (20)  unique AUTO_INCREMENT,
                              datum varchar(11),
                              eigenkapital float(11),
                              jahresueberschuss float(11),
@@ -29,7 +29,6 @@ create table company(
                              GewinnschaezungNaechstesJahr float (11),
                              GewinnschaezungDiesesJahr float (11),
                              Finanzsektor float (11),
-                             PerfInJedemMonat float (11),
                              KursgewinnVor3Jahren float (11),
                              KursgewinnVor2Jahren float (11),
                              KursgewinnVor1Jahr float (11),
@@ -43,7 +42,7 @@ create table company(
 create table AnalysisSteps(
 
                               AnalysisStepsName	varchar(50) not null unique,
-                            id float (20)  unique ,
+                            id float (20)  unique AUTO_INCREMENT ,
                               Companyname_AnalysisSteps varchar (50) not null ,
                              Eigenkapitalrendite float(11),
                              EBITMarge float(11),
@@ -65,7 +64,7 @@ create table AnalysisSteps(
 create table AnalysisRating(
 
                                AnalysisRatingName	varchar(50) not null unique,
-                                 id float (20)  unique ,
+                                 id float (20)  unique AUTO_INCREMENT,
                                Companyname_AnalysisRating varchar (50) not null ,
                                   Eigenkapitalrendite float(11),
                                   EBITMarge float(11),

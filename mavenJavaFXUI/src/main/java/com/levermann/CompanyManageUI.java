@@ -1,86 +1,40 @@
 package com.levermann;
 
-import com.levermann.entityclass.Company;
-import javafx.scene.control.Button;
-import org.hibernate.Session;
-
-import static com.levermann.sessionControlClasses.HibernateUtil.getSessionFactory;
+import javafx.beans.property.SimpleFloatProperty;
+import javafx.beans.property.SimpleStringProperty;
 
 
-public class CompanyManageUI  {
+public class CompanyManageUI {
 
-    private String company1;
-    private String dateFormat;
-    private int score1;
-    private Button delete1;
-    private Button edit1;
-    private Button show1;
+    private final SimpleStringProperty kennzahlenfürAR;
+    private final SimpleFloatProperty ergebnissefürAR;
 
-
-    public CompanyManageUI(String company1, String dateFormat, int score1,
-                           Button delete1, Button  edit1, Button show1) {
-        this.company1 = company1;
-        this.dateFormat = dateFormat;
-        this.score1 = score1;
-        this.delete1 = new Button("deleteIt");
-        delete1.setOnAction(event -> {
-            Company company = new Company();
-            Session session1 = getSessionFactory().openSession();
-            session1.delete(company);
-            session1.getTransaction().commit();
-            //TODO eventuell hier noch die Methodenaufrufe für die Berechnungen bevor die Session closed
-            session1.close();
-        });
-        this.edit1 = new Button("editIt");
-        this.show1 = new Button("showIt");
+    public CompanyManageUI(String keyFiguresRating, Float resultRating) {
+        this.kennzahlenfürAR = new SimpleStringProperty(keyFiguresRating);
+        this.ergebnissefürAR = new SimpleFloatProperty(resultRating);
     }
 
-
-    public String getCompany1() {
-        return company1;
+    public String getKennzahlenfürAR() {
+        return kennzahlenfürAR.get();
     }
 
-    public void setCompany1(String company1) {
-        this.company1 = company1;
+    public SimpleStringProperty kennzahlenfürARProperty() {
+        return kennzahlenfürAR;
     }
 
-    public String getDateFormat() {
-        return dateFormat;
+    public void setKennzahlenfürAR(String kennzahlenfürAR) {
+        this.kennzahlenfürAR.set(kennzahlenfürAR);
     }
 
-    public void setDateFormat(String dateFormat) {
-        this.dateFormat = dateFormat;
+    public float getErgebnissefürAR() {
+        return ergebnissefürAR.get();
     }
 
-    public int getScore1() {
-        return score1;
+    public SimpleFloatProperty ergebnissefürARProperty() {
+        return ergebnissefürAR;
     }
 
-    public void setScore1(int score1) {
-        this.score1 = score1;
-    }
-
-    public Button getDelete1() {
-        return delete1;
-    }
-
-    public void setDelete1(Button delete1) {
-        this.delete1 = delete1;
-    }
-
-    public Button getEdit1() {
-        return edit1;
-    }
-
-    public void setEdit1(Button edit1) {
-        this.edit1 = edit1;
-    }
-
-    public Button getShow1() {
-        return show1;
-    }
-
-    public void setShow1(Button show1) {
-        this.show1 = show1;
+    public void setErgebnissefürAR(float ergebnissefürAR) {
+        this.ergebnissefürAR.set(ergebnissefürAR);
     }
 }

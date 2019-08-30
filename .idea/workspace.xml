@@ -5,9 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ef1c18af-56f3-4a36-8891-4764d24d597a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/mavenJavaFXUI/src/main/resources/com/levermann/inputCharts.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/src/main/java/com/levermann/CompanyOverviewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/mavenJavaFXUI/src/main/java/com/levermann/CompanyOverviewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/src/main/java/com/levermann/StartPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/mavenJavaFXUI/src/main/java/com/levermann/StartPageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/src/main/resources/com/levermann/companyOverview.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/mavenJavaFXUI/src/main/resources/com/levermann/companyOverview.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/src/main/resources/com/levermann/input.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/mavenJavaFXUI/src/main/resources/com/levermann/input.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/src/main/resources/com/levermann/startPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/mavenJavaFXUI/src/main/resources/com/levermann/startPage.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/src/main/resources/com/levermann/userInput.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/mavenJavaFXUI/src/main/resources/com/levermann/userInput.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/target/classes/com/levermann/StartPageController.class" beforeDir="false" afterPath="$PROJECT_DIR$/mavenJavaFXUI/target/classes/com/levermann/StartPageController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/target/classes/com/levermann/input.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/mavenJavaFXUI/target/classes/com/levermann/input.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/target/classes/com/levermann/startPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/mavenJavaFXUI/target/classes/com/levermann/startPage.fxml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -45,13 +52,6 @@
         <item name="hibernate.cfg.xml/Hibernate" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="levermann: schema" type="ebfa3cd1:MariaImplModel$Schema" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="hibernate.cfg.xml/Hibernate" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="levermann: schema" type="ebfa3cd1:MariaImplModel$Schema" />
-        <item name="company: table" type="dbc44a63:MariaImplModel$Table" />
       </path>
     </expand>
     <select />
@@ -129,12 +129,12 @@
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.TestNG" value="" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/mavenJavaFXUI/src/main/resources/com/levermann" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/com/levermann/sqlStatements" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.14746094" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="restartRequiresConfirmation" value="false" />
@@ -164,9 +164,8 @@
       <recent name="com.levermann.kennzahlen" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Max\IdeaProjects\Levermann-HauptprojektSessionFactory\mavenJavaFXUI\src\main\resources\com\levermann" />
-      <recent name="C:\Users\Lisa\IdeaProjects\Levermann-HauptprojektSessionFactory\mavenJavaFXUI\src\main\resources\com\levermann" />
       <recent name="C:\Users\Lisa\IdeaProjects\Levermann-HauptprojektSessionFactory\src\main\java\com\levermann\sqlStatements" />
+      <recent name="C:\Users\Lisa\IdeaProjects\Levermann-HauptprojektSessionFactory\mavenJavaFXUI\src\main\resources\com\levermann" />
       <recent name="C:\Users\Lisa\IdeaProjects\Levermann-HauptprojektSessionFactory\src\main\resources" />
       <recent name="C:\Users\Landb\Documents\Projekt\Hauptprojekt\src\main\java\com\levermann\SQL-Abfragen" />
     </key>
@@ -204,7 +203,7 @@
       </method>
     </configuration>
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="ALTERNATIVE_JRE_PATH" value="1.8" />
+      <option name="ALTERNATIVE_JRE_PATH" value="Java 8" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="com.levermann.App" />
       <module name="mavenJavaFXUI" />
@@ -219,7 +218,7 @@
       </method>
     </configuration>
     <configuration name="ConnectionMainFactory" type="Application" factoryName="Application" nameIsGenerated="true">
-      <option name="ALTERNATIVE_JRE_PATH" value="1.8" />
+      <option name="ALTERNATIVE_JRE_PATH" value="Java 8" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="com.levermann.mainMethod.ConnectionMainFactory" />
       <module name="LevermannAnalYse" />
@@ -234,16 +233,15 @@
       </method>
     </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="ALTERNATIVE_JRE_PATH" value="1.8" />
+      <option name="ALTERNATIVE_JRE_PATH" value="12" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="com.levermann.sessionControlClasses.Main" />
+      <module name="LevermannAnalyse" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration name="TestMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="ALTERNATIVE_JRE_PATH" value="1.8" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="com.levermann.mainMethod.TestMain" />
       <module name="LevermannAnalYse" />
       <extension name="coverage">
@@ -336,9 +334,9 @@
       <item itemvalue="Application.ConnectionMainFactory" />
       <item itemvalue="Application.App" />
       <item itemvalue="Application.Main" />
-      <item itemvalue="Application.TestMain" />
       <item itemvalue="JAR Application.mavenJavaFXUI-1.0-SNAPSHOT.jar" />
       <item itemvalue="Maven.mavenJavaFXUI [javafx:run]" />
+      <item itemvalue="Application.TestMain" />
     </list>
     <recent_temporary>
       <list>
@@ -357,7 +355,22 @@
           <expand>
             <path>
               <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@4cb33766" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@99e11300" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+            </path>
+            <path>
+              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@99e11300" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@239f319a" type="9fbbdea:ServiceModel$ServiceNode" />
+            </path>
+            <path>
+              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@99e11300" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@6ae18099" type="9fbbdea:ServiceModel$ServiceNode" />
+            </path>
+            <path>
+              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@99e11300" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@2ea4219d" type="9fbbdea:ServiceModel$ServiceNode" />
             </path>
           </expand>
           <select />
@@ -410,64 +423,7 @@
       <workItem from="1566491635410" duration="25623000" />
       <workItem from="1566585459730" duration="21406000" />
       <workItem from="1566650626276" duration="6535000" />
-      <workItem from="1567001123150" duration="77058000" />
-      <workItem from="1567165403297" duration="28745000" />
-    </task>
-    <task id="LOCAL-00045" summary="Update Entity with equals and hash">
-      <created>1566487066599</created>
-      <option name="number" value="00045" />
-      <option name="presentableId" value="LOCAL-00045" />
-      <option name="project" value="LOCAL" />
-      <updated>1566487066599</updated>
-    </task>
-    <task id="LOCAL-00046" summary="Update Entity with equals and hash">
-      <created>1566565666593</created>
-      <option name="number" value="00046" />
-      <option name="presentableId" value="LOCAL-00046" />
-      <option name="project" value="LOCAL" />
-      <updated>1566565666593</updated>
-    </task>
-    <task id="LOCAL-00047" summary="IT WORKS">
-      <created>1566585200035</created>
-      <option name="number" value="00047" />
-      <option name="presentableId" value="LOCAL-00047" />
-      <option name="project" value="LOCAL" />
-      <updated>1566585200035</updated>
-    </task>
-    <task id="LOCAL-00048" summary="IT WORKS + Andis Sql Abfrage">
-      <created>1566586415125</created>
-      <option name="number" value="00048" />
-      <option name="presentableId" value="LOCAL-00048" />
-      <option name="project" value="LOCAL" />
-      <updated>1566586415125</updated>
-    </task>
-    <task id="LOCAL-00049" summary="added Named Queries and Information fxml">
-      <created>1566652254510</created>
-      <option name="number" value="00049" />
-      <option name="presentableId" value="LOCAL-00049" />
-      <option name="project" value="LOCAL" />
-      <updated>1566652254510</updated>
-    </task>
-    <task id="LOCAL-00050" summary="added UserInput Controller to check or update the Inputs manually">
-      <created>1566819045928</created>
-      <option name="number" value="00050" />
-      <option name="presentableId" value="LOCAL-00050" />
-      <option name="project" value="LOCAL" />
-      <updated>1566819045930</updated>
-    </task>
-    <task id="LOCAL-00051" summary="added UserInput Controller to check or update the Inputs manually">
-      <created>1566820021608</created>
-      <option name="number" value="00051" />
-      <option name="presentableId" value="LOCAL-00051" />
-      <option name="project" value="LOCAL" />
-      <updated>1566820021608</updated>
-    </task>
-    <task id="LOCAL-00052" summary="Change to JDK 8 and now it WORKS AGAIN -.-">
-      <created>1566863479624</created>
-      <option name="number" value="00052" />
-      <option name="presentableId" value="LOCAL-00052" />
-      <option name="project" value="LOCAL" />
-      <updated>1566863479624</updated>
+      <workItem from="1567001123150" duration="119929000" />
     </task>
     <task id="LOCAL-00053" summary="Maxis Businesslogik geadded">
       <created>1566864568774</created>
@@ -728,35 +684,91 @@
       <option name="project" value="LOCAL" />
       <updated>1567135275870</updated>
     </task>
-    <task id="LOCAL-00090" summary="show user Input mit aktualisieren anzeigen">
-      <created>1567172301386</created>
+    <task id="LOCAL-00090" summary="mhm">
+      <created>1567157735183</created>
       <option name="number" value="00090" />
       <option name="presentableId" value="LOCAL-00090" />
       <option name="project" value="LOCAL" />
-      <updated>1567172301386</updated>
+      <updated>1567157735184</updated>
     </task>
-    <task id="LOCAL-00091" summary="Show CompanyOverview mit button aktualisiern die neue eingabe wenn in db">
-      <created>1567175459303</created>
+    <task id="LOCAL-00091" summary="vll button mögl">
+      <created>1567162897182</created>
       <option name="number" value="00091" />
       <option name="presentableId" value="LOCAL-00091" />
       <option name="project" value="LOCAL" />
-      <updated>1567175459303</updated>
+      <updated>1567162897183</updated>
     </task>
-    <task id="LOCAL-00092" summary="Löschen von DB-Einträgen">
-      <created>1567190531431</created>
+    <task id="LOCAL-00092" summary="um 14:50">
+      <created>1567169468228</created>
       <option name="number" value="00092" />
       <option name="presentableId" value="LOCAL-00092" />
       <option name="project" value="LOCAL" />
-      <updated>1567190531431</updated>
+      <updated>1567169468228</updated>
     </task>
-    <task id="LOCAL-00093" summary="Keineahnungirgendwashabichbestimmtgemacht">
-      <created>1567200431044</created>
+    <task id="LOCAL-00093" summary="10:01">
+      <created>1567173702902</created>
       <option name="number" value="00093" />
       <option name="presentableId" value="LOCAL-00093" />
       <option name="project" value="LOCAL" />
-      <updated>1567200431044</updated>
+      <updated>1567173702902</updated>
     </task>
-    <option name="localTasksCounter" value="94" />
+    <task id="LOCAL-00094" summary="16:30">
+      <created>1567175475292</created>
+      <option name="number" value="00094" />
+      <option name="presentableId" value="LOCAL-00094" />
+      <option name="project" value="LOCAL" />
+      <updated>1567175475298</updated>
+    </task>
+    <task id="LOCAL-00095" summary="save Version">
+      <created>1567177313612</created>
+      <option name="number" value="00095" />
+      <option name="presentableId" value="LOCAL-00095" />
+      <option name="project" value="LOCAL" />
+      <updated>1567177313612</updated>
+    </task>
+    <task id="LOCAL-00096" summary="save Version">
+      <created>1567187221239</created>
+      <option name="number" value="00096" />
+      <option name="presentableId" value="LOCAL-00096" />
+      <option name="project" value="LOCAL" />
+      <updated>1567187221239</updated>
+    </task>
+    <task id="LOCAL-00097" summary="eins geht">
+      <created>1567191549682</created>
+      <option name="number" value="00097" />
+      <option name="presentableId" value="LOCAL-00097" />
+      <option name="project" value="LOCAL" />
+      <updated>1567191549683</updated>
+    </task>
+    <task id="LOCAL-00098" summary="eins geht">
+      <created>1567192864806</created>
+      <option name="number" value="00098" />
+      <option name="presentableId" value="LOCAL-00098" />
+      <option name="project" value="LOCAL" />
+      <updated>1567192864806</updated>
+    </task>
+    <task id="LOCAL-00099" summary="lol">
+      <created>1567196108671</created>
+      <option name="number" value="00099" />
+      <option name="presentableId" value="LOCAL-00099" />
+      <option name="project" value="LOCAL" />
+      <updated>1567196108671</updated>
+    </task>
+    <task id="LOCAL-00100" summary="läuft die kacke">
+      <created>1567200370652</created>
+      <option name="number" value="00100" />
+      <option name="presentableId" value="LOCAL-00100" />
+      <option name="project" value="LOCAL" />
+      <updated>1567200370652</updated>
+    </task>
+    <task id="LOCAL-00101" summary="schau mal wer da codet">
+      <created>1567202899647</created>
+      <option name="number" value="00101" />
+      <option name="presentableId" value="LOCAL-00101" />
+      <option name="project" value="LOCAL" />
+      <updated>1567202899647</updated>
+    </task>
+    <option name="localTasksCounter" value="102" />
     <servers />
   </component>
   <component name="TodoView">
@@ -821,10 +833,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="style" />
-    <MESSAGE value="funktionierende Liste für userinput nur nicht die richtigen werte" />
-    <MESSAGE value="checkbox design" />
-    <MESSAGE value="added Gesamtpunkte" />
     <MESSAGE value="anpassung entity Associations weg" />
     <MESSAGE value="new Class CalculateUserInput @FlorianLand :*" />
     <MESSAGE value="update" />
@@ -833,7 +841,6 @@
     <MESSAGE value="kgv aktuell save" />
     <MESSAGE value="analystenmeinungen save" />
     <MESSAGE value="punkte complete save" />
-    <MESSAGE value="lol" />
     <MESSAGE value="lol2" />
     <MESSAGE value="topaktuell 29.08" />
     <MESSAGE value="inputcontroller verbessert" />
@@ -842,11 +849,16 @@
     <MESSAGE value="hjkhjgjkk" />
     <MESSAGE value="kaka" />
     <MESSAGE value="mhm" />
-    <MESSAGE value="show user Input mit aktualisieren anzeigen" />
-    <MESSAGE value="Show CompanyOverview mit button aktualisiern die neue eingabe wenn in db" />
-    <MESSAGE value="Löschen von DB-Einträgen" />
-    <MESSAGE value="Keineahnungirgendwashabichbestimmtgemacht" />
-    <option name="LAST_COMMIT_MESSAGE" value="Keineahnungirgendwashabichbestimmtgemacht" />
+    <MESSAGE value="vll button mögl" />
+    <MESSAGE value="um 14:50" />
+    <MESSAGE value="10:01" />
+    <MESSAGE value="16:30" />
+    <MESSAGE value="save Version" />
+    <MESSAGE value="eins geht" />
+    <MESSAGE value="lol" />
+    <MESSAGE value="läuft die kacke" />
+    <MESSAGE value="schau mal wer da codet" />
+    <option name="LAST_COMMIT_MESSAGE" value="schau mal wer da codet" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -865,9 +877,9 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/LevermannAnalyse$.ic" NAME=" Coverage Results" MODIFIED="1566843097175" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/LevermannAnalyse$ConnectionMainFactory.ic" NAME="ConnectionMainFactory Coverage Results" MODIFIED="1566639806873" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.levermann.TestFiles.*</FILTER>
     </SUITE>
+    <SUITE FILE_PATH="coverage/LevermannAnalyse$.ic" NAME=" Coverage Results" MODIFIED="1566843097175" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>
