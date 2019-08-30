@@ -32,6 +32,7 @@ public class HibernateUtil {
                         .setProperty("hibernate.connection.password", "Levermann")
                         .setProperty("hibernate.connection.autoReconnect", "true")
                         .setProperty("hibernate.order_updates", "true")
+                        .setProperty("hibernate.current_session_context_class", "org.hibernate.context.internal.ThreadLocalSessionContext")
                         .addAnnotatedClass(com.levermann.entityclass.Company.class)
                         .addAnnotatedClass(com.levermann.entityclass.AnalysisSteps.class)
                         .addAnnotatedClass(com.levermann.entityclass.AnalysisRating.class);

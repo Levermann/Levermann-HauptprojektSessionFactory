@@ -14,6 +14,7 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import org.apache.log4j.Logger;
 import org.hibernate.Query;
 import org.hibernate.Session;
+import org.hibernate.SessionFactory;
 
 import java.io.IOException;
 import java.net.URL;
@@ -37,8 +38,9 @@ public class CompanyOverviewController implements Initializable, ControlledScree
     @FXML
     private TableColumn<Company, Button> delete;
 
-    @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {
+    private void ConnectionDB() {
+        //TODO Die vom Benutzer eingegebenen Daten in die MySQL Datenbank schreiben
+        //Load the jdbc diver
         System.out.println("Trying to load the JDBC driver...");
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
@@ -49,6 +51,7 @@ public class CompanyOverviewController implements Initializable, ControlledScree
             throw new IllegalStateException("Failed loading the JDBC driver!");
         }
 
+        //connect to the levermann database
         System.out.println("Trying to connect to Levermann database...");
         try {
             con = DriverManager.getConnection("jdbc:mysql://localhost:3306/levermann?useSSL=false&serverTimezone=UTC", "Levermann", "Levermann");
@@ -58,10 +61,27 @@ public class CompanyOverviewController implements Initializable, ControlledScree
             System.err.println(e);
             throw new IllegalStateException("Failed connecting to Levermann database!");
         }
+    }
 
-      //  Company company = new Company();
+    //TODO Füge hier SQL-Queries ein, die die jeweiligen Datensätze in die Table "Company" hinzufügen
+    private void DisconnectionDB(){
+        System.out.println("Trying to close the connection to Levermann database...");
+        try{
+            con.close();
+            System.out.println("Levermann database disconnected!");
+        }catch(Exception e){
+            System.err.println("Could not disconnect Leverman database...");
+            System.err.println(e);
+            throw new IllegalStateException("Failed disconnecting Levermann database!");
+        }
+    }
 
-        Session session1 = HibernateUtil.getSessionFactory().openSession();
+    public void initCols(){
+
+        ConnectionDB();
+        SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
+        Session session1 = sessionFactory.getCurrentSession();
+
         session1.beginTransaction();
         /*
         Company company1 = (Company) session1.get(Company.class, 1L);
@@ -83,26 +103,20 @@ public class CompanyOverviewController implements Initializable, ControlledScree
             final ObservableList<Company> overview = FXCollections.observableArrayList(
                     new Company(nameforOverview, datumForOverview, SumScore, deletemach)
             );
-                companyName.setCellValueFactory(new PropertyValueFactory<Company, String>("Companyname"));
-                creationDate.setCellValueFactory(new PropertyValueFactory<Company, String>("datum"));
-                analysisScore.setCellValueFactory(new PropertyValueFactory<Company, Float>("GesamtPunkte"));
-                delete.setCellValueFactory(new PropertyValueFactory<Company, Button>("delete1"));
+            companyName.setCellValueFactory(new PropertyValueFactory<Company, String>("Companyname"));
+            creationDate.setCellValueFactory(new PropertyValueFactory<Company, String>("datum"));
+            analysisScore.setCellValueFactory(new PropertyValueFactory<Company, Float>("GesamtPunkte"));
+            delete.setCellValueFactory(new PropertyValueFactory<Company, Button>("delete1"));
 
             tableID.getItems().addAll(overview);
         }
+        DisconnectionDB();
 
         session1.getTransaction().commit();
-        session1.close();
-
-        System.out.println("Trying to close the connection to Levermann database...");
-        try{
-            con.close();
-            System.out.println("Levermann database disconnected!");
-        }catch(Exception e){
-            System.err.println("Could not disconnect Leverman database...");
-            System.err.println(e);
-            throw new IllegalStateException("Failed disconnecting Levermann database!");
-        }
+    }
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        initCols();
     }
 
 

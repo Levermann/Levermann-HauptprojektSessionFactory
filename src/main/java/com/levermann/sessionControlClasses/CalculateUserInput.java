@@ -4,10 +4,7 @@ import com.levermann.entityclass.AnalysisRating;
 import com.levermann.entityclass.AnalysisSteps;
 import com.levermann.entityclass.Company;
 import org.apache.log4j.Logger;
-import org.hibernate.HibernateException;
-import org.hibernate.Query;
-import org.hibernate.Session;
-import org.hibernate.Transaction;
+import org.hibernate.*;
 
 import java.util.List;
 
@@ -20,15 +17,17 @@ public class CalculateUserInput {
 
 
         //Aufrufen der aktuellen Session aus HibernateUtil
-        final Session session = HibernateUtil.getSessionFactory().openSession();
-        Query query7 = session.getNamedQuery("AnalysisRating.findAll");
-        final List<AnalysisRating> analysisRatingsFilled = (List<AnalysisRating>) query7.list();
+        SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
+        final Session session1 = sessionFactory.getCurrentSession();
+
+
         try {
             Transaction tx = null;
-            tx = session.beginTransaction();
-
+            tx = session1.beginTransaction();
+            Query query7 = session1.getNamedQuery("AnalysisRating.findAll");
+            final List<AnalysisRating> analysisRatingsFilled = (List<AnalysisRating>) query7.list();
             //HQL Named Query FindAll Unternehmen
-            Query query = session.getNamedQuery("Company.findAll");
+            Query query = session1.getNamedQuery("Company.findAll");
             List<Company> unList = (List<Company>) query.list();
 
             for (Company un : unList) {
@@ -36,7 +35,7 @@ public class CalculateUserInput {
                 String company = un.getCompanyname();
 
                 //HQL Named Query FindAll Levermannschritte
-                Query query1 = session.getNamedQuery("AnalysisSteps.findall");
+                Query query1 = session1.getNamedQuery("AnalysisSteps.findall");
                 List<AnalysisSteps> unList1 = (List<AnalysisSteps>) query1.list();
                 for (AnalysisSteps un1 : unList1) {
                     System.out.println("Analyse Liste = " + un1.getAnalysisStepsName()
@@ -44,7 +43,7 @@ public class CalculateUserInput {
                             + un1.getCompanyname_AnalysisSteps());
 
                     // Ausgabe eines Datensatzes mit Cid
-                    query1 = session.getNamedQuery("AnalysisSteps.findByName");
+                    query1 = session1.getNamedQuery("AnalysisSteps.findByName");
                     query1.setString("Companyname_AnalysisSteps", company);
                     unList1 = query1.list();
                     System.out.println("fuck y");
@@ -73,7 +72,7 @@ public class CalculateUserInput {
                          * Punkteliste befüllen: Schritt 1 Eigenkapitalrendite
                          */
                         for (AnalysisRating un2 : analysisRatingsFilled) {
-                            query7 = session.getNamedQuery("AnalysisRating.findByName");
+                            query7 = session1.getNamedQuery("AnalysisRating.findByName");
                             query7.setString("Companyname_AnalysisRating", company);
                             if (un2.getCompanyname_AnalysisRating().equals(company)) {
                                 un2.setEigenkapitalrendite((float)0);
@@ -91,7 +90,7 @@ public class CalculateUserInput {
                          * Punkteliste befüllen: Schritt 2 Gewinnmarge
                          */
                         for (AnalysisRating un2 : analysisRatingsFilled) {
-                            query7 = session.getNamedQuery("AnalysisRating.findByName");
+                            query7 = session1.getNamedQuery("AnalysisRating.findByName");
                             query7.setString("Companyname_AnalysisRating", company);
                             if (un2.getCompanyname_AnalysisRating().equals(company)) {
                                 un2.setEBITMarge((float)0);
@@ -108,7 +107,7 @@ public class CalculateUserInput {
                          */
                         //TODO eventuell switch case für den Sonderfall Finanzwerte
                         for (AnalysisRating un2 : analysisRatingsFilled) {
-                            query7 = session.getNamedQuery("AnalysisRating.findByName");
+                            query7 = session1.getNamedQuery("AnalysisRating.findByName");
                             query7.setString("Companyname_AnalysisRating", company);
                             if (un2.getCompanyname_AnalysisRating().equals(company)) {
                                 un2.setEigenkapitalquote((float)0);
@@ -123,7 +122,7 @@ public class CalculateUserInput {
                          * Punkteliste befüllen: Schritt 4 Kurs-Gewinn-Verhältnis aktuelles Jahr
                          */
                         for (AnalysisRating un2 : analysisRatingsFilled) {
-                            query7 = session.getNamedQuery("AnalysisRating.findByName");
+                            query7 = session1.getNamedQuery("AnalysisRating.findByName");
                             query7.setString("Companyname_AnalysisRating", company);
                             if (un2.getCompanyname_AnalysisRating().equals(company)) {
                                 un2.setKursGewinnVerhaeltnisAktuell((float)0);
@@ -140,7 +139,7 @@ public class CalculateUserInput {
                          * Punkteliste befüllen: Schritt 5 Kurs-Gewinn-Verhältnis über 5 Jahre
                          */
                         for (AnalysisRating un2 : analysisRatingsFilled) {
-                            query7 = session.getNamedQuery("AnalysisRating.findByName");
+                            query7 = session1.getNamedQuery("AnalysisRating.findByName");
                             query7.setString("Companyname_AnalysisRating", company);
                             if (un2.getCompanyname_AnalysisRating().equals(company)) {
                                 un2.setKursGewinnVerhaeltnis((float)0);
@@ -156,7 +155,7 @@ public class CalculateUserInput {
                          * Punkteliste befüllen: Schritt 6 Analystenmeinungen
                          */
                         for (AnalysisRating un2 : analysisRatingsFilled) {
-                            query7 = session.getNamedQuery("AnalysisRating.findByName");
+                            query7 = session1.getNamedQuery("AnalysisRating.findByName");
                             query7.setString("Companyname_AnalysisRating", company);
                             if (un2.getCompanyname_AnalysisRating().equals(company)) {
                                 un2.setAnalystenmeinungen((float)0);
@@ -182,7 +181,7 @@ public class CalculateUserInput {
                          * Punkteliste befüllen: Schritt 7 Reaktion auf Quartalszahlen
                          */
                         for (AnalysisRating un2 : analysisRatingsFilled) {
-                            query7 = session.getNamedQuery("AnalysisRating.findByName");
+                            query7 = session1.getNamedQuery("AnalysisRating.findByName");
                             query7.setString("Companyname_AnalysisRating", company);
                             if (un2.getCompanyname_AnalysisRating().equals(company)) {
                                 un2.setReaktionaufQuartalszahlen((float)0);
@@ -197,7 +196,7 @@ public class CalculateUserInput {
                          * Punkteliste befüllen: Schritt 8 Gewinnrevision
                          */
                         for (AnalysisRating un2 : analysisRatingsFilled) {
-                            query7 = session.getNamedQuery("AnalysisRating.findByName");
+                            query7 = session1.getNamedQuery("AnalysisRating.findByName");
                             query7.setString("Companyname_AnalysisRating", company);
                             if (un2.getCompanyname_AnalysisRating().equals(company)) {
                                 un2.setGewinnrevision((float)0);
@@ -212,7 +211,7 @@ public class CalculateUserInput {
                          * Punkteliste befüllen: Schritt 9 6-Monats-Kursverlauf
                          */
                         for (AnalysisRating un2 : analysisRatingsFilled) {
-                            query7 = session.getNamedQuery("AnalysisRating.findByName");
+                            query7 = session1.getNamedQuery("AnalysisRating.findByName");
                             query7.setString("Companyname_AnalysisRating", company);
                             if (un2.getCompanyname_AnalysisRating().equals(company)) {
                                 un2.setKursverlauf6Monate((float)0);
@@ -227,7 +226,7 @@ public class CalculateUserInput {
                          * Punkteliste befüllen: Schritt 10 12-Monats-Kursverlauf
                          */
                         for (AnalysisRating un2 : analysisRatingsFilled) {
-                            query7 = session.getNamedQuery("AnalysisRating.findByName");
+                            query7 = session1.getNamedQuery("AnalysisRating.findByName");
                             query7.setString("Companyname_AnalysisRating", company);
                             if (un2.getCompanyname_AnalysisRating().equals(company)) {
                                 un2.setKursverlauf12Monate((float)0);
@@ -242,7 +241,7 @@ public class CalculateUserInput {
                          * Punkteliste befüllen: Schritt 11 Kursmomentum
                          */
                         for (AnalysisRating un2 : analysisRatingsFilled) {
-                            query7 = session.getNamedQuery("AnalysisRating.findByName");
+                            query7 = session1.getNamedQuery("AnalysisRating.findByName");
                             query7.setString("Companyname_AnalysisRating", company);
                             if (un2.getCompanyname_AnalysisRating().equals(company)) {
                                 un2.setKursmomentum((float)0);
@@ -258,7 +257,7 @@ public class CalculateUserInput {
                          * Schritt 12 Reversaleffekt
                          */
                         for (AnalysisRating un2 : analysisRatingsFilled) {
-                            query7 = session.getNamedQuery("AnalysisRating.findByName");
+                            query7 = session1.getNamedQuery("AnalysisRating.findByName");
                             query7.setString("Companyname_AnalysisRating", company);
                             if (un2.getCompanyname_AnalysisRating().equals(company)) {
                                 un2.setCompanyname_AnalysisRating(un1.getCompanyname_AnalysisSteps());
@@ -274,7 +273,7 @@ public class CalculateUserInput {
                          * Punkteliste befüllen: Schritt 13 Gewinnwachstum
                          */
                         for (AnalysisRating un2 : analysisRatingsFilled) {
-                            query7 = session.getNamedQuery("AnalysisRating.findByName");
+                            query7 = session1.getNamedQuery("AnalysisRating.findByName");
                             query7.setString("Companyname_AnalysisRating", company);
                             if (un2.getCompanyname_AnalysisRating().equals(company)) {
                                 un2.setGewinnwachstum((float)0);
@@ -288,7 +287,7 @@ public class CalculateUserInput {
 
 
                         for (AnalysisRating un2 : analysisRatingsFilled) {
-                            query7 = session.getNamedQuery("AnalysisRating.findByName");
+                            query7 = session1.getNamedQuery("AnalysisRating.findByName");
                             query7.setString("Companyname_AnalysisRating", company);
                             if (un2.getCompanyname_AnalysisRating().equals(company)) {
 
@@ -298,13 +297,13 @@ public class CalculateUserInput {
                         //TODO Methode, welche die Gesamtpunktezahl in neues Feld Analysisrating speichert
                     }}}
 
-            session.getTransaction().commit();
+            session1.getTransaction().commit();
             //    System.out.println("fuck youuuuuuuuuuuu" + un1.getEigenkapitalrendite()+ un1.getCompanyname_AnalysisSteps());
             System.out.println("Speichere Unternehmen...");
             System.out.println("Done!");
         } catch (HibernateException e) {
             System.out.println("Hibernate Exception" + e.getMessage());
-            session.getTransaction().rollback();
+            session1.getTransaction().rollback();
             throw new RuntimeException(e);
         } finally {
         }
