@@ -179,7 +179,7 @@ private void disconnectToDB(){
             fillDBvalues();
 
             String companyname = unternehmennameDB.getText();
-            String datum = "12.32.42";
+            String datum = datumDB.getText();
             float eigenkapital = Float.parseFloat(eigenkapitalDB.getText());
             float jahresueberschuss = Float.parseFloat(jahresueberschussDB.getText());
             float gewinnEBIT = Float.parseFloat(gewinnEBITDB.getText());
