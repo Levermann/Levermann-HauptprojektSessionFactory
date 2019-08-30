@@ -32,6 +32,8 @@ public class App extends Application {
     public static String informationFile = "information.fxml";
     public static String showUserInputID = "ShowUserInput";
     public static String showUserInputFile = "userInput.fxml";
+    public static String scoreViewID = "ScoreViewController";
+    public static String scoreViewFile = "scoreView.fxml";
 
     private static Stage stage;
 
@@ -41,6 +43,7 @@ public class App extends Application {
         setStage(startStage);
 
         ScreensController mainContainer = new ScreensController();
+
         mainContainer.loadScreen(App.startPageID, App.startPageFile);
         mainContainer.loadScreen(App.enterCompanyNameID, App.enterCompanyNameFile);
         mainContainer.loadScreen(App.inputID, App.inputFile);
@@ -48,6 +51,7 @@ public class App extends Application {
         mainContainer.loadScreen(App.companyOverviewID, App. companyOverviewFile);
         mainContainer.loadScreen(App.informationID, App.informationFile);
         mainContainer.loadScreen(App.showUserInputID, App.showUserInputFile);
+        mainContainer.loadScreen(App.scoreViewID, App.scoreViewFile);
         mainContainer.setScreen(App.startPageID);
 
 

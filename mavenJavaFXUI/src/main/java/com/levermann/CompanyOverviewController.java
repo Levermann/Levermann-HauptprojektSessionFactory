@@ -1,6 +1,5 @@
 package com.levermann;
 
-import com.levermann.DB.DBConnection;
 import com.levermann.entityclass.Company;
 import com.levermann.sessionControlClasses.HibernateUtil;
 import javafx.collections.FXCollections;
@@ -19,7 +18,6 @@ import java.io.IOException;
 import java.net.URL;
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.sql.SQLException;
 import java.util.List;
 import java.util.ResourceBundle;
 
@@ -38,6 +36,8 @@ public class CompanyOverviewController implements Initializable, ControlledScree
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+
+
         System.out.println("Trying to load the JDBC driver...");
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
@@ -69,6 +69,7 @@ public class CompanyOverviewController implements Initializable, ControlledScree
         company1.getDatum();
 
          */
+
         Query query = session1.getNamedQuery("Company.findAll");
         List<Company> unList = (List<Company>) query.list();
 
@@ -78,16 +79,20 @@ public class CompanyOverviewController implements Initializable, ControlledScree
             String datumForOverview = un.getDatum();
             float SumScore = un.getGesamtPunkte();
 
-
+tableID.getItems().removeAll();
             final ObservableList<Company> overview = FXCollections.observableArrayList(
                     new Company(nameforOverview, datumForOverview, SumScore)
+
             );
                 companyName.setCellValueFactory(new PropertyValueFactory<Company, String>("Companyname"));
                 creationDate.setCellValueFactory(new PropertyValueFactory<Company, String>("datum"));
                 analysisScore.setCellValueFactory(new PropertyValueFactory<Company, Float>("GesamtPunkte"));
 
+
             tableID.getItems().addAll(overview);
+
         }
+
 
         session1.getTransaction().commit();
         session1.close();
@@ -101,6 +106,7 @@ public class CompanyOverviewController implements Initializable, ControlledScree
             System.err.println(e);
             throw new IllegalStateException("Failed disconnecting Levermann database!");
         }
+
     }
 
 

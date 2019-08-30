@@ -299,6 +299,7 @@ public class CalculateUserInput {
                     }}}
 
             session.getTransaction().commit();
+            session.close();
             //    System.out.println("fuck youuuuuuuuuuuu" + un1.getEigenkapitalrendite()+ un1.getCompanyname_AnalysisSteps());
             System.out.println("Speichere Unternehmen...");
             System.out.println("Done!");
