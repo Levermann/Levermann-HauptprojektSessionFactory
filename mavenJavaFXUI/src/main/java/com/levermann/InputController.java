@@ -112,6 +112,7 @@ public class InputController implements ControlledScreenInterface {
         fillDBvalues();
         //App.setRoot("showResult");
        // setValues();
+        hi();
         takeOverUserInput();
         myController.setScreen(App.showResultID);
         App.setStageTitle("Unternehmensergebnisse");
@@ -174,6 +175,9 @@ private void disconnectToDB(){
         /**
          * conn.close();
          */
+       private void hi(){
+            ShowResultController.Companyname1 = unternehmennameDB.getText();
+        }
         private void takeOverUserInput(){
             ShowUserInputController.eigenkapital = Float.parseFloat(eigenkapitalDB.getText());
             ShowUserInputController.jahresueberschuss = Float.parseFloat(jahresueberschussDB.getText());

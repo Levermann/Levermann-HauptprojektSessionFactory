@@ -5279,6 +5279,8 @@
     <column id="1213" parent="323" name="id">
       <Position>2</Position>
       <DataType>float|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
     <column id="1214" parent="323" name="Companyname_AnalysisRating">
@@ -5384,6 +5386,8 @@
     <column id="1234" parent="324" name="id">
       <Position>2</Position>
       <DataType>float|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
     <column id="1235" parent="324" name="Companyname_AnalysisSteps">
@@ -5489,6 +5493,8 @@
     <column id="1255" parent="325" name="id">
       <Position>2</Position>
       <DataType>float|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
     <column id="1256" parent="325" name="datum">
