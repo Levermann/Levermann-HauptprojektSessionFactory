@@ -1,5 +1,6 @@
 package com.levermann;
 
+import com.levermann.DB.DBConnection;
 import com.levermann.entityclass.Company;
 import com.levermann.sessionControlClasses.HibernateUtil;
 import javafx.collections.FXCollections;
@@ -129,7 +130,37 @@ public class CompanyOverviewController implements Initializable, ControlledScree
 
     @FXML
     private void tableAktualisieren(){
+        ConnectionDB();
+        SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
+        Session session1 = sessionFactory.getCurrentSession();
 
+        session1.beginTransaction();
+        tableID.getItems().clear();
+
+        Query query = session1.getNamedQuery("Company.findAll");
+        List<Company> unList = (List<Company>) query.list();
+
+        for (Company un : unList) {
+
+            String nameforOverview = un.getCompanyname();
+            String datumForOverview = un.getDatum();
+            float SumScore = un.getGesamtPunkte();
+            Button deletemach = new Button("delete");
+
+            final ObservableList<Company> overview = FXCollections.observableArrayList(
+                    new Company(nameforOverview, datumForOverview, SumScore, deletemach)
+            );
+            companyName.setCellValueFactory(new PropertyValueFactory<Company, String>("Companyname"));
+            creationDate.setCellValueFactory(new PropertyValueFactory<Company, String>("datum"));
+            analysisScore.setCellValueFactory(new PropertyValueFactory<Company, Float>("GesamtPunkte"));
+            delete.setCellValueFactory(new PropertyValueFactory<Company, Button>("delete1"));
+
+            tableID.getItems().addAll(overview);
+        }
+
+
+        session1.getTransaction().commit();
+        DisconnectionDB();
     }
 
     @FXML
