@@ -10,12 +10,13 @@ import javafx.scene.control.CheckBox;
 import javafx.scene.control.TextField;
 import org.hibernate.Session;
 
+import javax.inject.Inject;
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.util.List;
 
 public class InputController implements ControlledScreenInterface {
-
 
     @FXML
     public TextField unternehmennameDB;
@@ -107,10 +108,11 @@ public class InputController implements ControlledScreenInterface {
 
 
     @FXML
-    private void switchToShowResult() throws IOException {
+    private void switchToShowResult(ActionEvent actionEvent) throws IOException {
         fillDBvalues();
         //App.setRoot("showResult");
-       // setValues();
+        //zeigeInputAn(actionEvent);
+        setValues();
         myController.setScreen(App.showResultID);
         App.setStageTitle("Unternehmensergebnisse");
     }
@@ -172,6 +174,33 @@ private void disconnectToDB(){
         /**
          * conn.close();
          */
+
+    private void setValues(){
+            ShowUserInputController.jahresueberschuss = jahresueberschussDB.getText();
+            ShowUserInputController.eigenkapital = this.eigenkapitalDB.getText();
+            ShowUserInputController.gewinnEBIT = this.gewinnEBITDB.getText();
+            ShowUserInputController.fremdkapital = this.fremdkapitalDB.getText();
+            ShowUserInputController.aktuellerAktienkurs = this.aktuellerAktienkursDB.getText();
+            ShowUserInputController.geschaetzterGewinn = this.geschaetzterGewinnDB.getText();
+            ShowUserInputController.analystenMeinungen = "KeineMeinung";
+            ShowUserInputController.kaufen = this.analystenKaufenDB.getText();
+            ShowUserInputController.verkaufen = this.analystenVerkaufenDB.getText();
+            ShowUserInputController.halten = this.analystenHaltenDB.getText();
+            ShowUserInputController.kursAnstiegUnternehmen = this.kursanstiegUnternehmenDB.getText();
+            ShowUserInputController.kursanstiegAktienindex = this.kursanstiegAktienindexDB.getText();
+            ShowUserInputController.gewinnschaetzungVor4Wochen = this.gewinnschaetzungVor4WochenDB.getText();
+            ShowUserInputController.aktuelleGewinnschaetzung = this.aktuelleGewinnschaetzungDB.getText();
+            ShowUserInputController.aktienkursVor6Monaten = this.aktienkursVor6MonatenDB.getText();
+            ShowUserInputController.aktienkursVor12Monaten = this.aktienkursVor12MonatenDB.getText();
+            ShowUserInputController.kursVor1Monat = this.kursVor1MonatDB.getText();
+            ShowUserInputController.kursVor2Monaten = this.kursVor2MonatenDB.getText();
+            ShowUserInputController.kursVor3Monaten = this.kursVor3MonatenDB.getText();
+            ShowUserInputController.aktienkursVor1Monaten = this.aktienkursVor1MonatDB.getText();
+            ShowUserInputController.aktienkursVor2Monaten = this.aktienkursVor2MonatenDB.getText();
+            ShowUserInputController.aktienkursVor3Monaten = this.aktienkursVor3MonatenDB.getText();
+            ShowUserInputController.gewinnschaetzungFuerNaechstesJahr = this.gewinnschaetzungNaechstesJahrDB.getText();
+            ShowUserInputController.gewinnschaetzungFuerDiesesJahr = this.gewinnschaetzungDiesesJahrDB.getText();
+        }
 
         @FXML
         public void someMethod (ActionEvent event){
