@@ -41,6 +41,8 @@ public class CompanyOverviewController implements Initializable, ControlledScree
     @FXML
     private TableColumn<Company, Button> delete;
 
+
+
     private void ConnectionDB() {
         //TODO Die vom Benutzer eingegebenen Daten in die MySQL Datenbank schreiben
         //Load the jdbc diver
@@ -174,9 +176,46 @@ public class CompanyOverviewController implements Initializable, ControlledScree
     @FXML
     private void switchToEnterCompanyName() throws IOException {
         //App.setRoot("enterCompanyName");
-        myController.setScreen(App.enterCompanyNameID);
+        clearInput();
+        myController.setScreen(App.inputID);
         App.setStageTitle("Unternehmensnamen angeben");
     }
+
+    private void clearInput(){
+        InputController.unternehmennameDBTF.clear();
+        InputController.jahresueberschussDBTF.clear();
+        InputController.eigenkapitalDBTF.clear();
+        InputController.datumDBTF.clear();
+        InputController.gewinnschaetzungDBTF.clear();
+        InputController.gewinnavgDBTF.clear();
+        InputController.gewinnVor3JahrenDBTF.clear();
+        InputController.gewinnVor2JahrenDBTF.clear();
+        InputController.gewinnVor1JahrDBTF.clear();
+        InputController.aktuellerErwarteterKursgewinnDBTF.clear();
+        InputController.kursgewinnschaetzungNaechstesJahrDBTF.clear();
+        InputController.jahresumsatzDBTF.clear();
+        InputController.gewinnEBITDBTF.clear();
+        InputController.fremdkapitalDBTF.clear();
+        InputController.aktuellerAktienkursDBTF.clear();
+        InputController.analystenKaufenDBTF.clear();
+        InputController.analystenVerkaufenDBTF.clear();
+        InputController.analystenHaltenDBTF.clear();
+        InputController.kursanstiegUnternehmenDBTF.clear();
+        InputController.kursanstiegAktienindexDBTF.clear();
+        InputController.gewinnschaetzungVor4WochenDBTF.clear();
+        InputController.aktuelleGewinnschaetzungDBTF.clear();
+        InputController.aktienkursVor6MonatenDBTF.clear();
+        InputController.aktienkursVor12MonatenDBTF.clear();
+        InputController.kursVor1MonatDBTF.clear();
+        InputController.kursVor2MonatenDBTF.clear();
+        InputController.kursVor3MonatenDBTF.clear();
+        InputController.aktienkursVor1MonatDBTF.clear();
+        InputController.aktienkursVor2MonatenDBTF.clear();
+        InputController.aktienkursVor3MonatenDBTF.clear();
+        InputController.gewinnschaetzungNaechstesJahrDBTF.clear();
+        InputController.gewinnschaetzungDiesesJahrDBTF.clear();
+    }
+
     public void switchToPrimaryPage(ActionEvent actionEvent) throws IOException {
         //App.setRoot("startPage");
         myController.setScreen(App.startPageID);
