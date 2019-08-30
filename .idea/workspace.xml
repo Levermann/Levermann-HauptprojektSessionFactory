@@ -7,7 +7,6 @@
     <list default="true" id="ef1c18af-56f3-4a36-8891-4764d24d597a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/src/main/java/com/levermann/CompanyOverviewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/mavenJavaFXUI/src/main/java/com/levermann/CompanyOverviewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/src/main/resources/com/levermann/companyOverview.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/mavenJavaFXUI/src/main/resources/com/levermann/companyOverview.fxml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -410,14 +409,7 @@
       <workItem from="1566585459730" duration="21406000" />
       <workItem from="1566650626276" duration="6535000" />
       <workItem from="1567001123150" duration="77058000" />
-      <workItem from="1567165403297" duration="21682000" />
-    </task>
-    <task id="LOCAL-00043" summary="new Controller">
-      <created>1566415778372</created>
-      <option name="number" value="00043" />
-      <option name="presentableId" value="LOCAL-00043" />
-      <option name="project" value="LOCAL" />
-      <updated>1566415778372</updated>
+      <workItem from="1567165403297" duration="23819000" />
     </task>
     <task id="LOCAL-00044" summary="mysql connector in der POM -.-">
       <created>1566470240857</created>
@@ -755,7 +747,14 @@
       <option name="project" value="LOCAL" />
       <updated>1567175459303</updated>
     </task>
-    <option name="localTasksCounter" value="92" />
+    <task id="LOCAL-00092" summary="Löschen von DB-Einträgen">
+      <created>1567190531431</created>
+      <option name="number" value="00092" />
+      <option name="presentableId" value="LOCAL-00092" />
+      <option name="project" value="LOCAL" />
+      <updated>1567190531431</updated>
+    </task>
+    <option name="localTasksCounter" value="93" />
     <servers />
   </component>
   <component name="TodoView">
@@ -820,7 +819,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Style" />
     <MESSAGE value="session delete button" />
     <MESSAGE value="style" />
     <MESSAGE value="funktionierende Liste für userinput nur nicht die richtigen werte" />
@@ -845,7 +843,8 @@
     <MESSAGE value="mhm" />
     <MESSAGE value="show user Input mit aktualisieren anzeigen" />
     <MESSAGE value="Show CompanyOverview mit button aktualisiern die neue eingabe wenn in db" />
-    <option name="LAST_COMMIT_MESSAGE" value="Show CompanyOverview mit button aktualisiern die neue eingabe wenn in db" />
+    <MESSAGE value="Löschen von DB-Einträgen" />
+    <option name="LAST_COMMIT_MESSAGE" value="Löschen von DB-Einträgen" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -856,11 +855,6 @@
           </properties>
           <option name="timeStamp" value="1" />
         </breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/mavenJavaFXUI/src/main/java/com/levermann/CompanyOverviewController.java</url>
-          <line>254</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>

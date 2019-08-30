@@ -118,7 +118,6 @@ public class CompanyOverviewController implements Initializable, ControlledScree
         }
     }
 
-
     ScreensController myController;
 
     @Override
@@ -297,37 +296,7 @@ public class CompanyOverviewController implements Initializable, ControlledScree
         } finally {
         }
 
-        /**Session session1 = HibernateUtil.getSessionFactory().openSession();
-        session1.beginTransaction();
 
-        Query query = session1.getNamedQuery("Company.findAll");
-        List<Company> unList = (List<Company>) query.list();
-        Company x = new Company();
-
-        for (Company un : unList) {
-            if (un.getCompanyname().equals(deleteName)){
-                x = un;
-            }
-        }
-        try{
-            session1.delete(x);
-            session1.getTransaction().commit();
-            session1.close();
-            System.out.println("Unternehmen wurde gelöscht!");
-        }catch(Exception e){
-            System.err.println("Unternehmen wurde nicht gelöscht, unbekannter Fehler!");
-            System.err.println(e);
-        }
-
-        System.out.println("Trying to close the connection to Levermann database...");
-        try{
-            con.close();
-            System.out.println("Levermann database disconnected!");
-        }catch(Exception e){
-            System.err.println("Could not disconnect Leverman database...");
-            System.err.println(e);
-            throw new IllegalStateException("Failed disconnecting Levermann database!");
-        }**/
 
         tableAktualisieren();
 
