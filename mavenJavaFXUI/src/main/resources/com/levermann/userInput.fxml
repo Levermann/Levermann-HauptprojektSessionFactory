@@ -24,6 +24,7 @@
               </columns>
             </TableView>
             <ScrollBar layoutX="1029.0" orientation="VERTICAL" prefHeight="724.0" prefWidth="14.0" />
+            <Button fx:id="AktualisierenButton2" alignment="BOTTOM_CENTER" contentDisplay="BOTTOM" layoutX="1171.0" layoutY="632.0" onAction="#zeigeInputAn" style="-fx-border-color: black;" text="Aktualisieren" />
          </children>
       </AnchorPane>
     </children>

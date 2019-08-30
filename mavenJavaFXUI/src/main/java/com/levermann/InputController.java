@@ -5,6 +5,7 @@ import com.levermann.entityclass.AnalysisSteps;
 import com.levermann.entityclass.Company;
 import com.levermann.sessionControlClasses.CalculateUserInput;
 import com.levermann.sessionControlClasses.HibernateUtil;
+import com.levermann.utilHandling.CompanyG;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -12,6 +13,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.TextField;
 import org.hibernate.Session;
+import org.hibernate.SessionFactory;
 
 import java.io.IOException;
 import java.sql.Connection;
@@ -32,8 +34,6 @@ public class InputController implements ControlledScreenInterface {
     public TextField gewinnschaetzungDB;
     @FXML
     public TextField gewinnavgDB;
-    @FXML
-    public TextField perfinjedemmonatDB;
     @FXML
     public TextField gewinnVor3JahrenDB;
     @FXML
@@ -112,6 +112,8 @@ public class InputController implements ControlledScreenInterface {
         fillDBvalues();
         //App.setRoot("showResult");
        // setValues();
+        hi();
+        takeOverUserInput();
         myController.setScreen(App.showResultID);
         App.setStageTitle("Unternehmensergebnisse");
     }
@@ -173,8 +175,45 @@ private void disconnectToDB(){
         /**
          * conn.close();
          */
+       private void hi(){
+            ShowResultController.Companyname1 = unternehmennameDB.getText();
+        }
+        private void takeOverUserInput(){
+            ShowUserInputController.eigenkapital = Float.parseFloat(eigenkapitalDB.getText());
+            ShowUserInputController.jahresueberschuss = Float.parseFloat(jahresueberschussDB.getText());
+            ShowUserInputController.gewinnEBIT = Float.parseFloat(gewinnEBITDB.getText());
+            ShowUserInputController.fremdkapital = Float.parseFloat(fremdkapitalDB.getText());
+            ShowUserInputController.aktuellerAktienkurs = Float.parseFloat(aktuellerAktienkursDB.getText());
+            ShowUserInputController.kaufen = Float.parseFloat(analystenKaufenDB.getText());
+            ShowUserInputController.verkaufen = Float.parseFloat(analystenVerkaufenDB.getText());
+            ShowUserInputController.halten = Float.parseFloat(analystenHaltenDB.getText());
+            ShowUserInputController.kursAnstiegUnternehmen = Float.parseFloat(kursanstiegUnternehmenDB.getText());
+            ShowUserInputController.kursAnstiegAktienindex = Float.parseFloat(kursanstiegAktienindexDB.getText());
+            ShowUserInputController.gewinnschaetzungVor4Wochen = Float.parseFloat(gewinnschaetzungVor4WochenDB.getText());
+            ShowUserInputController.aktuelleGewinnschaetzung = Float.parseFloat(aktuelleGewinnschaetzungDB.getText());
+            ShowUserInputController.aktienkursVor6Monaten = Float.parseFloat(aktienkursVor6MonatenDB.getText());
+            ShowUserInputController.aktienkursVor12Monaten = Float.parseFloat(aktienkursVor12MonatenDB.getText());
+            ShowUserInputController.aktuellerErwarteterKursgewinn = Float.parseFloat(aktuellerErwarteterKursgewinnDB.getText());
+            ShowUserInputController.kursVor1Monat = Float.parseFloat(kursVor1MonatDB.getText());
+            ShowUserInputController.kursVor2Monaten = Float.parseFloat(kursVor2MonatenDB.getText());
+            ShowUserInputController.kursVor3Monaten = Float.parseFloat(kursVor3MonatenDB.getText());
+            ShowUserInputController.aktienkursVor1Monaten = Float.parseFloat(aktienkursVor1MonatDB.getText());
+            ShowUserInputController.aktienkursVor2Monaten = Float.parseFloat(aktienkursVor2MonatenDB.getText());
+            ShowUserInputController.aktienkursVor3Monaten = Float.parseFloat(aktienkursVor3MonatenDB.getText());
+            ShowUserInputController.gewinnschaetzungFuerNaechstesJahr = Float.parseFloat(gewinnschaetzungNaechstesJahrDB.getText());
+            ShowUserInputController.gewinnschaetzungFuerDiesesJahr = Float.parseFloat(gewinnschaetzungDiesesJahrDB.getText());
+            ShowUserInputController.gewinnVor1Jahr = Float.parseFloat(gewinnVor1JahrDB.getText());
+            ShowUserInputController.jahresumsatz = Float.parseFloat(jahresumsatzDB.getText());
+            ShowUserInputController.gewinnschaetzung = Float.parseFloat(gewinnschaetzungDB.getText());
+            ShowUserInputController.gewinnAVG = Float.parseFloat(gewinnavgDB.getText());
+            ShowUserInputController.GewinnVor3Jahren = Float.parseFloat(gewinnVor3JahrenDB.getText());
+            ShowUserInputController.GewinnVor2Jahren = Float.parseFloat(gewinnVor2JahrenDB.getText());
+            ShowUserInputController.kursgewinnschaetzungNaechstesJahr = Float.parseFloat(kursgewinnschaetzungNaechstesJahrDB.getText());
+        }
 
-        @FXML
+
+
+    @FXML
         public void someMethod (ActionEvent event){
             fillDBvalues();
 
@@ -212,7 +251,7 @@ private void disconnectToDB(){
             int aktuellenErwartetenKursgewinn = Integer.parseInt(aktuellerErwarteterKursgewinnDB.getText());
             int kursgewinnschaezungNaechstesJahr = Integer.parseInt(kursgewinnschaetzungNaechstesJahrDB.getText());
 
-            Company company = new Company(companyname,  datum,  eigenkapital,  jahresueberschuss,  gewinnEBIT,
+            Company wxyz = new Company(companyname,  datum,  eigenkapital,  jahresueberschuss,  gewinnEBIT,
              jahresumsatz,  fremdkapital,  aktuellerAktienkurs,  gewinnschaezung,
              gewinnAVG,  halten,  verkaufen,  kaufen,  kursanstiegUnternehmen,
              kursanstiegIndex,  gewinnschaezungVor4Wochen,
@@ -234,14 +273,21 @@ private void disconnectToDB(){
 
             AnalysisSteps analysisSteps = new AnalysisSteps(analysisstepsname, companyname_AnalysisSteps);
 
-            addtoDB.add(company);
+            addtoDB.add(wxyz);
             addtoDBAnalysisRating.add(analysisRating);
             addtoDBAnalysisSteps.add(analysisSteps);
 
 
-            Session session1 = HibernateUtil.getSessionFactory().openSession();
+            SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
+            Session session1 = sessionFactory.getCurrentSession();
+
             session1.beginTransaction();
-            session1.save(company);
+
+            CompanyG companyG = new CompanyG();
+            companyG.setSession(session1);
+
+            companyG.makePersistent(wxyz);
+            session1.save(wxyz);
             session1.save(analysisRating);
             session1.save(analysisSteps);
             session1.getTransaction().commit();

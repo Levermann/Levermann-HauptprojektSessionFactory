@@ -11,6 +11,7 @@
         <property name="hibernate.connection.password">Levermann</property>
         <property name="hibernate.current_session_context_class">thread</property>
         <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+
         <mapping class="com.levermann.entityclass.AnalysisRating"/>
         <mapping class="com.levermann.entityclass.AnalysisSteps"/>
         <mapping class="com.levermann.entityclass.Company"/>

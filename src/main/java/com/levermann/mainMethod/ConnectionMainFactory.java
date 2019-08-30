@@ -25,8 +25,8 @@ abstract public class ConnectionMainFactory  {
 
          CompanyG companyG = new CompanyG();
          companyG.setSession(session);
-
-        Company company = new Company();
+/*
+        Company company = new Company(delete1);
         company.setCompanyname("KA");
          company.setEigenkapital(123214);
          company.setFremdkapital(324234);
@@ -39,6 +39,8 @@ abstract public class ConnectionMainFactory  {
          session.save(company);
          session.getTransaction().commit();
          session.close();
+
+ */
 
      } catch (HibernateException e){
 			e.printStackTrace();
