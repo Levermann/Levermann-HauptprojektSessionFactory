@@ -2,6 +2,7 @@ package com.levermann;
 
 import com.levermann.entityclass.AnalysisRating;
 import com.levermann.entityclass.AnalysisSteps;
+import com.levermann.entityclass.Company;
 import com.levermann.sessionControlClasses.HibernateUtil;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -70,7 +71,8 @@ public class ShowResultController implements Initializable, ControlledScreenInte
 
     @FXML
     public void zeigeInputAnUI () throws IOException {
-        getDataAnalysisSteps();
+      //  getDataAnalysisSteps();
+        getDataAnalysisRating();
     }
 
     @FXML
@@ -86,22 +88,16 @@ public class ShowResultController implements Initializable, ControlledScreenInte
         myController.setScreen(App.showUserInputID);
         App.setStageTitle("Allgemeine Unternehmensübersicht");
     }
-    private void getDataAnalysisSteps(){
+    private void getDataAnalysisRating(){
         ConnectionDB();
         SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
         Session session1 = sessionFactory.getCurrentSession();
 
         session1.beginTransaction();
-        /*
-        Company company1 = (Company) session1.get(Company.class, 1L);
-        company1.getGesamtPunkte();
-        company1.getCompanyname();
-        company1.getDatum();
 
-         */
 
-                Query queryAS = session1.getNamedQuery("AnalysisRating.findAll");
-                List<AnalysisRating> ListAR = (List<AnalysisRating>) queryAS.list();
+                Query queryAR = session1.getNamedQuery("AnalysisRating.findAll");
+                List<AnalysisRating> ListAR = (List<AnalysisRating>) queryAR.list();
 
                 for (AnalysisRating rating : ListAR) {
                     if (Companyname1.equals(rating.getCompanyname_AnalysisRating())) {
@@ -135,28 +131,56 @@ public class ShowResultController implements Initializable, ControlledScreenInte
                     }
                 }
 
+        Query queryAS = session1.getNamedQuery("AnalysisSteps.findall");
+        List<AnalysisSteps> ListAS = (List<AnalysisSteps>) queryAS.list();
 
-        DisconnectionDB();
+        for (AnalysisSteps steps : ListAS) {
+            if (Companyname1.equals(steps.getCompanyname_AnalysisSteps())) {
+                float eigenkapitalrenditeAS = steps.getEigenkapitalrendite();
+                float ebitAS = steps.getEBITMarge();
+                float eigenkapitalquoteAS = steps.getEigenkapitalquote();
+                float KGVAS = steps.getKursGewinnVerhaeltnis();
+                float AGVAktuellAS = steps.getKursGewinnVerhaeltnisAktuell();
+                float analystenmeinungenAS = steps.getAnalystenmeinungen();
+                float reaktionQAS = steps.getReaktionaufQuartalszahlen();
+                float gewinnrevisionAS = steps.getGewinnrevision();
+                float kursverlauf6AS = steps.getKursverlauf6Monate();
+                float kursverlauf12AS = steps.getKursverlauf12Monate();
+                float kursmomentumAS = steps.getKursmomentum();
+                float dreimonrevAS = steps.getDreimonatsreversal();
+                float gewinnwachstumAS = steps.getGewinnwachstum();
+                observableListAS.add(new AnalysisStepsManageUI("Eigenkapitalrendite", eigenkapitalrenditeAS));
+                observableListAS.add(new AnalysisStepsManageUI("EbitMarge", ebitAS));
+                observableListAS.add(new AnalysisStepsManageUI("Eigenkapitalquote", eigenkapitalquoteAS));
+                observableListAS.add(new AnalysisStepsManageUI("KursGewinnVerhältnis", KGVAS));
+                observableListAS.add(new AnalysisStepsManageUI("KursGewinnVerhältnisAktuell", AGVAktuellAS));
+                observableListAS.add(new AnalysisStepsManageUI("Analystenmeinungen", analystenmeinungenAS));
+                observableListAS.add(new AnalysisStepsManageUI("Reaktion auf Quartalszahlen", reaktionQAS));
+                observableListAS.add(new AnalysisStepsManageUI("Gewinnrevision", gewinnrevisionAS));
+                observableListAS.add(new AnalysisStepsManageUI("Kursverlauf 6 Monate", kursverlauf6AS));
+                observableListAS.add(new AnalysisStepsManageUI("Kursverlauf 12 Monate", kursverlauf12AS));
+                observableListAS.add(new AnalysisStepsManageUI("Kursmomentum", kursmomentumAS));
+                observableListAS.add(new AnalysisStepsManageUI("Dreimonantsreversal", dreimonrevAS));
+                observableListAS.add(new AnalysisStepsManageUI("Gewinnwachstum", gewinnwachstumAS));
+            }
+        }
+
 
         session1.getTransaction().commit();
+        DisconnectionDB();
 
 
 
 
 
     }
-    /*
-    private void getDataAnalysisRating(){
+/*
+    private void getDataAnalysisSteps(){
         ConnectionDB();
         SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
         Session session1 = sessionFactory.getCurrentSession();
 
         session1.beginTransaction();
-
-        Company company1 = (Company) session1.get(Company.class, 1L);
-        company1.getGesamtPunkte();
-        company1.getCompanyname();
-        company1.getDatum();
 
 
              Query queryAR = session1.getNamedQuery("AnalysisSteps.findall");
@@ -197,7 +221,9 @@ public class ShowResultController implements Initializable, ControlledScreenInte
         session1.getTransaction().commit();
     }
 
-     */
+
+
+ */
 
 
     private void ConnectionDB() {
