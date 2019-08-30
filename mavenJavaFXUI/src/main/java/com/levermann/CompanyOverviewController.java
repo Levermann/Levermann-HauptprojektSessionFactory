@@ -80,14 +80,13 @@ public class CompanyOverviewController implements Initializable, ControlledScree
 
 
             final ObservableList<Company> overview = FXCollections.observableArrayList(
+                    new Company(nameforOverview, datumForOverview, SumScore)
             );
-                overview.add(new Company(un.getCompanyname(), un.getDatum(), un.getGesamtPunkte()));
                 companyName.setCellValueFactory(new PropertyValueFactory<Company, String>("Companyname"));
                 creationDate.setCellValueFactory(new PropertyValueFactory<Company, String>("datum"));
                 analysisScore.setCellValueFactory(new PropertyValueFactory<Company, Float>("GesamtPunkte"));
 
-                tableID.setItems(overview);
-
+            tableID.getItems().addAll(overview);
         }
 
         session1.getTransaction().commit();
