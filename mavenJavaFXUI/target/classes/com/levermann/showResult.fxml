@@ -24,13 +24,13 @@
                   <Font name="Berlin Sans FB" size="24.0" />
                </font>
             </Label>
-            <TableView fx:id="tableRating" layoutX="159.0" layoutY="89.0" prefHeight="400.0" prefWidth="500.0" style="-fx-border-color: black;">
+            <TableView fx:id="tableSteps" layoutX="159.0" layoutY="89.0" prefHeight="400.0" prefWidth="500.0" style="-fx-border-color: black;">
               <columns>
                 <TableColumn fx:id="keyFiguresSteps" prefWidth="225.0" text="Kennzahl" />
                 <TableColumn fx:id="resultSteps" prefWidth="273.0" text="Ergebnis" />
               </columns>
             </TableView>
-            <TableView layoutX="743.0" layoutY="89.0" prefHeight="400.0" prefWidth="500.0" style="-fx-border-color: black;">
+            <TableView fx:id="tableRating" layoutX="743.0" layoutY="89.0" prefHeight="400.0" prefWidth="500.0" style="-fx-border-color: black;">
               <columns>
                 <TableColumn fx:id="keyFiguresRating" prefWidth="225.0" text="Kennzahl" />
                 <TableColumn fx:id="resultRating" prefWidth="273.0" text="Bewertung" />

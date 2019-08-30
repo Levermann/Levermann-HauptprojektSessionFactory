@@ -174,7 +174,6 @@ private void disconnectToDB(){
         /**
          * conn.close();
          */
-
         private void takeOverUserInput(){
             ShowUserInputController.eigenkapital = Float.parseFloat(eigenkapitalDB.getText());
             ShowUserInputController.jahresueberschuss = Float.parseFloat(jahresueberschussDB.getText());
