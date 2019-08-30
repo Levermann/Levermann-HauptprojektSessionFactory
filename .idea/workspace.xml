@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ef1c18af-56f3-4a36-8891-4764d24d597a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/mavenJavaFXUI/src/main/resources/com/levermann/inputCharts.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/src/main/java/com/levermann/CompanyOverviewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/mavenJavaFXUI/src/main/java/com/levermann/CompanyOverviewController.java" afterDir="false" />
     </list>
@@ -163,6 +164,7 @@
       <recent name="com.levermann.kennzahlen" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Max\IdeaProjects\Levermann-HauptprojektSessionFactory\mavenJavaFXUI\src\main\resources\com\levermann" />
       <recent name="C:\Users\Lisa\IdeaProjects\Levermann-HauptprojektSessionFactory\mavenJavaFXUI\src\main\resources\com\levermann" />
       <recent name="C:\Users\Lisa\IdeaProjects\Levermann-HauptprojektSessionFactory\src\main\java\com\levermann\sqlStatements" />
       <recent name="C:\Users\Lisa\IdeaProjects\Levermann-HauptprojektSessionFactory\src\main\resources" />
@@ -409,14 +411,7 @@
       <workItem from="1566585459730" duration="21406000" />
       <workItem from="1566650626276" duration="6535000" />
       <workItem from="1567001123150" duration="77058000" />
-      <workItem from="1567165403297" duration="23819000" />
-    </task>
-    <task id="LOCAL-00044" summary="mysql connector in der POM -.-">
-      <created>1566470240857</created>
-      <option name="number" value="00044" />
-      <option name="presentableId" value="LOCAL-00044" />
-      <option name="project" value="LOCAL" />
-      <updated>1566470240857</updated>
+      <workItem from="1567165403297" duration="28745000" />
     </task>
     <task id="LOCAL-00045" summary="Update Entity with equals and hash">
       <created>1566487066599</created>
@@ -754,7 +749,14 @@
       <option name="project" value="LOCAL" />
       <updated>1567190531431</updated>
     </task>
-    <option name="localTasksCounter" value="93" />
+    <task id="LOCAL-00093" summary="Keineahnungirgendwashabichbestimmtgemacht">
+      <created>1567200431044</created>
+      <option name="number" value="00093" />
+      <option name="presentableId" value="LOCAL-00093" />
+      <option name="project" value="LOCAL" />
+      <updated>1567200431044</updated>
+    </task>
+    <option name="localTasksCounter" value="94" />
     <servers />
   </component>
   <component name="TodoView">
@@ -819,7 +821,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="session delete button" />
     <MESSAGE value="style" />
     <MESSAGE value="funktionierende Liste für userinput nur nicht die richtigen werte" />
     <MESSAGE value="checkbox design" />
@@ -844,7 +845,8 @@
     <MESSAGE value="show user Input mit aktualisieren anzeigen" />
     <MESSAGE value="Show CompanyOverview mit button aktualisiern die neue eingabe wenn in db" />
     <MESSAGE value="Löschen von DB-Einträgen" />
-    <option name="LAST_COMMIT_MESSAGE" value="Löschen von DB-Einträgen" />
+    <MESSAGE value="Keineahnungirgendwashabichbestimmtgemacht" />
+    <option name="LAST_COMMIT_MESSAGE" value="Keineahnungirgendwashabichbestimmtgemacht" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

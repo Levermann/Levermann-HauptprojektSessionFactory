@@ -9,6 +9,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.TableColumn;
+import javafx.scene.control.TablePosition;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
@@ -126,8 +127,12 @@ public class CompanyOverviewController implements Initializable, ControlledScree
     }
     //TODO Der Firmenname, der vom User in EnterCompanyName Seite eingegeben wurde muss ersetzt werden durch company1
 
+
+
     @FXML
     private void tableAktualisieren(){
+
+
         System.out.println("Trying to load the JDBC driver...");
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
@@ -295,9 +300,6 @@ public class CompanyOverviewController implements Initializable, ControlledScree
             throw new RuntimeException(e);
         } finally {
         }
-
-
-
         tableAktualisieren();
 
     }
