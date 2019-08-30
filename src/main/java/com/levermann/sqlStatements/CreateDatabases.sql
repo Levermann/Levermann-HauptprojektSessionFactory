@@ -29,7 +29,6 @@ create table company(
                              GewinnschaezungNaechstesJahr float (11),
                              GewinnschaezungDiesesJahr float (11),
                              Finanzsektor float (11),
-                             PerfInJedemMonat float (11),
                              KursgewinnVor3Jahren float (11),
                              KursgewinnVor2Jahren float (11),
                              KursgewinnVor1Jahr float (11),

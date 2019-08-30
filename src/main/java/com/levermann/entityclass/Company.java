@@ -168,23 +168,20 @@ public class Company implements Serializable  {
     @Column(name="Finanzsektor")
     private float Finanzsektor;
     @Basic
-    @Column(name="PerfInJedemMonat", unique = true, nullable = true)
-    private Integer PerfInJedemMonat;
-    @Basic
     @Column(name="KursgewinnVor3Jahren", unique = true, nullable = true)
-    private Integer KursgewinnVor3Jahren;
+    private float KursgewinnVor3Jahren;
     @Basic
     @Column(name="KursgewinnVor2Jahren", unique = true, nullable = true)
-    private Integer KursgewinnVor2Jahren;
+    private float KursgewinnVor2Jahren;
     @Basic
     @Column(name="KursgewinnVor1Jahr", unique = true, nullable = true)
-    private Integer KursgewinnVor1Jahr;
+    private float KursgewinnVor1Jahr;
     @Basic
     @Column(name="AktuellenErwartetenKursgewinn", unique = true, nullable = true)
-    private Integer AktuellenErwartetenKursgewinn;
+    private float AktuellenErwartetenKursgewinn;
     @Basic
     @Column(name="KursgewinnschaezungNaechstesJahr", unique = true, nullable = true)
-    private Integer KursgewinnschaezungNaechstesJahr;
+    private float KursgewinnschaezungNaechstesJahr;
     @Basic
     @Column(name="GesamtPunkte")
     private float GesamtPunkte;
@@ -447,15 +444,7 @@ public class Company implements Serializable  {
         Finanzsektor = finanzsektor;
     }
 
-    public Integer getPerfInJedemMonat() {
-        return PerfInJedemMonat;
-    }
-
-    public void setPerfInJedemMonat(Integer perfInJedemMonat) {
-        PerfInJedemMonat = perfInJedemMonat;
-    }
-
-    public Integer getKursgewinnVor3Jahren() {
+    public float getKursgewinnVor3Jahren() {
         return KursgewinnVor3Jahren;
     }
 
@@ -463,7 +452,7 @@ public class Company implements Serializable  {
         KursgewinnVor3Jahren = kursgewinnVor3Jahren;
     }
 
-    public Integer getKursgewinnVor2Jahren() {
+    public float getKursgewinnVor2Jahren() {
         return KursgewinnVor2Jahren;
     }
 
@@ -471,7 +460,7 @@ public class Company implements Serializable  {
         KursgewinnVor2Jahren = kursgewinnVor2Jahren;
     }
 
-    public Integer getKursgewinnVor1Jahr() {
+    public float getKursgewinnVor1Jahr() {
         return KursgewinnVor1Jahr;
     }
 
@@ -479,7 +468,7 @@ public class Company implements Serializable  {
         KursgewinnVor1Jahr = kursgewinnVor1Jahr;
     }
 
-    public Integer getAktuellenErwartetenKursgewinn() {
+    public float getAktuellenErwartetenKursgewinn() {
         return AktuellenErwartetenKursgewinn;
     }
 
@@ -487,7 +476,7 @@ public class Company implements Serializable  {
         AktuellenErwartetenKursgewinn = aktuellenErwartetenKursgewinn;
     }
 
-    public Integer getKursgewinnschaezungNaechstesJahr() {
+    public float getKursgewinnschaezungNaechstesJahr() {
         return KursgewinnschaezungNaechstesJahr;
     }
 

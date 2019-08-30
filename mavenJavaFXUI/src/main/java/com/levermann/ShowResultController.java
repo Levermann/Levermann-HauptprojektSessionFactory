@@ -25,9 +25,6 @@ public class ShowResultController implements Initializable, ControlledScreenInte
     private Connection con;
 
     public static String Companyname1;
-    //Werte aus DB AnalysisRating ziehen
-
-  //  public static Float eigenkapitalrenditeAR;
 
     @FXML
     public TableView<CompanyManageUI> tableRating;
@@ -59,7 +56,6 @@ public class ShowResultController implements Initializable, ControlledScreenInte
         tableSteps.setItems(observableListAS);
     }
 
-
     ScreensController myController;
 
     @Override
@@ -88,7 +84,8 @@ public class ShowResultController implements Initializable, ControlledScreenInte
     }
     private void getDataAnalysisRating(){
 
-
+        observableListAR.clear();
+        observableListAS.clear();
 
         //Aufrufen der aktuellen Session aus HibernateUtil
         final Session session = HibernateUtil.getSessionFactory().openSession();
@@ -99,16 +96,6 @@ public class ShowResultController implements Initializable, ControlledScreenInte
             Transaction tx = null;
             tx = session.beginTransaction();
 
-            //HQL Named Query FindAll Unternehmen
-            Query query = session.getNamedQuery("Company.findAll");
-            List<Company> unList = (List<Company>) query.list();
-
-            for (Company un : unList) {
-
-                //todo Hier companyname setzen
-
-                String company = Companyname1;
-
                 //HQL Named Query FindAll Levermannschritte
                 Query query1 = session.getNamedQuery("AnalysisSteps.findall");
                 List<AnalysisSteps> ListAS = (List<AnalysisSteps>) query1.list();
@@ -118,22 +105,9 @@ public class ShowResultController implements Initializable, ControlledScreenInte
                             + ","
                             + steps.getCompanyname_AnalysisSteps());
 
-                    // Ausgabe eines Datensatzes mit Cid
-                    query1 = session.getNamedQuery("AnalysisSteps.findByName");
-                    query1.setString("Companyname_AnalysisSteps", company);
-                    ListAS = query1.list();
-                    System.out.println("fuck y");
-
-
-
-
-
-
-                    if (steps.getCompanyname_AnalysisSteps().equals(company)) {
-
+                    if (steps.getCompanyname_AnalysisSteps().equals(Companyname1)) {
                         System.out.println("Fuuuuuuuuuuuuuuuuck");
 
-                        //Set Company
                         steps.setCompanyname_AnalysisSteps(steps.getCompanyname_AnalysisSteps());
                         float eigenkapitalrenditeAS = steps.getEigenkapitalrendite();
                         float ebitAS = steps.getEBITMarge();
@@ -145,8 +119,6 @@ public class ShowResultController implements Initializable, ControlledScreenInte
                         float gewinnrevisionAS = steps.getGewinnrevision();
                         float kursverlauf6AS = steps.getKursverlauf6Monate();
                         float kursverlauf12AS = steps.getKursverlauf12Monate();
-                        float kursmomentumAS = steps.getKursmomentum();
-                        float dreimonrevAS = steps.getDreimonatsreversal();
                         float gewinnwachstumAS = steps.getGewinnwachstum();
                         observableListAS.add(new AnalysisStepsManageUI("Eigenkapitalrendite", eigenkapitalrenditeAS));
                         observableListAS.add(new AnalysisStepsManageUI("EbitMarge", ebitAS));
@@ -158,14 +130,13 @@ public class ShowResultController implements Initializable, ControlledScreenInte
                         observableListAS.add(new AnalysisStepsManageUI("Gewinnrevision", gewinnrevisionAS));
                         observableListAS.add(new AnalysisStepsManageUI("Kursverlauf 6 Monate", kursverlauf6AS));
                         observableListAS.add(new AnalysisStepsManageUI("Kursverlauf 12 Monate", kursverlauf12AS));
-                        observableListAS.add(new AnalysisStepsManageUI("Kursmomentum", kursmomentumAS));
-                        observableListAS.add(new AnalysisStepsManageUI("Dreimonantsreversal", dreimonrevAS));
                         observableListAS.add(new AnalysisStepsManageUI("Gewinnwachstum", gewinnwachstumAS));
 
 
                         for (AnalysisRating rating : analysisRatingsFilled) {
-                            query7 = session.getNamedQuery("AnalysisRating.findByName");
-                            query7.setString("Companyname_AnalysisRating", company);
+
+
+
 
                             if (Companyname1.equals(rating.getCompanyname_AnalysisRating())) {
                                 float eigenkapitalrenditeAR = rating.getEigenkapitalrendite();
@@ -202,10 +173,9 @@ public class ShowResultController implements Initializable, ControlledScreenInte
                     }
         }
 
-    }
+
             session.getTransaction().commit();
             session.close();
-            //    System.out.println("fuck youuuuuuuuuuuu" + un1.getEigenkapitalrendite()+ un1.getCompanyname_AnalysisSteps());
             System.out.println("Speichere Unternehmen...");
             System.out.println("Done!");
         } catch (HibernateException e) {
@@ -215,58 +185,7 @@ public class ShowResultController implements Initializable, ControlledScreenInte
         } finally {
         }
     }
-
-/*
-    private void getDataAnalysisSteps(){
-        ConnectionDB();
-        SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
-        Session session1 = sessionFactory.getCurrentSession();
-
-        session1.beginTransaction();
-
-
-             Query queryAR = session1.getNamedQuery("AnalysisSteps.findall");
-        List<AnalysisSteps> ListAS = (List<AnalysisSteps>) queryAR.list();
-
-        for (AnalysisSteps steps : ListAS) {
-            if (Companyname1.equals(steps.getCompanyname_AnalysisSteps())) {
-                float eigenkapitalrenditeAS = steps.getEigenkapitalrendite();
-                float ebitAS = steps.getEBITMarge();
-                float eigenkapitalquoteAS = steps.getEigenkapitalquote();
-                float KGVAS = steps.getKursGewinnVerhaeltnis();
-                float AGVAktuellAS = steps.getKursGewinnVerhaeltnisAktuell();
-                float analystenmeinungenAS = steps.getAnalystenmeinungen();
-                float reaktionQAS = steps.getReaktionaufQuartalszahlen();
-                float gewinnrevisionAS = steps.getGewinnrevision();
-                float kursverlauf6AS = steps.getKursverlauf6Monate();
-                float kursverlauf12AS = steps.getKursverlauf12Monate();
-                float kursmomentumAS = steps.getKursmomentum();
-                float dreimonrevAS = steps.getDreimonatsreversal();
-                float gewinnwachstumAS = steps.getGewinnwachstum();
-                observableListAS.add(new AnalysisStepsManageUI("Eigenkapitalrendite", eigenkapitalrenditeAS));
-                observableListAS.add(new AnalysisStepsManageUI("EbitMarge", ebitAS));
-                observableListAS.add(new AnalysisStepsManageUI("Eigenkapitalquote", eigenkapitalquoteAS));
-                observableListAS.add(new AnalysisStepsManageUI("KursGewinnVerhältnis", KGVAS));
-                observableListAS.add(new AnalysisStepsManageUI("KursGewinnVerhältnisAktuell", AGVAktuellAS));
-                observableListAS.add(new AnalysisStepsManageUI("Analystenmeinungen", analystenmeinungenAS));
-                observableListAS.add(new AnalysisStepsManageUI("Reaktion auf Quartalszahlen", reaktionQAS));
-                observableListAS.add(new AnalysisStepsManageUI("Gewinnrevision", gewinnrevisionAS));
-                observableListAS.add(new AnalysisStepsManageUI("Kursverlauf 6 Monate", kursverlauf6AS));
-                observableListAS.add(new AnalysisStepsManageUI("Kursverlauf 12 Monate", kursverlauf12AS));
-                observableListAS.add(new AnalysisStepsManageUI("Kursmomentum", kursmomentumAS));
-                observableListAS.add(new AnalysisStepsManageUI("Dreimonantsreversal", dreimonrevAS));
-                observableListAS.add(new AnalysisStepsManageUI("Gewinnwachstum", gewinnwachstumAS));
-            }
-        }
-        DisconnectionDB();
-
-        session1.getTransaction().commit();
-    }
-
-
-
- */
-
+    
 
     private void ConnectionDB() {
         //TODO Die vom Benutzer eingegebenen Daten in die MySQL Datenbank schreiben
