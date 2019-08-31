@@ -4,7 +4,9 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 
 import java.io.IOException;
-
+/**
+ * this Controller was made for showing closer details: description, meaning and calculation in relation to the Levermannanalyse
+ */
 public class InformationController implements ControlledScreenInterface {
 
     ScreensController myController;
@@ -15,7 +17,6 @@ public class InformationController implements ControlledScreenInterface {
 
     @FXML
     public void switchToPrimaryPage(ActionEvent actionEvent) throws IOException {
-        //App.setRoot("startPage");
         //TODO Schließe die Session, zurück zu Startseite
         myController.setScreen(App.startPageID);
         App.setStageTitle("Hauptmenü");
