@@ -4,8 +4,9 @@ import javafx.beans.property.SimpleFloatProperty;
 import javafx.beans.property.SimpleStringProperty;
 
 public class ShowUserInputManageUI {
-
-
+    /**
+     * This class was created for filling the Tableview for checkInputsID on ShowUserInputController
+     */
     private final SimpleStringProperty inputFigure1;
     private final SimpleFloatProperty inputValue1;
 
@@ -13,7 +14,6 @@ public class ShowUserInputManageUI {
         this.inputFigure1 = new SimpleStringProperty(userInputFigures);
         this.inputValue1 = new SimpleFloatProperty(userInputValues);
     }
-
 
     public String getInputFigure1() {
         return inputFigure1.get();

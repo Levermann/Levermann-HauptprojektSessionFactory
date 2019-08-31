@@ -13,6 +13,9 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+/**
+ * the ShowUserInputController contains a readonly Tableview for UserInputs
+ */
 public class ShowUserInputController implements Initializable, ControlledScreenInterface {
 
     public static Float jahresueberschuss;
@@ -55,27 +58,16 @@ public class ShowUserInputController implements Initializable, ControlledScreenI
 
     private final ObservableList<ShowUserInputManageUI> checkIt = FXCollections.observableArrayList();
 
-    ScreensController myController;
-
-    public void setScreenParent(ScreensController screenParent) {
-        myController = screenParent;
-    }
-
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         userInputFigures.setCellValueFactory(new PropertyValueFactory<ShowUserInputManageUI, String>("inputFigure1"));
         userInputValues.setCellValueFactory(new PropertyValueFactory<ShowUserInputManageUI, Float>("inputValue1"));
         checkInputsID.setItems(checkIt);
     }
-
-
-    @FXML
-    public void switchToPrimaryPageAgain(ActionEvent actionEvent) throws IOException {
-        //App.setRoot("startPage");
-        //TODO Schließe die Session, zurück zu Startseite
-        myController.setScreen(App.startPageID);
-        App.setStageTitle("Hauptmenü");
+    public void setScreenParent(ScreensController screenParent) {
+        myController = screenParent;
     }
+    ScreensController myController;
 
     @FXML
     public void zeigeInputAn(ActionEvent actionEvent) throws IOException{
@@ -111,5 +103,11 @@ public class ShowUserInputController implements Initializable, ControlledScreenI
         checkIt.add(new ShowUserInputManageUI("Gewinn vor 2 Jahren", GewinnVor2Jahren));
         checkIt.add(new ShowUserInputManageUI("Kursgewinnschätzung n. Jahr", kursgewinnschaetzungNaechstesJahr));
     }
-
+    @FXML
+    public void switchToPrimaryPageAgain(ActionEvent actionEvent) throws IOException {
+        //App.setRoot("startPage");
+        //TODO Schließe die Session, zurück zu Startseite
+        myController.setScreen(App.startPageID);
+        App.setStageTitle("Hauptmenü");
+    }
 }

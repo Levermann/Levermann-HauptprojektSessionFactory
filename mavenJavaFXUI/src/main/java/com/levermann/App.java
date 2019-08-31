@@ -26,6 +26,9 @@ public class App extends Application {
 
     private static Scene scene;
 
+    /**
+     * Ids for Controller and fxml path settings will be used to switch to another Scene
+     */
     public static String startPageID = "startPage";
     public static String startPageFile = "startPage.fxml";
     public static String enterCompanyNameID = "enterCompanyName";

@@ -22,14 +22,6 @@ public class StartPageController implements ControlledScreenInterface {
         //App.setRoot("enterCompanyName");
         myController.setScreen(App.inputID);
         App.setStageTitle("Unternehmensnamen angeben");
-        /**
-         Image imageBackground = new Image(getClass().getResource("pictures/aktienchart.png").toExternalForm());
-        BackgroundImage backgroundImage = new BackgroundImage(imageBackground, BackgroundRepeat.NO_REPEAT,
-                BackgroundRepeat.NO_REPEAT, BackgroundPosition.DEFAULT, BackgroundSize.DEFAULT);
-        Background background = new Background(backgroundImage);
-
-        ImageView imageView = new ImageView(imageBackground);
-         **/
     }
     @FXML
     private void switchToCompanyOverview() throws IOException{

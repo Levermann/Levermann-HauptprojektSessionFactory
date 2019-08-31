@@ -1,19 +1,14 @@
 package com.levermann.entityclass;
 
 import javafx.scene.control.Button;
-import org.hibernate.Session;
-
 import javax.persistence.*;
 import java.io.Serializable;
-
-import static com.levermann.sessionControlClasses.HibernateUtil.getSessionFactory;
 
 
 @Entity
 @Table(name = "company")
 @Access(AccessType.FIELD)
 @NamedQueries({
-
 
         @NamedQuery(name = "Company.findAll", query = "SELECT A FROM Company A"),
         @NamedQuery(name = "Company.findByName", query = "SELECT c FROM Company c WHERE c.Companyname =:Companyname"),
@@ -23,16 +18,12 @@ import static com.levermann.sessionControlClasses.HibernateUtil.getSessionFactor
 })
 public class Company implements Serializable  {
 
-
     public Company(String Companyname, String datum, float GesamtPunkte, Button delete1) {
         this.Companyname = Companyname;
         this.datum = datum;
         this.GesamtPunkte = GesamtPunkte;
         delete1 = new Button("deleteIt");
-       
     }
-
-
 
     public Company(String companyname, String datum, float eigenkapital, float jahresueberschuss, float gewinnEBIT,
                    float jahresumsatz, float fremdkapital, float aktuellerAktienkurs, float gewinnschaezung,
@@ -78,7 +69,6 @@ public class Company implements Serializable  {
         AktuellenErwartetenKursgewinn = aktuellenErwartetenKursgewinn;
         KursgewinnschaezungNaechstesJahr = kursgewinnschaezungNaechstesJahr;
     }
-
     @Id
     @Column(name="Companyname")
     private String Companyname;
@@ -186,32 +176,10 @@ public class Company implements Serializable  {
     @Column(name="GesamtPunkte")
     private float GesamtPunkte;
 
-
-
     public Company() {
         
     }
 
-    //association One To Many: One Company to Many Punktelisten
-  /*  @OneToMany(mappedBy = "company")
-    private List<AnalysisRating> analysisRatings;
-    @OneToMany(mappedBy = "company")
-    private List<AnalysisSteps> analysisSteps;
-
-    public Company(List<AnalysisRating> analysisRatings, List<AnalysisSteps> analysisSteps) {
-        this.analysisRatings = analysisRatings;
-        this.analysisSteps = analysisSteps;
-    }
-
-    public Company() {
-
-    }
-
-    public Company(AnalysisRating analysisRatings, AnalysisSteps analysisSteps) {
-    }
-
-
-   */
     public String getCompanyname() {
         return Companyname;
     }
@@ -331,7 +299,6 @@ public class Company implements Serializable  {
     public void setKursanstiegUnternehmen(float kursanstiegUnternehmen) {
         KursanstiegUnternehmen = kursanstiegUnternehmen;
     }
-
     public float getKursanstiegIndex() {
         return KursanstiegIndex;
     }
@@ -347,7 +314,6 @@ public class Company implements Serializable  {
     public void setGewinnschaezungVor4Wochen(float gewinnschaezungVor4Wochen) {
         GewinnschaezungVor4Wochen = gewinnschaezungVor4Wochen;
     }
-
     public float getAktienkursTagVeroeffentlichungQartalszahlen() {
         return AktienkursTagVeroeffentlichungQartalszahlen;
     }
@@ -355,7 +321,6 @@ public class Company implements Serializable  {
     public void setAktienkursTagVeroeffentlichungQartalszahlen(float aktienkursTagVeroeffentlichungQartalszahlen) {
         AktienkursTagVeroeffentlichungQartalszahlen = aktienkursTagVeroeffentlichungQartalszahlen;
     }
-
     public float getKursVor6Monaten() {
         return KursVor6Monaten;
     }
@@ -483,7 +448,6 @@ public class Company implements Serializable  {
     public void setKursgewinnschaezungNaechstesJahr(Integer kursgewinnschaezungNaechstesJahr) {
         KursgewinnschaezungNaechstesJahr = kursgewinnschaezungNaechstesJahr;
     }
-
 
     public float getGesamtPunkte() {
         return GesamtPunkte;

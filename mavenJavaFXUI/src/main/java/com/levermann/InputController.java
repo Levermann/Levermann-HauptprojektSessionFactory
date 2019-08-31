@@ -12,7 +12,6 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.CheckBox;
-import javafx.scene.control.Labeled;
 import javafx.scene.control.TextField;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -22,7 +21,9 @@ import java.net.URL;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.util.ResourceBundle;
-
+/**
+ * this Controller creates a input screen and ask the user for vor values witch will be needed in table Company
+ */
 public class InputController implements Initializable, ControlledScreenInterface {
 
     public static TextField unternehmennameDBTF;
@@ -149,7 +150,7 @@ public class InputController implements Initializable, ControlledScreenInterface
 
     @FXML
     private void switchToShowResult() throws IOException {
-        fillDBvalues();
+      //  fillDBvalues();
         //App.setRoot("showResult");
        // setValues();
         hi();
@@ -165,56 +166,9 @@ public class InputController implements Initializable, ControlledScreenInterface
         App.setStageTitle("Hauptmenü");
     }
 
-    private void fillDBvalues() {
-        //TODO Die vom Benutzer eingegebenen Daten in die MySQL Datenbank schreiben
-        //Load the jdbc diver
-        System.out.println("Trying to load the JDBC driver...");
-        try {
-            Class.forName("com.mysql.cj.jdbc.Driver");
-            System.out.println("JDBC Driver loaded!");
-        } catch (Exception e) {
-            System.err.println("Cound not load JDBC driver...");
-            System.err.println(e);
-            throw new IllegalStateException("Failed loading the JDBC driver!");
-        }
 
-        //connect to the levermann database
-        System.out.println("Trying to connect to Levermann database...");
-        try {
-            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/levermann?useSSL=false&serverTimezone=UTC", "Levermann", "Levermann");
-            System.out.println("Levermann database connected!");
-        } catch (Exception e) {
-            System.err.println("Could not connect to Leverman database...");
-            System.err.println(e);
-            throw new IllegalStateException("Failed connecting to Levermann database!");
-        }
-    }
 
-        //TODO Füge hier SQL-Queries ein, die die jeweiligen Datensätze in die Table "Company" hinzufügen
-private void disconnectToDB(){
-        System.out.println("Trying to close the connection to Levermann database...");
-        try{
-            con.close();
-            System.out.println("Levermann database disconnected!");
-        }catch(Exception e){
-            System.err.println("Could not disconnect Leverman database...");
-            System.err.println(e);
-            throw new IllegalStateException("Failed disconnecting Levermann database!");
-        }
-    }
 
-        /**
-         *
-         * MysqlDataSource dataSource = new MysqlDataSource();
-         * dataSource.setUser("Levermann");
-         * dataSource.setPassword("Levermann");
-         * dataSource.setServerName("jdbc:mysql://localhost:3306/levermann");
-         * Connection conn = dataSource.getconnection();**/
-         //TODO Füge hier SQL-Queries ein, die die jeweiligen Datensätze in die Table "Company" hinzufügen
-
-        /**
-         * conn.close();
-         */
        private void hi(){
             ShowResultController.Companyname1 = unternehmennameDB.getText();
         }
@@ -255,7 +209,7 @@ private void disconnectToDB(){
 
     @FXML
         public void someMethod (ActionEvent event){
-            fillDBvalues();
+        //    fillDBvalues();
 
             String companyname = unternehmennameDB.getText();
             String datum = datumDB.getText();
@@ -335,7 +289,7 @@ private void disconnectToDB(){
             xyz.CalculateEigenkapitalrendite();
 
             session1.close();
-            disconnectToDB();
+           // disconnectToDB();
         }
 
     @Override

@@ -3,11 +3,9 @@ package com.levermann.entityclass;
 import javax.persistence.*;
 import java.io.Serializable;
 
-
 @NamedQueries({
         @NamedQuery(name = "AnalysisSteps.findall", query = "SELECT A FROM AnalysisSteps A"),
         @NamedQuery(name = "AnalysisSteps.findByName", query = "SELECT c FROM AnalysisSteps c WHERE c.Companyname_AnalysisSteps =:Companyname_AnalysisSteps")
-
 })
 
 @Entity
@@ -18,7 +16,6 @@ public class AnalysisSteps implements Serializable {
     public AnalysisSteps(String analysisstepsname, String companyname_AnalysisSteps) {
         AnalysisStepsName = analysisstepsname;
         Companyname_AnalysisSteps = companyname_AnalysisSteps;
-
     }
 
     @Id
@@ -75,7 +72,6 @@ public class AnalysisSteps implements Serializable {
 
     }
 
-
     public String getAnalysisStepsName() {
         return AnalysisStepsName;
     }
@@ -99,7 +95,6 @@ public class AnalysisSteps implements Serializable {
     public void setCompanyname_AnalysisSteps(String companyname_AnalysisSteps) {
         Companyname_AnalysisSteps = companyname_AnalysisSteps;
     }
-
     public Float getEigenkapitalrendite() {
         return Eigenkapitalrendite;
     }
@@ -139,7 +134,6 @@ public class AnalysisSteps implements Serializable {
     public void setKursGewinnVerhaeltnisAktuell(Float kursGewinnVerhaeltnisAktuell) {
         KursGewinnVerhaeltnisAktuell = kursGewinnVerhaeltnisAktuell;
     }
-
     public Float getAnalystenmeinungen() {
         return Analystenmeinungen;
     }
@@ -155,7 +149,6 @@ public class AnalysisSteps implements Serializable {
     public void setReaktionaufQuartalszahlen(Float reaktionaufQuartalszahlen) {
         ReaktionaufQuartalszahlen = reaktionaufQuartalszahlen;
     }
-
     public Float getGewinnrevision() {
         return Gewinnrevision;
     }
@@ -252,7 +245,6 @@ public class AnalysisSteps implements Serializable {
 
         return true;
     }
-
     @Override
     public int hashCode() {
         int result;

@@ -5,33 +5,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ef1c18af-56f3-4a36-8891-4764d24d597a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/b34121eb-3aed-44a8-9368-49552a11cff0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/b34121eb-3aed-44a8-9368-49552a11cff0.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/src/main/java/com/levermann/AnalysisStepsManageUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/mavenJavaFXUI/src/main/java/com/levermann/AnalysisStepsManageUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/src/main/java/com/levermann/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/mavenJavaFXUI/src/main/java/com/levermann/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/src/main/java/com/levermann/CompanyManageUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/mavenJavaFXUI/src/main/java/com/levermann/CompanyManageUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/src/main/java/com/levermann/CompanyOverviewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/mavenJavaFXUI/src/main/java/com/levermann/CompanyOverviewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/src/main/java/com/levermann/ControlledScreenInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/mavenJavaFXUI/src/main/java/com/levermann/ControlledScreenInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/src/main/java/com/levermann/InputController.java" beforeDir="false" afterPath="$PROJECT_DIR$/mavenJavaFXUI/src/main/java/com/levermann/InputController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/src/main/java/com/levermann/ScreensController.java" beforeDir="false" afterPath="$PROJECT_DIR$/mavenJavaFXUI/src/main/java/com/levermann/ScreensController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/src/main/java/com/levermann/ShowResultController.java" beforeDir="false" afterPath="$PROJECT_DIR$/mavenJavaFXUI/src/main/java/com/levermann/ShowResultController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/src/main/java/com/levermann/ShowUserInputController.java" beforeDir="false" afterPath="$PROJECT_DIR$/mavenJavaFXUI/src/main/java/com/levermann/ShowUserInputController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/src/main/java/com/levermann/ShowUserInputManageUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/mavenJavaFXUI/src/main/java/com/levermann/ShowUserInputManageUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/src/main/java/com/levermann/SimpleMapProperty.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/src/main/java/com/levermann/StartPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/mavenJavaFXUI/src/main/java/com/levermann/StartPageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/src/main/resources/com/levermann/input.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/mavenJavaFXUI/src/main/resources/com/levermann/input.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/src/main/resources/com/levermann/showResult.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/mavenJavaFXUI/src/main/resources/com/levermann/showResult.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/src/main/resources/com/levermann/startPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/mavenJavaFXUI/src/main/resources/com/levermann/startPage.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/target/classes/com/levermann/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/mavenJavaFXUI/target/classes/com/levermann/App.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/target/classes/com/levermann/InputController.class" beforeDir="false" afterPath="$PROJECT_DIR$/mavenJavaFXUI/target/classes/com/levermann/InputController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/target/classes/com/levermann/ShowResultController.class" beforeDir="false" afterPath="$PROJECT_DIR$/mavenJavaFXUI/target/classes/com/levermann/ShowResultController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/target/classes/com/levermann/StartPageController.class" beforeDir="false" afterPath="$PROJECT_DIR$/mavenJavaFXUI/target/classes/com/levermann/StartPageController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/target/classes/com/levermann/input.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/mavenJavaFXUI/target/classes/com/levermann/input.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/target/classes/com/levermann/showResult.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/mavenJavaFXUI/target/classes/com/levermann/showResult.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/target/classes/com/levermann/startPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/mavenJavaFXUI/target/classes/com/levermann/startPage.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/levermann/keyFiguresForAnalysis/Analystenmeinungen.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/levermann/keyFiguresForAnalysis/Dreimonatsreversal.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/levermann/keyFiguresForAnalysis/Eigenkapitalquote.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/levermann/keyFiguresForAnalysis/Eigenkapitalrendite.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/levermann/keyFiguresForAnalysis/GewinnEBIT.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/levermann/keyFiguresForAnalysis/Gewinnrevision.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/levermann/keyFiguresForAnalysis/Gewinnwachstum.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/levermann/keyFiguresForAnalysis/KursGewinnVerhaeltnis.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/levermann/keyFiguresForAnalysis/KursgewinnVerhaeltnis5Jahre.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/levermann/keyFiguresForAnalysis/KursheuteggKursvor1Jahr.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/levermann/keyFiguresForAnalysis/KursheuteggKursvor6Monaten.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/levermann/keyFiguresForAnalysis/Kursmomentum.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/levermann/keyFiguresForAnalysis/ReaktionaufQuartalszahlen.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/levermann/mainMethod/ConnectionMainFactory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/levermann/mainMethod/TestMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/levermann/mainMethod/TestMain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/levermann/sqlStatements/TestData.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/levermann/sqlStatements/TestData.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/levermann/entityclass/AnalysisRating.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/levermann/entityclass/AnalysisRating.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/levermann/entityclass/AnalysisSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/levermann/entityclass/AnalysisSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/levermann/entityclass/Company.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/levermann/entityclass/Company.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/levermann/sessionControlClasses/HibernateUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/levermann/sessionControlClasses/HibernateUtil.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -420,21 +414,7 @@
       <workItem from="1566491635410" duration="25623000" />
       <workItem from="1566585459730" duration="21406000" />
       <workItem from="1566650626276" duration="6535000" />
-      <workItem from="1567001123150" duration="135170000" />
-    </task>
-    <task id="LOCAL-00058" summary="table">
-      <created>1566955368686</created>
-      <option name="number" value="00058" />
-      <option name="presentableId" value="LOCAL-00058" />
-      <option name="project" value="LOCAL" />
-      <updated>1566955368686</updated>
-    </task>
-    <task id="LOCAL-00059" summary="Style">
-      <created>1566984608904</created>
-      <option name="number" value="00059" />
-      <option name="presentableId" value="LOCAL-00059" />
-      <option name="project" value="LOCAL" />
-      <updated>1566984608905</updated>
+      <workItem from="1567001123150" duration="138741000" />
     </task>
     <task id="LOCAL-00060" summary="session delete button">
       <created>1566988656512</created>
@@ -765,7 +745,21 @@
       <option name="project" value="LOCAL" />
       <updated>1567214935852</updated>
     </task>
-    <option name="localTasksCounter" value="107" />
+    <task id="LOCAL-00107" summary="soweit sogut">
+      <created>1567247278575</created>
+      <option name="number" value="00107" />
+      <option name="presentableId" value="LOCAL-00107" />
+      <option name="project" value="LOCAL" />
+      <updated>1567247278591</updated>
+    </task>
+    <task id="LOCAL-00108" summary="deleted class">
+      <created>1567247467966</created>
+      <option name="number" value="00108" />
+      <option name="presentableId" value="LOCAL-00108" />
+      <option name="project" value="LOCAL" />
+      <updated>1567247467966</updated>
+    </task>
+    <option name="localTasksCounter" value="109" />
     <servers />
   </component>
   <component name="TodoView">
@@ -830,8 +824,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="kgv aktuell save" />
-    <MESSAGE value="analystenmeinungen save" />
     <MESSAGE value="punkte complete save" />
     <MESSAGE value="lol2" />
     <MESSAGE value="topaktuell 29.08" />
@@ -855,7 +847,9 @@
     <MESSAGE value="input controller leer wenn neues unternehmen erstellt wird" />
     <MESSAGE value="aktualisieren button fällt weg" />
     <MESSAGE value="todo items für morgen geadded" />
-    <option name="LAST_COMMIT_MESSAGE" value="todo items für morgen geadded" />
+    <MESSAGE value="soweit sogut" />
+    <MESSAGE value="deleted class" />
+    <option name="LAST_COMMIT_MESSAGE" value="deleted class" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
