@@ -1,6 +1,5 @@
 package com.levermann;
 
-import com.levermann.DB.DBConnection;
 import com.levermann.entityclass.AnalysisRating;
 import com.levermann.entityclass.AnalysisSteps;
 import com.levermann.entityclass.Company;
@@ -21,20 +20,22 @@ import org.hibernate.*;
 import java.io.IOException;
 import java.net.URL;
 import java.sql.Connection;
-import java.sql.DriverManager;
 import java.util.List;
 import java.util.ResourceBundle;
-
+/**
+ * this Controller implements a TableView for general overview about Companyname, FinalScore, and creation Date
+ */
 public class CompanyOverviewController implements Initializable, ControlledScreenInterface {
     final static Logger logger = Logger.getLogger(com.levermann.CompanyOverviewController.class);
+    private Connection con;
 
     public static TableView<Company> tableIDstatic;
     public static TableColumn<Company, String> companyNamestatic;
     public static TableColumn<Company, String> creationDatestatic;
     public static TableColumn<Company, Float> analysisScorestatic;
-    public static TableColumn<Company, Button> deletestatic;
+    public static TextField companyNameDeletestatic;
 
-    private Connection con;
+
     @FXML
     private TextField companyNameDelete;
     @FXML
@@ -45,63 +46,18 @@ public class CompanyOverviewController implements Initializable, ControlledScree
     private TableColumn<Company, String> creationDate;
     @FXML
     private TableColumn<Company, Float> analysisScore;
-    @FXML
-    private TableColumn<Company, Button> delete;
 
-
-
-    private void ConnectionDB() {
-        //TODO Die vom Benutzer eingegebenen Daten in die MySQL Datenbank schreiben
-        //Load the jdbc diver
-        System.out.println("Trying to load the JDBC driver...");
-        try {
-            Class.forName("com.mysql.cj.jdbc.Driver");
-            System.out.println("JDBC Driver loaded!");
-        } catch (Exception e) {
-            System.err.println("Cound not load JDBC driver...");
-            System.err.println(e);
-            throw new IllegalStateException("Failed loading the JDBC driver!");
-        }
-
-        //connect to the levermann database
-        System.out.println("Trying to connect to Levermann database...");
-        try {
-            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/levermann?useSSL=false&serverTimezone=UTC", "Levermann", "Levermann");
-            System.out.println("Levermann database connected!");
-        } catch (Exception e) {
-            System.err.println("Could not connect to Leverman database...");
-            System.err.println(e);
-            throw new IllegalStateException("Failed connecting to Levermann database!");
-        }
-    }
-
-    //TODO Füge hier SQL-Queries ein, die die jeweiligen Datensätze in die Table "Company" hinzufügen
-    private void DisconnectionDB(){
-        System.out.println("Trying to close the connection to Levermann database...");
-        try{
-            con.close();
-            System.out.println("Levermann database disconnected!");
-        }catch(Exception e){
-            System.err.println("Could not disconnect Leverman database...");
-            System.err.println(e);
-            throw new IllegalStateException("Failed disconnecting Levermann database!");
-        }
+    private void braucheTextfeld(){
+        ShowResultController.Companyname2 = companyNameDelete.getText();
     }
 
     public void initCols(){
 
-        ConnectionDB();
         SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
         Session session1 = sessionFactory.getCurrentSession();
 
         session1.beginTransaction();
-        /*
-        Company company1 = (Company) session1.get(Company.class, 1L);
-        company1.getGesamtPunkte();
-        company1.getCompanyname();
-        company1.getDatum();
 
-         */
         Query query = session1.getNamedQuery("Company.findAll");
         List<Company> unList = (List<Company>) query.list();
 
@@ -110,19 +66,16 @@ public class CompanyOverviewController implements Initializable, ControlledScree
             String nameforOverview = un.getCompanyname();
             String datumForOverview = un.getDatum();
             float SumScore = un.getGesamtPunkte();
-            Button deletemach = new Button("delete");
 
             final ObservableList<Company> overview = FXCollections.observableArrayList(
-                    new Company(nameforOverview, datumForOverview, SumScore, deletemach)
+                    new Company(nameforOverview, datumForOverview, SumScore)
             );
             companyName.setCellValueFactory(new PropertyValueFactory<Company, String>("Companyname"));
             creationDate.setCellValueFactory(new PropertyValueFactory<Company, String>("datum"));
             analysisScore.setCellValueFactory(new PropertyValueFactory<Company, Float>("GesamtPunkte"));
-            delete.setCellValueFactory(new PropertyValueFactory<Company, Button>("delete1"));
 
             tableID.getItems().addAll(overview);
         }
-        DisconnectionDB();
 
         session1.getTransaction().commit();
     }
@@ -132,7 +85,7 @@ public class CompanyOverviewController implements Initializable, ControlledScree
         companyNamestatic = companyName;
         creationDatestatic = creationDate;
         analysisScorestatic = analysisScore;
-        deletestatic = delete;
+        companyNameDeletestatic = companyNameDelete;
         initCols();
     }
 
@@ -142,11 +95,9 @@ public class CompanyOverviewController implements Initializable, ControlledScree
     public void setScreenParent(ScreensController screenParent){
         myController = screenParent;
     }
-    //TODO Der Firmenname, der vom User in EnterCompanyName Seite eingegeben wurde muss ersetzt werden durch company1
 
     @FXML
     private void tableAktualisieren(){
-        ConnectionDB();
         SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
         Session session1 = sessionFactory.getCurrentSession();
 
@@ -164,36 +115,150 @@ public class CompanyOverviewController implements Initializable, ControlledScree
             Button deletemach = new Button("delete");
 
             final ObservableList<Company> overview = FXCollections.observableArrayList(
-                    new Company(nameforOverview, datumForOverview, SumScore, deletemach)
+                    new Company(nameforOverview, datumForOverview, SumScore)
             );
             companyName.setCellValueFactory(new PropertyValueFactory<Company, String>("Companyname"));
             creationDate.setCellValueFactory(new PropertyValueFactory<Company, String>("datum"));
             analysisScore.setCellValueFactory(new PropertyValueFactory<Company, Float>("GesamtPunkte"));
-            delete.setCellValueFactory(new PropertyValueFactory<Company, Button>("delete1"));
 
             tableID.getItems().addAll(overview);
         }
 
 
         session1.getTransaction().commit();
-        DisconnectionDB();
     }
 
     @FXML
-    private void takeStringandShowResult() throws IOException {
-        //App.setRoot("enterCompanyName");
+    private void switchToShowResults() throws IOException {
+        braucheTextfeld();
+        setResultColumns();
         myController.setScreen(App.showResultID);
         App.setStageTitle("Unternehmensnamen angeben");
     }
+
+    private void setResultColumns(){
+        ShowResultController.observableListARstatic.clear();
+        ShowResultController.observableListASstatic.clear();
+        ShowResultController.Companyname2 = companyNameDelete.getText();
+
+        /**
+         * get current session from HibernateUtil
+         */
+        final Session session = HibernateUtil.getSessionFactory().openSession();
+        /**
+         * HQL Named Query to find all entries in Table Analysisrating
+         */
+        Query query7 = session.getNamedQuery("AnalysisRating.findAll");
+        final List<AnalysisRating> analysisRatingsFilled = (List<AnalysisRating>) query7.list();
+
+        try {
+            Transaction tx = null;
+            tx = session.beginTransaction();
+            /**
+             * HQL Named Query to find all entries in Table Analysissteps
+             */
+            Query query1 = session.getNamedQuery("AnalysisSteps.findall");
+            List<AnalysisSteps> ListAS = (List<AnalysisSteps>) query1.list();
+            for (AnalysisSteps steps : ListAS) {
+
+                System.out.println("Analyse Liste = " + steps.getAnalysisStepsName()
+                        + ","
+                        + steps.getCompanyname_AnalysisSteps());
+
+                /**
+                 * gets the correct values for calculated keyfigures after user input
+                 * steps.getCompanyname_AnalysisSteps().equals(Companyname1) ||
+                 */
+                if (steps.getCompanyname_AnalysisSteps().equals(ShowResultController.Companyname2)) {
+
+                    ShowResultController.tableStepsstatic.getItems().clear();
+
+                    steps.setCompanyname_AnalysisSteps(steps.getCompanyname_AnalysisSteps());
+                    float eigenkapitalrenditeAS = steps.getEigenkapitalrendite();
+                    float ebitAS = steps.getEBITMarge();
+                    float eigenkapitalquoteAS = steps.getEigenkapitalquote();
+                    float KGVAS = steps.getKursGewinnVerhaeltnis();
+                    float AGVAktuellAS = steps.getKursGewinnVerhaeltnisAktuell();
+                    float analystenmeinungenAS = steps.getAnalystenmeinungen();
+                    float reaktionQAS = steps.getReaktionaufQuartalszahlen();
+                    float gewinnrevisionAS = steps.getGewinnrevision();
+                    float kursverlauf6AS = steps.getKursverlauf6Monate();
+                    float kursverlauf12AS = steps.getKursverlauf12Monate();
+                    float gewinnwachstumAS = steps.getGewinnwachstum();
+                    ShowResultController.observableListASstatic.add(new AnalysisStepsManageUI("Eigenkapitalrendite", eigenkapitalrenditeAS));
+                    ShowResultController.observableListASstatic.add(new AnalysisStepsManageUI("EbitMarge", ebitAS));
+                    ShowResultController.observableListASstatic.add(new AnalysisStepsManageUI("Eigenkapitalquote", eigenkapitalquoteAS));
+                    ShowResultController.observableListASstatic.add(new AnalysisStepsManageUI("KursGewinnVerhältnis", KGVAS));
+                    ShowResultController.observableListASstatic.add(new AnalysisStepsManageUI("KursGewinnVerhältnisAktuell", AGVAktuellAS));
+                    ShowResultController.observableListASstatic.add(new AnalysisStepsManageUI("Analystenmeinungen", analystenmeinungenAS));
+                    ShowResultController.observableListASstatic.add(new AnalysisStepsManageUI("Reaktion auf Quartalszahlen", reaktionQAS));
+                    ShowResultController.observableListASstatic.add(new AnalysisStepsManageUI("Gewinnrevision", gewinnrevisionAS));
+                    ShowResultController.observableListASstatic.add(new AnalysisStepsManageUI("Kursverlauf 6 Monate", kursverlauf6AS));
+                    ShowResultController.observableListASstatic.add(new AnalysisStepsManageUI("Kursverlauf 12 Monate", kursverlauf12AS));
+                    ShowResultController.observableListASstatic.add(new AnalysisStepsManageUI("Gewinnwachstum", gewinnwachstumAS));
+
+                    /**
+                     * gets the correct values for set points after user input
+                     * Companyname1.equals(rating.getCompanyname_AnalysisRating()) ||
+                     */
+                    for (AnalysisRating rating : analysisRatingsFilled) {
+
+                        if ( ShowResultController.Companyname2.equals(rating.getCompanyname_AnalysisRating())) {
+                            ShowResultController.tableRatingstatic.getItems().clear();
+
+                            float eigenkapitalrenditeAR = rating.getEigenkapitalrendite();
+                            float ebitAR = rating.getEBITMarge();
+                            float eigenkapitalquoteAR = rating.getEigenkapitalquote();
+                            float KGVAR = rating.getKursGewinnVerhaeltnis();
+                            float AGVAktuellAR = rating.getKursGewinnVerhaeltnisAktuell();
+                            float analystenmeinungenAR = rating.getAnalystenmeinungen();
+                            float reaktionQAR = rating.getReaktionaufQuartalszahlen();
+                            float gewinnrevisionAR = rating.getGewinnrevision();
+                            float kursverlauf6AR = rating.getKursverlauf6Monate();
+                            float kursverlauf12AR = rating.getKursverlauf12Monate();
+                            float kursmomentumAR = rating.getKursmomentum();
+                            float dreimonrevAR = rating.getDreimonatsreversal();
+                            float gewinnwachstumAR = rating.getGewinnwachstum();
+                            ShowResultController.observableListARstatic.add(new CompanyManageUI("Eigenkapitalrendite", eigenkapitalrenditeAR));
+                            ShowResultController.observableListARstatic.add(new CompanyManageUI("EbitMarge", ebitAR));
+                            ShowResultController.observableListARstatic.add(new CompanyManageUI("Eigenkapitalquote", eigenkapitalquoteAR));
+                            ShowResultController.observableListARstatic.add(new CompanyManageUI("KursGewinnVerhältnis", KGVAR));
+                            ShowResultController.observableListARstatic.add(new CompanyManageUI("KursGewinnVerhältnisAktuell", AGVAktuellAR));
+                            ShowResultController.observableListARstatic.add(new CompanyManageUI("Analystenmeinungen", analystenmeinungenAR));
+                            ShowResultController.observableListARstatic.add(new CompanyManageUI("Reaktion auf Quartalszahlen", reaktionQAR));
+                            ShowResultController.observableListARstatic.add(new CompanyManageUI("Gewinnrevision", gewinnrevisionAR));
+                            ShowResultController.observableListARstatic.add(new CompanyManageUI("Kursverlauf 6 Monate", kursverlauf6AR));
+                            ShowResultController.observableListARstatic.add(new CompanyManageUI("Kursverlauf 12 Monate", kursverlauf12AR));
+                            ShowResultController.observableListARstatic.add(new CompanyManageUI("Kursmomentum", kursmomentumAR));
+                            ShowResultController.observableListARstatic.add(new CompanyManageUI("Dreimonantsreversal", dreimonrevAR));
+                            ShowResultController.observableListARstatic.add(new CompanyManageUI("Gewinnwachstum", gewinnwachstumAR));
+
+                            System.out.println("company   :"  + rating.getCompanyname_AnalysisRating());
+                        }
+                    }
+                }
+            }
+            session.getTransaction().commit();
+            session.close();
+            System.out.println("Speichere Unternehmen...");
+            System.out.println("Done!");
+        } catch (HibernateException e) {
+            System.out.println("Hibernate Exception" + e.getMessage());
+            session.getTransaction().rollback();
+            throw new RuntimeException(e);
+        } finally {
+        }
+        return;
+    }
+
     @FXML
-    private void switchToEnterCompanyName() throws IOException {
-        //App.setRoot("enterCompanyName");
+    private void switchToEnterCompanyName(ActionEvent actionEvent) throws IOException {
+
         clearInput();
         myController.setScreen(App.inputID);
         App.setStageTitle("Unternehmensnamen angeben");
     }
-
-    private void clearInput(){
+    public void clearInput(){
         InputController.unternehmennameDBTF.clear();
         InputController.jahresueberschussDBTF.clear();
         InputController.eigenkapitalDBTF.clear();
@@ -227,7 +292,6 @@ public class CompanyOverviewController implements Initializable, ControlledScree
         InputController.gewinnschaetzungNaechstesJahrDBTF.clear();
         InputController.gewinnschaetzungDiesesJahrDBTF.clear();
     }
-
     public void switchToPrimaryPage(ActionEvent actionEvent) throws IOException {
         //App.setRoot("startPage");
         myController.setScreen(App.startPageID);
@@ -238,25 +302,6 @@ public class CompanyOverviewController implements Initializable, ControlledScree
     private void deleteCompanyButtonController(ActionEvent actionEvent) throws IOException{
 
         String deleteName = companyNameDelete.getText();
-        System.out.println("Trying to load the JDBC driver...");
-        try {
-            Class.forName("com.mysql.cj.jdbc.Driver");
-            System.out.println("JDBC Driver loaded!");
-        } catch (Exception e) {
-            System.err.println("Cound not load JDBC driver...");
-            System.err.println(e);
-            throw new IllegalStateException("Failed loading the JDBC driver!");
-        }
-
-        System.out.println("Trying to connect to Levermann database...");
-        try {
-            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/levermann?useSSL=false&serverTimezone=UTC", "Levermann", "Levermann");
-            System.out.println("Levermann database connected!");
-        } catch (Exception e) {
-            System.err.println("Could not connect to Leverman database...");
-            System.err.println(e);
-            throw new IllegalStateException("Failed connecting to Levermann database!");
-        }
 
         //Aufrufen der aktuellen Session aus HibernateUtil
         final Session session = HibernateUtil.getSessionFactory().openSession();
