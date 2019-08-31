@@ -43,7 +43,7 @@ public class CalculateUserInput {
                 Query query1 = session1.getNamedQuery("AnalysisSteps.findall");
                 List<AnalysisSteps> unList1 = (List<AnalysisSteps>) query1.list();
                 for (AnalysisSteps un1 : unList1) {
-                    System.out.println("Analyse Liste = " + un1.getAnalysisStepsName()
+                    System.out.println("AnalysisSteps Liste = " + un1.getAnalysisStepsName()
                             + ","
                             + un1.getCompanyname_AnalysisSteps());
                     /**
@@ -52,13 +52,11 @@ public class CalculateUserInput {
                     query1 = session1.getNamedQuery("AnalysisSteps.findByName");
                     query1.setString("Companyname_AnalysisSteps", company);
                     unList1 = query1.list();
-                    System.out.println("fuck y");
+                    System.out.println("Company exists");
                     if (un1.getCompanyname_AnalysisSteps().equals(company)) {
 
-                        System.out.println("Fuuuuuuuuuuuuuuuuck");
+                        System.out.println("found an existing Company matching to DB Analysissteps");
 
-                  
-                        un1.setCompanyname_AnalysisSteps(un1.getCompanyname_AnalysisSteps());
 
                         /**
                          * Berechnung der 13 Levermannschritte:
@@ -78,13 +76,15 @@ public class CalculateUserInput {
                          * Punkteliste befüllen: Schritt 1 Eigenkapitalrendite
                          */
                         for (AnalysisRating un2 : analysisRatingsFilled) {
+                            System.out.println("AnalysisRating Liste = " + un2.getAnalysisRatingName()
+                                    + ","
+                                    + un2.getCompanyname_AnalysisRating());
                             query7 = session1.getNamedQuery("AnalysisRating.findByName");
                             query7.setString("Companyname_AnalysisRating", company);
                             if (un2.getCompanyname_AnalysisRating().equals(company)) {
                                 un2.setEigenkapitalrendite((float)0);
                                 un2.setCompanyname_AnalysisRating(un1.getCompanyname_AnalysisSteps());
                                 if (un1.getEigenkapitalrendite() > (float) 0.2) {
-                                    System.out.println("is größer muss 1");
                                     un2.setEigenkapitalrendite((float) 1);
                                 }
                                 else if (un1.getEigenkapitalrendite() < (float) 0.1){
@@ -290,8 +290,9 @@ public class CalculateUserInput {
                                     un2.setGewinnwachstum((float) -1);
                             }
                         }
-
-
+                        /**
+                         * GesamtPunkte berechnen und in Company DB speichern
+                         */
                         for (AnalysisRating un2 : analysisRatingsFilled) {
                             query7 = session1.getNamedQuery("AnalysisRating.findByName");
                             query7.setString("Companyname_AnalysisRating", company);
@@ -299,14 +300,14 @@ public class CalculateUserInput {
 
                                 un.setGesamtPunkte( un2.getEigenkapitalrendite() + un2.getEBITMarge() + un2.getEigenkapitalquote()+ un2.getKursGewinnVerhaeltnis()+ un2.getKursGewinnVerhaeltnisAktuell()+ un2.getAnalystenmeinungen()+ un2.getReaktionaufQuartalszahlen()+ un2.getGewinnrevision()+ un2.getKursverlauf6Monate()+ un2.getKursverlauf12Monate()+ un2.getKursmomentum()+ un2.getDreimonatsreversal()+ un2.getGewinnwachstum());
                             }}
-
-                        //TODO Methode, welche die Gesamtpunktezahl in neues Feld Analysisrating speichert
                     }}}
 
             session1.getTransaction().commit();
-            //    System.out.println("fuck youuuuuuuuuuuu" + un1.getEigenkapitalrendite()+ un1.getCompanyname_AnalysisSteps());
+
             System.out.println("Speichere Unternehmen...");
+            System.out.println("Ihre Transaktionen wurden erfolgreich gespeicher");
             System.out.println("Done!");
+
         } catch (HibernateException e) {
             System.out.println("Hibernate Exception" + e.getMessage());
             session1.getTransaction().rollback();
