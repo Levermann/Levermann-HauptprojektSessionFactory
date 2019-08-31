@@ -3,7 +3,7 @@ package com.levermann.mainMethod;
 import com.levermann.sessionControlClasses.CalculateUserInput;
 import org.apache.log4j.BasicConfigurator;
 
-public class TestMain {
+public class DoCalculation {
     public static void main(String[] args) {
 
         BasicConfigurator.configure();

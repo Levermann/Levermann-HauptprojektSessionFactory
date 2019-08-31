@@ -16,5 +16,15 @@
         <property name="tinyInt1isBit" value="false" />
       </driver-properties>
     </data-source>
+    <data-source source="LOCAL" name="resources:hibernate.cfg.xml/Hibernate" uuid="797aee13-946d-4c5d-a9cd-c462d82c71b3">
+      <synchronize>true</synchronize>
+      <imported>true</imported>
+      <configured-by-url>true</configured-by-url>
+      <remarks>Hibernate
+
+C:/Users/Landb/Documents/Projekt/lmfxxmlRepro/src/main/resources/resources/hibernate.cfg.xml</remarks>
+      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://localhost:3306/levermann?useSSL=false&amp;serverTimezone=UTC</jdbc-url>
+    </data-source>
   </component>
 </project>
