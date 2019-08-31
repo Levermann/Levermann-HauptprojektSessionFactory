@@ -46,7 +46,6 @@ public class CalculateUserInput {
                     query1 = session1.getNamedQuery("AnalysisSteps.findByName");
                     query1.setString("Companyname_AnalysisSteps", company);
                     unList1 = query1.list();
-                    System.out.println("fuck y");
                     if (un1.getCompanyname_AnalysisSteps().equals(company)) {
 
                         System.out.println("Fuuuuuuuuuuuuuuuuck");

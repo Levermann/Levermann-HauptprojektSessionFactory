@@ -139,6 +139,8 @@ public class CompanyOverviewController implements Initializable, ControlledScree
     private void setResultColumns(){
         ShowResultController.observableListARstatic.clear();
         ShowResultController.observableListASstatic.clear();
+        ShowResultController.Companyname2 = companyNameDelete.getText();
+
         /**
          * get current session from HibernateUtil
          */
@@ -168,7 +170,6 @@ public class CompanyOverviewController implements Initializable, ControlledScree
                  * steps.getCompanyname_AnalysisSteps().equals(Companyname1) ||
                  */
                 if (steps.getCompanyname_AnalysisSteps().equals(ShowResultController.Companyname2)) {
-                    System.out.println("Fuuuuuuuuuuuuuuuuck");
 
                     ShowResultController.tableStepsstatic.getItems().clear();
 
@@ -257,7 +258,7 @@ public class CompanyOverviewController implements Initializable, ControlledScree
         myController.setScreen(App.inputID);
         App.setStageTitle("Unternehmensnamen angeben");
     }
-    private void clearInput(){
+    public void clearInput(){
         InputController.unternehmennameDBTF.clear();
         InputController.jahresueberschussDBTF.clear();
         InputController.eigenkapitalDBTF.clear();
