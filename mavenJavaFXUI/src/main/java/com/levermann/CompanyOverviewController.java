@@ -28,6 +28,14 @@ import java.util.ResourceBundle;
 public class CompanyOverviewController implements Initializable, ControlledScreenInterface {
     final static Logger logger = Logger.getLogger(com.levermann.CompanyOverviewController.class);
     private Connection con;
+
+    public static TableView<Company> tableIDstatic;
+    public static TableColumn<Company, String> companyNamestatic;
+    public static TableColumn<Company, String> creationDatestatic;
+    public static TableColumn<Company, Float> analysisScorestatic;
+    public static TableColumn<Company, Button> deletestatic;
+
+
     @FXML
     private TextField companyNameDelete;
     @FXML
@@ -122,6 +130,11 @@ public class CompanyOverviewController implements Initializable, ControlledScree
     }
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        tableIDstatic = tableID;
+        companyNamestatic = companyName;
+        creationDatestatic = creationDate;
+        analysisScorestatic = analysisScore;
+        deletestatic = delete;
         initCols();
     }
 

@@ -5,10 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ef1c18af-56f3-4a36-8891-4764d24d597a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/src/main/java/com/levermann/CompanyOverviewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/mavenJavaFXUI/src/main/java/com/levermann/CompanyOverviewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/src/main/java/com/levermann/InputController.java" beforeDir="false" afterPath="$PROJECT_DIR$/mavenJavaFXUI/src/main/java/com/levermann/InputController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/target/classes/com/levermann/InputController.class" beforeDir="false" afterPath="$PROJECT_DIR$/mavenJavaFXUI/target/classes/com/levermann/InputController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/src/main/java/com/levermann/ShowResultController.java" beforeDir="false" afterPath="$PROJECT_DIR$/mavenJavaFXUI/src/main/java/com/levermann/ShowResultController.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -417,14 +415,7 @@
       <workItem from="1566491635410" duration="25623000" />
       <workItem from="1566585459730" duration="21406000" />
       <workItem from="1566650626276" duration="6535000" />
-      <workItem from="1567001123150" duration="126592000" />
-    </task>
-    <task id="LOCAL-00055" summary="added Stylesheet">
-      <created>1566944705506</created>
-      <option name="number" value="00055" />
-      <option name="presentableId" value="LOCAL-00055" />
-      <option name="project" value="LOCAL" />
-      <updated>1566944705506</updated>
+      <workItem from="1567001123150" duration="126865000" />
     </task>
     <task id="LOCAL-00056" summary="added Stylesheet">
       <created>1566945734732</created>
@@ -762,7 +753,14 @@
       <option name="project" value="LOCAL" />
       <updated>1567213476274</updated>
     </task>
-    <option name="localTasksCounter" value="104" />
+    <task id="LOCAL-00104" summary="input controller leer wenn neues unternehmen erstellt wird">
+      <created>1567213917950</created>
+      <option name="number" value="00104" />
+      <option name="presentableId" value="LOCAL-00104" />
+      <option name="project" value="LOCAL" />
+      <updated>1567213917950</updated>
+    </task>
+    <option name="localTasksCounter" value="105" />
     <servers />
   </component>
   <component name="TodoView">
@@ -827,7 +825,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="update" />
     <MESSAGE value="eigenkapitalrendite save" />
     <MESSAGE value="eigenkapitalquto und ebitmarge save" />
     <MESSAGE value="kgv aktuell save" />
@@ -852,7 +849,8 @@
     <MESSAGE value="schau mal wer da codet" />
     <MESSAGE value="gui schön gemacht" />
     <MESSAGE value="läuft schön durch" />
-    <option name="LAST_COMMIT_MESSAGE" value="läuft schön durch" />
+    <MESSAGE value="input controller leer wenn neues unternehmen erstellt wird" />
+    <option name="LAST_COMMIT_MESSAGE" value="input controller leer wenn neues unternehmen erstellt wird" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
