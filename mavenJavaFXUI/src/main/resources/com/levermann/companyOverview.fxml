@@ -40,7 +40,7 @@
                </font></Label>
              <TextField fx:id="companyNameDelete" layoutX="263.0" layoutY="560.0" prefHeight="25.0" prefWidth="158.0" style="-fx-background-color: #D8D8D8;" />
              <Button fx:id="getBackToPrimaryPage1" layoutX="437.0" layoutY="559.0" mnemonicParsing="false" onAction="#deleteCompanyButtonController" prefHeight="25.0" prefWidth="91.0" style="-fx-border-color: black;" text="Löschen" />
-            <Button fx:id="getBackToPrimaryPage11" layoutX="545.0" layoutY="559.0" mnemonicParsing="false" onAction="#takeStringandShowResult" prefHeight="25.0" prefWidth="91.0" style="-fx-border-color: black;" text="Details" />
+            <Button fx:id="getBackToPrimaryPage11" layoutX="545.0" layoutY="559.0" mnemonicParsing="false" onAction="#switchToShowResults" prefHeight="25.0" prefWidth="91.0" style="-fx-border-color: black;" text="Details" />
          </children>
       </AnchorPane>
    </children>

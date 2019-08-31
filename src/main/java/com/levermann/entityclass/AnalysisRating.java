@@ -1,10 +1,7 @@
 package com.levermann.entityclass;
 
-import javax.inject.Named;
 import javax.persistence.*;
 import java.io.Serializable;
-
-
 
 
 @Entity
@@ -19,7 +16,6 @@ public class AnalysisRating  implements Serializable {
     public AnalysisRating(String Analysisratingname, String companyname_AnalysisRating ) {
         AnalysisRatingName = Analysisratingname;
         Companyname_AnalysisRating = companyname_AnalysisRating;
-
     }
     @Id
     @Column(name = "AnalysisRatingName")
@@ -86,10 +82,7 @@ public class AnalysisRating  implements Serializable {
     @Column(name = "Gewinnwachstum")
     private Float Gewinnwachstum;
 
-
     public AnalysisRating() { }
-
-
 
     public String getAnalysisRatingName() {
         return AnalysisRatingName;
@@ -114,7 +107,6 @@ public class AnalysisRating  implements Serializable {
     public void setCompanyname_AnalysisRating(String companyname_AnalysisRating) {
         Companyname_AnalysisRating = companyname_AnalysisRating;
     }
-
     public Float getEigenkapitalrendite() {
         return Eigenkapitalrendite;
     }
@@ -134,7 +126,6 @@ public class AnalysisRating  implements Serializable {
     public Float getEigenkapitalquote() {
         return Eigenkapitalquote;
     }
-
     public void setEigenkapitalquote(Float eigenkapitalquote) {
         Eigenkapitalquote = eigenkapitalquote;
     }
@@ -154,7 +145,6 @@ public class AnalysisRating  implements Serializable {
     public void setKursGewinnVerhaeltnisAktuell(Float kursGewinnVerhaeltnisAktuell) {
         KursGewinnVerhaeltnisAktuell = kursGewinnVerhaeltnisAktuell;
     }
-
     public Float getAnalystenmeinungen() {
         return Analystenmeinungen;
     }
@@ -170,7 +160,6 @@ public class AnalysisRating  implements Serializable {
     public void setReaktionaufQuartalszahlen(Float reaktionaufQuartalszahlen) {
         ReaktionaufQuartalszahlen = reaktionaufQuartalszahlen;
     }
-
     public Float getGewinnrevision() {
         return Gewinnrevision;
     }
@@ -214,10 +203,7 @@ public class AnalysisRating  implements Serializable {
     public Float getGewinnwachstum() {
         return Gewinnwachstum;
     }
-
     public void setGewinnwachstum(Float gewinnwachstum) {
         Gewinnwachstum = gewinnwachstum;
     }
-
-
 }

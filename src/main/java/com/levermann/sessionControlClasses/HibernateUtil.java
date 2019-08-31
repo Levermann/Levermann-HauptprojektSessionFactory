@@ -1,8 +1,5 @@
 package com.levermann.sessionControlClasses;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import org.apache.log4j.Logger;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
@@ -21,8 +18,9 @@ public class HibernateUtil {
     private static  SessionFactory buildSessionFactory() {
         try {
             if (sessionFactory == null) {
-                /*
+                /**
                  * Load up the configuration using the hibernate.cfg.xml
+                 * set properties manually
                  */
                 Configuration configuration = new Configuration()
                         .setProperty("hibernate.dialect", "org.hibernate.dialect.MySQLDialect")
@@ -36,9 +34,7 @@ public class HibernateUtil {
                         .addAnnotatedClass(com.levermann.entityclass.Company.class)
                         .addAnnotatedClass(com.levermann.entityclass.AnalysisSteps.class)
                         .addAnnotatedClass(com.levermann.entityclass.AnalysisRating.class);
-                //(HibernateUtil.class.getResource("/resources" +"/hibernate.cfg.xml"));
-
-                /*
+                /**
                  * Build the registry using the properties in the configuration
                  */
                 StandardServiceRegistryBuilder serviceRegistryBuilder = new StandardServiceRegistryBuilder();

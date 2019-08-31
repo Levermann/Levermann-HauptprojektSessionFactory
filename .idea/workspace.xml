@@ -4,10 +4,17 @@
     <option name="SCOPE_TYPE" value="3" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ef1c18af-56f3-4a36-8891-4764d24d597a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/b34121eb-3aed-44a8-9368-49552a11cff0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/b34121eb-3aed-44a8-9368-49552a11cff0.xml" afterDir="false" />
+    <list default="true" id="ef1c18af-56f3-4a36-8891-4764d24d597a" name="Default Changelist" comment="modifiziert">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/src/main/java/com/levermann/InformationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/mavenJavaFXUI/src/main/java/com/levermann/InformationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/src/main/java/com/levermann/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/mavenJavaFXUI/src/main/java/com/levermann/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/src/main/java/com/levermann/CompanyOverviewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/mavenJavaFXUI/src/main/java/com/levermann/CompanyOverviewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/src/main/java/com/levermann/InputController.java" beforeDir="false" afterPath="$PROJECT_DIR$/mavenJavaFXUI/src/main/java/com/levermann/InputController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/src/main/java/com/levermann/ShowResultController.java" beforeDir="false" afterPath="$PROJECT_DIR$/mavenJavaFXUI/src/main/java/com/levermann/ShowResultController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/src/main/resources/com/levermann/input.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/mavenJavaFXUI/src/main/resources/com/levermann/input.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/target/classes/com/levermann/InputController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/target/classes/com/levermann/ShowResultController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/target/classes/com/levermann/input.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/mavenJavaFXUI/target/classes/com/levermann/input.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/levermann/entityclass/Company.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/levermann/entityclass/Company.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -196,7 +203,7 @@
       </method>
     </configuration>
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="ALTERNATIVE_JRE_PATH" value="1.8" />
+      <option name="ALTERNATIVE_JRE_PATH" value="Java 8" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="com.levermann.App" />
       <module name="mavenJavaFXUI" />
@@ -211,7 +218,7 @@
       </method>
     </configuration>
     <configuration name="ConnectionMainFactory" type="Application" factoryName="Application" nameIsGenerated="true">
-      <option name="ALTERNATIVE_JRE_PATH" value="1.8" />
+      <option name="ALTERNATIVE_JRE_PATH" value="Java 8" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="com.levermann.mainMethod.ConnectionMainFactory" />
       <module name="LevermannAnalYse" />
@@ -226,9 +233,10 @@
       </method>
     </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="ALTERNATIVE_JRE_PATH" value="1.8" />
+      <option name="ALTERNATIVE_JRE_PATH" value="12" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="com.levermann.sessionControlClasses.Main" />
+      <module name="LevermannAnalyse" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -326,9 +334,9 @@
       <item itemvalue="Application.ConnectionMainFactory" />
       <item itemvalue="Application.App" />
       <item itemvalue="Application.Main" />
-      <item itemvalue="Application.TestMain" />
       <item itemvalue="JAR Application.mavenJavaFXUI-1.0-SNAPSHOT.jar" />
       <item itemvalue="Maven.mavenJavaFXUI [javafx:run]" />
+      <item itemvalue="Application.TestMain" />
     </list>
     <recent_temporary>
       <list>
@@ -395,55 +403,7 @@
       <workItem from="1566491635410" duration="25623000" />
       <workItem from="1566585459730" duration="21406000" />
       <workItem from="1566650626276" duration="6535000" />
-      <workItem from="1567001123150" duration="119929000" />
-      <workItem from="1567205723375" duration="3908000" />
-      <workItem from="1567241290104" duration="4044000" />
-      <workItem from="1567246087050" duration="444000" />
-      <workItem from="1567246657882" duration="2009000" />
-      <workItem from="1567248862058" duration="324000" />
-      <workItem from="1567249198365" duration="5272000" />
-    </task>
-    <task id="LOCAL-00056" summary="added Stylesheet">
-      <created>1566945734732</created>
-      <option name="number" value="00056" />
-      <option name="presentableId" value="LOCAL-00056" />
-      <option name="project" value="LOCAL" />
-      <updated>1566945734732</updated>
-    </task>
-    <task id="LOCAL-00057" summary="added Stylesheet">
-      <created>1566946843421</created>
-      <option name="number" value="00057" />
-      <option name="presentableId" value="LOCAL-00057" />
-      <option name="project" value="LOCAL" />
-      <updated>1566946843421</updated>
-    </task>
-    <task id="LOCAL-00058" summary="table">
-      <created>1566955368686</created>
-      <option name="number" value="00058" />
-      <option name="presentableId" value="LOCAL-00058" />
-      <option name="project" value="LOCAL" />
-      <updated>1566955368686</updated>
-    </task>
-    <task id="LOCAL-00059" summary="Style">
-      <created>1566984608904</created>
-      <option name="number" value="00059" />
-      <option name="presentableId" value="LOCAL-00059" />
-      <option name="project" value="LOCAL" />
-      <updated>1566984608905</updated>
-    </task>
-    <task id="LOCAL-00060" summary="session delete button">
-      <created>1566988656512</created>
-      <option name="number" value="00060" />
-      <option name="presentableId" value="LOCAL-00060" />
-      <option name="project" value="LOCAL" />
-      <updated>1566988656512</updated>
-    </task>
-    <task id="LOCAL-00061" summary="style">
-      <created>1566994795520</created>
-      <option name="number" value="00061" />
-      <option name="presentableId" value="LOCAL-00061" />
-      <option name="project" value="LOCAL" />
-      <updated>1566994795521</updated>
+      <workItem from="1567001123150" duration="140975000" />
     </task>
     <task id="LOCAL-00062" summary="funktionierende Liste für userinput nur nicht die richtigen werte">
       <created>1567005685845</created>
@@ -725,28 +685,70 @@
       <option name="project" value="LOCAL" />
       <updated>1567202899647</updated>
     </task>
-    <task id="LOCAL-00102" summary="Neues Unternehmen Button in CompanyOverviewController cleart jetzt den Inputcontroller">
-      <created>1567208005819</created>
+    <task id="LOCAL-00102" summary="gui schön gemacht">
+      <created>1567205397828</created>
       <option name="number" value="00102" />
       <option name="presentableId" value="LOCAL-00102" />
       <option name="project" value="LOCAL" />
-      <updated>1567208005820</updated>
+      <updated>1567205397829</updated>
     </task>
-    <task id="LOCAL-00103" summary="Aktualisieren button in CompanyOverviewController überflüssig&#10;Merge ShowResultController &amp; CompanyOverviewcontroller">
-      <created>1567209600877</created>
+    <task id="LOCAL-00103" summary="läuft schön durch">
+      <created>1567213476258</created>
       <option name="number" value="00103" />
       <option name="presentableId" value="LOCAL-00103" />
       <option name="project" value="LOCAL" />
-      <updated>1567209600877</updated>
+      <updated>1567213476274</updated>
     </task>
-    <task id="LOCAL-00104" summary="Informationen zur Berechnung formatiert">
-      <created>1567252031325</created>
+    <task id="LOCAL-00104" summary="input controller leer wenn neues unternehmen erstellt wird">
+      <created>1567213917950</created>
       <option name="number" value="00104" />
       <option name="presentableId" value="LOCAL-00104" />
       <option name="project" value="LOCAL" />
-      <updated>1567252031325</updated>
+      <updated>1567213917950</updated>
     </task>
-    <option name="localTasksCounter" value="105" />
+    <task id="LOCAL-00105" summary="aktualisieren button fällt weg">
+      <created>1567214268868</created>
+      <option name="number" value="00105" />
+      <option name="presentableId" value="LOCAL-00105" />
+      <option name="project" value="LOCAL" />
+      <updated>1567214268868</updated>
+    </task>
+    <task id="LOCAL-00106" summary="todo items für morgen geadded">
+      <created>1567214935852</created>
+      <option name="number" value="00106" />
+      <option name="presentableId" value="LOCAL-00106" />
+      <option name="project" value="LOCAL" />
+      <updated>1567214935852</updated>
+    </task>
+    <task id="LOCAL-00107" summary="soweit sogut">
+      <created>1567247278575</created>
+      <option name="number" value="00107" />
+      <option name="presentableId" value="LOCAL-00107" />
+      <option name="project" value="LOCAL" />
+      <updated>1567247278591</updated>
+    </task>
+    <task id="LOCAL-00108" summary="deleted class">
+      <created>1567247467966</created>
+      <option name="number" value="00108" />
+      <option name="presentableId" value="LOCAL-00108" />
+      <option name="project" value="LOCAL" />
+      <updated>1567247467966</updated>
+    </task>
+    <task id="LOCAL-00109" summary="modifiziert">
+      <created>1567251084982</created>
+      <option name="number" value="00109" />
+      <option name="presentableId" value="LOCAL-00109" />
+      <option name="project" value="LOCAL" />
+      <updated>1567251084982</updated>
+    </task>
+    <task id="LOCAL-00110" summary="modifiziert">
+      <created>1567251402757</created>
+      <option name="number" value="00110" />
+      <option name="presentableId" value="LOCAL-00110" />
+      <option name="project" value="LOCAL" />
+      <updated>1567251402757</updated>
+    </task>
+    <option name="localTasksCounter" value="111" />
     <servers />
   </component>
   <component name="TodoView">
@@ -811,11 +813,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="eigenkapitalrendite save" />
-    <MESSAGE value="eigenkapitalquto und ebitmarge save" />
-    <MESSAGE value="kgv aktuell save" />
-    <MESSAGE value="analystenmeinungen save" />
-    <MESSAGE value="punkte complete save" />
     <MESSAGE value="lol2" />
     <MESSAGE value="topaktuell 29.08" />
     <MESSAGE value="inputcontroller verbessert" />
@@ -833,10 +830,15 @@
     <MESSAGE value="lol" />
     <MESSAGE value="läuft die kacke" />
     <MESSAGE value="schau mal wer da codet" />
-    <MESSAGE value="Neues Unternehmen Button in CompanyOverviewController cleart jetzt den Inputcontroller" />
-    <MESSAGE value="Aktualisieren button in CompanyOverviewController überflüssig&#10;Merge ShowResultController &amp; CompanyOverviewcontroller" />
-    <MESSAGE value="Informationen zur Berechnung formatiert" />
-    <option name="LAST_COMMIT_MESSAGE" value="Informationen zur Berechnung formatiert" />
+    <MESSAGE value="gui schön gemacht" />
+    <MESSAGE value="läuft schön durch" />
+    <MESSAGE value="input controller leer wenn neues unternehmen erstellt wird" />
+    <MESSAGE value="aktualisieren button fällt weg" />
+    <MESSAGE value="todo items für morgen geadded" />
+    <MESSAGE value="soweit sogut" />
+    <MESSAGE value="deleted class" />
+    <MESSAGE value="modifiziert" />
+    <option name="LAST_COMMIT_MESSAGE" value="modifiziert" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -855,9 +857,9 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/LevermannAnalyse$.ic" NAME=" Coverage Results" MODIFIED="1566843097175" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/LevermannAnalyse$ConnectionMainFactory.ic" NAME="ConnectionMainFactory Coverage Results" MODIFIED="1566639806873" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.levermann.TestFiles.*</FILTER>
     </SUITE>
+    <SUITE FILE_PATH="coverage/LevermannAnalyse$.ic" NAME=" Coverage Results" MODIFIED="1566843097175" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

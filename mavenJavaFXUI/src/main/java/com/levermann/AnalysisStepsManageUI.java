@@ -2,7 +2,9 @@ package com.levermann;
 
 import javafx.beans.property.SimpleFloatProperty;
 import javafx.beans.property.SimpleStringProperty;
-
+/**
+ * This class was created for filling the Tableview for tableSteps on ShowResultController
+ */
 public class AnalysisStepsManageUI {
     private final SimpleStringProperty kennzahlenfürAS;
     private final SimpleFloatProperty ergebnissefürAS;

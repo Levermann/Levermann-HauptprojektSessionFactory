@@ -10,6 +10,12 @@ import org.apache.log4j.BasicConfigurator;
 
 import java.io.IOException;
 
+//TODO Systemdoku überprüfen!!
+//TODO Artefakt name von AnalYse auf Analyse ändern wenn möglich
+//TODO Berechnungen im Info controller ausgeben lassen
+//TODO Application und GUI aufräumen auch alle unnötigen fuck y Kommentare entfernen, alle todo items entfernen alle unnötigen Klassen entfernen zb.sql
+//TODO Software in jar file umwandeln und testen
+//TODO alle möglichen tests an der gui durchführen
 
 /**
  * JavaFX App
@@ -18,6 +24,9 @@ public class App extends Application {
 
     private static Scene scene;
 
+    /**
+     * Ids for Controller and fxml path settings will be used to switch to another Scene
+     */
     public static String startPageID = "startPage";
     public static String startPageFile = "startPage.fxml";
     public static String enterCompanyNameID = "enterCompanyName";

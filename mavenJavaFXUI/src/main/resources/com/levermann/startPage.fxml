@@ -22,7 +22,6 @@
             <Button alignment="CENTER" contentDisplay="CENTER" layoutX="633.0" layoutY="250.0" minWidth="-Infinity" mnemonicParsing="false" onAction="#switchToCompanyOverview" prefHeight="18.0" prefWidth="112.0" style="-fx-border-color: black;" text="Übersicht" textAlignment="CENTER" wrapText="true" />
             <Button fx:id="startAnalysisButton" contentDisplay="CENTER" layoutX="633.0" layoutY="300.0" mnemonicParsing="false" onAction="#switchToInput" prefHeight="18.0" prefWidth="112.0" style="-fx-border-color: black;" text="Analyse starten" textAlignment="CENTER" />
             <Button alignment="CENTER" layoutX="633.0" layoutY="350.0" mnemonicParsing="false" onAction="#switchToInformations" prefHeight="18.0" prefWidth="112.0" style="-fx-border-color: black;" text="Information" />
-            <Button alignment="CENTER" layoutX="633.0" layoutY="400.0" mnemonicParsing="false" onAction="#switchToShowResultDefault" prefHeight="18.0" prefWidth="112.0" style="-fx-border-color: black;" text="Details" />
          </children>
       </AnchorPane>
    </children>

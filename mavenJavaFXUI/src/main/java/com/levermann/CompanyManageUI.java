@@ -6,6 +6,9 @@ import javafx.beans.property.SimpleStringProperty;
 
 public class CompanyManageUI {
 
+    /**
+     * This class was created for filling the Tableview for tableRating on ShowResultController
+     */
     private final SimpleStringProperty kennzahlenfürAR;
     private final SimpleFloatProperty ergebnissefürAR;
 

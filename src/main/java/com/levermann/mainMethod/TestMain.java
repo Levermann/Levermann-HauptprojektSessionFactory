@@ -1,6 +1,5 @@
 package com.levermann.mainMethod;
 
-import com.levermann.keyFiguresForAnalysis.Eigenkapitalrendite;
 import com.levermann.sessionControlClasses.CalculateUserInput;
 import org.apache.log4j.BasicConfigurator;
 

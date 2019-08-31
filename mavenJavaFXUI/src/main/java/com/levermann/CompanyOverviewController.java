@@ -1,6 +1,5 @@
 package com.levermann;
 
-import com.levermann.DB.DBConnection;
 import com.levermann.entityclass.AnalysisRating;
 import com.levermann.entityclass.AnalysisSteps;
 import com.levermann.entityclass.Company;
@@ -21,20 +20,21 @@ import org.hibernate.*;
 import java.io.IOException;
 import java.net.URL;
 import java.sql.Connection;
-import java.sql.DriverManager;
 import java.util.List;
 import java.util.ResourceBundle;
-
+/**
+ * this Controller implements a TableView for general overview about Companyname, FinalScore, and creation Date
+ */
 public class CompanyOverviewController implements Initializable, ControlledScreenInterface {
     final static Logger logger = Logger.getLogger(com.levermann.CompanyOverviewController.class);
+    private Connection con;
 
     public static TableView<Company> tableIDstatic;
     public static TableColumn<Company, String> companyNamestatic;
     public static TableColumn<Company, String> creationDatestatic;
     public static TableColumn<Company, Float> analysisScorestatic;
-    public static TableColumn<Company, Button> deletestatic;
 
-    private Connection con;
+
     @FXML
     private TextField companyNameDelete;
     @FXML
@@ -45,63 +45,18 @@ public class CompanyOverviewController implements Initializable, ControlledScree
     private TableColumn<Company, String> creationDate;
     @FXML
     private TableColumn<Company, Float> analysisScore;
-    @FXML
-    private TableColumn<Company, Button> delete;
 
-
-
-    private void ConnectionDB() {
-        //TODO Die vom Benutzer eingegebenen Daten in die MySQL Datenbank schreiben
-        //Load the jdbc diver
-        System.out.println("Trying to load the JDBC driver...");
-        try {
-            Class.forName("com.mysql.cj.jdbc.Driver");
-            System.out.println("JDBC Driver loaded!");
-        } catch (Exception e) {
-            System.err.println("Cound not load JDBC driver...");
-            System.err.println(e);
-            throw new IllegalStateException("Failed loading the JDBC driver!");
-        }
-
-        //connect to the levermann database
-        System.out.println("Trying to connect to Levermann database...");
-        try {
-            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/levermann?useSSL=false&serverTimezone=UTC", "Levermann", "Levermann");
-            System.out.println("Levermann database connected!");
-        } catch (Exception e) {
-            System.err.println("Could not connect to Leverman database...");
-            System.err.println(e);
-            throw new IllegalStateException("Failed connecting to Levermann database!");
-        }
-    }
-
-    //TODO Füge hier SQL-Queries ein, die die jeweiligen Datensätze in die Table "Company" hinzufügen
-    private void DisconnectionDB(){
-        System.out.println("Trying to close the connection to Levermann database...");
-        try{
-            con.close();
-            System.out.println("Levermann database disconnected!");
-        }catch(Exception e){
-            System.err.println("Could not disconnect Leverman database...");
-            System.err.println(e);
-            throw new IllegalStateException("Failed disconnecting Levermann database!");
-        }
+    private void braucheTextfeld(){
+        ShowResultController.Companyname2 = companyNameDelete.getText();
     }
 
     public void initCols(){
 
-        ConnectionDB();
         SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
         Session session1 = sessionFactory.getCurrentSession();
 
         session1.beginTransaction();
-        /*
-        Company company1 = (Company) session1.get(Company.class, 1L);
-        company1.getGesamtPunkte();
-        company1.getCompanyname();
-        company1.getDatum();
 
-         */
         Query query = session1.getNamedQuery("Company.findAll");
         List<Company> unList = (List<Company>) query.list();
 
@@ -110,19 +65,16 @@ public class CompanyOverviewController implements Initializable, ControlledScree
             String nameforOverview = un.getCompanyname();
             String datumForOverview = un.getDatum();
             float SumScore = un.getGesamtPunkte();
-            Button deletemach = new Button("delete");
 
             final ObservableList<Company> overview = FXCollections.observableArrayList(
-                    new Company(nameforOverview, datumForOverview, SumScore, deletemach)
+                    new Company(nameforOverview, datumForOverview, SumScore)
             );
             companyName.setCellValueFactory(new PropertyValueFactory<Company, String>("Companyname"));
             creationDate.setCellValueFactory(new PropertyValueFactory<Company, String>("datum"));
             analysisScore.setCellValueFactory(new PropertyValueFactory<Company, Float>("GesamtPunkte"));
-            delete.setCellValueFactory(new PropertyValueFactory<Company, Button>("delete1"));
 
             tableID.getItems().addAll(overview);
         }
-        DisconnectionDB();
 
         session1.getTransaction().commit();
     }
@@ -132,7 +84,6 @@ public class CompanyOverviewController implements Initializable, ControlledScree
         companyNamestatic = companyName;
         creationDatestatic = creationDate;
         analysisScorestatic = analysisScore;
-        deletestatic = delete;
         initCols();
     }
 
@@ -142,11 +93,9 @@ public class CompanyOverviewController implements Initializable, ControlledScree
     public void setScreenParent(ScreensController screenParent){
         myController = screenParent;
     }
-    //TODO Der Firmenname, der vom User in EnterCompanyName Seite eingegeben wurde muss ersetzt werden durch company1
 
     @FXML
     private void tableAktualisieren(){
-        ConnectionDB();
         SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
         Session session1 = sessionFactory.getCurrentSession();
 
@@ -164,35 +113,32 @@ public class CompanyOverviewController implements Initializable, ControlledScree
             Button deletemach = new Button("delete");
 
             final ObservableList<Company> overview = FXCollections.observableArrayList(
-                    new Company(nameforOverview, datumForOverview, SumScore, deletemach)
+                    new Company(nameforOverview, datumForOverview, SumScore)
             );
             companyName.setCellValueFactory(new PropertyValueFactory<Company, String>("Companyname"));
             creationDate.setCellValueFactory(new PropertyValueFactory<Company, String>("datum"));
             analysisScore.setCellValueFactory(new PropertyValueFactory<Company, Float>("GesamtPunkte"));
-            delete.setCellValueFactory(new PropertyValueFactory<Company, Button>("delete1"));
 
             tableID.getItems().addAll(overview);
         }
 
 
         session1.getTransaction().commit();
-        DisconnectionDB();
     }
 
     @FXML
-    private void takeStringandShowResult() throws IOException {
-        //App.setRoot("enterCompanyName");
+    private void switchToShowResults() throws IOException {
+        braucheTextfeld();
         myController.setScreen(App.showResultID);
         App.setStageTitle("Unternehmensnamen angeben");
     }
     @FXML
-    private void switchToEnterCompanyName() throws IOException {
-        //App.setRoot("enterCompanyName");
+    private void switchToEnterCompanyName(ActionEvent actionEvent) throws IOException {
+
         clearInput();
         myController.setScreen(App.inputID);
         App.setStageTitle("Unternehmensnamen angeben");
     }
-
     private void clearInput(){
         InputController.unternehmennameDBTF.clear();
         InputController.jahresueberschussDBTF.clear();
@@ -227,7 +173,6 @@ public class CompanyOverviewController implements Initializable, ControlledScree
         InputController.gewinnschaetzungNaechstesJahrDBTF.clear();
         InputController.gewinnschaetzungDiesesJahrDBTF.clear();
     }
-
     public void switchToPrimaryPage(ActionEvent actionEvent) throws IOException {
         //App.setRoot("startPage");
         myController.setScreen(App.startPageID);
@@ -238,25 +183,6 @@ public class CompanyOverviewController implements Initializable, ControlledScree
     private void deleteCompanyButtonController(ActionEvent actionEvent) throws IOException{
 
         String deleteName = companyNameDelete.getText();
-        System.out.println("Trying to load the JDBC driver...");
-        try {
-            Class.forName("com.mysql.cj.jdbc.Driver");
-            System.out.println("JDBC Driver loaded!");
-        } catch (Exception e) {
-            System.err.println("Cound not load JDBC driver...");
-            System.err.println(e);
-            throw new IllegalStateException("Failed loading the JDBC driver!");
-        }
-
-        System.out.println("Trying to connect to Levermann database...");
-        try {
-            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/levermann?useSSL=false&serverTimezone=UTC", "Levermann", "Levermann");
-            System.out.println("Levermann database connected!");
-        } catch (Exception e) {
-            System.err.println("Could not connect to Leverman database...");
-            System.err.println(e);
-            throw new IllegalStateException("Failed connecting to Levermann database!");
-        }
 
         //Aufrufen der aktuellen Session aus HibernateUtil
         final Session session = HibernateUtil.getSessionFactory().openSession();
