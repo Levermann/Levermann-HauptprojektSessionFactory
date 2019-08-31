@@ -21,9 +21,7 @@ import java.net.URL;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.util.ResourceBundle;
-/**
- * this Controller creates a input screen and ask the user for vor values witch will be needed in table Company
- */
+
 public class InputController implements Initializable, ControlledScreenInterface {
 
     public static TextField unternehmennameDBTF;
@@ -58,6 +56,7 @@ public class InputController implements Initializable, ControlledScreenInterface
     public static TextField aktienkursVor3MonatenDBTF;
     public static TextField gewinnschaetzungNaechstesJahrDBTF;
     public static TextField gewinnschaetzungDiesesJahrDBTF;
+
 
     @FXML
     public TextField unternehmennameDB;
@@ -143,45 +142,151 @@ public class InputController implements Initializable, ControlledScreenInterface
         myController = screenParent;
     }
 
-
-    private void comparingInputwithTables(){
-        ShowResultController.Companyname1 = unternehmennameDB.getText();
-    }
-    private void takeOverUserInput(){
-        ShowUserInputController.eigenkapital = Float.parseFloat(eigenkapitalDB.getText());
-        ShowUserInputController.jahresueberschuss = Float.parseFloat(jahresueberschussDB.getText());
-        ShowUserInputController.gewinnEBIT = Float.parseFloat(gewinnEBITDB.getText());
-        ShowUserInputController.fremdkapital = Float.parseFloat(fremdkapitalDB.getText());
-        ShowUserInputController.aktuellerAktienkurs = Float.parseFloat(aktuellerAktienkursDB.getText());
-        ShowUserInputController.kaufen = Float.parseFloat(analystenKaufenDB.getText());
-        ShowUserInputController.verkaufen = Float.parseFloat(analystenVerkaufenDB.getText());
-        ShowUserInputController.halten = Float.parseFloat(analystenHaltenDB.getText());
-        ShowUserInputController.kursAnstiegUnternehmen = Float.parseFloat(kursanstiegUnternehmenDB.getText());
-        ShowUserInputController.kursAnstiegAktienindex = Float.parseFloat(kursanstiegAktienindexDB.getText());
-        ShowUserInputController.gewinnschaetzungVor4Wochen = Float.parseFloat(gewinnschaetzungVor4WochenDB.getText());
-        ShowUserInputController.aktuelleGewinnschaetzung = Float.parseFloat(aktuelleGewinnschaetzungDB.getText());
-        ShowUserInputController.aktienkursVor6Monaten = Float.parseFloat(aktienkursVor6MonatenDB.getText());
-        ShowUserInputController.aktienkursVor12Monaten = Float.parseFloat(aktienkursVor12MonatenDB.getText());
-        ShowUserInputController.aktuellerErwarteterKursgewinn = Float.parseFloat(aktuellerErwarteterKursgewinnDB.getText());
-        ShowUserInputController.kursVor1Monat = Float.parseFloat(kursVor1MonatDB.getText());
-        ShowUserInputController.kursVor2Monaten = Float.parseFloat(kursVor2MonatenDB.getText());
-        ShowUserInputController.kursVor3Monaten = Float.parseFloat(kursVor3MonatenDB.getText());
-        ShowUserInputController.aktienkursVor1Monaten = Float.parseFloat(aktienkursVor1MonatDB.getText());
-        ShowUserInputController.aktienkursVor2Monaten = Float.parseFloat(aktienkursVor2MonatenDB.getText());
-        ShowUserInputController.aktienkursVor3Monaten = Float.parseFloat(aktienkursVor3MonatenDB.getText());
-        ShowUserInputController.gewinnschaetzungFuerNaechstesJahr = Float.parseFloat(gewinnschaetzungNaechstesJahrDB.getText());
-        ShowUserInputController.gewinnschaetzungFuerDiesesJahr = Float.parseFloat(gewinnschaetzungDiesesJahrDB.getText());
-        ShowUserInputController.gewinnVor1Jahr = Float.parseFloat(gewinnVor1JahrDB.getText());
-        ShowUserInputController.jahresumsatz = Float.parseFloat(jahresumsatzDB.getText());
-        ShowUserInputController.gewinnschaetzung = Float.parseFloat(gewinnschaetzungDB.getText());
-        ShowUserInputController.gewinnAVG = Float.parseFloat(gewinnavgDB.getText());
-        ShowUserInputController.GewinnVor3Jahren = Float.parseFloat(gewinnVor3JahrenDB.getText());
-        ShowUserInputController.GewinnVor2Jahren = Float.parseFloat(gewinnVor2JahrenDB.getText());
-        ShowUserInputController.kursgewinnschaetzungNaechstesJahr = Float.parseFloat(kursgewinnschaetzungNaechstesJahrDB.getText());
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        unternehmennameDBTF = unternehmennameDB;
+        jahresueberschussDBTF = jahresueberschussDB;
+        eigenkapitalDBTF = eigenkapitalDB;
+        datumDBTF = datumDB;
+        gewinnschaetzungDBTF = gewinnschaetzungDB;
+        gewinnavgDBTF = gewinnavgDB;
+        gewinnVor3JahrenDBTF = gewinnVor3JahrenDB;
+        gewinnVor2JahrenDBTF = gewinnVor2JahrenDB;
+        gewinnVor1JahrDBTF = gewinnVor1JahrDB;
+        aktuellerErwarteterKursgewinnDBTF = aktuellerErwarteterKursgewinnDB;
+        kursgewinnschaetzungNaechstesJahrDBTF = kursgewinnschaetzungNaechstesJahrDB;
+        jahresumsatzDBTF = jahresumsatzDB;
+        gewinnEBITDBTF = gewinnEBITDB;
+        fremdkapitalDBTF = fremdkapitalDB;
+        aktuellerAktienkursDBTF = aktuellerAktienkursDB;
+        analystenKaufenDBTF=analystenKaufenDB;
+        analystenVerkaufenDBTF = analystenVerkaufenDB;
+        analystenHaltenDBTF = analystenHaltenDB;
+        kursanstiegUnternehmenDBTF = kursanstiegUnternehmenDB;
+        kursanstiegAktienindexDBTF =kursanstiegAktienindexDB;
+        gewinnschaetzungVor4WochenDBTF=gewinnschaetzungVor4WochenDB;
+        aktuelleGewinnschaetzungDBTF = aktuelleGewinnschaetzungDB;
+        aktienkursVor6MonatenDBTF = aktienkursVor6MonatenDB;
+        aktienkursVor12MonatenDBTF = aktienkursVor12MonatenDB;
+        kursVor1MonatDBTF = kursVor1MonatDB;
+        kursVor2MonatenDBTF = kursVor2MonatenDB;
+        kursVor3MonatenDBTF = kursVor3MonatenDB;
+        aktienkursVor1MonatDBTF = aktienkursVor1MonatDB;
+        aktienkursVor2MonatenDBTF = aktienkursVor2MonatenDB;
+        aktienkursVor3MonatenDBTF = aktienkursVor3MonatenDB;
+        gewinnschaetzungNaechstesJahrDBTF=gewinnschaetzungNaechstesJahrDB;
+        gewinnschaetzungDiesesJahrDBTF =gewinnschaetzungDiesesJahrDB;
     }
 
     @FXML
-        public void insertInputToDb (ActionEvent event){
+    private void switchToShowResult() throws IOException {
+        fillDBvalues();
+        //App.setRoot("showResult");
+       // setValues();
+        hi();
+        takeOverUserInput();
+        myController.setScreen(App.showResultID);
+        App.setStageTitle("Unternehmensergebnisse");
+    }
+
+    public void switchToPrimaryPage(ActionEvent actionEvent) throws IOException {
+        //App.setRoot("startPage");
+        //TODO Schließe die Session, zurück zu Startseite
+        myController.setScreen(App.startPageID);
+        App.setStageTitle("Hauptmenü");
+    }
+
+    private void fillDBvalues() {
+        //TODO Die vom Benutzer eingegebenen Daten in die MySQL Datenbank schreiben
+        //Load the jdbc diver
+        System.out.println("Trying to load the JDBC driver...");
+        try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            System.out.println("JDBC Driver loaded!");
+        } catch (Exception e) {
+            System.err.println("Cound not load JDBC driver...");
+            System.err.println(e);
+            throw new IllegalStateException("Failed loading the JDBC driver!");
+        }
+
+        //connect to the levermann database
+        System.out.println("Trying to connect to Levermann database...");
+        try {
+            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/levermann?useSSL=false&serverTimezone=UTC", "Levermann", "Levermann");
+            System.out.println("Levermann database connected!");
+        } catch (Exception e) {
+            System.err.println("Could not connect to Leverman database...");
+            System.err.println(e);
+            throw new IllegalStateException("Failed connecting to Levermann database!");
+        }
+    }
+
+        //TODO Füge hier SQL-Queries ein, die die jeweiligen Datensätze in die Table "Company" hinzufügen
+private void disconnectToDB(){
+        System.out.println("Trying to close the connection to Levermann database...");
+        try{
+            con.close();
+            System.out.println("Levermann database disconnected!");
+        }catch(Exception e){
+            System.err.println("Could not disconnect Leverman database...");
+            System.err.println(e);
+            throw new IllegalStateException("Failed disconnecting Levermann database!");
+        }
+    }
+
+        /**
+         *
+         * MysqlDataSource dataSource = new MysqlDataSource();
+         * dataSource.setUser("Levermann");
+         * dataSource.setPassword("Levermann");
+         * dataSource.setServerName("jdbc:mysql://localhost:3306/levermann");
+         * Connection conn = dataSource.getconnection();**/
+         //TODO Füge hier SQL-Queries ein, die die jeweiligen Datensätze in die Table "Company" hinzufügen
+
+        /**
+         * conn.close();
+         */
+       private void hi(){
+            ShowResultController.Companyname1 = unternehmennameDB.getText();
+        }
+        private void takeOverUserInput(){
+            ShowUserInputController.eigenkapital = Float.parseFloat(eigenkapitalDB.getText());
+            ShowUserInputController.jahresueberschuss = Float.parseFloat(jahresueberschussDB.getText());
+            ShowUserInputController.gewinnEBIT = Float.parseFloat(gewinnEBITDB.getText());
+            ShowUserInputController.fremdkapital = Float.parseFloat(fremdkapitalDB.getText());
+            ShowUserInputController.aktuellerAktienkurs = Float.parseFloat(aktuellerAktienkursDB.getText());
+            ShowUserInputController.kaufen = Float.parseFloat(analystenKaufenDB.getText());
+            ShowUserInputController.verkaufen = Float.parseFloat(analystenVerkaufenDB.getText());
+            ShowUserInputController.halten = Float.parseFloat(analystenHaltenDB.getText());
+            ShowUserInputController.kursAnstiegUnternehmen = Float.parseFloat(kursanstiegUnternehmenDB.getText());
+            ShowUserInputController.kursAnstiegAktienindex = Float.parseFloat(kursanstiegAktienindexDB.getText());
+            ShowUserInputController.gewinnschaetzungVor4Wochen = Float.parseFloat(gewinnschaetzungVor4WochenDB.getText());
+            ShowUserInputController.aktuelleGewinnschaetzung = Float.parseFloat(aktuelleGewinnschaetzungDB.getText());
+            ShowUserInputController.aktienkursVor6Monaten = Float.parseFloat(aktienkursVor6MonatenDB.getText());
+            ShowUserInputController.aktienkursVor12Monaten = Float.parseFloat(aktienkursVor12MonatenDB.getText());
+            ShowUserInputController.aktuellerErwarteterKursgewinn = Float.parseFloat(aktuellerErwarteterKursgewinnDB.getText());
+            ShowUserInputController.kursVor1Monat = Float.parseFloat(kursVor1MonatDB.getText());
+            ShowUserInputController.kursVor2Monaten = Float.parseFloat(kursVor2MonatenDB.getText());
+            ShowUserInputController.kursVor3Monaten = Float.parseFloat(kursVor3MonatenDB.getText());
+            ShowUserInputController.aktienkursVor1Monaten = Float.parseFloat(aktienkursVor1MonatDB.getText());
+            ShowUserInputController.aktienkursVor2Monaten = Float.parseFloat(aktienkursVor2MonatenDB.getText());
+            ShowUserInputController.aktienkursVor3Monaten = Float.parseFloat(aktienkursVor3MonatenDB.getText());
+            ShowUserInputController.gewinnschaetzungFuerNaechstesJahr = Float.parseFloat(gewinnschaetzungNaechstesJahrDB.getText());
+            ShowUserInputController.gewinnschaetzungFuerDiesesJahr = Float.parseFloat(gewinnschaetzungDiesesJahrDB.getText());
+            ShowUserInputController.gewinnVor1Jahr = Float.parseFloat(gewinnVor1JahrDB.getText());
+            ShowUserInputController.jahresumsatz = Float.parseFloat(jahresumsatzDB.getText());
+            ShowUserInputController.gewinnschaetzung = Float.parseFloat(gewinnschaetzungDB.getText());
+            ShowUserInputController.gewinnAVG = Float.parseFloat(gewinnavgDB.getText());
+            ShowUserInputController.GewinnVor3Jahren = Float.parseFloat(gewinnVor3JahrenDB.getText());
+            ShowUserInputController.GewinnVor2Jahren = Float.parseFloat(gewinnVor2JahrenDB.getText());
+            ShowUserInputController.kursgewinnschaetzungNaechstesJahr = Float.parseFloat(kursgewinnschaetzungNaechstesJahrDB.getText());
+        }
+
+
+
+    @FXML
+        public void someMethod (ActionEvent event){
+            fillDBvalues();
 
             String companyname = unternehmennameDB.getText();
             String datum = datumDB.getText();
@@ -228,6 +333,7 @@ public class InputController implements Initializable, ControlledScreenInterface
                      kursgewinnVor3Jahren,  kursgewinnVor2Jahren,  kursgewinnVor1Jahr,
                      aktuellenErwartetenKursgewinn,  kursgewinnschaezungNaechstesJahr);
 
+
             String Analysisratingname = unternehmennameDB.getText() + "analyse";
             String companyname_AnalysisRating = unternehmennameDB.getText();
 
@@ -241,6 +347,7 @@ public class InputController implements Initializable, ControlledScreenInterface
             addtoDB.add(wxyz);
             addtoDBAnalysisRating.add(analysisRating);
             addtoDBAnalysisSteps.add(analysisSteps);
+
 
             SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
             Session session1 = sessionFactory.getCurrentSession();
@@ -259,56 +366,7 @@ public class InputController implements Initializable, ControlledScreenInterface
             xyz.CalculateEigenkapitalrendite();
 
             session1.close();
+            disconnectToDB();
         }
-
-    @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {
-
-        unternehmennameDBTF = unternehmennameDB;
-        jahresueberschussDBTF = jahresueberschussDB;
-        eigenkapitalDBTF = eigenkapitalDB;
-        datumDBTF = datumDB;
-        gewinnschaetzungDBTF = gewinnschaetzungDB;
-        gewinnavgDBTF = gewinnavgDB;
-        gewinnVor3JahrenDBTF = gewinnVor3JahrenDB;
-        gewinnVor2JahrenDBTF = gewinnVor2JahrenDB;
-        gewinnVor1JahrDBTF = gewinnVor1JahrDB;
-        aktuellerErwarteterKursgewinnDBTF = aktuellerErwarteterKursgewinnDB;
-        kursgewinnschaetzungNaechstesJahrDBTF = kursgewinnschaetzungNaechstesJahrDB;
-        jahresumsatzDBTF = jahresumsatzDB;
-        gewinnEBITDBTF = gewinnEBITDB;
-        fremdkapitalDBTF = fremdkapitalDB;
-        aktuellerAktienkursDBTF = aktuellerAktienkursDB;
-        analystenKaufenDBTF=analystenKaufenDB;
-        analystenVerkaufenDBTF = analystenVerkaufenDB;
-        analystenHaltenDBTF = analystenHaltenDB;
-        kursanstiegUnternehmenDBTF = kursanstiegUnternehmenDB;
-        kursanstiegAktienindexDBTF =kursanstiegAktienindexDB;
-        gewinnschaetzungVor4WochenDBTF=gewinnschaetzungVor4WochenDB;
-        aktuelleGewinnschaetzungDBTF = aktuelleGewinnschaetzungDB;
-        aktienkursVor6MonatenDBTF = aktienkursVor6MonatenDB;
-        aktienkursVor12MonatenDBTF = aktienkursVor12MonatenDB;
-        kursVor1MonatDBTF = kursVor1MonatDB;
-        kursVor2MonatenDBTF = kursVor2MonatenDB;
-        kursVor3MonatenDBTF = kursVor3MonatenDB;
-        aktienkursVor1MonatDBTF = aktienkursVor1MonatDB;
-        aktienkursVor2MonatenDBTF = aktienkursVor2MonatenDB;
-        aktienkursVor3MonatenDBTF = aktienkursVor3MonatenDB;
-        gewinnschaetzungNaechstesJahrDBTF=gewinnschaetzungNaechstesJahrDB;
-        gewinnschaetzungDiesesJahrDBTF =gewinnschaetzungDiesesJahrDB;
     }
-    @FXML
-    private void switchToShowResult() throws IOException {
-        comparingInputwithTables();
-        takeOverUserInput();
-        myController.setScreen(App.showResultID);
-        App.setStageTitle("Unternehmensergebnisse");
-    }
-    @FXML
-    public void switchToPrimaryPage(ActionEvent actionEvent) throws IOException {
-        //TODO Schließe die Session, zurück zu Startseite
-        myController.setScreen(App.startPageID);
-        App.setStageTitle("Hauptmenü");
-    }
-}
 
