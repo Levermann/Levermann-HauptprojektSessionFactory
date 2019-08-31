@@ -143,20 +143,7 @@ public class InputController implements Initializable, ControlledScreenInterface
         myController = screenParent;
     }
 
-    @FXML
-    private void switchToShowResult() throws IOException {
 
-        comparingInputwithTables();
-        takeOverUserInput();
-        myController.setScreen(App.showResultID);
-        App.setStageTitle("Unternehmensergebnisse");
-    }
-
-    public void switchToPrimaryPage(ActionEvent actionEvent) throws IOException {
-        //TODO Schließe die Session, zurück zu Startseite
-        myController.setScreen(App.startPageID);
-        App.setStageTitle("Hauptmenü");
-    }
     private void comparingInputwithTables(){
         ShowResultController.Companyname1 = unternehmennameDB.getText();
     }
@@ -193,10 +180,8 @@ public class InputController implements Initializable, ControlledScreenInterface
         ShowUserInputController.kursgewinnschaetzungNaechstesJahr = Float.parseFloat(kursgewinnschaetzungNaechstesJahrDB.getText());
     }
 
-
-
     @FXML
-        public void someMethod (ActionEvent event){
+        public void insertInputToDb (ActionEvent event){
 
             String companyname = unternehmennameDB.getText();
             String datum = datumDB.getText();
@@ -243,7 +228,6 @@ public class InputController implements Initializable, ControlledScreenInterface
                      kursgewinnVor3Jahren,  kursgewinnVor2Jahren,  kursgewinnVor1Jahr,
                      aktuellenErwartetenKursgewinn,  kursgewinnschaezungNaechstesJahr);
 
-
             String Analysisratingname = unternehmennameDB.getText() + "analyse";
             String companyname_AnalysisRating = unternehmennameDB.getText();
 
@@ -257,7 +241,6 @@ public class InputController implements Initializable, ControlledScreenInterface
             addtoDB.add(wxyz);
             addtoDBAnalysisRating.add(analysisRating);
             addtoDBAnalysisSteps.add(analysisSteps);
-
 
             SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
             Session session1 = sessionFactory.getCurrentSession();
@@ -313,6 +296,19 @@ public class InputController implements Initializable, ControlledScreenInterface
         aktienkursVor3MonatenDBTF = aktienkursVor3MonatenDB;
         gewinnschaetzungNaechstesJahrDBTF=gewinnschaetzungNaechstesJahrDB;
         gewinnschaetzungDiesesJahrDBTF =gewinnschaetzungDiesesJahrDB;
+    }
+    @FXML
+    private void switchToShowResult() throws IOException {
+        comparingInputwithTables();
+        takeOverUserInput();
+        myController.setScreen(App.showResultID);
+        App.setStageTitle("Unternehmensergebnisse");
+    }
+    @FXML
+    public void switchToPrimaryPage(ActionEvent actionEvent) throws IOException {
+        //TODO Schließe die Session, zurück zu Startseite
+        myController.setScreen(App.startPageID);
+        App.setStageTitle("Hauptmenü");
     }
 }
 

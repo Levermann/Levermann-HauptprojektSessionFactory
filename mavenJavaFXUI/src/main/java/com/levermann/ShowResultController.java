@@ -201,12 +201,11 @@ public class ShowResultController implements Initializable, ControlledScreenInte
             Button deletemach = new Button("delete");
 
             final ObservableList<Company> overview = FXCollections.observableArrayList(
-                    new Company(nameforOverview, datumForOverview, SumScore, deletemach)
+                    new Company(nameforOverview, datumForOverview, SumScore)
             );
             CompanyOverviewController.companyNamestatic.setCellValueFactory(new PropertyValueFactory<Company, String>("Companyname"));
             CompanyOverviewController.creationDatestatic.setCellValueFactory(new PropertyValueFactory<Company, String>("datum"));
             CompanyOverviewController.analysisScorestatic.setCellValueFactory(new PropertyValueFactory<Company, Float>("GesamtPunkte"));
-            CompanyOverviewController.deletestatic.setCellValueFactory(new PropertyValueFactory<Company, Button>("delete1"));
 
             CompanyOverviewController.tableIDstatic.getItems().addAll(overview);
         }
@@ -221,7 +220,6 @@ public class ShowResultController implements Initializable, ControlledScreenInte
 
     @FXML
     private void switchToShowUserInputs() throws IOException{
-        //App.setRoot("companyOverview");
         myController.setScreen(App.showUserInputID);
         App.setStageTitle("Allgemeine Unternehmensübersicht");
     }

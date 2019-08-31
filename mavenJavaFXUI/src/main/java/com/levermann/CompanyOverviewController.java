@@ -20,10 +20,11 @@ import org.hibernate.*;
 import java.io.IOException;
 import java.net.URL;
 import java.sql.Connection;
-import java.sql.DriverManager;
 import java.util.List;
 import java.util.ResourceBundle;
-
+/**
+ * this Controller implements a TableView for general overview about Companyname, FinalScore, and creation Date
+ */
 public class CompanyOverviewController implements Initializable, ControlledScreenInterface {
     final static Logger logger = Logger.getLogger(com.levermann.CompanyOverviewController.class);
     private Connection con;
@@ -32,7 +33,6 @@ public class CompanyOverviewController implements Initializable, ControlledScree
     public static TableColumn<Company, String> companyNamestatic;
     public static TableColumn<Company, String> creationDatestatic;
     public static TableColumn<Company, Float> analysisScorestatic;
-    public static TableColumn<Company, Button> deletestatic;
 
 
     @FXML
@@ -45,13 +45,10 @@ public class CompanyOverviewController implements Initializable, ControlledScree
     private TableColumn<Company, String> creationDate;
     @FXML
     private TableColumn<Company, Float> analysisScore;
-    @FXML
-    private TableColumn<Company, Button> delete;
 
     private void braucheTextfeld(){
         ShowResultController.Companyname2 = companyNameDelete.getText();
     }
-
 
     public void initCols(){
 
@@ -68,15 +65,13 @@ public class CompanyOverviewController implements Initializable, ControlledScree
             String nameforOverview = un.getCompanyname();
             String datumForOverview = un.getDatum();
             float SumScore = un.getGesamtPunkte();
-            Button deletemach = new Button("delete");
 
             final ObservableList<Company> overview = FXCollections.observableArrayList(
-                    new Company(nameforOverview, datumForOverview, SumScore, deletemach)
+                    new Company(nameforOverview, datumForOverview, SumScore)
             );
             companyName.setCellValueFactory(new PropertyValueFactory<Company, String>("Companyname"));
             creationDate.setCellValueFactory(new PropertyValueFactory<Company, String>("datum"));
             analysisScore.setCellValueFactory(new PropertyValueFactory<Company, Float>("GesamtPunkte"));
-            delete.setCellValueFactory(new PropertyValueFactory<Company, Button>("delete1"));
 
             tableID.getItems().addAll(overview);
         }
@@ -89,7 +84,6 @@ public class CompanyOverviewController implements Initializable, ControlledScree
         companyNamestatic = companyName;
         creationDatestatic = creationDate;
         analysisScorestatic = analysisScore;
-        deletestatic = delete;
         initCols();
     }
 
@@ -119,12 +113,11 @@ public class CompanyOverviewController implements Initializable, ControlledScree
             Button deletemach = new Button("delete");
 
             final ObservableList<Company> overview = FXCollections.observableArrayList(
-                    new Company(nameforOverview, datumForOverview, SumScore, deletemach)
+                    new Company(nameforOverview, datumForOverview, SumScore)
             );
             companyName.setCellValueFactory(new PropertyValueFactory<Company, String>("Companyname"));
             creationDate.setCellValueFactory(new PropertyValueFactory<Company, String>("datum"));
             analysisScore.setCellValueFactory(new PropertyValueFactory<Company, Float>("GesamtPunkte"));
-            delete.setCellValueFactory(new PropertyValueFactory<Company, Button>("delete1"));
 
             tableID.getItems().addAll(overview);
         }
@@ -190,8 +183,6 @@ public class CompanyOverviewController implements Initializable, ControlledScree
     private void deleteCompanyButtonController(ActionEvent actionEvent) throws IOException{
 
         String deleteName = companyNameDelete.getText();
-
-
 
         //Aufrufen der aktuellen Session aus HibernateUtil
         final Session session = HibernateUtil.getSessionFactory().openSession();

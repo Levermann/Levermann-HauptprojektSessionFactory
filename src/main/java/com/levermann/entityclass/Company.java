@@ -18,11 +18,10 @@ import java.io.Serializable;
 })
 public class Company implements Serializable  {
 
-    public Company(String Companyname, String datum, float GesamtPunkte, Button delete1) {
+    public Company(String Companyname, String datum, float GesamtPunkte) {
         this.Companyname = Companyname;
         this.datum = datum;
         this.GesamtPunkte = GesamtPunkte;
-        delete1 = new Button("deleteIt");
     }
 
     public Company(String companyname, String datum, float eigenkapital, float jahresueberschuss, float gewinnEBIT,
