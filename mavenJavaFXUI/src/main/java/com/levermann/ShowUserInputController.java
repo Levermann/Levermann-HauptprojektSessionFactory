@@ -106,7 +106,6 @@ public class ShowUserInputController implements Initializable, ControlledScreenI
     @FXML
     public void switchToPrimaryPageAgain(ActionEvent actionEvent) throws IOException {
         //App.setRoot("startPage");
-        //TODO Schließe die Session, zurück zu Startseite
         myController.setScreen(App.startPageID);
         App.setStageTitle("Hauptmenü");
     }

@@ -63,7 +63,6 @@ public class InformationController implements Initializable, ControlledScreenInt
 
     @FXML
     public void switchToPrimaryPage(ActionEvent actionEvent) throws IOException {
-        //TODO Schließe die Session, zurück zu Startseite
         myController.setScreen(App.startPageID);
         App.setStageTitle("Hauptmenü");
     }

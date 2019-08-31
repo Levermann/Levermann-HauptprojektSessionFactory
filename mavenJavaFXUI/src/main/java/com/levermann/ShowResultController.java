@@ -29,6 +29,17 @@ public class ShowResultController implements Initializable, ControlledScreenInte
     public static String Companyname1;
     public static String Companyname2;
 
+    public static TableView<CompanyManageUI> tableRatingstatic;
+    public static TableColumn<CompanyManageUI, String> keyFiguresRatingstatic;
+    public static TableColumn<CompanyManageUI, Float> resultRatingstatic;
+
+    public static TableView<AnalysisStepsManageUI> tableStepsstatic;
+    public static TableColumn<AnalysisStepsManageUI, String> keyFiguresStepsstatic;
+    public static TableColumn<AnalysisStepsManageUI, Float> resultStepsstatic;
+
+    public static ObservableList<CompanyManageUI> observableListARstatic = FXCollections.observableArrayList();
+    public static ObservableList<AnalysisStepsManageUI> observableListASstatic = FXCollections.observableArrayList();
+
     @FXML
     public TableView<CompanyManageUI> tableRating;
     @FXML
@@ -56,6 +67,17 @@ public class ShowResultController implements Initializable, ControlledScreenInte
         keyFiguresSteps.setCellValueFactory((new PropertyValueFactory<AnalysisStepsManageUI, String>("kennzahlenfürAS")));
         resultSteps.setCellValueFactory((new PropertyValueFactory<AnalysisStepsManageUI, Float>("ergebnissefürAS")));
         tableSteps.setItems(observableListAS);
+
+        tableRatingstatic = tableRating;
+        keyFiguresRatingstatic = keyFiguresRating;
+        resultRatingstatic = resultRating;
+
+        tableStepsstatic = tableSteps;
+        keyFiguresStepsstatic = keyFiguresSteps;
+        resultStepsstatic = resultSteps;
+
+        observableListARstatic = observableListAR;
+        observableListASstatic = observableListAS;
     }
 
     ScreensController myController;
@@ -99,8 +121,8 @@ public class ShowResultController implements Initializable, ControlledScreenInte
                 /**
                  * gets the correct values for calculated keyfigures after user input
                  */
-                if (steps.getCompanyname_AnalysisSteps().equals(Companyname1) || steps.getCompanyname_AnalysisSteps().equals(Companyname2)) {
-                    System.out.println("Fuuuuuuuuuuuuuuuuck");
+                if (steps.getCompanyname_AnalysisSteps().equals(Companyname2)) {
+                    System.out.println("Worked");
 
                     tableSteps.getItems().clear();
 
@@ -133,7 +155,7 @@ public class ShowResultController implements Initializable, ControlledScreenInte
                      */
                     for (AnalysisRating rating : analysisRatingsFilled) {
 
-                        if (Companyname1.equals(rating.getCompanyname_AnalysisRating()) || Companyname2.equals(rating.getCompanyname_AnalysisRating())) {
+                        if ( Companyname2.equals(rating.getCompanyname_AnalysisRating())) {
                             tableRating.getItems().clear();
 
                             float eigenkapitalrenditeAR = rating.getEigenkapitalrendite();

@@ -187,7 +187,6 @@
                   <TextField fx:id="gewinnVor3JahrenDB" layoutX="1000.0" layoutY="360.0" prefHeight="25.0" prefWidth="176.0" />
                   <TextField fx:id="gewinnVor2JahrenDB" layoutX="1000.0" layoutY="430.0" prefHeight="25.0" prefWidth="176.0" />
                   <TextField fx:id="kursgewinnschaetzungNaechstesJahrDB" layoutX="1000.0" layoutY="500.0" prefHeight="25.0" prefWidth="176.0" />
-                  <CheckBox fx:id="finanzwerteDB" layoutX="316.0" layoutY="594.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="185.0" text="Finanzwerte (z.B. Banken etc.)" />
             <Button fx:id="getBackToPrimaryPage" layoutX="838.0" layoutY="578.0" mnemonicParsing="false" onAction="#switchToPrimaryPage" prefHeight="25.0" prefWidth="91.0" style="-fx-border-color: black;" text="main menu" />
          </children>
       </AnchorPane>

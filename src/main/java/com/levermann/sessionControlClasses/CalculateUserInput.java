@@ -111,7 +111,6 @@ public class CalculateUserInput {
                         /**
                          * Punkteliste befüllen: Schritt 3 Eigenkapitalquote
                          */
-                        //TODO eventuell switch case für den Sonderfall Finanzwerte
                         for (AnalysisRating un2 : analysisRatingsFilled) {
                             query7 = session1.getNamedQuery("AnalysisRating.findByName");
                             query7.setString("Companyname_AnalysisRating", company);
