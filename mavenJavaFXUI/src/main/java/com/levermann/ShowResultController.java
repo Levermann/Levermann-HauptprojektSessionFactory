@@ -25,6 +25,7 @@ public class ShowResultController implements Initializable, ControlledScreenInte
     private Connection con;
 
     public static String Companyname1;
+    public static String Companyname2;
 
     @FXML
     public TableView<CompanyManageUI> tableRating;
@@ -83,10 +84,8 @@ public class ShowResultController implements Initializable, ControlledScreenInte
         App.setStageTitle("Allgemeine Unternehmensübersicht");
     }
     private void getDataAnalysisRating(){
-
         observableListAR.clear();
         observableListAS.clear();
-
         //Aufrufen der aktuellen Session aus HibernateUtil
         final Session session = HibernateUtil.getSessionFactory().openSession();
         Query query7 = session.getNamedQuery("AnalysisRating.findAll");
@@ -105,8 +104,10 @@ public class ShowResultController implements Initializable, ControlledScreenInte
                             + ","
                             + steps.getCompanyname_AnalysisSteps());
 
-                    if (steps.getCompanyname_AnalysisSteps().equals(Companyname1)) {
+                    if (steps.getCompanyname_AnalysisSteps().equals(Companyname1) || steps.getCompanyname_AnalysisSteps().equals(Companyname2)) {
                         System.out.println("Fuuuuuuuuuuuuuuuuck");
+
+                        tableSteps.getItems().clear();
 
                         steps.setCompanyname_AnalysisSteps(steps.getCompanyname_AnalysisSteps());
                         float eigenkapitalrenditeAS = steps.getEigenkapitalrendite();
@@ -138,7 +139,9 @@ public class ShowResultController implements Initializable, ControlledScreenInte
 
 
 
-                            if (Companyname1.equals(rating.getCompanyname_AnalysisRating())) {
+                            if (Companyname1.equals(rating.getCompanyname_AnalysisRating()) || Companyname2.equals(rating.getCompanyname_AnalysisRating())) {
+                                tableRating.getItems().clear();
+
                                 float eigenkapitalrenditeAR = rating.getEigenkapitalrendite();
                                 float ebitAR = rating.getEBITMarge();
                                 float eigenkapitalquoteAR = rating.getEigenkapitalquote();
@@ -184,6 +187,9 @@ public class ShowResultController implements Initializable, ControlledScreenInte
             throw new RuntimeException(e);
         } finally {
         }
+        return;
+
+
     }
 
 

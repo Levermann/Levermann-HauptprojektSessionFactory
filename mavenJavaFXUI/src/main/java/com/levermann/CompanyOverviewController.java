@@ -41,6 +41,9 @@ public class CompanyOverviewController implements Initializable, ControlledScree
     @FXML
     private TableColumn<Company, Button> delete;
 
+    private void braucheTextfeld(){
+        ShowResultController.Companyname2 = companyNameDelete.getText();
+    }
     private void ConnectionDB() {
         //TODO Die vom Benutzer eingegebenen Daten in die MySQL Datenbank schreiben
         //Load the jdbc diver
@@ -168,13 +171,15 @@ public class CompanyOverviewController implements Initializable, ControlledScree
     @FXML
     private void takeStringandShowResult() throws IOException {
         //App.setRoot("enterCompanyName");
+        braucheTextfeld();
         myController.setScreen(App.showResultID);
         App.setStageTitle("Unternehmensnamen angeben");
     }
     @FXML
-    private void switchToEnterCompanyName() throws IOException {
+    private void switchToEnterCompanyName(ActionEvent actionEvent) throws IOException {
+        InputController.deleteInputController();
         //App.setRoot("enterCompanyName");
-        myController.setScreen(App.enterCompanyNameID);
+        myController.setScreen(App.inputID);
         App.setStageTitle("Unternehmensnamen angeben");
     }
     public void switchToPrimaryPage(ActionEvent actionEvent) throws IOException {

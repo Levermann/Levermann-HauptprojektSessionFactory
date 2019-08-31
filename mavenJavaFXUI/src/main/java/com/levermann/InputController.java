@@ -10,7 +10,9 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.CheckBox;
+import javafx.scene.control.Labeled;
 import javafx.scene.control.TextField;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -106,6 +108,10 @@ public class InputController implements ControlledScreenInterface {
         myController = screenParent;
     }
 
+    @FXML
+    static void deleteInputController() {
+
+    }
 
     @FXML
     private void switchToShowResult() throws IOException {
