@@ -18,11 +18,45 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 
 import java.io.IOException;
+import java.net.URL;
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.util.ResourceBundle;
 
-public class InputController implements ControlledScreenInterface {
+public class InputController implements Initializable, ControlledScreenInterface {
 
+    public static TextField unternehmennameDBTF;
+    public static TextField jahresueberschussDBTF;
+    public static TextField eigenkapitalDBTF;
+    public static TextField datumDBTF;
+    public static TextField gewinnschaetzungDBTF;
+    public static TextField gewinnavgDBTF;
+    public static TextField gewinnVor3JahrenDBTF;
+    public static TextField gewinnVor2JahrenDBTF;
+    public static TextField gewinnVor1JahrDBTF;
+    public static TextField aktuellerErwarteterKursgewinnDBTF;
+    public static TextField kursgewinnschaetzungNaechstesJahrDBTF;
+    public static TextField jahresumsatzDBTF;
+    public static TextField gewinnEBITDBTF;
+    public static TextField fremdkapitalDBTF;
+    public static TextField aktuellerAktienkursDBTF;
+    public static TextField analystenKaufenDBTF;
+    public static TextField analystenVerkaufenDBTF;
+    public static TextField analystenHaltenDBTF;
+    public static TextField kursanstiegUnternehmenDBTF;
+    public static TextField kursanstiegAktienindexDBTF;
+    public static TextField gewinnschaetzungVor4WochenDBTF;
+    public static TextField aktuelleGewinnschaetzungDBTF;
+    public static TextField aktienkursVor6MonatenDBTF;
+    public static TextField aktienkursVor12MonatenDBTF;
+    public static TextField kursVor1MonatDBTF;
+    public static TextField kursVor2MonatenDBTF;
+    public static TextField kursVor3MonatenDBTF;
+    public static TextField aktienkursVor1MonatDBTF;
+    public static TextField aktienkursVor2MonatenDBTF;
+    public static TextField aktienkursVor3MonatenDBTF;
+    public static TextField gewinnschaetzungNaechstesJahrDBTF;
+    public static TextField gewinnschaetzungDiesesJahrDBTF;
 
     @FXML
     public TextField unternehmennameDB;
@@ -303,5 +337,42 @@ private void disconnectToDB(){
             session1.close();
             disconnectToDB();
         }
+
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+
+        unternehmennameDBTF = unternehmennameDB;
+        jahresueberschussDBTF = jahresueberschussDB;
+        eigenkapitalDBTF = eigenkapitalDB;
+        datumDBTF = datumDB;
+        gewinnschaetzungDBTF = gewinnschaetzungDB;
+        gewinnavgDBTF = gewinnavgDB;
+        gewinnVor3JahrenDBTF = gewinnVor3JahrenDB;
+        gewinnVor2JahrenDBTF = gewinnVor2JahrenDB;
+        gewinnVor1JahrDBTF = gewinnVor1JahrDB;
+        aktuellerErwarteterKursgewinnDBTF = aktuellerErwarteterKursgewinnDB;
+        kursgewinnschaetzungNaechstesJahrDBTF = kursgewinnschaetzungNaechstesJahrDB;
+        jahresumsatzDBTF = jahresumsatzDB;
+        gewinnEBITDBTF = gewinnEBITDB;
+        fremdkapitalDBTF = fremdkapitalDB;
+        aktuellerAktienkursDBTF = aktuellerAktienkursDB;
+        analystenKaufenDBTF=analystenKaufenDB;
+        analystenVerkaufenDBTF = analystenVerkaufenDB;
+        analystenHaltenDBTF = analystenHaltenDB;
+        kursanstiegUnternehmenDBTF = kursanstiegUnternehmenDB;
+        kursanstiegAktienindexDBTF =kursanstiegAktienindexDB;
+        gewinnschaetzungVor4WochenDBTF=gewinnschaetzungVor4WochenDB;
+        aktuelleGewinnschaetzungDBTF = aktuelleGewinnschaetzungDB;
+        aktienkursVor6MonatenDBTF = aktienkursVor6MonatenDB;
+        aktienkursVor12MonatenDBTF = aktienkursVor12MonatenDB;
+        kursVor1MonatDBTF = kursVor1MonatDB;
+        kursVor2MonatenDBTF = kursVor2MonatenDB;
+        kursVor3MonatenDBTF = kursVor3MonatenDB;
+        aktienkursVor1MonatDBTF = aktienkursVor1MonatDB;
+        aktienkursVor2MonatenDBTF = aktienkursVor2MonatenDB;
+        aktienkursVor3MonatenDBTF = aktienkursVor3MonatenDB;
+        gewinnschaetzungNaechstesJahrDBTF=gewinnschaetzungNaechstesJahrDB;
+        gewinnschaetzungDiesesJahrDBTF =gewinnschaetzungDiesesJahrDB;
     }
+}
 

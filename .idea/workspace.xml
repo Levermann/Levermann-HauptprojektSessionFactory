@@ -8,9 +8,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/src/main/java/com/levermann/CompanyOverviewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/mavenJavaFXUI/src/main/java/com/levermann/CompanyOverviewController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/src/main/java/com/levermann/InputController.java" beforeDir="false" afterPath="$PROJECT_DIR$/mavenJavaFXUI/src/main/java/com/levermann/InputController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/src/main/java/com/levermann/ShowResultController.java" beforeDir="false" afterPath="$PROJECT_DIR$/mavenJavaFXUI/src/main/java/com/levermann/ShowResultController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/target/classes/com/levermann/InputController.class" beforeDir="false" afterPath="$PROJECT_DIR$/mavenJavaFXUI/target/classes/com/levermann/InputController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/target/classes/com/levermann/ShowResultController.class" beforeDir="false" afterPath="$PROJECT_DIR$/mavenJavaFXUI/target/classes/com/levermann/ShowResultController.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -419,14 +417,7 @@
       <workItem from="1566491635410" duration="25623000" />
       <workItem from="1566585459730" duration="21406000" />
       <workItem from="1566650626276" duration="6535000" />
-      <workItem from="1567001123150" duration="126038000" />
-    </task>
-    <task id="LOCAL-00054" summary="UserInput via Session and JDBC in die DB">
-      <created>1566939352913</created>
-      <option name="number" value="00054" />
-      <option name="presentableId" value="LOCAL-00054" />
-      <option name="project" value="LOCAL" />
-      <updated>1566939352913</updated>
+      <workItem from="1567001123150" duration="126592000" />
     </task>
     <task id="LOCAL-00055" summary="added Stylesheet">
       <created>1566944705506</created>
@@ -764,7 +755,14 @@
       <option name="project" value="LOCAL" />
       <updated>1567205397829</updated>
     </task>
-    <option name="localTasksCounter" value="103" />
+    <task id="LOCAL-00103" summary="läuft schön durch">
+      <created>1567213476258</created>
+      <option name="number" value="00103" />
+      <option name="presentableId" value="LOCAL-00103" />
+      <option name="project" value="LOCAL" />
+      <updated>1567213476274</updated>
+    </task>
+    <option name="localTasksCounter" value="104" />
     <servers />
   </component>
   <component name="TodoView">
@@ -829,7 +827,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="new Class CalculateUserInput @FlorianLand :*" />
     <MESSAGE value="update" />
     <MESSAGE value="eigenkapitalrendite save" />
     <MESSAGE value="eigenkapitalquto und ebitmarge save" />
@@ -854,7 +851,8 @@
     <MESSAGE value="läuft die kacke" />
     <MESSAGE value="schau mal wer da codet" />
     <MESSAGE value="gui schön gemacht" />
-    <option name="LAST_COMMIT_MESSAGE" value="gui schön gemacht" />
+    <MESSAGE value="läuft schön durch" />
+    <option name="LAST_COMMIT_MESSAGE" value="läuft schön durch" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
