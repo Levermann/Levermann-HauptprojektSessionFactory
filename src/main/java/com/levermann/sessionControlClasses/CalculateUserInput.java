@@ -10,39 +10,45 @@ import java.util.List;
 
 public class CalculateUserInput {
 
-
     final static Logger logger = Logger.getLogger(com.levermann.sessionControlClasses.CalculateUserInput.class);
 
     public void CalculateEigenkapitalrendite( ) {
 
-
-        //Aufrufen der aktuellen Session aus HibernateUtil
+        /**
+         * get current session from HibernateUtil
+         */
         SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
         final Session session1 = sessionFactory.getCurrentSession();
-
 
         try {
             Transaction tx = null;
             tx = session1.beginTransaction();
+            /**
+             * HQL Named Query to find all entries in Table AnalysisRating
+             */
             Query query7 = session1.getNamedQuery("AnalysisRating.findAll");
             final List<AnalysisRating> analysisRatingsFilled = (List<AnalysisRating>) query7.list();
-            //HQL Named Query FindAll Unternehmen
+            /**
+             * HQL Named Query to find all entries in Table Company
+             */
             Query query = session1.getNamedQuery("Company.findAll");
             List<Company> unList = (List<Company>) query.list();
 
             for (Company un : unList) {
 
                 String company = un.getCompanyname();
-
-                //HQL Named Query FindAll Levermannschritte
+                /**
+                 * HQL Named Query to find all entries in Table AnalysisSteps
+                 */
                 Query query1 = session1.getNamedQuery("AnalysisSteps.findall");
                 List<AnalysisSteps> unList1 = (List<AnalysisSteps>) query1.list();
                 for (AnalysisSteps un1 : unList1) {
                     System.out.println("Analyse Liste = " + un1.getAnalysisStepsName()
                             + ","
                             + un1.getCompanyname_AnalysisSteps());
-
-                    // Ausgabe eines Datensatzes mit Cid
+                    /**
+                     * Output of a data record with the Company Primary Key witch need to match to Companyname_AnalysisSteps
+                     */
                     query1 = session1.getNamedQuery("AnalysisSteps.findByName");
                     query1.setString("Companyname_AnalysisSteps", company);
                     unList1 = query1.list();
@@ -51,7 +57,7 @@ public class CalculateUserInput {
 
                         System.out.println("Fuuuuuuuuuuuuuuuuck");
 
-                        //Set Company
+                  
                         un1.setCompanyname_AnalysisSteps(un1.getCompanyname_AnalysisSteps());
 
                         /**
