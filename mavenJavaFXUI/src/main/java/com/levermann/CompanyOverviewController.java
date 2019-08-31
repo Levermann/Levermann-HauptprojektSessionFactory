@@ -34,7 +34,6 @@ public class CompanyOverviewController implements Initializable, ControlledScree
     public static TableColumn<Company, Float> analysisScorestatic;
     public static TableColumn<Company, Button> deletestatic;
 
-
     private Connection con;
     @FXML
     private TextField companyNameDelete;
