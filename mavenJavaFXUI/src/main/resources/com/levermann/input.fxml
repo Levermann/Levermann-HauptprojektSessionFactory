@@ -25,8 +25,8 @@
                   <Font size="20.0" />
                </font>
             </Label>
-            <Button fx:id="showResultButton" layoutX="935.0" layoutY="578.0" mnemonicParsing="false" onAction="#switchToShowResult" prefHeight="25.0" prefWidth="125.0" style="-fx-border-color: black;" text="OK, show Results" />
-           <Button fx:id="btnAddFigures" layoutX="726.0" layoutY="578.0" onAction="#someMethod" prefHeight="25.0" prefWidth="104.0" style="-fx-border-color: black;" text="Add to DB" />
+            <Button fx:id="showResultButton" layoutX="935.0" layoutY="578.0" mnemonicParsing="false" onAction="#switchToShowResult" prefHeight="25.0" prefWidth="125.0" style="-fx-border-color: black;" text="Ergebnisse" />
+           <Button fx:id="btnAddFigures" layoutX="726.0" layoutY="578.0" onAction="#someMethod" prefHeight="25.0" prefWidth="104.0" style="-fx-border-color: black;" text="Anlegen" />
                   <Label fx:id="ju" layoutX="200.0" layoutY="125.0" prefHeight="25.0" prefWidth="176.0" text="Jahresüberschuss">
                <font>
                   <Font size="14.0" />

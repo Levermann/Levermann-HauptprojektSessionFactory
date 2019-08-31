@@ -4,9 +4,34 @@
     <option name="SCOPE_TYPE" value="3" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ef1c18af-56f3-4a36-8891-4764d24d597a" name="Default Changelist" comment="aktualisieren button fällt weg">
+    <list default="true" id="ef1c18af-56f3-4a36-8891-4764d24d597a" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/b34121eb-3aed-44a8-9368-49552a11cff0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/b34121eb-3aed-44a8-9368-49552a11cff0.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/src/main/java/com/levermann/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/mavenJavaFXUI/src/main/java/com/levermann/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/src/main/java/com/levermann/StartPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/mavenJavaFXUI/src/main/java/com/levermann/StartPageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/src/main/resources/com/levermann/input.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/mavenJavaFXUI/src/main/resources/com/levermann/input.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/src/main/resources/com/levermann/showResult.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/mavenJavaFXUI/src/main/resources/com/levermann/showResult.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/src/main/resources/com/levermann/startPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/mavenJavaFXUI/src/main/resources/com/levermann/startPage.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/target/classes/com/levermann/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/mavenJavaFXUI/target/classes/com/levermann/App.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/target/classes/com/levermann/StartPageController.class" beforeDir="false" afterPath="$PROJECT_DIR$/mavenJavaFXUI/target/classes/com/levermann/StartPageController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/target/classes/com/levermann/input.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/mavenJavaFXUI/target/classes/com/levermann/input.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/target/classes/com/levermann/showResult.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/mavenJavaFXUI/target/classes/com/levermann/showResult.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/target/classes/com/levermann/startPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/mavenJavaFXUI/target/classes/com/levermann/startPage.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/levermann/keyFiguresForAnalysis/Analystenmeinungen.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/levermann/keyFiguresForAnalysis/Dreimonatsreversal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/levermann/keyFiguresForAnalysis/Eigenkapitalquote.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/levermann/keyFiguresForAnalysis/Eigenkapitalrendite.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/levermann/keyFiguresForAnalysis/GewinnEBIT.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/levermann/keyFiguresForAnalysis/Gewinnrevision.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/levermann/keyFiguresForAnalysis/Gewinnwachstum.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/levermann/keyFiguresForAnalysis/KursGewinnVerhaeltnis.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/levermann/keyFiguresForAnalysis/KursgewinnVerhaeltnis5Jahre.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/levermann/keyFiguresForAnalysis/KursheuteggKursvor1Jahr.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/levermann/keyFiguresForAnalysis/KursheuteggKursvor6Monaten.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/levermann/keyFiguresForAnalysis/Kursmomentum.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/levermann/keyFiguresForAnalysis/ReaktionaufQuartalszahlen.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/levermann/mainMethod/ConnectionMainFactory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/levermann/mainMethod/TestMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/levermann/mainMethod/TestMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/levermann/sqlStatements/TestData.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/levermann/sqlStatements/TestData.sql" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -344,27 +369,7 @@
     <option name="allServicesViewState">
       <serviceView>
         <treeState>
-          <expand>
-            <path>
-              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@99e11300" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-            </path>
-            <path>
-              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@99e11300" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@239f319a" type="9fbbdea:ServiceModel$ServiceNode" />
-            </path>
-            <path>
-              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@99e11300" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@3d5eb67b" type="9fbbdea:ServiceModel$ServiceNode" />
-            </path>
-            <path>
-              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@99e11300" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@2ea4219d" type="9fbbdea:ServiceModel$ServiceNode" />
-            </path>
-          </expand>
+          <expand />
           <select />
         </treeState>
       </serviceView>
@@ -415,14 +420,7 @@
       <workItem from="1566491635410" duration="25623000" />
       <workItem from="1566585459730" duration="21406000" />
       <workItem from="1566650626276" duration="6535000" />
-      <workItem from="1567001123150" duration="127606000" />
-    </task>
-    <task id="LOCAL-00057" summary="added Stylesheet">
-      <created>1566946843421</created>
-      <option name="number" value="00057" />
-      <option name="presentableId" value="LOCAL-00057" />
-      <option name="project" value="LOCAL" />
-      <updated>1566946843421</updated>
+      <workItem from="1567001123150" duration="135170000" />
     </task>
     <task id="LOCAL-00058" summary="table">
       <created>1566955368686</created>
@@ -760,7 +758,14 @@
       <option name="project" value="LOCAL" />
       <updated>1567214268868</updated>
     </task>
-    <option name="localTasksCounter" value="106" />
+    <task id="LOCAL-00106" summary="todo items für morgen geadded">
+      <created>1567214935852</created>
+      <option name="number" value="00106" />
+      <option name="presentableId" value="LOCAL-00106" />
+      <option name="project" value="LOCAL" />
+      <updated>1567214935852</updated>
+    </task>
+    <option name="localTasksCounter" value="107" />
     <servers />
   </component>
   <component name="TodoView">
@@ -825,7 +830,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="eigenkapitalquto und ebitmarge save" />
     <MESSAGE value="kgv aktuell save" />
     <MESSAGE value="analystenmeinungen save" />
     <MESSAGE value="punkte complete save" />
@@ -850,7 +854,8 @@
     <MESSAGE value="läuft schön durch" />
     <MESSAGE value="input controller leer wenn neues unternehmen erstellt wird" />
     <MESSAGE value="aktualisieren button fällt weg" />
-    <option name="LAST_COMMIT_MESSAGE" value="aktualisieren button fällt weg" />
+    <MESSAGE value="todo items für morgen geadded" />
+    <option name="LAST_COMMIT_MESSAGE" value="todo items für morgen geadded" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

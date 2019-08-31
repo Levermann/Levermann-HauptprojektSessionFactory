@@ -17,9 +17,9 @@
    <children>
       <AnchorPane prefHeight="660.0" prefWidth="1252.0">
          <children>
-            <Button layoutX="934.0" layoutY="520.0" mnemonicParsing="false" onAction="#switchToShowUserInputs" prefHeight="21.0" prefWidth="112.0" style="-fx-border-color: black;" text="Eingabe einsehen" />
-            <Button layoutX="836.0" layoutY="520.0" mnemonicParsing="false" onAction="#zeigeInputAnUI" prefHeight="27.0" prefWidth="76.0" text="show" />
-            <Button fx:id="showOverviewOfCompaniesButton" layoutX="1084.0" layoutY="519.0" onAction="#switchToCompanyOverview" prefHeight="21.0" prefWidth="112.0" style="-fx-border-color: black;" text="Übersicht" />
+            <Button layoutX="969.0" layoutY="520.0" mnemonicParsing="false" onAction="#switchToShowUserInputs" prefHeight="21.0" prefWidth="112.0" style="-fx-border-color: black;" text="Eingabe einsehen" />
+            <Button layoutX="808.0" layoutY="520.0" mnemonicParsing="false" onAction="#zeigeInputAnUI" prefHeight="21.0" prefWidth="112.0"  style=" -fx-border-color: black;" text="Aktualisieren" />
+            <Button fx:id="showOverviewOfCompaniesButton" layoutX="1130.0" layoutY="520.0" onAction="#switchToCompanyOverview" prefHeight="21.0" prefWidth="112.0" style="-fx-border-color: black;" text="Übersicht" />
             <Label alignment="TOP_CENTER" layoutX="510.0" layoutY="26.0" prefHeight="63.0" prefWidth="378.0" text="Ergebnisse Ihrer Analyse" textAlignment="CENTER" textFill="#58fa58">
                <font>
                   <Font name="Berlin Sans FB" size="24.0" />
