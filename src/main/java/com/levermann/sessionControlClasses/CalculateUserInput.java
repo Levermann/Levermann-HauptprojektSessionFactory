@@ -246,9 +246,11 @@ public class CalculateUserInput {
                             if (un2.getCompanyname_AnalysisRating().equals(company)) {
                                 un2.setKursmomentum((float)0);
                                 un2.setCompanyname_AnalysisRating(un1.getCompanyname_AnalysisSteps());
-                                if (un2.getKursverlauf6Monate() == (float) 1 && un2.getKursverlauf12Monate() != (float) 1) {
+                                //if (un2.getKursverlauf6Monate() == (float) 1 && un2.getKursverlauf12Monate() != (float) 1) {
+                                if(Float.compare(un2.getKursverlauf6Monate(), (float)1) == 0 && Float.compare(un2.getKursverlauf12Monate(), (float)1) != 0){
                                     un2.setKursmomentum((float) 1);
-                                } else if (un2.getKursverlauf6Monate() == (float) -1 && un2.getKursverlauf12Monate() != (float) -1)
+                                //} else if (un2.getKursverlauf6Monate() == (float) -1 && un2.getKursverlauf12Monate() != (float) -1)
+                                } else if (Float.compare(un2.getKursverlauf6Monate(), (float)-1) == 0 && Float.compare(un2.getKursverlauf12Monate(), (float)-1) != 0)
                                     un2.setKursmomentum((float) -1);
                             }
                         }

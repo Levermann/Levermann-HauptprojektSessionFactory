@@ -33,6 +33,7 @@ public class CompanyOverviewController implements Initializable, ControlledScree
     public static TableColumn<Company, String> companyNamestatic;
     public static TableColumn<Company, String> creationDatestatic;
     public static TableColumn<Company, Float> analysisScorestatic;
+    public static TextField companyNameDeletestatic;
 
 
     @FXML
@@ -84,6 +85,7 @@ public class CompanyOverviewController implements Initializable, ControlledScree
         companyNamestatic = companyName;
         creationDatestatic = creationDate;
         analysisScorestatic = analysisScore;
+        companyNameDeletestatic = companyNameDelete;
         initCols();
     }
 
@@ -129,9 +131,125 @@ public class CompanyOverviewController implements Initializable, ControlledScree
     @FXML
     private void switchToShowResults() throws IOException {
         braucheTextfeld();
+        setResultColumns();
         myController.setScreen(App.showResultID);
         App.setStageTitle("Unternehmensnamen angeben");
     }
+
+    private void setResultColumns(){
+        ShowResultController.observableListARstatic.clear();
+        ShowResultController.observableListASstatic.clear();
+        /**
+         * get current session from HibernateUtil
+         */
+        final Session session = HibernateUtil.getSessionFactory().openSession();
+        /**
+         * HQL Named Query to find all entries in Table Analysisrating
+         */
+        Query query7 = session.getNamedQuery("AnalysisRating.findAll");
+        final List<AnalysisRating> analysisRatingsFilled = (List<AnalysisRating>) query7.list();
+
+        try {
+            Transaction tx = null;
+            tx = session.beginTransaction();
+            /**
+             * HQL Named Query to find all entries in Table Analysissteps
+             */
+            Query query1 = session.getNamedQuery("AnalysisSteps.findall");
+            List<AnalysisSteps> ListAS = (List<AnalysisSteps>) query1.list();
+            for (AnalysisSteps steps : ListAS) {
+
+                System.out.println("Analyse Liste = " + steps.getAnalysisStepsName()
+                        + ","
+                        + steps.getCompanyname_AnalysisSteps());
+
+                /**
+                 * gets the correct values for calculated keyfigures after user input
+                 * steps.getCompanyname_AnalysisSteps().equals(Companyname1) ||
+                 */
+                if (steps.getCompanyname_AnalysisSteps().equals(ShowResultController.Companyname2)) {
+                    System.out.println("Fuuuuuuuuuuuuuuuuck");
+
+                    ShowResultController.tableStepsstatic.getItems().clear();
+
+                    steps.setCompanyname_AnalysisSteps(steps.getCompanyname_AnalysisSteps());
+                    float eigenkapitalrenditeAS = steps.getEigenkapitalrendite();
+                    float ebitAS = steps.getEBITMarge();
+                    float eigenkapitalquoteAS = steps.getEigenkapitalquote();
+                    float KGVAS = steps.getKursGewinnVerhaeltnis();
+                    float AGVAktuellAS = steps.getKursGewinnVerhaeltnisAktuell();
+                    float analystenmeinungenAS = steps.getAnalystenmeinungen();
+                    float reaktionQAS = steps.getReaktionaufQuartalszahlen();
+                    float gewinnrevisionAS = steps.getGewinnrevision();
+                    float kursverlauf6AS = steps.getKursverlauf6Monate();
+                    float kursverlauf12AS = steps.getKursverlauf12Monate();
+                    float gewinnwachstumAS = steps.getGewinnwachstum();
+                    ShowResultController.observableListASstatic.add(new AnalysisStepsManageUI("Eigenkapitalrendite", eigenkapitalrenditeAS));
+                    ShowResultController.observableListASstatic.add(new AnalysisStepsManageUI("EbitMarge", ebitAS));
+                    ShowResultController.observableListASstatic.add(new AnalysisStepsManageUI("Eigenkapitalquote", eigenkapitalquoteAS));
+                    ShowResultController.observableListASstatic.add(new AnalysisStepsManageUI("KursGewinnVerhältnis", KGVAS));
+                    ShowResultController.observableListASstatic.add(new AnalysisStepsManageUI("KursGewinnVerhältnisAktuell", AGVAktuellAS));
+                    ShowResultController.observableListASstatic.add(new AnalysisStepsManageUI("Analystenmeinungen", analystenmeinungenAS));
+                    ShowResultController.observableListASstatic.add(new AnalysisStepsManageUI("Reaktion auf Quartalszahlen", reaktionQAS));
+                    ShowResultController.observableListASstatic.add(new AnalysisStepsManageUI("Gewinnrevision", gewinnrevisionAS));
+                    ShowResultController.observableListASstatic.add(new AnalysisStepsManageUI("Kursverlauf 6 Monate", kursverlauf6AS));
+                    ShowResultController.observableListASstatic.add(new AnalysisStepsManageUI("Kursverlauf 12 Monate", kursverlauf12AS));
+                    ShowResultController.observableListASstatic.add(new AnalysisStepsManageUI("Gewinnwachstum", gewinnwachstumAS));
+
+                    /**
+                     * gets the correct values for set points after user input
+                     * Companyname1.equals(rating.getCompanyname_AnalysisRating()) ||
+                     */
+                    for (AnalysisRating rating : analysisRatingsFilled) {
+
+                        if ( ShowResultController.Companyname2.equals(rating.getCompanyname_AnalysisRating())) {
+                            ShowResultController.tableRatingstatic.getItems().clear();
+
+                            float eigenkapitalrenditeAR = rating.getEigenkapitalrendite();
+                            float ebitAR = rating.getEBITMarge();
+                            float eigenkapitalquoteAR = rating.getEigenkapitalquote();
+                            float KGVAR = rating.getKursGewinnVerhaeltnis();
+                            float AGVAktuellAR = rating.getKursGewinnVerhaeltnisAktuell();
+                            float analystenmeinungenAR = rating.getAnalystenmeinungen();
+                            float reaktionQAR = rating.getReaktionaufQuartalszahlen();
+                            float gewinnrevisionAR = rating.getGewinnrevision();
+                            float kursverlauf6AR = rating.getKursverlauf6Monate();
+                            float kursverlauf12AR = rating.getKursverlauf12Monate();
+                            float kursmomentumAR = rating.getKursmomentum();
+                            float dreimonrevAR = rating.getDreimonatsreversal();
+                            float gewinnwachstumAR = rating.getGewinnwachstum();
+                            ShowResultController.observableListARstatic.add(new CompanyManageUI("Eigenkapitalrendite", eigenkapitalrenditeAR));
+                            ShowResultController.observableListARstatic.add(new CompanyManageUI("EbitMarge", ebitAR));
+                            ShowResultController.observableListARstatic.add(new CompanyManageUI("Eigenkapitalquote", eigenkapitalquoteAR));
+                            ShowResultController.observableListARstatic.add(new CompanyManageUI("KursGewinnVerhältnis", KGVAR));
+                            ShowResultController.observableListARstatic.add(new CompanyManageUI("KursGewinnVerhältnisAktuell", AGVAktuellAR));
+                            ShowResultController.observableListARstatic.add(new CompanyManageUI("Analystenmeinungen", analystenmeinungenAR));
+                            ShowResultController.observableListARstatic.add(new CompanyManageUI("Reaktion auf Quartalszahlen", reaktionQAR));
+                            ShowResultController.observableListARstatic.add(new CompanyManageUI("Gewinnrevision", gewinnrevisionAR));
+                            ShowResultController.observableListARstatic.add(new CompanyManageUI("Kursverlauf 6 Monate", kursverlauf6AR));
+                            ShowResultController.observableListARstatic.add(new CompanyManageUI("Kursverlauf 12 Monate", kursverlauf12AR));
+                            ShowResultController.observableListARstatic.add(new CompanyManageUI("Kursmomentum", kursmomentumAR));
+                            ShowResultController.observableListARstatic.add(new CompanyManageUI("Dreimonantsreversal", dreimonrevAR));
+                            ShowResultController.observableListARstatic.add(new CompanyManageUI("Gewinnwachstum", gewinnwachstumAR));
+
+                            System.out.println("company   :"  + rating.getCompanyname_AnalysisRating());
+                        }
+                    }
+                }
+            }
+            session.getTransaction().commit();
+            session.close();
+            System.out.println("Speichere Unternehmen...");
+            System.out.println("Done!");
+        } catch (HibernateException e) {
+            System.out.println("Hibernate Exception" + e.getMessage());
+            session.getTransaction().rollback();
+            throw new RuntimeException(e);
+        } finally {
+        }
+        return;
+    }
+
     @FXML
     private void switchToEnterCompanyName(ActionEvent actionEvent) throws IOException {
 

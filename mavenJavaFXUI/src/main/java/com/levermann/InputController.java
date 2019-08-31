@@ -11,8 +11,11 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.TextField;
+import javafx.scene.control.cell.PropertyValueFactory;
+import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 
@@ -20,6 +23,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.util.List;
 import java.util.ResourceBundle;
 /**
  * this Controller creates a input screen and ask the user for vor values witch will be needed in table Company
@@ -299,10 +303,45 @@ public class InputController implements Initializable, ControlledScreenInterface
     }
     @FXML
     private void switchToShowResult() throws IOException {
-        comparingInputwithTables();
+        SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
+        Session session1 = sessionFactory.getCurrentSession();
+
+        ShowResultController.Companyname2 = CompanyOverviewController.companyNameDeletestatic.getText();
+
+        session1.beginTransaction();
+        CompanyOverviewController.tableIDstatic.getItems().clear();
+
+        Query query = session1.getNamedQuery("Company.findAll");
+        List<Company> unList = (List<Company>) query.list();
+
+        for (Company un : unList) {
+
+            String nameforOverview = un.getCompanyname();
+            String datumForOverview = un.getDatum();
+            float SumScore = un.getGesamtPunkte();
+            Button deletemach = new Button("delete");
+
+            final ObservableList<Company> overview = FXCollections.observableArrayList(
+                    new Company(nameforOverview, datumForOverview, SumScore)
+            );
+            CompanyOverviewController.companyNamestatic.setCellValueFactory(new PropertyValueFactory<Company, String>("Companyname"));
+            CompanyOverviewController.creationDatestatic.setCellValueFactory(new PropertyValueFactory<Company, String>("datum"));
+            CompanyOverviewController.analysisScorestatic.setCellValueFactory(new PropertyValueFactory<Company, Float>("GesamtPunkte"));
+
+            CompanyOverviewController.tableIDstatic.getItems().addAll(overview);
+        }
+        /**
+         * saves the transaction within the commit
+         */
+        session1.getTransaction().commit();
+
+        takeOverUserInput();
+        myController.setScreen(App.companyOverviewID);
+        App.setStageTitle("Allgemeine Unternehmensübersicht");
+        /*comparingInputwithTables();
         takeOverUserInput();
         myController.setScreen(App.showResultID);
-        App.setStageTitle("Unternehmensergebnisse");
+        App.setStageTitle("Unternehmensergebnisse");*/
     }
     @FXML
     public void switchToPrimaryPage(ActionEvent actionEvent) throws IOException {
