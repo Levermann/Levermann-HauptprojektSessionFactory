@@ -6,41 +6,37 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
-<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox alignment="CENTER" prefHeight="810.0" prefWidth="1500.0" spacing="20.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.levermann.CompanyOverviewController">
+<VBox alignment="CENTER" prefHeight="810.0" prefWidth="1500.0" spacing="20.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.levermann.CompanyOverviewController">
     <stylesheets>
         <URL value="@lisasStyle.css" />
     </stylesheets>
     <children>
-        <AnchorPane prefHeight="660.0" prefWidth="1252.0">
-            <children>
-                <Button fx:id="addSecondCompany" layoutX="1113.0" layoutY="559.0" onAction="#switchToEnterCompanyName" prefHeight="25.0" prefWidth="70.0" style="-fx-border-color: black;" text="Add" />
-                <Button fx:id="getBackToPrimaryPage" layoutX="1010.0" layoutY="559.0" mnemonicParsing="false" onAction="#switchToPrimaryPage" prefHeight="25.0" prefWidth="91.0" style="-fx-border-color: black;" text="main menu" />
-                <Label alignment="TOP_CENTER" layoutX="528.0" layoutY="46.0" prefHeight="37.0" prefWidth="378.0" text="Overview" textAlignment="CENTER" textFill="#58fa58">
-                    <font>
-                        <Font name="Berlin Sans FB" size="18.0" />
-                    </font>
-                </Label>
-                <TableView fx:id="tableID" layoutX="263.0" layoutY="117.0" prefHeight="413.0" prefWidth="918.0" style="-fx-border-color: #6E6E6E;">
-                    <columns>
-                        <TableColumn fx:id="companyName" prefWidth="225.0" text="Company" />
-                        <TableColumn fx:id="creationDate" prefWidth="168.0" text="creation date" />
-                        <TableColumn fx:id="analysisScore" prefWidth="184.0" text="score" />
-
-                    </columns>
-                </TableView>
-                <Button layoutX="912.0" layoutY="559.0" mnemonicParsing="false" onAction="#tableAktualisieren" style="-fx-border-color: black;" text="Aktualisieren" />
-                <Label layoutX="263.0" layoutY="533.0" prefHeight="17.0" prefWidth="257.0" text="Unternehmensname für Löschen eingeben:" />
-                <TextField fx:id="companyNameDelete" layoutX="263.0" layoutY="560.0" prefHeight="25.0" prefWidth="158.0" />
-                <Button fx:id="getBackToPrimaryPage1" layoutX="437.0" layoutY="559.0" mnemonicParsing="false" onAction="#deleteCompanyButtonController" prefHeight="25.0" prefWidth="91.0" style="-fx-border-color: black;" text="Löschen" />
-            </children>
-        </AnchorPane>
-    </children>
-    <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
-    </padding>
+      <AnchorPane prefHeight="660.0" prefWidth="1252.0">
+         <children>
+            <Button fx:id="addSecondCompany" layoutX="1113.0" layoutY="559.0" onAction="#switchToEnterCompanyName" prefHeight="25.0" prefWidth="70.0" style="-fx-border-color: black;" text="Add" />
+             <Button fx:id="getBackToPrimaryPage" layoutX="1010.0" layoutY="559.0" mnemonicParsing="false" onAction="#switchToPrimaryPage" prefHeight="25.0" prefWidth="91.0" style="-fx-border-color: black;" text="main menu" />
+             <Label alignment="TOP_CENTER" layoutX="528.0" layoutY="46.0" prefHeight="37.0" prefWidth="378.0" text="Overview" textAlignment="CENTER" textFill="#58fa58">
+               <font>
+                  <Font name="Berlin Sans FB" size="18.0" />
+               </font>
+            </Label>
+             <TableView fx:id="tableID" layoutX="263.0" layoutY="117.0" prefHeight="413.0" prefWidth="918.0" style="-fx-border-color: #6E6E6E;">
+                 <columns>
+                     <TableColumn fx:id="companyName" prefWidth="343.0" text="Company" />
+                     <TableColumn fx:id="creationDate" prefWidth="247.0" text="creation date" />
+                     <TableColumn fx:id="analysisScore" prefWidth="164.0" text="score" />
+                     <TableColumn fx:id="delete" prefWidth="162.0" text="delete" />
+                 </columns>
+             </TableView>
+            <Button layoutX="912.0" layoutY="559.0" mnemonicParsing="false" onAction="#tableAktualisieren" style="-fx-border-color: black;" text="Aktualisieren" />
+         </children>
+      </AnchorPane>
+   </children>
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   </padding>
 </VBox>
