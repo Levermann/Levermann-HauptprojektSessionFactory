@@ -12,7 +12,6 @@ import java.io.IOException;
 
 //TODO Systemdoku überprüfen!!
 //TODO Artefakt name von AnalYse auf Analyse ändern wenn möglich
-//TODO Berechnungen im Info controller ausgeben lassen
 //TODO Application und GUI aufräumen auch alle unnötigen fuck y Kommentare entfernen, alle todo items entfernen alle unnötigen Klassen entfernen zb.sql
 //TODO Software in jar file umwandeln und testen
 //TODO alle möglichen tests an der gui durchführen
