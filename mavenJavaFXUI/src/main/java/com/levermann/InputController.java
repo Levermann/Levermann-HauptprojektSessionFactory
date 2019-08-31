@@ -178,8 +178,6 @@ public class InputController implements Initializable, ControlledScreenInterface
         gewinnschaetzungDiesesJahrDBTF =gewinnschaetzungDiesesJahrDB;
     }
 
-
-
     @FXML
     private void switchToShowResult() throws IOException {
         fillDBvalues();

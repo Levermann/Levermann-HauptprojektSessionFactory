@@ -8,6 +8,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/src/main/java/com/levermann/CompanyOverviewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/mavenJavaFXUI/src/main/java/com/levermann/CompanyOverviewController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/src/main/java/com/levermann/InputController.java" beforeDir="false" afterPath="$PROJECT_DIR$/mavenJavaFXUI/src/main/java/com/levermann/InputController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/src/main/java/com/levermann/ShowResultController.java" beforeDir="false" afterPath="$PROJECT_DIR$/mavenJavaFXUI/src/main/java/com/levermann/ShowResultController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/target/classes/com/levermann/InputController.class" beforeDir="false" afterPath="$PROJECT_DIR$/mavenJavaFXUI/target/classes/com/levermann/InputController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/target/classes/com/levermann/ShowResultController.class" beforeDir="false" afterPath="$PROJECT_DIR$/mavenJavaFXUI/target/classes/com/levermann/ShowResultController.class" afterDir="false" />
     </list>
@@ -418,14 +419,7 @@
       <workItem from="1566585459730" duration="21406000" />
       <workItem from="1566650626276" duration="6535000" />
       <workItem from="1567001123150" duration="119929000" />
-      <workItem from="1567205723375" duration="2217000" />
-    </task>
-    <task id="LOCAL-00053" summary="Maxis Businesslogik geadded">
-      <created>1566864568774</created>
-      <option name="number" value="00053" />
-      <option name="presentableId" value="LOCAL-00053" />
-      <option name="project" value="LOCAL" />
-      <updated>1566864568774</updated>
+      <workItem from="1567205723375" duration="3844000" />
     </task>
     <task id="LOCAL-00054" summary="UserInput via Session and JDBC in die DB">
       <created>1566939352913</created>
@@ -763,7 +757,14 @@
       <option name="project" value="LOCAL" />
       <updated>1567202899647</updated>
     </task>
-    <option name="localTasksCounter" value="102" />
+    <task id="LOCAL-00102" summary="Neues Unternehmen Button in CompanyOverviewController cleart jetzt den Inputcontroller">
+      <created>1567208005819</created>
+      <option name="number" value="00102" />
+      <option name="presentableId" value="LOCAL-00102" />
+      <option name="project" value="LOCAL" />
+      <updated>1567208005820</updated>
+    </task>
+    <option name="localTasksCounter" value="103" />
     <servers />
   </component>
   <component name="TodoView">
@@ -828,7 +829,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="anpassung entity Associations weg" />
     <MESSAGE value="new Class CalculateUserInput @FlorianLand :*" />
     <MESSAGE value="update" />
     <MESSAGE value="eigenkapitalrendite save" />
@@ -853,7 +853,8 @@
     <MESSAGE value="lol" />
     <MESSAGE value="läuft die kacke" />
     <MESSAGE value="schau mal wer da codet" />
-    <option name="LAST_COMMIT_MESSAGE" value="schau mal wer da codet" />
+    <MESSAGE value="Neues Unternehmen Button in CompanyOverviewController cleart jetzt den Inputcontroller" />
+    <option name="LAST_COMMIT_MESSAGE" value="Neues Unternehmen Button in CompanyOverviewController cleart jetzt den Inputcontroller" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

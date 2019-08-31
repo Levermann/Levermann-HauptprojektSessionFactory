@@ -8,6 +8,7 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
@@ -72,6 +73,39 @@ public class ShowResultController implements Initializable, ControlledScreenInte
     @FXML
     private void switchToCompanyOverview() throws IOException{
         //App.setRoot("companyOverview");
+
+        ConnectionDB();
+        SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
+        Session session1 = sessionFactory.getCurrentSession();
+
+        session1.beginTransaction();
+        CompanyOverviewController.tableIDstatic.getItems().clear();
+
+        Query query = session1.getNamedQuery("Company.findAll");
+        List<Company> unList = (List<Company>) query.list();
+
+        for (Company un : unList) {
+
+            String nameforOverview = un.getCompanyname();
+            String datumForOverview = un.getDatum();
+            float SumScore = un.getGesamtPunkte();
+            Button deletemach = new Button("delete");
+
+            final ObservableList<Company> overview = FXCollections.observableArrayList(
+                    new Company(nameforOverview, datumForOverview, SumScore, deletemach)
+            );
+            CompanyOverviewController.companyNamestatic.setCellValueFactory(new PropertyValueFactory<Company, String>("Companyname"));
+            CompanyOverviewController.creationDatestatic.setCellValueFactory(new PropertyValueFactory<Company, String>("datum"));
+            CompanyOverviewController.analysisScorestatic.setCellValueFactory(new PropertyValueFactory<Company, Float>("GesamtPunkte"));
+            CompanyOverviewController.deletestatic.setCellValueFactory(new PropertyValueFactory<Company, Button>("delete1"));
+
+            CompanyOverviewController.tableIDstatic.getItems().addAll(overview);
+        }
+
+
+        session1.getTransaction().commit();
+        DisconnectionDB();
+
         myController.setScreen(App.companyOverviewID);
         App.setStageTitle("Allgemeine Unternehmensübersicht");
     }
@@ -87,6 +121,8 @@ public class ShowResultController implements Initializable, ControlledScreenInte
 
         observableListAR.clear();
         observableListAS.clear();
+        tableRating.getItems().clear();
+        tableSteps.getItems().clear();
 
         //Aufrufen der aktuellen Session aus HibernateUtil
         final Session session = HibernateUtil.getSessionFactory().openSession();
