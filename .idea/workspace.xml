@@ -7,8 +7,6 @@
     <list default="true" id="ef1c18af-56f3-4a36-8891-4764d24d597a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/src/main/java/com/levermann/InformationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/mavenJavaFXUI/src/main/java/com/levermann/InformationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/src/main/resources/com/levermann/information.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/mavenJavaFXUI/src/main/resources/com/levermann/information.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mavenJavaFXUI/target/classes/com/levermann/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/mavenJavaFXUI/target/classes/com/levermann/App.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -417,14 +415,7 @@
       <workItem from="1566491635410" duration="25623000" />
       <workItem from="1566585459730" duration="21406000" />
       <workItem from="1566650626276" duration="6535000" />
-      <workItem from="1567001123150" duration="143870000" />
-    </task>
-    <task id="LOCAL-00065" summary="added Gesamtpunkte">
-      <created>1567038812606</created>
-      <option name="number" value="00065" />
-      <option name="presentableId" value="LOCAL-00065" />
-      <option name="project" value="LOCAL" />
-      <updated>1567038812606</updated>
+      <workItem from="1567001123150" duration="144955000" />
     </task>
     <task id="LOCAL-00066" summary="anpassung entity Associations weg">
       <created>1567039181763</created>
@@ -762,7 +753,14 @@
       <option name="project" value="LOCAL" />
       <updated>1567259556780</updated>
     </task>
-    <option name="localTasksCounter" value="114" />
+    <task id="LOCAL-00114" summary="infocontroller">
+      <created>1567278169527</created>
+      <option name="number" value="00114" />
+      <option name="presentableId" value="LOCAL-00114" />
+      <option name="project" value="LOCAL" />
+      <updated>1567278169527</updated>
+    </task>
+    <option name="localTasksCounter" value="115" />
     <servers />
   </component>
   <component name="TodoView">
@@ -827,7 +825,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="inputcontroller verbessert" />
     <MESSAGE value="added Gesamtpunkte to entity company" />
     <MESSAGE value="fghfshggsh" />
     <MESSAGE value="hjkhjgjkk" />
@@ -852,7 +849,8 @@
     <MESSAGE value="modifiziert" />
     <MESSAGE value="neu" />
     <MESSAGE value="kommentare" />
-    <option name="LAST_COMMIT_MESSAGE" value="kommentare" />
+    <MESSAGE value="infocontroller" />
+    <option name="LAST_COMMIT_MESSAGE" value="infocontroller" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
