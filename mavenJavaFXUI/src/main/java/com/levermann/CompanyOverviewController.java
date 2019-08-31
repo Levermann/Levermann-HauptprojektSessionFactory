@@ -318,7 +318,6 @@ public class CompanyOverviewController implements Initializable, ControlledScree
 
             for (Company un : unList) {
 
-                //todo Hier companyname setzen
 
                 String companyUserInput = deleteName;
 
