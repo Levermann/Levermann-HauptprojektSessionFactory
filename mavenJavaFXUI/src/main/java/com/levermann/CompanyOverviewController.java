@@ -1,6 +1,5 @@
 package com.levermann;
 
-import com.levermann.DB.DBConnection;
 import com.levermann.entityclass.AnalysisRating;
 import com.levermann.entityclass.AnalysisSteps;
 import com.levermann.entityclass.Company;
